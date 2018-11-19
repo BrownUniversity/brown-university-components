@@ -35,15 +35,23 @@ const colorMap = {
   }
 };
 
-const getPrimaryColor = color => {
+const getBackgroundColor = ({ color, outline }) => {
+  if (outline) {
+    return 'transparent';
+  }
+
   return colorMap[color].primary;
 };
 
-const getSecondaryColor = color => {
+const getColor = ({ color, outline }) => {
+  if (outline) {
+    return colorMap[color].primary;
+  }
+
   return colorMap[color].secondary;
 };
 
-const getFontSize = size => {
+const getFontSize = ({ size }) => {
   switch (size) {
     case 'small':
       return '0.55em';
@@ -54,12 +62,36 @@ const getFontSize = size => {
   }
 };
 
+const getColorWithHover = ({ color, outline }) => {
+  if (outline) {
+    return colorMap[color].secondary;
+  }
+
+  return colorMap.white;
+};
+
+const getBackgroundColorWithHover = ({ color, outline }) => {
+  if (outline) {
+    return colorMap[color].primary;
+  }
+
+  return darken(0.1, colorMap[color].primary);
+};
+
+const getBoxShadowWithHover = ({ color, outline }) => {
+  if (outline) {
+    return colorMap[color].primary;
+  }
+
+  return darken(0.1, colorMap[color].primary);
+};
+
 // TODO: font
 const Button = styled.button`
-  background: ${({ color }) => getPrimaryColor(color)};
-  color: ${({ color }) => getSecondaryColor(color)};
-  box-shadow: inset 0 0 0 1px ${({ color }) => getPrimaryColor(color)};
-  font-size: ${({ size }) => getFontSize(size)};
+  background-color: ${props => getBackgroundColor(props)};
+  color: ${props => getColor(props)};
+  box-shadow: inset 0 0 0 1px ${({ color }) => colorMap[color].primary};
+  font-size: ${props => getFontSize(props)};
   font-weight: 700;
   font-style: normal;
   line-height: 1.5;
@@ -72,11 +104,12 @@ const Button = styled.button`
   padding: 12px 25px 12px 20px;
   margin: 15px auto;
   cursor: pointer;
+  transition: color 0.25s, background 0.25s, border 0.25s, box-shadow 0.25s;
 
   &:hover {
-    background-color: ${({ color }) => darken(0.1, getPrimaryColor(color))};
-    box-shadow: inset 0 0 0 1px
-      ${({ color }) => darken(0.1, getPrimaryColor(color))};
+    color: ${props => getColorWithHover(props)};
+    background-color: ${props => getBackgroundColorWithHover(props)};
+    box-shadow: inset 0 0 0 1px ${props => getBoxShadowWithHover(props)};
   }
 `;
 
@@ -90,13 +123,14 @@ Button.propTypes = {
     'skyblue',
     'navy'
   ]),
-  size: PropTypes.oneOf(['default', 'small', 'large'])
+  size: PropTypes.oneOf(['default', 'small', 'large']),
+  outline: PropTypes.bool
 };
 
 Button.defaultProps = {
   color: 'red',
-  size: 'default'
-  // TODO: outline
+  size: 'default',
+  outline: false
   // TODO: inverse
 };
 
