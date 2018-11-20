@@ -27,16 +27,7 @@ _Components marked with ✘ have not been implemented yet._
 
 - Tables ✘
 
-- [Button](https://www.brown.edu/university-communications/digital/university-theme/formatting/buttons)
-
-  _Props:_
-
-  | property | propType                                                                | required | default   |
-  | -------- | ----------------------------------------------------------------------- | -------- | --------- |
-  | color    | oneOf(['red', 'yellow', 'brown', 'gray', 'emerald', 'skyblue', 'navy']) | -        | 'red'     |
-  | size     | oneOf(['default', 'large', 'small'])                                    | -        | 'default' |
-  | outline  | bool                                                                    | -        | false     |
-  | inverse  | bool                                                                    | -        | false     |
+- [Buttons](https://www.brown.edu/university-communications/digital/university-theme/formatting/buttons)
 
   _Example:_
 
@@ -54,11 +45,23 @@ _Components marked with ✘ have not been implemented yet._
 
   ```
 
-- Block Quote ✘
+  _Properties:_
 
-- Lists ✘
+  | property | propType                                                                | required | default   |
+  | -------- | ----------------------------------------------------------------------- | -------- | --------- |
+  | color    | oneOf(['red', 'yellow', 'brown', 'gray', 'emerald', 'skyblue', 'navy']) | -        | 'red'     |
+  | size     | oneOf(['default', 'large', 'small'])                                    | -        | 'default' |
+  | outline  | bool                                                                    | -        | false     |
+  | inverse  | bool                                                                    | -        | false     |
+  | disabled | bool                                                                    | -        | false     |
+  | onClick  | func                                                                    | -        | null      |
+  | href     | string                                                                  | -        | null      |
 
-- Banners ✘
+* Block Quote ✘
+
+* Lists ✘
+
+* Banners ✘
 
 ### People, News & Events
 

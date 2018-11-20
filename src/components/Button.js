@@ -45,6 +45,14 @@ const getColor = ({ color, outline, inverse }) => {
   return colors.white;
 };
 
+const getCursor = ({ disabled }) => {
+  if (disabled) {
+    return 'not-allowed';
+  }
+
+  return 'pointer';
+};
+
 const getFontSize = ({ size }) => {
   switch (size) {
     case 'small':
@@ -56,7 +64,19 @@ const getFontSize = ({ size }) => {
   }
 };
 
-const getBackgroundColorWithHover = ({ color, outline, inverse }) => {
+const getOpacity = ({ disabled }) => {
+  if (disabled) {
+    return '0.65';
+  }
+
+  return '1';
+};
+
+const getBackgroundColorWithHover = ({ color, outline, inverse, disabled }) => {
+  if (disabled) {
+    return getBackgroundColor({ color, outline, inverse });
+  }
+
   if (inverse) {
     if (outline) {
       return colors.white;
@@ -72,7 +92,11 @@ const getBackgroundColorWithHover = ({ color, outline, inverse }) => {
   return darken(0.1, colors[color]);
 };
 
-const getBoxShadowWithHover = ({ color, outline, inverse }) => {
+const getBoxShadowWithHover = ({ color, outline, inverse, disabled }) => {
+  if (disabled) {
+    return getBoxShadow({ color, inverse });
+  }
+
   if (inverse) {
     return colors.white;
   }
@@ -84,7 +108,11 @@ const getBoxShadowWithHover = ({ color, outline, inverse }) => {
   return darken(0.1, colors[color]);
 };
 
-const getColorWithHover = ({ outline, inverse }) => {
+const getColorWithHover = ({ color, outline, inverse, disabled }) => {
+  if (disabled) {
+    return getColor({ color, outline, inverse });
+  }
+
   if (inverse && outline) {
     return colors.gray;
   }
@@ -97,7 +125,7 @@ const Tag = styled.div`
   border-width: 0;
   box-shadow: inset 0 0 0 1px ${props => getBoxShadow(props)};
   color: ${props => getColor(props)};
-  cursor: pointer;
+  cursor: ${props => getCursor(props)};
   display: inline-block;
   font-family: Circular-Book, Arial, Helvetica, sans-serif;
   font-size: ${props => getFontSize(props)};
@@ -106,6 +134,7 @@ const Tag = styled.div`
   letter-spacing: 0.6px;
   line-height: 1.5;
   margin: 15px auto;
+  opacity: ${props => getOpacity(props)};
   padding: 12px 25px 12px 20px;
   text-align: center;
   text-decoration: none !important;
@@ -134,7 +163,9 @@ Button.propTypes = {
   size: PropTypes.oneOf(['default', 'small', 'large']),
   outline: PropTypes.bool,
   inverse: PropTypes.bool,
-  disabled: PropTypes.bool
+  disabled: PropTypes.bool,
+  onClick: PropTypes.func,
+  href: PropTypes.string
 };
 
 Button.defaultProps = {
@@ -142,7 +173,9 @@ Button.defaultProps = {
   size: 'default',
   outline: false,
   inverse: false,
-  disabled: false
+  disabled: false,
+  onClick: null,
+  href: null
 };
 
 export default Button;

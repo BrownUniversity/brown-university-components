@@ -20,11 +20,13 @@ storiesOf('Button', module)
       size={select('size', ['default', 'small', 'large'])}
       outline={boolean('outline', false)}
       inverse={boolean('inverse', false)}
-      onClick={() => alert('Click!')}
     >
       Click Me
     </Button>
   ))
-  .add('as a link', () => (
+  .add('disabled', () => (
+    <Button disabled={boolean('disabled', true)}>Click Me</Button>
+  ))
+  .add('with href', () => (
     <Button href={text('href', 'https://www.brown.edu/')}>Click Me</Button>
   ));
