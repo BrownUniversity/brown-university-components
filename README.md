@@ -54,6 +54,7 @@ _Components marked with ✘ have not been implemented yet._
   | outline  | bool                                                                    | -        | false     |
   | inverse  | bool                                                                    | -        | false     |
   | disabled | bool                                                                    | -        | false     |
+  | tag      | oneOfType([func, string])                                               | -        | 'button'  |
   | onClick  | func                                                                    | -        | null      |
   | href     | string                                                                  | -        | null      |
 
@@ -107,4 +108,22 @@ Run tests:
 
 ```sh
 npm test
+```
+
+Run tests with code coverage:
+
+```sh
+npm test:coverage
+```
+
+Run tests with code coverage and open report:
+
+```sh
+npm test:coverage:open
+```
+
+Watch tests:
+
+```sh
+npm run test:watch
 ```

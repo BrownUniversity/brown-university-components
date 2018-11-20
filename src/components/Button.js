@@ -148,7 +148,25 @@ const Tag = styled.div`
   }
 `;
 
-const Button = props => <Tag as={props.href ? 'a' : 'button'} {...props} />;
+const deriveTag = ({ href, tag }) => {
+  if (href && tag === 'button') {
+    return 'a';
+  }
+
+  return tag;
+};
+
+const Button = props => {
+  const derivedTag = deriveTag(props);
+
+  return (
+    <Tag
+      as={derivedTag}
+      type={derivedTag === 'button' && props.onClick ? 'button' : undefined}
+      {...props}
+    />
+  );
+};
 
 Button.propTypes = {
   color: PropTypes.oneOf([
@@ -164,6 +182,7 @@ Button.propTypes = {
   outline: PropTypes.bool,
   inverse: PropTypes.bool,
   disabled: PropTypes.bool,
+  tag: PropTypes.oneOfType([PropTypes.func, PropTypes.string]),
   onClick: PropTypes.func,
   href: PropTypes.string
 };
@@ -174,6 +193,7 @@ Button.defaultProps = {
   outline: false,
   inverse: false,
   disabled: false,
+  tag: 'button',
   onClick: null,
   href: null
 };

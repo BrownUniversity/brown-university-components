@@ -6,8 +6,11 @@
   "private": true,
   "main": "build/index.js",
   "scripts": {
+    "test": "jest --config ./jest/config.js",
+    "test:coverage": "npm test -- --coverage",
+    "test:coverage:open": "npm run test:coverage && opener ./coverage/lcov-report/index.html",
+    "test:watch": "npm test -- --watch",
     "build": "babel src -d dist",
-    "test": "echo \"Error: no test specified\" && exit 1",
     "start": "start-storybook -p 8080 -c .storybook"
   },
   "dependencies": {},
@@ -22,13 +25,22 @@
     "@babel/preset-react": "^7.0.0",
     "@storybook/addon-knobs": "^4.0.7",
     "@storybook/react": "^4.0.7",
+    "babel-core": "^7.0.0-bridge.0",
+    "babel-jest": "^23.6.0",
     "babel-loader": "^8.0.4",
     "eslint": "^5.9.0",
     "eslint-config-colinrcummings": "^2.1.0",
+    "jest": "^23.6.0",
+    "jest-dom": "^2.1.1",
+    "jest-styled-components": "^6.3.1",
+    "opener": "^1.5.1",
     "polished": "^2.3.0",
+    "prettier": "^1.15.2",
     "prop-types": "^15.6.2",
     "react": "^16.6.3",
     "react-dom": "^16.6.3",
+    "react-testing-library": "^5.2.3",
+    "regenerator-runtime": "^0.13.1",
     "styled-components": "^4.1.1"
   }
 }
