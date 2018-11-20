@@ -1,4 +1,5 @@
 import PropTypes from 'prop-types';
+import React from 'react';
 import styled from 'styled-components';
 import { darken } from 'polished';
 
@@ -91,7 +92,7 @@ const getColorWithHover = ({ outline, inverse }) => {
   return colors.white;
 };
 
-const Button = styled.button`
+const Tag = styled.div`
   background-color: ${props => getBackgroundColor(props)};
   border-width: 0;
   box-shadow: inset 0 0 0 1px ${props => getBoxShadow(props)};
@@ -118,6 +119,8 @@ const Button = styled.button`
   }
 `;
 
+const Button = props => <Tag as={props.href ? 'a' : 'button'} {...props} />;
+
 Button.propTypes = {
   color: PropTypes.oneOf([
     'red',
@@ -130,14 +133,16 @@ Button.propTypes = {
   ]),
   size: PropTypes.oneOf(['default', 'small', 'large']),
   outline: PropTypes.bool,
-  inverse: PropTypes.bool
+  inverse: PropTypes.bool,
+  disabled: PropTypes.bool
 };
 
 Button.defaultProps = {
   color: 'red',
   size: 'default',
   outline: false,
-  inverse: false
+  inverse: false,
+  disabled: false
 };
 
 export default Button;

@@ -46,7 +46,7 @@ _Components marked with ✘ have not been implemented yet._
 
   export default (props) => {
     return (
-      <Button color="yellow" size="large" outline>
+      <Button color="yellow">
         Click Me
       </Button>
     );
