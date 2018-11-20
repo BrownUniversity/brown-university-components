@@ -4,51 +4,44 @@ import { darken } from 'polished';
 
 import colors from '../styles/colors';
 
-const colorMap = {
-  red: {
-    primary: colors.red,
-    secondary: colors.white
-  },
-  yellow: {
-    primary: colors.yellow,
-    secondary: colors.white
-  },
-  brown: {
-    primary: colors.brown,
-    secondary: colors.white
-  },
-  gray: {
-    primary: colors.gray,
-    secondary: colors.white
-  },
-  emerald: {
-    primary: colors.emerald,
-    secondary: colors.white
-  },
-  skyblue: {
-    primary: colors.skyblue,
-    secondary: colors.white
-  },
-  navy: {
-    primary: colors.navy,
-    secondary: colors.white
-  }
-};
+const getBackgroundColor = ({ color, outline, inverse }) => {
+  if (inverse) {
+    if (outline) {
+      return colors[color];
+    }
 
-const getBackgroundColor = ({ color, outline }) => {
+    return colors.white;
+  }
+
   if (outline) {
     return 'transparent';
   }
 
-  return colorMap[color].primary;
+  return colors[color];
 };
 
-const getColor = ({ color, outline }) => {
-  if (outline) {
-    return colorMap[color].primary;
+const getBoxShadow = ({ color, inverse }) => {
+  if (inverse) {
+    return colors.white;
   }
 
-  return colorMap[color].secondary;
+  return colors[color];
+};
+
+const getColor = ({ color, outline, inverse }) => {
+  if (inverse) {
+    if (outline) {
+      return colors.white;
+    }
+
+    return colors.gray;
+  }
+
+  if (outline) {
+    return colors[color];
+  }
+
+  return colors.white;
 };
 
 const getFontSize = ({ size }) => {
@@ -62,54 +55,66 @@ const getFontSize = ({ size }) => {
   }
 };
 
-const getColorWithHover = ({ color, outline }) => {
-  if (outline) {
-    return colorMap[color].secondary;
+const getBackgroundColorWithHover = ({ color, outline, inverse }) => {
+  if (inverse) {
+    if (outline) {
+      return colors.white;
+    }
+
+    return colors[color];
   }
 
-  return colorMap.white;
-};
-
-const getBackgroundColorWithHover = ({ color, outline }) => {
   if (outline) {
-    return colorMap[color].primary;
+    return colors[color];
   }
 
-  return darken(0.1, colorMap[color].primary);
+  return darken(0.1, colors[color]);
 };
 
-const getBoxShadowWithHover = ({ color, outline }) => {
-  if (outline) {
-    return colorMap[color].primary;
+const getBoxShadowWithHover = ({ color, outline, inverse }) => {
+  if (inverse) {
+    return colors.white;
   }
 
-  return darken(0.1, colorMap[color].primary);
+  if (outline) {
+    return colors[color];
+  }
+
+  return darken(0.1, colors[color]);
 };
 
-// TODO: font
+const getColorWithHover = ({ outline, inverse }) => {
+  if (inverse && outline) {
+    return colors.gray;
+  }
+
+  return colors.white;
+};
+
 const Button = styled.button`
   background-color: ${props => getBackgroundColor(props)};
-  color: ${props => getColor(props)};
-  box-shadow: inset 0 0 0 1px ${({ color }) => colorMap[color].primary};
-  font-size: ${props => getFontSize(props)};
-  font-weight: 700;
-  font-style: normal;
-  line-height: 1.5;
-  letter-spacing: 0.6px;
-  text-align: center;
-  text-transform: uppercase;
-  text-decoration: none !important;
-  display: inline-block;
   border-width: 0;
-  padding: 12px 25px 12px 20px;
-  margin: 15px auto;
+  box-shadow: inset 0 0 0 1px ${props => getBoxShadow(props)};
+  color: ${props => getColor(props)};
   cursor: pointer;
+  display: inline-block;
+  font-family: Circular-Book, Arial, Helvetica, sans-serif;
+  font-size: ${props => getFontSize(props)};
+  font-style: normal;
+  font-weight: 700;
+  letter-spacing: 0.6px;
+  line-height: 1.5;
+  margin: 15px auto;
+  padding: 12px 25px 12px 20px;
+  text-align: center;
+  text-decoration: none !important;
+  text-transform: uppercase;
   transition: color 0.25s, background 0.25s, border 0.25s, box-shadow 0.25s;
 
   &:hover {
-    color: ${props => getColorWithHover(props)};
     background-color: ${props => getBackgroundColorWithHover(props)};
     box-shadow: inset 0 0 0 1px ${props => getBoxShadowWithHover(props)};
+    color: ${props => getColorWithHover(props)};
   }
 `;
 
@@ -124,14 +129,15 @@ Button.propTypes = {
     'navy'
   ]),
   size: PropTypes.oneOf(['default', 'small', 'large']),
-  outline: PropTypes.bool
+  outline: PropTypes.bool,
+  inverse: PropTypes.bool
 };
 
 Button.defaultProps = {
   color: 'red',
   size: 'default',
-  outline: false
-  // TODO: inverse
+  outline: false,
+  inverse: false
 };
 
 export default Button;

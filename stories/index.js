@@ -19,6 +19,7 @@ stories.addDecorator(withKnobs).add('Button', () => (
     ])}
     size={select('size', ['default', 'small', 'large'])}
     outline={boolean('outline', false)}
+    inverse={boolean('inverse', false)}
   >
     Click Me
   </Button>
