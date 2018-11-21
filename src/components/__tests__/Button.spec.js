@@ -83,7 +83,7 @@ describe('Button', () => {
       expect(tree).not.toHaveAttribute('type');
     });
 
-    it('should render type as undefined when the type is not provided and an href provided', () => {
+    it('should render type as undefined when the type is not provided and an href is provided', () => {
       const { tree } = renderButton({
         props: { href: 'https://www.brown.edu/' }
       });
@@ -98,14 +98,9 @@ describe('Button', () => {
 
       expect(tree).toMatchInlineSnapshot(`
 .c0 {
-  background-color: #C00404;
   border-width: 0;
-  box-shadow: inset 0 0 0 1px #C00404;
-  color: #FFFFFF;
-  cursor: pointer;
   display: inline-block;
   font-family: Circular-Book,Arial,Helvetica,sans-serif;
-  font-size: 0.75em;
   font-style: normal;
   font-weight: 700;
   -webkit-letter-spacing: 0.6px;
@@ -114,7 +109,6 @@ describe('Button', () => {
   letter-spacing: 0.6px;
   line-height: 1.5;
   margin: 15px auto;
-  opacity: 1;
   padding: 12px 25px 12px 20px;
   text-align: center;
   -webkit-text-decoration: none !important;
@@ -122,6 +116,12 @@ describe('Button', () => {
   text-transform: uppercase;
   -webkit-transition: color 0.25s,background 0.25s,border 0.25s,box-shadow 0.25s;
   transition: color 0.25s,background 0.25s,border 0.25s,box-shadow 0.25s;
+  background-color: #C00404;
+  box-shadow: inset 0 0 0 1px #C00404;
+  color: #FFFFFF;
+  cursor: pointer;
+  font-size: 0.75em;
+  opacity: 1;
 }
 
 .c0:hover {
@@ -144,14 +144,9 @@ describe('Button', () => {
 
       expect(tree).toMatchInlineSnapshot(`
 .c0 {
-  background-color: #FFC72C;
   border-width: 0;
-  box-shadow: inset 0 0 0 1px #FFC72C;
-  color: #FFFFFF;
-  cursor: pointer;
   display: inline-block;
   font-family: Circular-Book,Arial,Helvetica,sans-serif;
-  font-size: 0.75em;
   font-style: normal;
   font-weight: 700;
   -webkit-letter-spacing: 0.6px;
@@ -160,7 +155,6 @@ describe('Button', () => {
   letter-spacing: 0.6px;
   line-height: 1.5;
   margin: 15px auto;
-  opacity: 1;
   padding: 12px 25px 12px 20px;
   text-align: center;
   -webkit-text-decoration: none !important;
@@ -168,6 +162,12 @@ describe('Button', () => {
   text-transform: uppercase;
   -webkit-transition: color 0.25s,background 0.25s,border 0.25s,box-shadow 0.25s;
   transition: color 0.25s,background 0.25s,border 0.25s,box-shadow 0.25s;
+  background-color: #FFC72C;
+  box-shadow: inset 0 0 0 1px #FFC72C;
+  color: #FFFFFF;
+  cursor: pointer;
+  font-size: 0.75em;
+  opacity: 1;
 }
 
 .c0:hover {
@@ -202,14 +202,9 @@ describe('Button', () => {
 
       expect(tree).toMatchInlineSnapshot(`
 .c0 {
-  background-color: transparent;
   border-width: 0;
-  box-shadow: inset 0 0 0 1px #C00404;
-  color: #C00404;
-  cursor: pointer;
   display: inline-block;
   font-family: Circular-Book,Arial,Helvetica,sans-serif;
-  font-size: 0.75em;
   font-style: normal;
   font-weight: 700;
   -webkit-letter-spacing: 0.6px;
@@ -218,7 +213,6 @@ describe('Button', () => {
   letter-spacing: 0.6px;
   line-height: 1.5;
   margin: 15px auto;
-  opacity: 1;
   padding: 12px 25px 12px 20px;
   text-align: center;
   -webkit-text-decoration: none !important;
@@ -226,6 +220,12 @@ describe('Button', () => {
   text-transform: uppercase;
   -webkit-transition: color 0.25s,background 0.25s,border 0.25s,box-shadow 0.25s;
   transition: color 0.25s,background 0.25s,border 0.25s,box-shadow 0.25s;
+  background-color: transparent;
+  box-shadow: inset 0 0 0 1px #C00404;
+  color: #C00404;
+  cursor: pointer;
+  font-size: 0.75em;
+  opacity: 1;
 }
 
 .c0:hover {
@@ -250,14 +250,9 @@ describe('Button', () => {
 
       expect(tree).toMatchInlineSnapshot(`
 .c0 {
-  background-color: transparent;
   border-width: 0;
-  box-shadow: inset 0 0 0 1px #4E3629;
-  color: #4E3629;
-  cursor: pointer;
   display: inline-block;
   font-family: Circular-Book,Arial,Helvetica,sans-serif;
-  font-size: 0.75em;
   font-style: normal;
   font-weight: 700;
   -webkit-letter-spacing: 0.6px;
@@ -266,7 +261,6 @@ describe('Button', () => {
   letter-spacing: 0.6px;
   line-height: 1.5;
   margin: 15px auto;
-  opacity: 1;
   padding: 12px 25px 12px 20px;
   text-align: center;
   -webkit-text-decoration: none !important;
@@ -274,6 +268,12 @@ describe('Button', () => {
   text-transform: uppercase;
   -webkit-transition: color 0.25s,background 0.25s,border 0.25s,box-shadow 0.25s;
   transition: color 0.25s,background 0.25s,border 0.25s,box-shadow 0.25s;
+  background-color: transparent;
+  box-shadow: inset 0 0 0 1px #4E3629;
+  color: #4E3629;
+  cursor: pointer;
+  font-size: 0.75em;
+  opacity: 1;
 }
 
 .c0:hover {
@@ -298,14 +298,9 @@ describe('Button', () => {
 
       expect(tree).toMatchInlineSnapshot(`
 .c0 {
-  background-color: #FFFFFF;
   border-width: 0;
-  box-shadow: inset 0 0 0 1px #FFFFFF;
-  color: #98A4AE;
-  cursor: pointer;
   display: inline-block;
   font-family: Circular-Book,Arial,Helvetica,sans-serif;
-  font-size: 0.75em;
   font-style: normal;
   font-weight: 700;
   -webkit-letter-spacing: 0.6px;
@@ -314,7 +309,6 @@ describe('Button', () => {
   letter-spacing: 0.6px;
   line-height: 1.5;
   margin: 15px auto;
-  opacity: 1;
   padding: 12px 25px 12px 20px;
   text-align: center;
   -webkit-text-decoration: none !important;
@@ -322,6 +316,12 @@ describe('Button', () => {
   text-transform: uppercase;
   -webkit-transition: color 0.25s,background 0.25s,border 0.25s,box-shadow 0.25s;
   transition: color 0.25s,background 0.25s,border 0.25s,box-shadow 0.25s;
+  background-color: #FFFFFF;
+  box-shadow: inset 0 0 0 1px #FFFFFF;
+  color: #98A4AE;
+  cursor: pointer;
+  font-size: 0.75em;
+  opacity: 1;
 }
 
 .c0:hover {
@@ -346,14 +346,9 @@ describe('Button', () => {
 
       expect(tree).toMatchInlineSnapshot(`
 .c0 {
-  background-color: #FFFFFF;
   border-width: 0;
-  box-shadow: inset 0 0 0 1px #FFFFFF;
-  color: #98A4AE;
-  cursor: pointer;
   display: inline-block;
   font-family: Circular-Book,Arial,Helvetica,sans-serif;
-  font-size: 0.75em;
   font-style: normal;
   font-weight: 700;
   -webkit-letter-spacing: 0.6px;
@@ -362,7 +357,6 @@ describe('Button', () => {
   letter-spacing: 0.6px;
   line-height: 1.5;
   margin: 15px auto;
-  opacity: 1;
   padding: 12px 25px 12px 20px;
   text-align: center;
   -webkit-text-decoration: none !important;
@@ -370,6 +364,12 @@ describe('Button', () => {
   text-transform: uppercase;
   -webkit-transition: color 0.25s,background 0.25s,border 0.25s,box-shadow 0.25s;
   transition: color 0.25s,background 0.25s,border 0.25s,box-shadow 0.25s;
+  background-color: #FFFFFF;
+  box-shadow: inset 0 0 0 1px #FFFFFF;
+  color: #98A4AE;
+  cursor: pointer;
+  font-size: 0.75em;
+  opacity: 1;
 }
 
 .c0:hover {
@@ -394,14 +394,9 @@ describe('Button', () => {
 
       expect(tree).toMatchInlineSnapshot(`
 .c0 {
-  background-color: #C00404;
   border-width: 0;
-  box-shadow: inset 0 0 0 1px #FFFFFF;
-  color: #FFFFFF;
-  cursor: pointer;
   display: inline-block;
   font-family: Circular-Book,Arial,Helvetica,sans-serif;
-  font-size: 0.75em;
   font-style: normal;
   font-weight: 700;
   -webkit-letter-spacing: 0.6px;
@@ -410,7 +405,6 @@ describe('Button', () => {
   letter-spacing: 0.6px;
   line-height: 1.5;
   margin: 15px auto;
-  opacity: 1;
   padding: 12px 25px 12px 20px;
   text-align: center;
   -webkit-text-decoration: none !important;
@@ -418,6 +412,12 @@ describe('Button', () => {
   text-transform: uppercase;
   -webkit-transition: color 0.25s,background 0.25s,border 0.25s,box-shadow 0.25s;
   transition: color 0.25s,background 0.25s,border 0.25s,box-shadow 0.25s;
+  background-color: #C00404;
+  box-shadow: inset 0 0 0 1px #FFFFFF;
+  color: #FFFFFF;
+  cursor: pointer;
+  font-size: 0.75em;
+  opacity: 1;
 }
 
 .c0:hover {
@@ -442,14 +442,9 @@ describe('Button', () => {
 
       expect(tree).toMatchInlineSnapshot(`
 .c0 {
-  background-color: #00B398;
   border-width: 0;
-  box-shadow: inset 0 0 0 1px #FFFFFF;
-  color: #FFFFFF;
-  cursor: pointer;
   display: inline-block;
   font-family: Circular-Book,Arial,Helvetica,sans-serif;
-  font-size: 0.75em;
   font-style: normal;
   font-weight: 700;
   -webkit-letter-spacing: 0.6px;
@@ -458,7 +453,6 @@ describe('Button', () => {
   letter-spacing: 0.6px;
   line-height: 1.5;
   margin: 15px auto;
-  opacity: 1;
   padding: 12px 25px 12px 20px;
   text-align: center;
   -webkit-text-decoration: none !important;
@@ -466,6 +460,12 @@ describe('Button', () => {
   text-transform: uppercase;
   -webkit-transition: color 0.25s,background 0.25s,border 0.25s,box-shadow 0.25s;
   transition: color 0.25s,background 0.25s,border 0.25s,box-shadow 0.25s;
+  background-color: #00B398;
+  box-shadow: inset 0 0 0 1px #FFFFFF;
+  color: #FFFFFF;
+  cursor: pointer;
+  font-size: 0.75em;
+  opacity: 1;
 }
 
 .c0:hover {
@@ -490,6 +490,89 @@ describe('Button', () => {
 
       expect(tree).toHaveStyleRule('cursor', 'not-allowed');
       expect(tree).toHaveStyleRule('opacity', '0.65');
+    });
+
+    it('should render button with pseudo-element when an href is provided', () => {
+      const { tree } = renderButton({
+        props: { href: 'https://www.brown.edu/' }
+      });
+
+      expect(tree).toMatchInlineSnapshot(`
+.c0 {
+  border-width: 0;
+  display: inline-block;
+  font-family: Circular-Book,Arial,Helvetica,sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  -webkit-letter-spacing: 0.6px;
+  -moz-letter-spacing: 0.6px;
+  -ms-letter-spacing: 0.6px;
+  letter-spacing: 0.6px;
+  line-height: 1.5;
+  margin: 15px auto;
+  padding: 12px 25px 12px 20px;
+  text-align: center;
+  -webkit-text-decoration: none !important;
+  text-decoration: none !important;
+  text-transform: uppercase;
+  -webkit-transition: color 0.25s,background 0.25s,border 0.25s,box-shadow 0.25s;
+  transition: color 0.25s,background 0.25s,border 0.25s,box-shadow 0.25s;
+  background-color: #C00404;
+  box-shadow: inset 0 0 0 1px #C00404;
+  color: #FFFFFF;
+  cursor: pointer;
+  font-size: 0.75em;
+  opacity: 1;
+}
+
+.c0::after {
+  border-color: transparent transparent transparent transparent;
+  border-style: solid;
+  border-width: 3.5px 0 3.5px 5px;
+  content: '';
+  display: inline-block;
+  height: 0;
+  position: relative;
+  right: -8px;
+  top: -1px;
+  -webkit-transition: border 0.25s,color 0.25s;
+  transition: border 0.25s,color 0.25s;
+  width: 0;
+  -ms-transform: translate3d(0,0,0);
+  -webkit-transform: translate3d(0,0,0);
+  -webkit-transform: translate3d(0,0,0);
+  -ms-transform: translate3d(0,0,0);
+  transform: translate3d(0,0,0);
+  -webkit-transition: all 0.25s;
+  transition: all 0.25s;
+  border-color: transparent transparent transparent #FFFFFF;
+}
+
+.c0:hover {
+  background-color: #8e0303;
+  box-shadow: inset 0 0 0 1px #8e0303;
+  color: #FFFFFF;
+}
+
+.c0:hover::after {
+  -ms-transform: translate3d(4px,0,0);
+  -webkit-transform: translate3d(4px,0,0);
+  -webkit-transform: translate3d(4px,0,0);
+  -ms-transform: translate3d(4px,0,0);
+  transform: translate3d(4px,0,0);
+  -webkit-transition: all 0.25s;
+  transition: all 0.25s;
+  border-color: transparent transparent transparent #FFFFFF;
+}
+
+<a
+  class="c0"
+  color="red"
+  href="https://www.brown.edu/"
+>
+  Click Me
+</a>
+`);
     });
   });
 

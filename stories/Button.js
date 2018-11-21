@@ -1,6 +1,7 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
 import { withKnobs, select, boolean, text } from '@storybook/addon-knobs';
+import { action } from '@storybook/addon-actions';
 
 import Button from '../src/components/Button';
 
@@ -20,12 +21,15 @@ storiesOf('Button', module)
       size={select('size', ['default', 'small', 'large'])}
       outline={boolean('outline', false)}
       inverse={boolean('inverse', false)}
+      onClick={action('clicked')}
     >
       Click Me
     </Button>
   ))
   .add('disabled', () => (
-    <Button disabled={boolean('disabled', true)}>Click Me</Button>
+    <Button disabled={boolean('disabled', true)} onClick={action('clicked')}>
+      Click Me
+    </Button>
   ))
   .add('with href', () => (
     <Button href={text('href', 'https://www.brown.edu/')}>Click Me</Button>

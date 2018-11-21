@@ -1,10 +1,61 @@
 import PropTypes from 'prop-types';
 import React from 'react';
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
 import { darken } from 'polished';
 
 import colors from '../styles/colors';
+import { sans } from '../styles/typography';
 
+/*
+  css mixins
+*/
+const buttonCSS = css`
+  border-width: 0;
+  display: inline-block;
+  font-family: ${sans};
+  font-style: normal;
+  font-weight: 700;
+  letter-spacing: 0.6px;
+  line-height: 1.5;
+  margin: 15px auto;
+  padding: 12px 25px 12px 20px;
+  text-align: center;
+  text-decoration: none !important;
+  text-transform: uppercase;
+  transition: color 0.25s, background 0.25s, border 0.25s, box-shadow 0.25s;
+`;
+
+const buttonAfterCSS = css`
+  border-color: transparent transparent transparent transparent;
+  border-style: solid;
+  border-width: 3.5px 0 3.5px 5px;
+  content: '';
+  display: inline-block;
+  height: 0;
+  position: relative;
+  right: -8px;
+  top: -1px;
+  transition: border 0.25s, color 0.25s;
+  width: 0;
+`;
+
+const buttonAfterShiftCSS = css`
+  -ms-transform: translate3d(0, 0, 0);
+  -webkit-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
+  transition: all 0.25s;
+`;
+
+const buttonAfterShiftHoverCSS = css`
+  -ms-transform: translate3d(4px, 0, 0);
+  -webkit-transform: translate3d(4px, 0, 0);
+  transform: translate3d(4px, 0, 0);
+  transition: all 0.25s;
+`;
+
+/*
+  css prop getters
+*/
 const getBackgroundColor = ({ color, outline, inverse }) => {
   if (inverse) {
     if (outline) {
@@ -120,34 +171,49 @@ const getColorWithHover = ({ color, outline, inverse, disabled }) => {
   return colors.white;
 };
 
+/*
+  inner Tag component
+*/
 const Tag = styled.div`
+  ${buttonCSS}
   background-color: ${props => getBackgroundColor(props)};
-  border-width: 0;
   box-shadow: inset 0 0 0 1px ${props => getBoxShadow(props)};
   color: ${props => getColor(props)};
   cursor: ${props => getCursor(props)};
-  display: inline-block;
-  font-family: Circular-Book, Arial, Helvetica, sans-serif;
   font-size: ${props => getFontSize(props)};
-  font-style: normal;
-  font-weight: 700;
-  letter-spacing: 0.6px;
-  line-height: 1.5;
-  margin: 15px auto;
   opacity: ${props => getOpacity(props)};
-  padding: 12px 25px 12px 20px;
-  text-align: center;
-  text-decoration: none !important;
-  text-transform: uppercase;
-  transition: color 0.25s, background 0.25s, border 0.25s, box-shadow 0.25s;
+
+  ${props =>
+    props.href &&
+    css`
+      &::after {
+        ${buttonAfterCSS}
+        ${buttonAfterShiftCSS}
+        border-color: transparent transparent transparent ${getColor(props)};
+      }
+    `}
 
   &:hover {
     background-color: ${props => getBackgroundColorWithHover(props)};
     box-shadow: inset 0 0 0 1px ${props => getBoxShadowWithHover(props)};
     color: ${props => getColorWithHover(props)};
+
+    ${props =>
+      props.href &&
+      css`
+        &::after {
+          ${buttonAfterShiftHoverCSS}
+          border-color: transparent transparent transparent ${getColorWithHover(
+            props
+          )};
+        }
+      `}
   }
 `;
 
+/*
+  outer Button component
+*/
 const deriveTag = ({ href, tag }) => {
   if (href && tag === 'button') {
     return 'a';
