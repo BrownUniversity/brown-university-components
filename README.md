@@ -21,11 +21,7 @@ These libraries are not bundled with Brown University Theme and are required at 
 
 ## Documentation
 
-_Components marked with ✘ have not been implemented yet._
-
-### Basic Features
-
-- Tables ✘
+### Components
 
 - [Buttons](https://www.brown.edu/university-communications/digital/university-theme/formatting/buttons)
 
@@ -57,38 +53,6 @@ _Components marked with ✘ have not been implemented yet._
   | tag      | oneOfType([func, string])                                               | -        | 'button'  |
   | onClick  | func                                                                    | -        | null      |
   | href     | string                                                                  | -        | null      |
-
-* Block Quote ✘
-
-* Lists ✘
-
-* Banners ✘
-
-### People, News & Events
-
-- People ✘
-
-- News ✘
-
-- Events ✘
-
-### Components
-
-- Text Cards ✘
-
-- Image Cards ✘
-
-- Highlights ✘
-
-- Callouts ✘
-
-- Quotes ✘
-
-- Statistics ✘
-
-- Accordions ✘
-
-- Flexslider ✘
 
 ## Development
 
