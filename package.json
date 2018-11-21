@@ -2,7 +2,7 @@
   "name": "brown-university-theme",
   "description": "React components for the Brown University Theme",
   "author": "Colin Cummings <colin_cummings@brown.edu>",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "private": true,
   "main": "dist/brown-university-theme.js",
   "scripts": {
@@ -10,13 +10,14 @@
     "test:coverage": "npm test -- --coverage",
     "test:coverage:open": "npm run test:coverage && opener ./coverage/lcov-report/index.html",
     "test:watch": "npm test -- --watch",
-    "build": "webpack",
+    "build": "rm -rf dist && webpack -p",
     "start": "start-storybook -p 8080 -c .storybook"
   },
   "dependencies": {},
   "peerDependencies": {
     "react": "^16.0.0",
-    "react-dom": "^16.0.0"
+    "react-dom": "^16.0.0",
+    "styled-components": "^4.0.0"
   },
   "devDependencies": {
     "@babel/cli": "^7.1.5",

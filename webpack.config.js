@@ -1,4 +1,7 @@
 const path = require('path');
+const webpack = require('webpack');
+
+const { version } = require('./package.json');
 
 module.exports = {
   entry: path.join(__dirname, 'src/index.js'),
@@ -29,6 +32,13 @@ module.exports = {
       commonjs2: 'react-dom',
       amd: 'ReactDOM',
       root: 'ReactDOM'
+    },
+    'styled-components': {
+      commonjs: 'styled-components',
+      commonjs2: 'styled-components',
+      amd: 'styled',
+      root: 'styled'
     }
-  }
+  },
+  plugins: [new webpack.BannerPlugin(`brown-university-theme v${version}`)]
 };

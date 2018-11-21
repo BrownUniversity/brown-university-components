@@ -18,6 +18,7 @@ These libraries are not bundled with Brown University Theme and are required at 
 
 - [**react**](https://www.npmjs.com/package/react)
 - [**react-dom**](https://www.npmjs.com/package/react-dom)
+- [**styled-components**](https://www.npmjs.com/package/styled-components)
 
 ## Documentation
 
