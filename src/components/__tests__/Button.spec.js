@@ -122,6 +122,7 @@ describe('Button', () => {
   cursor: pointer;
   font-size: 0.75em;
   opacity: 1;
+  pointer-events: auto;
 }
 
 .c0:hover {
@@ -168,6 +169,7 @@ describe('Button', () => {
   cursor: pointer;
   font-size: 0.75em;
   opacity: 1;
+  pointer-events: auto;
 }
 
 .c0:hover {
@@ -226,6 +228,7 @@ describe('Button', () => {
   cursor: pointer;
   font-size: 0.75em;
   opacity: 1;
+  pointer-events: auto;
 }
 
 .c0:hover {
@@ -274,6 +277,7 @@ describe('Button', () => {
   cursor: pointer;
   font-size: 0.75em;
   opacity: 1;
+  pointer-events: auto;
 }
 
 .c0:hover {
@@ -322,6 +326,7 @@ describe('Button', () => {
   cursor: pointer;
   font-size: 0.75em;
   opacity: 1;
+  pointer-events: auto;
 }
 
 .c0:hover {
@@ -370,6 +375,7 @@ describe('Button', () => {
   cursor: pointer;
   font-size: 0.75em;
   opacity: 1;
+  pointer-events: auto;
 }
 
 .c0:hover {
@@ -418,6 +424,7 @@ describe('Button', () => {
   cursor: pointer;
   font-size: 0.75em;
   opacity: 1;
+  pointer-events: auto;
 }
 
 .c0:hover {
@@ -466,6 +473,7 @@ describe('Button', () => {
   cursor: pointer;
   font-size: 0.75em;
   opacity: 1;
+  pointer-events: auto;
 }
 
 .c0:hover {
@@ -490,6 +498,7 @@ describe('Button', () => {
 
       expect(tree).toHaveStyleRule('cursor', 'not-allowed');
       expect(tree).toHaveStyleRule('opacity', '0.65');
+      expect(tree).toHaveStyleRule('pointer-events', 'none');
     });
 
     it('should render button with pseudo-element when an href is provided', () => {
@@ -523,6 +532,7 @@ describe('Button', () => {
   cursor: pointer;
   font-size: 0.75em;
   opacity: 1;
+  pointer-events: auto;
 }
 
 .c0::after {

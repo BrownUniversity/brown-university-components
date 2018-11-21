@@ -123,6 +123,14 @@ const getOpacity = ({ disabled }) => {
   return '1';
 };
 
+const getPointerEvents = ({ disabled }) => {
+  if (disabled) {
+    return 'none';
+  }
+
+  return 'auto';
+};
+
 const getBackgroundColorWithHover = ({ color, outline, inverse, disabled }) => {
   if (disabled) {
     return getBackgroundColor({ color, outline, inverse });
@@ -182,6 +190,7 @@ const Tag = styled.div`
   cursor: ${props => getCursor(props)};
   font-size: ${props => getFontSize(props)};
   opacity: ${props => getOpacity(props)};
+  pointer-events: ${props => getPointerEvents(props)};
 
   ${props =>
     props.href &&
