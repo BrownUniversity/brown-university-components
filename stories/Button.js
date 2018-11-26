@@ -5,32 +5,31 @@ import { action } from '@storybook/addon-actions';
 
 import Button from '../src/components/Button';
 
+const getCommonProps = () => ({
+  color: select('color', [
+    'red',
+    'yellow',
+    'brown',
+    'gray',
+    'emerald',
+    'skyblue',
+    'navy'
+  ]),
+  size: select('size', ['default', 'small', 'large']),
+  outline: boolean('outline', false),
+  inverse: boolean('inverse', false),
+  disabled: boolean('disabled', false)
+});
+
 storiesOf('Button', module)
   .addDecorator(withKnobs)
   .add('default', () => (
-    <Button
-      color={select('color', [
-        'red',
-        'yellow',
-        'brown',
-        'gray',
-        'emerald',
-        'skyblue',
-        'navy'
-      ])}
-      size={select('size', ['default', 'small', 'large'])}
-      outline={boolean('outline', false)}
-      inverse={boolean('inverse', false)}
-      onClick={action('clicked')}
-    >
-      Click Me
-    </Button>
-  ))
-  .add('disabled', () => (
-    <Button disabled={boolean('disabled', true)} onClick={action('clicked')}>
+    <Button {...getCommonProps()} onClick={action('clicked')}>
       Click Me
     </Button>
   ))
   .add('with href', () => (
-    <Button href={text('href', 'https://www.brown.edu/')}>Click Me</Button>
+    <Button href={text('href', 'https://www.brown.edu/')} {...getCommonProps()}>
+      Click Me
+    </Button>
   ));

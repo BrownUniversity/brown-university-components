@@ -26,13 +26,13 @@ These libraries are not bundled with Brown University Theme and are required at 
 
 - [Buttons](https://www.brown.edu/university-communications/digital/university-theme/formatting/buttons)
 
-  _Example:_
+  **Example:**
 
   ```
   import React from 'react';
   import { Button } from 'brown-university-theme';
 
-  export default (props) => {
+  export default () => {
     return (
       <Button color="yellow">
         Click Me
@@ -42,7 +42,7 @@ These libraries are not bundled with Brown University Theme and are required at 
 
   ```
 
-  _Properties:_
+  **Properties:**
 
   | property | propType                                                                | required | default   |
   | -------- | ----------------------------------------------------------------------- | -------- | --------- |
@@ -55,6 +55,58 @@ These libraries are not bundled with Brown University Theme and are required at 
   | onClick  | func                                                                    | -        | null      |
   | href     | string                                                                  | -        | null      |
 
+- Navs
+
+**Example:**
+
+```
+import React from 'react';
+import { Nav } from 'brown-university-theme';
+
+export default () => {
+  return (
+    <Nav>
+      <Nav.Item>
+        <Nav.Link>Link</Nav.Link>
+      </Nav.Item>
+      <Nav.Item>
+        <Nav.Link active>
+          Active Link
+        </Nav.Link>
+      </Nav.Item>
+      <Nav.Item>
+        <Nav.Link disabled>
+          Disabled Link
+        </Nav.Link>
+      </Nav.Item>
+    </Nav>
+  );
+};
+
+```
+
+**`Nav` Properties:**
+
+| property | propType                      | required | default   |
+| -------- | ----------------------------- | -------- | --------- |
+| active   | arrayOf(instanceOf(Nav.Item)) | true     | undefined |
+
+**`Nav.Item` Properties:**
+
+| property | propType             | required | default   |
+| -------- | -------------------- | -------- | --------- |
+| active   | instanceOf(Nav.Link) | true     | undefined |
+
+**`Nav.List` Properties:**
+
+| property | propType                  | required | default  |
+| -------- | ------------------------- | -------- | -------- |
+| active   | bool                      | -        | false    |
+| disabled | bool                      | -        | false    |
+| tag      | oneOfType([func, string]) | -        | 'button' |
+| onClick  | func                      | -        | null     |
+| href     | string                    | -        | null     |
+
 ## Development
 
 Install dependencies:
@@ -63,7 +115,7 @@ Install dependencies:
 npm install
 ```
 
-Run examples at [http://localhost:8080/](http://localhost:8080/) with storybook:
+Run examples at [http://localhost:3000/](http://localhost:3000/) with storybook:
 
 ```sh
 npm start

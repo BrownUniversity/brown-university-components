@@ -2,7 +2,7 @@
   "name": "brown-university-theme",
   "description": "React components for the Brown University Theme",
   "author": "Colin Cummings <colin_cummings@brown.edu>",
-  "version": "0.2.2",
+  "version": "0.3.0",
   "private": true,
   "main": "dist/brown-university-theme.js",
   "scripts": {
@@ -17,7 +17,7 @@
     "validate": "npm-run-all lint format:check test:coverage",
     "prebuild": "npm run validate && rm -rf dist",
     "build": "webpack -p",
-    "start": "start-storybook -p 8080 -c .storybook"
+    "start": "start-storybook -p 3000 -c .storybook"
   },
   "peerDependencies": {
     "react": "^16.0.0",
