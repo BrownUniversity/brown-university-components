@@ -96,8 +96,8 @@ const getColor = ({ color, outline, inverse }) => {
   return colors.white;
 };
 
-const getCursor = ({ disabled }) => {
-  if (disabled) {
+const getCursor = ({ disabled, href }) => {
+  if (disabled && !href) {
     return 'not-allowed';
   }
 
@@ -123,8 +123,8 @@ const getOpacity = ({ disabled }) => {
   return '1';
 };
 
-const getPointerEvents = ({ disabled }) => {
-  if (disabled) {
+const getPointerEvents = ({ disabled, href }) => {
+  if (disabled && href) {
     return 'none';
   }
 

@@ -491,16 +491,6 @@ describe('Button', () => {
 `);
     });
 
-    it('should render a disabled button when disabled variant is provided', () => {
-      const { tree } = renderButton({
-        props: { disabled: true }
-      });
-
-      expect(tree).toHaveStyleRule('cursor', 'not-allowed');
-      expect(tree).toHaveStyleRule('opacity', '0.65');
-      expect(tree).toHaveStyleRule('pointer-events', 'none');
-    });
-
     it('should render button with pseudo-element when an href is provided', () => {
       const { tree } = renderButton({
         props: { href: 'https://www.brown.edu/' }
@@ -583,6 +573,28 @@ describe('Button', () => {
   Click Me
 </a>
 `);
+    });
+  });
+
+  describe('disabled', () => {
+    it('should render a disabled button when disabled variant is provided', () => {
+      const { tree } = renderButton({
+        props: { disabled: true }
+      });
+
+      expect(tree).toHaveStyleRule('cursor', 'not-allowed');
+      expect(tree).toHaveStyleRule('opacity', '0.65');
+      expect(tree).toHaveStyleRule('pointer-events', 'auto');
+    });
+
+    it('should render a disabled button when an an href and disabled variant are provided', () => {
+      const { tree } = renderButton({
+        props: { href: 'http://www.brown.edu', disabled: true }
+      });
+
+      expect(tree).toHaveStyleRule('cursor', 'pointer');
+      expect(tree).toHaveStyleRule('opacity', '0.65');
+      expect(tree).toHaveStyleRule('pointer-events', 'none');
     });
   });
 
