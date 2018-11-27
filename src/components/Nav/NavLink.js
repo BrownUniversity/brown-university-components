@@ -2,6 +2,7 @@ import PropTypes from 'prop-types';
 import React from 'react';
 import styled, { css } from 'styled-components';
 
+import NavContext from './NavContext';
 import colors from '../../styles/colors';
 import { sans } from '../../styles/typography';
 
@@ -9,11 +10,10 @@ import { sans } from '../../styles/typography';
   css mixins
 */
 const navLinkCSS = css`
+  background: transparent;
   border: none;
   display: block;
   font-family: ${sans};
-  font-size: 1.2em;
-  padding: 15px 22px;
   text-decoration: none;
 `;
 
@@ -29,12 +29,15 @@ const navLinkAfterCSS = css`
 /*
   css prop getters
 */
-const getColor = ({ active }) => {
+const getColor = ({ vertical, active }) => {
+  const activeColor = vertical ? colors.black : colors.red;
+  const defaultColor = vertical ? colors.red : colors.black;
+
   if (active) {
-    return colors.red;
+    return activeColor;
   }
 
-  return colors.black;
+  return defaultColor;
 };
 
 const getCursor = ({ disabled, href }) => {
@@ -43,6 +46,22 @@ const getCursor = ({ disabled, href }) => {
   }
 
   return 'pointer';
+};
+
+const getFontSize = ({ vertical }) => {
+  if (vertical) {
+    return '1em';
+  }
+
+  return '1.1em';
+};
+
+const getPadding = ({ vertical }) => {
+  if (vertical) {
+    return '8px 0 8px 0';
+  }
+
+  return '9px 15px';
 };
 
 const getOpacity = ({ disabled }) => {
@@ -61,6 +80,14 @@ const getPointerEvents = ({ disabled, href }) => {
   return 'auto';
 };
 
+const getTransition = ({ vertical }) => {
+  if (vertical) {
+    return 'all .2s ease-in-out';
+  }
+
+  return 'background-color .55s linear,border-color .25s linear,box-shadow .25s linear,color .25s linear';
+};
+
 const getAfterWidth = ({ active }) => {
   if (active) {
     return '100%';
@@ -69,12 +96,15 @@ const getAfterWidth = ({ active }) => {
   return '0';
 };
 
-const getColorWithHover = ({ disabled }) => {
+const getColorWithHover = ({ vertical, disabled }) => {
+  const disabledColor = vertical ? colors.red : colors.black;
+  const defaultColor = vertical ? colors.black : colors.red;
+
   if (disabled) {
-    return colors.black;
+    return disabledColor;
   }
 
-  return colors.red;
+  return defaultColor;
 };
 
 const getAfterWidthWithHover = ({ disabled }) => {
@@ -92,20 +122,31 @@ const Tag = styled.div`
   ${navLinkCSS}
   color: ${props => getColor(props)};
   cursor: ${props => getCursor(props)};
+  font-size: ${props => getFontSize(props)};
   opacity: ${props => getOpacity(props)};
+  padding: ${props => getPadding(props)};
   pointer-events: ${props => getPointerEvents(props)};
+  transition: ${props => getTransition(props)};
 
-  &::after {
-    ${navLinkAfterCSS}
-    width: ${props => getAfterWidth(props)};
-  }
+  ${props =>
+    !props.vertical &&
+    css`&::after {
+      ${navLinkAfterCSS}
+      width: ${getAfterWidth(props)};
+    }
+  `}
 
   &:hover {
     color: ${props => getColorWithHover(props)};
 
-    &::after {
-      width: ${props => getAfterWidthWithHover(props)};
-    }
+    ${props =>
+      !props.vertical &&
+      css`
+        &::after {
+          width: ${getAfterWidthWithHover(props)};
+        }
+      `}
+
   }
 `;
 
@@ -124,11 +165,16 @@ const NavLink = props => {
   const derivedTag = deriveTag(props);
 
   return (
-    <Tag
-      as={derivedTag}
-      type={derivedTag === 'button' && props.onClick ? 'button' : undefined}
-      {...props}
-    />
+    <NavContext.Consumer>
+      {({ vertical }) => (
+        <Tag
+          as={derivedTag}
+          type={derivedTag === 'button' && props.onClick ? 'button' : undefined}
+          {...props}
+          vertical={vertical}
+        />
+      )}
+    </NavContext.Consumer>
   );
 };
 

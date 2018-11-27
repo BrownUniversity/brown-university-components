@@ -2,13 +2,12 @@
 import React from 'react';
 import styled from 'styled-components';
 
-import colors from '../../styles/colors';
+// TODO: expanded / collapsed
 
 /*
   inner Tag component
 */
 const Tag = styled.li`
-  background-color: ${colors.white};
   display: list-item;
   margin: 0 0 6px 12px;
 `;

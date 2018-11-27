@@ -1,12 +1,14 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
+import { withKnobs, boolean } from '@storybook/addon-knobs';
 import { action } from '@storybook/addon-actions';
 
 import Nav from '../src/components/Nav';
 
 storiesOf('Nav', module)
+  .addDecorator(withKnobs)
   .add('default', () => (
-    <Nav>
+    <Nav vertical={boolean('vertical', false)} sub={boolean('sub', false)}>
       <Nav.Item>
         <Nav.Link onClick={action('clicked')}>Link</Nav.Link>
       </Nav.Item>
@@ -23,7 +25,7 @@ storiesOf('Nav', module)
     </Nav>
   ))
   .add('with hrefs', () => (
-    <Nav>
+    <Nav vertical={boolean('vertical', false)} sub={boolean('sub', false)}>
       <Nav.Item>
         <Nav.Link href="https://www.brown.edu/">Link</Nav.Link>
       </Nav.Item>

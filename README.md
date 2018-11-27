@@ -87,15 +87,17 @@ export default () => {
 
 **`Nav` Properties:**
 
-| property | propType                      | required | default   |
-| -------- | ----------------------------- | -------- | --------- |
-| active   | arrayOf(instanceOf(Nav.Item)) | true     | undefined |
+| property | propType          | required | default   |
+| -------- | ----------------- | -------- | --------- |
+| vertical | bool              | -        | false     |
+| sub      | bool              | -        | false     |
+| children | arrayOf(Nav.Item) | true     | undefined |
 
 **`Nav.Item` Properties:**
 
-| property | propType             | required | default   |
-| -------- | -------------------- | -------- | --------- |
-| active   | instanceOf(Nav.Link) | true     | undefined |
+| property | propType | required | default   |
+| -------- | -------- | -------- | --------- |
+| children | Nav.Link | true     | undefined |
 
 **`Nav.List` Properties:**
 
@@ -115,7 +117,7 @@ Install dependencies:
 npm install
 ```
 
-Run examples at [http://localhost:3000/](http://localhost:3000/) with storybook:
+Run examples at [http://localhost:8080/](http://localhost:8080/) with storybook:
 
 ```sh
 npm start
