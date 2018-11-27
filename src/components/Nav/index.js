@@ -8,8 +8,6 @@ import NavItem from './NavItem';
 import NavLink from './NavLink';
 import colors from '../../styles/colors';
 
-// TODO: collapse below 900px
-
 /*
   css prop getters
 */
@@ -37,6 +35,14 @@ const getPadding = ({ vertical, sub }) => {
   return '0';
 };
 
+const getWidth = ({ vertical }) => {
+  if (vertical) {
+    return '100%';
+  }
+
+  return 'auto';
+};
+
 /*
   inner Tag component
 */
@@ -46,6 +52,7 @@ const Tag = styled.ul`
   background-color: ${props => getBackgroundColor(props)};
   display: ${props => getDisplay(props)};
   padding: ${props => getPadding(props)};
+  width: ${props => getWidth(props)};
 `;
 
 /*
