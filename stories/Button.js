@@ -3,7 +3,7 @@ import { storiesOf } from '@storybook/react';
 import { withKnobs, select, boolean, text } from '@storybook/addon-knobs';
 import { action } from '@storybook/addon-actions';
 
-import Button from '../src/components/Button';
+import { Button } from '../src';
 
 const getCommonProps = () => ({
   color: select('color', [

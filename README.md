@@ -57,57 +57,81 @@ These libraries are not bundled with Brown University Theme and are required at 
 
 - Navs
 
-**Example:**
+  **Example:**
 
-```
-import React from 'react';
-import { Nav } from 'brown-university-theme';
+  ```
+  import React from 'react';
+  import { Nav } from 'brown-university-theme';
 
-export default () => {
-  return (
-    <Nav>
-      <Nav.Item>
-        <Nav.Link>Link</Nav.Link>
-      </Nav.Item>
-      <Nav.Item>
-        <Nav.Link active>
-          Active Link
-        </Nav.Link>
-      </Nav.Item>
-      <Nav.Item>
-        <Nav.Link disabled>
-          Disabled Link
-        </Nav.Link>
-      </Nav.Item>
-    </Nav>
-  );
-};
+  export default () => {
+    return (
+      <Nav>
+        <Nav.Item>
+          <Nav.Link>Link</Nav.Link>
+        </Nav.Item>
+        <Nav.Item>
+          <Nav.Link active>
+            Active Link
+          </Nav.Link>
+        </Nav.Item>
+        <Nav.Item>
+          <Nav.Link disabled>
+            Disabled Link
+          </Nav.Link>
+        </Nav.Item>
+      </Nav>
+    );
+  };
 
-```
+  ```
 
-**`Nav` Properties:**
+  **`Nav` Properties:**
 
-| property | propType          | required | default   |
-| -------- | ----------------- | -------- | --------- |
-| vertical | bool              | -        | false     |
-| sub      | bool              | -        | false     |
-| children | arrayOf(Nav.Item) | true     | undefined |
+  | property | propType          | required | default   |
+  | -------- | ----------------- | -------- | --------- |
+  | vertical | bool              | -        | false     |
+  | sub      | bool              | -        | false     |
+  | children | arrayOf(Nav.Item) | true     | undefined |
 
-**`Nav.Item` Properties:**
+  **`Nav.Item` Properties:**
 
-| property | propType | required | default   |
-| -------- | -------- | -------- | --------- |
-| children | Nav.Link | true     | undefined |
+  | property | propType | required | default   |
+  | -------- | -------- | -------- | --------- |
+  | children | Nav.Link | true     | undefined |
 
-**`Nav.List` Properties:**
+  **`Nav.List` Properties:**
 
-| property | propType                  | required | default  |
-| -------- | ------------------------- | -------- | -------- |
-| active   | bool                      | -        | false    |
-| disabled | bool                      | -        | false    |
-| tag      | oneOfType([func, string]) | -        | 'button' |
-| onClick  | func                      | -        | null     |
-| href     | string                    | -        | null     |
+  | property | propType                  | required | default  |
+  | -------- | ------------------------- | -------- | -------- |
+  | active   | bool                      | -        | false    |
+  | disabled | bool                      | -        | false    |
+  | tag      | oneOfType([func, string]) | -        | 'button' |
+  | onClick  | func                      | -        | null     |
+  | href     | string                    | -        | null     |
+
+- Hamburger
+
+  **Example:**
+
+  ```
+  import React from 'react';
+  import { Hamburger } from 'brown-university-theme';
+
+  export default () => {
+    return (
+      <Hamburger />
+    );
+  };
+
+  ```
+
+  **Properties:**
+
+  | property | propType                                                                         | required | default |
+  | -------- | -------------------------------------------------------------------------------- | -------- | ------- |
+  | color    | oneOf(['red', 'yellow', 'brown', 'gray', 'emerald', 'skyblue', 'navy', 'white']) | -        | 'red'   |
+  | onOpen   | func                                                                             | -        | null    |
+  | onClose  | func                                                                             | -        | null    |
 
 ## Development
 
