@@ -98,7 +98,7 @@ const SpanTag = styled.span`
 */
 class Hamburger extends Component {
   state = {
-    isOpen: false
+    isOpen: this.props.isOpen
   };
 
   handleClick = () =>
@@ -136,12 +136,14 @@ Hamburger.propTypes = {
     'navy',
     'white'
   ]),
+  isOpen: PropTypes.bool,
   onOpen: PropTypes.func,
   onClose: PropTypes.func
 };
 
 Hamburger.defaultProps = {
   color: 'red',
+  isOpen: false,
   onOpen: () => undefined,
   onClose: () => undefined
 };

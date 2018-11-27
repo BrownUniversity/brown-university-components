@@ -130,6 +130,7 @@ These libraries are not bundled with Brown University Theme and are required at 
   | property | propType                                                                         | required | default |
   | -------- | -------------------------------------------------------------------------------- | -------- | ------- |
   | color    | oneOf(['red', 'yellow', 'brown', 'gray', 'emerald', 'skyblue', 'navy', 'white']) | -        | 'red'   |
+  | isOpen   | bool                                                                             | -        | false   |
   | onOpen   | func                                                                             | -        | null    |
   | onClose  | func                                                                             | -        | null    |
 
