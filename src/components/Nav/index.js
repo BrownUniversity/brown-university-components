@@ -42,6 +42,7 @@ const getPadding = ({ vertical, sub }) => {
 */
 const Tag = styled.ul`
   list-style: none;
+  margin: 0;
   background-color: ${props => getBackgroundColor(props)};
   display: ${props => getDisplay(props)};
   padding: ${props => getPadding(props)};
