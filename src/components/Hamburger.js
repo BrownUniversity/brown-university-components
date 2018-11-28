@@ -28,6 +28,7 @@ const hamburgerTransitionCSS = css`
   inner *Tag components
 */
 const ButtonTag = styled.button`
+  background: transparent;
   border: none;
   cursor: pointer;
   height: 24px;
@@ -126,16 +127,7 @@ class Hamburger extends Component {
 }
 
 Hamburger.propTypes = {
-  color: PropTypes.oneOf([
-    'red',
-    'yellow',
-    'brown',
-    'gray',
-    'emerald',
-    'skyblue',
-    'navy',
-    'white'
-  ]),
+  color: PropTypes.oneOf(['red', 'gray', 'black', 'white']),
   isOpen: PropTypes.bool,
   onOpen: PropTypes.func,
   onClose: PropTypes.func

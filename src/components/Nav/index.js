@@ -1,4 +1,3 @@
-/* eslint-disable react/require-default-props */
 import PropTypes from 'prop-types';
 import React from 'react';
 import styled from 'styled-components';
@@ -74,22 +73,7 @@ Nav.displayName = 'Nav';
 
 Nav.propTypes = {
   vertical: PropTypes.bool,
-  children(props, propName, componentName) {
-    const childrenProp = props[propName];
-
-    if (
-      !Array.isArray(childrenProp) ||
-      !childrenProp.every(
-        c => c.type.displayName && c.type.displayName === 'NavItem'
-      )
-    ) {
-      return new Error(
-        `Invalid prop \`${propName}\` supplied to \`${componentName}\`, expected an array of \`NavItem\` components.`
-      );
-    }
-
-    return undefined;
-  }
+  children: PropTypes.node.isRequired
 };
 
 Nav.defaultProps = {

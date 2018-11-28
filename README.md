@@ -55,6 +55,35 @@ These libraries are not bundled with Brown University Theme and are required at 
   | onClick  | func                                                                    | -        | null      |
   | href     | string                                                                  | -        | null      |
 
+- Hamburger
+
+  **Example:**
+
+  ```
+  import React from 'react';
+  import { Hamburger } from 'brown-university-theme';
+
+  export default () => {
+    return (
+      <Hamburger />
+    );
+  };
+
+  ```
+
+  **Properties:**
+
+  | property | propType                                                                         | required | default |
+  | -------- | -------------------------------------------------------------------------------- | -------- | ------- |
+  | color    | oneOf(['red', 'yellow', 'brown', 'gray', 'emerald', 'skyblue', 'navy', 'white']) | -        | 'red'   |
+  | isOpen   | bool                                                                             | -        | false   |
+  | onOpen   | func                                                                             | -        | null    |
+  | onClose  | func                                                                             | -        | null    |
+
+- Loader
+
+  TODO
+
 - Navs
 
   **Example:**
@@ -109,30 +138,9 @@ These libraries are not bundled with Brown University Theme and are required at 
   | onClick  | func                      | -        | null     |
   | href     | string                    | -        | null     |
 
-- Hamburger
+- Navbars
 
-  **Example:**
-
-  ```
-  import React from 'react';
-  import { Hamburger } from 'brown-university-theme';
-
-  export default () => {
-    return (
-      <Hamburger />
-    );
-  };
-
-  ```
-
-  **Properties:**
-
-  | property | propType                                                                         | required | default |
-  | -------- | -------------------------------------------------------------------------------- | -------- | ------- |
-  | color    | oneOf(['red', 'yellow', 'brown', 'gray', 'emerald', 'skyblue', 'navy', 'white']) | -        | 'red'   |
-  | isOpen   | bool                                                                             | -        | false   |
-  | onOpen   | func                                                                             | -        | null    |
-  | onClose  | func                                                                             | -        | null    |
+  TODO
 
 ## Development
 

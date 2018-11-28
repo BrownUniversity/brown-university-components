@@ -9,16 +9,7 @@ storiesOf('Hamburger', module)
   .addDecorator(withKnobs)
   .add('default', () => (
     <Hamburger
-      color={select('color', [
-        'red',
-        'yellow',
-        'brown',
-        'gray',
-        'emerald',
-        'skyblue',
-        'navy',
-        'white'
-      ])}
+      color={select('color', ['red', 'gray', 'black', 'white'])}
       onOpen={action('open')}
       onClose={action('close')}
     />

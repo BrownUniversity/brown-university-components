@@ -1,4 +1,4 @@
-/* eslint-disable react/require-default-props */
+import PropTypes from 'prop-types';
 import React from 'react';
 import styled from 'styled-components';
 
@@ -20,21 +20,7 @@ const NavItem = props => <Tag {...props} />;
 NavItem.displayName = 'NavItem';
 
 NavItem.propTypes = {
-  children(props, propName, componentName) {
-    const childrenProp = props[propName];
-
-    if (
-      typeof childrenProp !== 'object' ||
-      !childrenProp.type.displayName ||
-      !childrenProp.type.displayName === 'NavLink'
-    ) {
-      return new Error(
-        `Invalid prop \`${propName}\` supplied to \`${componentName}\`, expected a \`NavLink\` component.`
-      );
-    }
-
-    return undefined;
-  }
+  children: PropTypes.node.isRequired
 };
 
 export default NavItem;
