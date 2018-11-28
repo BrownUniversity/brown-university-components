@@ -8,6 +8,8 @@ import NavItem from './NavItem';
 import NavLink from './NavLink';
 import colors from '../../styles/colors';
 
+// TODO: mobile
+
 /*
   css prop getters
 */

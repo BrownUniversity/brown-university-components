@@ -1,9 +1,11 @@
 const path = require('path');
 const webpack = require('webpack');
+const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
 const { version } = require('./package.json');
 
 module.exports = {
+  mode: 'none',
   entry: path.join(__dirname, 'src/index.js'),
   output: {
     path: path.resolve(__dirname, 'dist'),
@@ -17,6 +19,14 @@ module.exports = {
         test: /\.js$/,
         loader: 'babel-loader',
         exclude: /node_modules/
+      },
+      {
+        test: /\.css$/,
+        use: [MiniCssExtractPlugin.loader, 'css-loader']
+      },
+      {
+        test: /\.(png|svg|jpg|gif)$/,
+        loader: 'url-loader'
       }
     ]
   },
@@ -40,5 +50,10 @@ module.exports = {
       root: 'styled'
     }
   },
-  plugins: [new webpack.BannerPlugin(`brown-university-theme v${version}`)]
+  plugins: [
+    new MiniCssExtractPlugin({
+      filename: 'styles.css'
+    }),
+    new webpack.BannerPlugin(`brown-university-theme v${version}`)
+  ]
 };

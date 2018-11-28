@@ -1,6 +1,6 @@
-/* eslint-disable import/prefer-default-export */
-import Button from './components/Button';
-import Nav from './components/Nav';
-import Hamburger from './components/Hamburger';
+import './styles.css';
 
-export { Button, Nav, Hamburger };
+export { default as Button } from './components/Button';
+export { default as Hamburger } from './components/Hamburger';
+export { default as Nav } from './components/Nav';
+export { default as Navbar } from './components/Navbar';
