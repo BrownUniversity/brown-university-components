@@ -4,6 +4,7 @@
   "author": "Colin Cummings <colin_cummings@brown.edu>",
   "version": "0.3.8",
   "private": true,
+  "homepage": "https://bitbucket.brown.edu/projects/CCUM/repos/brown-university-theme",
   "main": "dist/brown-university-theme.js",
   "scripts": {
     "lint": "eslint src",
