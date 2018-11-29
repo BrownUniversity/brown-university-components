@@ -11,7 +11,6 @@ import colors from '../constants/colors';
 */
 const NavbarWrapper = styled.div`
   align-items: center;
-  background-color: ${({ color }) => colors[color]};
   box-shadow: 0 1px 10px 5px #00000026;
   display: flex;
   justify-content: space-between;
@@ -19,6 +18,7 @@ const NavbarWrapper = styled.div`
   padding: 0 1rem;
   position: relative;
   z-index: 20;
+  background-color: ${({ color }) => colors[color]};
 `;
 
 const NavbarLogoLink = styled.a`
@@ -29,9 +29,11 @@ const NavbarChildrenWrapper = styled.div`
   align-items: center;
   display: flex;
 `;
+
 /*
   outer Navbar component
 */
+const logoProps = { height: 65, width: 131 };
 
 const Navbar = ({ color, children }) => (
   <NavbarWrapper color={color}>
@@ -41,9 +43,9 @@ const Navbar = ({ color, children }) => (
       rel="noopener noreferrer"
     >
       {color === 'white' ? (
-        <LogoBlackSVG height={65} width={131} />
+        <LogoBlackSVG {...logoProps} />
       ) : (
-        <LogoWhiteSVG height={65} width={131} />
+        <LogoWhiteSVG {...logoProps} />
       )}
     </NavbarLogoLink>
     <NavbarChildrenWrapper>{children}</NavbarChildrenWrapper>

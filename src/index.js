@@ -1,5 +1,6 @@
 import './styles.css';
 
+export { default as Banner } from './components/Banner';
 export { default as Button } from './components/Button';
 export { default as Hamburger } from './components/Hamburger';
 export { default as Loader } from './components/Loader';

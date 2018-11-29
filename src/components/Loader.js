@@ -2,9 +2,12 @@ import PropTypes from 'prop-types';
 import React from 'react';
 import styled, { keyframes } from 'styled-components';
 
-const spin = keyframes` 100% { transform: rotate(360deg); } `;
-
 // TODO: use react-svg-loader
+
+/*
+  inner components
+*/
+const spin = keyframes` 100% { transform: rotate(360deg); } `;
 
 const LoaderSVGWrapper = styled.div`
   svg {
@@ -16,6 +19,9 @@ const LoaderSVGWrapper = styled.div`
   }
 `;
 
+/*
+  outer Loader component
+*/
 const Loader = ({ height }) => (
   <LoaderSVGWrapper>
     <svg

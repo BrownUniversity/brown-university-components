@@ -8,10 +8,10 @@ import colors from '../constants/colors';
   css mixins
 */
 const hamburgerBarCSS = css`
-  background-color: ${({ color }) => colors[color]};
   height: 3px;
   position: absolute;
   width: 25px;
+  background-color: ${({ color }) => colors[color]};
 `;
 
 const hamburgerBarPseudoElementCSS = css`

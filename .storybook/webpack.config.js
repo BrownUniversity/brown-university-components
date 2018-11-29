@@ -9,5 +9,10 @@ module.exports = (storybookBaseConfig, configType) => {
     loader: 'react-svg-loader'
   });
 
+  storybookBaseConfig.module.rules.push({
+    test: /\.(jpg|png)$/,
+    loader: 'url-loader'
+  });
+
   return storybookBaseConfig;
 };

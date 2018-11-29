@@ -11,13 +11,13 @@ storiesOf('Navbar', module)
     <Navbar color="white">
       <Nav>
         <Nav.Item>
-          <Nav.Link>Foo</Nav.Link>
+          <Nav.Link>Link</Nav.Link>
         </Nav.Item>
         <Nav.Item>
-          <Nav.Link>Bar</Nav.Link>
+          <Nav.Link>Link</Nav.Link>
         </Nav.Item>
         <Nav.Item>
-          <Nav.Link>Baz</Nav.Link>
+          <Nav.Link>Link</Nav.Link>
         </Nav.Item>
       </Nav>
     </Navbar>
