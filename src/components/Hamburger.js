@@ -2,7 +2,7 @@ import PropTypes from 'prop-types';
 import React, { Component } from 'react';
 import styled, { css } from 'styled-components';
 
-import colors from '../styles/colors';
+import colors from '../constants/colors';
 
 /*
   css mixins

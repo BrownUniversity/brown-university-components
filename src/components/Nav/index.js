@@ -5,7 +5,7 @@ import styled from 'styled-components';
 import NavContext from './NavContext';
 import NavItem from './NavItem';
 import NavLink from './NavLink';
-import colors from '../../styles/colors';
+import colors from '../../constants/colors';
 
 // TODO: mobile
 

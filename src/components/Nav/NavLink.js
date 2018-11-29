@@ -3,8 +3,8 @@ import React from 'react';
 import styled, { css } from 'styled-components';
 
 import NavContext from './NavContext';
-import colors from '../../styles/colors';
-import { sans } from '../../styles/typography';
+import colors from '../../constants/colors';
+import { sans } from '../../constants/typography';
 
 // TODO: mobile
 
