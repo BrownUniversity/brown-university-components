@@ -25,9 +25,9 @@ const hamburgerTransitionCSS = css`
 `;
 
 /*
-  inner *Tag components
+  inner components
 */
-const ButtonTag = styled.button`
+const HamburgerButton = styled.button`
   background: transparent;
   border: none;
   cursor: pointer;
@@ -36,7 +36,7 @@ const ButtonTag = styled.button`
   width: 30px;
 `;
 
-const SpanTag = styled.span`
+const HamburgerBars = styled.span`
   ${hamburgerBarCSS}
   ${hamburgerTransitionCSS}
   transition-duration: .22s;
@@ -119,9 +119,9 @@ class Hamburger extends Component {
     const { isOpen } = this.state;
 
     return (
-      <ButtonTag type="button" onClick={this.handleClick}>
-        <SpanTag color={color} isOpen={isOpen} />
-      </ButtonTag>
+      <HamburgerButton type="button" onClick={this.handleClick}>
+        <HamburgerBars color={color} isOpen={isOpen} />
+      </HamburgerButton>
     );
   }
 }

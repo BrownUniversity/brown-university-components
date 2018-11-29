@@ -4,10 +4,9 @@ import styled, { keyframes } from 'styled-components';
 
 const spin = keyframes` 100% { transform: rotate(360deg); } `;
 
-// TODO: better solution for svg
+// TODO: use react-svg-loader
 
-const DivTag = styled.div`
-  height: ${({ height }) => height}px;
+const LoaderSVGWrapper = styled.div`
   svg {
     #rays {
       transform-origin: center;
@@ -18,15 +17,16 @@ const DivTag = styled.div`
 `;
 
 const Loader = ({ height }) => (
-  <DivTag height={height}>
+  <LoaderSVGWrapper>
     <svg
-      version="1.1"
       xmlns="http://www.w3.org/2000/svg"
       xmlnsXlink="http://www.w3.org/1999/xlink"
+      version="1.1"
       x="0px"
       y="0px"
+      width={Math.floor(height * 0.77)}
+      height={height}
       viewBox="0 0 140 180"
-      height="auto"
       xmlSpace="preserve"
     >
       <path
@@ -401,7 +401,7 @@ const Loader = ({ height }) => (
         />
       </g>
     </svg>
-  </DivTag>
+  </LoaderSVGWrapper>
 );
 
 Loader.propTypes = {

@@ -2,16 +2,16 @@ import PropTypes from 'prop-types';
 import React from 'react';
 import styled from 'styled-components';
 
+import LogoBlackSVG from '../svg/logo-black.svg';
+import LogoWhiteSVG from '../svg/logo-white.svg';
 import colors from '../styles/colors';
-import brownLogoWhite from '../images/brown-logo-white.svg';
-import brownLogoBlack from '../images/brown-logo-black.svg';
 
 // TODO: children
 
 /*
-  inner *Tag components
+  inner components
 */
-const DivTag = styled.div`
+const NavbarWrapper = styled.div`
   background-color: ${({ color }) => colors[color]};
   box-shadow: 0 1px 10px 5px #00000026;
   min-height: 75px;
@@ -20,9 +20,9 @@ const DivTag = styled.div`
   z-index: 20;
 `;
 
-const ImgTag = styled.img`
+const LogoWrapper = styled.div`
   height: 65px;
-  margin-top: 4px;
+  padding-top: 7px;
   width: 131px;
 `;
 
@@ -31,10 +31,12 @@ const ImgTag = styled.img`
 */
 
 const Navbar = ({ color, children }) => (
-  <DivTag color={color}>
-    <ImgTag src={color === 'white' ? brownLogoBlack : brownLogoWhite} />
+  <NavbarWrapper color={color}>
+    <LogoWrapper>
+      {color === 'white' ? <LogoBlackSVG /> : <LogoWhiteSVG />}
+    </LogoWrapper>
     <span>{children}</span>
-  </DivTag>
+  </NavbarWrapper>
 );
 
 Navbar.propTypes = {

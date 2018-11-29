@@ -2,7 +2,7 @@
   "name": "brown-university-theme",
   "description": "React components for the Brown University Theme",
   "author": "Colin Cummings <colin_cummings@brown.edu>",
-  "version": "0.3.6",
+  "version": "0.3.7",
   "private": true,
   "main": "dist/brown-university-theme.js",
   "scripts": {
@@ -49,10 +49,11 @@
     "prop-types": "^15.6.2",
     "react": "^16.6.3",
     "react-dom": "^16.6.3",
+    "react-svg-loader": "^2.1.0",
     "react-testing-library": "^5.2.3",
     "regenerator-runtime": "^0.13.1",
+    "style-loader": "^0.23.1",
     "styled-components": "^4.1.1",
-    "url-loader": "^1.1.2",
     "webpack": "^4.26.0",
     "webpack-cli": "^3.1.2"
   }
