@@ -1,4 +1,4 @@
-/*! brown-university-theme v0.3.7 */
+/*! brown-university-theme v0.3.8 */
 (function webpackUniversalModuleDefinition(root, factory) {
 	if(typeof exports === 'object' && typeof module === 'object')
 		module.exports = factory(require("react"), require("styled-components"));
@@ -144,8 +144,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(9);
 /* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(styled_components__WEBPACK_IMPORTED_MODULE_2__);
 /* harmony import */ var polished__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(10);
-/* harmony import */ var _styles_colors__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(13);
-/* harmony import */ var _styles_typography__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(14);
+/* harmony import */ var _constants_colors__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(13);
+/* harmony import */ var _constants_typography__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(14);
 function _extends() { _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends.apply(this, arguments); }
 
 function _templateObject7() {
@@ -230,7 +230,7 @@ function _taggedTemplateLiteral(strings, raw) { if (!raw) { raw = strings.slice(
   css mixins
 */
 
-var buttonCSS = Object(styled_components__WEBPACK_IMPORTED_MODULE_2__["css"])(_templateObject(), _styles_typography__WEBPACK_IMPORTED_MODULE_5__["sans"]);
+var buttonCSS = Object(styled_components__WEBPACK_IMPORTED_MODULE_2__["css"])(_templateObject(), _constants_typography__WEBPACK_IMPORTED_MODULE_5__["sans"]);
 var buttonAfterCSS = Object(styled_components__WEBPACK_IMPORTED_MODULE_2__["css"])(_templateObject2());
 var buttonAfterShiftCSS = Object(styled_components__WEBPACK_IMPORTED_MODULE_2__["css"])(_templateObject3());
 var buttonAfterShiftHoverCSS = Object(styled_components__WEBPACK_IMPORTED_MODULE_2__["css"])(_templateObject4());
@@ -245,17 +245,17 @@ var getBackgroundColor = function getBackgroundColor(_ref) {
 
   if (inverse) {
     if (outline) {
-      return _styles_colors__WEBPACK_IMPORTED_MODULE_4__["default"][color];
+      return _constants_colors__WEBPACK_IMPORTED_MODULE_4__["default"][color];
     }
 
-    return _styles_colors__WEBPACK_IMPORTED_MODULE_4__["default"].white;
+    return _constants_colors__WEBPACK_IMPORTED_MODULE_4__["default"].white;
   }
 
   if (outline) {
     return 'transparent';
   }
 
-  return _styles_colors__WEBPACK_IMPORTED_MODULE_4__["default"][color];
+  return _constants_colors__WEBPACK_IMPORTED_MODULE_4__["default"][color];
 };
 
 var getBoxShadow = function getBoxShadow(_ref2) {
@@ -263,10 +263,10 @@ var getBoxShadow = function getBoxShadow(_ref2) {
       inverse = _ref2.inverse;
 
   if (inverse) {
-    return _styles_colors__WEBPACK_IMPORTED_MODULE_4__["default"].white;
+    return _constants_colors__WEBPACK_IMPORTED_MODULE_4__["default"].white;
   }
 
-  return _styles_colors__WEBPACK_IMPORTED_MODULE_4__["default"][color];
+  return _constants_colors__WEBPACK_IMPORTED_MODULE_4__["default"][color];
 };
 
 var getColor = function getColor(_ref3) {
@@ -276,17 +276,17 @@ var getColor = function getColor(_ref3) {
 
   if (inverse) {
     if (outline) {
-      return _styles_colors__WEBPACK_IMPORTED_MODULE_4__["default"].white;
+      return _constants_colors__WEBPACK_IMPORTED_MODULE_4__["default"].white;
     }
 
-    return _styles_colors__WEBPACK_IMPORTED_MODULE_4__["default"].gray;
+    return _constants_colors__WEBPACK_IMPORTED_MODULE_4__["default"].gray;
   }
 
   if (outline) {
-    return _styles_colors__WEBPACK_IMPORTED_MODULE_4__["default"][color];
+    return _constants_colors__WEBPACK_IMPORTED_MODULE_4__["default"][color];
   }
 
-  return _styles_colors__WEBPACK_IMPORTED_MODULE_4__["default"].white;
+  return _constants_colors__WEBPACK_IMPORTED_MODULE_4__["default"].white;
 };
 
 var getCursor = function getCursor(_ref4) {
@@ -352,17 +352,17 @@ var getBackgroundColorWithHover = function getBackgroundColorWithHover(_ref8) {
 
   if (inverse) {
     if (outline) {
-      return _styles_colors__WEBPACK_IMPORTED_MODULE_4__["default"].white;
+      return _constants_colors__WEBPACK_IMPORTED_MODULE_4__["default"].white;
     }
 
-    return _styles_colors__WEBPACK_IMPORTED_MODULE_4__["default"][color];
+    return _constants_colors__WEBPACK_IMPORTED_MODULE_4__["default"][color];
   }
 
   if (outline) {
-    return _styles_colors__WEBPACK_IMPORTED_MODULE_4__["default"][color];
+    return _constants_colors__WEBPACK_IMPORTED_MODULE_4__["default"][color];
   }
 
-  return Object(polished__WEBPACK_IMPORTED_MODULE_3__["darken"])(0.1, _styles_colors__WEBPACK_IMPORTED_MODULE_4__["default"][color]);
+  return Object(polished__WEBPACK_IMPORTED_MODULE_3__["darken"])(0.1, _constants_colors__WEBPACK_IMPORTED_MODULE_4__["default"][color]);
 };
 
 var getBoxShadowWithHover = function getBoxShadowWithHover(_ref9) {
@@ -379,14 +379,14 @@ var getBoxShadowWithHover = function getBoxShadowWithHover(_ref9) {
   }
 
   if (inverse) {
-    return _styles_colors__WEBPACK_IMPORTED_MODULE_4__["default"].white;
+    return _constants_colors__WEBPACK_IMPORTED_MODULE_4__["default"].white;
   }
 
   if (outline) {
-    return _styles_colors__WEBPACK_IMPORTED_MODULE_4__["default"][color];
+    return _constants_colors__WEBPACK_IMPORTED_MODULE_4__["default"][color];
   }
 
-  return Object(polished__WEBPACK_IMPORTED_MODULE_3__["darken"])(0.1, _styles_colors__WEBPACK_IMPORTED_MODULE_4__["default"][color]);
+  return Object(polished__WEBPACK_IMPORTED_MODULE_3__["darken"])(0.1, _constants_colors__WEBPACK_IMPORTED_MODULE_4__["default"][color]);
 };
 
 var getColorWithHover = function getColorWithHover(_ref10) {
@@ -404,10 +404,10 @@ var getColorWithHover = function getColorWithHover(_ref10) {
   }
 
   if (inverse && outline) {
-    return _styles_colors__WEBPACK_IMPORTED_MODULE_4__["default"].gray;
+    return _constants_colors__WEBPACK_IMPORTED_MODULE_4__["default"].gray;
   }
 
-  return _styles_colors__WEBPACK_IMPORTED_MODULE_4__["default"].white;
+  return _constants_colors__WEBPACK_IMPORTED_MODULE_4__["default"].white;
 };
 /*
   inner Tag component
@@ -4765,7 +4765,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_1__);
 /* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(9);
 /* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(styled_components__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var _styles_colors__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(13);
+/* harmony import */ var _constants_colors__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(13);
 function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -4878,7 +4878,7 @@ function _taggedTemplateLiteral(strings, raw) { if (!raw) { raw = strings.slice(
 
 var hamburgerBarCSS = Object(styled_components__WEBPACK_IMPORTED_MODULE_2__["css"])(_templateObject(), function (_ref) {
   var color = _ref.color;
-  return _styles_colors__WEBPACK_IMPORTED_MODULE_3__["default"][color];
+  return _constants_colors__WEBPACK_IMPORTED_MODULE_3__["default"][color];
 });
 var hamburgerBarPseudoElementCSS = Object(styled_components__WEBPACK_IMPORTED_MODULE_2__["css"])(_templateObject2());
 var hamburgerTransitionCSS = Object(styled_components__WEBPACK_IMPORTED_MODULE_2__["css"])(_templateObject3());
@@ -5017,22 +5017,19 @@ function _taggedTemplateLiteral(strings, raw) { if (!raw) { raw = strings.slice(
 
 
 
-var spin = Object(styled_components__WEBPACK_IMPORTED_MODULE_2__["keyframes"])(_templateObject()); // TODO: use svg-loader
+var spin = Object(styled_components__WEBPACK_IMPORTED_MODULE_2__["keyframes"])(_templateObject()); // TODO: use react-svg-loader
 
 var LoaderSVGWrapper = styled_components__WEBPACK_IMPORTED_MODULE_2___default.a.div(_templateObject2(), spin);
 
 var Loader = function Loader(_ref) {
   var height = _ref.height;
   return react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(LoaderSVGWrapper, null, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("svg", {
-    xmlns: "http://www.w3.org/2000/svg",
-    xmlnsXlink: "http://www.w3.org/1999/xlink",
     version: "1.1",
-    x: "0px",
-    y: "0px",
     width: Math.floor(height * 0.77),
     height: height,
     viewBox: "0 0 140 180",
-    xmlSpace: "preserve"
+    role: "alert",
+    "aria-live": "assertive"
   }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("path", {
     className: "rays",
     id: "rays",
@@ -5314,7 +5311,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _NavContext__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(18);
 /* harmony import */ var _NavItem__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(19);
 /* harmony import */ var _NavLink__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(20);
-/* harmony import */ var _styles_colors__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(13);
+/* harmony import */ var _constants_colors__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(13);
 function _templateObject() {
   var data = _taggedTemplateLiteral(["\n  list-style: none;\n  margin: 0;\n  background-color: ", ";\n  display: ", ";\n  padding: ", ";\n  width: ", ";\n"]);
 
@@ -5333,7 +5330,7 @@ function _taggedTemplateLiteral(strings, raw) { if (!raw) { raw = strings.slice(
 
 
 
- // TODO: mobile
+ // TODO: navbar, mobile
 
 /*
   css prop getters
@@ -5344,10 +5341,10 @@ var getBackgroundColor = function getBackgroundColor(_ref) {
       sub = _ref.sub;
 
   if (vertical && sub) {
-    return _styles_colors__WEBPACK_IMPORTED_MODULE_6__["default"].lightGray;
+    return _constants_colors__WEBPACK_IMPORTED_MODULE_6__["default"].lightGray;
   }
 
-  return _styles_colors__WEBPACK_IMPORTED_MODULE_6__["default"].white;
+  return 'transparent';
 };
 
 var getDisplay = function getDisplay(_ref2) {
@@ -5444,7 +5441,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(9);
 /* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(styled_components__WEBPACK_IMPORTED_MODULE_2__);
 function _templateObject() {
-  var data = _taggedTemplateLiteral(["\n  display: list-item;\n  margin: 0 0 6px 12px;\n"]);
+  var data = _taggedTemplateLiteral(["\n  display: list-item;\n"]);
 
   _templateObject = function _templateObject() {
     return data;
@@ -5491,8 +5488,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(9);
 /* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(styled_components__WEBPACK_IMPORTED_MODULE_2__);
 /* harmony import */ var _NavContext__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(18);
-/* harmony import */ var _styles_colors__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(13);
-/* harmony import */ var _styles_typography__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(14);
+/* harmony import */ var _constants_colors__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(13);
+/* harmony import */ var _constants_typography__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(14);
 function _extends() { _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends.apply(this, arguments); }
 
 function _templateObject5() {
@@ -5526,7 +5523,7 @@ function _templateObject3() {
 }
 
 function _templateObject2() {
-  var data = _taggedTemplateLiteral(["\n  background: ", ";\n  content: '';\n  display: block;\n  height: 3px;\n  margin-top: 1em;\n  transition: width 0.3s;\n"]);
+  var data = _taggedTemplateLiteral(["\n  background: ", ";\n  content: '';\n  display: block;\n  height: 3px;\n  margin-top: 6px;\n  transition: width 0.3s;\n"]);
 
   _templateObject2 = function _templateObject2() {
     return data;
@@ -5552,14 +5549,14 @@ function _taggedTemplateLiteral(strings, raw) { if (!raw) { raw = strings.slice(
 
 
 
- // TODO: mobile
+ // TODO: navbar, mobile
 
 /*
   css mixins
 */
 
-var navLinkCSS = Object(styled_components__WEBPACK_IMPORTED_MODULE_2__["css"])(_templateObject(), _styles_typography__WEBPACK_IMPORTED_MODULE_5__["sans"]);
-var navLinkAfterCSS = Object(styled_components__WEBPACK_IMPORTED_MODULE_2__["css"])(_templateObject2(), _styles_colors__WEBPACK_IMPORTED_MODULE_4__["default"].red);
+var navLinkCSS = Object(styled_components__WEBPACK_IMPORTED_MODULE_2__["css"])(_templateObject(), _constants_typography__WEBPACK_IMPORTED_MODULE_5__["sans"]);
+var navLinkAfterCSS = Object(styled_components__WEBPACK_IMPORTED_MODULE_2__["css"])(_templateObject2(), _constants_colors__WEBPACK_IMPORTED_MODULE_4__["default"].red);
 /*
   css prop getters
 */
@@ -5567,8 +5564,8 @@ var navLinkAfterCSS = Object(styled_components__WEBPACK_IMPORTED_MODULE_2__["css
 var getColor = function getColor(_ref) {
   var vertical = _ref.vertical,
       active = _ref.active;
-  var activeColor = vertical ? _styles_colors__WEBPACK_IMPORTED_MODULE_4__["default"].black : _styles_colors__WEBPACK_IMPORTED_MODULE_4__["default"].red;
-  var defaultColor = vertical ? _styles_colors__WEBPACK_IMPORTED_MODULE_4__["default"].red : _styles_colors__WEBPACK_IMPORTED_MODULE_4__["default"].black;
+  var activeColor = vertical ? _constants_colors__WEBPACK_IMPORTED_MODULE_4__["default"].black : _constants_colors__WEBPACK_IMPORTED_MODULE_4__["default"].red;
+  var defaultColor = vertical ? _constants_colors__WEBPACK_IMPORTED_MODULE_4__["default"].red : _constants_colors__WEBPACK_IMPORTED_MODULE_4__["default"].black;
 
   if (active) {
     return activeColor;
@@ -5652,8 +5649,8 @@ var getAfterWidth = function getAfterWidth(_ref8) {
 var getColorWithHover = function getColorWithHover(_ref9) {
   var vertical = _ref9.vertical,
       disabled = _ref9.disabled;
-  var disabledColor = vertical ? _styles_colors__WEBPACK_IMPORTED_MODULE_4__["default"].red : _styles_colors__WEBPACK_IMPORTED_MODULE_4__["default"].black;
-  var defaultColor = vertical ? _styles_colors__WEBPACK_IMPORTED_MODULE_4__["default"].black : _styles_colors__WEBPACK_IMPORTED_MODULE_4__["default"].red;
+  var disabledColor = vertical ? _constants_colors__WEBPACK_IMPORTED_MODULE_4__["default"].red : _constants_colors__WEBPACK_IMPORTED_MODULE_4__["default"].black;
+  var defaultColor = vertical ? _constants_colors__WEBPACK_IMPORTED_MODULE_4__["default"].black : _constants_colors__WEBPACK_IMPORTED_MODULE_4__["default"].red;
 
   if (disabled) {
     return disabledColor;
@@ -5756,9 +5753,19 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(styled_components__WEBPACK_IMPORTED_MODULE_2__);
 /* harmony import */ var _svg_logo_black_svg__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(22);
 /* harmony import */ var _svg_logo_white_svg__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(23);
-/* harmony import */ var _styles_colors__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(13);
+/* harmony import */ var _constants_colors__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(13);
+function _templateObject3() {
+  var data = _taggedTemplateLiteral(["\n  align-items: center;\n  display: flex;\n"]);
+
+  _templateObject3 = function _templateObject3() {
+    return data;
+  };
+
+  return data;
+}
+
 function _templateObject2() {
-  var data = _taggedTemplateLiteral(["\n  height: 65px;\n  padding-top: 7px;\n  width: 131px;\n"]);
+  var data = _taggedTemplateLiteral(["\n  text-decoration: none;\n"]);
 
   _templateObject2 = function _templateObject2() {
     return data;
@@ -5768,7 +5775,7 @@ function _templateObject2() {
 }
 
 function _templateObject() {
-  var data = _taggedTemplateLiteral(["\n  background-color: ", ";\n  box-shadow: 0 1px 10px 5px #00000026;\n  min-height: 75px;\n  padding: 0 1rem;\n  position: relative;\n  z-index: 20;\n"]);
+  var data = _taggedTemplateLiteral(["\n  align-items: center;\n  background-color: ", ";\n  box-shadow: 0 1px 10px 5px #00000026;\n  display: flex;\n  justify-content: space-between;\n  min-height: 75px;\n  padding: 0 1rem;\n  position: relative;\n  z-index: 20;\n"]);
 
   _templateObject = function _templateObject() {
     return data;
@@ -5784,7 +5791,6 @@ function _taggedTemplateLiteral(strings, raw) { if (!raw) { raw = strings.slice(
 
 
 
- // TODO: children
 
 /*
   inner components
@@ -5792,9 +5798,10 @@ function _taggedTemplateLiteral(strings, raw) { if (!raw) { raw = strings.slice(
 
 var NavbarWrapper = styled_components__WEBPACK_IMPORTED_MODULE_2___default.a.div(_templateObject(), function (_ref) {
   var color = _ref.color;
-  return _styles_colors__WEBPACK_IMPORTED_MODULE_5__["default"][color];
+  return _constants_colors__WEBPACK_IMPORTED_MODULE_5__["default"][color];
 });
-var LogoWrapper = styled_components__WEBPACK_IMPORTED_MODULE_2___default.a.div(_templateObject2());
+var NavbarLogoLink = styled_components__WEBPACK_IMPORTED_MODULE_2___default.a.a(_templateObject2());
+var NavbarChildrenWrapper = styled_components__WEBPACK_IMPORTED_MODULE_2___default.a.div(_templateObject3());
 /*
   outer Navbar component
 */
@@ -5804,7 +5811,17 @@ var Navbar = function Navbar(_ref2) {
       children = _ref2.children;
   return react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(NavbarWrapper, {
     color: color
-  }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(LogoWrapper, null, color === 'white' ? react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_svg_logo_black_svg__WEBPACK_IMPORTED_MODULE_3__["default"], null) : react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_svg_logo_white_svg__WEBPACK_IMPORTED_MODULE_4__["default"], null)), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("span", null, children));
+  }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(NavbarLogoLink, {
+    href: "http://www.brown.edu/",
+    target: "_blank",
+    rel: "noopener noreferrer"
+  }, color === 'white' ? react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_svg_logo_black_svg__WEBPACK_IMPORTED_MODULE_3__["default"], {
+    height: 65,
+    width: 131
+  }) : react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_svg_logo_white_svg__WEBPACK_IMPORTED_MODULE_4__["default"], {
+    height: 65,
+    width: 131
+  })), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(NavbarChildrenWrapper, null, children));
 };
 
 Navbar.propTypes = {
@@ -5838,7 +5855,12 @@ function _objectWithoutProperties(obj, keys) { var target = {}; for (var i in ob
 
   return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(
     "svg",
-    _extends({ xmlns: "http://www.w3.org/2000/svg", width: "112", height: "56", viewBox: "0 0 384 192" }, props),
+    _extends({ viewBox: "0 0 384 192" }, props),
+    react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(
+      "title",
+      null,
+      "Brown University Logo"
+    ),
     react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("path", { fill: "#FFC627", d: "M39.339 25.604c.209.342.479.783.864 1.418 1.005 1.663 2.561 7.928 4.57 10.004 1.071-.727 2.927-1.664 3.98-2.042-.244-.406-1.372-2.334-2.625-3.974-2.413-3.203-4.145-4.914-4.339-5.19-.651-.008-1.76.026-2.45-.216zM57.444 33.946c.479-3.279-.613-8.723-1.257-10.085-.816-.208-1.661-.496-2.355-.829-.09.417-.706 2.639-.91 5.91-.11 1.753-.064 4.42.259 5.004 1.038-.104 2.775-.139 4.263 0zM73.055 53.264c0-9.864-7.729-17.596-17.6-17.596-9.719 0-17.6 7.878-17.6 17.596 0 .465.104 1.408.258 2.36 5.063-1.174 11.775-.986 14.758 1.378 4.827-2.754 11.783-2.927 16.879.042 1.013-.506 2.066-.872 3.131-1.176.127-.949.174-1.943.174-2.604zm-21.452-6.002a2.046 2.046 0 1 1-4.088-.205l.019-.226c-.175-.268-1.095-.566-2.464.264-.687.422-1.457.132-.263-.902 1.267-1.101 2.47-1.739 3.531-1.872l.033-.008c1.788-.124 4.111.242 5.197.684.45.184-.019 2.397-.12 2.37-.369-.082-1.174-.421-1.849-.268l.004.163zm5.87 6.136c-.358 1.044-4.057 1.378-4.736.019-.268-.539-.64-1.929-.139-1.642.822.478 3.798.14 4.36 0 .497-.127.173-.82.479-.735.368.102.368 1.37.036 2.358zm8.702-5.787c-.93-.766-2.147-1.101-2.613-.766l.017.158a2.048 2.048 0 1 1-4.08.357v-.088c-.736-.232-1.908.173-2.069.11-.095-.044-.591-2.129.057-2.391 1.766-.721 7.457-1.072 9.11 2.122.192.388.072.902-.422.498zM67.245 25.409c-2.068 1.752-5.23 5.998-5.634 9.394.971.393 3.535 1.616 3.886 1.906 2.545-2.509 2.028-5.275 3.022-7.413.431-.923.847-1.65 1.088-2.065-.825-.448-1.714-1.086-2.362-1.822z" }),
     react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("path", { fill: "#FFF", d: "M21.983 86.106c-2.636.078-5.215 1.116-6.729.852v17.65s.955.726 3.6-.026c3.422-.973 4.946.096 4.946.096V86.871c.001 0-.398-.809-1.817-.765z" }),
     react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("path", { fill: "#DCDDDE", d: "M46.235 78.265H3.878v38.386h42.357V78.265zm-6.446 30.548h-12.13v1.523h-5.027v-1.523H10.499V88.317h2.588v-3.73c2.63.635 6.923-.814 8.839-.81 2.138.005 3.224.926 3.224.926s1.1-.926 3.216-.926c1.916 0 6.205 1.432 8.835.81v3.73h2.589v20.496z" }),
@@ -5905,7 +5927,12 @@ function _objectWithoutProperties(obj, keys) { var target = {}; for (var i in ob
 
   return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(
     "svg",
-    _extends({ xmlns: "http://www.w3.org/2000/svg", width: "112", height: "56", viewBox: "0 0 384 192" }, props),
+    _extends({ viewBox: "0 0 384 192" }, props),
+    react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(
+      "title",
+      null,
+      "Brown University Logo"
+    ),
     react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(
       "g",
       { fill: "#FFF" },

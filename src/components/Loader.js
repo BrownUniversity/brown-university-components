@@ -19,15 +19,12 @@ const LoaderSVGWrapper = styled.div`
 const Loader = ({ height }) => (
   <LoaderSVGWrapper>
     <svg
-      xmlns="http://www.w3.org/2000/svg"
-      xmlnsXlink="http://www.w3.org/1999/xlink"
       version="1.1"
-      x="0px"
-      y="0px"
       width={Math.floor(height * 0.77)}
       height={height}
       viewBox="0 0 140 180"
-      xmlSpace="preserve"
+      role="alert"
+      aria-live="assertive"
     >
       <path
         className="rays"

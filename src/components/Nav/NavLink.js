@@ -6,7 +6,7 @@ import NavContext from './NavContext';
 import colors from '../../constants/colors';
 import { sans } from '../../constants/typography';
 
-// TODO: mobile
+// TODO: navbar, mobile
 
 /*
   css mixins
@@ -24,7 +24,7 @@ const navLinkAfterCSS = css`
   content: '';
   display: block;
   height: 3px;
-  margin-top: 1em;
+  margin-top: 6px;
   transition: width 0.3s;
 `;
 

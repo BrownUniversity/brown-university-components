@@ -7,7 +7,7 @@ import NavItem from './NavItem';
 import NavLink from './NavLink';
 import colors from '../../constants/colors';
 
-// TODO: mobile
+// TODO: navbar, mobile
 
 /*
   css prop getters
@@ -17,7 +17,7 @@ const getBackgroundColor = ({ vertical, sub }) => {
     return colors.lightGray;
   }
 
-  return colors.white;
+  return 'transparent';
 };
 
 const getDisplay = ({ vertical }) => {

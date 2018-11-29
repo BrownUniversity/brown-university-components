@@ -6,36 +6,47 @@ import LogoBlackSVG from '../svg/logo-black.svg';
 import LogoWhiteSVG from '../svg/logo-white.svg';
 import colors from '../constants/colors';
 
-// TODO: children
-
 /*
   inner components
 */
 const NavbarWrapper = styled.div`
+  align-items: center;
   background-color: ${({ color }) => colors[color]};
   box-shadow: 0 1px 10px 5px #00000026;
+  display: flex;
+  justify-content: space-between;
   min-height: 75px;
   padding: 0 1rem;
   position: relative;
   z-index: 20;
 `;
 
-const LogoWrapper = styled.div`
-  height: 65px;
-  padding-top: 7px;
-  width: 131px;
+const NavbarLogoLink = styled.a`
+  text-decoration: none;
 `;
 
+const NavbarChildrenWrapper = styled.div`
+  align-items: center;
+  display: flex;
+`;
 /*
   outer Navbar component
 */
 
 const Navbar = ({ color, children }) => (
   <NavbarWrapper color={color}>
-    <LogoWrapper>
-      {color === 'white' ? <LogoBlackSVG /> : <LogoWhiteSVG />}
-    </LogoWrapper>
-    <span>{children}</span>
+    <NavbarLogoLink
+      href="http://www.brown.edu/"
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+      {color === 'white' ? (
+        <LogoBlackSVG height={65} width={131} />
+      ) : (
+        <LogoWhiteSVG height={65} width={131} />
+      )}
+    </NavbarLogoLink>
+    <NavbarChildrenWrapper>{children}</NavbarChildrenWrapper>
   </NavbarWrapper>
 );
 

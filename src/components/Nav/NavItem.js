@@ -9,7 +9,6 @@ import styled from 'styled-components';
 */
 const Tag = styled.li`
   display: list-item;
-  margin: 0 0 6px 12px;
 `;
 
 /*
