@@ -2,9 +2,8 @@ import PropTypes from 'prop-types';
 import React from 'react';
 import styled from 'styled-components';
 
-import colors from '../constants/colors';
-
-// TODO: Banner.Text
+import BannerText from './BannerText';
+import colors from '../../constants/colors';
 
 /*
   css prop getters
@@ -59,7 +58,8 @@ Banner.propTypes = {
     'yellow',
     'gray',
     'skyblue',
-    'navy'
+    'navy',
+    'white'
   ]),
   size: PropTypes.oneOf(['default', 'small', 'medium', 'large']),
   src: PropTypes.string,
@@ -72,5 +72,7 @@ Banner.defaultProps = {
   src: null,
   children: null
 };
+
+Banner.Text = BannerText;
 
 export default Banner;

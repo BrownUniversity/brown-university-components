@@ -9,9 +9,9 @@ storiesOf('Navbar', module)
   .add('default', () => <Navbar color={select('color', ['brown', 'white'])} />)
   .add('with children', () => (
     <Navbar color="white">
-      <Nav>
+      <Nav navbar>
         <Nav.Item>
-          <Nav.Link>Link</Nav.Link>
+          <Nav.Link active>Active Link</Nav.Link>
         </Nav.Item>
         <Nav.Item>
           <Nav.Link>Link</Nav.Link>

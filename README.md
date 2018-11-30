@@ -9,7 +9,7 @@ React components for the [Brown University Theme](https://www.brown.edu/universi
 Ensure you're on VPN and that your SSH key has been added to the ssh-agent (`ssh-add ~/.ssh/id_rsa`) and uploaded to [bitbucket.brown.edu](https://bitbucket.brown.edu/plugins/servlet/ssh/account/keys), then run:
 
 ```
-yarn add ssh://git@bitbucket.brown.edu:7999/ccum/brown-university-theme.git#version
+yarn add ssh://git@bitbucket.brown.edu:7999/ccum/brown-university-theme.git#0.3.11
 ```
 
 ### Dependencies
@@ -32,7 +32,34 @@ import 'brown-university-theme/dist/styles.css';
 
 ### Components
 
-- [Buttons](https://www.brown.edu/university-communications/digital/university-theme/formatting/buttons)
+- Banner
+
+  **Example:**
+
+  ```
+  import React from 'react';
+  import { Banner } from 'brown-university-theme';
+
+  export default () => {
+    return (
+      <Banner src={'./path/to/img.jpg'}>
+        <Banner.Text>App Name</Banner.Text>
+      </Banner>
+    );
+  };
+
+  ```
+
+  **Properties:**
+
+  | property | propType                                                                | required | default   |
+  | -------- | ----------------------------------------------------------------------- | -------- | --------- |
+  | color    | oneOf(['emerald', 'red', 'yellow', 'gray', 'skyblue', 'navy', 'white']) | -        | 'emerald' |
+  | size     | oneOf(['default', 'small', 'medium', 'large'])                          | -        | 'default' |
+  | src      | string                                                                  | -        | false     |
+  | children | node                                                                    | -        | false     |
+
+* [Buttons](https://www.brown.edu/university-communications/digital/university-theme/formatting/buttons)
 
   **Example:**
 
@@ -55,7 +82,7 @@ import 'brown-university-theme/dist/styles.css';
   | property | propType                                                                | required | default   |
   | -------- | ----------------------------------------------------------------------- | -------- | --------- |
   | color    | oneOf(['red', 'yellow', 'brown', 'gray', 'emerald', 'skyblue', 'navy']) | -        | 'red'     |
-  | size     | oneOf(['default', 'large', 'small'])                                    | -        | 'default' |
+  | size     | oneOf(['default', 'small', 'large'])                                    | -        | 'default' |
   | outline  | bool                                                                    | -        | false     |
   | inverse  | bool                                                                    | -        | false     |
   | disabled | bool                                                                    | -        | false     |
@@ -63,7 +90,7 @@ import 'brown-university-theme/dist/styles.css';
   | onClick  | func                                                                    | -        | null      |
   | href     | string                                                                  | -        | null      |
 
-- Hamburger
+* Hamburger
 
   **Example:**
 
@@ -88,9 +115,27 @@ import 'brown-university-theme/dist/styles.css';
   | onOpen   | func                                                                             | -        | null    |
   | onClose  | func                                                                             | -        | null    |
 
-- Loader
+* Loader
 
-  TODO
+  **Example:**
+
+  ```
+  import React from 'react';
+  import { Loader } from 'brown-university-theme';
+
+  export default () => {
+    return (
+      <Loader />
+    );
+  };
+
+  ```
+
+  **Properties:**
+
+  | property | propType | required | default |
+  | -------- | -------- | -------- | ------- |
+  | height   | number   | -        | 250     |
 
 - Navs
 
@@ -124,31 +169,55 @@ import 'brown-university-theme/dist/styles.css';
 
   **`Nav` Properties:**
 
-  | property | propType          | required | default   |
-  | -------- | ----------------- | -------- | --------- |
-  | vertical | bool              | -        | false     |
-  | sub      | bool              | -        | false     |
-  | children | arrayOf(Nav.Item) | true     | undefined |
+  | property | propType | required | default   |
+  | -------- | -------- | -------- | --------- |
+  | navbar   | bool     | -        | false     |
+  | vertical | bool     | -        | false     |
+  | mobile   | bool     | -        | false     |
+  | sub      | bool     | -        | false     |
+  | children | node     | true     | undefined |
 
   **`Nav.Item` Properties:**
 
   | property | propType | required | default   |
   | -------- | -------- | -------- | --------- |
-  | children | Nav.Link | true     | undefined |
+  | children | node     | true     | undefined |
 
-  **`Nav.List` Properties:**
+  **`Nav.Link` Properties:**
 
   | property | propType                  | required | default  |
   | -------- | ------------------------- | -------- | -------- |
   | active   | bool                      | -        | false    |
   | disabled | bool                      | -        | false    |
   | tag      | oneOfType([func, string]) | -        | 'button' |
+  | navbar   | bool                      | -        | false    |
+  | vertical | bool                      | -        | false    |
+  | mobile   | bool                      | -        | false    |
   | onClick  | func                      | -        | null     |
   | href     | string                    | -        | null     |
 
-- Navbars
+- Navbar
 
-  TODO
+  **Example:**
+
+  ```
+  import React from 'react';
+  import { Navbar } from 'brown-university-theme';
+
+  export default () => {
+    return (
+      <Navbar />
+    );
+  };
+
+  ```
+
+  **Properties:**
+
+  | property | propType                  | required | default |
+  | -------- | ------------------------- | -------- | ------- |
+  | color    | oneOf(['brown', 'white']) | -        | 'white' |
+  | children | node                      | -        | false   |
 
 ## Development
 

@@ -5,10 +5,17 @@ import { action } from '@storybook/addon-actions';
 
 import { Nav } from '../src';
 
+const getCommonProps = () => ({
+  navbar: boolean('navbar', false),
+  vertical: boolean('vertical', false),
+  mobile: boolean('mobile', false),
+  sub: boolean('sub', false)
+});
+
 storiesOf('Nav', module)
   .addDecorator(withKnobs)
   .add('default', () => (
-    <Nav vertical={boolean('vertical', false)} sub={boolean('sub', false)}>
+    <Nav {...getCommonProps()}>
       <Nav.Item>
         <Nav.Link onClick={action('clicked')}>Link</Nav.Link>
       </Nav.Item>
@@ -25,7 +32,7 @@ storiesOf('Nav', module)
     </Nav>
   ))
   .add('with hrefs', () => (
-    <Nav vertical={boolean('vertical', false)} sub={boolean('sub', false)}>
+    <Nav {...getCommonProps()}>
       <Nav.Item>
         <Nav.Link href="https://www.brown.edu/">Link</Nav.Link>
       </Nav.Item>

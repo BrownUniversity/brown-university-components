@@ -7,8 +7,6 @@ import NavItem from './NavItem';
 import NavLink from './NavLink';
 import colors from '../../constants/colors';
 
-// TODO: navbar, mobile
-
 /*
   css prop getters
 */
@@ -60,24 +58,28 @@ const Tag = styled.ul`
   outer Nav component
 */
 const Nav = props => {
-  const { vertical } = props;
+  const { navbar, mobile, vertical } = props;
 
   return (
-    <NavContext.Provider value={{ vertical }}>
+    <NavContext.Provider value={{ navbar, vertical, mobile }}>
       <Tag {...props} />
     </NavContext.Provider>
   );
 };
 
-Nav.displayName = 'Nav';
-
 Nav.propTypes = {
+  navbar: PropTypes.bool,
   vertical: PropTypes.bool,
+  mobile: PropTypes.bool,
+  sub: PropTypes.bool,
   children: PropTypes.node.isRequired
 };
 
 Nav.defaultProps = {
-  vertical: false
+  navbar: false,
+  vertical: false,
+  mobile: false,
+  sub: false
 };
 
 Nav.Item = NavItem;

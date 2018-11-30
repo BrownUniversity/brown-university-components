@@ -15,7 +15,8 @@ storiesOf('Banner', module)
         'yellow',
         'gray',
         'skyblue',
-        'navy'
+        'navy',
+        'white'
       ])}
       size={select('size', ['default', 'small', 'medium', 'large'])}
     />
@@ -23,6 +24,6 @@ storiesOf('Banner', module)
   .add('with src', () => <Banner src={bannerImage} />)
   .add('with children', () => (
     <Banner>
-      <h1 style={{ color: 'white' }}>Banner</h1>
+      <Banner.Text>University Theme</Banner.Text>
     </Banner>
   ));

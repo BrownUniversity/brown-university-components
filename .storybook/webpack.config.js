@@ -14,5 +14,10 @@ module.exports = (storybookBaseConfig, configType) => {
     loader: 'url-loader'
   });
 
+  storybookBaseConfig.module.rules.push({
+    test: /\.woff$/,
+    use: 'file-loader?name=[name].[ext]'
+  });
+
   return storybookBaseConfig;
 };

@@ -2,7 +2,7 @@ import PropTypes from 'prop-types';
 import React from 'react';
 import styled, { keyframes } from 'styled-components';
 
-// TODO: use react-svg-loader
+// TODO: make spin work with react-svg-loader
 
 /*
   inner components

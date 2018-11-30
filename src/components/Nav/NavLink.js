@@ -6,7 +6,7 @@ import NavContext from './NavContext';
 import colors from '../../constants/colors';
 import { sans } from '../../constants/typography';
 
-// TODO: navbar, mobile
+// TODO: finish mobile styling
 
 /*
   css mixins
@@ -24,7 +24,6 @@ const navLinkAfterCSS = css`
   content: '';
   display: block;
   height: 3px;
-  margin-top: 6px;
   transition: width 0.3s;
 `;
 
@@ -50,20 +49,20 @@ const getCursor = ({ disabled, href }) => {
   return 'pointer';
 };
 
-const getFontSize = ({ vertical }) => {
-  if (vertical) {
+const getFontSize = ({ mobile }) => {
+  if (mobile) {
     return '1em';
   }
 
   return '1.1em';
 };
 
-const getPadding = ({ vertical }) => {
-  if (vertical) {
-    return '8px 0 8px 0';
+const getFontWeight = ({ navbar, vertical }) => {
+  if (navbar || vertical) {
+    return '400';
   }
 
-  return '9px 15px';
+  return '700';
 };
 
 const getOpacity = ({ disabled }) => {
@@ -72,6 +71,14 @@ const getOpacity = ({ disabled }) => {
   }
 
   return '1';
+};
+
+const getPadding = ({ vertical }) => {
+  if (vertical) {
+    return '8px 0 8px 0';
+  }
+
+  return '9px 15px';
 };
 
 const getPointerEvents = ({ disabled, href }) => {
@@ -90,6 +97,13 @@ const getTransition = ({ vertical }) => {
   return 'background-color .55s linear,border-color .25s linear,box-shadow .25s linear,color .25s linear';
 };
 
+const getAfterMarginTop = ({ navbar }) => {
+  if (navbar) {
+    return '0.25em';
+  }
+
+  return '1em';
+};
 const getAfterWidth = ({ active }) => {
   if (active) {
     return '100%';
@@ -125,6 +139,7 @@ const Tag = styled.div`
   color: ${props => getColor(props)};
   cursor: ${props => getCursor(props)};
   font-size: ${props => getFontSize(props)};
+  font-weight: ${props => getFontWeight(props)};
   opacity: ${props => getOpacity(props)};
   padding: ${props => getPadding(props)};
   pointer-events: ${props => getPointerEvents(props)};
@@ -134,6 +149,7 @@ const Tag = styled.div`
     !props.vertical &&
     css`&::after {
       ${navLinkAfterCSS}
+      margin-top: ${getAfterMarginTop(props)};
       width: ${getAfterWidth(props)};
     }
   `}
@@ -168,24 +184,27 @@ const NavLink = props => {
 
   return (
     <NavContext.Consumer>
-      {({ vertical }) => (
+      {({ navbar, vertical, mobile }) => (
         <Tag
           as={derivedTag}
           type={derivedTag === 'button' && props.onClick ? 'button' : undefined}
           {...props}
+          navbar={navbar}
           vertical={vertical}
+          mobile={mobile}
         />
       )}
     </NavContext.Consumer>
   );
 };
 
-NavLink.displayName = 'Navlink';
-
 NavLink.propTypes = {
   active: PropTypes.bool,
   disabled: PropTypes.bool,
   tag: PropTypes.oneOfType([PropTypes.func, PropTypes.string]),
+  navbar: PropTypes.bool,
+  vertical: PropTypes.bool,
+  mobile: PropTypes.bool,
   onClick: PropTypes.func,
   href: PropTypes.string
 };
@@ -194,6 +213,9 @@ NavLink.defaultProps = {
   active: false,
   disabled: false,
   tag: 'button',
+  navbar: false,
+  vertical: false,
+  mobile: false,
   onClick: null,
   href: null
 };
