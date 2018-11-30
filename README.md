@@ -27,6 +27,8 @@ These libraries are not bundled with Brown University Theme and are required at 
 ### CSS
 
 ```
+// Includes fonts. This only needs to be done once; probably where you're
+// calling `ReactDOM.render`.
 import 'brown-university-theme/dist/styles.css';
 ```
 
@@ -67,13 +69,11 @@ import 'brown-university-theme/dist/styles.css';
   import React from 'react';
   import { Button } from 'brown-university-theme';
 
-  export default () => {
-    return (
-      <Button color="yellow">
-        Click Me
-      </Button>
-    );
-  };
+  export default () => (
+    <Button color="yellow">
+      Click Me
+    </Button>
+  );
 
   ```
 
@@ -98,11 +98,9 @@ import 'brown-university-theme/dist/styles.css';
   import React from 'react';
   import { Hamburger } from 'brown-university-theme';
 
-  export default () => {
-    return (
-      <Hamburger />
-    );
-  };
+  export default () => (
+    <Hamburger />
+  );
 
   ```
 
@@ -123,11 +121,9 @@ import 'brown-university-theme/dist/styles.css';
   import React from 'react';
   import { Loader } from 'brown-university-theme';
 
-  export default () => {
-    return (
-      <Loader />
-    );
-  };
+  export default () => (
+    <Loader />
+  );
 
   ```
 
@@ -145,25 +141,23 @@ import 'brown-university-theme/dist/styles.css';
   import React from 'react';
   import { Nav } from 'brown-university-theme';
 
-  export default () => {
-    return (
-      <Nav>
-        <Nav.Item>
-          <Nav.Link>Link</Nav.Link>
-        </Nav.Item>
-        <Nav.Item>
-          <Nav.Link active>
-            Active Link
-          </Nav.Link>
-        </Nav.Item>
-        <Nav.Item>
-          <Nav.Link disabled>
-            Disabled Link
-          </Nav.Link>
-        </Nav.Item>
-      </Nav>
-    );
-  };
+  export default () => (
+    <Nav>
+      <Nav.Item>
+        <Nav.Link>Link</Nav.Link>
+      </Nav.Item>
+      <Nav.Item>
+        <Nav.Link active>
+          Active Link
+        </Nav.Link>
+      </Nav.Item>
+      <Nav.Item>
+        <Nav.Link disabled>
+          Disabled Link
+        </Nav.Link>
+      </Nav.Item>
+    </Nav>
+  );
 
   ```
 
@@ -204,11 +198,9 @@ import 'brown-university-theme/dist/styles.css';
   import React from 'react';
   import { Navbar } from 'brown-university-theme';
 
-  export default () => {
-    return (
-      <Navbar />
-    );
-  };
+  export default () => (
+    <Navbar />
+  );
 
   ```
 
@@ -216,7 +208,7 @@ import 'brown-university-theme/dist/styles.css';
 
   | property | propType                  | required | default |
   | -------- | ------------------------- | -------- | ------- |
-  | color    | oneOf(['brown', 'white']) | -        | 'white' |
+  | color    | oneOf(['brown', 'white']) | -        | 'brown' |
   | children | node                      | -        | false   |
 
 ## Development
