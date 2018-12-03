@@ -129,15 +129,13 @@ class Hamburger extends Component {
 Hamburger.propTypes = {
   color: PropTypes.oneOf(['red', 'gray', 'black', 'white']),
   isOpen: PropTypes.bool,
-  onOpen: PropTypes.func,
-  onClose: PropTypes.func
+  onOpen: PropTypes.func.isRequired,
+  onClose: PropTypes.func.isRequired
 };
 
 Hamburger.defaultProps = {
   color: 'red',
-  isOpen: false,
-  onOpen: () => undefined,
-  onClose: () => undefined
+  isOpen: false
 };
 
 export default Hamburger;

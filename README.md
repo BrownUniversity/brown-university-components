@@ -9,7 +9,7 @@ Styles and components for building web applications based on the [Brown Universi
 Ensure you're on VPN and that your SSH key has been added to the ssh-agent (`ssh-add ~/.ssh/id_rsa`) and uploaded to [bitbucket.brown.edu](https://bitbucket.brown.edu/plugins/servlet/ssh/account/keys), then run:
 
 ```
-yarn add ssh://git@bitbucket.brown.edu:7999/ccum/brown-university-theme.git#0.3.12
+yarn add ssh://git@bitbucket.brown.edu:7999/ccum/brown-university-theme.git#0.3.13
 ```
 
 ### Dependencies
@@ -114,7 +114,9 @@ import 'brown-university-theme/dist/styles.css';
   import React from 'react';
   import { Hamburger } from 'brown-university-theme';
 
-  export default () => <Hamburger color="black" />;
+  export default () => (
+    <Hamburger onOpen={() => handleOpen} onOpen={() => handleClose} />
+  );
 
   ```
 
@@ -124,8 +126,8 @@ import 'brown-university-theme/dist/styles.css';
   | -------- | -------------------------------------------------------------------------------- | -------- | ------- |
   | color    | oneOf(['red', 'yellow', 'brown', 'gray', 'emerald', 'skyblue', 'navy', 'white']) | -        | 'red'   |
   | isOpen   | bool                                                                             | -        | false   |
-  | onOpen   | func                                                                             | -        | null    |
-  | onClose  | func                                                                             | -        | null    |
+  | onOpen   | func                                                                             | true     | -       |
+  | onClose  | func                                                                             | true     | -       |
 
 * Loader
 

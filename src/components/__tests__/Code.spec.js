@@ -21,14 +21,6 @@ describe('Code', () => {
     });
   });
 
-  describe('tag', () => {
-    it('should render a code element by default', () => {
-      const { container } = renderCode();
-
-      expect(container.getElementsByTagName('code')).toHaveLength(1);
-    });
-  });
-
   describe('style', () => {
     it('should render default', () => {
       const { tree } = renderCode();

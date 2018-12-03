@@ -1,4 +1,4 @@
-/*! brown-university-theme v0.3.12 */
+/*! brown-university-theme v0.3.13 */
 (function webpackUniversalModuleDefinition(root, factory) {
 	if(typeof exports === 'object' && typeof module === 'object')
 		module.exports = factory(require("react"), require("styled-components"));
@@ -5166,18 +5166,12 @@ function (_Component) {
 Hamburger.propTypes = {
   color: prop_types__WEBPACK_IMPORTED_MODULE_0___default.a.oneOf(['red', 'gray', 'black', 'white']),
   isOpen: prop_types__WEBPACK_IMPORTED_MODULE_0___default.a.bool,
-  onOpen: prop_types__WEBPACK_IMPORTED_MODULE_0___default.a.func,
-  onClose: prop_types__WEBPACK_IMPORTED_MODULE_0___default.a.func
+  onOpen: prop_types__WEBPACK_IMPORTED_MODULE_0___default.a.func.isRequired,
+  onClose: prop_types__WEBPACK_IMPORTED_MODULE_0___default.a.func.isRequired
 };
 Hamburger.defaultProps = {
   color: 'red',
-  isOpen: false,
-  onOpen: function onOpen() {
-    return undefined;
-  },
-  onClose: function onClose() {
-    return undefined;
-  }
+  isOpen: false
 };
 /* harmony default export */ __webpack_exports__["default"] = (Hamburger);
 
@@ -6038,6 +6032,7 @@ function _taggedTemplateLiteral(strings, raw) { if (!raw) { raw = strings.slice(
 
 
 
+ // TODO: padding (left/right)
 
 /*
   inner components

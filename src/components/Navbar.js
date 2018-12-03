@@ -6,6 +6,8 @@ import LogoBlackSVG from '../svg/logo-black.svg';
 import LogoWhiteSVG from '../svg/logo-white.svg';
 import colors from '../constants/colors';
 
+// TODO: padding (left/right)
+
 /*
   inner components
 */
