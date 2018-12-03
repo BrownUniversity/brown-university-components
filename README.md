@@ -1,6 +1,6 @@
 # Brown University Theme
 
-React components for the [Brown University Theme](https://www.brown.edu/university-communications/digital/university-theme).
+Styles and components for building web applications based on the [Brown University Theme](https://www.brown.edu/university-communications/digital/university-theme).
 
 ## Install
 
@@ -9,7 +9,7 @@ React components for the [Brown University Theme](https://www.brown.edu/universi
 Ensure you're on VPN and that your SSH key has been added to the ssh-agent (`ssh-add ~/.ssh/id_rsa`) and uploaded to [bitbucket.brown.edu](https://bitbucket.brown.edu/plugins/servlet/ssh/account/keys), then run:
 
 ```
-yarn add ssh://git@bitbucket.brown.edu:7999/ccum/brown-university-theme.git#0.3.11
+yarn add ssh://git@bitbucket.brown.edu:7999/ccum/brown-university-theme.git#0.3.12
 ```
 
 ### Dependencies
@@ -24,7 +24,7 @@ These libraries are not bundled with Brown University Theme and are required at 
 
 ## Documentation
 
-### CSS
+### Styles
 
 ```
 // Includes fonts. This only needs to be done once; probably where you're
@@ -42,13 +42,11 @@ import 'brown-university-theme/dist/styles.css';
   import React from 'react';
   import { Banner } from 'brown-university-theme';
 
-  export default () => {
-    return (
-      <Banner src={'./path/to/img.jpg'}>
-        <Banner.Text>App Name</Banner.Text>
-      </Banner>
-    );
-  };
+  export default () => (
+    <Banner src={'./path/to/img.jpg'}>
+      <Banner.Text>App Name</Banner.Text>
+    </Banner>
+  );
 
   ```
 
@@ -90,6 +88,24 @@ import 'brown-university-theme/dist/styles.css';
   | onClick  | func                                                                    | -        | null      |
   | href     | string                                                                  | -        | null      |
 
+- Banner
+
+  **Example:**
+
+  ```
+  import React from 'react';
+  import { Code } from 'brown-university-theme';
+
+  export default () => <Code>small</Code>;
+
+  ```
+
+  **Properties:**
+
+  | property | propType | required | default |
+  | -------- | -------- | -------- | ------- |
+  | children | node     | true     | -       |
+
 * Hamburger
 
   **Example:**
@@ -98,9 +114,7 @@ import 'brown-university-theme/dist/styles.css';
   import React from 'react';
   import { Hamburger } from 'brown-university-theme';
 
-  export default () => (
-    <Hamburger />
-  );
+  export default () => <Hamburger color="black" />;
 
   ```
 
@@ -121,9 +135,7 @@ import 'brown-university-theme/dist/styles.css';
   import React from 'react';
   import { Loader } from 'brown-university-theme';
 
-  export default () => (
-    <Loader />
-  );
+  export default () => <Loader height={300} />;
 
   ```
 
@@ -198,9 +210,7 @@ import 'brown-university-theme/dist/styles.css';
   import React from 'react';
   import { Navbar } from 'brown-university-theme';
 
-  export default () => (
-    <Navbar />
-  );
+  export default () => <Navbar color="white" />;
 
   ```
 
