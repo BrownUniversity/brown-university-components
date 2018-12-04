@@ -6,10 +6,10 @@ Styles and components for building web applications based on the [Brown Universi
 
 ### Add Brown University Theme
 
-Ensure you're on VPN and that your SSH key has been added to the ssh-agent (`ssh-add ~/.ssh/id_rsa`) and uploaded to [bitbucket.brown.edu](https://bitbucket.brown.edu/plugins/servlet/ssh/account/keys), then run:
+Ensure you're on the network and that your SSH key has been added to the ssh-agent (`ssh-add ~/.ssh/id_rsa`) and uploaded to [bitbucket.brown.edu](https://bitbucket.brown.edu/plugins/servlet/ssh/account/keys), then run:
 
 ```
-yarn add ssh://git@bitbucket.brown.edu:7999/ccum/brown-university-theme.git#0.3.14
+  yarn add ssh://git@bitbucket.brown.edu:7999/ccum/brown-university-theme.git#0.3.14
 ```
 
 ### Dependencies
@@ -26,7 +26,7 @@ These libraries are not bundled with Brown University Theme and are required at 
 
 ### Styles
 
-```
+```javascript
 // Includes fonts. This only needs to be done once; probably where you're
 // calling `ReactDOM.render`.
 import 'brown-university-theme/dist/styles.css';
@@ -38,7 +38,7 @@ import 'brown-university-theme/dist/styles.css';
 
   **Example:**
 
-  ```
+  ```javascript
   import React from 'react';
   import { Banner } from 'brown-university-theme';
 
@@ -47,7 +47,6 @@ import 'brown-university-theme/dist/styles.css';
       <Banner.Text>App Name</Banner.Text>
     </Banner>
   );
-
   ```
 
   **Properties:**
@@ -63,16 +62,11 @@ import 'brown-university-theme/dist/styles.css';
 
   **Example:**
 
-  ```
+  ```javascript
   import React from 'react';
   import { Button } from 'brown-university-theme';
 
-  export default () => (
-    <Button color="yellow">
-      Click Me
-    </Button>
-  );
-
+  export default () => <Button color="yellow">Click Me</Button>;
   ```
 
   **Properties:**
@@ -92,12 +86,11 @@ import 'brown-university-theme/dist/styles.css';
 
   **Example:**
 
-  ```
+  ```javascript
   import React from 'react';
   import { Code } from 'brown-university-theme';
 
   export default () => <Code>small</Code>;
-
   ```
 
   **Properties:**
@@ -110,14 +103,13 @@ import 'brown-university-theme/dist/styles.css';
 
   **Example:**
 
-  ```
+  ```javascript
   import React from 'react';
   import { Hamburger } from 'brown-university-theme';
 
   export default () => (
     <Hamburger onOpen={() => handleOpen} onOpen={() => handleClose} />
   );
-
   ```
 
   **Properties:**
@@ -133,12 +125,11 @@ import 'brown-university-theme/dist/styles.css';
 
   **Example:**
 
-  ```
+  ```javascript
   import React from 'react';
   import { Loader } from 'brown-university-theme';
 
   export default () => <Loader height={300} />;
-
   ```
 
   **Properties:**
@@ -151,7 +142,7 @@ import 'brown-university-theme/dist/styles.css';
 
   **Example:**
 
-  ```
+  ```javascript
   import React from 'react';
   import { Nav } from 'brown-university-theme';
 
@@ -161,18 +152,13 @@ import 'brown-university-theme/dist/styles.css';
         <Nav.Link>Link</Nav.Link>
       </Nav.Item>
       <Nav.Item>
-        <Nav.Link active>
-          Active Link
-        </Nav.Link>
+        <Nav.Link active>Active Link</Nav.Link>
       </Nav.Item>
       <Nav.Item>
-        <Nav.Link disabled>
-          Disabled Link
-        </Nav.Link>
+        <Nav.Link disabled>Disabled Link</Nav.Link>
       </Nav.Item>
     </Nav>
   );
-
   ```
 
   **`Nav` Properties:**
@@ -208,12 +194,11 @@ import 'brown-university-theme/dist/styles.css';
 
   **Example:**
 
-  ```
+  ```javascript
   import React from 'react';
   import { Navbar } from 'brown-university-theme';
 
   export default () => <Navbar color="white" />;
-
   ```
 
   **Properties:**
