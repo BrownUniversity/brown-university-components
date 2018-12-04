@@ -2,6 +2,7 @@ const path = require('path');
 const webpack = require('webpack');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
+const svgRules = require('./webpack.utils/rules/svg');
 const { version } = require('./package.json');
 
 module.exports = {
@@ -24,10 +25,7 @@ module.exports = {
         test: /\.css$/,
         use: [MiniCssExtractPlugin.loader, 'css-loader']
       },
-      {
-        test: /\.svg$/,
-        loader: 'react-svg-loader'
-      },
+      svgRules,
       {
         test: /\.woff$/,
         use: 'file-loader?name=[name].[hash].[ext]'

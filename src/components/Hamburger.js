@@ -119,7 +119,12 @@ class Hamburger extends Component {
     const { isOpen } = this.state;
 
     return (
-      <HamburgerButton type="button" onClick={this.handleClick}>
+      <HamburgerButton
+        type="button"
+        aria-expanded={isOpen}
+        aria-label="Toggle navigation"
+        onClick={this.handleClick}
+      >
         <HamburgerBars color={color} isOpen={isOpen} />
       </HamburgerButton>
     );

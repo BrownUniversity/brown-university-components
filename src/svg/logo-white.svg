@@ -3,9 +3,9 @@
 	version="1.1"
 	viewBox="0 0 384 192"
 	role="img"
-	aria-labelledby="logoTile"
+	aria-labelledby="title"
 >
-	<title id="logoTile">Brown University Logo</title>
+	<title id="title">Brown University Logo</title>
 	<g>
 		<g>
 			<g>

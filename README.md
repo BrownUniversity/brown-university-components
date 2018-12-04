@@ -9,7 +9,7 @@ Styles and components for building web applications based on the [Brown Universi
 Ensure you're on VPN and that your SSH key has been added to the ssh-agent (`ssh-add ~/.ssh/id_rsa`) and uploaded to [bitbucket.brown.edu](https://bitbucket.brown.edu/plugins/servlet/ssh/account/keys), then run:
 
 ```
-yarn add ssh://git@bitbucket.brown.edu:7999/ccum/brown-university-theme.git#0.3.13
+yarn add ssh://git@bitbucket.brown.edu:7999/ccum/brown-university-theme.git#0.3.14
 ```
 
 ### Dependencies

@@ -86,6 +86,8 @@ describe('Hamburger', () => {
 }
 
 <button
+  aria-expanded="false"
+  aria-label="Toggle navigation"
   class="c0"
   type="button"
 >
@@ -194,6 +196,8 @@ describe('Hamburger', () => {
 }
 
 <button
+  aria-expanded="true"
+  aria-label="Toggle navigation"
   class="c0"
   type="button"
 >
@@ -276,6 +280,8 @@ describe('Hamburger', () => {
 }
 
 <button
+  aria-expanded="false"
+  aria-label="Toggle navigation"
   class="c0"
   type="button"
 >

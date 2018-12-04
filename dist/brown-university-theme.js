@@ -1,4 +1,4 @@
-/*! brown-university-theme v0.3.13 */
+/*! brown-university-theme v0.3.14 */
 (function webpackUniversalModuleDefinition(root, factory) {
 	if(typeof exports === 'object' && typeof module === 'object')
 		module.exports = factory(require("react"), require("styled-components"));
@@ -118,10 +118,10 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _components_Loader__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(19);
 /* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "Loader", function() { return _components_Loader__WEBPACK_IMPORTED_MODULE_5__["default"]; });
 
-/* harmony import */ var _components_Nav__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(20);
+/* harmony import */ var _components_Nav__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(21);
 /* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "Nav", function() { return _components_Nav__WEBPACK_IMPORTED_MODULE_6__["default"]; });
 
-/* harmony import */ var _components_Navbar__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(24);
+/* harmony import */ var _components_Navbar__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(25);
 /* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "Navbar", function() { return _components_Navbar__WEBPACK_IMPORTED_MODULE_7__["default"]; });
 
 
@@ -5152,6 +5152,8 @@ function (_Component) {
       var isOpen = this.state.isOpen;
       return react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(HamburgerButton, {
         type: "button",
+        "aria-expanded": isOpen,
+        "aria-label": "Toggle navigation",
         onClick: this.handleClick
       }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(HamburgerBars, {
         color: color,
@@ -5187,6 +5189,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_1__);
 /* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(9);
 /* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(styled_components__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var _svg_loader_svg__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(20);
 function _templateObject2() {
   var data = _taggedTemplateLiteral(["\n  svg {\n    #rays {\n      transform-origin: center;\n      transform-box: fill-box;\n      animation: ", " 7s linear infinite;\n    }\n  }\n"]);
 
@@ -5211,7 +5214,7 @@ function _taggedTemplateLiteral(strings, raw) { if (!raw) { raw = strings.slice(
 
 
 
- // TODO: make spin work with react-svg-loader
+
 
 /*
   inner components
@@ -5225,269 +5228,10 @@ var LoaderSVGWrapper = styled_components__WEBPACK_IMPORTED_MODULE_2___default.a.
 
 var Loader = function Loader(_ref) {
   var height = _ref.height;
-  return react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(LoaderSVGWrapper, null, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("svg", {
-    version: "1.1",
+  return react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(LoaderSVGWrapper, null, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_svg_loader_svg__WEBPACK_IMPORTED_MODULE_3__["default"], {
     width: Math.floor(height * 0.77),
-    height: height,
-    viewBox: "0 0 140 180",
-    role: "alert",
-    "aria-live": "assertive"
-  }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("path", {
-    className: "rays",
-    id: "rays",
-    fill: "#F0F3F5",
-    stroke: "#6C757C",
-    strokeWidth: "1.4",
-    strokeMiterlimit: 10,
-    d: "M102,64.6c0,0-5.1-1.9-7.9-2.1C91,62.2,87.2,62,87.2,62c-2.3-0.3-3.7-0.7-4.5-0.9c0-0.4,0.1-0.8,0.1-1.2 c0-0.5,0-1-0.1-1.5c0.8-0.3,2.2-0.6,4.5-0.9c0,0,3.8-0.2,6.9-0.4c2.8-0.2,7.9-2.1,7.9-2.1c1.4-0.4,2.2-0.6,6.4-1.7c0,0,0.5,0,0-0.2 c-0.2-0.1-1.1-0.3-1.1-0.3s-1.5-0.3-4.5-0.4c0,0-1.1,0-1.8,0s-3.1,0-4.9,0.3c-1.8,0.3-6.8,0.1-6.8,0.1s-5.6-0.6-7.6,1.4l-0.1,0.1 c-0.2-0.4-0.4-0.7-0.6-1.1c0.4-0.3,3.3-2.3,6.3-6.1c0,0,1.8-1.7,4-2.7c2.6-1.1,5.5-4.8,5.5-4.8s1.5-2.3,4.5-3.9c0,0,0.4-0.2-0.1-0.2 c-0.2,0-0.8,0.2-0.8,0.2s-2,0.9-4.7,2.3c0,0-0.9,0.4-1.5,0.7c-0.6,0.3-2.8,1.4-4.2,2.6c-1.2,1.1-4.7,3.6-4.7,3.6s-6.1,3.7-6.7,5.3 c-0.4-0.4-0.8-0.7-1.3-1c0.6-0.9,1.3-2.4,1.8-4.6c0,0,0.7-2.4,2.5-4.6c1.8-2.2,2.3-6.8,2.3-6.8s0.2-2.4,2.1-5.2c0,0,0.3-0.4-0.2-0.1 c-0.2,0.1-0.6,0.6-0.6,0.6s-1.5,1.3-3.3,3.8c0,0-0.6,0.7-1,1.3c-0.4,0.5-1.8,2.6-2.5,4.2c-0.7,1.6-3.4,4.9-3.4,4.9s-1.7,2.2-2.1,4.4 c-0.5-0.1-0.9-0.2-1.4-0.3c0.9-2.1,0.2-5,0.2-5s-0.9-4.3-0.6-5.9c0.3-1.8,0-4.2-0.1-4.9c0-0.7-0.2-1.6-0.2-1.6c-0.3-3-0.9-5-0.9-5 s-0.2-0.6-0.3-0.8c-0.2-0.5-0.2,0-0.2,0c0.3,3.4-0.6,5.7-0.6,5.7s-1.8,4.3-1.3,7.1c0.4,2.8-0.1,4.8-0.1,4.8c-0.4,2.6-0.2,4.5,0,5.6 c-0.5,0.1-1,0.2-1.5,0.4c-0.5-2.4-3-4.6-3-4.6s-2.5-3-3.2-5c-0.6-1.7-2.2-3.7-2.5-4.2c-0.4-0.5-1-1.3-1-1.3C54.5,30,53,28.6,53,28.6 s-0.4-0.4-0.6-0.6c-0.5-0.3-0.2,0.1-0.2,0.1c2,2.8,2.3,5.2,2.3,5.2s0.9,4.6,2.7,6.8c1.8,2.2,2.4,4.5,2.4,4.5 c0.8,2.5,1.9,4.1,2.6,4.9c-0.4,0.3-0.8,0.7-1.2,1c-1-2.1-6.3-3.9-6.3-3.9s-3.2-1.5-4.9-3.2c-1.3-1.3-3.6-2.3-4.2-2.6 c-0.6-0.3-1.5-0.7-1.5-0.7c-2.5-1.6-4-2.5-4-2.5s-0.6-0.2-0.8-0.2c-0.5-0.1-0.1,0.2-0.1,0.2c2,2.1,3.8,4.1,3.8,4.1s2.4,3,4.8,4.5 c2.3,1.5,4,3.8,4,3.8c2.7,3.1,5.4,3.8,5.4,3.8l1.2,0.2c-0.2,0.4-0.4,0.8-0.6,1.2l-0.2-0.1c-2-2-6.4-1.5-6.4-1.5s-4.4,0.3-5.9-0.1 c-1.8-0.4-4.2-0.3-4.9-0.3s-1.6,0.1-1.6,0.1c-3.1,0-5,0.6-5,0.6S33.2,54,33,54c-0.5,0.2,0,0.2,0,0.2c3.4-0.1,5.6,1,5.6,1 s4.3,1.8,7.1,1.6c2.8-0.2,4.8,0.4,4.8,0.4c3.9,1.4,6.3,1.6,6.3,1.6l0.1,0c0,0.4-0.1,0.7-0.1,1.1c0,0.3,0,0.5,0,0.8l-0.1,0 c0,0-2.5,0.2-6.3,1.6c0,0-2,0.6-4.8,0.4c-2.8-0.2-7.1,1.6-7.1,1.6s-2.2,1.1-5.6,1c0,0-0.5,0,0,0.2c0.2,0.1,0.8,0.2,0.8,0.2 s2,0.5,5,0.6c0,0,1,0.1,1.6,0.1s3.1,0.2,4.9-0.3c1.6-0.4,5.9-0.1,5.9-0.1s4.4,0.5,6.4-1.5l0.1-0.1c0.1,0.4,0.3,0.8,0.5,1.2l-1,0.2 c0,0-2.8,0.6-5.4,3.8c0,0-1.7,2.3-4,3.8c-2.4,1.5-4.8,4.5-4.8,4.5s-1.8,2-3.8,4.1c0,0-0.4,0.2,0.1,0.2c0.2,0,0.8-0.2,0.8-0.2 s1.6-0.8,4-2.5c0,0,0.9-0.4,1.5-0.7c0.6-0.3,2.9-1.3,4.2-2.6c1.7-1.7,4.9-3.2,4.9-3.2s5-1.6,6.2-3.7c0.4,0.4,0.8,0.7,1.2,1 c-0.7,0.9-1.7,2.4-2.4,4.7c0,0-0.6,2.2-2.4,4.5c-1.8,2.2-2.7,6.8-2.7,6.8s-0.4,2.4-2.3,5.2c0,0-0.3,0.4,0.2,0.1 c0.2-0.1,0.6-0.6,0.6-0.6s1.5-1.3,3.3-3.8c0,0,0.6-0.7,1-1.3c0.4-0.5,1.9-2.5,2.5-4.2c0.7-2,3.2-5,3.2-5s2.3-2,2.9-4.3 c0.5,0.2,1,0.3,1.5,0.4c-0.2,1.1-0.3,3,0,5.3c0,0,0.5,2,0.1,4.8c-0.4,2.8,1.3,7.1,1.3,7.1s0.9,2.3,0.6,5.7c0,0,0,0.5,0.2,0 c0.1-0.2,0.3-0.8,0.3-0.8s0.6-1.9,0.9-5c0,0,0.2-0.9,0.2-1.6c0-0.7,0.4-3.1,0.1-4.9c-0.3-1.6,0.6-5.9,0.6-5.9s0.6-2.6-0.1-4.7 c0.5-0.1,0.9-0.1,1.3-0.3c0.5,2.2,2.1,4.2,2.1,4.2s2.6,3.4,3.4,4.9c0.8,1.6,2.2,3.7,2.5,4.2c0.4,0.5,1,1.3,1,1.3 c1.7,2.5,3.3,3.8,3.3,3.8s0.4,0.4,0.6,0.6c0.5,0.3,0.2-0.1,0.2-0.1c-2-2.8-2.1-5.2-2.1-5.2s-0.5-4.6-2.3-6.8 c-1.8-2.2-2.5-4.6-2.5-4.6c-0.5-2-1.1-3.4-1.7-4.3c0.4-0.3,0.9-0.7,1.2-1c1,1.7,6.6,5.1,6.6,5.1s3.5,2.5,4.7,3.6 c1.3,1.2,3.6,2.3,4.2,2.6c0.6,0.3,1.5,0.7,1.5,0.7c2.7,1.4,4.7,2.3,4.7,2.3s0.6,0.2,0.8,0.2c0.5,0.1,0.1-0.2,0.1-0.2 c-3-1.6-4.5-3.9-4.5-3.9s-2.9-3.7-5.5-4.8c-2.3-1-4-2.7-4-2.7c-2.7-3.5-5.4-5.5-6.1-6c0.2-0.3,0.4-0.7,0.5-1l0,0 c2,2,7.6,1.4,7.6,1.4s5-0.2,6.8,0.1c1.8,0.3,4.2,0.3,4.9,0.3s1.8,0,1.8,0c3.1,0,4.5-0.4,4.5-0.4s0.9-0.2,1.1-0.3 c0.5-0.2,0-0.2,0-0.2C104.2,65.1,103.5,65,102,64.6z"
-  }), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("g", {
-    id: "sun_1_"
-  }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("circle", {
-    className: "st5",
-    fill: "#F0F3F5",
-    stroke: "#6C757C",
-    strokeWidth: "1.4",
-    strokeMiterlimit: 10,
-    cx: "69.9",
-    cy: "59.9",
-    r: 13
-  })), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("g", {
-    id: "sun_eyes__x26__mouth"
-  }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("g", null, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("path", {
-    fill: "#6C757C",
-    d: "M67.1,55.7c0,0.8-0.7,1.4-1.5,1.4c-0.8,0-1.4-0.7-1.4-1.5l0-0.2c-0.1-0.2-0.8-0.4-1.7,0.2 c-0.5,0.3-1,0.1-0.2-0.6c0.9-0.8,1.7-1.2,2.5-1.3l0,0c1.2-0.1,2.9,0.2,3.6,0.5c0.3,0.1,0,1.7-0.1,1.7c-0.3-0.1-0.8-0.3-1.3-0.2 L67.1,55.7"
-  }), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("path", {
-    fill: "#6C757C",
-    d: "M71.2,60c-0.3,0.7-2.8,1-3.3,0c-0.2-0.4-0.4-1.3-0.1-1.1c0.6,0.3,2.6,0.1,3,0c0.3-0.1,0.1-0.6,0.3-0.5 C71.4,58.4,71.4,59.3,71.2,60"
-  }), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("path", {
-    fill: "#6C757C",
-    d: "M77.2,55.9c-0.6-0.5-1.5-0.8-1.8-0.5l0,0.1c0.1,0.8-0.5,1.5-1.3,1.5c-0.8,0.1-1.5-0.5-1.5-1.3v-0.1 c-0.5-0.2-1.3,0.1-1.4,0.1c-0.1,0-0.4-1.5,0-1.7c1.2-0.5,5.2-0.7,6.4,1.5C77.7,55.9,77.6,56.2,77.2,55.9"
-  }))), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("g", {
-    id: "cover"
-  }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("line", {
-    stroke: "#F0F3F5",
-    x1: 26,
-    y1: 72,
-    x2: 114,
-    y2: 72,
-    strokeWidth: 9
-  })), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("g", {
-    id: "shield"
-  }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("path", {
-    fill: "#F0F3F5",
-    d: "M32.5,76.4l74.2,0.1v41.7c0,0,2.8,30-36.8,36.2c0,0-36.3-2.9-37.2-35.4L32.5,76.4z"
-  }), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("g", null, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("path", {
-    fill: "none",
-    d: "M46.4,82.8c-1.8,0.1-3.6,0.8-4.7,0.6v12.3c0,0,0.7,0.5,2.5,0c2.4-0.7,3.4,0.1,3.4,0.1V83.3 C47.7,83.3,47.4,82.8,46.4,82.8z"
-  }), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("path", {
-    fill: "none",
-    d: "M93.1,82.8c-1,0-1.3,0.5-1.3,0.5v12.4c0,0,1.1-0.7,3.5-0.1c1.8,0.5,2.5,0,2.5,0V83.4 C96.7,83.6,94.9,82.8,93.1,82.8z"
-  }), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("path", {
-    fill: "none",
-    d: "M105.7,77.3H76.2v26.8h29.5V77.3z M101.3,98.6h-8.5v1.1h-3.5v-1.1h-8.5V84.3h1.8v-2.6 c1.8,0.4,4.8-0.6,6.2-0.6c1.5,0,2.2,0.6,2.2,0.6s0.8-0.6,2.2-0.6c1.3,0,4.3,1,6.2,0.6v2.6h1.8V98.6z"
-  }), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("path", {
-    fill: "none",
-    d: "M63.3,77.3H33.8v26.8h29.5V77.3z M58.8,98.6h-8.5v1.1h-3.5v-1.1h-8.5V84.3h1.8v-2.6c1.8,0.4,4.8-0.6,6.2-0.6 c1.5,0,2.2,0.6,2.2,0.6s0.8-0.6,2.2-0.6c1.3,0,4.3,1,6.2,0.6v2.6h1.8V98.6z"
-  }), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("path", {
-    fill: "none",
-    d: "M50.8,82.8c-1,0-1.3,0.5-1.3,0.5v12.4c0,0,1.1-0.7,3.5-0.1c1.8,0.5,2.5,0,2.5,0V83.4 C54.5,83.6,52.7,82.8,50.8,82.8z"
-  }), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("path", {
-    fill: "none",
-    d: "M47.7,134.3v-12.4c0,0-0.3-0.6-1.3-0.5c-1.8,0.1-3.6,0.8-4.7,0.6v12.3c0,0,0.7,0.5,2.5,0 C46.6,133.6,47.7,134.3,47.7,134.3z"
-  }), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("path", {
-    fill: "none",
-    d: "M53,134.3c1.8,0.5,2.5,0,2.5,0V122c-1.1,0.2-2.9-0.5-4.7-0.6c-1,0-1.3,0.5-1.3,0.5v12.4 C49.6,134.3,50.6,133.6,53,134.3z"
-  }), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("path", {
-    fill: "none",
-    d: "M38.4,135.7v-12.8h1.8v-2.6c1.8,0.4,4.8-0.6,6.2-0.6c1.5,0,2.2,0.6,2.2,0.6s0.8-0.6,2.2-0.6 c1.3,0,4.3,1,6.2,0.6v2.6h1.8v14.3h-8.5v1.1h-3.5v-1.1h-7.5c1.2,1.8,2.6,3.5,4.3,5.1c4.7,4.4,12.1,7.4,19.7,9.6v-35.8H33.8 l0.1,1.1C34.1,124.6,35.5,130.7,38.4,135.7z"
-  }), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("polygon", {
-    fill: "none",
-    points: "64.9,152.4 69.8,153.7 74.7,152.4 74.7,114.4 105.7,114.4 105.7,105.7 74.7,105.7 74.7,77.3 64.9,77.3 64.9,105.7 33.8,105.7 33.8,114.4 64.9,114.4 \t\t"
-  }), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("path", {
-    fill: "none",
-    d: "M88.7,82.8c-1.8,0.1-3.6,0.8-4.7,0.6v12.3c0,0,0.7,0.5,2.5,0c2.4-0.7,3.4,0.1,3.4,0.1V83.3 C90,83.3,89.7,82.8,88.7,82.8z"
-  }), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("path", {
-    fill: "none",
-    d: "M76.2,116.1V152c7.4-2.2,14.8-5,19.8-9.6c1.8-1.6,3.2-3.3,4.5-5.1h-7.6v1.1h-3.5v-1.1h-8.5v-14.3h1.8v-2.6 c1.8,0.4,4.8-0.6,6.2-0.6c1.5,0,2.2,0.6,2.2,0.6s0.8-0.6,2.2-0.6c1.3,0,4.3,1,6.2,0.6v2.6h1.8v12.9c2.7-4.7,4-10.5,4.4-18.5 l-0.1-1.2H76.2z"
-  }), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("path", {
-    fill: "none",
-    d: "M84.2,122v12.3c0,0,0.7,0.5,2.5,0c2.4-0.7,3.5,0.1,3.5,0.1v-12.4c0,0-0.3-0.6-1.3-0.5 C87.1,121.4,85.3,122.2,84.2,122z"
-  }), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("path", {
-    fill: "none",
-    d: "M92.1,121.9v12.4c0,0,1.1-0.7,3.4-0.1c1.8,0.5,2.5,0,2.5,0V122c-1.1,0.2-2.9-0.5-4.7-0.6 C92.3,121.3,92.1,121.9,92.1,121.9z"
-  }), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("path", {
-    fill: "#6C757C",
-    d: "M32,115.1c0,13.1,3.3,22.2,10.3,28.5c6.9,6.3,17.4,9.5,27.5,11.9c10.5-2.5,20.5-5.5,27.5-11.9 c7-6.4,10.3-15.4,10.3-28.5V75.5H32V115.1z M101.3,135.8v-12.9h-1.8v-2.6c-1.8,0.4-4.8-0.6-6.2-0.6c-1.5,0-2.2,0.6-2.2,0.6 s-0.8-0.6-2.2-0.6c-1.3,0-4.3,1-6.2,0.6v2.6h-1.8v14.3h8.5v1.1h3.5v-1.1h7.6c-1.2,1.8-2.7,3.5-4.5,5.1c-5,4.6-12.4,7.4-19.8,9.6 v-35.9h29.5l0.1,1.2C105.4,125.4,104.1,131.1,101.3,135.8z M98,122v12.3c0,0-0.7,0.5-2.5,0c-2.4-0.7-3.4,0.1-3.4,0.1v-12.4 c0,0,0.3-0.6,1.3-0.5C95.2,121.4,97,122.2,98,122z M90.2,121.9v12.4c0,0-1.1-0.7-3.5-0.1c-1.8,0.5-2.5,0-2.5,0V122 c1.1,0.2,2.9-0.5,4.7-0.6C89.9,121.3,90.2,121.9,90.2,121.9z M76.2,77.3h29.5v26.8H76.2V77.3z M33.8,77.3h29.5v26.8H33.8V77.3z M33.8,105.7h31.1V77.3h9.8v28.4h31.1v8.7H74.7v38l-4.9,1.2l-4.9-1.3v-38H33.8V105.7z M63.3,116.1v35.8c-7.6-2.2-15-5.2-19.7-9.6 c-1.7-1.6-3.1-3.3-4.3-5.1h7.5v1.1h3.5v-1.1h8.5v-14.3H57v-2.6c-1.8,0.4-4.8-0.6-6.2-0.6c-1.5,0-2.2,0.6-2.2,0.6s-0.8-0.6-2.2-0.6 c-1.3,0-4.3,1-6.2,0.6v2.6h-1.8v12.8c-2.9-5-4.3-11.1-4.6-18.5l-0.1-1.1H63.3z M41.7,134.3V122c1.1,0.2,2.9-0.5,4.7-0.6 c1,0,1.3,0.5,1.3,0.5v12.4c0,0-1.1-0.7-3.5-0.1C42.4,134.8,41.7,134.3,41.7,134.3z M49.6,134.3v-12.4c0,0,0.3-0.6,1.3-0.5 c1.8,0.1,3.6,0.8,4.7,0.6v12.3c0,0-0.7,0.5-2.5,0C50.6,133.6,49.6,134.3,49.6,134.3z"
-  }), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("path", {
-    fill: "#6C757C",
-    d: "M57,81.7c-1.8,0.4-4.8-0.6-6.2-0.6c-1.5,0-2.2,0.6-2.2,0.6s-0.8-0.6-2.2-0.6c-1.3,0-4.3,1-6.2,0.6v2.6h-1.8 v14.3h8.5v1.1h3.5v-1.1h8.5V84.3H57V81.7z M47.7,95.7c0,0-1.1-0.7-3.4-0.1c-1.8,0.5-2.5,0-2.5,0V83.4c1.1,0.2,2.9-0.5,4.7-0.6 c1,0,1.3,0.5,1.3,0.5V95.7z M55.5,95.7c0,0-0.7,0.5-2.5,0c-2.4-0.7-3.5,0.1-3.5,0.1V83.3c0,0,0.3-0.6,1.3-0.5 c1.8,0.1,3.6,0.8,4.7,0.6V95.7z"
-  }), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("path", {
-    fill: "#6C757C",
-    d: "M99.5,81.7c-1.8,0.4-4.8-0.6-6.2-0.6c-1.5,0-2.2,0.6-2.2,0.6s-0.8-0.6-2.2-0.6c-1.3,0-4.3,1-6.2,0.6v2.6h-1.8 v14.3h8.5v1.1h3.5v-1.1h8.5V84.3h-1.8V81.7z M90,95.7c0,0-1.1-0.7-3.4-0.1c-1.8,0.5-2.5,0-2.5,0V83.4c1.1,0.2,2.9-0.5,4.7-0.6 c1,0,1.3,0.5,1.3,0.5V95.7z M97.8,95.7c0,0-0.7,0.5-2.5,0c-2.4-0.7-3.5,0.1-3.5,0.1V83.3c0,0,0.3-0.6,1.3-0.5 c1.8,0.1,3.6,0.8,4.7,0.6V95.7z"
-  }))), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("g", {
-    id: "clouds_of_ignorance"
-  }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("path", {
-    className: "st5",
-    fill: "#F0F3F5",
-    stroke: "#6C757C",
-    strokeWidth: "1.4",
-    strokeMiterlimit: 10,
-    d: "M41,40.3c0,0,0.6-4.1,5.8-4.6c0,0,0.4-8.5,10.9-4.5c0,0,0,0,0,0c0,0,2.2-9.3,12.4-3.8c0,0,8.3-5.3,13.7,4.3 c0,0,6.9-2.8,7.9,3.5c0,0,7.6-2.7,9.4,3.8c0,0,5.7-0.2,4.7,5.7c0,0-0.5,5-9,1.9c0,0-7.7,3.9-11.1-4.8c0,0-6.4,1.9-8.4-4.6 c0,0,0,0,0,0c0,0-6.1,4.1-10.8-0.5c0,0-3,4.1-8.6,3.2c0,0-2.7,3.3-7.3,2.2c0,0,1.6,7.7-9.4,6.2c0,0-4.3,2.5-6.3-1.8 C32.9,41.9,41,40.3,41,40.3z"
-  }), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("path", {
-    className: "st6",
-    fill: "none",
-    stroke: "#6C757C",
-    strokeWidth: "1.4",
-    strokeLinecap: "round",
-    strokeMiterlimit: 10,
-    d: "M36.7,45.7c0,0,0.3-3.5,4.8-3.1"
-  }), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("path", {
-    className: "st7",
-    fill: "none",
-    stroke: "#6C757C",
-    strokeWidth: "1.4",
-    strokeLinecap: "round",
-    strokeLinejoin: "round",
-    strokeMiterlimit: 10,
-    d: "M43.3,41c0,0,0.5-2.8,3.7-2.7"
-  }), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("path", {
-    className: "st7",
-    fill: "none",
-    stroke: "#6C757C",
-    strokeWidth: "1.4",
-    strokeLinecap: "round",
-    strokeLinejoin: "round",
-    strokeMiterlimit: 10,
-    d: "M48.9,36.9c0,0,1.3-5.6,6.6-3.7"
-  }), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("path", {
-    className: "st7",
-    fill: "none",
-    stroke: "#6C757C",
-    strokeWidth: "1.4",
-    strokeLinecap: "round",
-    strokeLinejoin: "round",
-    strokeMiterlimit: 10,
-    d: "M60.2,31.4c0,0,3.9-5.2,8.2-1.5"
-  }), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("path", {
-    className: "st7",
-    fill: "none",
-    stroke: "#6C757C",
-    strokeWidth: "1.4",
-    strokeLinecap: "round",
-    strokeLinejoin: "round",
-    strokeMiterlimit: 10,
-    d: "M70.7,30.8c0,0,6.4-5,10.4,2.1"
-  }), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("path", {
-    className: "st7",
-    fill: "none",
-    stroke: "#6C757C",
-    strokeWidth: "1.4",
-    strokeLinecap: "round",
-    strokeLinejoin: "round",
-    strokeMiterlimit: 10,
-    d: "M84.1,34.3c0,0,4.5-2,5.3,2"
-  }), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("path", {
-    className: "st7",
-    fill: "none",
-    stroke: "#6C757C",
-    strokeWidth: "1.4",
-    strokeLinecap: "round",
-    strokeLinejoin: "round",
-    strokeMiterlimit: 10,
-    d: "M92,38.2c0,0,5-2.3,6.7,2.4"
-  }), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("path", {
-    className: "st7",
-    fill: "none",
-    stroke: "#6C757C",
-    strokeWidth: "1.4",
-    strokeLinecap: "round",
-    strokeLinejoin: "round",
-    strokeMiterlimit: 10,
-    d: "M100.1,41.8c0.1,0,3.7-0.8,3.1,3.1"
-  })), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("g", {
-    id: "decor"
-  }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("path", {
-    className: "st8",
-    fill: "#F0F3F5",
-    stroke: "#6C757C",
-    strokeWidth: "1.4",
-    strokeLinecap: "round",
-    strokeLinejoin: "round",
-    strokeMiterlimit: 10,
-    d: "M43.4,62.8c0,0-5.9-3.7-9.7,0.4c0,0-1.6,1.8-0.3,4.3c1.5,2.8,4.9,2.7,6.9,0.9c0,0,1.8,2.8,6.5,0.1 c0,0,5.6,2.7,11.6-0.1c0,0,2,2.4,6.3,0.4c0,0,2.7,2.4,6.3-0.2c0,0,6.5,3,11.9-0.3c0,0,2.3,2.6,6.1,0.4c0,0,2.6,2.6,6.4-0.2 c0,0,3.3,2,8.4,0.7c0,0,3.1-0.8,2.3-3.2c-1-2.9-3.8-6.3-13.6-3.1c0,0-6.7-2.9-12.4,0.5c0,0-4.7-3.7-12.1,0c0,0-3.1-3.6-12.4-0.4 C55.4,63,51.1,59.3,43.4,62.8z"
-  }), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("path", {
-    className: "st9",
-    fill: "#FFFFFF",
-    stroke: "#6C757C",
-    strokeWidth: "1.4",
-    strokeLinecap: "round",
-    strokeLinejoin: "round",
-    strokeMiterlimit: 10,
-    d: "M37.1,65.4c0,0,1.1,0,1.6,0.8c0.5,0.8,1.6,2.1,1.6,2.1"
-  }), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("path", {
-    className: "st9",
-    fill: "#FFFFFF",
-    stroke: "#6C757C",
-    strokeWidth: "1.4",
-    strokeLinecap: "round",
-    strokeLinejoin: "round",
-    strokeMiterlimit: 10,
-    d: "M43.2,62.6c0,0,1.2,1.4,1.7,2.8s1.7,3.1,2.8,3.5"
-  }), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("path", {
-    className: "st9",
-    fill: "#FFFFFF",
-    stroke: "#6C757C",
-    strokeWidth: "1.4",
-    strokeLinecap: "round",
-    strokeLinejoin: "round",
-    strokeMiterlimit: 10,
-    d: "M55.7,63.2c0.4,0.5,1,1.4,1.3,2.3c0.5,1.4,1.5,3.3,2.7,3.7"
-  }), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("path", {
-    className: "st9",
-    fill: "#FFFFFF",
-    stroke: "#6C757C",
-    strokeWidth: "1.4",
-    strokeLinecap: "round",
-    strokeLinejoin: "round",
-    strokeMiterlimit: 10,
-    d: "M67.9,63.4c0.4,0.5,0.8,1.3,1.1,2c0.4,1.1,1.2,2.4,2.1,3"
-  }), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("path", {
-    className: "st9",
-    fill: "#FFFFFF",
-    stroke: "#6C757C",
-    strokeWidth: "1.4",
-    strokeLinecap: "round",
-    strokeLinejoin: "round",
-    strokeMiterlimit: 10,
-    d: "M79.5,63.1c0.4,0.5,0.8,1.3,1.1,2c0.4,1.1,1.2,2.4,2.1,3"
-  }), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("path", {
-    className: "st9",
-    fill: "#FFFFFF",
-    stroke: "#6C757C",
-    strokeWidth: "1.4",
-    strokeLinecap: "round",
-    strokeLinejoin: "round",
-    strokeMiterlimit: 10,
-    d: "M92.2,63c0.4,0.5,0.8,1.3,1.1,2c0.4,1.1,1,2.6,1.9,3.3"
-  }), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("path", {
-    className: "st9",
-    fill: "#FFFFFF",
-    stroke: "#6C757C",
-    strokeWidth: "1.4",
-    strokeLinecap: "round",
-    strokeLinejoin: "round",
-    strokeMiterlimit: 10,
-    d: "M61.2,65.4c0,0,0.9,0,1.7,1.1s1.8,2.4,2.5,2.7"
-  }), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("path", {
-    className: "st9",
-    fill: "#FFFFFF",
-    stroke: "#6C757C",
-    strokeWidth: "1.4",
-    strokeLinecap: "round",
-    strokeLinejoin: "round",
-    strokeMiterlimit: 10,
-    d: "M85.8,65.6c0,0,1,0.2,1.6,1.2c0.6,1,1.9,2.3,2.8,2.7"
-  }))));
+    height: height
+  }));
 };
 
 Loader.propTypes = {
@@ -5504,15 +5248,80 @@ Loader.defaultProps = {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(8);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
+
+function _objectWithoutProperties(obj, keys) { var target = {}; for (var i in obj) { if (keys.indexOf(i) >= 0) continue; if (!Object.prototype.hasOwnProperty.call(obj, i)) continue; target[i] = obj[i]; } return target; }
+
+
+/* harmony default export */ __webpack_exports__["default"] = ((_ref) => {
+  let {
+    styles = {}
+  } = _ref,
+      props = _objectWithoutProperties(_ref, ["styles"]);
+
+  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(
+    "svg",
+    _extends({ version: "1.1", viewBox: "0 0 140 180", role: "img", "aria-labelledby": "title" }, props),
+    react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(
+      "title",
+      { id: "title" },
+      "Loading..."
+    ),
+    react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("path", { className: styles["rays"] || "rays", id: "rays", fill: "#F0F3F5", stroke: "#6C757C", strokeWidth: "1.4", strokeMiterlimit: "10", d: "M102 64.6s-5.1-1.9-7.9-2.1c-3.1-.3-6.9-.5-6.9-.5-2.3-.3-3.7-.7-4.5-.9 0-.4.1-.8.1-1.2 0-.5 0-1-.1-1.5.8-.3 2.2-.6 4.5-.9 0 0 3.8-.2 6.9-.4 2.8-.2 7.9-2.1 7.9-2.1 1.4-.4 2.2-.6 6.4-1.7 0 0 .5 0 0-.2-.2-.1-1.1-.3-1.1-.3s-1.5-.3-4.5-.4H101c-.7 0-3.1 0-4.9.3-1.8.3-6.8.1-6.8.1s-5.6-.6-7.6 1.4l-.1.1c-.2-.4-.4-.7-.6-1.1.4-.3 3.3-2.3 6.3-6.1 0 0 1.8-1.7 4-2.7 2.6-1.1 5.5-4.8 5.5-4.8s1.5-2.3 4.5-3.9c0 0 .4-.2-.1-.2-.2 0-.8.2-.8.2s-2 .9-4.7 2.3c0 0-.9.4-1.5.7-.6.3-2.8 1.4-4.2 2.6-1.2 1.1-4.7 3.6-4.7 3.6s-6.1 3.7-6.7 5.3c-.4-.4-.8-.7-1.3-1 .6-.9 1.3-2.4 1.8-4.6 0 0 .7-2.4 2.5-4.6 1.8-2.2 2.3-6.8 2.3-6.8s.2-2.4 2.1-5.2c0 0 .3-.4-.2-.1-.2.1-.6.6-.6.6s-1.5 1.3-3.3 3.8c0 0-.6.7-1 1.3-.4.5-1.8 2.6-2.5 4.2S75 42.7 75 42.7s-1.7 2.2-2.1 4.4c-.5-.1-.9-.2-1.4-.3.9-2.1.2-5 .2-5s-.9-4.3-.6-5.9c.3-1.8 0-4.2-.1-4.9 0-.7-.2-1.6-.2-1.6-.3-3-.9-5-.9-5s-.2-.6-.3-.8c-.2-.5-.2 0-.2 0 .3 3.4-.6 5.7-.6 5.7s-1.8 4.3-1.3 7.1c.4 2.8-.1 4.8-.1 4.8-.4 2.6-.2 4.5 0 5.6-.5.1-1 .2-1.5.4-.5-2.4-3-4.6-3-4.6s-2.5-3-3.2-5c-.6-1.7-2.2-3.7-2.5-4.2-.4-.5-1-1.3-1-1.3-1.7-2.1-3.2-3.5-3.2-3.5l-.6-.6c-.5-.3-.2.1-.2.1 2 2.8 2.3 5.2 2.3 5.2s.9 4.6 2.7 6.8c1.8 2.2 2.4 4.5 2.4 4.5.8 2.5 1.9 4.1 2.6 4.9-.4.3-.8.7-1.2 1-1-2.1-6.3-3.9-6.3-3.9s-3.2-1.5-4.9-3.2c-1.3-1.3-3.6-2.3-4.2-2.6-.6-.3-1.5-.7-1.5-.7-2.5-1.6-4-2.5-4-2.5s-.6-.2-.8-.2c-.5-.1-.1.2-.1.2 2 2.1 3.8 4.1 3.8 4.1s2.4 3 4.8 4.5c2.3 1.5 4 3.8 4 3.8 2.7 3.1 5.4 3.8 5.4 3.8l1.2.2-.6 1.2-.2-.1c-2-2-6.4-1.5-6.4-1.5s-4.4.3-5.9-.1c-1.8-.4-4.2-.3-4.9-.3s-1.6.1-1.6.1c-3.1 0-5 .6-5 .6s-.6.1-.8.1c-.5.2 0 .2 0 .2 3.4-.1 5.6 1 5.6 1s4.3 1.8 7.1 1.6c2.8-.2 4.8.4 4.8.4 3.9 1.4 6.3 1.6 6.3 1.6h.1c0 .4-.1.7-.1 1.1v.8h-.1s-2.5.2-6.3 1.6c0 0-2 .6-4.8.4-2.8-.2-7.1 1.6-7.1 1.6s-2.2 1.1-5.6 1c0 0-.5 0 0 .2.2.1.8.2.8.2s2 .5 5 .6c0 0 1 .1 1.6.1s3.1.2 4.9-.3c1.6-.4 5.9-.1 5.9-.1s4.4.5 6.4-1.5l.1-.1c.1.4.3.8.5 1.2l-1 .2s-2.8.6-5.4 3.8c0 0-1.7 2.3-4 3.8-2.4 1.5-4.8 4.5-4.8 4.5s-1.8 2-3.8 4.1c0 0-.4.2.1.2.2 0 .8-.2.8-.2s1.6-.8 4-2.5c0 0 .9-.4 1.5-.7.6-.3 2.9-1.3 4.2-2.6 1.7-1.7 4.9-3.2 4.9-3.2s5-1.6 6.2-3.7c.4.4.8.7 1.2 1-.7.9-1.7 2.4-2.4 4.7 0 0-.6 2.2-2.4 4.5-1.8 2.2-2.7 6.8-2.7 6.8s-.4 2.4-2.3 5.2c0 0-.3.4.2.1.2-.1.6-.6.6-.6s1.5-1.3 3.3-3.8c0 0 .6-.7 1-1.3.4-.5 1.9-2.5 2.5-4.2.7-2 3.2-5 3.2-5s2.3-2 2.9-4.3c.5.2 1 .3 1.5.4-.2 1.1-.3 3 0 5.3 0 0 .5 2 .1 4.8s1.3 7.1 1.3 7.1.9 2.3.6 5.7c0 0 0 .5.2 0 .1-.2.3-.8.3-.8s.6-1.9.9-5c0 0 .2-.9.2-1.6 0-.7.4-3.1.1-4.9-.3-1.6.6-5.9.6-5.9s.6-2.6-.1-4.7c.5-.1.9-.1 1.3-.3.5 2.2 2.1 4.2 2.1 4.2s2.6 3.4 3.4 4.9c.8 1.6 2.2 3.7 2.5 4.2.4.5 1 1.3 1 1.3 1.7 2.5 3.3 3.8 3.3 3.8l.6.6c.5.3.2-.1.2-.1-2-2.8-2.1-5.2-2.1-5.2s-.5-4.6-2.3-6.8c-1.8-2.2-2.5-4.6-2.5-4.6-.5-2-1.1-3.4-1.7-4.3.4-.3.9-.7 1.2-1 1 1.7 6.6 5.1 6.6 5.1s3.5 2.5 4.7 3.6c1.3 1.2 3.6 2.3 4.2 2.6.6.3 1.5.7 1.5.7 2.7 1.4 4.7 2.3 4.7 2.3s.6.2.8.2c.5.1.1-.2.1-.2-3-1.6-4.5-3.9-4.5-3.9s-2.9-3.7-5.5-4.8c-2.3-1-4-2.7-4-2.7-2.7-3.5-5.4-5.5-6.1-6 .2-.3.4-.7.5-1 2 2 7.6 1.4 7.6 1.4s5-.2 6.8.1c1.8.3 4.2.3 4.9.3h1.8c3.1 0 4.5-.4 4.5-.4s.9-.2 1.1-.3c.5-.2 0-.2 0-.2-4.1-1.2-4.8-1.3-6.3-1.7z" }),
+    react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("circle", { className: styles["st5"] || "st5", fill: "#F0F3F5", stroke: "#6C757C", strokeWidth: "1.4", strokeMiterlimit: "10", cx: "69.9", cy: "59.9", r: "13", id: "sun_1_" }),
+    react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(
+      "g",
+      { fill: "#6C757C", id: "sun_eyes__x26__mouth" },
+      react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("path", { d: "M67.1 55.7c0 .8-.7 1.4-1.5 1.4s-1.4-.7-1.4-1.5v-.2c-.1-.2-.8-.4-1.7.2-.5.3-1 .1-.2-.6.9-.8 1.7-1.2 2.5-1.3 1.2-.1 2.9.2 3.6.5.3.1 0 1.7-.1 1.7-.3-.1-.8-.3-1.3-.2h.1M71.2 60c-.3.7-2.8 1-3.3 0-.2-.4-.4-1.3-.1-1.1.6.3 2.6.1 3 0 .3-.1.1-.6.3-.5.3 0 .3.9.1 1.6M77.2 55.9c-.6-.5-1.5-.8-1.8-.5v.1c.1.8-.5 1.5-1.3 1.5-.8.1-1.5-.5-1.5-1.3v-.1c-.5-.2-1.3.1-1.4.1-.1 0-.4-1.5 0-1.7 1.2-.5 5.2-.7 6.4 1.5.1.4 0 .7-.4.4" })
+    ),
+    react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("path", { stroke: "#F0F3F5", strokeWidth: "9", d: "M26 72h88", id: "cover" }),
+    react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(
+      "g",
+      { id: "shield" },
+      react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("path", { fill: "#F0F3F5", d: "M32.5 76.4l74.2.1v41.7s2.8 30-36.8 36.2c0 0-36.3-2.9-37.2-35.4l-.2-42.6z" }),
+      react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("path", { fill: "none", d: "M46.4 82.8c-1.8.1-3.6.8-4.7.6v12.3s.7.5 2.5 0c2.4-.7 3.4.1 3.4.1V83.3c.1 0-.2-.5-1.2-.5zM93.1 82.8c-1 0-1.3.5-1.3.5v12.4s1.1-.7 3.5-.1c1.8.5 2.5 0 2.5 0V83.4c-1.1.2-2.9-.6-4.7-.6z" }),
+      react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("path", { fill: "none", d: "M105.7 77.3H76.2v26.8h29.5V77.3zm-4.4 21.3h-8.5v1.1h-3.5v-1.1h-8.5V84.3h1.8v-2.6c1.8.4 4.8-.6 6.2-.6 1.5 0 2.2.6 2.2.6s.8-.6 2.2-.6c1.3 0 4.3 1 6.2.6v2.6h1.8v14.3zM63.3 77.3H33.8v26.8h29.5V77.3zm-4.5 21.3h-8.5v1.1h-3.5v-1.1h-8.5V84.3h1.8v-2.6c1.8.4 4.8-.6 6.2-.6 1.5 0 2.2.6 2.2.6s.8-.6 2.2-.6c1.3 0 4.3 1 6.2.6v2.6h1.8v14.3z" }),
+      react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("path", { fill: "none", d: "M50.8 82.8c-1 0-1.3.5-1.3.5v12.4s1.1-.7 3.5-.1c1.8.5 2.5 0 2.5 0V83.4c-1 .2-2.8-.6-4.7-.6zM47.7 134.3v-12.4s-.3-.6-1.3-.5c-1.8.1-3.6.8-4.7.6v12.3s.7.5 2.5 0c2.4-.7 3.5 0 3.5 0zM53 134.3c1.8.5 2.5 0 2.5 0V122c-1.1.2-2.9-.5-4.7-.6-1 0-1.3.5-1.3.5v12.4c.1 0 1.1-.7 3.5 0z" }),
+      react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("path", { fill: "none", d: "M38.4 135.7v-12.8h1.8v-2.6c1.8.4 4.8-.6 6.2-.6 1.5 0 2.2.6 2.2.6s.8-.6 2.2-.6c1.3 0 4.3 1 6.2.6v2.6h1.8v14.3h-8.5v1.1h-3.5v-1.1h-7.5c1.2 1.8 2.6 3.5 4.3 5.1 4.7 4.4 12.1 7.4 19.7 9.6v-35.8H33.8l.1 1.1c.2 7.4 1.6 13.5 4.5 18.5z" }),
+      react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("path", { fill: "none", d: "M64.9 152.4l4.9 1.3 4.9-1.3v-38h31v-8.7h-31V77.3h-9.8v28.4H33.8v8.7h31.1z" }),
+      react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("path", { fill: "none", d: "M88.7 82.8c-1.8.1-3.6.8-4.7.6v12.3s.7.5 2.5 0c2.4-.7 3.4.1 3.4.1V83.3c.1 0-.2-.5-1.2-.5zM76.2 116.1V152c7.4-2.2 14.8-5 19.8-9.6 1.8-1.6 3.2-3.3 4.5-5.1h-7.6v1.1h-3.5v-1.1h-8.5V123h1.8v-2.6c1.8.4 4.8-.6 6.2-.6 1.5 0 2.2.6 2.2.6s.8-.6 2.2-.6c1.3 0 4.3 1 6.2.6v2.6h1.8v12.9c2.7-4.7 4-10.5 4.4-18.5l-.1-1.2H76.2z" }),
+      react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("path", { fill: "none", d: "M84.2 122v12.3s.7.5 2.5 0c2.4-.7 3.5.1 3.5.1V122s-.3-.6-1.3-.5c-1.8-.1-3.6.7-4.7.5zM92.1 121.9v12.4s1.1-.7 3.4-.1c1.8.5 2.5 0 2.5 0V122c-1.1.2-2.9-.5-4.7-.6-1-.1-1.2.5-1.2.5z" }),
+      react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("path", { fill: "#6C757C", d: "M32 115.1c0 13.1 3.3 22.2 10.3 28.5 6.9 6.3 17.4 9.5 27.5 11.9 10.5-2.5 20.5-5.5 27.5-11.9s10.3-15.4 10.3-28.5V75.5H32v39.6zm69.3 20.7v-12.9h-1.8v-2.6c-1.8.4-4.8-.6-6.2-.6-1.5 0-2.2.6-2.2.6s-.8-.6-2.2-.6c-1.3 0-4.3 1-6.2.6v2.6h-1.8v14.3h8.5v1.1h3.5v-1.1h7.6c-1.2 1.8-2.7 3.5-4.5 5.1-5 4.6-12.4 7.4-19.8 9.6V116h29.5l.1 1.2c-.4 8.2-1.7 13.9-4.5 18.6zM98 122v12.3s-.7.5-2.5 0c-2.4-.7-3.4.1-3.4.1V122s.3-.6 1.3-.5c1.8-.1 3.6.7 4.6.5zm-7.8-.1v12.4s-1.1-.7-3.5-.1c-1.8.5-2.5 0-2.5 0V122c1.1.2 2.9-.5 4.7-.6 1-.1 1.3.5 1.3.5zm-14-44.6h29.5v26.8H76.2V77.3zm-42.4 0h29.5v26.8H33.8V77.3zm0 28.4h31.1V77.3h9.8v28.4h31.1v8.7H74.7v38l-4.9 1.2-4.9-1.3v-38H33.8v-8.6zm29.5 10.4v35.8c-7.6-2.2-15-5.2-19.7-9.6-1.7-1.6-3.1-3.3-4.3-5.1h7.5v1.1h3.5v-1.1h8.5v-14.3H57v-2.6c-1.8.4-4.8-.6-6.2-.6-1.5 0-2.2.6-2.2.6s-.8-.6-2.2-.6c-1.3 0-4.3 1-6.2.6v2.6h-1.8v12.8c-2.9-5-4.3-11.1-4.6-18.5l-.1-1.1h29.6zm-21.6 18.2V122c1.1.2 2.9-.5 4.7-.6 1 0 1.3.5 1.3.5v12.4s-1.1-.7-3.5-.1c-1.8.6-2.5.1-2.5.1zm7.9 0v-12.4s.3-.6 1.3-.5c1.8.1 3.6.8 4.7.6v12.3s-.7.5-2.5 0c-2.5-.7-3.5 0-3.5 0z" }),
+      react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("path", { fill: "#6C757C", d: "M57 81.7c-1.8.4-4.8-.6-6.2-.6-1.5 0-2.2.6-2.2.6s-.8-.6-2.2-.6c-1.3 0-4.3 1-6.2.6v2.6h-1.8v14.3h8.5v1.1h3.5v-1.1h8.5V84.3H57v-2.6zm-9.3 14s-1.1-.7-3.4-.1c-1.8.5-2.5 0-2.5 0V83.4c1.1.2 2.9-.5 4.7-.6 1 0 1.3.5 1.3.5v12.4zm7.8 0s-.7.5-2.5 0c-2.4-.7-3.5.1-3.5.1V83.3s.3-.6 1.3-.5c1.8.1 3.6.8 4.7.6v12.3zM99.5 81.7c-1.8.4-4.8-.6-6.2-.6-1.5 0-2.2.6-2.2.6s-.8-.6-2.2-.6c-1.3 0-4.3 1-6.2.6v2.6h-1.8v14.3h8.5v1.1h3.5v-1.1h8.5V84.3h-1.8v-2.6zm-9.5 14s-1.1-.7-3.4-.1c-1.8.5-2.5 0-2.5 0V83.4c1.1.2 2.9-.5 4.7-.6 1 0 1.3.5 1.3.5v12.4zm7.8 0s-.7.5-2.5 0c-2.4-.7-3.5.1-3.5.1V83.3s.3-.6 1.3-.5c1.8.1 3.6.8 4.7.6v12.3z" })
+    ),
+    react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(
+      "g",
+      { id: "clouds_of_ignorance" },
+      react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("path", { className: styles["st5"] || "st5", fill: "#F0F3F5", stroke: "#6C757C", strokeWidth: "1.4", strokeMiterlimit: "10", d: "M41 40.3s.6-4.1 5.8-4.6c0 0 .4-8.5 10.9-4.5 0 0 2.2-9.3 12.4-3.8 0 0 8.3-5.3 13.7 4.3 0 0 6.9-2.8 7.9 3.5 0 0 7.6-2.7 9.4 3.8 0 0 5.7-.2 4.7 5.7 0 0-.5 5-9 1.9 0 0-7.7 3.9-11.1-4.8 0 0-6.4 1.9-8.4-4.6 0 0-6.1 4.1-10.8-.5 0 0-3 4.1-8.6 3.2 0 0-2.7 3.3-7.3 2.2 0 0 1.6 7.7-9.4 6.2 0 0-4.3 2.5-6.3-1.8-2-4.6 6.1-6.2 6.1-6.2z" }),
+      react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("path", { className: styles["st6"] || "st6", fill: "none", stroke: "#6C757C", strokeWidth: "1.4", strokeLinecap: "round", strokeMiterlimit: "10", d: "M36.7 45.7s.3-3.5 4.8-3.1" }),
+      react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("path", { className: styles["st7"] || "st7", fill: "none", stroke: "#6C757C", strokeWidth: "1.4", strokeLinecap: "round", strokeLinejoin: "round", strokeMiterlimit: "10", d: "M43.3 41s.5-2.8 3.7-2.7M48.9 36.9s1.3-5.6 6.6-3.7M60.2 31.4s3.9-5.2 8.2-1.5M70.7 30.8s6.4-5 10.4 2.1M84.1 34.3s4.5-2 5.3 2M92 38.2s5-2.3 6.7 2.4M100.1 41.8c.1 0 3.7-.8 3.1 3.1" })
+    ),
+    react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(
+      "g",
+      { id: "decor" },
+      react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("path", { className: styles["st8"] || "st8", fill: "#F0F3F5", stroke: "#6C757C", strokeWidth: "1.4", strokeLinecap: "round", strokeLinejoin: "round", strokeMiterlimit: "10", d: "M43.4 62.8s-5.9-3.7-9.7.4c0 0-1.6 1.8-.3 4.3 1.5 2.8 4.9 2.7 6.9.9 0 0 1.8 2.8 6.5.1 0 0 5.6 2.7 11.6-.1 0 0 2 2.4 6.3.4 0 0 2.7 2.4 6.3-.2 0 0 6.5 3 11.9-.3 0 0 2.3 2.6 6.1.4 0 0 2.6 2.6 6.4-.2 0 0 3.3 2 8.4.7 0 0 3.1-.8 2.3-3.2-1-2.9-3.8-6.3-13.6-3.1 0 0-6.7-2.9-12.4.5 0 0-4.7-3.7-12.1 0 0 0-3.1-3.6-12.4-.4-.2 0-4.5-3.7-12.2-.2z" }),
+      react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("path", { className: styles["st9"] || "st9", fill: "#FFF", stroke: "#6C757C", strokeWidth: "1.4", strokeLinecap: "round", strokeLinejoin: "round", strokeMiterlimit: "10", d: "M37.1 65.4s1.1 0 1.6.8 1.6 2.1 1.6 2.1M43.2 62.6s1.2 1.4 1.7 2.8 1.7 3.1 2.8 3.5M55.7 63.2c.4.5 1 1.4 1.3 2.3.5 1.4 1.5 3.3 2.7 3.7M67.9 63.4c.4.5.8 1.3 1.1 2 .4 1.1 1.2 2.4 2.1 3M79.5 63.1c.4.5.8 1.3 1.1 2 .4 1.1 1.2 2.4 2.1 3M92.2 63c.4.5.8 1.3 1.1 2 .4 1.1 1 2.6 1.9 3.3M61.2 65.4s.9 0 1.7 1.1 1.8 2.4 2.5 2.7M85.8 65.6s1 .2 1.6 1.2c.6 1 1.9 2.3 2.8 2.7" })
+    )
+  );
+});
+
+/***/ }),
+/* 21 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
 /* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(3);
 /* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(prop_types__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(8);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_1__);
 /* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(9);
 /* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(styled_components__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var _NavContext__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(21);
-/* harmony import */ var _NavItem__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(22);
-/* harmony import */ var _NavLink__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(23);
+/* harmony import */ var _NavContext__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(22);
+/* harmony import */ var _NavItem__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(23);
+/* harmony import */ var _NavLink__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(24);
 /* harmony import */ var _constants_colors__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(11);
 function _templateObject() {
   var data = _taggedTemplateLiteral(["\n  list-style: none;\n  margin: 0;\n  background-color: ", ";\n  display: ", ";\n  padding: ", ";\n  width: ", ";\n"]);
@@ -5627,7 +5436,7 @@ Nav.Link = _NavLink__WEBPACK_IMPORTED_MODULE_5__["default"];
 /* harmony default export */ __webpack_exports__["default"] = (Nav);
 
 /***/ }),
-/* 21 */
+/* 22 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -5639,7 +5448,7 @@ var NavContext = react__WEBPACK_IMPORTED_MODULE_0___default.a.createContext();
 /* harmony default export */ __webpack_exports__["default"] = (NavContext);
 
 /***/ }),
-/* 22 */
+/* 23 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -5685,7 +5494,7 @@ NavItem.propTypes = {
 /* harmony default export */ __webpack_exports__["default"] = (NavItem);
 
 /***/ }),
-/* 23 */
+/* 24 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -5696,7 +5505,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_1__);
 /* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(9);
 /* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(styled_components__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var _NavContext__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(21);
+/* harmony import */ var _NavContext__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(22);
 /* harmony import */ var _constants_colors__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(11);
 /* harmony import */ var _constants_typography__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(12);
 function _extends() { _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends.apply(this, arguments); }
@@ -5981,7 +5790,7 @@ NavLink.defaultProps = {
 /* harmony default export */ __webpack_exports__["default"] = (NavLink);
 
 /***/ }),
-/* 24 */
+/* 25 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -5992,8 +5801,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_1__);
 /* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(9);
 /* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(styled_components__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var _svg_logo_black_svg__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(25);
-/* harmony import */ var _svg_logo_white_svg__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(26);
+/* harmony import */ var _svg_logo_black_svg__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(26);
+/* harmony import */ var _svg_logo_white_svg__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(27);
 /* harmony import */ var _constants_colors__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(11);
 function _templateObject3() {
   var data = _taggedTemplateLiteral(["\n  align-items: center;\n  display: flex;\n"]);
@@ -6076,7 +5885,7 @@ Navbar.defaultProps = {
 /* harmony default export */ __webpack_exports__["default"] = (Navbar);
 
 /***/ }),
-/* 25 */
+/* 26 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -6096,10 +5905,10 @@ function _objectWithoutProperties(obj, keys) { var target = {}; for (var i in ob
 
   return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(
     "svg",
-    _extends({ viewBox: "0 0 384 192" }, props),
+    _extends({ version: "1.1", viewBox: "0 0 384 192", role: "img", "aria-labelledby": "title" }, props),
     react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(
       "title",
-      null,
+      { id: "title" },
       "Brown University Logo"
     ),
     react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("path", { fill: "#FFC627", d: "M39.339 25.604c.209.342.479.783.864 1.418 1.005 1.663 2.561 7.928 4.57 10.004 1.071-.727 2.927-1.664 3.98-2.042-.244-.406-1.372-2.334-2.625-3.974-2.413-3.203-4.145-4.914-4.339-5.19-.651-.008-1.76.026-2.45-.216zM57.444 33.946c.479-3.279-.613-8.723-1.257-10.085-.816-.208-1.661-.496-2.355-.829-.09.417-.706 2.639-.91 5.91-.11 1.753-.064 4.42.259 5.004 1.038-.104 2.775-.139 4.263 0zM73.055 53.264c0-9.864-7.729-17.596-17.6-17.596-9.719 0-17.6 7.878-17.6 17.596 0 .465.104 1.408.258 2.36 5.063-1.174 11.775-.986 14.758 1.378 4.827-2.754 11.783-2.927 16.879.042 1.013-.506 2.066-.872 3.131-1.176.127-.949.174-1.943.174-2.604zm-21.452-6.002a2.046 2.046 0 1 1-4.088-.205l.019-.226c-.175-.268-1.095-.566-2.464.264-.687.422-1.457.132-.263-.902 1.267-1.101 2.47-1.739 3.531-1.872l.033-.008c1.788-.124 4.111.242 5.197.684.45.184-.019 2.397-.12 2.37-.369-.082-1.174-.421-1.849-.268l.004.163zm5.87 6.136c-.358 1.044-4.057 1.378-4.736.019-.268-.539-.64-1.929-.139-1.642.822.478 3.798.14 4.36 0 .497-.127.173-.82.479-.735.368.102.368 1.37.036 2.358zm8.702-5.787c-.93-.766-2.147-1.101-2.613-.766l.017.158a2.048 2.048 0 1 1-4.08.357v-.088c-.736-.232-1.908.173-2.069.11-.095-.044-.591-2.129.057-2.391 1.766-.721 7.457-1.072 9.11 2.122.192.388.072.902-.422.498zM67.245 25.409c-2.068 1.752-5.23 5.998-5.634 9.394.971.393 3.535 1.616 3.886 1.906 2.545-2.509 2.028-5.275 3.022-7.413.431-.923.847-1.65 1.088-2.065-.825-.448-1.714-1.086-2.362-1.822z" }),
@@ -6141,14 +5950,14 @@ function _objectWithoutProperties(obj, keys) { var target = {}; for (var i in ob
     ),
     react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(
       "g",
-      null,
+      { fill: "#000" },
       react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("path", { d: "M156.166 78.175c4.666 0 7.323.778 9.462 2.269 2.203 1.555 3.37 3.889 3.37 7.127 0 5.703-5.379 8.49-8.489 9.268v.13c5.896.842 11.211 4.341 11.211 10.888 0 4.6-2.269 7.84-6.027 9.979-3.306 1.815-7.452 2.463-12.378 2.463H138.41v-1.491c5.444-.389 5.962-.842 5.962-7.906V87.571c-.064-7.064-.454-7.517-5.572-7.906v-1.491h17.366zm-6.351 18.34h4.083c6.221 0 9.331-2.917 9.331-8.231 0-3.888-1.619-8.229-9.268-8.229-2.138 0-3.045.193-3.563.389-.39.129-.584.389-.584 1.685v14.386zm0 1.88v14.126c0 4.343.843 5.834 5.572 5.769 5.444 0 10.046-2.722 10.046-9.592 0-7.064-5.185-10.303-11.858-10.303h-3.76zM191.099 110.902c0 7.064.52 7.517 5.834 7.906v1.491h-17.238v-1.491c5.442-.389 5.961-.842 5.961-7.906V87.571c0-7.064-.519-7.517-5.703-7.906v-1.491h16.462c4.146 0 7.841.583 10.238 2.204 2.593 1.62 4.277 4.537 4.277 8.295 0 5.379-3.305 9.203-8.553 11.341 1.166 1.944 3.822 6.416 5.767 9.268 2.333 3.435 3.694 5.184 5.443 7.128 1.36 1.621 2.527 2.658 4.86 3.24l-.13 1.231h-.907c-7.453-.194-9.721-2.462-12.184-6.026-2.008-2.917-4.73-7.711-6.545-10.759-1.038-1.685-2.074-2.333-4.082-2.333h-3.501v9.139zm0-11.018h3.759c2.658 0 4.732-.324 6.482-1.75 2.786-2.202 3.758-5.378 3.758-8.554 0-6.805-4.926-9.526-9.786-9.526-2.203 0-3.109.129-3.63.324-.388.129-.583.454-.583 1.75v17.756zM264.29 98.654c0 13.479-9.396 22.616-21.773 22.616-12.248 0-20.932-9.332-20.932-21.579 0-10.888 7.646-22.488 22.098-22.488 11.211 0 20.607 8.684 20.607 21.451zm-22.292-19.312c-7.646 0-14.128 6.286-14.128 18.469 0 12.508 6.546 21.32 16.008 21.32 7.776 0 14.126-6.026 14.126-18.08 0-13.997-6.738-21.709-16.006-21.709zM285.959 79.666l-2.009.259c-2.916.389-3.306.972-2.396 3.823l8.748 27.608h.13l10.369-32.534h1.555l11.729 32.469h.13c2.657-8.166 6.417-21.84 7.518-26.506.908-3.758.585-4.537-2.333-4.86l-1.879-.259v-1.491h13.738v1.491c-4.277.518-4.73.778-6.868 6.675-.585 1.62-5.315 16.525-10.76 34.347h-1.75l-11.663-31.69-.13.129-10.564 31.561h-1.814l-11.211-34.801c-1.75-5.379-2.723-5.832-6.415-6.221v-1.491h15.876v1.491zM375.115 120.753h-1.686L345.304 86.6h-.128v16.526c0 6.805.259 10.304.518 12.313.324 2.268 2.073 3.176 6.351 3.369v1.491H336.49v-1.491c3.564-.129 5.25-1.101 5.573-3.369.26-2.009.521-5.508.521-12.313V89.062c0-4.666-.066-5.703-1.233-7.192-1.23-1.556-2.98-2.01-5.702-2.204v-1.491h9.462l27.283 32.663h.129v-15.49c0-6.804-.26-10.303-.519-12.313-.323-2.268-2.074-3.175-6.352-3.37v-1.491h15.555v1.491c-3.563.129-5.25 1.102-5.573 3.37-.261 2.01-.519 5.509-.519 12.313v25.405z" })
     )
   );
 });
 
 /***/ }),
-/* 26 */
+/* 27 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -6168,10 +5977,10 @@ function _objectWithoutProperties(obj, keys) { var target = {}; for (var i in ob
 
   return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(
     "svg",
-    _extends({ viewBox: "0 0 384 192" }, props),
+    _extends({ version: "1.1", viewBox: "0 0 384 192", role: "img", "aria-labelledby": "title" }, props),
     react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(
       "title",
-      null,
+      { id: "title" },
       "Brown University Logo"
     ),
     react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(
