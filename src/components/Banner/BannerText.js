@@ -3,6 +3,7 @@ import React from 'react';
 import styled from 'styled-components';
 
 import colors from '../../constants/colors';
+import media from '../../constants/media';
 import { serif } from '../../constants/typography';
 
 /*
@@ -14,9 +15,9 @@ const Tag = styled.div`
   font-size: 1.9em;
   text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.4);
 
-  @media only screen and (min-width: 700px) {
+  ${media.md`
     font-size: 2.5em;
-  }
+  `};
 `;
 
 /*

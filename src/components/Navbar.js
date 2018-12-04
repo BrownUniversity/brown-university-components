@@ -5,8 +5,7 @@ import styled from 'styled-components';
 import LogoBlackSVG from '../svg/logo-black.svg';
 import LogoWhiteSVG from '../svg/logo-white.svg';
 import colors from '../constants/colors';
-
-// TODO: padding (left/right)
+import media from '../constants/media';
 
 /*
   inner components
@@ -17,10 +16,15 @@ const NavbarWrapper = styled.div`
   display: flex;
   justify-content: space-between;
   min-height: 75px;
-  padding: 0 1rem;
+  padding: 0 7vw;
   position: relative;
   z-index: 20;
   background-color: ${({ color }) => colors[color]};
+
+  ${media.lg`
+    padding: 0 0 0 33px;
+    width: calc(100% - 33px);
+  `};
 `;
 
 const NavbarLogoLink = styled.a`

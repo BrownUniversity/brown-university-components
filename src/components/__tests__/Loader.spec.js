@@ -36,6 +36,7 @@ describe('Button', () => {
   <div
     data-testid="mock-svg"
     height="250"
+    width="192"
   />
 </div>
 `);

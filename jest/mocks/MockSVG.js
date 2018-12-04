@@ -1,14 +1,5 @@
-import PropTypes from 'prop-types';
 import React from 'react';
 
-const MockSVG = ({ height }) => <div data-testid="mock-svg" height={height} />;
-
-MockSVG.propTypes = {
-  height: PropTypes.number
-};
-
-MockSVG.defaultProps = {
-  height: null
-};
+const MockSVG = props => <div data-testid="mock-svg" {...props} />;
 
 export default MockSVG;
