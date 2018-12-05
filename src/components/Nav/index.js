@@ -18,8 +18,8 @@ const getBackgroundColor = ({ sub }) => {
   return 'transparent';
 };
 
-const getDisplay = ({ vertical }) => {
-  if (vertical) {
+const getDisplay = ({ mobile, sub }) => {
+  if (mobile || sub) {
     return 'block';
   }
 
@@ -34,8 +34,8 @@ const getPadding = ({ sub }) => {
   return '0';
 };
 
-const getWidth = ({ vertical }) => {
-  if (vertical) {
+const getWidth = ({ mobile, sub }) => {
+  if (mobile || sub) {
     return '100%';
   }
 
@@ -58,10 +58,10 @@ const Tag = styled.ul`
   outer Nav component
 */
 const Nav = props => {
-  const { navbar, vertical, mobile, sub } = props;
+  const { navbar, mobile, sub } = props;
 
   return (
-    <NavContext.Provider value={{ navbar, vertical, mobile, sub }}>
+    <NavContext.Provider value={{ navbar, mobile, sub }}>
       <Tag {...props} />
     </NavContext.Provider>
   );
@@ -69,7 +69,6 @@ const Nav = props => {
 
 Nav.propTypes = {
   navbar: PropTypes.bool,
-  vertical: PropTypes.bool,
   mobile: PropTypes.bool,
   sub: PropTypes.bool,
   children: PropTypes.node.isRequired
@@ -77,7 +76,6 @@ Nav.propTypes = {
 
 Nav.defaultProps = {
   navbar: false,
-  vertical: false,
   mobile: false,
   sub: false
 };

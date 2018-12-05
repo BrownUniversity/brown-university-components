@@ -9,7 +9,7 @@ Styles and components for building web applications based on the [Brown Universi
 Ensure you're on the network and that your SSH key has been added to the ssh-agent (`ssh-add ~/.ssh/id_rsa`) and uploaded to [bitbucket.brown.edu](https://bitbucket.brown.edu/plugins/servlet/ssh/account/keys), then run:
 
 ```
-  yarn add ssh://git@bitbucket.brown.edu:7999/ccum/brown-university-theme.git#0.3.16
+  yarn add ssh://git@bitbucket.brown.edu:7999/ccum/brown-university-theme.git#0.3.17
 ```
 
 ### Dependencies
@@ -34,7 +34,7 @@ import 'brown-university-theme/dist/styles.css';
 
 ### Components
 
-- Banner
+- `Banner`
 
   **Example:**
 
@@ -58,7 +58,7 @@ import 'brown-university-theme/dist/styles.css';
   | src      | string                                                                  | -        | false     |
   | children | node                                                                    | -        | false     |
 
-* [Buttons](https://www.brown.edu/university-communications/digital/university-theme/formatting/buttons)
+* [`Button`](https://www.brown.edu/university-communications/digital/university-theme/formatting/buttons)
 
   **Example:**
 
@@ -82,7 +82,7 @@ import 'brown-university-theme/dist/styles.css';
   | onClick  | func                                                                    | -        | null      |
   | href     | string                                                                  | -        | null      |
 
-- Banner
+- `Code`
 
   **Example:**
 
@@ -99,7 +99,9 @@ import 'brown-university-theme/dist/styles.css';
   | -------- | -------- | -------- | ------- |
   | children | node     | true     | -       |
 
-* Hamburger
+* `Hamburger`
+
+  _This is a primitive used by `NavbarNav` and `SiteNav`. You probably want to use one of those components instead._
 
   **Example:**
 
@@ -121,7 +123,7 @@ import 'brown-university-theme/dist/styles.css';
   | onOpen   | func                                                                             | true     | -       |
   | onClose  | func                                                                             | true     | -       |
 
-* Loader
+* `Loader`
 
   **Example:**
 
@@ -138,7 +140,9 @@ import 'brown-university-theme/dist/styles.css';
   | -------- | -------- | -------- | ------- |
   | height   | number   | -        | 250     |
 
-- Navs
+- `Nav`
+
+  _This is a primitive used by `NavbarNav`, `SiteNav`, and `SubNav`. You probably want to use one of those components instead._
 
   **Example:**
 
@@ -166,7 +170,6 @@ import 'brown-university-theme/dist/styles.css';
   | property | propType | required | default   |
   | -------- | -------- | -------- | --------- |
   | navbar   | bool     | -        | false     |
-  | vertical | bool     | -        | false     |
   | mobile   | bool     | -        | false     |
   | sub      | bool     | -        | false     |
   | children | node     | true     | undefined |
@@ -190,7 +193,7 @@ import 'brown-university-theme/dist/styles.css';
   | onClick  | func                      | -        | null     |
   | href     | string                    | -        | null     |
 
-- Navbar
+- `Navbar`
 
   **Example:**
 
@@ -207,6 +210,18 @@ import 'brown-university-theme/dist/styles.css';
   | -------- | ------------------------- | -------- | ------- |
   | color    | oneOf(['brown', 'white']) | -        | 'brown' |
   | children | node                      | -        | false   |
+
+- `NavbarNav`
+
+  TODO
+
+- `SiteNav`
+
+  TODO
+
+- `SubNav`
+
+  TODO
 
 ## Development
 

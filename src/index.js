@@ -7,3 +7,4 @@ export { default as Hamburger } from './components/Hamburger';
 export { default as Loader } from './components/Loader';
 export { default as Nav } from './components/Nav';
 export { default as Navbar } from './components/Navbar';
+export { default as SiteNav } from './components/SiteNav';

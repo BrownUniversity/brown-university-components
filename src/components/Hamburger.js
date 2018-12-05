@@ -102,6 +102,15 @@ class Hamburger extends Component {
     isOpen: this.props.isOpen
   };
 
+  componentDidUpdate(prevProps) {
+    if (
+      this.props.isOpen !== prevProps.isOpen &&
+      this.props.isOpen !== this.state.isOpen
+    ) {
+      this.setState(({ isOpen }) => ({ isOpen: !isOpen }));
+    }
+  }
+
   handleClick = () =>
     this.setState(
       ({ isOpen }) => ({ isOpen: !isOpen }),

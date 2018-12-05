@@ -28,9 +28,9 @@ const navLinkAfterCSS = css`
 /*
   css prop getters
 */
-const getColor = ({ vertical, active }) => {
-  const activeColor = vertical ? colors.black : colors.red;
-  const defaultColor = vertical ? colors.red : colors.black;
+const getColor = ({ active, mobile, sub }) => {
+  const activeColor = mobile || sub ? colors.black : colors.red;
+  const defaultColor = mobile || sub ? colors.red : colors.black;
 
   if (active) {
     return activeColor;
@@ -86,8 +86,8 @@ const getPointerEvents = ({ disabled, href }) => {
   return 'auto';
 };
 
-const getTransition = ({ vertical }) => {
-  if (vertical) {
+const getTransition = ({ mobile, sub }) => {
+  if (mobile || sub) {
     return 'all .2s ease-in-out';
   }
 
@@ -109,9 +109,9 @@ const getAfterWidth = ({ active }) => {
   return '0';
 };
 
-const getColorWithHover = ({ vertical, disabled }) => {
-  const disabledColor = vertical ? colors.red : colors.black;
-  const defaultColor = vertical ? colors.black : colors.red;
+const getColorWithHover = ({ disabled, mobile, sub }) => {
+  const disabledColor = mobile || sub ? colors.red : colors.black;
+  const defaultColor = mobile || sub ? colors.black : colors.red;
 
   if (disabled) {
     return disabledColor;
@@ -146,7 +146,7 @@ const Tag = styled.div`
   transition: ${props => getTransition(props)};
 
   ${props =>
-    !props.vertical &&
+    !(props.mobile || props.sub) &&
     css`&::after {
       ${navLinkAfterCSS}
       margin-top: ${getAfterMarginTop(props)};
@@ -158,7 +158,7 @@ const Tag = styled.div`
     color: ${props => getColorWithHover(props)};
 
     ${props =>
-      !props.vertical &&
+      !(props.mobile || props.sub) &&
       css`
         &::after {
           width: ${getAfterWidthWithHover(props)};
@@ -184,13 +184,12 @@ const NavLink = props => {
 
   return (
     <NavContext.Consumer>
-      {({ navbar, vertical, mobile, sub }) => (
+      {({ navbar, mobile, sub }) => (
         <Tag
           as={derivedTag}
           type={derivedTag === 'button' && props.onClick ? 'button' : undefined}
           {...props}
           navbar={navbar}
-          vertical={vertical}
           mobile={mobile}
           sub={sub}
         />
@@ -204,7 +203,6 @@ NavLink.propTypes = {
   disabled: PropTypes.bool,
   tag: PropTypes.oneOfType([PropTypes.func, PropTypes.string]),
   navbar: PropTypes.bool,
-  vertical: PropTypes.bool,
   mobile: PropTypes.bool,
   onClick: PropTypes.func,
   href: PropTypes.string
@@ -215,7 +213,6 @@ NavLink.defaultProps = {
   disabled: false,
   tag: 'button',
   navbar: false,
-  vertical: false,
   mobile: false,
   onClick: null,
   href: null

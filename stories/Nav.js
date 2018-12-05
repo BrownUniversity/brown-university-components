@@ -7,7 +7,6 @@ import { Nav } from '../src';
 
 const getCommonProps = () => ({
   navbar: boolean('navbar', false),
-  vertical: boolean('vertical', false),
   mobile: boolean('mobile', false),
   sub: boolean('sub', false)
 });
