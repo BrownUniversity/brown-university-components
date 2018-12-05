@@ -6,8 +6,6 @@ import NavContext from './NavContext';
 import colors from '../../constants/colors';
 import { sans } from '../../constants/typography';
 
-// TODO: finish mobile styling
-
 /*
   css mixins
 */
@@ -57,28 +55,27 @@ const getFontSize = ({ mobile }) => {
   return '1.1em';
 };
 
-const getFontWeight = ({ navbar, vertical }) => {
-  if (navbar || vertical) {
+const getFontWeight = ({ navbar, sub }) => {
+  if (navbar || sub) {
     return '400';
   }
 
   return '700';
 };
 
+const getLineHeight = ({ navbar, mobile, sub }) => {
+  if (navbar || mobile || sub) {
+    return '1.5';
+  }
+
+  return '1';
+};
 const getOpacity = ({ disabled }) => {
   if (disabled) {
     return '0.65';
   }
 
   return '1';
-};
-
-const getPadding = ({ vertical }) => {
-  if (vertical) {
-    return '8px 0 8px 0';
-  }
-
-  return '9px 15px';
 };
 
 const getPointerEvents = ({ disabled, href }) => {
@@ -134,14 +131,17 @@ const getAfterWidthWithHover = ({ disabled }) => {
 /*
   inner Tag component
 */
+
+// TODO: move line height here
+
 const Tag = styled.div`
   ${navLinkCSS}
   color: ${props => getColor(props)};
   cursor: ${props => getCursor(props)};
   font-size: ${props => getFontSize(props)};
   font-weight: ${props => getFontWeight(props)};
+  line-height: ${props => getLineHeight(props)};
   opacity: ${props => getOpacity(props)};
-  padding: ${props => getPadding(props)};
   pointer-events: ${props => getPointerEvents(props)};
   transition: ${props => getTransition(props)};
 
@@ -184,7 +184,7 @@ const NavLink = props => {
 
   return (
     <NavContext.Consumer>
-      {({ navbar, vertical, mobile }) => (
+      {({ navbar, vertical, mobile, sub }) => (
         <Tag
           as={derivedTag}
           type={derivedTag === 'button' && props.onClick ? 'button' : undefined}
@@ -192,6 +192,7 @@ const NavLink = props => {
           navbar={navbar}
           vertical={vertical}
           mobile={mobile}
+          sub={sub}
         />
       )}
     </NavContext.Consumer>

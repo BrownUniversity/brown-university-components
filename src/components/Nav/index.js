@@ -10,8 +10,8 @@ import colors from '../../constants/colors';
 /*
   css prop getters
 */
-const getBackgroundColor = ({ vertical, sub }) => {
-  if (vertical && sub) {
+const getBackgroundColor = ({ sub }) => {
+  if (sub) {
     return colors.lightGray;
   }
 
@@ -26,8 +26,8 @@ const getDisplay = ({ vertical }) => {
   return 'flex';
 };
 
-const getPadding = ({ vertical, sub }) => {
-  if (vertical && sub) {
+const getPadding = ({ sub }) => {
+  if (sub) {
     return '15px';
   }
 
@@ -58,10 +58,10 @@ const Tag = styled.ul`
   outer Nav component
 */
 const Nav = props => {
-  const { navbar, mobile, vertical } = props;
+  const { navbar, vertical, mobile, sub } = props;
 
   return (
-    <NavContext.Provider value={{ navbar, vertical, mobile }}>
+    <NavContext.Provider value={{ navbar, vertical, mobile, sub }}>
       <Tag {...props} />
     </NavContext.Provider>
   );

@@ -1,4 +1,4 @@
-/*! brown-university-theme v0.3.15 */
+/*! brown-university-theme v0.3.16 */
 (function webpackUniversalModuleDefinition(root, factory) {
 	if(typeof exports === 'object' && typeof module === 'object')
 		module.exports = factory(require("react"), require("styled-components"));
@@ -5440,10 +5440,9 @@ function _taggedTemplateLiteral(strings, raw) { if (!raw) { raw = strings.slice(
 */
 
 var getBackgroundColor = function getBackgroundColor(_ref) {
-  var vertical = _ref.vertical,
-      sub = _ref.sub;
+  var sub = _ref.sub;
 
-  if (vertical && sub) {
+  if (sub) {
     return _constants_colors__WEBPACK_IMPORTED_MODULE_6__["default"].lightGray;
   }
 
@@ -5461,10 +5460,9 @@ var getDisplay = function getDisplay(_ref2) {
 };
 
 var getPadding = function getPadding(_ref3) {
-  var vertical = _ref3.vertical,
-      sub = _ref3.sub;
+  var sub = _ref3.sub;
 
-  if (vertical && sub) {
+  if (sub) {
     return '15px';
   }
 
@@ -5500,13 +5498,15 @@ var Tag = styled_components__WEBPACK_IMPORTED_MODULE_2___default.a.ul(_templateO
 
 var Nav = function Nav(props) {
   var navbar = props.navbar,
+      vertical = props.vertical,
       mobile = props.mobile,
-      vertical = props.vertical;
+      sub = props.sub;
   return react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_NavContext__WEBPACK_IMPORTED_MODULE_3__["default"].Provider, {
     value: {
       navbar: navbar,
       vertical: vertical,
-      mobile: mobile
+      mobile: mobile,
+      sub: sub
     }
   }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(Tag, props));
 };
@@ -5552,8 +5552,11 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_1__);
 /* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(9);
 /* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(styled_components__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var _NavContext__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(24);
+function _extends() { _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends.apply(this, arguments); }
+
 function _templateObject() {
-  var data = _taggedTemplateLiteral(["\n  display: list-item;\n"]);
+  var data = _taggedTemplateLiteral(["\n  display: list-item;\n  border-top: ", ";\n  padding: ", ";\n"]);
 
   _templateObject = function _templateObject() {
     return data;
@@ -5566,19 +5569,51 @@ function _taggedTemplateLiteral(strings, raw) { if (!raw) { raw = strings.slice(
 
 
 
+
  // TODO: nesting (expanded / collapsed)
 
+/*
+  css prop getters
+*/
+
+var getPadding = function getPadding(_ref) {
+  var mobile = _ref.mobile,
+      sub = _ref.sub;
+
+  if (mobile) {
+    return '1rem 0';
+  }
+
+  if (sub) {
+    return '8px 0 8px 0';
+  }
+
+  return '9px 15px';
+};
 /*
   inner Tag component
 */
 
-var Tag = styled_components__WEBPACK_IMPORTED_MODULE_2___default.a.li(_templateObject());
+
+var Tag = styled_components__WEBPACK_IMPORTED_MODULE_2___default.a.li(_templateObject(), function (_ref2) {
+  var mobile = _ref2.mobile;
+  return mobile && '0.5px solid #C8C8C880';
+}, function (props) {
+  return getPadding(props);
+});
 /*
   outer NavItem component
 */
 
 var NavItem = function NavItem(props) {
-  return react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(Tag, props);
+  return react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_NavContext__WEBPACK_IMPORTED_MODULE_3__["default"].Consumer, null, function (_ref3) {
+    var mobile = _ref3.mobile,
+        sub = _ref3.sub;
+    return react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(Tag, _extends({}, props, {
+      mobile: mobile,
+      sub: sub
+    }));
+  });
 };
 
 NavItem.propTypes = {
@@ -5624,7 +5659,7 @@ function _templateObject4() {
 }
 
 function _templateObject3() {
-  var data = _taggedTemplateLiteral(["\n  ", "\n  color: ", ";\n  cursor: ", ";\n  font-size: ", ";\n  font-weight: ", ";\n  opacity: ", ";\n  padding: ", ";\n  pointer-events: ", ";\n  transition: ", ";\n\n  ", "\n\n  &:hover {\n    color: ", ";\n\n    ", "\n\n  }\n"]);
+  var data = _taggedTemplateLiteral(["\n  ", "\n  color: ", ";\n  cursor: ", ";\n  font-size: ", ";\n  font-weight: ", ";\n  line-height: ", ";\n  opacity: ", ";\n  pointer-events: ", ";\n  transition: ", ";\n\n  ", "\n\n  &:hover {\n    color: ", ";\n\n    ", "\n\n  }\n"]);
 
   _templateObject3 = function _templateObject3() {
     return data;
@@ -5660,7 +5695,6 @@ function _taggedTemplateLiteral(strings, raw) { if (!raw) { raw = strings.slice(
 
 
 
- // TODO: finish mobile styling
 
 /*
   css mixins
@@ -5708,33 +5742,35 @@ var getFontSize = function getFontSize(_ref3) {
 
 var getFontWeight = function getFontWeight(_ref4) {
   var navbar = _ref4.navbar,
-      vertical = _ref4.vertical;
+      sub = _ref4.sub;
 
-  if (navbar || vertical) {
+  if (navbar || sub) {
     return '400';
   }
 
   return '700';
 };
 
-var getOpacity = function getOpacity(_ref5) {
-  var disabled = _ref5.disabled;
+var getLineHeight = function getLineHeight(_ref5) {
+  var navbar = _ref5.navbar,
+      mobile = _ref5.mobile,
+      sub = _ref5.sub;
+
+  if (navbar || mobile || sub) {
+    return '1.5';
+  }
+
+  return '1';
+};
+
+var getOpacity = function getOpacity(_ref6) {
+  var disabled = _ref6.disabled;
 
   if (disabled) {
     return '0.65';
   }
 
   return '1';
-};
-
-var getPadding = function getPadding(_ref6) {
-  var vertical = _ref6.vertical;
-
-  if (vertical) {
-    return '8px 0 8px 0';
-  }
-
-  return '9px 15px';
 };
 
 var getPointerEvents = function getPointerEvents(_ref7) {
@@ -5803,6 +5839,7 @@ var getAfterWidthWithHover = function getAfterWidthWithHover(_ref12) {
 /*
   inner Tag component
 */
+// TODO: move line height here
 
 
 var Tag = styled_components__WEBPACK_IMPORTED_MODULE_2___default.a.div(_templateObject3(), navLinkCSS, function (props) {
@@ -5814,9 +5851,9 @@ var Tag = styled_components__WEBPACK_IMPORTED_MODULE_2___default.a.div(_template
 }, function (props) {
   return getFontWeight(props);
 }, function (props) {
-  return getOpacity(props);
+  return getLineHeight(props);
 }, function (props) {
-  return getPadding(props);
+  return getOpacity(props);
 }, function (props) {
   return getPointerEvents(props);
 }, function (props) {
@@ -5848,14 +5885,16 @@ var NavLink = function NavLink(props) {
   return react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_NavContext__WEBPACK_IMPORTED_MODULE_3__["default"].Consumer, null, function (_ref14) {
     var navbar = _ref14.navbar,
         vertical = _ref14.vertical,
-        mobile = _ref14.mobile;
+        mobile = _ref14.mobile,
+        sub = _ref14.sub;
     return react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(Tag, _extends({
       as: derivedTag,
       type: derivedTag === 'button' && props.onClick ? 'button' : undefined
     }, props, {
       navbar: navbar,
       vertical: vertical,
-      mobile: mobile
+      mobile: mobile,
+      sub: sub
     }));
   });
 };
