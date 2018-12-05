@@ -1,4 +1,4 @@
-/*! brown-university-theme v0.3.17 */
+/*! brown-university-theme v0.3.18 */
 (function webpackUniversalModuleDefinition(root, factory) {
 	if(typeof exports === 'object' && typeof module === 'object')
 		module.exports = factory(require("react"), require("styled-components"));
@@ -6221,8 +6221,48 @@ function _assertThisInitialized(self) { if (self === void 0) { throw new Referen
 
 function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
 
-function _templateObject5() {
+function _templateObject9() {
   var data = _taggedTemplateLiteral(["\n  display: flex;\n  justify-content: center;\n  padding: 20px 0 30px;\n"]);
+
+  _templateObject9 = function _templateObject9() {
+    return data;
+  };
+
+  return data;
+}
+
+function _templateObject8() {
+  var data = _taggedTemplateLiteral(["\n      background-color: ", "\n      margin: 0 auto;\n      margin-top: -50px;\n      max-width: 1300px;\n      position: relative;\n      width: 96%;\n      z-index: 10;\n    "]);
+
+  _templateObject8 = function _templateObject8() {
+    return data;
+  };
+
+  return data;
+}
+
+function _templateObject7() {
+  var data = _taggedTemplateLiteral(["\n  ", "\n"]);
+
+  _templateObject7 = function _templateObject7() {
+    return data;
+  };
+
+  return data;
+}
+
+function _templateObject6() {
+  var data = _taggedTemplateLiteral(["\n  align-items: center;\n  display: flex;\n  justify-content: center;\n  margin: 0 auto;\n  padding: 16px 0;\n  width: 92%;\n  z-index: 10;\n"]);
+
+  _templateObject6 = function _templateObject6() {
+    return data;
+  };
+
+  return data;
+}
+
+function _templateObject5() {
+  var data = _taggedTemplateLiteral(["\n  background-color: transparent;\n  border: none;\n  cursor: pointer;\n  color: ", ";\n  font-family: ", ";\n  font-size: 1em;\n  font-weight: bold;\n  letter-spacing: 0.5px;\n  padding: 11px 5px;\n  text-transform: uppercase;\n"]);
 
   _templateObject5 = function _templateObject5() {
     return data;
@@ -6232,7 +6272,7 @@ function _templateObject5() {
 }
 
 function _templateObject4() {
-  var data = _taggedTemplateLiteral(["\n  align-items: center;\n  display: flex;\n  justify-content: center;\n  margin: 0 auto;\n  padding: 16px 0;\n  width: 92%;\n"]);
+  var data = _taggedTemplateLiteral(["\n  align-items: center;\n  display: flex;\n  flex-direction: row;\n  flex-wrap: wrap;\n  justify-content: space-between;\n  margin: 0 auto;\n  padding: 1rem 0 1rem;\n  width: 92%;\n"]);
 
   _templateObject4 = function _templateObject4() {
     return data;
@@ -6242,7 +6282,7 @@ function _templateObject4() {
 }
 
 function _templateObject3() {
-  var data = _taggedTemplateLiteral(["\n  border: none;\n  cursor: pointer;\n  color: ", ";\n  font-family: ", ";\n  font-size: 1em;\n  font-weight: bold;\n  letter-spacing: 0.5px;\n  padding: 11px 5px;\n  text-transform: uppercase;\n"]);
+  var data = _taggedTemplateLiteral(["\n  border: 1px solid #ddd;\n"]);
 
   _templateObject3 = function _templateObject3() {
     return data;
@@ -6252,7 +6292,7 @@ function _templateObject3() {
 }
 
 function _templateObject2() {
-  var data = _taggedTemplateLiteral(["\n  align-items: center;\n  display: flex;\n  flex-direction: row;\n  flex-wrap: wrap;\n  justify-content: space-between;\n  margin: 0 auto;\n  padding: 1rem 0 1rem;\n  width: 92%;\n"]);
+  var data = _taggedTemplateLiteral(["\n      margin: 0 auto;\n      margin-top: 2rem;\n      width: 95%;\n      z-index: 10;\n    "]);
 
   _templateObject2 = function _templateObject2() {
     return data;
@@ -6262,7 +6302,7 @@ function _templateObject2() {
 }
 
 function _templateObject() {
-  var data = _taggedTemplateLiteral(["\n  border: 1px solid #ddd;\n"]);
+  var data = _taggedTemplateLiteral(["\n  ", "\n"]);
 
   _templateObject = function _templateObject() {
     return data;
@@ -6276,18 +6316,24 @@ function _taggedTemplateLiteral(strings, raw) { if (!raw) { raw = strings.slice(
 
 
 
- // TODO: banner, collapse
+ // TODO: collapse
 
 
 
 
 
 
-var MobileWrapper = styled_components__WEBPACK_IMPORTED_MODULE_2___default.a.div(_templateObject());
-var MobileMenuWrapper = styled_components__WEBPACK_IMPORTED_MODULE_2___default.a.div(_templateObject2());
-var MobileMenuTitle = styled_components__WEBPACK_IMPORTED_MODULE_2___default.a.button(_templateObject3(), _constants_colors__WEBPACK_IMPORTED_MODULE_7__["default"].red, _constants_typography__WEBPACK_IMPORTED_MODULE_8__["sansBold"]);
-var MobileNavWrapper = styled_components__WEBPACK_IMPORTED_MODULE_2___default.a.div(_templateObject4());
-var Wrapper = styled_components__WEBPACK_IMPORTED_MODULE_2___default.a.div(_templateObject5());
+var MobileBannerWrapper = styled_components__WEBPACK_IMPORTED_MODULE_2___default.a.div(_templateObject(), function (props) {
+  return props.banner && Object(styled_components__WEBPACK_IMPORTED_MODULE_2__["css"])(_templateObject2());
+});
+var MobileWrapper = styled_components__WEBPACK_IMPORTED_MODULE_2___default.a.div(_templateObject3());
+var MobileMenuWrapper = styled_components__WEBPACK_IMPORTED_MODULE_2___default.a.div(_templateObject4());
+var MobileMenuTitle = styled_components__WEBPACK_IMPORTED_MODULE_2___default.a.button(_templateObject5(), _constants_colors__WEBPACK_IMPORTED_MODULE_7__["default"].red, _constants_typography__WEBPACK_IMPORTED_MODULE_8__["sansBold"]);
+var MobileNavWrapper = styled_components__WEBPACK_IMPORTED_MODULE_2___default.a.div(_templateObject6());
+var BannerWrapper = styled_components__WEBPACK_IMPORTED_MODULE_2___default.a.div(_templateObject7(), function (props) {
+  return props.banner && Object(styled_components__WEBPACK_IMPORTED_MODULE_2__["css"])(_templateObject8(), _constants_colors__WEBPACK_IMPORTED_MODULE_7__["default"].white);
+});
+var Wrapper = styled_components__WEBPACK_IMPORTED_MODULE_2___default.a.div(_templateObject9());
 
 var SiteNav =
 /*#__PURE__*/
@@ -6330,7 +6376,8 @@ function (_Component) {
 
       var _this$props = this.props,
           mobileMenuTitle = _this$props.mobileMenuTitle,
-          mobileNavBreakpoint = _this$props.mobileNavBreakpoint;
+          mobileNavBreakpoint = _this$props.mobileNavBreakpoint,
+          banner = _this$props.banner;
       var mobileNavIsOpen = this.state.mobileNavIsOpen;
       return react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(react_fns__WEBPACK_IMPORTED_MODULE_3__["WindowSize"], {
         render: function render(_ref2) {
@@ -6341,7 +6388,9 @@ function (_Component) {
           var renderMobile = currentWidth < mobileNavBreakpoint;
 
           if (renderMobile) {
-            return react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(MobileWrapper, null, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(MobileMenuWrapper, null, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(MobileMenuTitle, {
+            return react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(MobileBannerWrapper, {
+              banner: banner
+            }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(MobileWrapper, null, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(MobileMenuWrapper, null, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(MobileMenuTitle, {
               type: "button",
               "aria-controls": "site-nav",
               "aria-expanded": mobileNavIsOpen,
@@ -6355,10 +6404,12 @@ function (_Component) {
             })), mobileNavIsOpen && react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(MobileNavWrapper, null, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_Nav__WEBPACK_IMPORTED_MODULE_5__["default"], {
               id: "site-nav",
               mobile: true
-            }, _this2.props.children)));
+            }, _this2.props.children))));
           }
 
-          return react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(Wrapper, null, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_Nav__WEBPACK_IMPORTED_MODULE_5__["default"], null, _this2.props.children));
+          return react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(BannerWrapper, {
+            banner: banner
+          }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(Wrapper, null, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_Nav__WEBPACK_IMPORTED_MODULE_5__["default"], null, _this2.props.children)));
         }
       });
     }
@@ -6370,11 +6421,13 @@ function (_Component) {
 SiteNav.propTypes = {
   mobileMenuTitle: prop_types__WEBPACK_IMPORTED_MODULE_0___default.a.string,
   mobileNavBreakpoint: prop_types__WEBPACK_IMPORTED_MODULE_0___default.a.number,
-  children: prop_types__WEBPACK_IMPORTED_MODULE_0___default.a.node.isRequired
+  children: prop_types__WEBPACK_IMPORTED_MODULE_0___default.a.node.isRequired,
+  banner: prop_types__WEBPACK_IMPORTED_MODULE_0___default.a.bool
 };
 SiteNav.defaultProps = {
   mobileMenuTitle: 'Site Navigation',
-  mobileNavBreakpoint: _constants_breakpoints__WEBPACK_IMPORTED_MODULE_6__["default"].md
+  mobileNavBreakpoint: _constants_breakpoints__WEBPACK_IMPORTED_MODULE_6__["default"].md,
+  banner: false
 };
 SiteNav.Item = _Nav__WEBPACK_IMPORTED_MODULE_5__["default"].Item;
 SiteNav.Link = _Nav__WEBPACK_IMPORTED_MODULE_5__["default"].Link;

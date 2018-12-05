@@ -9,7 +9,7 @@ Styles and components for building web applications based on the [Brown Universi
 Ensure you're on the network and that your SSH key has been added to the ssh-agent (`ssh-add ~/.ssh/id_rsa`) and uploaded to [bitbucket.brown.edu](https://bitbucket.brown.edu/plugins/servlet/ssh/account/keys), then run:
 
 ```
-  yarn add ssh://git@bitbucket.brown.edu:7999/ccum/brown-university-theme.git#0.3.17
+  yarn add ssh://git@bitbucket.brown.edu:7999/ccum/brown-university-theme.git#0.3.18
 ```
 
 ### Dependencies
@@ -217,7 +217,43 @@ import 'brown-university-theme/dist/styles.css';
 
 - `SiteNav`
 
-  TODO
+  **Example:**
+
+  ```javascript
+  import React from 'react';
+  import { SiteNav } from 'brown-university-theme';
+
+  export default () => (
+    <SiteNav>
+      <SiteNav.Item>
+        <SiteNav.Link>Link</SiteNav.Link>
+      </SiteNav.Item>
+      <SiteNav.Item>
+        <SiteNav.Link active>Active Link</SiteNav.Link>
+      </SiteNav.Item>
+      <SiteNav.Item>
+        <SiteNav.Link disabled>Disabled Link</SiteNav.Link>
+      </SiteNav.Item>
+    </SiteNav>
+  );
+  ```
+
+  **`SiteNav` Properties:**
+
+  | property            | propType | required | default         |
+  | ------------------- | -------- | -------- | --------------- |
+  | mobileMenuTitle     | string   | -        | Site Navigation |
+  | mobileNavBreakpoint | number   | -        | 768             |
+  | banner              | bool     | -        | false           |
+  | children            | node     | true     | undefined       |
+
+  **`SiteNav.Item` Properties:**
+
+  _See `Nav.Item`_
+
+  **`SiteNav.Link` Properties:**
+
+  _See `Nav.Link`_
 
 - `SubNav`
 
