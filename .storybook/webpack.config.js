@@ -1,4 +1,4 @@
-const svgRules = require('../webpack.utils/rules/svg');
+const svgRules = require('../webpack/rules/svg');
 
 module.exports = (storybookBaseConfig, configType) => {
   storybookBaseConfig.module.rules.push({

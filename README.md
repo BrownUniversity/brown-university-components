@@ -9,7 +9,7 @@ Styles and components for building web applications based on the [Brown Universi
 Ensure you're on the network and that your SSH key has been added to the ssh-agent (`ssh-add ~/.ssh/id_rsa`) and uploaded to [bitbucket.brown.edu](https://bitbucket.brown.edu/plugins/servlet/ssh/account/keys), then run:
 
 ```
-  yarn add ssh://git@bitbucket.brown.edu:7999/ccum/brown-university-theme.git#0.3.18
+  yarn add git+https://bitbucket.brown.edu/scm/ccum/brown-university-theme.git#^0.3
 ```
 
 ### Dependencies
@@ -19,7 +19,6 @@ Ensure you're on the network and that your SSH key has been added to the ssh-age
 These libraries are not bundled with Brown University Theme and are required at runtime:
 
 - [**react**](https://www.npmjs.com/package/react)
-- [**react-dom**](https://www.npmjs.com/package/react-dom)
 - [**styled-components**](https://www.npmjs.com/package/styled-components)
 
 ## Documentation
@@ -101,7 +100,7 @@ import 'brown-university-theme/dist/styles.css';
 
 * `Hamburger`
 
-  _This is a primitive used by `NavbarNav` and `SiteNav`. You probably want to use one of those components instead._
+  _This is a primitive used by `NavbarNav` and `SiteNav`. You might want to use one of those components instead._
 
   **Example:**
 
@@ -110,7 +109,10 @@ import 'brown-university-theme/dist/styles.css';
   import { Hamburger } from 'brown-university-theme';
 
   export default () => (
-    <Hamburger onOpen={() => handleOpen} onOpen={() => handleClose} />
+    <Hamburger
+      onOpen={() => 'your `handleOpen` fn'}
+      onClose={() => 'your `handleClose` fn'}
+    />
   );
   ```
 
@@ -142,7 +144,7 @@ import 'brown-university-theme/dist/styles.css';
 
 - `Nav`
 
-  _This is a primitive used by `NavbarNav`, `SiteNav`, and `SubNav`. You probably want to use one of those components instead._
+  _This is a primitive used by `NavbarNav`, `SiteNav`, and `SubNav`. You might want to use one of those components instead._
 
   **Example:**
 
