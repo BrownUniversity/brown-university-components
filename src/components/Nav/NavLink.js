@@ -15,7 +15,7 @@ const navLinkCSS = css`
   display: block;
   font-family: ${sans};
   padding: 0;
-  text-decoration: none;
+  text-decoration: none !important;
 `;
 
 const navLinkAfterCSS = css`

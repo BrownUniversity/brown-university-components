@@ -1,4 +1,4 @@
-/*! brown-university-theme v0.3.2 */
+/*! brown-university-theme v0.3.3 */
 (function(e, a) { for(var i in a) e[i] = a[i]; }(exports, /******/ (function(modules) { // webpackBootstrap
 /******/ 	// The module cache
 /******/ 	var installedModules = {};
@@ -1521,7 +1521,7 @@ function _templateObject2() {
 }
 
 function _templateObject() {
-  var data = _taggedTemplateLiteral(["\n  background: transparent;\n  border: none;\n  display: block;\n  font-family: ", ";\n  padding: 0;\n  text-decoration: none;\n"]);
+  var data = _taggedTemplateLiteral(["\n  background: transparent;\n  border: none;\n  display: block;\n  font-family: ", ";\n  padding: 0;\n  text-decoration: none !important;\n"]);
 
   _templateObject = function _templateObject() {
     return data;
