@@ -1,5 +1,15 @@
 /*! brown-university-theme v0.3.3 */
-(function(e, a) { for(var i in a) e[i] = a[i]; }(exports, /******/ (function(modules) { // webpackBootstrap
+(function webpackUniversalModuleDefinition(root, factory) {
+	if(typeof exports === 'object' && typeof module === 'object')
+		module.exports = factory(require("prop-types"), require("react"), require("styled-components"), require("polished"), require("react-fns"));
+	else if(typeof define === 'function' && define.amd)
+		define(["prop-types", "react", "styled-components", "polished", "react-fns"], factory);
+	else {
+		var a = typeof exports === 'object' ? factory(require("prop-types"), require("react"), require("styled-components"), require("polished"), require("react-fns")) : factory(root["prop-types"], root["react"], root["styled-components"], root["polished"], root["react-fns"]);
+		for(var i in a) (typeof exports === 'object' ? exports : root)[i] = a[i];
+	}
+})(window, function(__WEBPACK_EXTERNAL_MODULE__3__, __WEBPACK_EXTERNAL_MODULE__4__, __WEBPACK_EXTERNAL_MODULE__5__, __WEBPACK_EXTERNAL_MODULE__12__, __WEBPACK_EXTERNAL_MODULE__25__) {
+return /******/ (function(modules) { // webpackBootstrap
 /******/ 	// The module cache
 /******/ 	var installedModules = {};
 /******/
@@ -273,19 +283,19 @@ Banner.Text = _BannerText__WEBPACK_IMPORTED_MODULE_3__["default"];
 /* 3 */
 /***/ (function(module, exports) {
 
-module.exports = require("prop-types");
+module.exports = __WEBPACK_EXTERNAL_MODULE__3__;
 
 /***/ }),
 /* 4 */
 /***/ (function(module, exports) {
 
-module.exports = require("react");
+module.exports = __WEBPACK_EXTERNAL_MODULE__4__;
 
 /***/ }),
 /* 5 */
 /***/ (function(module, exports) {
 
-module.exports = require("styled-components");
+module.exports = __WEBPACK_EXTERNAL_MODULE__5__;
 
 /***/ }),
 /* 6 */
@@ -829,7 +839,7 @@ Button.defaultProps = {
 /* 12 */
 /***/ (function(module, exports) {
 
-module.exports = require("polished");
+module.exports = __WEBPACK_EXTERNAL_MODULE__12__;
 
 /***/ }),
 /* 13 */
@@ -2266,7 +2276,8 @@ SiteNav.Link = _Nav__WEBPACK_IMPORTED_MODULE_5__["default"].Link;
 /* 25 */
 /***/ (function(module, exports) {
 
-module.exports = require("react-fns");
+module.exports = __WEBPACK_EXTERNAL_MODULE__25__;
 
 /***/ })
-/******/ ])));
+/******/ ]);
+});
