@@ -14,6 +14,7 @@ const navLinkCSS = css`
   border: none;
   display: block;
   font-family: ${sans};
+  padding: 0;
   text-decoration: none;
 `;
 
@@ -47,8 +48,8 @@ const getCursor = ({ disabled, href }) => {
   return 'pointer';
 };
 
-const getFontSize = ({ mobile }) => {
-  if (mobile) {
+const getFontSize = ({ navbar, mobile }) => {
+  if (navbar || mobile) {
     return '1em';
   }
 

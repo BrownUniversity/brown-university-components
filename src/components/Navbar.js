@@ -22,8 +22,7 @@ const NavbarWrapper = styled.div`
   background-color: ${({ color }) => colors[color]};
 
   ${media.lg`
-    padding: 0 0 0 33px;
-    width: calc(100% - 33px);
+    padding: 0 33px;
   `};
 `;
 

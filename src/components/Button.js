@@ -17,7 +17,6 @@ const buttonCSS = css`
   font-weight: 700;
   letter-spacing: 0.6px;
   line-height: 1.5;
-  margin: 15px auto;
   padding: 12px 25px 12px 20px;
   text-align: center;
   text-decoration: none !important;

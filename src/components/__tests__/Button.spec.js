@@ -108,7 +108,6 @@ describe('Button', () => {
   -ms-letter-spacing: 0.6px;
   letter-spacing: 0.6px;
   line-height: 1.5;
-  margin: 15px auto;
   padding: 12px 25px 12px 20px;
   text-align: center;
   -webkit-text-decoration: none !important;
@@ -155,7 +154,6 @@ describe('Button', () => {
   -ms-letter-spacing: 0.6px;
   letter-spacing: 0.6px;
   line-height: 1.5;
-  margin: 15px auto;
   padding: 12px 25px 12px 20px;
   text-align: center;
   -webkit-text-decoration: none !important;
@@ -214,7 +212,6 @@ describe('Button', () => {
   -ms-letter-spacing: 0.6px;
   letter-spacing: 0.6px;
   line-height: 1.5;
-  margin: 15px auto;
   padding: 12px 25px 12px 20px;
   text-align: center;
   -webkit-text-decoration: none !important;
@@ -263,7 +260,6 @@ describe('Button', () => {
   -ms-letter-spacing: 0.6px;
   letter-spacing: 0.6px;
   line-height: 1.5;
-  margin: 15px auto;
   padding: 12px 25px 12px 20px;
   text-align: center;
   -webkit-text-decoration: none !important;
@@ -312,7 +308,6 @@ describe('Button', () => {
   -ms-letter-spacing: 0.6px;
   letter-spacing: 0.6px;
   line-height: 1.5;
-  margin: 15px auto;
   padding: 12px 25px 12px 20px;
   text-align: center;
   -webkit-text-decoration: none !important;
@@ -361,7 +356,6 @@ describe('Button', () => {
   -ms-letter-spacing: 0.6px;
   letter-spacing: 0.6px;
   line-height: 1.5;
-  margin: 15px auto;
   padding: 12px 25px 12px 20px;
   text-align: center;
   -webkit-text-decoration: none !important;
@@ -410,7 +404,6 @@ describe('Button', () => {
   -ms-letter-spacing: 0.6px;
   letter-spacing: 0.6px;
   line-height: 1.5;
-  margin: 15px auto;
   padding: 12px 25px 12px 20px;
   text-align: center;
   -webkit-text-decoration: none !important;
@@ -459,7 +452,6 @@ describe('Button', () => {
   -ms-letter-spacing: 0.6px;
   letter-spacing: 0.6px;
   line-height: 1.5;
-  margin: 15px auto;
   padding: 12px 25px 12px 20px;
   text-align: center;
   -webkit-text-decoration: none !important;
@@ -508,7 +500,6 @@ describe('Button', () => {
   -ms-letter-spacing: 0.6px;
   letter-spacing: 0.6px;
   line-height: 1.5;
-  margin: 15px auto;
   padding: 12px 25px 12px 20px;
   text-align: center;
   -webkit-text-decoration: none !important;

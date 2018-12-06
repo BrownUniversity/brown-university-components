@@ -67,8 +67,7 @@ describe('Navbar', () => {
 
 @media (min-width:992px) {
   .c0 {
-    padding: 0 0 0 33px;
-    width: calc(100% - 33px);
+    padding: 0 33px;
   }
 }
 

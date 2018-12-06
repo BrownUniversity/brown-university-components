@@ -1,4 +1,4 @@
-/*! brown-university-theme v0.3.1 */
+/*! brown-university-theme v0.3.2 */
 /******/ (function(modules) { // webpackBootstrap
 /******/ 	// The module cache
 /******/ 	var installedModules = {};
@@ -550,7 +550,7 @@ function _templateObject2() {
 }
 
 function _templateObject() {
-  var data = _taggedTemplateLiteral(["\n  border-width: 0;\n  display: inline-block;\n  font-family: ", ";\n  font-style: normal;\n  font-weight: 700;\n  letter-spacing: 0.6px;\n  line-height: 1.5;\n  margin: 15px auto;\n  padding: 12px 25px 12px 20px;\n  text-align: center;\n  text-decoration: none !important;\n  text-transform: uppercase;\n  transition: color 0.25s, background 0.25s, border 0.25s, box-shadow 0.25s;\n"]);
+  var data = _taggedTemplateLiteral(["\n  border-width: 0;\n  display: inline-block;\n  font-family: ", ";\n  font-style: normal;\n  font-weight: 700;\n  letter-spacing: 0.6px;\n  line-height: 1.5;\n  padding: 12px 25px 12px 20px;\n  text-align: center;\n  text-decoration: none !important;\n  text-transform: uppercase;\n  transition: color 0.25s, background 0.25s, border 0.25s, box-shadow 0.25s;\n"]);
 
   _templateObject = function _templateObject() {
     return data;
@@ -1521,7 +1521,7 @@ function _templateObject2() {
 }
 
 function _templateObject() {
-  var data = _taggedTemplateLiteral(["\n  background: transparent;\n  border: none;\n  display: block;\n  font-family: ", ";\n  text-decoration: none;\n"]);
+  var data = _taggedTemplateLiteral(["\n  background: transparent;\n  border: none;\n  display: block;\n  font-family: ", ";\n  padding: 0;\n  text-decoration: none;\n"]);
 
   _templateObject = function _templateObject() {
     return data;
@@ -1574,9 +1574,10 @@ var getCursor = function getCursor(_ref2) {
 };
 
 var getFontSize = function getFontSize(_ref3) {
-  var mobile = _ref3.mobile;
+  var navbar = _ref3.navbar,
+      mobile = _ref3.mobile;
 
-  if (mobile) {
+  if (navbar || mobile) {
     return '1em';
   }
 
@@ -1798,7 +1799,7 @@ function _templateObject3() {
 }
 
 function _templateObject2() {
-  var data = _taggedTemplateLiteral(["\n    padding: 0 0 0 33px;\n    width: calc(100% - 33px);\n  "]);
+  var data = _taggedTemplateLiteral(["\n    padding: 0 33px;\n  "]);
 
   _templateObject2 = function _templateObject2() {
     return data;
