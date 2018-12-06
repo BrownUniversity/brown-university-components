@@ -3,8 +3,8 @@ import React from 'react';
 import styled, { css } from 'styled-components';
 import { darken } from 'polished';
 
-import colors from '../styles/colors';
-import { sans } from '../styles/typography';
+import colors from '../constants/colors';
+import { sans } from '../constants/typography';
 
 /*
   css mixins

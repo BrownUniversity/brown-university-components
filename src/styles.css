@@ -1,0 +1,56 @@
+@charset "UTF-8";
+
+/* ---- fonts ---- */
+@font-face {
+  font-family: 'Bitstream Vera Sans Mono';
+  font-style: normal;
+  src: url('./fonts/bitstream-vera-sans-mono.woff') format('woff');
+}
+
+@font-face {
+  font-family: brown-icons;
+  font-style: normal;
+  src: url('./fonts/brown-icons.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'Circular-Bold';
+  font-style: normal;
+  src: url('./fonts/circular-bold.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'Circular-Bold';
+  font-style: italic;
+  src: url('./fonts/circular-bolditalic.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'Circular-Book';
+  font-style: normal;
+  src: url('./fonts/circular-book.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'Circular-Book';
+  font-style: italic;
+  src: url('./fonts/circular-bookitalic.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'Circular-Medium';
+  font-style: normal;
+  src: url('./fonts/circular-medium.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'Circular-Medium';
+  font-style: italic;
+  src: url('./fonts/circular-mediumitalic.woff') format('woff');
+}
+
+@font-face {
+  font-family: minion-pro;
+  font-style: normal;
+  src: url('./fonts/minion-pro.woff') format('woff');
+}

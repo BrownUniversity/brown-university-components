@@ -2,10 +2,14 @@
   "name": "brown-university-theme",
   "description": "React components for the Brown University Theme",
   "author": "Colin Cummings <colin_cummings@brown.edu>",
-  "version": "0.2.2",
+  "version": "0.3.0",
   "private": true,
-  "main": "dist/brown-university-theme.js",
+  "homepage": "https://bitbucket.brown.edu/projects/CCUM/repos/brown-university-theme",
+  "main": "dist/brown-university-theme.cjs.js",
+  "module": "dist/brown-university.es.js",
+  "sideEffects": false,
   "scripts": {
+    "clean": "rm -rf dist && rm -rf webpack/stats",
     "lint": "eslint src",
     "prettier": "prettier \"{src,__{tests,mocks}__}/**/*.+(js|json|css)\"",
     "format:check": "npm run prettier -- --list-different",
@@ -15,18 +19,27 @@
     "test:coverage:open": "npm run test:coverage && opener ./coverage/lcov-report/index.html",
     "test:watch": "npm test -- --watch",
     "validate": "npm-run-all lint format:check test:coverage",
-    "prebuild": "npm run validate && rm -rf dist",
-    "build": "webpack -p",
+    "prebuild": "npm-run-all validate clean",
+    "build:cjs": "webpack --config webpack/configs/cjs.js",
+    "build:es": "webpack --config webpack/configs/es.js",
+    "build": "npm-run-all build:cjs build:es",
+    "bundle:cjs:analyze": "webpack-bundle-analyzer webpack/stats/cjs.json",
+    "bundle:es:analyze": "webpack-bundle-analyzer webpack/stats/es.json",
     "start": "start-storybook -p 8080 -c .storybook"
   },
   "peerDependencies": {
     "react": "^16.0.0",
-    "react-dom": "^16.0.0",
     "styled-components": "^4.0.0"
+  },
+  "dependencies": {
+    "prop-types": "^15.6.2",
+    "react-fns": "^1.4.0",
+    "polished": "^2.3.0"
   },
   "devDependencies": {
     "@babel/cli": "^7.1.5",
     "@babel/core": "^7.1.6",
+    "@babel/plugin-proposal-class-properties": "^7.1.0",
     "@babel/preset-env": "^7.1.6",
     "@babel/preset-react": "^7.0.0",
     "@storybook/addon-actions": "^4.0.8",
@@ -35,8 +48,11 @@
     "babel-core": "^7.0.0-bridge.0",
     "babel-jest": "^23.6.0",
     "babel-loader": "^8.0.4",
+    "babel-plugin-transform-react-remove-prop-types": "^0.4.21",
+    "css-loader": "^1.0.1",
     "eslint": "^5.9.0",
     "eslint-config-colinrcummings": "^2.1.0",
+    "filemanager-webpack-plugin": "^2.0.5",
     "jest": "^23.6.0",
     "jest-dom": "^2.1.1",
     "jest-styled-components": "^6.3.1",
@@ -47,10 +63,17 @@
     "prop-types": "^15.6.2",
     "react": "^16.6.3",
     "react-dom": "^16.6.3",
+    "react-fns": "^1.4.0",
+    "react-svg-loader": "^2.1.0",
     "react-testing-library": "^5.2.3",
     "regenerator-runtime": "^0.13.1",
+    "style-loader": "^0.23.1",
     "styled-components": "^4.1.1",
+    "url-loader": "^1.1.2",
     "webpack": "^4.26.0",
-    "webpack-cli": "^3.1.2"
+    "webpack-bundle-analyzer": "^3.0.3",
+    "webpack-cli": "^3.1.2",
+    "webpack-merge": "^4.1.4",
+    "webpack-stats-plugin": "^0.2.1"
   }
 }
