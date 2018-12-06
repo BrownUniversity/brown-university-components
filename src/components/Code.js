@@ -2,13 +2,15 @@ import PropTypes from 'prop-types';
 import React from 'react';
 import styled from 'styled-components';
 
+import colors from '../constants/colors';
 import { mono } from '../constants/typography';
 
 /*
   inner Tag component
 */
 const Tag = styled.code`
-  background: #f7f7f7;
+  background: ${colors.lightGray};
+  color: ${colors.black};
   border: 0.5px solid #dfe3e6;
   border-radius: 3px;
   font-family: ${mono};

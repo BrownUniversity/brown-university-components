@@ -1,4 +1,4 @@
-/*! brown-university-theme v0.3.0 */
+/*! brown-university-theme v0.3.1 */
 (function(e, a) { for(var i in a) e[i] = a[i]; }(exports, /******/ (function(modules) { // webpackBootstrap
 /******/ 	// The module cache
 /******/ 	var installedModules = {};
@@ -843,9 +843,10 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_1__);
 /* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(5);
 /* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(styled_components__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var _constants_typography__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(10);
+/* harmony import */ var _constants_colors__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(7);
+/* harmony import */ var _constants_typography__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(10);
 function _templateObject() {
-  var data = _taggedTemplateLiteral(["\n  background: #f7f7f7;\n  border: 0.5px solid #dfe3e6;\n  border-radius: 3px;\n  font-family: ", ";\n  font-size: 0.65em;\n  padding: 0.5em 0.75em;\n  white-space: pre-wrap;\n"]);
+  var data = _taggedTemplateLiteral(["\n  background: ", ";\n  color: ", ";\n  border: 0.5px solid #dfe3e6;\n  border-radius: 3px;\n  font-family: ", ";\n  font-size: 0.65em;\n  padding: 0.5em 0.75em;\n  white-space: pre-wrap;\n"]);
 
   _templateObject = function _templateObject() {
     return data;
@@ -860,11 +861,12 @@ function _taggedTemplateLiteral(strings, raw) { if (!raw) { raw = strings.slice(
 
 
 
+
 /*
   inner Tag component
 */
 
-var Tag = styled_components__WEBPACK_IMPORTED_MODULE_2___default.a.code(_templateObject(), _constants_typography__WEBPACK_IMPORTED_MODULE_3__["mono"]);
+var Tag = styled_components__WEBPACK_IMPORTED_MODULE_2___default.a.code(_templateObject(), _constants_colors__WEBPACK_IMPORTED_MODULE_3__["default"].lightGray, _constants_colors__WEBPACK_IMPORTED_MODULE_3__["default"].black, _constants_typography__WEBPACK_IMPORTED_MODULE_4__["mono"]);
 /*
   outer Code component
 */

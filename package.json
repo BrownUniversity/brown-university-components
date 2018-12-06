@@ -2,7 +2,7 @@
   "name": "brown-university-theme",
   "description": "React components for the Brown University Theme",
   "author": "Colin Cummings <colin_cummings@brown.edu>",
-  "version": "0.3.0",
+  "version": "0.3.1",
   "private": true,
   "homepage": "https://bitbucket.brown.edu/projects/CCUM/repos/brown-university-theme",
   "main": "dist/brown-university-theme.cjs.js",
