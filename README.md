@@ -51,12 +51,12 @@ import 'brown-university-theme/dist/styles.css';
 
   **Properties:**
 
-  | property | propType                                                                | required | default   |
-  | -------- | ----------------------------------------------------------------------- | -------- | --------- |
-  | color    | oneOf(['emerald', 'red', 'yellow', 'gray', 'skyblue', 'navy', 'white']) | -        | 'emerald' |
-  | size     | oneOf(['default', 'small', 'medium', 'large'])                          | -        | 'default' |
-  | src      | string                                                                  | -        | false     |
-  | children | node                                                                    | -        | false     |
+  | property | propType                                                                                                     | required | default   |
+  | -------- | ------------------------------------------------------------------------------------------------------------ | -------- | --------- |
+  | color    | oneOf(['emerald', 'red', 'brown', 'yellow', 'gray', 'sand', 'lightBrown', 'mediumBrown', 'navy', 'skyblue']) | -        | 'emerald' |
+  | size     | oneOf(['default', 'small', 'medium', 'large'])                                                               | -        | 'default' |
+  | src      | string                                                                                                       | -        | false     |
+  | children | node                                                                                                         | -        | false     |
 
 * [`Button`](https://www.brown.edu/university-communications/digital/university-theme/formatting/buttons)
 

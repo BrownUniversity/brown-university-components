@@ -4,6 +4,7 @@ import { withKnobs, boolean, number, text } from '@storybook/addon-knobs';
 
 import { SiteNav, Banner } from '../src';
 import breakpoints from '../src/constants/breakpoints';
+import bannerImage from './images/banner.png';
 
 const getCommonProps = () => ({
   mobileMenuTitle: text('mobileMenuTitle', 'Site Navigation'),
@@ -28,7 +29,9 @@ storiesOf('SiteNav', module)
   .add('default', () => renderSiteNav())
   .add('with banner', () => (
     <React.Fragment>
-      <Banner />
+      <Banner src={bannerImage}>
+        <Banner.Text>University Theme</Banner.Text>
+      </Banner>
       {renderSiteNav({ banner: boolean('banner', true) })}
     </React.Fragment>
   ));

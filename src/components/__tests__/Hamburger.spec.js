@@ -319,4 +319,14 @@ describe('Hamburger', () => {
       expect(onClose).toHaveBeenCalledTimes(1);
     });
   });
+
+  it('should update when isOpen prop changes', () => {
+    const { tree, rerender } = renderHamburger();
+
+    expect(tree).toHaveAttribute('aria-expanded', 'false');
+
+    rerender(<Hamburger isOpen onOpen={jest.fn()} onClose={jest.fn()} />);
+
+    expect(tree).toHaveAttribute('aria-expanded', 'true');
+  });
 });

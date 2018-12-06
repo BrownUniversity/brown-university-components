@@ -8,7 +8,7 @@ import colors from '../../constants/colors';
 /*
   css prop getters
 */
-const getHeight = ({ size }) => {
+const getMaxHeight = ({ size }) => {
   switch (size) {
     case 'small':
       return '150px';
@@ -28,26 +28,47 @@ const getHeight = ({ size }) => {
   inner components
 */
 const BannerWrapper = styled.div`
-  align-items: center;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  display: flex;
-  justify-content: center;
   position: relative;
   z-index: 5;
+`;
+
+const BannerImageColorWrapper = styled.div`
   width: 100%;
-  background-image: ${({ src }) => src && `url(${src})`};
-  background-color: ${({ color }) => colors[color]};
-  height: ${props => getHeight(props)};
+  overflow: hidden;
+  max-height: ${props => getMaxHeight(props)};
+`;
+
+const BannerImage = styled.img`
+  height: auto;
+  max-width: 100%;
+  width: 100%;
+`;
+
+const BannerChildrenWrapper = styled.div`
+  bottom: 0;
+  left: 0;
+  position: absolute;
+  text-align: center;
+  top: ${({ size }) => (size === 'small' ? '20%' : '35%')};
+  width: 100%;
+  z-index: 15;
 `;
 
 /*
   outer Banner component
 */
 const Banner = ({ color, size, src, children }) => (
-  <BannerWrapper color={color} size={size} src={src}>
-    {children}
+  <BannerWrapper>
+    <BannerImageColorWrapper size={size}>
+      {src ? (
+        <BannerImage src={src} alt="Banner" />
+      ) : (
+        <svg viewBox="0 0 2600 600">
+          <rect width="100%" height="100%" fill={colors[color]} />
+        </svg>
+      )}
+    </BannerImageColorWrapper>
+    <BannerChildrenWrapper size={size}>{children}</BannerChildrenWrapper>
   </BannerWrapper>
 );
 
@@ -55,11 +76,14 @@ Banner.propTypes = {
   color: PropTypes.oneOf([
     'emerald',
     'red',
+    'brown',
     'yellow',
     'gray',
-    'skyblue',
+    'sand',
+    'lightBrown',
+    'mediumBrown',
     'navy',
-    'white'
+    'skyblue'
   ]),
   size: PropTypes.oneOf(['default', 'small', 'medium', 'large']),
   src: PropTypes.string,

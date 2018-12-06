@@ -131,9 +131,6 @@ const getAfterWidthWithHover = ({ disabled }) => {
 /*
   inner Tag component
 */
-
-// TODO: move line height here
-
 const Tag = styled.div`
   ${navLinkCSS}
   color: ${props => getColor(props)};

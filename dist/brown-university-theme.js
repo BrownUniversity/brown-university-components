@@ -157,8 +157,38 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(styled_components__WEBPACK_IMPORTED_MODULE_2__);
 /* harmony import */ var _BannerText__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(10);
 /* harmony import */ var _constants_colors__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(11);
+function _templateObject4() {
+  var data = _taggedTemplateLiteral(["\n  bottom: 0;\n  left: 0;\n  position: absolute;\n  text-align: center;\n  top: ", ";\n  width: 100%;\n  z-index: 15;\n"]);
+
+  _templateObject4 = function _templateObject4() {
+    return data;
+  };
+
+  return data;
+}
+
+function _templateObject3() {
+  var data = _taggedTemplateLiteral(["\n  height: auto;\n  max-width: 100%;\n  width: 100%;\n"]);
+
+  _templateObject3 = function _templateObject3() {
+    return data;
+  };
+
+  return data;
+}
+
+function _templateObject2() {
+  var data = _taggedTemplateLiteral(["\n  width: 100%;\n  overflow: hidden;\n  max-height: ", ";\n"]);
+
+  _templateObject2 = function _templateObject2() {
+    return data;
+  };
+
+  return data;
+}
+
 function _templateObject() {
-  var data = _taggedTemplateLiteral(["\n  align-items: center;\n  background-position: center;\n  background-repeat: no-repeat;\n  background-size: cover;\n  display: flex;\n  justify-content: center;\n  position: relative;\n  z-index: 5;\n  width: 100%;\n  background-image: ", ";\n  background-color: ", ";\n  height: ", ";\n"]);
+  var data = _taggedTemplateLiteral(["\n  position: relative;\n  z-index: 5;\n"]);
 
   _templateObject = function _templateObject() {
     return data;
@@ -178,7 +208,7 @@ function _taggedTemplateLiteral(strings, raw) { if (!raw) { raw = strings.slice(
   css prop getters
 */
 
-var getHeight = function getHeight(_ref) {
+var getMaxHeight = function getMaxHeight(_ref) {
   var size = _ref.size;
 
   switch (size) {
@@ -200,33 +230,42 @@ var getHeight = function getHeight(_ref) {
 */
 
 
-var BannerWrapper = styled_components__WEBPACK_IMPORTED_MODULE_2___default.a.div(_templateObject(), function (_ref2) {
-  var src = _ref2.src;
-  return src && "url(".concat(src, ")");
-}, function (_ref3) {
-  var color = _ref3.color;
-  return _constants_colors__WEBPACK_IMPORTED_MODULE_4__["default"][color];
-}, function (props) {
-  return getHeight(props);
+var BannerWrapper = styled_components__WEBPACK_IMPORTED_MODULE_2___default.a.div(_templateObject());
+var BannerImageColorWrapper = styled_components__WEBPACK_IMPORTED_MODULE_2___default.a.div(_templateObject2(), function (props) {
+  return getMaxHeight(props);
+});
+var BannerImage = styled_components__WEBPACK_IMPORTED_MODULE_2___default.a.img(_templateObject3());
+var BannerChildrenWrapper = styled_components__WEBPACK_IMPORTED_MODULE_2___default.a.div(_templateObject4(), function (_ref2) {
+  var size = _ref2.size;
+  return size === 'small' ? '20%' : '35%';
 });
 /*
   outer Banner component
 */
 
-var Banner = function Banner(_ref4) {
-  var color = _ref4.color,
-      size = _ref4.size,
-      src = _ref4.src,
-      children = _ref4.children;
-  return react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(BannerWrapper, {
-    color: color,
-    size: size,
-    src: src
-  }, children);
+var Banner = function Banner(_ref3) {
+  var color = _ref3.color,
+      size = _ref3.size,
+      src = _ref3.src,
+      children = _ref3.children;
+  return react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(BannerWrapper, null, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(BannerImageColorWrapper, {
+    size: size
+  }, src ? react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(BannerImage, {
+    src: src,
+    alt: "Banner"
+  }) : react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("svg", {
+    viewBox: "0 0 2600 600"
+  }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("rect", {
+    width: "100%",
+    height: "100%",
+    fill: _constants_colors__WEBPACK_IMPORTED_MODULE_4__["default"][color]
+  }))), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(BannerChildrenWrapper, {
+    size: size
+  }, children));
 };
 
 Banner.propTypes = {
-  color: prop_types__WEBPACK_IMPORTED_MODULE_0___default.a.oneOf(['emerald', 'red', 'yellow', 'gray', 'skyblue', 'navy', 'white']),
+  color: prop_types__WEBPACK_IMPORTED_MODULE_0___default.a.oneOf(['emerald', 'red', 'brown', 'yellow', 'gray', 'sand', 'lightBrown', 'mediumBrown', 'navy', 'skyblue']),
   size: prop_types__WEBPACK_IMPORTED_MODULE_0___default.a.oneOf(['default', 'small', 'medium', 'large']),
   src: prop_types__WEBPACK_IMPORTED_MODULE_0___default.a.string,
   children: prop_types__WEBPACK_IMPORTED_MODULE_0___default.a.node
@@ -5584,7 +5623,6 @@ function _taggedTemplateLiteral(strings, raw) { if (!raw) { raw = strings.slice(
 
 
 
- // TODO: nesting (expanded / collapsed)
 
 /*
   css prop getters
@@ -5856,7 +5894,6 @@ var getAfterWidthWithHover = function getAfterWidthWithHover(_ref12) {
 /*
   inner Tag component
 */
-// TODO: move line height here
 
 
 var Tag = styled_components__WEBPACK_IMPORTED_MODULE_2___default.a.div(_templateObject3(), navLinkCSS, function (props) {
@@ -6421,8 +6458,8 @@ function (_Component) {
 SiteNav.propTypes = {
   mobileMenuTitle: prop_types__WEBPACK_IMPORTED_MODULE_0___default.a.string,
   mobileNavBreakpoint: prop_types__WEBPACK_IMPORTED_MODULE_0___default.a.number,
-  children: prop_types__WEBPACK_IMPORTED_MODULE_0___default.a.node.isRequired,
-  banner: prop_types__WEBPACK_IMPORTED_MODULE_0___default.a.bool
+  banner: prop_types__WEBPACK_IMPORTED_MODULE_0___default.a.bool,
+  children: prop_types__WEBPACK_IMPORTED_MODULE_0___default.a.node.isRequired
 };
 SiteNav.defaultProps = {
   mobileMenuTitle: 'Site Navigation',

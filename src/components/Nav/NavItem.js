@@ -4,8 +4,6 @@ import styled from 'styled-components';
 
 import NavContext from './NavContext';
 
-// TODO: nesting (expanded / collapsed)
-
 /*
   css prop getters
 */

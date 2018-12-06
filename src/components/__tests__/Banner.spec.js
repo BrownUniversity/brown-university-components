@@ -16,9 +16,42 @@ describe('Button', () => {
   describe('children', () => {
     it('should render BannerText as child if provided', () => {
       const BannerChild = <Banner.Text>Banner Text</Banner.Text>;
-      const { getByText } = renderBanner({ children: BannerChild });
+      const { tree } = renderBanner({ children: BannerChild });
 
-      expect(getByText('Banner Text')).toBeInTheDocument();
+      expect(tree.children[1]).toMatchInlineSnapshot(`
+.c1 {
+  color: #FFFFFF;
+  font-family: minion-pro,"Times New Roman",serif;
+  font-size: 1.9em;
+  text-shadow: 1px 1px 2px rgba(0,0,0,0.4);
+}
+
+.c0 {
+  bottom: 0;
+  left: 0;
+  position: absolute;
+  text-align: center;
+  top: 35%;
+  width: 100%;
+  z-index: 15;
+}
+
+@media (min-width:768px) {
+  .c1 {
+    font-size: 2.5em;
+  }
+}
+
+<div
+  class="c0"
+>
+  <div
+    class="c1"
+  >
+    Banner Text
+  </div>
+</div>
+`);
     });
   });
 
@@ -26,70 +59,77 @@ describe('Button', () => {
     it('should render a banner with an emerald background by default', () => {
       const { tree } = renderBanner();
 
-      expect(tree).toMatchInlineSnapshot(`
+      expect(tree.children[0]).toMatchInlineSnapshot(`
 .c0 {
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  position: relative;
-  z-index: 5;
   width: 100%;
-  background-color: #00B398;
-  height: 200px;
+  overflow: hidden;
+  max-height: 200px;
 }
 
 <div
   class="c0"
-  color="emerald"
-/>
+>
+  <svg
+    viewBox="0 0 2600 600"
+  >
+    <rect
+      fill="#00B398"
+      height="100%"
+      width="100%"
+    />
+  </svg>
+</div>
 `);
     });
 
     it('should render a banner with a background of another color when color variant is provided', () => {
       const { tree } = renderBanner({ props: { color: 'red' } });
 
-      expect(tree).toHaveStyleRule('background-color', '#C00404');
+      expect(tree.firstChild.firstChild.firstChild).toHaveAttribute(
+        'fill',
+        '#C00404'
+      );
     });
 
     it('should render a small banner when size variant is provided', () => {
       const { tree } = renderBanner({ props: { size: 'small' } });
 
-      expect(tree).toHaveStyleRule('height', '150px');
+      expect(tree.firstChild).toHaveStyleRule('max-height', '150px');
+      expect(tree.children[1]).toHaveStyleRule('top', '20%');
     });
 
     it('should render a medium banner when size variant is provided', () => {
       const { tree } = renderBanner({ props: { size: 'medium' } });
 
-      expect(tree).toHaveStyleRule('height', '300px');
+      expect(tree.firstChild).toHaveStyleRule('max-height', '300px');
+      expect(tree.children[1]).toHaveStyleRule('top', '35%');
     });
 
     it('should render a large banner when size variant is provided', () => {
       const { tree } = renderBanner({ props: { size: 'large' } });
 
-      expect(tree).toHaveStyleRule('height', '600px');
+      expect(tree.firstChild).toHaveStyleRule('max-height', '600px');
+      expect(tree.children[1]).toHaveStyleRule('top', '35%');
     });
 
-    it('should render a background image when src is provided', () => {
+    it('should render a banner with an image background when src is provided', () => {
       const { tree } = renderBanner({
         props: { src: './path/to/img.jpg' }
       });
 
-      expect(tree).toHaveStyleRule(
-        'background-image',
-        'url(./path/to/img.jpg)'
-      );
+      expect(tree.children[0].firstChild).toMatchInlineSnapshot(`
+.c0 {
+  height: auto;
+  max-width: 100%;
+  width: 100%;
+}
+
+<img
+  alt="Banner"
+  class="c0"
+  src="./path/to/img.jpg"
+/>
+`);
     });
   });
 });
