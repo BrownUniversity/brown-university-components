@@ -1,3 +1,4 @@
+/* eslint-disable no-return-assign */
 import PropTypes from 'prop-types';
 import React, { Component } from 'react';
 import styled, { css } from 'styled-components';
@@ -31,26 +32,19 @@ class Collapse extends Component {
     maxHeight: null
   };
 
-  innerWrapperRef = React.createRef();
+  innerWrapperRef = null;
 
   componentDidMount() {
-    // force initial update if `isOpen` prop is set to true
-    if (this.props.isOpen) {
-      this.forceUpdate();
-    }
+    this.setMaxHeight();
   }
 
-  componentDidUpdate() {
-    // set `maxHeight` state after initial update, at which time `children`
-    // from props have rendered
-    if (!this.state.maxHeight) {
-      const { height } = this.innerWrapperRef.current.getBoundingClientRect();
-      const maxHeight = Math.ceil(height);
-      this.setState({
-        maxHeight
-      });
-    }
-  }
+  setMaxHeight = () => {
+    const { height } = this.innerWrapperRef.getBoundingClientRect();
+
+    this.setState({
+      maxHeight: Math.ceil(height)
+    });
+  };
 
   render() {
     const { isOpen, children, ...restProps } = this.props;
@@ -62,7 +56,7 @@ class Collapse extends Component {
         isOpen={isOpen}
         maxHeight={maxHeight}
       >
-        <CollapseInnerWrapper ref={this.innerWrapperRef}>
+        <CollapseInnerWrapper ref={node => (this.innerWrapperRef = node)}>
           {children}
         </CollapseInnerWrapper>
       </CollapseOuterWrapper>

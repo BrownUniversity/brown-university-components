@@ -970,6 +970,7 @@ function _templateObject() {
 
 function _taggedTemplateLiteral(strings, raw) { if (!raw) { raw = strings.slice(0); } return Object.freeze(Object.defineProperties(strings, { raw: { value: Object.freeze(raw) } })); }
 
+/* eslint-disable no-return-assign */
 
 
 
@@ -1011,7 +1012,16 @@ function (_Component) {
       maxHeight: null
     });
 
-    _defineProperty(_assertThisInitialized(_assertThisInitialized(_this)), "innerWrapperRef", react__WEBPACK_IMPORTED_MODULE_1___default.a.createRef());
+    _defineProperty(_assertThisInitialized(_assertThisInitialized(_this)), "innerWrapperRef", null);
+
+    _defineProperty(_assertThisInitialized(_assertThisInitialized(_this)), "setMaxHeight", function () {
+      var _this$innerWrapperRef = _this.innerWrapperRef.getBoundingClientRect(),
+          height = _this$innerWrapperRef.height;
+
+      _this.setState({
+        maxHeight: Math.ceil(height)
+      });
+    });
 
     return _this;
   }
@@ -1019,29 +1029,13 @@ function (_Component) {
   _createClass(Collapse, [{
     key: "componentDidMount",
     value: function componentDidMount() {
-      // force initial update if `isOpen` prop is set to true
-      if (this.props.isOpen) {
-        this.forceUpdate();
-      }
-    }
-  }, {
-    key: "componentDidUpdate",
-    value: function componentDidUpdate() {
-      // set `maxHeight` state after initial update, at which time `children`
-      // from props have rendered
-      if (!this.state.maxHeight) {
-        var _this$innerWrapperRef = this.innerWrapperRef.current.getBoundingClientRect(),
-            height = _this$innerWrapperRef.height;
-
-        var maxHeight = Math.ceil(height);
-        this.setState({
-          maxHeight: maxHeight
-        });
-      }
+      this.setMaxHeight();
     }
   }, {
     key: "render",
     value: function render() {
+      var _this2 = this;
+
       var _this$props = this.props,
           isOpen = _this$props.isOpen,
           children = _this$props.children,
@@ -1052,7 +1046,9 @@ function (_Component) {
         isOpen: isOpen,
         maxHeight: maxHeight
       }), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(CollapseInnerWrapper, {
-        ref: this.innerWrapperRef
+        ref: function ref(node) {
+          return _this2.innerWrapperRef = node;
+        }
       }, children));
     }
   }]);
