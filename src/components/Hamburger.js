@@ -124,11 +124,12 @@ class Hamburger extends Component {
     );
 
   render() {
-    const { color } = this.props;
+    const { color, onOpen, onClose, ...restProps } = this.props;
     const { isOpen } = this.state;
 
     return (
       <HamburgerButton
+        {...restProps}
         type="button"
         aria-expanded={isOpen}
         aria-label="Toggle navigation"

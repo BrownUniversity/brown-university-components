@@ -3,7 +3,7 @@ const webpack = require('webpack');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const { BundleAnalyzerPlugin } = require('webpack-bundle-analyzer');
 
-const svgRules = require('./rules/svg');
+const svgRule = require('./rules/svg');
 const { version } = require('../package.json');
 
 module.exports = {
@@ -30,7 +30,7 @@ module.exports = {
         test: /\.css$/,
         use: [MiniCssExtractPlugin.loader, 'css-loader']
       },
-      svgRules,
+      svgRule,
       {
         test: /\.woff$/,
         use: 'file-loader?name=[name].[hash].[ext]'
@@ -41,7 +41,9 @@ module.exports = {
     react: 'react',
     'styled-components': 'styled-components',
     'prop-types': 'prop-types',
+    'react-collapse': 'react-collapse',
     'react-fns': 'react-fns',
+    'react-motion': 'react-motion',
     polished: 'polished'
   },
   plugins: [

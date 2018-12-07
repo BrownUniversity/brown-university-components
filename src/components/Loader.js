@@ -22,8 +22,8 @@ const LoaderSVGWrapper = styled.div`
 /*
   outer Loader component
 */
-const Loader = ({ height }) => (
-  <LoaderSVGWrapper>
+const Loader = ({ height, ...restProps }) => (
+  <LoaderSVGWrapper {...restProps}>
     <LoaderSVG width={Math.floor(height * 0.77)} height={height} />
   </LoaderSVGWrapper>
 );

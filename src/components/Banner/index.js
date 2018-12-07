@@ -57,8 +57,8 @@ const BannerChildrenWrapper = styled.div`
 /*
   outer Banner component
 */
-const Banner = ({ color, size, src, children }) => (
-  <BannerWrapper>
+const Banner = ({ color, size, src, children, ...restProps }) => (
+  <BannerWrapper {...restProps}>
     <BannerImageColorWrapper size={size}>
       {src ? (
         <BannerImage src={src} alt="Banner" />

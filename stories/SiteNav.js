@@ -12,7 +12,7 @@ const getCommonProps = () => ({
 });
 
 const renderSiteNav = additionalProps => (
-  <SiteNav {...getCommonProps()} {...additionalProps}>
+  <SiteNav {...additionalProps} {...getCommonProps()}>
     <SiteNav.Item>
       <SiteNav.Link>Link</SiteNav.Link>
     </SiteNav.Item>

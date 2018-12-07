@@ -4,6 +4,7 @@ import styled, { css } from 'styled-components';
 
 import NavContext from './NavContext';
 import colors from '../../constants/colors';
+import media from '../../constants/media';
 import { sans } from '../../constants/typography';
 
 /*
@@ -142,6 +143,11 @@ const Tag = styled.div`
   opacity: ${props => getOpacity(props)};
   pointer-events: ${props => getPointerEvents(props)};
   transition: ${props => getTransition(props)};
+
+  ${media.xl`
+    font-size: ${({ navbar, mobile, sub }) =>
+      !(navbar || mobile || sub) && ' 1.2em'};
+  `};
 
   ${props =>
     !(props.mobile || props.sub) &&
