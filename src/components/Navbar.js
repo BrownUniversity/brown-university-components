@@ -40,8 +40,8 @@ const NavbarChildrenWrapper = styled.div`
 */
 const logoProps = { height: 65, width: 131 };
 
-const Navbar = ({ color, children }) => (
-  <NavbarWrapper color={color}>
+const Navbar = ({ color, children, ...restProps }) => (
+  <NavbarWrapper {...restProps} color={color}>
     <NavbarLogoLink
       href="http://www.brown.edu/"
       target="_blank"

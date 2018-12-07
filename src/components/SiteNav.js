@@ -3,8 +3,7 @@ import React, { Component } from 'react';
 import styled, { css } from 'styled-components';
 import { WindowSize } from 'react-fns';
 
-// TODO: collapse
-
+import Collapse from './Collapse';
 import Hamburger from './Hamburger';
 import Nav from './Nav';
 import breakpoints from '../constants/breakpoints';
@@ -91,7 +90,12 @@ class SiteNav extends Component {
     }));
 
   render() {
-    const { mobileMenuTitle, mobileNavBreakpoint, banner } = this.props;
+    const {
+      mobileMenuTitle,
+      mobileNavBreakpoint,
+      banner,
+      ...restProps
+    } = this.props;
     const { mobileNavIsOpen } = this.state;
 
     return (
@@ -104,12 +108,12 @@ class SiteNav extends Component {
 
           if (renderMobile) {
             return (
-              <MobileBannerWrapper banner={banner}>
+              <MobileBannerWrapper {...restProps} banner={banner}>
                 <MobileWrapper>
                   <MobileMenuWrapper>
                     <MobileMenuTitle
                       type="button"
-                      aria-controls="site-nav"
+                      aria-controls="site-nav-mobile-collapse"
                       aria-expanded={mobileNavIsOpen}
                       aria-label="Toggle navigation"
                       onClick={this.handleMobileNavToggle}
@@ -117,26 +121,27 @@ class SiteNav extends Component {
                       {mobileMenuTitle}
                     </MobileMenuTitle>
                     <Hamburger
-                      aria-controls="site-nav"
+                      aria-controls="site-nav-mobile-collapse"
                       isOpen={mobileNavIsOpen}
                       onOpen={this.handleMobileNavToggle}
                       onClose={this.handleMobileNavToggle}
                     />
                   </MobileMenuWrapper>
-                  {mobileNavIsOpen && (
+                  <Collapse
+                    isOpen={mobileNavIsOpen}
+                    id="site-nav-mobile-collapse"
+                  >
                     <MobileNavWrapper>
-                      <Nav id="site-nav" mobile>
-                        {this.props.children}
-                      </Nav>
+                      <Nav mobile>{this.props.children}</Nav>
                     </MobileNavWrapper>
-                  )}
+                  </Collapse>
                 </MobileWrapper>
               </MobileBannerWrapper>
             );
           }
 
           return (
-            <BannerWrapper banner={banner}>
+            <BannerWrapper {...restProps} banner={banner}>
               <Wrapper>
                 <Nav>{this.props.children}</Nav>
               </Wrapper>
