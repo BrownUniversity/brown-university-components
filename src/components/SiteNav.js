@@ -2,8 +2,8 @@ import PropTypes from 'prop-types';
 import React, { Component } from 'react';
 import styled, { css } from 'styled-components';
 import { WindowSize } from 'react-fns';
+import { Collapse } from 'react-collapse';
 
-import Collapse from './Collapse';
 import Hamburger from './Hamburger';
 import Nav from './Nav';
 import breakpoints from '../constants/breakpoints';
@@ -128,7 +128,7 @@ class SiteNav extends Component {
                     />
                   </MobileMenuWrapper>
                   <Collapse
-                    isOpen={mobileNavIsOpen}
+                    isOpened={mobileNavIsOpen}
                     id="site-nav-mobile-collapse"
                   >
                     <MobileNavWrapper>

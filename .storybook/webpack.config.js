@@ -1,4 +1,4 @@
-const svgRules = require('../webpack/rules/svg');
+const svgRule = require('../webpack/rules/svg');
 
 module.exports = (storybookBaseConfig, configType) => {
   storybookBaseConfig.module.rules.push({
@@ -6,7 +6,7 @@ module.exports = (storybookBaseConfig, configType) => {
     use: ['style-loader', 'css-loader']
   });
 
-  storybookBaseConfig.module.rules.push(svgRules);
+  storybookBaseConfig.module.rules.push(svgRule);
 
   storybookBaseConfig.module.rules.push({
     test: /\.woff$/,

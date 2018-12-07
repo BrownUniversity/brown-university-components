@@ -4,7 +4,6 @@ function loadStories() {
   require('../stories/Banner');
   require('../stories/Button');
   require('../stories/Code');
-  require('../stories/Collapse');
   require('../stories/Hamburger');
   require('../stories/Loader');
   require('../stories/Nav');
