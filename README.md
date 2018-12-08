@@ -180,7 +180,11 @@ import 'brown-university-theme/dist/styles.css';
 
   | property | propType | required | default   |
   | -------- | -------- | -------- | --------- |
+  | mobile   | bool     | -        | false     |
+  | sub      | bool     | -        | false     |
   | children | node     | true     | undefined |
+
+  _`mobile` and `sub` props are passed down implicitly from `Nav` through `NavContext`._
 
   **`Nav.Link` Properties:**
 
@@ -190,10 +194,12 @@ import 'brown-university-theme/dist/styles.css';
   | disabled | bool                      | -        | false    |
   | tag      | oneOfType([func, string]) | -        | 'button' |
   | navbar   | bool                      | -        | false    |
-  | vertical | bool                      | -        | false    |
   | mobile   | bool                      | -        | false    |
+  | sub      | bool                      | -        | false    |
   | onClick  | func                      | -        | null     |
   | href     | string                    | -        | null     |
+
+  _`navbar`, `mobile` and `sub` props are passed down implicitly from `Nav` through `NavContext`._
 
 - `Navbar`
 
@@ -259,7 +265,40 @@ import 'brown-university-theme/dist/styles.css';
 
 - `SubNav`
 
-  TODO
+  **Example:**
+
+  ```javascript
+  import React from 'react';
+  import { SubNav } from 'brown-university-theme';
+
+  export default () => (
+    <SubNav>
+      <SubNav.Item>
+        <SubNav.Link>Link</SubNav.Link>
+      </SubNav.Item>
+      <SubNav.Item>
+        <SubNav.Link active>Active Link</SubNav.Link>
+      </SubNav.Item>
+      <SubNav.Item>
+        <SubNav.Link disabled>Disabled Link</SubNav.Link>
+      </SubNav.Item>
+    </SubNav>
+  );
+  ```
+
+  **`SubNav` Properties:**
+
+  | property | propType | required | default   |
+  | -------- | -------- | -------- | --------- |
+  | children | node     | true     | undefined |
+
+  **`SubNav.Item` Properties:**
+
+  _See `Nav.Item`_
+
+  **`SubNav.Link` Properties:**
+
+  _See `Nav.Link`_
 
 ## Development
 

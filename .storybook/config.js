@@ -9,6 +9,7 @@ function loadStories() {
   require('../stories/Nav');
   require('../stories/Navbar');
   require('../stories/SiteNav');
+  require('../stories/SubNav');
 }
 
 configure(loadStories, module);
