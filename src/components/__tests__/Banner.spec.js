@@ -59,7 +59,7 @@ describe('Button', () => {
     it('should render a banner with an emerald background by default', () => {
       const { tree } = renderBanner();
 
-      expect(tree.children[0]).toMatchInlineSnapshot(`
+      expect(tree.firstChild).toMatchInlineSnapshot(`
 .c0 {
   width: 100%;
   overflow: hidden;
@@ -117,7 +117,7 @@ describe('Button', () => {
         props: { src: './path/to/img.jpg' }
       });
 
-      expect(tree.children[0].firstChild).toMatchInlineSnapshot(`
+      expect(tree.firstChild.firstChild).toMatchInlineSnapshot(`
 .c0 {
   height: auto;
   max-width: 100%;
