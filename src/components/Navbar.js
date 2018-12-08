@@ -21,7 +21,7 @@ const NavbarWrapper = styled.div`
   z-index: 20;
   background-color: ${({ color }) => colors[color]};
 
-  ${media.lg`
+  ${media.md`
     padding: 0 33px;
   `};
 `;

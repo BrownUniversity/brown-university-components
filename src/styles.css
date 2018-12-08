@@ -54,3 +54,17 @@
   font-style: normal;
   src: url('./fonts/minion-pro.woff') format('woff');
 }
+
+/* ---- layout ---- */
+.theme-container {
+  margin: 0 auto;
+  max-width: 1300px;
+  padding: 0;
+  width: 96%;
+}
+
+@media only screen and (max-width: 768px) {
+  .theme-container {
+    width: 92%;
+  }
+}

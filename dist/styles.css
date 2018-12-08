@@ -1,4 +1,4 @@
-/*! brown-university-theme v0.3.6 */
+/*! brown-university-theme v0.3.7 */
 @charset "UTF-8";
 
 /* ---- fonts ---- */
@@ -54,5 +54,19 @@
   font-family: minion-pro;
   font-style: normal;
   src: url(minion-pro.882822c68b3e5ff52e06a5fcdbe3fa8e.woff) format('woff');
+}
+
+/* ---- layout ---- */
+.theme-container {
+  margin: 0 auto;
+  max-width: 1300px;
+  padding: 0;
+  width: 96%;
+}
+
+@media only screen and (max-width: 768px) {
+  .theme-container {
+    width: 92%;
+  }
 }
 

@@ -26,8 +26,8 @@ These libraries are not bundled with Brown University Theme and are required at 
 ### Styles
 
 ```javascript
-// Includes fonts. This only needs to be done once; probably where you're
-// calling `ReactDOM.render`.
+// Includes fonts and `.theme-*` classes. This only needs to be done once;
+// probably where you're calling `ReactDOM.render`.
 import 'brown-university-theme/dist/styles.css';
 ```
 

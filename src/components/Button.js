@@ -95,14 +95,6 @@ const getColor = ({ color, outline, inverse }) => {
   return colors.white;
 };
 
-const getCursor = ({ disabled, href }) => {
-  if (disabled && !href) {
-    return 'not-allowed';
-  }
-
-  return 'pointer';
-};
-
 const getFontSize = ({ size }) => {
   switch (size) {
     case 'small':
@@ -112,22 +104,6 @@ const getFontSize = ({ size }) => {
     default:
       return '0.75em';
   }
-};
-
-const getOpacity = ({ disabled }) => {
-  if (disabled) {
-    return '0.65';
-  }
-
-  return '1';
-};
-
-const getPointerEvents = ({ disabled, href }) => {
-  if (disabled && href) {
-    return 'none';
-  }
-
-  return 'auto';
 };
 
 const getBackgroundColorWithHover = ({ color, outline, inverse, disabled }) => {
@@ -186,10 +162,12 @@ const Tag = styled.div`
   background-color: ${props => getBackgroundColor(props)};
   box-shadow: inset 0 0 0 1px ${props => getBoxShadow(props)};
   color: ${props => getColor(props)};
-  cursor: ${props => getCursor(props)};
+  cursor: ${({ disabled, href }) =>
+    disabled && !href ? 'not-allowed' : 'pointer'};
   font-size: ${props => getFontSize(props)};
-  opacity: ${props => getOpacity(props)};
-  pointer-events: ${props => getPointerEvents(props)};
+  opacity: ${({ disabled }) => (disabled ? '0.65' : '1')};
+  pointer-events: ${({ disabled, href }) =>
+    disabled && href ? 'none' : 'auto'};
 
   ${props =>
     props.href &&

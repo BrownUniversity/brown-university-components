@@ -1,4 +1,4 @@
-/*! brown-university-theme v0.3.6 */
+/*! brown-university-theme v0.3.7 */
 (function webpackUniversalModuleDefinition(root, factory) {
 	if(typeof exports === 'object' && typeof module === 'object')
 		module.exports = factory(require("prop-types"), require("react"), require("styled-components"), require("polished"), require("react-fns"), require("react-collapse"));
@@ -650,19 +650,8 @@ var getColor = function getColor(_ref3) {
   return _constants_colors__WEBPACK_IMPORTED_MODULE_4__["default"].white;
 };
 
-var getCursor = function getCursor(_ref4) {
-  var disabled = _ref4.disabled,
-      href = _ref4.href;
-
-  if (disabled && !href) {
-    return 'not-allowed';
-  }
-
-  return 'pointer';
-};
-
-var getFontSize = function getFontSize(_ref5) {
-  var size = _ref5.size;
+var getFontSize = function getFontSize(_ref4) {
+  var size = _ref4.size;
 
   switch (size) {
     case 'small':
@@ -676,32 +665,11 @@ var getFontSize = function getFontSize(_ref5) {
   }
 };
 
-var getOpacity = function getOpacity(_ref6) {
-  var disabled = _ref6.disabled;
-
-  if (disabled) {
-    return '0.65';
-  }
-
-  return '1';
-};
-
-var getPointerEvents = function getPointerEvents(_ref7) {
-  var disabled = _ref7.disabled,
-      href = _ref7.href;
-
-  if (disabled && href) {
-    return 'none';
-  }
-
-  return 'auto';
-};
-
-var getBackgroundColorWithHover = function getBackgroundColorWithHover(_ref8) {
-  var color = _ref8.color,
-      outline = _ref8.outline,
-      inverse = _ref8.inverse,
-      disabled = _ref8.disabled;
+var getBackgroundColorWithHover = function getBackgroundColorWithHover(_ref5) {
+  var color = _ref5.color,
+      outline = _ref5.outline,
+      inverse = _ref5.inverse,
+      disabled = _ref5.disabled;
 
   if (disabled) {
     return getBackgroundColor({
@@ -726,11 +694,11 @@ var getBackgroundColorWithHover = function getBackgroundColorWithHover(_ref8) {
   return Object(polished__WEBPACK_IMPORTED_MODULE_3__["darken"])(0.1, _constants_colors__WEBPACK_IMPORTED_MODULE_4__["default"][color]);
 };
 
-var getBoxShadowWithHover = function getBoxShadowWithHover(_ref9) {
-  var color = _ref9.color,
-      outline = _ref9.outline,
-      inverse = _ref9.inverse,
-      disabled = _ref9.disabled;
+var getBoxShadowWithHover = function getBoxShadowWithHover(_ref6) {
+  var color = _ref6.color,
+      outline = _ref6.outline,
+      inverse = _ref6.inverse,
+      disabled = _ref6.disabled;
 
   if (disabled) {
     return getBoxShadow({
@@ -750,11 +718,11 @@ var getBoxShadowWithHover = function getBoxShadowWithHover(_ref9) {
   return Object(polished__WEBPACK_IMPORTED_MODULE_3__["darken"])(0.1, _constants_colors__WEBPACK_IMPORTED_MODULE_4__["default"][color]);
 };
 
-var getColorWithHover = function getColorWithHover(_ref10) {
-  var color = _ref10.color,
-      outline = _ref10.outline,
-      inverse = _ref10.inverse,
-      disabled = _ref10.disabled;
+var getColorWithHover = function getColorWithHover(_ref7) {
+  var color = _ref7.color,
+      outline = _ref7.outline,
+      inverse = _ref7.inverse,
+      disabled = _ref7.disabled;
 
   if (disabled) {
     return getColor({
@@ -781,14 +749,19 @@ var Tag = styled_components__WEBPACK_IMPORTED_MODULE_2___default.a.div(_template
   return getBoxShadow(props);
 }, function (props) {
   return getColor(props);
-}, function (props) {
-  return getCursor(props);
+}, function (_ref8) {
+  var disabled = _ref8.disabled,
+      href = _ref8.href;
+  return disabled && !href ? 'not-allowed' : 'pointer';
 }, function (props) {
   return getFontSize(props);
-}, function (props) {
-  return getOpacity(props);
-}, function (props) {
-  return getPointerEvents(props);
+}, function (_ref9) {
+  var disabled = _ref9.disabled;
+  return disabled ? '0.65' : '1';
+}, function (_ref10) {
+  var disabled = _ref10.disabled,
+      href = _ref10.href;
+  return disabled && href ? 'none' : 'auto';
 }, function (props) {
   return props.href && Object(styled_components__WEBPACK_IMPORTED_MODULE_2__["css"])(_templateObject6(), buttonAfterCSS, buttonAfterShiftCSS, getColor(props));
 }, function (props) {
@@ -1894,7 +1867,7 @@ function _taggedTemplateLiteral(strings, raw) { if (!raw) { raw = strings.slice(
 var NavbarWrapper = styled_components__WEBPACK_IMPORTED_MODULE_2___default.a.div(_templateObject(), function (_ref) {
   var color = _ref.color;
   return _constants_colors__WEBPACK_IMPORTED_MODULE_5__["default"][color];
-}, _constants_media__WEBPACK_IMPORTED_MODULE_6__["default"].lg(_templateObject2()));
+}, _constants_media__WEBPACK_IMPORTED_MODULE_6__["default"].md(_templateObject2()));
 var NavbarLogoLink = styled_components__WEBPACK_IMPORTED_MODULE_2___default.a.a(_templateObject3());
 var NavbarChildrenWrapper = styled_components__WEBPACK_IMPORTED_MODULE_2___default.a.div(_templateObject4());
 /*

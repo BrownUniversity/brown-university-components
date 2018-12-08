@@ -65,7 +65,7 @@ describe('Navbar', () => {
   display: flex;
 }
 
-@media (min-width:992px) {
+@media (min-width:768px) {
   .c0 {
     padding: 0 33px;
   }
