@@ -37,9 +37,30 @@ _Brown University Theme is designed to be used alongside [Bootstrap](https://www
 
 - `Background`
 
-  TODO
+  **Example:**
 
-- `Banner`
+  ```javascript
+  import React from 'react';
+  import { Background } from 'brown-university-theme';
+  import backgroundURL from 'brown-university-theme/dist/background.svg';
+
+  export default () => (
+    <Background url={backgroundURL}>
+      <div>Content...</div>
+    </Background>
+  );
+  ```
+
+  **Properties:**
+
+  | property | propType                 | required | default  |
+  | -------- | ------------------------ | -------- | -------- |
+  | url      | string                   | true     | -        |
+  | color    | oneOf(['white', 'gray']) | -        | 'whilte' |
+  | full     | bool                     | -        | true     |
+  | children | node                     | true     | -        |
+
+* `Banner`
 
   **Example:**
 
@@ -63,7 +84,7 @@ _Brown University Theme is designed to be used alongside [Bootstrap](https://www
   | src      | string                                                                                                       | -        | false     |
   | children | node                                                                                                         | -        | false     |
 
-* [`Button`](https://www.brown.edu/university-communications/digital/university-theme/formatting/buttons)
+- [`Button`](https://www.brown.edu/university-communications/digital/university-theme/formatting/buttons)
 
   **Example:**
 
@@ -87,7 +108,7 @@ _Brown University Theme is designed to be used alongside [Bootstrap](https://www
   | onClick  | func                                                                    | -        | null      |
   | href     | string                                                                  | -        | null      |
 
-- `Code`
+* `Code`
 
   **Example:**
 
@@ -104,7 +125,7 @@ _Brown University Theme is designed to be used alongside [Bootstrap](https://www
   | -------- | -------- | -------- | ------- |
   | children | node     | true     | -       |
 
-* `Hamburger`
+- `Hamburger`
 
   _This is a primitive used by `NavbarNav` and `SiteNav`. You might want to use one of those components instead._
 
@@ -131,7 +152,7 @@ _Brown University Theme is designed to be used alongside [Bootstrap](https://www
   | onOpen   | func                                                                             | true     | -       |
   | onClose  | func                                                                             | true     | -       |
 
-* `Loader`
+- `Loader`
 
   **Example:**
 
@@ -148,7 +169,7 @@ _Brown University Theme is designed to be used alongside [Bootstrap](https://www
   | -------- | -------- | -------- | ------- |
   | height   | number   | -        | 250     |
 
-- `Nav`
+* `Nav`
 
   _This is a primitive used by `NavbarNav`, `SiteNav`, and `SubNav`. You might want to use one of those components instead._
 
@@ -207,7 +228,7 @@ _Brown University Theme is designed to be used alongside [Bootstrap](https://www
 
   _`navbar`, `mobile` and `sub` props are passed down implicitly from `Nav` through `NavContext`._
 
-- `Navbar`
+* `Navbar`
 
   **Example:**
 
@@ -225,11 +246,11 @@ _Brown University Theme is designed to be used alongside [Bootstrap](https://www
   | color    | oneOf(['brown', 'white']) | -        | 'brown' |
   | children | node                      | -        | false   |
 
-- `NavbarNav`
+* `NavbarNav`
 
   TODO
 
-- `SiteNav`
+* `SiteNav`
 
   **Example:**
 
@@ -269,7 +290,7 @@ _Brown University Theme is designed to be used alongside [Bootstrap](https://www
 
   _See `Nav.Link`_
 
-- `SubNav`
+* `SubNav`
 
   **Example:**
 

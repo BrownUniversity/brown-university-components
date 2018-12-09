@@ -32,7 +32,8 @@ const Background = ({ url, color, ...restProps }) => (
 Background.propTypes = {
   url: PropTypes.string.isRequired,
   color: PropTypes.oneOf(['white', 'gray']),
-  full: PropTypes.bool
+  full: PropTypes.bool,
+  children: PropTypes.node.isRequired
 };
 
 Background.defaultProps = {

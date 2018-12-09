@@ -242,7 +242,8 @@ var Background = function Background(_ref4) {
 Background.propTypes =  true ? {
   url: prop_types__WEBPACK_IMPORTED_MODULE_0___default.a.string.isRequired,
   color: prop_types__WEBPACK_IMPORTED_MODULE_0___default.a.oneOf(['white', 'gray']),
-  full: prop_types__WEBPACK_IMPORTED_MODULE_0___default.a.bool
+  full: prop_types__WEBPACK_IMPORTED_MODULE_0___default.a.bool,
+  children: prop_types__WEBPACK_IMPORTED_MODULE_0___default.a.node.isRequired
 } : undefined;
 Background.defaultProps = {
   color: 'white',
