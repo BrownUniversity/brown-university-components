@@ -36,7 +36,11 @@ const HamburgerButton = styled.button`
   width: 30px;
 `;
 
-const HamburgerBars = styled.span`
+// TODO: revisit when filtering props from DOM is supported
+// https://github.com/styled-components/styled-components/issues/439
+const HamburgerBars = styled(({ color, isOpen, ...restProps }) => (
+  <span {...restProps} />
+))`
   ${hamburgerBarCSS}
   ${hamburgerTransitionCSS}
   transition-duration: .22s;

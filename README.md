@@ -6,11 +6,11 @@ Styles and components for building web applications based on the [Brown Universi
 
 ### Add Brown University Theme
 
-Ensure you're on the network and that your SSH key has been added to the ssh-agent (`ssh-add ~/.ssh/id_rsa`) and uploaded to [bitbucket.brown.edu](https://bitbucket.brown.edu/plugins/servlet/ssh/account/keys), then run:
-
 ```
   yarn add git+https://bitbucket.brown.edu/scm/ccum/brown-university-theme.git#^0.3
 ```
+
+_Ensure you're on the network and that your SSH key has been added to the ssh-agent (`ssh-add ~/.ssh/id_rsa`) and uploaded to [bitbucket.brown.edu](https://bitbucket.brown.edu/plugins/servlet/ssh/account/keys)._
 
 ### Dependencies
 
@@ -26,12 +26,18 @@ These libraries are not bundled with Brown University Theme and are required at 
 ### Styles
 
 ```javascript
-// Includes fonts and `.theme-*` classes. This only needs to be done once;
-// probably where you're calling `ReactDOM.render`.
+// Includes fonts and layout classes. This only needs to be done once; probably
+// where you're calling `ReactDOM.render`.
 import 'brown-university-theme/dist/styles.css';
 ```
 
+_Brown University Theme is designed to be used alongside [Bootstrap](https://www.npmjs.com/package/bootstrap) and [Reactstrap](https://www.npmjs.com/package/reactstrap), specifically for things like [layout](https://reactstrap.github.io/components/layout/) and [alerts](https://reactstrap.github.io/components/alerts/)._
+
 ### Components
+
+- `Background`
+
+  TODO
 
 - `Banner`
 

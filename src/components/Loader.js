@@ -2,14 +2,14 @@ import PropTypes from 'prop-types';
 import React from 'react';
 import styled, { keyframes } from 'styled-components';
 
-import LoaderSVG from '../svg/loader.svg';
+import LoaderSVG from '../svg/inline/loader.svg';
 
 /*
   inner components
 */
 const spin = keyframes` 100% { transform: rotate(360deg); } `;
 
-const LoaderSVGWrapper = styled.div`
+const LoaderWrapper = styled.div`
   svg {
     #rays {
       transform-origin: center;
@@ -23,9 +23,9 @@ const LoaderSVGWrapper = styled.div`
   outer Loader component
 */
 const Loader = ({ height, ...restProps }) => (
-  <LoaderSVGWrapper {...restProps}>
+  <LoaderWrapper {...restProps}>
     <LoaderSVG width={Math.floor(height * 0.77)} height={height} />
-  </LoaderSVGWrapper>
+  </LoaderWrapper>
 );
 
 Loader.propTypes = {

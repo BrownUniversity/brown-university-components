@@ -11,14 +11,16 @@ import colors from '../constants/colors';
 import { sansBold } from '../constants/typography';
 
 const MobileBannerWrapper = styled.div`
-  ${props =>
-    props.banner &&
-    css`
-      margin: 0 auto;
-      margin-top: 2rem;
-      width: 95%;
-      z-index: 10;
-    `}
+  background-color: ${colors.white}
+    ${props =>
+      props.banner &&
+      css`
+        margin: 0 auto;
+        margin-top: 2rem;
+        position: relative;
+        width: 95%;
+        z-index: 10;
+      `};
 `;
 
 const MobileWrapper = styled.div`

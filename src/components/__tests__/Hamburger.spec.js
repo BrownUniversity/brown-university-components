@@ -93,7 +93,6 @@ describe('Hamburger', () => {
 >
   <span
     class="c1"
-    color="red"
   />
 </button>
 `);
@@ -203,7 +202,6 @@ describe('Hamburger', () => {
 >
   <span
     class="c1"
-    color="red"
   />
 </button>
 `);
@@ -287,7 +285,6 @@ describe('Hamburger', () => {
 >
   <span
     class="c1"
-    color="black"
   />
 </button>
 `);

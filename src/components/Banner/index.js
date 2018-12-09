@@ -64,7 +64,13 @@ const Banner = ({ color, size, src, children, ...restProps }) => (
         <BannerImage src={src} alt="Banner" />
       ) : (
         <svg viewBox="0 0 2600 600">
-          <rect width="100%" height="100%" fill={colors[color]} />
+          <rect
+            aria-hidden="true"
+            focusable="false"
+            width="100%"
+            height="100%"
+            fill={colors[color]}
+          />
         </svg>
       )}
     </BannerImageColorWrapper>

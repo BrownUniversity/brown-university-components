@@ -2,15 +2,19 @@ import PropTypes from 'prop-types';
 import React from 'react';
 import styled from 'styled-components';
 
-import LogoBlackSVG from '../svg/logo-black.svg';
-import LogoWhiteSVG from '../svg/logo-white.svg';
+import LogoBlackSVG from '../svg/inline/logo-black.svg';
+import LogoWhiteSVG from '../svg/inline/logo-white.svg';
 import colors from '../constants/colors';
 import media from '../constants/media';
 
 /*
   inner components
 */
-const NavbarWrapper = styled.div`
+// TODO: revisit when filtering props from DOM is supported
+// https://github.com/styled-components/styled-components/issues/439
+const NavbarWrapper = styled(({ color, ...restProps }) => (
+  <div {...restProps} />
+))`
   align-items: center;
   box-shadow: 0 1px 10px 5px #00000026;
   display: flex;

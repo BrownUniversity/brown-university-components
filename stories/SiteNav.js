@@ -24,6 +24,7 @@ const renderSiteNav = additionalProps => (
     </SiteNav.Item>
   </SiteNav>
 );
+
 storiesOf('SiteNav', module)
   .addDecorator(withKnobs)
   .add('default', () => renderSiteNav())
