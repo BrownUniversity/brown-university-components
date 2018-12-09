@@ -174,12 +174,22 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(styled_components__WEBPACK_IMPORTED_MODULE_2__);
 function _extends() { _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends.apply(this, arguments); }
 
+function _templateObject2() {
+  var data = _taggedTemplateLiteral(["\n      @media (min-width: 1600px) {\n        background-size: 100%;\n      }\n    "]);
+
+  _templateObject2 = function _templateObject2() {
+    return data;
+  };
+
+  return data;
+}
+
 function _objectWithoutProperties(source, excluded) { if (source == null) return {}; var target = _objectWithoutPropertiesLoose(source, excluded); var key, i; if (Object.getOwnPropertySymbols) { var sourceSymbolKeys = Object.getOwnPropertySymbols(source); for (i = 0; i < sourceSymbolKeys.length; i++) { key = sourceSymbolKeys[i]; if (excluded.indexOf(key) >= 0) continue; if (!Object.prototype.propertyIsEnumerable.call(source, key)) continue; target[key] = source[key]; } } return target; }
 
 function _objectWithoutPropertiesLoose(source, excluded) { if (source == null) return {}; var target = {}; var sourceKeys = Object.keys(source); var key, i; for (i = 0; i < sourceKeys.length; i++) { key = sourceKeys[i]; if (excluded.indexOf(key) >= 0) continue; target[key] = source[key]; } return target; }
 
 function _templateObject() {
-  var data = _taggedTemplateLiteral(["\n  background-image: url('", "');\n  background-repeat: repeat;\n  background-size: 1600px;\n  background-color: ", ";\n\n  @media (min-width: 1600px) {\n    background-size: 100%;\n  }\n"]);
+  var data = _taggedTemplateLiteral(["\n  background-image: url('", "');\n  background-repeat: repeat;\n  background-size: 1600px;\n  background-color: ", ";\n\n  ", "\n"]);
 
   _templateObject = function _templateObject() {
     return data;
@@ -211,6 +221,8 @@ var Tag = styled_components__WEBPACK_IMPORTED_MODULE_2___default()(function (_re
 }, function (_ref3) {
   var color = _ref3.color;
   return color === 'gray' ? '#F0F3F5' : '#FFF';
+}, function (props) {
+  return props.full && Object(styled_components__WEBPACK_IMPORTED_MODULE_2__["css"])(_templateObject2());
 });
 /*
   outer Background component
@@ -229,10 +241,12 @@ var Background = function Background(_ref4) {
 
 Background.propTypes =  true ? {
   url: prop_types__WEBPACK_IMPORTED_MODULE_0___default.a.string.isRequired,
-  color: prop_types__WEBPACK_IMPORTED_MODULE_0___default.a.oneOf(['white', 'gray'])
+  color: prop_types__WEBPACK_IMPORTED_MODULE_0___default.a.oneOf(['white', 'gray']),
+  full: prop_types__WEBPACK_IMPORTED_MODULE_0___default.a.bool
 } : undefined;
 Background.defaultProps = {
-  color: 'white'
+  color: 'white',
+  full: true
 };
 /* harmony default export */ __webpack_exports__["default"] = (Background);
 

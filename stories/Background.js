@@ -1,6 +1,6 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
-import { withKnobs, select } from '@storybook/addon-knobs';
+import { withKnobs, select, boolean } from '@storybook/addon-knobs';
 
 import { Background } from '../src';
 import backgroundURL from '../src/svg/background.svg';
@@ -8,7 +8,11 @@ import backgroundURL from '../src/svg/background.svg';
 storiesOf('Background', module)
   .addDecorator(withKnobs)
   .add('default', () => (
-    <Background url={backgroundURL} color={select('color', ['white', 'gray'])}>
+    <Background
+      url={backgroundURL}
+      color={select('color', ['white', 'gray'])}
+      full={boolean('full', false)}
+    >
       <div style={{ height: '3000px' }} />
     </Background>
   ));

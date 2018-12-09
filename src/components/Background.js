@@ -1,6 +1,6 @@
 import PropTypes from 'prop-types';
 import React from 'react';
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
 
 /*
   inner Tag component
@@ -13,9 +13,13 @@ const Tag = styled(({ url, color, ...restProps }) => <div {...restProps} />)`
   background-size: 1600px;
   background-color: ${({ color }) => (color === 'gray' ? '#F0F3F5' : '#FFF')};
 
-  @media (min-width: 1600px) {
-    background-size: 100%;
-  }
+  ${props =>
+    props.full &&
+    css`
+      @media (min-width: 1600px) {
+        background-size: 100%;
+      }
+    `}
 `;
 
 /*
@@ -27,11 +31,13 @@ const Background = ({ url, color, ...restProps }) => (
 
 Background.propTypes = {
   url: PropTypes.string.isRequired,
-  color: PropTypes.oneOf(['white', 'gray'])
+  color: PropTypes.oneOf(['white', 'gray']),
+  full: PropTypes.bool
 };
 
 Background.defaultProps = {
-  color: 'white'
+  color: 'white',
+  full: true
 };
 
 export default Background;
