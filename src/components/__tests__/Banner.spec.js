@@ -12,7 +12,7 @@ const renderBanner = ({ props = {}, children = null } = {}) => {
   };
 };
 
-describe('Button', () => {
+describe('Banner', () => {
   describe('children', () => {
     it('should render BannerText as child if provided', () => {
       const BannerChild = <Banner.Text>Banner Text</Banner.Text>;

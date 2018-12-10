@@ -7,7 +7,9 @@ import styled, { css } from 'styled-components';
 */
 // TODO: revisit when filtering props from DOM is supported
 // https://github.com/styled-components/styled-components/issues/439
-const Tag = styled(({ url, color, ...restProps }) => <div {...restProps} />)`
+const Tag = styled(({ url, color, full, ...restProps }) => (
+  <div {...restProps} />
+))`
   background-image: url('${({ url }) => url}');
   background-repeat: repeat;
   background-size: 1600px;
@@ -25,8 +27,8 @@ const Tag = styled(({ url, color, ...restProps }) => <div {...restProps} />)`
 /*
   outer Background component
 */
-const Background = ({ url, color, ...restProps }) => (
-  <Tag {...restProps} url={url} color={color} />
+const Background = ({ url, color, full, ...restProps }) => (
+  <Tag {...restProps} url={url} color={color} full={full} />
 );
 
 Background.propTypes = {

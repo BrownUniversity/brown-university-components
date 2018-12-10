@@ -11,7 +11,7 @@ storiesOf('Background', module)
     <Background
       url={backgroundURL}
       color={select('color', ['white', 'gray'])}
-      full={boolean('full', false)}
+      full={boolean('full', true)}
     >
       <div style={{ height: '3000px' }} />
     </Background>

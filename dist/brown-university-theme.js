@@ -212,7 +212,8 @@ function _taggedTemplateLiteral(strings, raw) { if (!raw) { raw = strings.slice(
 var Tag = styled_components__WEBPACK_IMPORTED_MODULE_2___default()(function (_ref) {
   var url = _ref.url,
       color = _ref.color,
-      restProps = _objectWithoutProperties(_ref, ["url", "color"]);
+      full = _ref.full,
+      restProps = _objectWithoutProperties(_ref, ["url", "color", "full"]);
 
   return react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", restProps);
 })(_templateObject(), function (_ref2) {
@@ -231,11 +232,13 @@ var Tag = styled_components__WEBPACK_IMPORTED_MODULE_2___default()(function (_re
 var Background = function Background(_ref4) {
   var url = _ref4.url,
       color = _ref4.color,
-      restProps = _objectWithoutProperties(_ref4, ["url", "color"]);
+      full = _ref4.full,
+      restProps = _objectWithoutProperties(_ref4, ["url", "color", "full"]);
 
   return react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(Tag, _extends({}, restProps, {
     url: url,
-    color: color
+    color: color,
+    full: full
   }));
 };
 
