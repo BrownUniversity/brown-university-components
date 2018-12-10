@@ -12,7 +12,7 @@ const renderBanner = ({ props = {}, children = null } = {}) => {
   };
 };
 
-describe('Button', () => {
+describe('Banner', () => {
   describe('children', () => {
     it('should render BannerText as child if provided', () => {
       const BannerChild = <Banner.Text>Banner Text</Banner.Text>;
@@ -73,7 +73,9 @@ describe('Button', () => {
     viewBox="0 0 2600 600"
   >
     <rect
+      aria-hidden="true"
       fill="#00B398"
+      focusable="false"
       height="100%"
       width="100%"
     />

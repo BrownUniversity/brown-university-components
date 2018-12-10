@@ -6,11 +6,11 @@ Styles and components for building web applications based on the [Brown Universi
 
 ### Add Brown University Theme
 
-Ensure you're on the network and that your SSH key has been added to the ssh-agent (`ssh-add ~/.ssh/id_rsa`) and uploaded to [bitbucket.brown.edu](https://bitbucket.brown.edu/plugins/servlet/ssh/account/keys), then run:
-
 ```
   yarn add git+https://bitbucket.brown.edu/scm/ccum/brown-university-theme.git#^0.3
 ```
+
+_Ensure you're on the network and that your SSH key has been added to the ssh-agent (`ssh-add ~/.ssh/id_rsa`) and uploaded to [bitbucket.brown.edu](https://bitbucket.brown.edu/plugins/servlet/ssh/account/keys)._
 
 ### Dependencies
 
@@ -26,14 +26,41 @@ These libraries are not bundled with Brown University Theme and are required at 
 ### Styles
 
 ```javascript
-// Includes fonts and `.theme-*` classes. This only needs to be done once;
-// probably where you're calling `ReactDOM.render`.
+// Includes fonts and layout classes. This only needs to be done once; probably
+// where you're calling `ReactDOM.render`.
 import 'brown-university-theme/dist/styles.css';
 ```
 
+_Brown University Theme is designed to be used alongside [Bootstrap](https://www.npmjs.com/package/bootstrap) and [Reactstrap](https://www.npmjs.com/package/reactstrap), specifically for things like [layout](https://reactstrap.github.io/components/layout/) and [alerts](https://reactstrap.github.io/components/alerts/)._
+
 ### Components
 
-- `Banner`
+- `Background`
+
+  **Example:**
+
+  ```javascript
+  import React from 'react';
+  import { Background } from 'brown-university-theme';
+  import backgroundURL from 'brown-university-theme/dist/background.svg';
+
+  export default () => (
+    <Background url={backgroundURL}>
+      <div>Content...</div>
+    </Background>
+  );
+  ```
+
+  **Properties:**
+
+  | property | propType                 | required | default  |
+  | -------- | ------------------------ | -------- | -------- |
+  | url      | string                   | true     | -        |
+  | color    | oneOf(['white', 'gray']) | -        | 'whilte' |
+  | full     | bool                     | -        | true     |
+  | children | node                     | true     | -        |
+
+* `Banner`
 
   **Example:**
 
@@ -57,7 +84,7 @@ import 'brown-university-theme/dist/styles.css';
   | src      | string                                                                                                       | -        | false     |
   | children | node                                                                                                         | -        | false     |
 
-* [`Button`](https://www.brown.edu/university-communications/digital/university-theme/formatting/buttons)
+- [`Button`](https://www.brown.edu/university-communications/digital/university-theme/formatting/buttons)
 
   **Example:**
 
@@ -81,7 +108,7 @@ import 'brown-university-theme/dist/styles.css';
   | onClick  | func                                                                    | -        | null      |
   | href     | string                                                                  | -        | null      |
 
-- `Code`
+* `Code`
 
   **Example:**
 
@@ -98,7 +125,7 @@ import 'brown-university-theme/dist/styles.css';
   | -------- | -------- | -------- | ------- |
   | children | node     | true     | -       |
 
-* `Hamburger`
+- `Hamburger`
 
   _This is a primitive used by `NavbarNav` and `SiteNav`. You might want to use one of those components instead._
 
@@ -125,7 +152,7 @@ import 'brown-university-theme/dist/styles.css';
   | onOpen   | func                                                                             | true     | -       |
   | onClose  | func                                                                             | true     | -       |
 
-* `Loader`
+- `Loader`
 
   **Example:**
 
@@ -142,7 +169,7 @@ import 'brown-university-theme/dist/styles.css';
   | -------- | -------- | -------- | ------- |
   | height   | number   | -        | 250     |
 
-- `Nav`
+* `Nav`
 
   _This is a primitive used by `NavbarNav`, `SiteNav`, and `SubNav`. You might want to use one of those components instead._
 
@@ -201,7 +228,7 @@ import 'brown-university-theme/dist/styles.css';
 
   _`navbar`, `mobile` and `sub` props are passed down implicitly from `Nav` through `NavContext`._
 
-- `Navbar`
+* `Navbar`
 
   **Example:**
 
@@ -219,11 +246,11 @@ import 'brown-university-theme/dist/styles.css';
   | color    | oneOf(['brown', 'white']) | -        | 'brown' |
   | children | node                      | -        | false   |
 
-- `NavbarNav`
+* `NavbarNav`
 
   TODO
 
-- `SiteNav`
+* `SiteNav`
 
   **Example:**
 
@@ -263,7 +290,7 @@ import 'brown-university-theme/dist/styles.css';
 
   _See `Nav.Link`_
 
-- `SubNav`
+* `SubNav`
 
   **Example:**
 

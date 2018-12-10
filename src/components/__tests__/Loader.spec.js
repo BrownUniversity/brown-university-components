@@ -12,7 +12,7 @@ const renderLoader = ({ props = {} } = {}) => {
   };
 };
 
-describe('Button', () => {
+describe('Loader', () => {
   it('should render loader with default height', () => {
     const { tree } = renderLoader(/* { props: { height: 400 } } */);
 

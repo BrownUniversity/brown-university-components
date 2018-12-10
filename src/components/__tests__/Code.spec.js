@@ -3,7 +3,7 @@ import { render } from 'react-testing-library';
 
 import Code from '../Code';
 
-const renderCode = ({ props = {}, children = 'small' } = {}) => {
+const renderCode = ({ props = {}, children = 'children' } = {}) => {
   const rtlUtils = render(<Code {...props}>{children}</Code>);
 
   return {
@@ -15,9 +15,9 @@ const renderCode = ({ props = {}, children = 'small' } = {}) => {
 describe('Code', () => {
   describe('children', () => {
     it('should render children', () => {
-      const { getByText } = renderCode({ children: 'large' });
+      const { getByText } = renderCode({ children: 'code' });
 
-      expect(getByText('large')).toBeInTheDocument();
+      expect(getByText('code')).toBeInTheDocument();
     });
   });
 
@@ -40,7 +40,7 @@ describe('Code', () => {
 <code
   class="c0"
 >
-  small
+  children
 </code>
 `);
     });

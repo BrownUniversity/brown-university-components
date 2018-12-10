@@ -3,7 +3,7 @@ import { render, fireEvent } from 'react-testing-library';
 
 import Button from '../Button';
 
-const renderButton = ({ props = {}, children = 'Click Me' } = {}) => {
+const renderButton = ({ props = {}, children = 'Children' } = {}) => {
   const rtlUtils = render(<Button {...props}>{children}</Button>);
 
   return {
@@ -134,7 +134,7 @@ describe('Button', () => {
   class="c0"
   color="red"
 >
-  Click Me
+  Children
 </button>
 `);
     });
@@ -180,7 +180,7 @@ describe('Button', () => {
   class="c0"
   color="yellow"
 >
-  Click Me
+  Children
 </button>
 `);
     });
@@ -238,7 +238,7 @@ describe('Button', () => {
   class="c0"
   color="red"
 >
-  Click Me
+  Children
 </button>
 `);
     });
@@ -286,7 +286,7 @@ describe('Button', () => {
   class="c0"
   color="brown"
 >
-  Click Me
+  Children
 </button>
 `);
     });
@@ -334,7 +334,7 @@ describe('Button', () => {
   class="c0"
   color="red"
 >
-  Click Me
+  Children
 </button>
 `);
     });
@@ -382,7 +382,7 @@ describe('Button', () => {
   class="c0"
   color="gray"
 >
-  Click Me
+  Children
 </button>
 `);
     });
@@ -430,7 +430,7 @@ describe('Button', () => {
   class="c0"
   color="red"
 >
-  Click Me
+  Children
 </button>
 `);
     });
@@ -478,7 +478,7 @@ describe('Button', () => {
   class="c0"
   color="emerald"
 >
-  Click Me
+  Children
 </button>
 `);
     });
@@ -561,7 +561,7 @@ describe('Button', () => {
   color="red"
   href="https://www.brown.edu/"
 >
-  Click Me
+  Children
 </a>
 `);
     });
@@ -593,7 +593,8 @@ describe('Button', () => {
     it('should call onClick when disabled is false', () => {
       const onClick = jest.fn();
       const { getByText } = renderButton({
-        props: { onClick }
+        props: { onClick },
+        children: 'Click Me'
       });
 
       fireEvent.click(getByText('Click Me'));
@@ -603,7 +604,8 @@ describe('Button', () => {
     it('should not call onClick when disabled is true', () => {
       const onClick = jest.fn();
       const { getByText } = renderButton({
-        props: { disabled: true, onClick }
+        props: { disabled: true, onClick },
+        children: 'Click Me'
       });
 
       fireEvent.click(getByText('Click Me'));

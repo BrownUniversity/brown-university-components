@@ -1,4 +1,4 @@
-/*! brown-university-theme v0.3.7 */
+/*! brown-university-theme v0.3.8 */
 @charset "UTF-8";
 
 /* ---- fonts ---- */
@@ -57,7 +57,7 @@
 }
 
 /* ---- layout ---- */
-.theme-container {
+.container {
   margin: 0 auto;
   max-width: 1300px;
   padding: 0;
@@ -65,7 +65,7 @@
 }
 
 @media only screen and (max-width: 768px) {
-  .theme-container {
+  .container {
     width: 92%;
   }
 }

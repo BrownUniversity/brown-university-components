@@ -1,6 +1,7 @@
 import { configure } from '@storybook/react';
 
 function loadStories() {
+  require('../stories/Background');
   require('../stories/Banner');
   require('../stories/Button');
   require('../stories/Code');

@@ -73,7 +73,6 @@ describe('Navbar', () => {
 
 <div
   class="c0"
-  color="brown"
 >
   <a
     class="c1"
