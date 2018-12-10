@@ -4,11 +4,13 @@ import { withKnobs, select } from '@storybook/addon-knobs';
 
 import { Navbar } from '../src';
 
+const getColorProp = () => select('color', ['brown', 'white']);
+
 storiesOf('Navbar', module)
   .addDecorator(withKnobs)
-  .add('default', () => <Navbar color={select('color', ['brown', 'white'])} />)
+  .add('default', () => <Navbar color={getColorProp()} />)
   .add('with Nav', () => (
-    <Navbar color="white">
+    <Navbar color={getColorProp()}>
       <Navbar.Nav>
         <Navbar.Nav.Item>
           <Navbar.Nav.Link active>Active Link</Navbar.Nav.Link>

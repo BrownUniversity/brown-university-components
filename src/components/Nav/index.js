@@ -58,10 +58,10 @@ const Tag = styled.ul`
   outer Nav component
 */
 const Nav = props => {
-  const { navbar, mobile, sub } = props;
+  const { navbar, mobile, sub, color } = props;
 
   return (
-    <NavContext.Provider value={{ navbar, mobile, sub }}>
+    <NavContext.Provider value={{ navbar, mobile, sub, color }}>
       <Tag {...props} />
     </NavContext.Provider>
   );
@@ -71,13 +71,15 @@ Nav.propTypes = {
   navbar: PropTypes.bool,
   mobile: PropTypes.bool,
   sub: PropTypes.bool,
+  color: PropTypes.oneOf(['red', 'white']),
   children: PropTypes.node.isRequired
 };
 
 Nav.defaultProps = {
   navbar: false,
   mobile: false,
-  sub: false
+  sub: false,
+  color: 'red'
 };
 
 Nav.Item = NavItem;

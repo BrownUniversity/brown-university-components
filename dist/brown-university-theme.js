@@ -8,7 +8,7 @@
 		var a = typeof exports === 'object' ? factory(require("prop-types"), require("react"), require("styled-components"), require("polished"), require("react-fns"), require("react-collapse")) : factory(root["prop-types"], root["react"], root["styled-components"], root["polished"], root["react-fns"], root["react-collapse"]);
 		for(var i in a) (typeof exports === 'object' ? exports : root)[i] = a[i];
 	}
-})(window, function(__WEBPACK_EXTERNAL_MODULE__4__, __WEBPACK_EXTERNAL_MODULE__5__, __WEBPACK_EXTERNAL_MODULE__6__, __WEBPACK_EXTERNAL_MODULE__14__, __WEBPACK_EXTERNAL_MODULE__25__, __WEBPACK_EXTERNAL_MODULE__26__) {
+})(window, function(__WEBPACK_EXTERNAL_MODULE__4__, __WEBPACK_EXTERNAL_MODULE__5__, __WEBPACK_EXTERNAL_MODULE__6__, __WEBPACK_EXTERNAL_MODULE__14__, __WEBPACK_EXTERNAL_MODULE__26__, __WEBPACK_EXTERNAL_MODULE__27__) {
 return /******/ (function(modules) { // webpackBootstrap
 /******/ 	// The module cache
 /******/ 	var installedModules = {};
@@ -129,10 +129,10 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _components_Navbar__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(23);
 /* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "Navbar", function() { return _components_Navbar__WEBPACK_IMPORTED_MODULE_9__["default"]; });
 
-/* harmony import */ var _components_SiteNav__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(29);
+/* harmony import */ var _components_SiteNav__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(30);
 /* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "SiteNav", function() { return _components_SiteNav__WEBPACK_IMPORTED_MODULE_10__["default"]; });
 
-/* harmony import */ var _components_SubNav__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(30);
+/* harmony import */ var _components_SubNav__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(31);
 /* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "SubNav", function() { return _components_SubNav__WEBPACK_IMPORTED_MODULE_11__["default"]; });
 
 
@@ -1195,12 +1195,14 @@ var Tag = styled_components__WEBPACK_IMPORTED_MODULE_2___default.a.ul.withConfig
 var Nav = function Nav(props) {
   var navbar = props.navbar,
       mobile = props.mobile,
-      sub = props.sub;
+      sub = props.sub,
+      color = props.color;
   return react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_NavContext__WEBPACK_IMPORTED_MODULE_3__["default"].Provider, {
     value: {
       navbar: navbar,
       mobile: mobile,
-      sub: sub
+      sub: sub,
+      color: color
     }
   }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(Tag, props));
 };
@@ -1209,12 +1211,14 @@ Nav.propTypes =  true ? {
   navbar: prop_types__WEBPACK_IMPORTED_MODULE_0___default.a.bool,
   mobile: prop_types__WEBPACK_IMPORTED_MODULE_0___default.a.bool,
   sub: prop_types__WEBPACK_IMPORTED_MODULE_0___default.a.bool,
+  color: prop_types__WEBPACK_IMPORTED_MODULE_0___default.a.oneOf(['red', 'white']),
   children: prop_types__WEBPACK_IMPORTED_MODULE_0___default.a.node.isRequired
 } : undefined;
 Nav.defaultProps = {
   navbar: false,
   mobile: false,
-  sub: false
+  sub: false,
+  color: 'red'
 };
 Nav.Item = _NavItem__WEBPACK_IMPORTED_MODULE_4__["default"];
 Nav.Link = _NavLink__WEBPACK_IMPORTED_MODULE_5__["default"];
@@ -1345,7 +1349,7 @@ function _taggedTemplateLiteral(strings, raw) { if (!raw) { raw = strings.slice(
 */
 
 var navLinkCSS = Object(styled_components__WEBPACK_IMPORTED_MODULE_2__["css"])(["background:transparent;border:none;display:block;font-family:", ";padding:0;text-decoration:none !important;"], _constants_typography__WEBPACK_IMPORTED_MODULE_6__["sans"]);
-var navLinkAfterCSS = Object(styled_components__WEBPACK_IMPORTED_MODULE_2__["css"])(["background:", ";content:'';display:block;height:3px;transition:width 0.3s;"], _constants_colors__WEBPACK_IMPORTED_MODULE_4__["default"].red);
+var navLinkAfterCSS = Object(styled_components__WEBPACK_IMPORTED_MODULE_2__["css"])(["content:'';display:block;height:3px;"]);
 /*
   css prop getters
 */
@@ -1353,9 +1357,38 @@ var navLinkAfterCSS = Object(styled_components__WEBPACK_IMPORTED_MODULE_2__["css
 var getColor = function getColor(_ref) {
   var active = _ref.active,
       mobile = _ref.mobile,
-      sub = _ref.sub;
-  var activeColor = mobile || sub ? _constants_colors__WEBPACK_IMPORTED_MODULE_4__["default"].black : _constants_colors__WEBPACK_IMPORTED_MODULE_4__["default"].red;
-  var defaultColor = mobile || sub ? _constants_colors__WEBPACK_IMPORTED_MODULE_4__["default"].red : _constants_colors__WEBPACK_IMPORTED_MODULE_4__["default"].black;
+      sub = _ref.sub,
+      color = _ref.color;
+  var activeColor;
+  var defaultColor;
+
+  if (mobile || sub) {
+    switch (color) {
+      case 'white':
+        activeColor = _constants_colors__WEBPACK_IMPORTED_MODULE_4__["default"].sand;
+        defaultColor = _constants_colors__WEBPACK_IMPORTED_MODULE_4__["default"].white;
+        break;
+      // red
+
+      default:
+        activeColor = _constants_colors__WEBPACK_IMPORTED_MODULE_4__["default"].black;
+        defaultColor = _constants_colors__WEBPACK_IMPORTED_MODULE_4__["default"].red;
+        break;
+    }
+  } else {
+    switch (color) {
+      case 'white':
+        activeColor = _constants_colors__WEBPACK_IMPORTED_MODULE_4__["default"].sand;
+        defaultColor = _constants_colors__WEBPACK_IMPORTED_MODULE_4__["default"].white;
+        break;
+      // red
+
+      default:
+        activeColor = _constants_colors__WEBPACK_IMPORTED_MODULE_4__["default"].red;
+        defaultColor = _constants_colors__WEBPACK_IMPORTED_MODULE_4__["default"].black;
+        break;
+    }
+  }
 
   if (active) {
     return activeColor;
@@ -1432,10 +1465,15 @@ var getPointerEvents = function getPointerEvents(_ref7) {
 
 var getTransition = function getTransition(_ref8) {
   var mobile = _ref8.mobile,
-      sub = _ref8.sub;
+      sub = _ref8.sub,
+      href = _ref8.href;
 
   if (mobile || sub) {
     return 'all .2s ease-in-out';
+  }
+
+  if (!href) {
+    return null;
   }
 
   return 'background-color .55s linear,border-color .25s linear,box-shadow .25s linear,color .25s linear';
@@ -1464,9 +1502,38 @@ var getAfterWidth = function getAfterWidth(_ref10) {
 var getColorWithHover = function getColorWithHover(_ref11) {
   var disabled = _ref11.disabled,
       mobile = _ref11.mobile,
-      sub = _ref11.sub;
-  var disabledColor = mobile || sub ? _constants_colors__WEBPACK_IMPORTED_MODULE_4__["default"].red : _constants_colors__WEBPACK_IMPORTED_MODULE_4__["default"].black;
-  var defaultColor = mobile || sub ? _constants_colors__WEBPACK_IMPORTED_MODULE_4__["default"].black : _constants_colors__WEBPACK_IMPORTED_MODULE_4__["default"].red;
+      sub = _ref11.sub,
+      color = _ref11.color;
+  var disabledColor;
+  var defaultColor;
+
+  if (mobile || sub) {
+    switch (color) {
+      case 'white':
+        disabledColor = _constants_colors__WEBPACK_IMPORTED_MODULE_4__["default"].white;
+        defaultColor = _constants_colors__WEBPACK_IMPORTED_MODULE_4__["default"].sand;
+        break;
+      // red
+
+      default:
+        disabledColor = _constants_colors__WEBPACK_IMPORTED_MODULE_4__["default"].red;
+        defaultColor = _constants_colors__WEBPACK_IMPORTED_MODULE_4__["default"].black;
+        break;
+    }
+  } else {
+    switch (color) {
+      case 'white':
+        disabledColor = _constants_colors__WEBPACK_IMPORTED_MODULE_4__["default"].white;
+        defaultColor = _constants_colors__WEBPACK_IMPORTED_MODULE_4__["default"].sand;
+        break;
+      // red
+
+      default:
+        disabledColor = _constants_colors__WEBPACK_IMPORTED_MODULE_4__["default"].black;
+        defaultColor = _constants_colors__WEBPACK_IMPORTED_MODULE_4__["default"].red;
+        break;
+    }
+  }
 
   if (disabled) {
     return disabledColor;
@@ -1487,7 +1554,7 @@ var getAfterWidthWithHover = function getAfterWidthWithHover(_ref12) {
 /*
   inner Tag component
 */
-// TODO: filter active, navbar, mobile, and sub props from DOM
+// TODO: filter active, navbar, mobile, sub and color props from DOM
 // https://github.com/styled-components/styled-components/issues/439
 
 
@@ -1516,7 +1583,10 @@ var Tag = styled_components__WEBPACK_IMPORTED_MODULE_2___default.a.div.withConfi
       sub = _ref13.sub;
   return !(navbar || mobile || sub) && ' 1.2em';
 }), function (props) {
-  return !(props.mobile || props.sub) && Object(styled_components__WEBPACK_IMPORTED_MODULE_2__["css"])(["&::after{", " margin-top:", ";width:", ";}"], navLinkAfterCSS, getAfterMarginTop(props), getAfterWidth(props));
+  return !(props.mobile || props.sub) && Object(styled_components__WEBPACK_IMPORTED_MODULE_2__["css"])(["&::after{", " ", " background:", ";margin-top:", ";width:", ";}"], navLinkAfterCSS, props.href && 'transition: width 0.3s;', function (_ref14) {
+    var color = _ref14.color;
+    return color === 'white' ? _constants_colors__WEBPACK_IMPORTED_MODULE_4__["default"].sand : _constants_colors__WEBPACK_IMPORTED_MODULE_4__["default"].red;
+  }, getAfterMarginTop(props), getAfterWidth(props));
 }, function (props) {
   return getColorWithHover(props);
 }, function (props) {
@@ -1526,9 +1596,9 @@ var Tag = styled_components__WEBPACK_IMPORTED_MODULE_2___default.a.div.withConfi
   outer NavLink component
 */
 
-var deriveTag = function deriveTag(_ref14) {
-  var href = _ref14.href,
-      tag = _ref14.tag;
+var deriveTag = function deriveTag(_ref15) {
+  var href = _ref15.href,
+      tag = _ref15.tag;
 
   if (href && tag === 'button') {
     return 'a';
@@ -1539,17 +1609,19 @@ var deriveTag = function deriveTag(_ref14) {
 
 var NavLink = function NavLink(props) {
   var derivedTag = deriveTag(props);
-  return react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_NavContext__WEBPACK_IMPORTED_MODULE_3__["default"].Consumer, null, function (_ref15) {
-    var navbar = _ref15.navbar,
-        mobile = _ref15.mobile,
-        sub = _ref15.sub;
+  return react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_NavContext__WEBPACK_IMPORTED_MODULE_3__["default"].Consumer, null, function (_ref16) {
+    var navbar = _ref16.navbar,
+        mobile = _ref16.mobile,
+        sub = _ref16.sub,
+        color = _ref16.color;
     return react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(Tag, _extends({
       as: derivedTag,
       type: derivedTag === 'button' && props.onClick ? 'button' : undefined
     }, props, {
       navbar: navbar,
       mobile: mobile,
-      sub: sub
+      sub: sub,
+      color: color
     }));
   });
 };
@@ -1558,8 +1630,6 @@ NavLink.propTypes =  true ? {
   active: prop_types__WEBPACK_IMPORTED_MODULE_0___default.a.bool,
   disabled: prop_types__WEBPACK_IMPORTED_MODULE_0___default.a.bool,
   tag: prop_types__WEBPACK_IMPORTED_MODULE_0___default.a.oneOfType([prop_types__WEBPACK_IMPORTED_MODULE_0___default.a.func, prop_types__WEBPACK_IMPORTED_MODULE_0___default.a.string]),
-  navbar: prop_types__WEBPACK_IMPORTED_MODULE_0___default.a.bool,
-  mobile: prop_types__WEBPACK_IMPORTED_MODULE_0___default.a.bool,
   onClick: prop_types__WEBPACK_IMPORTED_MODULE_0___default.a.func,
   href: prop_types__WEBPACK_IMPORTED_MODULE_0___default.a.string
 } : undefined;
@@ -1567,8 +1637,6 @@ NavLink.defaultProps = {
   active: false,
   disabled: false,
   tag: 'button',
-  navbar: false,
-  mobile: false,
   onClick: null,
   href: null
 };
@@ -1586,11 +1654,12 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_1__);
 /* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(6);
 /* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(styled_components__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var _NavbarNav__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(24);
-/* harmony import */ var _svg_inline_logo_black_svg__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(27);
-/* harmony import */ var _svg_inline_logo_white_svg__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(28);
-/* harmony import */ var _constants_colors__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(9);
-/* harmony import */ var _constants_media__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(10);
+/* harmony import */ var _NavbarContext__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(24);
+/* harmony import */ var _NavbarNav__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(25);
+/* harmony import */ var _svg_inline_logo_black_svg__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(28);
+/* harmony import */ var _svg_inline_logo_white_svg__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(29);
+/* harmony import */ var _constants_colors__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(9);
+/* harmony import */ var _constants_media__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(10);
 function _extends() { _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends.apply(this, arguments); }
 
 function _templateObject() {
@@ -1617,6 +1686,7 @@ function _objectWithoutPropertiesLoose(source, excluded) { if (source == null) r
 
 
 
+
 /*
   inner components
 */
@@ -1633,8 +1703,8 @@ var NavbarWrapper = styled_components__WEBPACK_IMPORTED_MODULE_2___default()(fun
   componentId: "c3ezxu-0"
 })(["align-items:center;box-shadow:0 5px 10px 0 #00000026;display:flex;height:75px;justify-content:space-between;padding:0 7vw;position:relative;z-index:20;background-color:", ";", ";"], function (_ref2) {
   var color = _ref2.color;
-  return _constants_colors__WEBPACK_IMPORTED_MODULE_6__["default"][color];
-}, _constants_media__WEBPACK_IMPORTED_MODULE_7__["default"].md(_templateObject()));
+  return _constants_colors__WEBPACK_IMPORTED_MODULE_7__["default"][color];
+}, _constants_media__WEBPACK_IMPORTED_MODULE_8__["default"].md(_templateObject()));
 var NavbarLogoLink = styled_components__WEBPACK_IMPORTED_MODULE_2___default.a.a.withConfig({
   displayName: "Navbar__NavbarLogoLink",
   componentId: "c3ezxu-1"
@@ -1663,7 +1733,11 @@ var Navbar = function Navbar(_ref3) {
     href: "http://www.brown.edu/",
     target: "_blank",
     rel: "noopener noreferrer"
-  }, color === 'white' ? react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_svg_inline_logo_black_svg__WEBPACK_IMPORTED_MODULE_4__["default"], logoProps) : react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_svg_inline_logo_white_svg__WEBPACK_IMPORTED_MODULE_5__["default"], logoProps)), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(NavbarChildrenWrapper, null, children));
+  }, color === 'white' ? react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_svg_inline_logo_black_svg__WEBPACK_IMPORTED_MODULE_5__["default"], logoProps) : react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_svg_inline_logo_white_svg__WEBPACK_IMPORTED_MODULE_6__["default"], logoProps)), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(NavbarChildrenWrapper, null, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_NavbarContext__WEBPACK_IMPORTED_MODULE_3__["default"].Provider, {
+    value: {
+      color: color
+    }
+  }, children)));
 };
 
 Navbar.propTypes =  true ? {
@@ -1674,11 +1748,23 @@ Navbar.defaultProps = {
   color: 'brown',
   children: null
 };
-Navbar.Nav = _NavbarNav__WEBPACK_IMPORTED_MODULE_3__["default"];
+Navbar.Nav = _NavbarNav__WEBPACK_IMPORTED_MODULE_4__["default"];
 /* harmony default export */ __webpack_exports__["default"] = (Navbar);
 
 /***/ }),
 /* 24 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(5);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+
+var NavbarContext = react__WEBPACK_IMPORTED_MODULE_0___default.a.createContext();
+/* harmony default export */ __webpack_exports__["default"] = (NavbarContext);
+
+/***/ }),
+/* 25 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -1689,15 +1775,16 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_1__);
 /* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(6);
 /* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(styled_components__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var react_fns__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(25);
+/* harmony import */ var react_fns__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(26);
 /* harmony import */ var react_fns__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(react_fns__WEBPACK_IMPORTED_MODULE_3__);
-/* harmony import */ var react_collapse__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(26);
+/* harmony import */ var react_collapse__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(27);
 /* harmony import */ var react_collapse__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(react_collapse__WEBPACK_IMPORTED_MODULE_4__);
-/* harmony import */ var _Hamburger__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(16);
-/* harmony import */ var _Nav__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(19);
-/* harmony import */ var _constants_breakpoints__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(11);
-/* harmony import */ var _constants_colors__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(9);
-/* harmony import */ var _constants_media__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(10);
+/* harmony import */ var _NavbarContext__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(24);
+/* harmony import */ var _Hamburger__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(16);
+/* harmony import */ var _Nav__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(19);
+/* harmony import */ var _constants_breakpoints__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(11);
+/* harmony import */ var _constants_colors__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(9);
+/* harmony import */ var _constants_media__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(10);
 function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
 
 function _extends() { _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends.apply(this, arguments); }
@@ -1746,6 +1833,7 @@ function _taggedTemplateLiteral(strings, raw) { if (!raw) { raw = strings.slice(
 
 
 
+
 /*
   inner components
 */
@@ -1753,14 +1841,28 @@ function _taggedTemplateLiteral(strings, raw) { if (!raw) { raw = strings.slice(
 var MobileCollapseWrapper = styled_components__WEBPACK_IMPORTED_MODULE_2___default.a.div.withConfig({
   displayName: "NavbarNav__MobileCollapseWrapper",
   componentId: "sc-15lu9u4-0"
-})(["box-shadow:0 5px 10px 0 #00000026;left:0;position:absolute;top:75px;width:100%;"]);
+})(["box-shadow:0 5px 10px 0 #00000026;left:0;position:absolute;top:75px;width:100%;background-color:", ";"], function (_ref) {
+  var color = _ref.color;
+  return _constants_colors__WEBPACK_IMPORTED_MODULE_9__["default"][color];
+});
 var MobileNavWrapper = styled_components__WEBPACK_IMPORTED_MODULE_2___default.a.div.withConfig({
   displayName: "NavbarNav__MobileNavWrapper",
   componentId: "sc-15lu9u4-1"
-})(["background-color:", ";padding:0 7vw 1rem;", ";"], _constants_colors__WEBPACK_IMPORTED_MODULE_8__["default"].white, _constants_media__WEBPACK_IMPORTED_MODULE_9__["default"].md(_templateObject()));
+})(["padding:0 7vw 1rem;", ";"], _constants_media__WEBPACK_IMPORTED_MODULE_10__["default"].md(_templateObject()));
 /*
   outer NavbarNav component
 */
+
+var getChildColor = function getChildColor(color) {
+  switch (color) {
+    case 'white':
+      return 'red';
+    // brown
+
+    default:
+      return 'white';
+  }
+};
 
 var NavbarNav =
 /*#__PURE__*/
@@ -1785,8 +1887,8 @@ function (_Component) {
     });
 
     _defineProperty(_assertThisInitialized(_assertThisInitialized(_this)), "handleMobileNavToggle", function () {
-      return _this.setState(function (_ref) {
-        var mobileNavIsOpen = _ref.mobileNavIsOpen;
+      return _this.setState(function (_ref2) {
+        var mobileNavIsOpen = _ref2.mobileNavIsOpen;
         return {
           mobileNavIsOpen: !mobileNavIsOpen
         };
@@ -1807,30 +1909,39 @@ function (_Component) {
 
       var mobileNavIsOpen = this.state.mobileNavIsOpen;
       return react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(react_fns__WEBPACK_IMPORTED_MODULE_3__["WindowSize"], {
-        render: function render(_ref2) {
-          var width = _ref2.width;
+        render: function render(_ref3) {
+          var width = _ref3.width;
           // TODO: update when width doesn't return 0 on initial render
           // https://github.com/jaredpalmer/react-fns/issues/84
           var currentWidth = width === 0 ? window.innerWidth : width;
           var renderMobile = currentWidth < mobileNavBreakpoint;
+          return react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_NavbarContext__WEBPACK_IMPORTED_MODULE_5__["default"].Consumer, null, function (_ref4) {
+            var color = _ref4.color;
+            var childColor = getChildColor(color);
 
-          if (renderMobile) {
-            return react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", restProps, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_Hamburger__WEBPACK_IMPORTED_MODULE_5__["default"], {
-              "aria-controls": "navbar-nav-mobile-collapse",
-              isOpen: mobileNavIsOpen,
-              onOpen: _this2.handleMobileNavToggle,
-              onClose: _this2.handleMobileNavToggle
-            }), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(MobileCollapseWrapper, null, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(react_collapse__WEBPACK_IMPORTED_MODULE_4__["Collapse"], {
-              isOpened: mobileNavIsOpen,
-              id: "navbar-nav-mobile-collapse"
-            }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(MobileNavWrapper, null, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_Nav__WEBPACK_IMPORTED_MODULE_6__["default"], {
-              mobile: true
-            }, _this2.props.children)))));
-          }
+            if (renderMobile) {
+              return react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", restProps, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_Hamburger__WEBPACK_IMPORTED_MODULE_6__["default"], {
+                "aria-controls": "navbar-nav-mobile-collapse",
+                color: childColor,
+                isOpen: mobileNavIsOpen,
+                onOpen: _this2.handleMobileNavToggle,
+                onClose: _this2.handleMobileNavToggle
+              }), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(MobileCollapseWrapper, {
+                color: color
+              }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(react_collapse__WEBPACK_IMPORTED_MODULE_4__["Collapse"], {
+                isOpened: mobileNavIsOpen,
+                id: "navbar-nav-mobile-collapse"
+              }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(MobileNavWrapper, null, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_Nav__WEBPACK_IMPORTED_MODULE_7__["default"], {
+                mobile: true,
+                color: childColor
+              }, _this2.props.children)))));
+            }
 
-          return react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_Nav__WEBPACK_IMPORTED_MODULE_6__["default"], _extends({}, restProps, {
-            navbar: true
-          }), _this2.props.children);
+            return react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_Nav__WEBPACK_IMPORTED_MODULE_7__["default"], _extends({}, restProps, {
+              navbar: true,
+              color: childColor
+            }), _this2.props.children);
+          });
         }
       });
     }
@@ -1844,17 +1955,11 @@ NavbarNav.propTypes =  true ? {
   children: prop_types__WEBPACK_IMPORTED_MODULE_0___default.a.node.isRequired
 } : undefined;
 NavbarNav.defaultProps = {
-  mobileNavBreakpoint: _constants_breakpoints__WEBPACK_IMPORTED_MODULE_7__["default"].md
+  mobileNavBreakpoint: _constants_breakpoints__WEBPACK_IMPORTED_MODULE_8__["default"].md
 };
-NavbarNav.Item = _Nav__WEBPACK_IMPORTED_MODULE_6__["default"].Item;
-NavbarNav.Link = _Nav__WEBPACK_IMPORTED_MODULE_6__["default"].Link;
+NavbarNav.Item = _Nav__WEBPACK_IMPORTED_MODULE_7__["default"].Item;
+NavbarNav.Link = _Nav__WEBPACK_IMPORTED_MODULE_7__["default"].Link;
 /* harmony default export */ __webpack_exports__["default"] = (NavbarNav);
-
-/***/ }),
-/* 25 */
-/***/ (function(module, exports) {
-
-module.exports = __WEBPACK_EXTERNAL_MODULE__25__;
 
 /***/ }),
 /* 26 */
@@ -1864,6 +1969,12 @@ module.exports = __WEBPACK_EXTERNAL_MODULE__26__;
 
 /***/ }),
 /* 27 */
+/***/ (function(module, exports) {
+
+module.exports = __WEBPACK_EXTERNAL_MODULE__27__;
+
+/***/ }),
+/* 28 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -1935,7 +2046,7 @@ function _objectWithoutProperties(obj, keys) { var target = {}; for (var i in ob
 });
 
 /***/ }),
-/* 28 */
+/* 29 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -2006,7 +2117,7 @@ function _objectWithoutProperties(obj, keys) { var target = {}; for (var i in ob
 });
 
 /***/ }),
-/* 29 */
+/* 30 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -2017,9 +2128,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_1__);
 /* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(6);
 /* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(styled_components__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var react_fns__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(25);
+/* harmony import */ var react_fns__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(26);
 /* harmony import */ var react_fns__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(react_fns__WEBPACK_IMPORTED_MODULE_3__);
-/* harmony import */ var react_collapse__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(26);
+/* harmony import */ var react_collapse__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(27);
 /* harmony import */ var react_collapse__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(react_collapse__WEBPACK_IMPORTED_MODULE_4__);
 /* harmony import */ var _Hamburger__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(16);
 /* harmony import */ var _Nav__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(19);
@@ -2205,7 +2316,7 @@ SiteNav.Link = _Nav__WEBPACK_IMPORTED_MODULE_6__["default"].Link;
 /* harmony default export */ __webpack_exports__["default"] = (SiteNav);
 
 /***/ }),
-/* 30 */
+/* 31 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";

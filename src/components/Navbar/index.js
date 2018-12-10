@@ -2,6 +2,7 @@ import PropTypes from 'prop-types';
 import React from 'react';
 import styled from 'styled-components';
 
+import NavbarContext from './NavbarContext';
 import NavbarNav from './NavbarNav';
 import LogoBlackSVG from '../../svg/inline/logo-black.svg';
 import LogoWhiteSVG from '../../svg/inline/logo-white.svg';
@@ -57,7 +58,11 @@ const Navbar = ({ color, children, ...restProps }) => (
         <LogoWhiteSVG {...logoProps} />
       )}
     </NavbarLogoLink>
-    <NavbarChildrenWrapper>{children}</NavbarChildrenWrapper>
+    <NavbarChildrenWrapper>
+      <NavbarContext.Provider value={{ color }}>
+        {children}
+      </NavbarContext.Provider>
+    </NavbarChildrenWrapper>
   </NavbarWrapper>
 );
 

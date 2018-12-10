@@ -20,19 +20,45 @@ const navLinkCSS = css`
 `;
 
 const navLinkAfterCSS = css`
-  background: ${colors.red};
   content: '';
   display: block;
   height: 3px;
-  transition: width 0.3s;
 `;
 
 /*
   css prop getters
 */
-const getColor = ({ active, mobile, sub }) => {
-  const activeColor = mobile || sub ? colors.black : colors.red;
-  const defaultColor = mobile || sub ? colors.red : colors.black;
+const getColor = ({ active, mobile, sub, color }) => {
+  let activeColor;
+  let defaultColor;
+
+  if (mobile || sub) {
+    switch (color) {
+      case 'white':
+        activeColor = colors.sand;
+        defaultColor = colors.white;
+        break;
+
+      // red
+      default:
+        activeColor = colors.black;
+        defaultColor = colors.red;
+        break;
+    }
+  } else {
+    switch (color) {
+      case 'white':
+        activeColor = colors.sand;
+        defaultColor = colors.white;
+        break;
+
+      // red
+      default:
+        activeColor = colors.red;
+        defaultColor = colors.black;
+        break;
+    }
+  }
 
   if (active) {
     return activeColor;
@@ -88,9 +114,13 @@ const getPointerEvents = ({ disabled, href }) => {
   return 'auto';
 };
 
-const getTransition = ({ mobile, sub }) => {
+const getTransition = ({ mobile, sub, href }) => {
   if (mobile || sub) {
     return 'all .2s ease-in-out';
+  }
+
+  if (!href) {
+    return null;
   }
 
   return 'background-color .55s linear,border-color .25s linear,box-shadow .25s linear,color .25s linear';
@@ -111,9 +141,37 @@ const getAfterWidth = ({ active }) => {
   return '0';
 };
 
-const getColorWithHover = ({ disabled, mobile, sub }) => {
-  const disabledColor = mobile || sub ? colors.red : colors.black;
-  const defaultColor = mobile || sub ? colors.black : colors.red;
+const getColorWithHover = ({ disabled, mobile, sub, color }) => {
+  let disabledColor;
+  let defaultColor;
+
+  if (mobile || sub) {
+    switch (color) {
+      case 'white':
+        disabledColor = colors.white;
+        defaultColor = colors.sand;
+        break;
+
+      // red
+      default:
+        disabledColor = colors.red;
+        defaultColor = colors.black;
+        break;
+    }
+  } else {
+    switch (color) {
+      case 'white':
+        disabledColor = colors.white;
+        defaultColor = colors.sand;
+        break;
+
+      // red
+      default:
+        disabledColor = colors.black;
+        defaultColor = colors.red;
+        break;
+    }
+  }
 
   if (disabled) {
     return disabledColor;
@@ -133,7 +191,7 @@ const getAfterWidthWithHover = ({ disabled }) => {
 /*
   inner Tag component
 */
-// TODO: filter active, navbar, mobile, and sub props from DOM
+// TODO: filter active, navbar, mobile, sub and color props from DOM
 // https://github.com/styled-components/styled-components/issues/439
 const Tag = styled.div`
   ${navLinkCSS}
@@ -155,6 +213,9 @@ const Tag = styled.div`
     !(props.mobile || props.sub) &&
     css`&::after {
       ${navLinkAfterCSS}
+      ${props.href && 'transition: width 0.3s;'}
+      background: ${({ color }) =>
+        color === 'white' ? colors.sand : colors.red};
       margin-top: ${getAfterMarginTop(props)};
       width: ${getAfterWidth(props)};
     }
@@ -190,7 +251,7 @@ const NavLink = props => {
 
   return (
     <NavContext.Consumer>
-      {({ navbar, mobile, sub }) => (
+      {({ navbar, mobile, sub, color }) => (
         <Tag
           as={derivedTag}
           type={derivedTag === 'button' && props.onClick ? 'button' : undefined}
@@ -198,6 +259,7 @@ const NavLink = props => {
           navbar={navbar}
           mobile={mobile}
           sub={sub}
+          color={color}
         />
       )}
     </NavContext.Consumer>
@@ -208,8 +270,6 @@ NavLink.propTypes = {
   active: PropTypes.bool,
   disabled: PropTypes.bool,
   tag: PropTypes.oneOfType([PropTypes.func, PropTypes.string]),
-  navbar: PropTypes.bool,
-  mobile: PropTypes.bool,
   onClick: PropTypes.func,
   href: PropTypes.string
 };
@@ -218,8 +278,6 @@ NavLink.defaultProps = {
   active: false,
   disabled: false,
   tag: 'button',
-  navbar: false,
-  mobile: false,
   onClick: null,
   href: null
 };
