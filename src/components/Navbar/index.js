@@ -2,10 +2,11 @@ import PropTypes from 'prop-types';
 import React from 'react';
 import styled from 'styled-components';
 
-import LogoBlackSVG from '../svg/inline/logo-black.svg';
-import LogoWhiteSVG from '../svg/inline/logo-white.svg';
-import colors from '../constants/colors';
-import media from '../constants/media';
+import NavbarNav from './NavbarNav';
+import LogoBlackSVG from '../../svg/inline/logo-black.svg';
+import LogoWhiteSVG from '../../svg/inline/logo-white.svg';
+import colors from '../../constants/colors';
+import media from '../../constants/media';
 
 /*
   inner components
@@ -16,10 +17,10 @@ const NavbarWrapper = styled(({ color, ...restProps }) => (
   <div {...restProps} />
 ))`
   align-items: center;
-  box-shadow: 0 1px 10px 5px #00000026;
+  box-shadow: 0 5px 10px 0 #00000026;
   display: flex;
+  height: 75px;
   justify-content: space-between;
-  min-height: 75px;
   padding: 0 7vw;
   position: relative;
   z-index: 20;
@@ -35,8 +36,7 @@ const NavbarLogoLink = styled.a`
 `;
 
 const NavbarChildrenWrapper = styled.div`
-  align-items: center;
-  display: flex;
+  text-align: right;
 `;
 
 /*
@@ -70,5 +70,7 @@ Navbar.defaultProps = {
   color: 'brown',
   children: null
 };
+
+Navbar.Nav = NavbarNav;
 
 export default Navbar;

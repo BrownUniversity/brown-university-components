@@ -10,6 +10,9 @@ import breakpoints from '../constants/breakpoints';
 import colors from '../constants/colors';
 import { sansBold } from '../constants/typography';
 
+/*
+  inner components
+*/
 const MobileBannerWrapper = styled.div`
   background-color: ${colors.white}
     ${props =>
@@ -81,6 +84,9 @@ const Wrapper = styled.div`
   padding: 20px 0 30px;
 `;
 
+/*
+  outer SiteNav component
+*/
 class SiteNav extends Component {
   state = {
     mobileNavIsOpen: false

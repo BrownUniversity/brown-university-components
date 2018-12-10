@@ -2,23 +2,23 @@ import React from 'react';
 import { storiesOf } from '@storybook/react';
 import { withKnobs, select } from '@storybook/addon-knobs';
 
-import { Navbar, Nav } from '../src';
+import { Navbar } from '../src';
 
 storiesOf('Navbar', module)
   .addDecorator(withKnobs)
   .add('default', () => <Navbar color={select('color', ['brown', 'white'])} />)
-  .add('with children', () => (
+  .add('with Nav', () => (
     <Navbar color="white">
-      <Nav navbar>
-        <Nav.Item>
-          <Nav.Link active>Active Link</Nav.Link>
-        </Nav.Item>
-        <Nav.Item>
-          <Nav.Link>Link</Nav.Link>
-        </Nav.Item>
-        <Nav.Item>
-          <Nav.Link>Link</Nav.Link>
-        </Nav.Item>
-      </Nav>
+      <Navbar.Nav>
+        <Navbar.Nav.Item>
+          <Navbar.Nav.Link active>Active Link</Navbar.Nav.Link>
+        </Navbar.Nav.Item>
+        <Navbar.Nav.Item>
+          <Navbar.Nav.Link>Link</Navbar.Nav.Link>
+        </Navbar.Nav.Item>
+        <Navbar.Nav.Item>
+          <Navbar.Nav.Link>Link</Navbar.Nav.Link>
+        </Navbar.Nav.Item>
+      </Navbar.Nav>
     </Navbar>
   ));

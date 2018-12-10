@@ -246,10 +246,6 @@ _Brown University Theme is designed to be used alongside [Bootstrap](https://www
   | color    | oneOf(['brown', 'white']) | -        | 'brown' |
   | children | node                      | -        | false   |
 
-* `NavbarNav`
-
-  TODO
-
 * `SiteNav`
 
   **Example:**
