@@ -14,16 +14,16 @@ import { sansBold } from '../constants/typography';
   inner components
 */
 const MobileBannerWrapper = styled.div`
-  background-color: ${colors.white}
-    ${props =>
-      props.banner &&
-      css`
-        margin: 0 auto;
-        margin-top: 2rem;
-        position: relative;
-        width: 95%;
-        z-index: 10;
-      `};
+  ${props =>
+    props.banner &&
+    css`
+      background-color: ${colors.white};
+      margin: 0 auto;
+      margin-top: 2rem;
+      position: relative;
+      width: 95%;
+      z-index: 10;
+    `};
 `;
 
 const MobileWrapper = styled.div`
@@ -65,10 +65,10 @@ const MobileNavWrapper = styled.div`
 `;
 
 const BannerWrapper = styled.div`
+  background-color: ${colors.white};
   ${props =>
     props.banner &&
     css`
-      background-color: ${colors.white}
       margin: 0 auto;
       margin-top: -50px;
       max-width: 1300px;

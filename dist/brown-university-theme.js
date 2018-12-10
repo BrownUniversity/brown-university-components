@@ -2069,8 +2069,8 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 var MobileBannerWrapper = styled_components__WEBPACK_IMPORTED_MODULE_2___default.a.div.withConfig({
   displayName: "SiteNav__MobileBannerWrapper",
   componentId: "sc-1hgikms-0"
-})(["background-color:", " ", ";"], _constants_colors__WEBPACK_IMPORTED_MODULE_8__["default"].white, function (props) {
-  return props.banner && Object(styled_components__WEBPACK_IMPORTED_MODULE_2__["css"])(["margin:0 auto;margin-top:2rem;position:relative;width:95%;z-index:10;"]);
+})(["", ";"], function (props) {
+  return props.banner && Object(styled_components__WEBPACK_IMPORTED_MODULE_2__["css"])(["background-color:", ";margin:0 auto;margin-top:2rem;position:relative;width:95%;z-index:10;"], _constants_colors__WEBPACK_IMPORTED_MODULE_8__["default"].white);
 });
 var MobileWrapper = styled_components__WEBPACK_IMPORTED_MODULE_2___default.a.div.withConfig({
   displayName: "SiteNav__MobileWrapper",
@@ -2091,8 +2091,8 @@ var MobileNavWrapper = styled_components__WEBPACK_IMPORTED_MODULE_2___default.a.
 var BannerWrapper = styled_components__WEBPACK_IMPORTED_MODULE_2___default.a.div.withConfig({
   displayName: "SiteNav__BannerWrapper",
   componentId: "sc-1hgikms-5"
-})(["", ""], function (props) {
-  return props.banner && Object(styled_components__WEBPACK_IMPORTED_MODULE_2__["css"])(["background-color:", " margin:0 auto;margin-top:-50px;max-width:1300px;position:relative;width:96%;z-index:10;"], _constants_colors__WEBPACK_IMPORTED_MODULE_8__["default"].white);
+})(["background-color:", ";", ""], _constants_colors__WEBPACK_IMPORTED_MODULE_8__["default"].white, function (props) {
+  return props.banner && Object(styled_components__WEBPACK_IMPORTED_MODULE_2__["css"])(["margin:0 auto;margin-top:-50px;max-width:1300px;position:relative;width:96%;z-index:10;"]);
 });
 var Wrapper = styled_components__WEBPACK_IMPORTED_MODULE_2___default.a.div.withConfig({
   displayName: "SiteNav__Wrapper",
