@@ -53,12 +53,12 @@ _Brown University Theme is designed to be used alongside [Bootstrap](https://www
 
   **Properties:**
 
-  | property | propType                 | required | default  |
-  | -------- | ------------------------ | -------- | -------- |
-  | url      | string                   | true     | -        |
-  | color    | oneOf(['white', 'gray']) | -        | 'whilte' |
-  | full     | bool                     | -        | true     |
-  | children | node                     | true     | -        |
+  | property | propType                 | required | default |
+  | -------- | ------------------------ | -------- | ------- |
+  | url      | string                   | true     | -       |
+  | color    | oneOf(['white', 'gray']) | -        | 'white' |
+  | full     | bool                     | -        | true    |
+  | children | node                     | true     | -       |
 
 * `Banner`
 

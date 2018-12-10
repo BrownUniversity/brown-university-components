@@ -1826,6 +1826,8 @@ var getAfterWidthWithHover = function getAfterWidthWithHover(_ref12) {
 /*
   inner Tag component
 */
+// TODO: filter active, navbar, mobile, and sub props from DOM
+// https://github.com/styled-components/styled-components/issues/439
 
 
 var Tag = styled_components__WEBPACK_IMPORTED_MODULE_2___default.a.div(_templateObject3(), navLinkCSS, function (props) {

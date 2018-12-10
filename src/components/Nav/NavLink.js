@@ -133,6 +133,8 @@ const getAfterWidthWithHover = ({ disabled }) => {
 /*
   inner Tag component
 */
+// TODO: filter active, navbar, mobile, and sub props from DOM
+// https://github.com/styled-components/styled-components/issues/439
 const Tag = styled.div`
   ${navLinkCSS}
   color: ${props => getColor(props)};
