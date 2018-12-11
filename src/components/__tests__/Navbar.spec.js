@@ -33,16 +33,16 @@ describe('Navbar', () => {
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  box-shadow: 0 1px 10px 5px #00000026;
+  box-shadow: 0 5px 10px 0 #00000026;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+  height: 75px;
   -webkit-box-pack: justify;
   -webkit-justify-content: space-between;
   -ms-flex-pack: justify;
   justify-content: space-between;
-  min-height: 75px;
   padding: 0 7vw;
   position: relative;
   z-index: 20;
@@ -55,14 +55,7 @@ describe('Navbar', () => {
 }
 
 .c2 {
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
+  text-align: right;
 }
 
 @media (min-width:768px) {

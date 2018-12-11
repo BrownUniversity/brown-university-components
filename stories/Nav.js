@@ -1,6 +1,6 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
-import { withKnobs, boolean } from '@storybook/addon-knobs';
+import { withKnobs, boolean, select } from '@storybook/addon-knobs';
 import { action } from '@storybook/addon-actions';
 
 import { Nav } from '../src';
@@ -8,7 +8,8 @@ import { Nav } from '../src';
 const getCommonProps = () => ({
   navbar: boolean('navbar', false),
   mobile: boolean('mobile', false),
-  sub: boolean('sub', false)
+  sub: boolean('sub', false),
+  color: select('color', ['red', 'white'])
 });
 
 storiesOf('Nav', module)

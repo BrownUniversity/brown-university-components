@@ -196,20 +196,15 @@ _Brown University Theme is designed to be used alongside [Bootstrap](https://www
 
   **`Nav` Properties:**
 
-  | property | propType | required | default   |
-  | -------- | -------- | -------- | --------- |
-  | navbar   | bool     | -        | false     |
-  | mobile   | bool     | -        | false     |
-  | sub      | bool     | -        | false     |
-  | children | node     | true     | undefined |
+  | property | propType              | required | default   |
+  | -------- | --------------------- | -------- | --------- |
+  | navbar   | bool                  | -        | false     |
+  | mobile   | bool                  | -        | false     |
+  | sub      | bool                  | -        | false     |
+  | color    | oneOf('red', 'white') | -        | 'red'     |
+  | children | node                  | true     | undefined |
 
   **`Nav.Item` Properties:**
-
-  | property | propType | required | default   |
-  | -------- | -------- | -------- | --------- |
-  | mobile   | bool     | -        | false     |
-  | sub      | bool     | -        | false     |
-  | children | node     | true     | undefined |
 
   _`mobile` and `sub` props are passed down implicitly from `Nav` through `NavContext`._
 
@@ -220,13 +215,10 @@ _Brown University Theme is designed to be used alongside [Bootstrap](https://www
   | active   | bool                      | -        | false    |
   | disabled | bool                      | -        | false    |
   | tag      | oneOfType([func, string]) | -        | 'button' |
-  | navbar   | bool                      | -        | false    |
-  | mobile   | bool                      | -        | false    |
-  | sub      | bool                      | -        | false    |
   | onClick  | func                      | -        | null     |
   | href     | string                    | -        | null     |
 
-  _`navbar`, `mobile` and `sub` props are passed down implicitly from `Nav` through `NavContext`._
+  _`navbar`, `mobile`, `sub` and 'color' props are passed down implicitly from `Nav` through `NavContext`._
 
 * `Navbar`
 
@@ -245,10 +237,6 @@ _Brown University Theme is designed to be used alongside [Bootstrap](https://www
   | -------- | ------------------------- | -------- | ------- |
   | color    | oneOf(['brown', 'white']) | -        | 'brown' |
   | children | node                      | -        | false   |
-
-* `NavbarNav`
-
-  TODO
 
 * `SiteNav`
 
