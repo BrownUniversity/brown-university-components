@@ -19,8 +19,23 @@ storiesOf('Navbar', module)
           <Navbar.Nav.Link>Link</Navbar.Nav.Link>
         </Navbar.Nav.Item>
         <Navbar.Nav.Item>
-          <Navbar.Nav.Link>Link</Navbar.Nav.Link>
+          <Navbar.Nav.Link disabled>Disabled Link</Navbar.Nav.Link>
         </Navbar.Nav.Item>
       </Navbar.Nav>
+    </Navbar>
+  ))
+  .add('with GlobalNav', () => (
+    <Navbar color={getColorProp()}>
+      <Navbar.GlobalNav>
+        <Navbar.GlobalNav.Item>
+          <Navbar.GlobalNav.Link active>Active Link</Navbar.GlobalNav.Link>
+        </Navbar.GlobalNav.Item>
+        <Navbar.GlobalNav.Item>
+          <Navbar.GlobalNav.Link>Link</Navbar.GlobalNav.Link>
+        </Navbar.GlobalNav.Item>
+        <Navbar.GlobalNav.Item>
+          <Navbar.GlobalNav.Link disabled>Disabled Link</Navbar.GlobalNav.Link>
+        </Navbar.GlobalNav.Item>
+      </Navbar.GlobalNav>
     </Navbar>
   ));

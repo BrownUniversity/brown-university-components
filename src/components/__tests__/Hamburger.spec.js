@@ -4,10 +4,7 @@ import { render, fireEvent } from 'react-testing-library';
 import Hamburger from '../Hamburger';
 
 const renderHamburger = ({ props = {} } = {}) => {
-  const { onOpen = jest.fn(), onClose = jest.fn(), ...restProps } = props;
-  const rtlUtils = render(
-    <Hamburger {...restProps} onOpen={onOpen} onClose={onClose} />
-  );
+  const rtlUtils = render(<Hamburger {...props} />);
 
   return {
     tree: rtlUtils.container.firstChild,
@@ -27,7 +24,6 @@ describe('Hamburger', () => {
   cursor: pointer;
   height: 24px;
   padding: 0 25px 3px 0;
-  width: 30px;
 }
 
 .c1 {
@@ -110,7 +106,6 @@ describe('Hamburger', () => {
   cursor: pointer;
   height: 24px;
   padding: 0 25px 3px 0;
-  width: 30px;
 }
 
 .c1 {
@@ -219,7 +214,6 @@ describe('Hamburger', () => {
   cursor: pointer;
   height: 24px;
   padding: 0 25px 3px 0;
-  width: 30px;
 }
 
 .c1 {

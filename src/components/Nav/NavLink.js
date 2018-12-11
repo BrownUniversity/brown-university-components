@@ -98,8 +98,8 @@ const getLineHeight = ({ navbar, mobile, sub }) => {
 
   return '1';
 };
-const getOpacity = ({ disabled }) => {
-  if (disabled) {
+const getOpacity = ({ disabled, color }) => {
+  if (disabled && color !== 'white') {
     return '0.65';
   }
 

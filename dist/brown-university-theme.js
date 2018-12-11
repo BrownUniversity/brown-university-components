@@ -1,4 +1,4 @@
-/*! brown-university-theme v0.3.9 */
+/*! brown-university-theme v0.3.10 */
 (function webpackUniversalModuleDefinition(root, factory) {
 	if(typeof exports === 'object' && typeof module === 'object')
 		module.exports = factory(require("prop-types"), require("react"), require("styled-components"), require("polished"), require("react-fns"), require("react-collapse"));
@@ -129,10 +129,10 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _components_Navbar__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(23);
 /* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "Navbar", function() { return _components_Navbar__WEBPACK_IMPORTED_MODULE_9__["default"]; });
 
-/* harmony import */ var _components_SiteNav__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(30);
+/* harmony import */ var _components_SiteNav__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(31);
 /* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "SiteNav", function() { return _components_SiteNav__WEBPACK_IMPORTED_MODULE_10__["default"]; });
 
-/* harmony import */ var _components_SubNav__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(31);
+/* harmony import */ var _components_SubNav__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(32);
 /* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "SubNav", function() { return _components_SubNav__WEBPACK_IMPORTED_MODULE_11__["default"]; });
 
 
@@ -865,10 +865,16 @@ var hamburgerTransitionCSS = Object(styled_components__WEBPACK_IMPORTED_MODULE_2
   inner components
 */
 
-var HamburgerButton = styled_components__WEBPACK_IMPORTED_MODULE_2___default.a.button.withConfig({
-  displayName: "Hamburger__HamburgerButton",
+var HamburgerElement = styled_components__WEBPACK_IMPORTED_MODULE_2___default.a.div.withConfig({
+  displayName: "Hamburger__HamburgerElement",
   componentId: "u53pwq-0"
-})(["background:transparent;border:none;cursor:pointer;height:24px;padding:0 25px 3px 0;width:30px;"]); // TODO: revisit when filtering props from DOM is supported
+})(["background:transparent;border:none;cursor:pointer;", " ", " padding:", ";"], function (props) {
+  return props.as === 'div' && 'display: inline-block;';
+}, function (props) {
+  return props.as === 'button' && 'height: 24px;';
+}, function (props) {
+  return props.as === 'button' ? '0 25px 3px 0' : '0 25px 7px 0';
+}); // TODO: revisit when filtering props from DOM is supported
 // https://github.com/styled-components/styled-components/issues/439
 
 var HamburgerBars = styled_components__WEBPACK_IMPORTED_MODULE_2___default()(function (_ref2) {
@@ -954,15 +960,17 @@ function (_Component) {
     value: function render() {
       var _this$props = this.props,
           color = _this$props.color,
+          tag = _this$props.tag,
           onOpen = _this$props.onOpen,
           onClose = _this$props.onClose,
-          restProps = _objectWithoutProperties(_this$props, ["color", "onOpen", "onClose"]);
+          restProps = _objectWithoutProperties(_this$props, ["color", "tag", "onOpen", "onClose"]);
 
       var isOpen = this.state.isOpen;
-      return react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(HamburgerButton, _extends({}, restProps, {
-        type: "button",
-        "aria-expanded": isOpen,
-        "aria-label": "Toggle navigation",
+      return react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(HamburgerElement, _extends({}, restProps, {
+        as: tag,
+        type: tag === 'button' ? 'button' : null,
+        "aria-expanded": tag === 'button' && isOpen,
+        "aria-label": tag === 'button' && 'Toggle navigation',
         onClick: this.handleClick
       }), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(HamburgerBars, {
         color: color,
@@ -977,12 +985,20 @@ function (_Component) {
 Hamburger.propTypes =  true ? {
   color: prop_types__WEBPACK_IMPORTED_MODULE_0___default.a.oneOf(['red', 'gray', 'black', 'white']),
   isOpen: prop_types__WEBPACK_IMPORTED_MODULE_0___default.a.bool,
-  onOpen: prop_types__WEBPACK_IMPORTED_MODULE_0___default.a.func.isRequired,
-  onClose: prop_types__WEBPACK_IMPORTED_MODULE_0___default.a.func.isRequired
+  tag: prop_types__WEBPACK_IMPORTED_MODULE_0___default.a.oneOf(['button', 'div']),
+  onOpen: prop_types__WEBPACK_IMPORTED_MODULE_0___default.a.func,
+  onClose: prop_types__WEBPACK_IMPORTED_MODULE_0___default.a.func
 } : undefined;
 Hamburger.defaultProps = {
   color: 'red',
-  isOpen: false
+  isOpen: false,
+  tag: 'button',
+  onOpen: function onOpen() {
+    return undefined;
+  },
+  onClose: function onClose() {
+    return undefined;
+  }
 };
 /* harmony default export */ __webpack_exports__["default"] = (Hamburger);
 
@@ -1656,10 +1672,11 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(styled_components__WEBPACK_IMPORTED_MODULE_2__);
 /* harmony import */ var _NavbarContext__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(24);
 /* harmony import */ var _NavbarNav__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(25);
-/* harmony import */ var _svg_inline_logo_black_svg__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(28);
-/* harmony import */ var _svg_inline_logo_white_svg__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(29);
-/* harmony import */ var _constants_colors__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(9);
-/* harmony import */ var _constants_media__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(10);
+/* harmony import */ var _NavbarGlobalNav__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(28);
+/* harmony import */ var _svg_inline_logo_black_svg__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(29);
+/* harmony import */ var _svg_inline_logo_white_svg__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(30);
+/* harmony import */ var _constants_colors__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(9);
+/* harmony import */ var _constants_media__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(10);
 function _extends() { _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends.apply(this, arguments); }
 
 function _templateObject() {
@@ -1687,6 +1704,7 @@ function _objectWithoutPropertiesLoose(source, excluded) { if (source == null) r
 
 
 
+
 /*
   inner components
 */
@@ -1703,8 +1721,8 @@ var NavbarWrapper = styled_components__WEBPACK_IMPORTED_MODULE_2___default()(fun
   componentId: "c3ezxu-0"
 })(["align-items:center;box-shadow:0 5px 10px 0 #00000026;display:flex;height:75px;justify-content:space-between;padding:0 7vw;position:relative;z-index:20;background-color:", ";", ";"], function (_ref2) {
   var color = _ref2.color;
-  return _constants_colors__WEBPACK_IMPORTED_MODULE_7__["default"][color];
-}, _constants_media__WEBPACK_IMPORTED_MODULE_8__["default"].md(_templateObject()));
+  return _constants_colors__WEBPACK_IMPORTED_MODULE_8__["default"][color];
+}, _constants_media__WEBPACK_IMPORTED_MODULE_9__["default"].md(_templateObject()));
 var NavbarLogoLink = styled_components__WEBPACK_IMPORTED_MODULE_2___default.a.a.withConfig({
   displayName: "Navbar__NavbarLogoLink",
   componentId: "c3ezxu-1"
@@ -1733,7 +1751,7 @@ var Navbar = function Navbar(_ref3) {
     href: "http://www.brown.edu/",
     target: "_blank",
     rel: "noopener noreferrer"
-  }, color === 'white' ? react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_svg_inline_logo_black_svg__WEBPACK_IMPORTED_MODULE_5__["default"], logoProps) : react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_svg_inline_logo_white_svg__WEBPACK_IMPORTED_MODULE_6__["default"], logoProps)), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(NavbarChildrenWrapper, null, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_NavbarContext__WEBPACK_IMPORTED_MODULE_3__["default"].Provider, {
+  }, color === 'white' ? react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_svg_inline_logo_black_svg__WEBPACK_IMPORTED_MODULE_6__["default"], logoProps) : react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_svg_inline_logo_white_svg__WEBPACK_IMPORTED_MODULE_7__["default"], logoProps)), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(NavbarChildrenWrapper, null, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_NavbarContext__WEBPACK_IMPORTED_MODULE_3__["default"].Provider, {
     value: {
       color: color
     }
@@ -1749,6 +1767,7 @@ Navbar.defaultProps = {
   children: null
 };
 Navbar.Nav = _NavbarNav__WEBPACK_IMPORTED_MODULE_4__["default"];
+Navbar.GlobalNav = _NavbarGlobalNav__WEBPACK_IMPORTED_MODULE_5__["default"];
 /* harmony default export */ __webpack_exports__["default"] = (Navbar);
 
 /***/ }),
@@ -1979,6 +1998,213 @@ module.exports = __WEBPACK_EXTERNAL_MODULE__27__;
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
+/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(4);
+/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(prop_types__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(5);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(6);
+/* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(styled_components__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var react_fns__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(26);
+/* harmony import */ var react_fns__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(react_fns__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var react_collapse__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(27);
+/* harmony import */ var react_collapse__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(react_collapse__WEBPACK_IMPORTED_MODULE_4__);
+/* harmony import */ var _NavbarContext__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(24);
+/* harmony import */ var _Hamburger__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(16);
+/* harmony import */ var _Nav__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(19);
+/* harmony import */ var _constants_breakpoints__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(11);
+/* harmony import */ var _constants_colors__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(9);
+/* harmony import */ var _constants_media__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(10);
+/* harmony import */ var _constants_typography__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(12);
+function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
+
+function _objectWithoutProperties(source, excluded) { if (source == null) return {}; var target = _objectWithoutPropertiesLoose(source, excluded); var key, i; if (Object.getOwnPropertySymbols) { var sourceSymbolKeys = Object.getOwnPropertySymbols(source); for (i = 0; i < sourceSymbolKeys.length; i++) { key = sourceSymbolKeys[i]; if (excluded.indexOf(key) >= 0) continue; if (!Object.prototype.propertyIsEnumerable.call(source, key)) continue; target[key] = source[key]; } } return target; }
+
+function _objectWithoutPropertiesLoose(source, excluded) { if (source == null) return {}; var target = {}; var sourceKeys = Object.keys(source); var key, i; for (i = 0; i < sourceKeys.length; i++) { key = sourceKeys[i]; if (excluded.indexOf(key) >= 0) continue; target[key] = source[key]; } return target; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
+
+function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
+
+function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === "object" || typeof call === "function")) { return call; } return _assertThisInitialized(self); }
+
+function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); if (superClass) _setPrototypeOf(subClass, superClass); }
+
+function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
+
+function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
+
+function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
+function _templateObject() {
+  var data = _taggedTemplateLiteral(["\n    padding: 0 33px 1rem 33px;\n  "]);
+
+  _templateObject = function _templateObject() {
+    return data;
+  };
+
+  return data;
+}
+
+function _taggedTemplateLiteral(strings, raw) { if (!raw) { raw = strings.slice(0); } return Object.freeze(Object.defineProperties(strings, { raw: { value: Object.freeze(raw) } })); }
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*
+  inner components
+*/
+
+var MenuToggleButton = styled_components__WEBPACK_IMPORTED_MODULE_2___default.a.button.withConfig({
+  displayName: "NavbarGlobalNav__MenuToggleButton",
+  componentId: "sc-1t3heaa-0"
+})(["background-color:transparent;border:none;cursor:pointer;font-size:1em;padding:0;"]);
+var MenuTitle = styled_components__WEBPACK_IMPORTED_MODULE_2___default.a.span.withConfig({
+  displayName: "NavbarGlobalNav__MenuTitle",
+  componentId: "sc-1t3heaa-1"
+})(["color:", ";font-family:", ";font-weight:bold;letter-spacing:0.5px;margin-left:10px;text-transform:uppercase;"], function (_ref) {
+  var color = _ref.color;
+  return _constants_colors__WEBPACK_IMPORTED_MODULE_9__["default"][color];
+}, _constants_typography__WEBPACK_IMPORTED_MODULE_11__["sansBold"]);
+var CollapseWrapper = styled_components__WEBPACK_IMPORTED_MODULE_2___default.a.div.withConfig({
+  displayName: "NavbarGlobalNav__CollapseWrapper",
+  componentId: "sc-1t3heaa-2"
+})(["box-shadow:0 5px 10px 0 #00000026;left:0;position:absolute;top:75px;width:100%;background-color:", ";"], function (_ref2) {
+  var color = _ref2.color;
+  return _constants_colors__WEBPACK_IMPORTED_MODULE_9__["default"][color];
+});
+var NavWrapper = styled_components__WEBPACK_IMPORTED_MODULE_2___default.a.div.withConfig({
+  displayName: "NavbarGlobalNav__NavWrapper",
+  componentId: "sc-1t3heaa-3"
+})(["padding:0 7vw 1rem;", ";"], _constants_media__WEBPACK_IMPORTED_MODULE_10__["default"].md(_templateObject()));
+/*
+  outer NavbarGlobalNav component
+*/
+
+var getChildColor = function getChildColor(color) {
+  switch (color) {
+    case 'white':
+      return 'red';
+    // brown
+
+    default:
+      return 'white';
+  }
+};
+
+var NavbarGlobalNav =
+/*#__PURE__*/
+function (_Component) {
+  _inherits(NavbarGlobalNav, _Component);
+
+  function NavbarGlobalNav() {
+    var _getPrototypeOf2;
+
+    var _this;
+
+    _classCallCheck(this, NavbarGlobalNav);
+
+    for (var _len = arguments.length, args = new Array(_len), _key = 0; _key < _len; _key++) {
+      args[_key] = arguments[_key];
+    }
+
+    _this = _possibleConstructorReturn(this, (_getPrototypeOf2 = _getPrototypeOf(NavbarGlobalNav)).call.apply(_getPrototypeOf2, [this].concat(args)));
+
+    _defineProperty(_assertThisInitialized(_assertThisInitialized(_this)), "state", {
+      navIsOpen: false
+    });
+
+    _defineProperty(_assertThisInitialized(_assertThisInitialized(_this)), "handleNavToggle", function () {
+      return _this.setState(function (_ref3) {
+        var navIsOpen = _ref3.navIsOpen;
+        return {
+          navIsOpen: !navIsOpen
+        };
+      });
+    });
+
+    return _this;
+  }
+
+  _createClass(NavbarGlobalNav, [{
+    key: "render",
+    value: function render() {
+      var _this2 = this;
+
+      var _this$props = this.props,
+          mobileNavBreakpoint = _this$props.mobileNavBreakpoint,
+          restProps = _objectWithoutProperties(_this$props, ["mobileNavBreakpoint"]);
+
+      var navIsOpen = this.state.navIsOpen;
+      return react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(react_fns__WEBPACK_IMPORTED_MODULE_3__["WindowSize"], {
+        render: function render(_ref4) {
+          var width = _ref4.width;
+          // TODO: update when width doesn't return 0 on initial render
+          // https://github.com/jaredpalmer/react-fns/issues/84
+          var currentWidth = width === 0 ? window.innerWidth : width;
+          var renderMobile = currentWidth < mobileNavBreakpoint;
+          return react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_NavbarContext__WEBPACK_IMPORTED_MODULE_5__["default"].Consumer, null, function (_ref5) {
+            var color = _ref5.color;
+            var childColor = getChildColor(color);
+            return react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", restProps, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(MenuToggleButton, {
+              type: "button",
+              "aria-controls": "navbar-global-nav-collapse",
+              "aria-expanded": navIsOpen,
+              "aria-label": "Toggle navigation",
+              onClick: _this2.handleNavToggle
+            }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_Hamburger__WEBPACK_IMPORTED_MODULE_6__["default"], {
+              tag: "div",
+              color: childColor,
+              isOpen: navIsOpen
+            }), !renderMobile && react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(MenuTitle, {
+              color: childColor
+            }, "Global Navigation")), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(CollapseWrapper, {
+              color: color
+            }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(react_collapse__WEBPACK_IMPORTED_MODULE_4__["Collapse"], {
+              isOpened: navIsOpen,
+              id: "navbar-global-nav-collapse"
+            }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(NavWrapper, null, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_Nav__WEBPACK_IMPORTED_MODULE_7__["default"], {
+              mobile: true,
+              color: childColor
+            }, _this2.props.children)))));
+          });
+        }
+      });
+    }
+  }]);
+
+  return NavbarGlobalNav;
+}(react__WEBPACK_IMPORTED_MODULE_1__["Component"]);
+
+NavbarGlobalNav.propTypes =  true ? {
+  mobileNavBreakpoint: prop_types__WEBPACK_IMPORTED_MODULE_0___default.a.number,
+  children: prop_types__WEBPACK_IMPORTED_MODULE_0___default.a.node.isRequired
+} : undefined;
+NavbarGlobalNav.defaultProps = {
+  mobileNavBreakpoint: _constants_breakpoints__WEBPACK_IMPORTED_MODULE_8__["default"].md
+};
+NavbarGlobalNav.Item = _Nav__WEBPACK_IMPORTED_MODULE_7__["default"].Item;
+NavbarGlobalNav.Link = _Nav__WEBPACK_IMPORTED_MODULE_7__["default"].Link;
+/* harmony default export */ __webpack_exports__["default"] = (NavbarGlobalNav);
+
+/***/ }),
+/* 29 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(5);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
@@ -2046,7 +2272,7 @@ function _objectWithoutProperties(obj, keys) { var target = {}; for (var i in ob
 });
 
 /***/ }),
-/* 29 */
+/* 30 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -2117,7 +2343,7 @@ function _objectWithoutProperties(obj, keys) { var target = {}; for (var i in ob
 });
 
 /***/ }),
-/* 30 */
+/* 31 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -2277,7 +2503,7 @@ function (_Component) {
               "aria-label": "Toggle navigation",
               onClick: _this2.handleMobileNavToggle
             }, mobileMenuTitle), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_Hamburger__WEBPACK_IMPORTED_MODULE_5__["default"], {
-              "aria-controls": "site-nav-mobile-collapse",
+              tabIndex: "-1",
               isOpen: mobileNavIsOpen,
               onOpen: _this2.handleMobileNavToggle,
               onClose: _this2.handleMobileNavToggle
@@ -2316,7 +2542,7 @@ SiteNav.Link = _Nav__WEBPACK_IMPORTED_MODULE_6__["default"].Link;
 /* harmony default export */ __webpack_exports__["default"] = (SiteNav);
 
 /***/ }),
-/* 31 */
+/* 32 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";

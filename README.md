@@ -135,22 +135,18 @@ _Brown University Theme is designed to be used alongside [Bootstrap](https://www
   import React from 'react';
   import { Hamburger } from 'brown-university-theme';
 
-  export default () => (
-    <Hamburger
-      onOpen={() => 'your `handleOpen` fn'}
-      onClose={() => 'your `handleClose` fn'}
-    />
-  );
+  export default () => <Hamburger />;
   ```
 
   **Properties:**
 
-  | property | propType                                                                         | required | default |
-  | -------- | -------------------------------------------------------------------------------- | -------- | ------- |
-  | color    | oneOf(['red', 'yellow', 'brown', 'gray', 'emerald', 'skyblue', 'navy', 'white']) | -        | 'red'   |
-  | isOpen   | bool                                                                             | -        | false   |
-  | onOpen   | func                                                                             | true     | -       |
-  | onClose  | func                                                                             | true     | -       |
+  | property | propType                                                                         | required | default  |
+  | -------- | -------------------------------------------------------------------------------- | -------- | -------- |
+  | color    | oneOf(['red', 'yellow', 'brown', 'gray', 'emerald', 'skyblue', 'navy', 'white']) | -        | 'red'    |
+  | isOpen   | bool                                                                             | -        | false    |
+  | tag      | oneOf(['button', 'div'])                                                         | -        | 'button' |
+  | onOpen   | func                                                                             | -        | noop     |
+  | onClose  | func                                                                             | -        | noop     |
 
 - `Loader`
 

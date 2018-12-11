@@ -3,4 +3,4 @@ import { storiesOf } from '@storybook/react';
 
 import { Code } from '../src';
 
-storiesOf('Code', module).add('default', () => <Code>small</Code>);
+storiesOf('Code', module).add('default', () => <Code>code</Code>);

@@ -4,6 +4,7 @@ import styled from 'styled-components';
 
 import NavbarContext from './NavbarContext';
 import NavbarNav from './NavbarNav';
+import NavbarGlobalNav from './NavbarGlobalNav';
 import LogoBlackSVG from '../../svg/inline/logo-black.svg';
 import LogoWhiteSVG from '../../svg/inline/logo-white.svg';
 import colors from '../../constants/colors';
@@ -77,5 +78,6 @@ Navbar.defaultProps = {
 };
 
 Navbar.Nav = NavbarNav;
+Navbar.GlobalNav = NavbarGlobalNav;
 
 export default Navbar;

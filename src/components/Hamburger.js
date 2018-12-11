@@ -27,13 +27,14 @@ const hamburgerTransitionCSS = css`
 /*
   inner components
 */
-const HamburgerButton = styled.button`
+const HamburgerElement = styled.div`
   background: transparent;
   border: none;
   cursor: pointer;
-  height: 24px;
-  padding: 0 25px 3px 0;
-  width: 30px;
+  ${props => props.as === 'div' && 'display: inline-block;'}
+  ${props => props.as === 'button' && 'height: 24px;'}
+  padding: ${props =>
+    props.as === 'button' ? '0 25px 3px 0' : '0 25px 7px 0'};
 `;
 
 // TODO: revisit when filtering props from DOM is supported
@@ -128,19 +129,20 @@ class Hamburger extends Component {
     );
 
   render() {
-    const { color, onOpen, onClose, ...restProps } = this.props;
+    const { color, tag, onOpen, onClose, ...restProps } = this.props;
     const { isOpen } = this.state;
 
     return (
-      <HamburgerButton
+      <HamburgerElement
         {...restProps}
-        type="button"
-        aria-expanded={isOpen}
-        aria-label="Toggle navigation"
+        as={tag}
+        type={tag === 'button' ? 'button' : null}
+        aria-expanded={tag === 'button' ? isOpen : null}
+        aria-label={tag === 'button' ? 'Toggle navigation' : null}
         onClick={this.handleClick}
       >
         <HamburgerBars color={color} isOpen={isOpen} />
-      </HamburgerButton>
+      </HamburgerElement>
     );
   }
 }
@@ -148,13 +150,17 @@ class Hamburger extends Component {
 Hamburger.propTypes = {
   color: PropTypes.oneOf(['red', 'gray', 'black', 'white']),
   isOpen: PropTypes.bool,
-  onOpen: PropTypes.func.isRequired,
-  onClose: PropTypes.func.isRequired
+  tag: PropTypes.oneOf(['button', 'div']),
+  onOpen: PropTypes.func,
+  onClose: PropTypes.func
 };
 
 Hamburger.defaultProps = {
   color: 'red',
-  isOpen: false
+  isOpen: false,
+  tag: 'button',
+  onOpen: () => undefined,
+  onClose: () => undefined
 };
 
 export default Hamburger;

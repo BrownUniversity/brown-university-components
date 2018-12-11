@@ -129,7 +129,7 @@ class SiteNav extends Component {
                       {mobileMenuTitle}
                     </MobileMenuTitle>
                     <Hamburger
-                      aria-controls="site-nav-mobile-collapse"
+                      tabIndex="-1"
                       isOpen={mobileNavIsOpen}
                       onOpen={this.handleMobileNavToggle}
                       onClose={this.handleMobileNavToggle}
