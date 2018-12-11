@@ -30,7 +30,7 @@ const MobileWrapper = styled.div`
   border: 1px solid #ddd;
 `;
 
-const MobileMenuWrapper = styled.div`
+const MobileToggleWrapper = styled.div`
   align-items: center;
   display: flex;
   flex-direction: row;
@@ -41,7 +41,7 @@ const MobileMenuWrapper = styled.div`
   width: 92%;
 `;
 
-const MobileMenuTitle = styled.button`
+const MobileToggleTitle = styled.button`
   background-color: transparent;
   border: none;
   cursor: pointer;
@@ -78,7 +78,7 @@ const BannerWrapper = styled.div`
     `}
 `;
 
-const Wrapper = styled.div`
+const NavWrapper = styled.div`
   display: flex;
   justify-content: center;
   padding: 20px 0 30px;
@@ -99,8 +99,8 @@ class SiteNav extends Component {
 
   render() {
     const {
-      mobileMenuTitle,
-      mobileNavBreakpoint,
+      mobileToggleTitle,
+      mobileBreakpoint,
       banner,
       ...restProps
     } = this.props;
@@ -112,29 +112,29 @@ class SiteNav extends Component {
           // TODO: update when width doesn't return 0 on initial render
           // https://github.com/jaredpalmer/react-fns/issues/84
           const currentWidth = width === 0 ? window.innerWidth : width;
-          const renderMobile = currentWidth < mobileNavBreakpoint;
+          const renderMobile = currentWidth < mobileBreakpoint;
 
           if (renderMobile) {
             return (
               <MobileBannerWrapper {...restProps} banner={banner}>
                 <MobileWrapper>
-                  <MobileMenuWrapper>
-                    <MobileMenuTitle
+                  <MobileToggleWrapper>
+                    <MobileToggleTitle
                       type="button"
                       aria-controls="site-nav-mobile-collapse"
                       aria-expanded={mobileNavIsOpen}
                       aria-label="Toggle navigation"
                       onClick={this.handleMobileNavToggle}
                     >
-                      {mobileMenuTitle}
-                    </MobileMenuTitle>
+                      {mobileToggleTitle}
+                    </MobileToggleTitle>
                     <Hamburger
                       tabIndex="-1"
                       isOpen={mobileNavIsOpen}
                       onOpen={this.handleMobileNavToggle}
                       onClose={this.handleMobileNavToggle}
                     />
-                  </MobileMenuWrapper>
+                  </MobileToggleWrapper>
                   <Collapse
                     isOpened={mobileNavIsOpen}
                     id="site-nav-mobile-collapse"
@@ -150,9 +150,9 @@ class SiteNav extends Component {
 
           return (
             <BannerWrapper {...restProps} banner={banner}>
-              <Wrapper>
+              <NavWrapper>
                 <Nav>{this.props.children}</Nav>
-              </Wrapper>
+              </NavWrapper>
             </BannerWrapper>
           );
         }}
@@ -162,15 +162,15 @@ class SiteNav extends Component {
 }
 
 SiteNav.propTypes = {
-  mobileMenuTitle: PropTypes.string,
-  mobileNavBreakpoint: PropTypes.number,
+  mobileToggleTitle: PropTypes.string,
+  mobileBreakpoint: PropTypes.number,
   banner: PropTypes.bool,
   children: PropTypes.node.isRequired
 };
 
 SiteNav.defaultProps = {
-  mobileMenuTitle: 'Site Navigation',
-  mobileNavBreakpoint: breakpoints.md,
+  mobileToggleTitle: 'Site Navigation',
+  mobileBreakpoint: breakpoints.md,
   banner: false
 };
 

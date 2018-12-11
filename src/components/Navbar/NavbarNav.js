@@ -56,7 +56,7 @@ class NavbarNav extends Component {
     }));
 
   render() {
-    const { mobileNavBreakpoint, ...restProps } = this.props;
+    const { mobileBreakpoint, ...restProps } = this.props;
     const { mobileNavIsOpen } = this.state;
 
     return (
@@ -65,7 +65,7 @@ class NavbarNav extends Component {
           // TODO: update when width doesn't return 0 on initial render
           // https://github.com/jaredpalmer/react-fns/issues/84
           const currentWidth = width === 0 ? window.innerWidth : width;
-          const renderMobile = currentWidth < mobileNavBreakpoint;
+          const renderMobile = currentWidth < mobileBreakpoint;
 
           return (
             <NavbarContext.Consumer>
@@ -113,12 +113,12 @@ class NavbarNav extends Component {
 }
 
 NavbarNav.propTypes = {
-  mobileNavBreakpoint: PropTypes.number,
+  mobileBreakpoint: PropTypes.number,
   children: PropTypes.node.isRequired
 };
 
 NavbarNav.defaultProps = {
-  mobileNavBreakpoint: breakpoints.md
+  mobileBreakpoint: breakpoints.md
 };
 
 NavbarNav.Item = Nav.Item;

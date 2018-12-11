@@ -15,7 +15,7 @@ import { sansBold } from '../../constants/typography';
 /*
   inner components
 */
-const MenuToggleButton = styled.button`
+const ToggleButton = styled.button`
   background-color: transparent;
   border: none;
   cursor: pointer;
@@ -23,7 +23,7 @@ const MenuToggleButton = styled.button`
   padding: 0;
 `;
 
-const MenuTitle = styled.span`
+const ToggleTitle = styled.span`
   color: ${({ color }) => colors[color]};
   font-family: ${sansBold};
   font-weight: bold;
@@ -74,7 +74,7 @@ class NavbarGlobalNav extends Component {
     }));
 
   render() {
-    const { mobileNavBreakpoint, ...restProps } = this.props;
+    const { toggleTitle, mobileBreakpoint, ...restProps } = this.props;
     const { navIsOpen } = this.state;
 
     return (
@@ -83,7 +83,7 @@ class NavbarGlobalNav extends Component {
           // TODO: update when width doesn't return 0 on initial render
           // https://github.com/jaredpalmer/react-fns/issues/84
           const currentWidth = width === 0 ? window.innerWidth : width;
-          const renderMobile = currentWidth < mobileNavBreakpoint;
+          const renderMobile = currentWidth < mobileBreakpoint;
 
           return (
             <NavbarContext.Consumer>
@@ -92,7 +92,7 @@ class NavbarGlobalNav extends Component {
 
                 return (
                   <div {...restProps}>
-                    <MenuToggleButton
+                    <ToggleButton
                       type="button"
                       aria-controls="navbar-global-nav-collapse"
                       aria-expanded={navIsOpen}
@@ -105,11 +105,11 @@ class NavbarGlobalNav extends Component {
                         isOpen={navIsOpen}
                       />
                       {!renderMobile && (
-                        <MenuTitle color={childColor}>
-                          Global Navigation
-                        </MenuTitle>
+                        <ToggleTitle color={childColor}>
+                          {toggleTitle}
+                        </ToggleTitle>
                       )}
-                    </MenuToggleButton>
+                    </ToggleButton>
                     <CollapseWrapper color={color}>
                       <Collapse
                         isOpened={navIsOpen}
@@ -134,12 +134,14 @@ class NavbarGlobalNav extends Component {
 }
 
 NavbarGlobalNav.propTypes = {
-  mobileNavBreakpoint: PropTypes.number,
+  toggleTitle: PropTypes.string,
+  mobileBreakpoint: PropTypes.number,
   children: PropTypes.node.isRequired
 };
 
 NavbarGlobalNav.defaultProps = {
-  mobileNavBreakpoint: breakpoints.md
+  toggleTitle: 'Global Navigation',
+  mobileBreakpoint: breakpoints.md
 };
 
 NavbarGlobalNav.Item = Nav.Item;

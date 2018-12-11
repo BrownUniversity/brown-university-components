@@ -259,12 +259,12 @@ _Brown University Theme is designed to be used alongside [Bootstrap](https://www
 
   **`SiteNav` Properties:**
 
-  | property            | propType | required | default         |
-  | ------------------- | -------- | -------- | --------------- |
-  | mobileMenuTitle     | string   | -        | Site Navigation |
-  | mobileNavBreakpoint | number   | -        | 768             |
-  | banner              | bool     | -        | false           |
-  | children            | node     | true     | undefined       |
+  | property          | propType | required | default         |
+  | ----------------- | -------- | -------- | --------------- |
+  | mobileToggleTitle | string   | -        | Site Navigation |
+  | mobileBreakpoint  | number   | -        | 768             |
+  | banner            | bool     | -        | false           |
+  | children          | node     | true     | undefined       |
 
   **`SiteNav.Item` Properties:**
 

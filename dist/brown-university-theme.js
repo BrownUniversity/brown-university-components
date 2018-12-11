@@ -865,8 +865,8 @@ var hamburgerTransitionCSS = Object(styled_components__WEBPACK_IMPORTED_MODULE_2
   inner components
 */
 
-var HamburgerElement = styled_components__WEBPACK_IMPORTED_MODULE_2___default.a.div.withConfig({
-  displayName: "Hamburger__HamburgerElement",
+var HamburgerTag = styled_components__WEBPACK_IMPORTED_MODULE_2___default.a.div.withConfig({
+  displayName: "Hamburger__HamburgerTag",
   componentId: "u53pwq-0"
 })(["background:transparent;border:none;cursor:pointer;", " ", " padding:", ";"], function (props) {
   return props.as === 'div' && 'display: inline-block;';
@@ -966,11 +966,11 @@ function (_Component) {
           restProps = _objectWithoutProperties(_this$props, ["color", "tag", "onOpen", "onClose"]);
 
       var isOpen = this.state.isOpen;
-      return react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(HamburgerElement, _extends({}, restProps, {
+      return react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(HamburgerTag, _extends({}, restProps, {
         as: tag,
         type: tag === 'button' ? 'button' : null,
-        "aria-expanded": tag === 'button' && isOpen,
-        "aria-label": tag === 'button' && 'Toggle navigation',
+        "aria-expanded": tag === 'button' ? isOpen : null,
+        "aria-label": tag === 'button' ? 'Toggle navigation' : null,
         onClick: this.handleClick
       }), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(HamburgerBars, {
         color: color,
@@ -1459,9 +1459,10 @@ var getLineHeight = function getLineHeight(_ref5) {
 };
 
 var getOpacity = function getOpacity(_ref6) {
-  var disabled = _ref6.disabled;
+  var disabled = _ref6.disabled,
+      color = _ref6.color;
 
-  if (disabled) {
+  if (disabled && color !== 'white') {
     return '0.65';
   }
 
@@ -1923,8 +1924,8 @@ function (_Component) {
       var _this2 = this;
 
       var _this$props = this.props,
-          mobileNavBreakpoint = _this$props.mobileNavBreakpoint,
-          restProps = _objectWithoutProperties(_this$props, ["mobileNavBreakpoint"]);
+          mobileBreakpoint = _this$props.mobileBreakpoint,
+          restProps = _objectWithoutProperties(_this$props, ["mobileBreakpoint"]);
 
       var mobileNavIsOpen = this.state.mobileNavIsOpen;
       return react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(react_fns__WEBPACK_IMPORTED_MODULE_3__["WindowSize"], {
@@ -1933,7 +1934,7 @@ function (_Component) {
           // TODO: update when width doesn't return 0 on initial render
           // https://github.com/jaredpalmer/react-fns/issues/84
           var currentWidth = width === 0 ? window.innerWidth : width;
-          var renderMobile = currentWidth < mobileNavBreakpoint;
+          var renderMobile = currentWidth < mobileBreakpoint;
           return react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_NavbarContext__WEBPACK_IMPORTED_MODULE_5__["default"].Consumer, null, function (_ref4) {
             var color = _ref4.color;
             var childColor = getChildColor(color);
@@ -1970,11 +1971,11 @@ function (_Component) {
 }(react__WEBPACK_IMPORTED_MODULE_1__["Component"]);
 
 NavbarNav.propTypes =  true ? {
-  mobileNavBreakpoint: prop_types__WEBPACK_IMPORTED_MODULE_0___default.a.number,
+  mobileBreakpoint: prop_types__WEBPACK_IMPORTED_MODULE_0___default.a.number,
   children: prop_types__WEBPACK_IMPORTED_MODULE_0___default.a.node.isRequired
 } : undefined;
 NavbarNav.defaultProps = {
-  mobileNavBreakpoint: _constants_breakpoints__WEBPACK_IMPORTED_MODULE_8__["default"].md
+  mobileBreakpoint: _constants_breakpoints__WEBPACK_IMPORTED_MODULE_8__["default"].md
 };
 NavbarNav.Item = _Nav__WEBPACK_IMPORTED_MODULE_7__["default"].Item;
 NavbarNav.Link = _Nav__WEBPACK_IMPORTED_MODULE_7__["default"].Link;
@@ -2067,12 +2068,12 @@ function _taggedTemplateLiteral(strings, raw) { if (!raw) { raw = strings.slice(
   inner components
 */
 
-var MenuToggleButton = styled_components__WEBPACK_IMPORTED_MODULE_2___default.a.button.withConfig({
-  displayName: "NavbarGlobalNav__MenuToggleButton",
+var ToggleButton = styled_components__WEBPACK_IMPORTED_MODULE_2___default.a.button.withConfig({
+  displayName: "NavbarGlobalNav__ToggleButton",
   componentId: "sc-1t3heaa-0"
 })(["background-color:transparent;border:none;cursor:pointer;font-size:1em;padding:0;"]);
-var MenuTitle = styled_components__WEBPACK_IMPORTED_MODULE_2___default.a.span.withConfig({
-  displayName: "NavbarGlobalNav__MenuTitle",
+var ToggleTitle = styled_components__WEBPACK_IMPORTED_MODULE_2___default.a.span.withConfig({
+  displayName: "NavbarGlobalNav__ToggleTitle",
   componentId: "sc-1t3heaa-1"
 })(["color:", ";font-family:", ";font-weight:bold;letter-spacing:0.5px;margin-left:10px;text-transform:uppercase;"], function (_ref) {
   var color = _ref.color;
@@ -2144,8 +2145,9 @@ function (_Component) {
       var _this2 = this;
 
       var _this$props = this.props,
-          mobileNavBreakpoint = _this$props.mobileNavBreakpoint,
-          restProps = _objectWithoutProperties(_this$props, ["mobileNavBreakpoint"]);
+          toggleTitle = _this$props.toggleTitle,
+          mobileBreakpoint = _this$props.mobileBreakpoint,
+          restProps = _objectWithoutProperties(_this$props, ["toggleTitle", "mobileBreakpoint"]);
 
       var navIsOpen = this.state.navIsOpen;
       return react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(react_fns__WEBPACK_IMPORTED_MODULE_3__["WindowSize"], {
@@ -2154,11 +2156,11 @@ function (_Component) {
           // TODO: update when width doesn't return 0 on initial render
           // https://github.com/jaredpalmer/react-fns/issues/84
           var currentWidth = width === 0 ? window.innerWidth : width;
-          var renderMobile = currentWidth < mobileNavBreakpoint;
+          var renderMobile = currentWidth < mobileBreakpoint;
           return react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_NavbarContext__WEBPACK_IMPORTED_MODULE_5__["default"].Consumer, null, function (_ref5) {
             var color = _ref5.color;
             var childColor = getChildColor(color);
-            return react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", restProps, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(MenuToggleButton, {
+            return react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", restProps, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(ToggleButton, {
               type: "button",
               "aria-controls": "navbar-global-nav-collapse",
               "aria-expanded": navIsOpen,
@@ -2168,9 +2170,9 @@ function (_Component) {
               tag: "div",
               color: childColor,
               isOpen: navIsOpen
-            }), !renderMobile && react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(MenuTitle, {
+            }), !renderMobile && react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(ToggleTitle, {
               color: childColor
-            }, "Global Navigation")), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(CollapseWrapper, {
+            }, toggleTitle)), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(CollapseWrapper, {
               color: color
             }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(react_collapse__WEBPACK_IMPORTED_MODULE_4__["Collapse"], {
               isOpened: navIsOpen,
@@ -2189,11 +2191,13 @@ function (_Component) {
 }(react__WEBPACK_IMPORTED_MODULE_1__["Component"]);
 
 NavbarGlobalNav.propTypes =  true ? {
-  mobileNavBreakpoint: prop_types__WEBPACK_IMPORTED_MODULE_0___default.a.number,
+  toggleTitle: prop_types__WEBPACK_IMPORTED_MODULE_0___default.a.string,
+  mobileBreakpoint: prop_types__WEBPACK_IMPORTED_MODULE_0___default.a.number,
   children: prop_types__WEBPACK_IMPORTED_MODULE_0___default.a.node.isRequired
 } : undefined;
 NavbarGlobalNav.defaultProps = {
-  mobileNavBreakpoint: _constants_breakpoints__WEBPACK_IMPORTED_MODULE_8__["default"].md
+  toggleTitle: 'Global Navigation',
+  mobileBreakpoint: _constants_breakpoints__WEBPACK_IMPORTED_MODULE_8__["default"].md
 };
 NavbarGlobalNav.Item = _Nav__WEBPACK_IMPORTED_MODULE_7__["default"].Item;
 NavbarGlobalNav.Link = _Nav__WEBPACK_IMPORTED_MODULE_7__["default"].Link;
@@ -2413,12 +2417,12 @@ var MobileWrapper = styled_components__WEBPACK_IMPORTED_MODULE_2___default.a.div
   displayName: "SiteNav__MobileWrapper",
   componentId: "sc-1hgikms-1"
 })(["border:1px solid #ddd;"]);
-var MobileMenuWrapper = styled_components__WEBPACK_IMPORTED_MODULE_2___default.a.div.withConfig({
-  displayName: "SiteNav__MobileMenuWrapper",
+var MobileToggleWrapper = styled_components__WEBPACK_IMPORTED_MODULE_2___default.a.div.withConfig({
+  displayName: "SiteNav__MobileToggleWrapper",
   componentId: "sc-1hgikms-2"
 })(["align-items:center;display:flex;flex-direction:row;flex-wrap:wrap;justify-content:space-between;margin:0 auto;padding:1rem 0 1rem;width:92%;"]);
-var MobileMenuTitle = styled_components__WEBPACK_IMPORTED_MODULE_2___default.a.button.withConfig({
-  displayName: "SiteNav__MobileMenuTitle",
+var MobileToggleTitle = styled_components__WEBPACK_IMPORTED_MODULE_2___default.a.button.withConfig({
+  displayName: "SiteNav__MobileToggleTitle",
   componentId: "sc-1hgikms-3"
 })(["background-color:transparent;border:none;cursor:pointer;color:", ";font-family:", ";font-size:1em;font-weight:bold;letter-spacing:0.5px;padding:11px 5px;text-transform:uppercase;"], _constants_colors__WEBPACK_IMPORTED_MODULE_8__["default"].red, _constants_typography__WEBPACK_IMPORTED_MODULE_9__["sansBold"]);
 var MobileNavWrapper = styled_components__WEBPACK_IMPORTED_MODULE_2___default.a.div.withConfig({
@@ -2431,8 +2435,8 @@ var BannerWrapper = styled_components__WEBPACK_IMPORTED_MODULE_2___default.a.div
 })(["background-color:", ";", ""], _constants_colors__WEBPACK_IMPORTED_MODULE_8__["default"].white, function (props) {
   return props.banner && Object(styled_components__WEBPACK_IMPORTED_MODULE_2__["css"])(["margin:0 auto;margin-top:-50px;max-width:1300px;position:relative;width:96%;z-index:10;"]);
 });
-var Wrapper = styled_components__WEBPACK_IMPORTED_MODULE_2___default.a.div.withConfig({
-  displayName: "SiteNav__Wrapper",
+var NavWrapper = styled_components__WEBPACK_IMPORTED_MODULE_2___default.a.div.withConfig({
+  displayName: "SiteNav__NavWrapper",
   componentId: "sc-1hgikms-6"
 })(["display:flex;justify-content:center;padding:20px 0 30px;"]);
 /*
@@ -2479,10 +2483,10 @@ function (_Component) {
       var _this2 = this;
 
       var _this$props = this.props,
-          mobileMenuTitle = _this$props.mobileMenuTitle,
-          mobileNavBreakpoint = _this$props.mobileNavBreakpoint,
+          mobileToggleTitle = _this$props.mobileToggleTitle,
+          mobileBreakpoint = _this$props.mobileBreakpoint,
           banner = _this$props.banner,
-          restProps = _objectWithoutProperties(_this$props, ["mobileMenuTitle", "mobileNavBreakpoint", "banner"]);
+          restProps = _objectWithoutProperties(_this$props, ["mobileToggleTitle", "mobileBreakpoint", "banner"]);
 
       var mobileNavIsOpen = this.state.mobileNavIsOpen;
       return react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(react_fns__WEBPACK_IMPORTED_MODULE_3__["WindowSize"], {
@@ -2491,18 +2495,18 @@ function (_Component) {
           // TODO: update when width doesn't return 0 on initial render
           // https://github.com/jaredpalmer/react-fns/issues/84
           var currentWidth = width === 0 ? window.innerWidth : width;
-          var renderMobile = currentWidth < mobileNavBreakpoint;
+          var renderMobile = currentWidth < mobileBreakpoint;
 
           if (renderMobile) {
             return react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(MobileBannerWrapper, _extends({}, restProps, {
               banner: banner
-            }), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(MobileWrapper, null, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(MobileMenuWrapper, null, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(MobileMenuTitle, {
+            }), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(MobileWrapper, null, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(MobileToggleWrapper, null, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(MobileToggleTitle, {
               type: "button",
               "aria-controls": "site-nav-mobile-collapse",
               "aria-expanded": mobileNavIsOpen,
               "aria-label": "Toggle navigation",
               onClick: _this2.handleMobileNavToggle
-            }, mobileMenuTitle), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_Hamburger__WEBPACK_IMPORTED_MODULE_5__["default"], {
+            }, mobileToggleTitle), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_Hamburger__WEBPACK_IMPORTED_MODULE_5__["default"], {
               tabIndex: "-1",
               isOpen: mobileNavIsOpen,
               onOpen: _this2.handleMobileNavToggle,
@@ -2517,7 +2521,7 @@ function (_Component) {
 
           return react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(BannerWrapper, _extends({}, restProps, {
             banner: banner
-          }), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(Wrapper, null, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_Nav__WEBPACK_IMPORTED_MODULE_6__["default"], null, _this2.props.children)));
+          }), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(NavWrapper, null, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_Nav__WEBPACK_IMPORTED_MODULE_6__["default"], null, _this2.props.children)));
         }
       });
     }
@@ -2527,14 +2531,14 @@ function (_Component) {
 }(react__WEBPACK_IMPORTED_MODULE_1__["Component"]);
 
 SiteNav.propTypes =  true ? {
-  mobileMenuTitle: prop_types__WEBPACK_IMPORTED_MODULE_0___default.a.string,
-  mobileNavBreakpoint: prop_types__WEBPACK_IMPORTED_MODULE_0___default.a.number,
+  mobileToggleTitle: prop_types__WEBPACK_IMPORTED_MODULE_0___default.a.string,
+  mobileBreakpoint: prop_types__WEBPACK_IMPORTED_MODULE_0___default.a.number,
   banner: prop_types__WEBPACK_IMPORTED_MODULE_0___default.a.bool,
   children: prop_types__WEBPACK_IMPORTED_MODULE_0___default.a.node.isRequired
 } : undefined;
 SiteNav.defaultProps = {
-  mobileMenuTitle: 'Site Navigation',
-  mobileNavBreakpoint: _constants_breakpoints__WEBPACK_IMPORTED_MODULE_7__["default"].md,
+  mobileToggleTitle: 'Site Navigation',
+  mobileBreakpoint: _constants_breakpoints__WEBPACK_IMPORTED_MODULE_7__["default"].md,
   banner: false
 };
 SiteNav.Item = _Nav__WEBPACK_IMPORTED_MODULE_6__["default"].Item;

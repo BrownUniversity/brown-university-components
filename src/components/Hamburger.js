@@ -27,7 +27,7 @@ const hamburgerTransitionCSS = css`
 /*
   inner components
 */
-const HamburgerElement = styled.div`
+const HamburgerTag = styled.div`
   background: transparent;
   border: none;
   cursor: pointer;
@@ -133,7 +133,7 @@ class Hamburger extends Component {
     const { isOpen } = this.state;
 
     return (
-      <HamburgerElement
+      <HamburgerTag
         {...restProps}
         as={tag}
         type={tag === 'button' ? 'button' : null}
@@ -142,7 +142,7 @@ class Hamburger extends Component {
         onClick={this.handleClick}
       >
         <HamburgerBars color={color} isOpen={isOpen} />
-      </HamburgerElement>
+      </HamburgerTag>
     );
   }
 }
