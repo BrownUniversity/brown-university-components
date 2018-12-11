@@ -109,8 +109,7 @@ class SiteNav extends Component {
     return (
       <WindowSize
         render={({ width }) => {
-          // TODO: update when width doesn't return 0 on initial render
-          // https://github.com/jaredpalmer/react-fns/issues/84
+          // TODO: update when `width` doesn't return 0 on initial render (see `react-fns` issue 84)
           const currentWidth = width === 0 ? window.innerWidth : width;
           const renderMobile = currentWidth < mobileBreakpoint;
 

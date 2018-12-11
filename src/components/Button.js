@@ -157,8 +157,7 @@ const getColorWithHover = ({ color, outline, inverse, disabled }) => {
 /*
   inner Tag component
 */
-// TODO: filter color prop from DOM
-// https://github.com/styled-components/styled-components/issues/439
+// TODO: filter color prop with `as` usage (see `styled-components` issue 439)
 const Tag = styled.div`
   ${buttonCSS}
   background-color: ${props => getBackgroundColor(props)};

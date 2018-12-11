@@ -184,8 +184,7 @@ function _objectWithoutPropertiesLoose(source, excluded) { if (source == null) r
 /*
   inner Tag component
 */
-// TODO: revisit when filtering props from DOM is supported
-// https://github.com/styled-components/styled-components/issues/439
+// filter props so they don't become dom attributes (see `styled-components` issue 439)
 
 var Tag = styled_components__WEBPACK_IMPORTED_MODULE_2___default()(function (_ref) {
   var url = _ref.url,
@@ -680,8 +679,7 @@ var getColorWithHover = function getColorWithHover(_ref7) {
 /*
   inner Tag component
 */
-// TODO: filter color prop from DOM
-// https://github.com/styled-components/styled-components/issues/439
+// TODO: filter color prop with `as` usage (see `styled-components` issue 439)
 
 
 var Tag = styled_components__WEBPACK_IMPORTED_MODULE_2___default.a.div.withConfig({
@@ -874,8 +872,7 @@ var HamburgerTag = styled_components__WEBPACK_IMPORTED_MODULE_2___default.a.div.
   return props.as === 'button' && 'height: 24px;';
 }, function (props) {
   return props.as === 'button' ? '0 25px 3px 0' : '0 25px 7px 0';
-}); // TODO: revisit when filtering props from DOM is supported
-// https://github.com/styled-components/styled-components/issues/439
+}); // filter props so they don't become dom attributes (see `styled-components` issue 439)
 
 var HamburgerBars = styled_components__WEBPACK_IMPORTED_MODULE_2___default()(function (_ref2) {
   var color = _ref2.color,
@@ -1135,6 +1132,10 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _NavItem__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(21);
 /* harmony import */ var _NavLink__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(22);
 /* harmony import */ var _constants_colors__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(9);
+function _objectWithoutProperties(source, excluded) { if (source == null) return {}; var target = _objectWithoutPropertiesLoose(source, excluded); var key, i; if (Object.getOwnPropertySymbols) { var sourceSymbolKeys = Object.getOwnPropertySymbols(source); for (i = 0; i < sourceSymbolKeys.length; i++) { key = sourceSymbolKeys[i]; if (excluded.indexOf(key) >= 0) continue; if (!Object.prototype.propertyIsEnumerable.call(source, key)) continue; target[key] = source[key]; } } return target; }
+
+function _objectWithoutPropertiesLoose(source, excluded) { if (source == null) return {}; var target = {}; var sourceKeys = Object.keys(source); var key, i; for (i = 0; i < sourceKeys.length; i++) { key = sourceKeys[i]; if (excluded.indexOf(key) >= 0) continue; target[key] = source[key]; } return target; }
+
 
 
 
@@ -1190,9 +1191,18 @@ var getWidth = function getWidth(_ref4) {
 /*
   inner Tag component
 */
+// filter props so they don't become dom attributes (see `styled-components` issue 439)
 
 
-var Tag = styled_components__WEBPACK_IMPORTED_MODULE_2___default.a.ul.withConfig({
+var Tag = styled_components__WEBPACK_IMPORTED_MODULE_2___default()(function (_ref5) {
+  var color = _ref5.color,
+      navbar = _ref5.navbar,
+      mobile = _ref5.mobile,
+      sub = _ref5.sub,
+      restProps = _objectWithoutProperties(_ref5, ["color", "navbar", "mobile", "sub"]);
+
+  return react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("ul", restProps);
+}).withConfig({
   displayName: "Nav__Tag",
   componentId: "sc-8l5kxq-0"
 })(["list-style:none;margin:0;background-color:", ";display:", ";padding:", ";width:", ";"], function (props) {
@@ -1571,8 +1581,7 @@ var getAfterWidthWithHover = function getAfterWidthWithHover(_ref12) {
 /*
   inner Tag component
 */
-// TODO: filter active, navbar, mobile, sub and color props from DOM
-// https://github.com/styled-components/styled-components/issues/439
+// TODO: filter active, navbar, mobile, sub and color props with `as` usage (see `styled-components` issue 439)
 
 
 var Tag = styled_components__WEBPACK_IMPORTED_MODULE_2___default.a.div.withConfig({
@@ -1709,8 +1718,7 @@ function _objectWithoutPropertiesLoose(source, excluded) { if (source == null) r
 /*
   inner components
 */
-// TODO: revisit when filtering props from DOM is supported
-// https://github.com/styled-components/styled-components/issues/439
+// filter props so they don't become dom attributes (see `styled-components` issue 439)
 
 var NavbarWrapper = styled_components__WEBPACK_IMPORTED_MODULE_2___default()(function (_ref) {
   var color = _ref.color,
@@ -1809,10 +1817,6 @@ function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterat
 
 function _extends() { _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends.apply(this, arguments); }
 
-function _objectWithoutProperties(source, excluded) { if (source == null) return {}; var target = _objectWithoutPropertiesLoose(source, excluded); var key, i; if (Object.getOwnPropertySymbols) { var sourceSymbolKeys = Object.getOwnPropertySymbols(source); for (i = 0; i < sourceSymbolKeys.length; i++) { key = sourceSymbolKeys[i]; if (excluded.indexOf(key) >= 0) continue; if (!Object.prototype.propertyIsEnumerable.call(source, key)) continue; target[key] = source[key]; } } return target; }
-
-function _objectWithoutPropertiesLoose(source, excluded) { if (source == null) return {}; var target = {}; var sourceKeys = Object.keys(source); var key, i; for (i = 0; i < sourceKeys.length; i++) { key = sourceKeys[i]; if (excluded.indexOf(key) >= 0) continue; target[key] = source[key]; } return target; }
-
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
 function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
@@ -1843,6 +1847,10 @@ function _templateObject() {
 
 function _taggedTemplateLiteral(strings, raw) { if (!raw) { raw = strings.slice(0); } return Object.freeze(Object.defineProperties(strings, { raw: { value: Object.freeze(raw) } })); }
 
+function _objectWithoutProperties(source, excluded) { if (source == null) return {}; var target = _objectWithoutPropertiesLoose(source, excluded); var key, i; if (Object.getOwnPropertySymbols) { var sourceSymbolKeys = Object.getOwnPropertySymbols(source); for (i = 0; i < sourceSymbolKeys.length; i++) { key = sourceSymbolKeys[i]; if (excluded.indexOf(key) >= 0) continue; if (!Object.prototype.propertyIsEnumerable.call(source, key)) continue; target[key] = source[key]; } } return target; }
+
+function _objectWithoutPropertiesLoose(source, excluded) { if (source == null) return {}; var target = {}; var sourceKeys = Object.keys(source); var key, i; for (i = 0; i < sourceKeys.length; i++) { key = sourceKeys[i]; if (excluded.indexOf(key) >= 0) continue; target[key] = source[key]; } return target; }
+
 
 
 
@@ -1857,12 +1865,18 @@ function _taggedTemplateLiteral(strings, raw) { if (!raw) { raw = strings.slice(
 /*
   inner components
 */
+// filter props so they don't become dom attributes (see `styled-components` issue 439)
 
-var MobileCollapseWrapper = styled_components__WEBPACK_IMPORTED_MODULE_2___default.a.div.withConfig({
+var MobileCollapseWrapper = styled_components__WEBPACK_IMPORTED_MODULE_2___default()(function (_ref) {
+  var color = _ref.color,
+      restProps = _objectWithoutProperties(_ref, ["color"]);
+
+  return react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", restProps);
+}).withConfig({
   displayName: "NavbarNav__MobileCollapseWrapper",
   componentId: "sc-15lu9u4-0"
-})(["box-shadow:0 5px 10px 0 #00000026;left:0;position:absolute;top:75px;width:100%;background-color:", ";"], function (_ref) {
-  var color = _ref.color;
+})(["box-shadow:0 5px 10px 0 #00000026;left:0;position:absolute;top:75px;width:100%;background-color:", ";"], function (_ref2) {
+  var color = _ref2.color;
   return _constants_colors__WEBPACK_IMPORTED_MODULE_9__["default"][color];
 });
 var MobileNavWrapper = styled_components__WEBPACK_IMPORTED_MODULE_2___default.a.div.withConfig({
@@ -1907,8 +1921,8 @@ function (_Component) {
     });
 
     _defineProperty(_assertThisInitialized(_assertThisInitialized(_this)), "handleMobileNavToggle", function () {
-      return _this.setState(function (_ref2) {
-        var mobileNavIsOpen = _ref2.mobileNavIsOpen;
+      return _this.setState(function (_ref3) {
+        var mobileNavIsOpen = _ref3.mobileNavIsOpen;
         return {
           mobileNavIsOpen: !mobileNavIsOpen
         };
@@ -1929,14 +1943,13 @@ function (_Component) {
 
       var mobileNavIsOpen = this.state.mobileNavIsOpen;
       return react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(react_fns__WEBPACK_IMPORTED_MODULE_3__["WindowSize"], {
-        render: function render(_ref3) {
-          var width = _ref3.width;
-          // TODO: update when width doesn't return 0 on initial render
-          // https://github.com/jaredpalmer/react-fns/issues/84
+        render: function render(_ref4) {
+          var width = _ref4.width;
+          // TODO: update when `width` doesn't return 0 on initial render (see `react-fns` issue 84)
           var currentWidth = width === 0 ? window.innerWidth : width;
           var renderMobile = currentWidth < mobileBreakpoint;
-          return react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_NavbarContext__WEBPACK_IMPORTED_MODULE_5__["default"].Consumer, null, function (_ref4) {
-            var color = _ref4.color;
+          return react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_NavbarContext__WEBPACK_IMPORTED_MODULE_5__["default"].Consumer, null, function (_ref5) {
+            var color = _ref5.color;
             var childColor = getChildColor(color);
 
             if (renderMobile) {
@@ -2018,10 +2031,6 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _constants_typography__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(12);
 function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
 
-function _objectWithoutProperties(source, excluded) { if (source == null) return {}; var target = _objectWithoutPropertiesLoose(source, excluded); var key, i; if (Object.getOwnPropertySymbols) { var sourceSymbolKeys = Object.getOwnPropertySymbols(source); for (i = 0; i < sourceSymbolKeys.length; i++) { key = sourceSymbolKeys[i]; if (excluded.indexOf(key) >= 0) continue; if (!Object.prototype.propertyIsEnumerable.call(source, key)) continue; target[key] = source[key]; } } return target; }
-
-function _objectWithoutPropertiesLoose(source, excluded) { if (source == null) return {}; var target = {}; var sourceKeys = Object.keys(source); var key, i; for (i = 0; i < sourceKeys.length; i++) { key = sourceKeys[i]; if (excluded.indexOf(key) >= 0) continue; target[key] = source[key]; } return target; }
-
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
 function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
@@ -2052,6 +2061,10 @@ function _templateObject() {
 
 function _taggedTemplateLiteral(strings, raw) { if (!raw) { raw = strings.slice(0); } return Object.freeze(Object.defineProperties(strings, { raw: { value: Object.freeze(raw) } })); }
 
+function _objectWithoutProperties(source, excluded) { if (source == null) return {}; var target = _objectWithoutPropertiesLoose(source, excluded); var key, i; if (Object.getOwnPropertySymbols) { var sourceSymbolKeys = Object.getOwnPropertySymbols(source); for (i = 0; i < sourceSymbolKeys.length; i++) { key = sourceSymbolKeys[i]; if (excluded.indexOf(key) >= 0) continue; if (!Object.prototype.propertyIsEnumerable.call(source, key)) continue; target[key] = source[key]; } } return target; }
+
+function _objectWithoutPropertiesLoose(source, excluded) { if (source == null) return {}; var target = {}; var sourceKeys = Object.keys(source); var key, i; for (i = 0; i < sourceKeys.length; i++) { key = sourceKeys[i]; if (excluded.indexOf(key) >= 0) continue; target[key] = source[key]; } return target; }
+
 
 
 
@@ -2078,12 +2091,18 @@ var ToggleTitle = styled_components__WEBPACK_IMPORTED_MODULE_2___default.a.span.
 })(["color:", ";font-family:", ";font-weight:bold;letter-spacing:0.5px;margin-left:10px;text-transform:uppercase;"], function (_ref) {
   var color = _ref.color;
   return _constants_colors__WEBPACK_IMPORTED_MODULE_9__["default"][color];
-}, _constants_typography__WEBPACK_IMPORTED_MODULE_11__["sansBold"]);
-var CollapseWrapper = styled_components__WEBPACK_IMPORTED_MODULE_2___default.a.div.withConfig({
+}, _constants_typography__WEBPACK_IMPORTED_MODULE_11__["sansBold"]); // filter props so they don't become dom attributes (see `styled-components` issue 439)
+
+var CollapseWrapper = styled_components__WEBPACK_IMPORTED_MODULE_2___default()(function (_ref2) {
+  var color = _ref2.color,
+      restProps = _objectWithoutProperties(_ref2, ["color"]);
+
+  return react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", restProps);
+}).withConfig({
   displayName: "NavbarGlobalNav__CollapseWrapper",
   componentId: "sc-1t3heaa-2"
-})(["box-shadow:0 5px 10px 0 #00000026;left:0;position:absolute;top:75px;width:100%;background-color:", ";"], function (_ref2) {
-  var color = _ref2.color;
+})(["box-shadow:0 5px 10px 0 #00000026;left:0;position:absolute;top:75px;width:100%;background-color:", ";"], function (_ref3) {
+  var color = _ref3.color;
   return _constants_colors__WEBPACK_IMPORTED_MODULE_9__["default"][color];
 });
 var NavWrapper = styled_components__WEBPACK_IMPORTED_MODULE_2___default.a.div.withConfig({
@@ -2128,8 +2147,8 @@ function (_Component) {
     });
 
     _defineProperty(_assertThisInitialized(_assertThisInitialized(_this)), "handleNavToggle", function () {
-      return _this.setState(function (_ref3) {
-        var navIsOpen = _ref3.navIsOpen;
+      return _this.setState(function (_ref4) {
+        var navIsOpen = _ref4.navIsOpen;
         return {
           navIsOpen: !navIsOpen
         };
@@ -2151,14 +2170,13 @@ function (_Component) {
 
       var navIsOpen = this.state.navIsOpen;
       return react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(react_fns__WEBPACK_IMPORTED_MODULE_3__["WindowSize"], {
-        render: function render(_ref4) {
-          var width = _ref4.width;
-          // TODO: update when width doesn't return 0 on initial render
-          // https://github.com/jaredpalmer/react-fns/issues/84
+        render: function render(_ref5) {
+          var width = _ref5.width;
+          // TODO: update when `width` doesn't return 0 on initial render (see `react-fns` issue 84)
           var currentWidth = width === 0 ? window.innerWidth : width;
           var renderMobile = currentWidth < mobileBreakpoint;
-          return react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_NavbarContext__WEBPACK_IMPORTED_MODULE_5__["default"].Consumer, null, function (_ref5) {
-            var color = _ref5.color;
+          return react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_NavbarContext__WEBPACK_IMPORTED_MODULE_5__["default"].Consumer, null, function (_ref6) {
+            var color = _ref6.color;
             var childColor = getChildColor(color);
             return react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", restProps, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(ToggleButton, {
               type: "button",
@@ -2492,8 +2510,7 @@ function (_Component) {
       return react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(react_fns__WEBPACK_IMPORTED_MODULE_3__["WindowSize"], {
         render: function render(_ref2) {
           var width = _ref2.width;
-          // TODO: update when width doesn't return 0 on initial render
-          // https://github.com/jaredpalmer/react-fns/issues/84
+          // TODO: update when `width` doesn't return 0 on initial render (see `react-fns` issue 84)
           var currentWidth = width === 0 ? window.innerWidth : width;
           var renderMobile = currentWidth < mobileBreakpoint;
 

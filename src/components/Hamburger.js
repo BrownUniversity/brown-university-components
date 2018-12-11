@@ -37,8 +37,7 @@ const HamburgerTag = styled.div`
     props.as === 'button' ? '0 25px 3px 0' : '0 25px 7px 0'};
 `;
 
-// TODO: revisit when filtering props from DOM is supported
-// https://github.com/styled-components/styled-components/issues/439
+// filter props so they don't become dom attributes (see `styled-components` issue 439)
 const HamburgerBars = styled(({ color, isOpen, ...restProps }) => (
   <span {...restProps} />
 ))`

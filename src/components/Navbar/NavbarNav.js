@@ -14,7 +14,10 @@ import media from '../../constants/media';
 /*
   inner components
 */
-const MobileCollapseWrapper = styled.div`
+// filter props so they don't become dom attributes (see `styled-components` issue 439)
+const MobileCollapseWrapper = styled(({ color, ...restProps }) => (
+  <div {...restProps} />
+))`
   box-shadow: 0 5px 10px 0 #00000026;
   left: 0;
   position: absolute;
@@ -62,8 +65,7 @@ class NavbarNav extends Component {
     return (
       <WindowSize
         render={({ width }) => {
-          // TODO: update when width doesn't return 0 on initial render
-          // https://github.com/jaredpalmer/react-fns/issues/84
+          // TODO: update when `width` doesn't return 0 on initial render (see `react-fns` issue 84)
           const currentWidth = width === 0 ? window.innerWidth : width;
           const renderMobile = currentWidth < mobileBreakpoint;
 
