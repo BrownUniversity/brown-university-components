@@ -866,7 +866,9 @@ var hamburgerTransitionCSS = Object(styled_components__WEBPACK_IMPORTED_MODULE_2
 var HamburgerTag = styled_components__WEBPACK_IMPORTED_MODULE_2___default.a.div.withConfig({
   displayName: "Hamburger__HamburgerTag",
   componentId: "u53pwq-0"
-})(["background:transparent;border:none;cursor:pointer;", " ", " padding:", ";"], function (props) {
+})(["background:transparent;border:none;cursor:", ";", " ", " padding:", ";"], function (props) {
+  return props.as === 'button' ? 'pointer' : 'auto';
+}, function (props) {
   return props.as === 'div' && 'display: inline-block;';
 }, function (props) {
   return props.as === 'button' && 'height: 24px;';
@@ -957,18 +959,20 @@ function (_Component) {
     value: function render() {
       var _this$props = this.props,
           color = _this$props.color,
+          ariaLabel = _this$props.ariaLabel,
           tag = _this$props.tag,
           onOpen = _this$props.onOpen,
           onClose = _this$props.onClose,
-          restProps = _objectWithoutProperties(_this$props, ["color", "tag", "onOpen", "onClose"]);
+          restProps = _objectWithoutProperties(_this$props, ["color", "ariaLabel", "tag", "onOpen", "onClose"]);
 
       var isOpen = this.state.isOpen;
+      var isButton = tag === 'button';
       return react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(HamburgerTag, _extends({}, restProps, {
         as: tag,
-        type: tag === 'button' ? 'button' : null,
-        "aria-expanded": tag === 'button' ? isOpen : null,
-        "aria-label": tag === 'button' ? 'Toggle navigation' : null,
-        onClick: this.handleClick
+        type: isButton ? 'button' : null,
+        "aria-expanded": isButton ? isOpen : null,
+        "aria-label": isButton ? ariaLabel : null,
+        onClick: isButton && this.handleClick
       }), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(HamburgerBars, {
         color: color,
         isOpen: isOpen
@@ -980,7 +984,8 @@ function (_Component) {
 }(react__WEBPACK_IMPORTED_MODULE_1__["Component"]);
 
 Hamburger.propTypes =  true ? {
-  color: prop_types__WEBPACK_IMPORTED_MODULE_0___default.a.oneOf(['red', 'gray', 'black', 'white']),
+  color: prop_types__WEBPACK_IMPORTED_MODULE_0___default.a.oneOf(['red', 'white', 'gray']),
+  ariaLabel: prop_types__WEBPACK_IMPORTED_MODULE_0___default.a.string,
   isOpen: prop_types__WEBPACK_IMPORTED_MODULE_0___default.a.bool,
   tag: prop_types__WEBPACK_IMPORTED_MODULE_0___default.a.oneOf(['button', 'div']),
   onOpen: prop_types__WEBPACK_IMPORTED_MODULE_0___default.a.func,
@@ -988,6 +993,7 @@ Hamburger.propTypes =  true ? {
 } : undefined;
 Hamburger.defaultProps = {
   color: 'red',
+  ariaLabel: 'Toggle navigation',
   isOpen: false,
   tag: 'button',
   onOpen: function onOpen() {
@@ -1724,7 +1730,7 @@ var NavbarWrapper = styled_components__WEBPACK_IMPORTED_MODULE_2___default()(fun
   var color = _ref.color,
       restProps = _objectWithoutProperties(_ref, ["color"]);
 
-  return react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", restProps);
+  return react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("nav", restProps);
 }).withConfig({
   displayName: "Navbar__NavbarWrapper",
   componentId: "c3ezxu-0"
@@ -1962,8 +1968,8 @@ function (_Component) {
               }), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(MobileCollapseWrapper, {
                 color: color
               }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(react_collapse__WEBPACK_IMPORTED_MODULE_4__["Collapse"], {
-                isOpened: mobileNavIsOpen,
-                id: "navbar-nav-mobile-collapse"
+                id: "navbar-nav-mobile-collapse",
+                isOpened: mobileNavIsOpen
               }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(MobileNavWrapper, null, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_Nav__WEBPACK_IMPORTED_MODULE_7__["default"], {
                 mobile: true,
                 color: childColor
@@ -2182,7 +2188,7 @@ function (_Component) {
               type: "button",
               "aria-controls": "navbar-global-nav-collapse",
               "aria-expanded": navIsOpen,
-              "aria-label": "Toggle navigation",
+              "aria-label": "Toggle global navigation",
               onClick: _this2.handleNavToggle
             }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_Hamburger__WEBPACK_IMPORTED_MODULE_6__["default"], {
               tag: "div",
@@ -2193,8 +2199,8 @@ function (_Component) {
             }, toggleTitle)), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(CollapseWrapper, {
               color: color
             }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(react_collapse__WEBPACK_IMPORTED_MODULE_4__["Collapse"], {
-              isOpened: navIsOpen,
-              id: "navbar-global-nav-collapse"
+              id: "navbar-global-nav-collapse",
+              isOpened: navIsOpen
             }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(NavWrapper, null, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_Nav__WEBPACK_IMPORTED_MODULE_7__["default"], {
               mobile: true,
               color: childColor
@@ -2387,8 +2393,6 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _constants_typography__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(12);
 function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
 
-function _extends() { _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends.apply(this, arguments); }
-
 function _objectWithoutProperties(source, excluded) { if (source == null) return {}; var target = _objectWithoutPropertiesLoose(source, excluded); var key, i; if (Object.getOwnPropertySymbols) { var sourceSymbolKeys = Object.getOwnPropertySymbols(source); for (i = 0; i < sourceSymbolKeys.length; i++) { key = sourceSymbolKeys[i]; if (excluded.indexOf(key) >= 0) continue; if (!Object.prototype.propertyIsEnumerable.call(source, key)) continue; target[key] = source[key]; } } return target; }
 
 function _objectWithoutPropertiesLoose(source, excluded) { if (source == null) return {}; var target = {}; var sourceKeys = Object.keys(source); var key, i; for (i = 0; i < sourceKeys.length; i++) { key = sourceKeys[i]; if (excluded.indexOf(key) >= 0) continue; target[key] = source[key]; } return target; }
@@ -2425,37 +2429,41 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
   inner components
 */
 
-var MobileBannerWrapper = styled_components__WEBPACK_IMPORTED_MODULE_2___default.a.div.withConfig({
-  displayName: "SiteNav__MobileBannerWrapper",
+var MobileBannerPositioningWrapper = styled_components__WEBPACK_IMPORTED_MODULE_2___default.a.div.withConfig({
+  displayName: "SiteNav__MobileBannerPositioningWrapper",
   componentId: "sc-1hgikms-0"
 })(["", ";"], function (props) {
   return props.banner && Object(styled_components__WEBPACK_IMPORTED_MODULE_2__["css"])(["background-color:", ";margin:0 auto;margin-top:2rem;position:relative;width:95%;z-index:10;"], _constants_colors__WEBPACK_IMPORTED_MODULE_8__["default"].white);
 });
-var MobileWrapper = styled_components__WEBPACK_IMPORTED_MODULE_2___default.a.div.withConfig({
+var MobileWrapper = styled_components__WEBPACK_IMPORTED_MODULE_2___default.a.nav.withConfig({
   displayName: "SiteNav__MobileWrapper",
   componentId: "sc-1hgikms-1"
 })(["border:1px solid #ddd;"]);
-var MobileToggleWrapper = styled_components__WEBPACK_IMPORTED_MODULE_2___default.a.div.withConfig({
-  displayName: "SiteNav__MobileToggleWrapper",
+var MobileToggleButton = styled_components__WEBPACK_IMPORTED_MODULE_2___default.a.button.withConfig({
+  displayName: "SiteNav__MobileToggleButton",
   componentId: "sc-1hgikms-2"
-})(["align-items:center;display:flex;flex-direction:row;flex-wrap:wrap;justify-content:space-between;margin:0 auto;padding:1rem 0 1rem;width:92%;"]);
-var MobileToggleTitle = styled_components__WEBPACK_IMPORTED_MODULE_2___default.a.button.withConfig({
-  displayName: "SiteNav__MobileToggleTitle",
+})(["background-color:transparent;border:none;cursor:pointer;font-size:1em;padding:1rem 0 1rem;width:100%;"]);
+var MobileToggleButtonInner = styled_components__WEBPACK_IMPORTED_MODULE_2___default.a.div.withConfig({
+  displayName: "SiteNav__MobileToggleButtonInner",
   componentId: "sc-1hgikms-3"
-})(["background-color:transparent;border:none;cursor:pointer;color:", ";font-family:", ";font-size:1em;font-weight:bold;letter-spacing:0.5px;padding:11px 5px;text-transform:uppercase;"], _constants_colors__WEBPACK_IMPORTED_MODULE_8__["default"].red, _constants_typography__WEBPACK_IMPORTED_MODULE_9__["sansBold"]);
-var MobileNavWrapper = styled_components__WEBPACK_IMPORTED_MODULE_2___default.a.div.withConfig({
-  displayName: "SiteNav__MobileNavWrapper",
+})(["align-items:center;display:flex;flex-direction:row;flex-wrap:wrap;justify-content:space-between;margin:0 auto;width:92%;"]);
+var MobileToggleTitle = styled_components__WEBPACK_IMPORTED_MODULE_2___default.a.span.withConfig({
+  displayName: "SiteNav__MobileToggleTitle",
   componentId: "sc-1hgikms-4"
-})(["align-items:center;display:flex;justify-content:center;margin:0 auto;padding:16px 0;width:92%;z-index:10;"]);
-var BannerWrapper = styled_components__WEBPACK_IMPORTED_MODULE_2___default.a.div.withConfig({
-  displayName: "SiteNav__BannerWrapper",
+})(["color:", ";font-family:", ";font-weight:bold;letter-spacing:0.5px;padding:11px 5px;text-transform:uppercase;"], _constants_colors__WEBPACK_IMPORTED_MODULE_8__["default"].red, _constants_typography__WEBPACK_IMPORTED_MODULE_9__["sansBold"]);
+var MobileNavWrapper = styled_components__WEBPACK_IMPORTED_MODULE_2___default.a.nav.withConfig({
+  displayName: "SiteNav__MobileNavWrapper",
   componentId: "sc-1hgikms-5"
+})(["align-items:center;display:flex;justify-content:center;margin:0 auto;padding:16px 0;width:92%;z-index:10;"]);
+var BannerPositioningWrapper = styled_components__WEBPACK_IMPORTED_MODULE_2___default.a.div.withConfig({
+  displayName: "SiteNav__BannerPositioningWrapper",
+  componentId: "sc-1hgikms-6"
 })(["background-color:", ";", ""], _constants_colors__WEBPACK_IMPORTED_MODULE_8__["default"].white, function (props) {
   return props.banner && Object(styled_components__WEBPACK_IMPORTED_MODULE_2__["css"])(["margin:0 auto;margin-top:-50px;max-width:1300px;position:relative;width:96%;z-index:10;"]);
 });
 var NavWrapper = styled_components__WEBPACK_IMPORTED_MODULE_2___default.a.div.withConfig({
   displayName: "SiteNav__NavWrapper",
-  componentId: "sc-1hgikms-6"
+  componentId: "sc-1hgikms-7"
 })(["display:flex;justify-content:center;padding:20px 0 30px;"]);
 /*
   outer SiteNav component
@@ -2515,30 +2523,28 @@ function (_Component) {
           var renderMobile = currentWidth < mobileBreakpoint;
 
           if (renderMobile) {
-            return react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(MobileBannerWrapper, _extends({}, restProps, {
+            return react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(MobileBannerPositioningWrapper, {
               banner: banner
-            }), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(MobileWrapper, null, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(MobileToggleWrapper, null, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(MobileToggleTitle, {
+            }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(MobileWrapper, restProps, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(MobileToggleButton, {
               type: "button",
               "aria-controls": "site-nav-mobile-collapse",
               "aria-expanded": mobileNavIsOpen,
-              "aria-label": "Toggle navigation",
+              "aria-label": "Toggle site navigation",
               onClick: _this2.handleMobileNavToggle
-            }, mobileToggleTitle), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_Hamburger__WEBPACK_IMPORTED_MODULE_5__["default"], {
-              tabIndex: "-1",
-              isOpen: mobileNavIsOpen,
-              onOpen: _this2.handleMobileNavToggle,
-              onClose: _this2.handleMobileNavToggle
-            })), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(react_collapse__WEBPACK_IMPORTED_MODULE_4__["Collapse"], {
-              isOpened: mobileNavIsOpen,
-              id: "site-nav-mobile-collapse"
+            }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(MobileToggleButtonInner, null, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(MobileToggleTitle, null, mobileToggleTitle), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_Hamburger__WEBPACK_IMPORTED_MODULE_5__["default"], {
+              tag: "div",
+              isOpen: mobileNavIsOpen
+            }))), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(react_collapse__WEBPACK_IMPORTED_MODULE_4__["Collapse"], {
+              id: "site-nav-mobile-collapse",
+              isOpened: mobileNavIsOpen
             }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(MobileNavWrapper, null, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_Nav__WEBPACK_IMPORTED_MODULE_6__["default"], {
               mobile: true
             }, _this2.props.children)))));
           }
 
-          return react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(BannerWrapper, _extends({}, restProps, {
+          return react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(BannerPositioningWrapper, {
             banner: banner
-          }), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(NavWrapper, null, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_Nav__WEBPACK_IMPORTED_MODULE_6__["default"], null, _this2.props.children)));
+          }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(NavWrapper, restProps, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_Nav__WEBPACK_IMPORTED_MODULE_6__["default"], null, _this2.props.children)));
         }
       });
     }
@@ -2573,8 +2579,6 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(5);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_1__);
 /* harmony import */ var _Nav__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(19);
-function _extends() { _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends.apply(this, arguments); }
-
 function _objectWithoutProperties(source, excluded) { if (source == null) return {}; var target = _objectWithoutPropertiesLoose(source, excluded); var key, i; if (Object.getOwnPropertySymbols) { var sourceSymbolKeys = Object.getOwnPropertySymbols(source); for (i = 0; i < sourceSymbolKeys.length; i++) { key = sourceSymbolKeys[i]; if (excluded.indexOf(key) >= 0) continue; if (!Object.prototype.propertyIsEnumerable.call(source, key)) continue; target[key] = source[key]; } } return target; }
 
 function _objectWithoutPropertiesLoose(source, excluded) { if (source == null) return {}; var target = {}; var sourceKeys = Object.keys(source); var key, i; for (i = 0; i < sourceKeys.length; i++) { key = sourceKeys[i]; if (excluded.indexOf(key) >= 0) continue; target[key] = source[key]; } return target; }
@@ -2587,9 +2591,9 @@ var SubNav = function SubNav(_ref) {
   var children = _ref.children,
       restProps = _objectWithoutProperties(_ref, ["children"]);
 
-  return react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_Nav__WEBPACK_IMPORTED_MODULE_2__["default"], _extends({}, restProps, {
+  return react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("nav", restProps, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_Nav__WEBPACK_IMPORTED_MODULE_2__["default"], {
     sub: true
-  }), children);
+  }, children));
 };
 
 SubNav.propTypes =  true ? {

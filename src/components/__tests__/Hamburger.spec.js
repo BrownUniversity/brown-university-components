@@ -204,7 +204,7 @@ describe('Hamburger', () => {
 
     it('should render a hamburger of another color when color variant is provided', () => {
       const { tree } = renderHamburger({
-        props: { color: 'black' }
+        props: { color: 'white' }
       });
 
       expect(tree).toMatchInlineSnapshot(`
@@ -220,7 +220,7 @@ describe('Hamburger', () => {
   height: 3px;
   position: absolute;
   width: 25px;
-  background-color: #3B302C;
+  background-color: #FFFFFF;
   -webkit-transition-property: -webkit-transform;
   -webkit-transition-property: transform;
   transition-property: transform;
@@ -236,7 +236,7 @@ describe('Hamburger', () => {
   height: 3px;
   position: absolute;
   width: 25px;
-  background-color: #3B302C;
+  background-color: #FFFFFF;
   content: '';
   display: block;
   -webkit-transition-property: -webkit-transform;
@@ -255,7 +255,7 @@ describe('Hamburger', () => {
   height: 3px;
   position: absolute;
   width: 25px;
-  background-color: #3B302C;
+  background-color: #FFFFFF;
   content: '';
   display: block;
   -webkit-transition-property: -webkit-transform;

@@ -98,7 +98,7 @@ class NavbarGlobalNav extends Component {
                       type="button"
                       aria-controls="navbar-global-nav-collapse"
                       aria-expanded={navIsOpen}
-                      aria-label="Toggle navigation"
+                      aria-label="Toggle global navigation"
                       onClick={this.handleNavToggle}
                     >
                       <Hamburger
@@ -114,8 +114,8 @@ class NavbarGlobalNav extends Component {
                     </ToggleButton>
                     <CollapseWrapper color={color}>
                       <Collapse
-                        isOpened={navIsOpen}
                         id="navbar-global-nav-collapse"
+                        isOpened={navIsOpen}
                       >
                         <NavWrapper>
                           <Nav mobile color={childColor}>

@@ -64,7 +64,7 @@ describe('Navbar', () => {
   }
 }
 
-<div
+<nav
   class="c0"
 >
   <a
@@ -82,7 +82,7 @@ describe('Navbar', () => {
   <div
     class="c2"
   />
-</div>
+</nav>
 `);
     });
 

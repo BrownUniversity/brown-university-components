@@ -1,16 +1,26 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
-import { withKnobs, select } from '@storybook/addon-knobs';
+import { withKnobs, select, boolean, text } from '@storybook/addon-knobs';
 import { action } from '@storybook/addon-actions';
 
 import { Hamburger } from '../src';
+
+const getColorProp = () => select('color', ['red', 'white', 'gray']);
 
 storiesOf('Hamburger', module)
   .addDecorator(withKnobs)
   .add('default', () => (
     <Hamburger
-      color={select('color', ['red', 'gray', 'black', 'white'])}
+      color={getColorProp()}
+      ariaLabel={text('ariaLabel', 'Toggle navigation')}
       onOpen={action('open')}
       onClose={action('close')}
+    />
+  ))
+  .add('as a div', () => (
+    <Hamburger
+      color={getColorProp()}
+      isOpen={boolean('isOpen', false)}
+      tag="div"
     />
   ));

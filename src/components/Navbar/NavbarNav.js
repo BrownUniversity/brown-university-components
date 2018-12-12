@@ -86,8 +86,8 @@ class NavbarNav extends Component {
                       />
                       <MobileCollapseWrapper color={color}>
                         <Collapse
-                          isOpened={mobileNavIsOpen}
                           id="navbar-nav-mobile-collapse"
+                          isOpened={mobileNavIsOpen}
                         >
                           <MobileNavWrapper>
                             <Nav mobile color={childColor}>

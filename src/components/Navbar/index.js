@@ -15,7 +15,7 @@ import media from '../../constants/media';
 */
 // filter props so they don't become dom attributes (see `styled-components` issue 439)
 const NavbarWrapper = styled(({ color, ...restProps }) => (
-  <div {...restProps} />
+  <nav {...restProps} />
 ))`
   align-items: center;
   box-shadow: 0 5px 10px 0 #00000026;

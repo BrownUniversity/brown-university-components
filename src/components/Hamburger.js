@@ -30,7 +30,7 @@ const hamburgerTransitionCSS = css`
 const HamburgerTag = styled.div`
   background: transparent;
   border: none;
-  cursor: pointer;
+  cursor:  ${props => (props.as === 'button' ? 'pointer' : 'auto')};
   ${props => props.as === 'div' && 'display: inline-block;'}
   ${props => props.as === 'button' && 'height: 24px;'}
   padding: ${props =>
@@ -128,17 +128,18 @@ class Hamburger extends Component {
     );
 
   render() {
-    const { color, tag, onOpen, onClose, ...restProps } = this.props;
+    const { color, ariaLabel, tag, onOpen, onClose, ...restProps } = this.props;
     const { isOpen } = this.state;
+    const isButton = tag === 'button';
 
     return (
       <HamburgerTag
         {...restProps}
         as={tag}
-        type={tag === 'button' ? 'button' : null}
-        aria-expanded={tag === 'button' ? isOpen : null}
-        aria-label={tag === 'button' ? 'Toggle navigation' : null}
-        onClick={this.handleClick}
+        type={isButton ? 'button' : null}
+        aria-expanded={isButton ? isOpen : null}
+        aria-label={isButton ? ariaLabel : null}
+        onClick={isButton ? this.handleClick : () => undefined}
       >
         <HamburgerBars color={color} isOpen={isOpen} />
       </HamburgerTag>
@@ -147,7 +148,8 @@ class Hamburger extends Component {
 }
 
 Hamburger.propTypes = {
-  color: PropTypes.oneOf(['red', 'gray', 'black', 'white']),
+  color: PropTypes.oneOf(['red', 'white', 'gray']),
+  ariaLabel: PropTypes.string,
   isOpen: PropTypes.bool,
   tag: PropTypes.oneOf(['button', 'div']),
   onOpen: PropTypes.func,
@@ -156,6 +158,7 @@ Hamburger.propTypes = {
 
 Hamburger.defaultProps = {
   color: 'red',
+  ariaLabel: 'Toggle navigation',
   isOpen: false,
   tag: 'button',
   onOpen: () => undefined,

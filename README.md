@@ -2,6 +2,8 @@
 
 Styles and components for building web applications based on the [Brown University Theme](https://www.brown.edu/university-communications/digital/university-theme).
 
+_On-prem Bitbucket doesn't render markdown very nicely; view this in a markdown editor like [Dillinger](https://dillinger.io/)._
+
 ## Install
 
 ### Add Brown University Theme
@@ -81,8 +83,8 @@ _Brown University Theme is designed to be used alongside [Bootstrap](https://www
   | -------- | ------------------------------------------------------------------------------------------------------------ | -------- | --------- |
   | color    | oneOf(['emerald', 'red', 'brown', 'yellow', 'gray', 'sand', 'lightBrown', 'mediumBrown', 'navy', 'skyblue']) | -        | 'emerald' |
   | size     | oneOf(['default', 'small', 'medium', 'large'])                                                               | -        | 'default' |
-  | src      | string                                                                                                       | -        | false     |
-  | children | node                                                                                                         | -        | false     |
+  | src      | string                                                                                                       | -        | null      |
+  | children | node                                                                                                         | -        | null      |
 
 - [`Button`](https://www.brown.edu/university-communications/digital/university-theme/formatting/buttons)
 
@@ -116,7 +118,7 @@ _Brown University Theme is designed to be used alongside [Bootstrap](https://www
   import React from 'react';
   import { Code } from 'brown-university-theme';
 
-  export default () => <Code>small</Code>;
+  export default () => <Code>code</Code>;
   ```
 
   **Properties:**
@@ -127,7 +129,7 @@ _Brown University Theme is designed to be used alongside [Bootstrap](https://www
 
 - `Hamburger`
 
-  _This is a primitive used by `NavbarNav` and `SiteNav`. You might want to use one of those components instead._
+  _This is a primitive used by `Navbar.Nav`, `Navbar.GlobalNav` and `SiteNav`. You might want to use one of those components instead._
 
   **Example:**
 
@@ -140,13 +142,14 @@ _Brown University Theme is designed to be used alongside [Bootstrap](https://www
 
   **Properties:**
 
-  | property | propType                                                                         | required | default  |
-  | -------- | -------------------------------------------------------------------------------- | -------- | -------- |
-  | color    | oneOf(['red', 'yellow', 'brown', 'gray', 'emerald', 'skyblue', 'navy', 'white']) | -        | 'red'    |
-  | isOpen   | bool                                                                             | -        | false    |
-  | tag      | oneOf(['button', 'div'])                                                         | -        | 'button' |
-  | onOpen   | func                                                                             | -        | noop     |
-  | onClose  | func                                                                             | -        | noop     |
+  | property  | propType                        | required | default             |
+  | --------- | ------------------------------- | -------- | ------------------- |
+  | color     | oneOf(['red', 'white', 'gray']) | -        | 'red'               |
+  | ariaLabel | string                          | false    | 'Toggle navigation' |
+  | isOpen    | bool                            | -        | false               |
+  | tag       | oneOf(['button', 'div'])        | -        | 'button'            |
+  | onOpen    | func                            | -        | noop                |
+  | onClose   | func                            | -        | noop                |
 
 - `Loader`
 
@@ -167,7 +170,7 @@ _Brown University Theme is designed to be used alongside [Bootstrap](https://www
 
 * `Nav`
 
-  _This is a primitive used by `NavbarNav`, `SiteNav`, and `SubNav`. You might want to use one of those components instead._
+  _This is a primitive used by `Navbar.Nav`, `Navbar.GlobalNav`, `SiteNav`, and `SubNav`. You might want to use one of those components instead._
 
   **Example:**
 
@@ -192,13 +195,13 @@ _Brown University Theme is designed to be used alongside [Bootstrap](https://www
 
   **`Nav` Properties:**
 
-  | property | propType              | required | default   |
-  | -------- | --------------------- | -------- | --------- |
-  | navbar   | bool                  | -        | false     |
-  | mobile   | bool                  | -        | false     |
-  | sub      | bool                  | -        | false     |
-  | color    | oneOf('red', 'white') | -        | 'red'     |
-  | children | node                  | true     | undefined |
+  | property | propType              | required | default |
+  | -------- | --------------------- | -------- | ------- |
+  | navbar   | bool                  | -        | false   |
+  | mobile   | bool                  | -        | false   |
+  | sub      | bool                  | -        | false   |
+  | color    | oneOf('red', 'white') | -        | 'red'   |
+  | children | node                  | true     | -       |
 
   **`Nav.Item` Properties:**
 
@@ -232,7 +235,7 @@ _Brown University Theme is designed to be used alongside [Bootstrap](https://www
   | property | propType                  | required | default |
   | -------- | ------------------------- | -------- | ------- |
   | color    | oneOf(['brown', 'white']) | -        | 'brown' |
-  | children | node                      | -        | false   |
+  | children | node                      | -        | null    |
 
 * `SiteNav`
 
@@ -264,7 +267,7 @@ _Brown University Theme is designed to be used alongside [Bootstrap](https://www
   | mobileToggleTitle | string   | -        | Site Navigation |
   | mobileBreakpoint  | number   | -        | 768             |
   | banner            | bool     | -        | false           |
-  | children          | node     | true     | undefined       |
+  | children          | node     | true     | -               |
 
   **`SiteNav.Item` Properties:**
 
@@ -299,9 +302,9 @@ _Brown University Theme is designed to be used alongside [Bootstrap](https://www
 
   **`SubNav` Properties:**
 
-  | property | propType | required | default   |
-  | -------- | -------- | -------- | --------- |
-  | children | node     | true     | undefined |
+  | property | propType | required | default |
+  | -------- | -------- | -------- | ------- |
+  | children | node     | true     | -       |
 
   **`SubNav.Item` Properties:**
 
@@ -319,7 +322,7 @@ Install dependencies:
 npm install
 ```
 
-Run examples at [http://localhost:8080/](http://localhost:8080/) with storybook:
+Run examples at [http://localhost:8080/](http://localhost:8080/) with [storybook](https://storybook.js.org/):
 
 ```sh
 npm start
