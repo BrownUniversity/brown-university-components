@@ -25,11 +25,11 @@ storiesOf('Button', module)
   .addDecorator(withKnobs)
   .add('default', () => (
     <Button {...getCommonProps()} onClick={action('clicked')}>
-      Click Me
+      Button
     </Button>
   ))
   .add('with href', () => (
     <Button href={text('href', 'https://www.brown.edu/')} {...getCommonProps()}>
-      Click Me
+      Button
     </Button>
   ));

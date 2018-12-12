@@ -867,7 +867,7 @@ var HamburgerTag = styled_components__WEBPACK_IMPORTED_MODULE_2___default.a.div.
   displayName: "Hamburger__HamburgerTag",
   componentId: "u53pwq-0"
 })(["background:transparent;border:none;cursor:", ";", " ", " padding:", ";"], function (props) {
-  return props.as === 'button' ? 'pointer' : 'auto';
+  return props.as === 'button' ? 'pointer' : 'inherit';
 }, function (props) {
   return props.as === 'div' && 'display: inline-block;';
 }, function (props) {
@@ -972,7 +972,9 @@ function (_Component) {
         type: isButton ? 'button' : null,
         "aria-expanded": isButton ? isOpen : null,
         "aria-label": isButton ? ariaLabel : null,
-        onClick: isButton && this.handleClick
+        onClick: isButton ? this.handleClick : function () {
+          return undefined;
+        }
       }), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(HamburgerBars, {
         color: color,
         isOpen: isOpen

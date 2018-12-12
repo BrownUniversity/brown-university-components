@@ -7,7 +7,6 @@
   "homepage": "https://bitbucket.brown.edu/projects/CCUM/repos/brown-university-theme",
   "main": "dist/brown-university-theme.js",
   "scripts": {
-    "clean": "rm -rf dist && rm -rf webpack/stats",
     "lint": "eslint src",
     "prettier": "prettier \"{src,__{tests,mocks}__}/**/*.+(js|json|css)\"",
     "format:check": "npm run prettier -- --list-different",
@@ -17,7 +16,7 @@
     "test:coverage:open": "npm run test:coverage && opener ./coverage/lcov-report/index.html",
     "test:watch": "npm test -- --watch",
     "validate": "npm-run-all lint format:check test:coverage",
-    "prebuild": "npm-run-all validate clean",
+    "prebuild": "npm run validate",
     "build": "webpack --config webpack/config.js",
     "start": "start-storybook -p 8080 -c .storybook"
   },
@@ -47,6 +46,7 @@
     "babel-loader": "^8.0.4",
     "babel-plugin-styled-components": "^1.9.3",
     "babel-plugin-transform-react-remove-prop-types": "^0.4.21",
+    "clean-webpack-plugin": "^1.0.0",
     "css-loader": "^1.0.1",
     "eslint": "^5.9.0",
     "eslint-config-colinrcummings": "^2.1.0",

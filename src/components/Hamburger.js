@@ -30,7 +30,7 @@ const hamburgerTransitionCSS = css`
 const HamburgerTag = styled.div`
   background: transparent;
   border: none;
-  cursor:  ${props => (props.as === 'button' ? 'pointer' : 'auto')};
+  cursor:  ${props => (props.as === 'button' ? 'pointer' : 'inherit')};
   ${props => props.as === 'div' && 'display: inline-block;'}
   ${props => props.as === 'button' && 'height: 24px;'}
   padding: ${props =>
