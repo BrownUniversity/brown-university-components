@@ -52,14 +52,14 @@ describe('NavItem', () => {
 `);
     });
 
-    it('should render nav item with mobile styles when alternate is provided', () => {
+    it('should render nav item with mobile styles when variant is provided', () => {
       const { navItem } = renderNavItem({ context: { mobile: true } });
 
       expect(navItem).toHaveStyleRule('border-top', '0.5px solid #C8C8C880');
       expect(navItem).toHaveStyleRule('padding', '1rem 0');
     });
 
-    it('should render nav item with sub styles when alternate is provided', () => {
+    it('should render nav item with sub styles when variant is provided', () => {
       const { navItem } = renderNavItem({ context: { sub: true } });
 
       expect(navItem).not.toHaveStyleRule('border-top');

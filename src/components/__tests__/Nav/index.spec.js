@@ -53,7 +53,7 @@ describe('Nav', () => {
 `);
     });
 
-    it('should render nav with mobile styles when alternate is provided', () => {
+    it('should render nav with mobile styles when variant is provided', () => {
       const { nav } = renderNav({
         props: { mobile: true }
       });
@@ -64,7 +64,7 @@ describe('Nav', () => {
       expect(nav).toHaveStyleRule('width', '100%');
     });
 
-    it('should render nav with sub styles when alternate is provided', () => {
+    it('should render nav with sub styles when variant is provided', () => {
       const { nav } = renderNav({ props: { sub: true } });
 
       expect(nav).toHaveStyleRule('background-color', '#F7F7F7');
