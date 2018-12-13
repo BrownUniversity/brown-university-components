@@ -972,9 +972,7 @@ function (_Component) {
         type: isButton ? 'button' : null,
         "aria-expanded": isButton ? isOpen : null,
         "aria-label": isButton ? ariaLabel : null,
-        onClick: isButton ? this.handleClick : function () {
-          return undefined;
-        }
+        onClick: isButton ? this.handleClick : null
       }), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(HamburgerBars, {
         color: color,
         isOpen: isOpen
@@ -998,12 +996,8 @@ Hamburger.defaultProps = {
   ariaLabel: 'Toggle navigation',
   isOpen: false,
   tag: 'button',
-  onOpen: function onOpen() {
-    return undefined;
-  },
-  onClose: function onClose() {
-    return undefined;
-  }
+  onOpen: null,
+  onClose: null
 };
 /* harmony default export */ __webpack_exports__["default"] = (Hamburger);
 

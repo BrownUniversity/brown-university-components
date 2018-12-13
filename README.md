@@ -148,8 +148,8 @@ _Brown University Theme is designed to be used alongside [Bootstrap](https://www
   | ariaLabel | string                          | false    | 'Toggle navigation' |
   | isOpen    | bool                            | -        | false               |
   | tag       | oneOf(['button', 'div'])        | -        | 'button'            |
-  | onOpen    | func                            | -        | noop                |
-  | onClose   | func                            | -        | noop                |
+  | onOpen    | func                            | -        | null                |
+  | onClose   | func                            | -        | null                |
 
 - `Loader`
 

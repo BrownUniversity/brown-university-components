@@ -1,6 +1,6 @@
 {
   "name": "brown-university-theme",
-  "description": "React components for the Brown University Theme",
+  "description": "Styles and components for building web applications based on the Brown University Theme",
   "author": "Colin Cummings <colin_cummings@brown.edu>",
   "version": "0.3.10",
   "private": true,

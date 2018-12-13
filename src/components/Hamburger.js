@@ -139,7 +139,7 @@ class Hamburger extends Component {
         type={isButton ? 'button' : null}
         aria-expanded={isButton ? isOpen : null}
         aria-label={isButton ? ariaLabel : null}
-        onClick={isButton ? this.handleClick : () => undefined}
+        onClick={isButton ? this.handleClick : null}
       >
         <HamburgerBars color={color} isOpen={isOpen} />
       </HamburgerTag>
@@ -161,8 +161,8 @@ Hamburger.defaultProps = {
   ariaLabel: 'Toggle navigation',
   isOpen: false,
   tag: 'button',
-  onOpen: () => undefined,
-  onClose: () => undefined
+  onOpen: null,
+  onClose: null
 };
 
 export default Hamburger;

@@ -13,11 +13,12 @@ const renderHamburger = ({ props = {} } = {}) => {
 };
 
 describe('Hamburger', () => {
-  describe('style', () => {
-    it('should render a closed red hamburger by default', () => {
-      const { tree } = renderHamburger();
+  describe('default', () => {
+    describe('style', () => {
+      it('should render a closed red hamburger button by default', () => {
+        const { tree } = renderHamburger();
 
-      expect(tree).toMatchInlineSnapshot(`
+        expect(tree).toMatchInlineSnapshot(`
 .c0 {
   background: transparent;
   border: none;
@@ -92,14 +93,14 @@ describe('Hamburger', () => {
   />
 </button>
 `);
-    });
-
-    it('should render an open red hamburger when isOpen variant is provided', () => {
-      const { tree } = renderHamburger({
-        props: { isOpen: true }
       });
 
-      expect(tree).toMatchInlineSnapshot(`
+      it('should render an open red hamburger button when isOpen variant is provided', () => {
+        const { tree } = renderHamburger({
+          props: { isOpen: true }
+        });
+
+        expect(tree).toMatchInlineSnapshot(`
 .c0 {
   background: transparent;
   border: none;
@@ -200,14 +201,14 @@ describe('Hamburger', () => {
   />
 </button>
 `);
-    });
-
-    it('should render a hamburger of another color when color variant is provided', () => {
-      const { tree } = renderHamburger({
-        props: { color: 'white' }
       });
 
-      expect(tree).toMatchInlineSnapshot(`
+      it('should render a hamburger button of another color when color variant is provided', () => {
+        const { tree } = renderHamburger({
+          props: { color: 'white' }
+        });
+
+        expect(tree).toMatchInlineSnapshot(`
 .c0 {
   background: transparent;
   border: none;
@@ -282,42 +283,70 @@ describe('Hamburger', () => {
   />
 </button>
 `);
+      });
+    });
+
+    describe('onClick', () => {
+      it('should call onOpen when hamburger is opened', () => {
+        const onOpen = jest.fn();
+        const onClose = jest.fn();
+        const { tree } = renderHamburger({
+          props: { onOpen, onClose }
+        });
+
+        fireEvent.click(tree);
+        expect(onOpen).toHaveBeenCalledTimes(1);
+        expect(onClose).not.toHaveBeenCalled();
+      });
+
+      it('should call onClose when hamburger is closed', () => {
+        const onOpen = jest.fn();
+        const onClose = jest.fn();
+        const { tree } = renderHamburger({
+          props: { isOpen: true, onOpen, onClose }
+        });
+
+        fireEvent.click(tree);
+        expect(onOpen).not.toHaveBeenCalled();
+        expect(onClose).toHaveBeenCalledTimes(1);
+      });
+    });
+
+    it('should render a custom aria-label when provided', () => {
+      const { tree } = renderHamburger({
+        props: { ariaLabel: 'Custom label' }
+      });
+
+      expect(tree).toHaveAttribute('aria-label', 'Custom label');
+    });
+
+    it('should update when isOpen prop changes', () => {
+      const { tree, rerender } = renderHamburger();
+
+      expect(tree).toHaveAttribute('aria-expanded', 'false');
+
+      rerender(<Hamburger isOpen onOpen={jest.fn()} onClose={jest.fn()} />);
+
+      expect(tree).toHaveAttribute('aria-expanded', 'true');
     });
   });
 
-  describe('onClick', () => {
-    it('should call onOpen when hamburger is opened', () => {
-      const onOpen = jest.fn();
-      const onClose = jest.fn();
-      const { tree } = renderHamburger({
-        props: { onOpen, onClose }
-      });
+  describe('as a div', () => {
+    it('should render with alternate styles', () => {
+      const { tree } = renderHamburger({ props: { tag: 'div' } });
 
-      fireEvent.click(tree);
-      expect(onOpen).toHaveBeenCalledTimes(1);
-      expect(onClose).not.toHaveBeenCalled();
+      expect(tree).toHaveStyleRule('cursor', 'inherit');
+      expect(tree).not.toHaveStyleRule('height');
+      expect(tree).toHaveStyleRule('display', 'inline-block');
+      expect(tree).toHaveStyleRule('padding', '0 25px 7px 0');
     });
 
-    it('should call onClose when hamburger is closed', () => {
-      const onOpen = jest.fn();
-      const onClose = jest.fn();
-      const { tree } = renderHamburger({
-        props: { isOpen: true, onOpen, onClose }
-      });
+    it('should render without button attributes', () => {
+      const { tree } = renderHamburger({ props: { tag: 'div' } });
 
-      fireEvent.click(tree);
-      expect(onOpen).not.toHaveBeenCalled();
-      expect(onClose).toHaveBeenCalledTimes(1);
+      expect(tree).not.toHaveAttribute('type');
+      expect(tree).not.toHaveAttribute('aria-expanded');
+      expect(tree).not.toHaveAttribute('aria-label');
     });
-  });
-
-  it('should update when isOpen prop changes', () => {
-    const { tree, rerender } = renderHamburger();
-
-    expect(tree).toHaveAttribute('aria-expanded', 'false');
-
-    rerender(<Hamburger isOpen onOpen={jest.fn()} onClose={jest.fn()} />);
-
-    expect(tree).toHaveAttribute('aria-expanded', 'true');
   });
 });
