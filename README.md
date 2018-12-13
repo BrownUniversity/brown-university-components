@@ -203,9 +203,11 @@ _Brown University Theme is designed to be used alongside [Bootstrap](https://www
   | color    | oneOf('red', 'white') | -        | 'red'   |
   | children | node                  | true     | -       |
 
+  _Only `mobile` and `sub` are used directly; `navbar`, `mobile`, `sub` and `color` are passed down through `NavContext`._
+
   **`Nav.Item` Properties:**
 
-  _`mobile` and `sub` props are passed down implicitly from `Nav` through `NavContext`._
+  _`mobile` and `sub` are passed in implicitly from `Nav` through `NavContext`._
 
   **`Nav.Link` Properties:**
 
@@ -217,7 +219,7 @@ _Brown University Theme is designed to be used alongside [Bootstrap](https://www
   | onClick  | func                      | -        | null     |
   | href     | string                    | -        | null     |
 
-  _`navbar`, `mobile`, `sub` and 'color' props are passed down implicitly from `Nav` through `NavContext`._
+  _`navbar`, `mobile`, `sub` and `color` are passed in implicitly from `Nav` through `NavContext`._
 
 * `Navbar`
 
