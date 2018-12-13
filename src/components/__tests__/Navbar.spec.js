@@ -15,11 +15,10 @@ const renderNavbar = ({ props = {}, children = jest.fn() } = {}) => {
 describe('Navbar', () => {
   describe('children', () => {
     it('should render children if provided', () => {
-      const NavbarChild = () => <div data-testid="navbar-child" />;
+      const NavbarChildren = () => <div data-testid="navbar-children" />;
+      const { getByTestId } = renderNavbar({ children: NavbarChildren });
 
-      const { getByTestId } = renderNavbar({ children: NavbarChild });
-
-      expect(getByTestId('navbar-child')).toBeInTheDocument();
+      expect(getByTestId('navbar-children')).toBeInTheDocument();
     });
   });
 

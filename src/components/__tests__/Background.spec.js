@@ -20,11 +20,10 @@ const renderBackground = ({ props = {}, children = <div /> } = {}) => {
 describe('Background', () => {
   describe('children', () => {
     it('should render children', () => {
-      const { getByTestId } = renderBackground({
-        children: <div data-testid="children" />
-      });
+      const children = <div data-testid="background-children" />;
+      const { getByTestId } = renderBackground({ children });
 
-      expect(getByTestId('children')).toBeInTheDocument();
+      expect(getByTestId('background-children')).toBeInTheDocument();
     });
   });
 
