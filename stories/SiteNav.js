@@ -7,8 +7,8 @@ import breakpoints from '../src/constants/breakpoints';
 import bannerImage from './images/banner.png';
 
 const getCommonProps = () => ({
-  mobileToggleTitle: text('mobileToggleTitle', 'Site Navigation'),
-  mobileBreakpoint: number('mobileBreakpoint', breakpoints.md)
+  mobileBreakpoint: number('mobileBreakpoint', breakpoints.md),
+  mobileToggleTitle: text('mobileToggleTitle', 'Site Navigation')
 });
 
 const renderSiteNav = additionalProps => (

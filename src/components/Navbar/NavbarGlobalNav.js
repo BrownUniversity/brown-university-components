@@ -7,7 +7,6 @@ import { Collapse } from 'react-collapse';
 import NavbarContext from './NavbarContext';
 import Hamburger from '../Hamburger';
 import Nav from '../Nav';
-import breakpoints from '../../constants/breakpoints';
 import colors from '../../constants/colors';
 import media from '../../constants/media';
 import { sansBold } from '../../constants/typography';
@@ -77,7 +76,6 @@ class NavbarGlobalNav extends Component {
     }));
 
   render() {
-    const { toggleTitle, mobileBreakpoint, ...restProps } = this.props;
     const { navIsOpen } = this.state;
 
     return (
@@ -85,15 +83,15 @@ class NavbarGlobalNav extends Component {
         render={({ width }) => {
           // TODO: update when `width` doesn't return 0 on initial render (see `react-fns` issue 84)
           const currentWidth = width === 0 ? window.innerWidth : width;
-          const renderMobile = currentWidth < mobileBreakpoint;
 
           return (
             <NavbarContext.Consumer>
-              {({ color }) => {
+              {({ color, mobileBreakpoint, toggleTitle }) => {
                 const childColor = getChildColor(color);
+                const renderMobile = currentWidth < mobileBreakpoint;
 
                 return (
-                  <div {...restProps}>
+                  <div {...this.props}>
                     <ToggleButton
                       type="button"
                       aria-controls="navbar-global-nav-collapse"
@@ -136,14 +134,9 @@ class NavbarGlobalNav extends Component {
 }
 
 NavbarGlobalNav.propTypes = {
-  toggleTitle: PropTypes.string,
-  mobileBreakpoint: PropTypes.number,
+  mobileBreakpoint: PropTypes.number.isRequired,
+  toggleTitle: PropTypes.string.isRequired,
   children: PropTypes.node.isRequired
-};
-
-NavbarGlobalNav.defaultProps = {
-  toggleTitle: 'Global Navigation',
-  mobileBreakpoint: breakpoints.md
 };
 
 NavbarGlobalNav.Item = Nav.Item;

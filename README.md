@@ -203,7 +203,7 @@ _Brown University Theme is designed to be used alongside [Bootstrap](https://www
   | color    | oneOf('red', 'white') | -        | 'red'   |
   | children | node                  | true     | -       |
 
-  _Only `mobile` and `sub` are used directly; `navbar`, `mobile`, `sub` and `color` are passed down through `NavContext`._
+  _Only `mobile`, `sub` and `children` are used directly; `navbar`, `mobile`, `sub` and `color` are passed down through `NavContext`._
 
   **`Nav.Item` Properties:**
 
@@ -234,10 +234,14 @@ _Brown University Theme is designed to be used alongside [Bootstrap](https://www
 
   **Properties:**
 
-  | property | propType                  | required | default |
-  | -------- | ------------------------- | -------- | ------- |
-  | color    | oneOf(['brown', 'white']) | -        | 'brown' |
-  | children | node                      | -        | null    |
+  | property         | propType                  | required | default |
+  | ---------------- | ------------------------- | -------- | ------- |
+  | color            | oneOf(['brown', 'white']) | -        | 'brown' |
+  | mobileBreakpoint | number                    | -        | null    |
+  | toggleTitle      | string                    | -        | null    |
+  | children         | node                      | -        | null    |
+
+  _Only `color` and `children` are used directly; `color`, `mobileBreakpoint` and `toggleTitle` are passed down through `NavbarContext`._
 
 * `SiteNav`
 
@@ -266,8 +270,8 @@ _Brown University Theme is designed to be used alongside [Bootstrap](https://www
 
   | property          | propType | required | default         |
   | ----------------- | -------- | -------- | --------------- |
-  | mobileToggleTitle | string   | -        | Site Navigation |
   | mobileBreakpoint  | number   | -        | 768             |
+  | mobileToggleTitle | string   | -        | Site Navigation |
   | banner            | bool     | -        | false           |
   | children          | node     | true     | -               |
 

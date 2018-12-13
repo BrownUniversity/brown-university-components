@@ -103,8 +103,8 @@ class SiteNav extends Component {
 
   render() {
     const {
-      mobileToggleTitle,
       mobileBreakpoint,
+      mobileToggleTitle,
       banner,
       ...restProps
     } = this.props;
@@ -160,15 +160,15 @@ class SiteNav extends Component {
 }
 
 SiteNav.propTypes = {
-  mobileToggleTitle: PropTypes.string,
   mobileBreakpoint: PropTypes.number,
+  mobileToggleTitle: PropTypes.string,
   banner: PropTypes.bool,
   children: PropTypes.node.isRequired
 };
 
 SiteNav.defaultProps = {
-  mobileToggleTitle: 'Site Navigation',
   mobileBreakpoint: breakpoints.md,
+  mobileToggleTitle: 'Site Navigation',
   banner: false
 };
 

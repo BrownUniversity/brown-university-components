@@ -1687,8 +1687,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _NavbarGlobalNav__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(28);
 /* harmony import */ var _svg_inline_logo_black_svg__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(29);
 /* harmony import */ var _svg_inline_logo_white_svg__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(30);
-/* harmony import */ var _constants_colors__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(9);
-/* harmony import */ var _constants_media__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(10);
+/* harmony import */ var _constants_breakpoints__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(11);
+/* harmony import */ var _constants_colors__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(9);
+/* harmony import */ var _constants_media__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(10);
 function _extends() { _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends.apply(this, arguments); }
 
 function _templateObject() {
@@ -1717,6 +1718,7 @@ function _objectWithoutPropertiesLoose(source, excluded) { if (source == null) r
 
 
 
+
 /*
   inner components
 */
@@ -1724,7 +1726,9 @@ function _objectWithoutPropertiesLoose(source, excluded) { if (source == null) r
 
 var NavbarWrapper = styled_components__WEBPACK_IMPORTED_MODULE_2___default()(function (_ref) {
   var color = _ref.color,
-      restProps = _objectWithoutProperties(_ref, ["color"]);
+      mobileBreakpoint = _ref.mobileBreakpoint,
+      toggleTitle = _ref.toggleTitle,
+      restProps = _objectWithoutProperties(_ref, ["color", "mobileBreakpoint", "toggleTitle"]);
 
   return react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("nav", restProps);
 }).withConfig({
@@ -1732,8 +1736,8 @@ var NavbarWrapper = styled_components__WEBPACK_IMPORTED_MODULE_2___default()(fun
   componentId: "c3ezxu-0"
 })(["align-items:center;box-shadow:0 5px 10px 0 #00000026;display:flex;height:75px;justify-content:space-between;padding:0 7vw;position:relative;z-index:20;background-color:", ";", ";"], function (_ref2) {
   var color = _ref2.color;
-  return _constants_colors__WEBPACK_IMPORTED_MODULE_8__["default"][color];
-}, _constants_media__WEBPACK_IMPORTED_MODULE_9__["default"].md(_templateObject()));
+  return _constants_colors__WEBPACK_IMPORTED_MODULE_9__["default"][color];
+}, _constants_media__WEBPACK_IMPORTED_MODULE_10__["default"].md(_templateObject()));
 var NavbarLogoLink = styled_components__WEBPACK_IMPORTED_MODULE_2___default.a.a.withConfig({
   displayName: "Navbar__NavbarLogoLink",
   componentId: "c3ezxu-1"
@@ -1753,8 +1757,10 @@ var logoProps = {
 
 var Navbar = function Navbar(_ref3) {
   var color = _ref3.color,
+      mobileBreakpoint = _ref3.mobileBreakpoint,
+      toggleTitle = _ref3.toggleTitle,
       children = _ref3.children,
-      restProps = _objectWithoutProperties(_ref3, ["color", "children"]);
+      restProps = _objectWithoutProperties(_ref3, ["color", "mobileBreakpoint", "toggleTitle", "children"]);
 
   return react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(NavbarWrapper, _extends({}, restProps, {
     color: color
@@ -1764,17 +1770,23 @@ var Navbar = function Navbar(_ref3) {
     rel: "noopener noreferrer"
   }, color === 'white' ? react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_svg_inline_logo_black_svg__WEBPACK_IMPORTED_MODULE_6__["default"], logoProps) : react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_svg_inline_logo_white_svg__WEBPACK_IMPORTED_MODULE_7__["default"], logoProps)), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(NavbarChildrenWrapper, null, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_NavbarContext__WEBPACK_IMPORTED_MODULE_3__["default"].Provider, {
     value: {
-      color: color
+      color: color,
+      mobileBreakpoint: mobileBreakpoint,
+      toggleTitle: toggleTitle
     }
   }, children)));
 };
 
 Navbar.propTypes =  true ? {
   color: prop_types__WEBPACK_IMPORTED_MODULE_0___default.a.oneOf(['brown', 'white']),
+  mobileBreakpoint: prop_types__WEBPACK_IMPORTED_MODULE_0___default.a.number,
+  toggleTitle: prop_types__WEBPACK_IMPORTED_MODULE_0___default.a.string,
   children: prop_types__WEBPACK_IMPORTED_MODULE_0___default.a.node
 } : undefined;
 Navbar.defaultProps = {
   color: 'brown',
+  mobileBreakpoint: _constants_breakpoints__WEBPACK_IMPORTED_MODULE_8__["default"].md,
+  toggleTitle: 'Global Navigation',
   children: null
 };
 Navbar.Nav = _NavbarNav__WEBPACK_IMPORTED_MODULE_4__["default"];
@@ -1812,9 +1824,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _NavbarContext__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(24);
 /* harmony import */ var _Hamburger__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(16);
 /* harmony import */ var _Nav__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(19);
-/* harmony import */ var _constants_breakpoints__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(11);
-/* harmony import */ var _constants_colors__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(9);
-/* harmony import */ var _constants_media__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(10);
+/* harmony import */ var _constants_colors__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(9);
+/* harmony import */ var _constants_media__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(10);
 function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
 
 function _extends() { _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends.apply(this, arguments); }
@@ -1863,7 +1874,6 @@ function _objectWithoutPropertiesLoose(source, excluded) { if (source == null) r
 
 
 
-
 /*
   inner components
 */
@@ -1879,12 +1889,12 @@ var MobileCollapseWrapper = styled_components__WEBPACK_IMPORTED_MODULE_2___defau
   componentId: "sc-15lu9u4-0"
 })(["box-shadow:0 5px 10px 0 #00000026;left:0;position:absolute;top:75px;width:100%;background-color:", ";"], function (_ref2) {
   var color = _ref2.color;
-  return _constants_colors__WEBPACK_IMPORTED_MODULE_9__["default"][color];
+  return _constants_colors__WEBPACK_IMPORTED_MODULE_8__["default"][color];
 });
 var MobileNavWrapper = styled_components__WEBPACK_IMPORTED_MODULE_2___default.a.div.withConfig({
   displayName: "NavbarNav__MobileNavWrapper",
   componentId: "sc-15lu9u4-1"
-})(["padding:0 7vw 1rem;", ";"], _constants_media__WEBPACK_IMPORTED_MODULE_10__["default"].md(_templateObject()));
+})(["padding:0 7vw 1rem;", ";"], _constants_media__WEBPACK_IMPORTED_MODULE_9__["default"].md(_templateObject()));
 /*
   outer NavbarNav component
 */
@@ -1939,23 +1949,20 @@ function (_Component) {
     value: function render() {
       var _this2 = this;
 
-      var _this$props = this.props,
-          mobileBreakpoint = _this$props.mobileBreakpoint,
-          restProps = _objectWithoutProperties(_this$props, ["mobileBreakpoint"]);
-
       var mobileNavIsOpen = this.state.mobileNavIsOpen;
       return react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(react_fns__WEBPACK_IMPORTED_MODULE_3__["WindowSize"], {
         render: function render(_ref4) {
           var width = _ref4.width;
           // TODO: update when `width` doesn't return 0 on initial render (see `react-fns` issue 84)
           var currentWidth = width === 0 ? window.innerWidth : width;
-          var renderMobile = currentWidth < mobileBreakpoint;
           return react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_NavbarContext__WEBPACK_IMPORTED_MODULE_5__["default"].Consumer, null, function (_ref5) {
-            var color = _ref5.color;
+            var color = _ref5.color,
+                mobileBreakpoint = _ref5.mobileBreakpoint;
             var childColor = getChildColor(color);
+            var renderMobile = currentWidth < mobileBreakpoint;
 
             if (renderMobile) {
-              return react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", restProps, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_Hamburger__WEBPACK_IMPORTED_MODULE_6__["default"], {
+              return react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", _this2.props, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_Hamburger__WEBPACK_IMPORTED_MODULE_6__["default"], {
                 "aria-controls": "navbar-nav-mobile-collapse",
                 color: childColor,
                 isOpen: mobileNavIsOpen,
@@ -1972,7 +1979,7 @@ function (_Component) {
               }, _this2.props.children)))));
             }
 
-            return react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_Nav__WEBPACK_IMPORTED_MODULE_7__["default"], _extends({}, restProps, {
+            return react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_Nav__WEBPACK_IMPORTED_MODULE_7__["default"], _extends({}, _this2.props, {
               navbar: true,
               color: childColor
             }), _this2.props.children);
@@ -1986,12 +1993,9 @@ function (_Component) {
 }(react__WEBPACK_IMPORTED_MODULE_1__["Component"]);
 
 NavbarNav.propTypes =  true ? {
-  mobileBreakpoint: prop_types__WEBPACK_IMPORTED_MODULE_0___default.a.number,
+  mobileBreakpoint: prop_types__WEBPACK_IMPORTED_MODULE_0___default.a.number.isRequired,
   children: prop_types__WEBPACK_IMPORTED_MODULE_0___default.a.node.isRequired
 } : undefined;
-NavbarNav.defaultProps = {
-  mobileBreakpoint: _constants_breakpoints__WEBPACK_IMPORTED_MODULE_8__["default"].md
-};
 NavbarNav.Item = _Nav__WEBPACK_IMPORTED_MODULE_7__["default"].Item;
 NavbarNav.Link = _Nav__WEBPACK_IMPORTED_MODULE_7__["default"].Link;
 /* harmony default export */ __webpack_exports__["default"] = (NavbarNav);
@@ -2027,10 +2031,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _NavbarContext__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(24);
 /* harmony import */ var _Hamburger__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(16);
 /* harmony import */ var _Nav__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(19);
-/* harmony import */ var _constants_breakpoints__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(11);
-/* harmony import */ var _constants_colors__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(9);
-/* harmony import */ var _constants_media__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(10);
-/* harmony import */ var _constants_typography__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(12);
+/* harmony import */ var _constants_colors__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(9);
+/* harmony import */ var _constants_media__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(10);
+/* harmony import */ var _constants_typography__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(12);
 function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -2078,7 +2081,6 @@ function _objectWithoutPropertiesLoose(source, excluded) { if (source == null) r
 
 
 
-
 /*
   inner components
 */
@@ -2092,8 +2094,8 @@ var ToggleTitle = styled_components__WEBPACK_IMPORTED_MODULE_2___default.a.span.
   componentId: "sc-1t3heaa-1"
 })(["color:", ";font-family:", ";font-weight:bold;letter-spacing:0.5px;margin-left:10px;text-transform:uppercase;"], function (_ref) {
   var color = _ref.color;
-  return _constants_colors__WEBPACK_IMPORTED_MODULE_9__["default"][color];
-}, _constants_typography__WEBPACK_IMPORTED_MODULE_11__["sansBold"]); // filter props so they don't become dom attributes (see `styled-components` issue 439)
+  return _constants_colors__WEBPACK_IMPORTED_MODULE_8__["default"][color];
+}, _constants_typography__WEBPACK_IMPORTED_MODULE_10__["sansBold"]); // filter props so they don't become dom attributes (see `styled-components` issue 439)
 
 var CollapseWrapper = styled_components__WEBPACK_IMPORTED_MODULE_2___default()(function (_ref2) {
   var color = _ref2.color,
@@ -2105,12 +2107,12 @@ var CollapseWrapper = styled_components__WEBPACK_IMPORTED_MODULE_2___default()(f
   componentId: "sc-1t3heaa-2"
 })(["box-shadow:0 5px 10px 0 #00000026;left:0;position:absolute;top:75px;width:100%;background-color:", ";"], function (_ref3) {
   var color = _ref3.color;
-  return _constants_colors__WEBPACK_IMPORTED_MODULE_9__["default"][color];
+  return _constants_colors__WEBPACK_IMPORTED_MODULE_8__["default"][color];
 });
 var NavWrapper = styled_components__WEBPACK_IMPORTED_MODULE_2___default.a.div.withConfig({
   displayName: "NavbarGlobalNav__NavWrapper",
   componentId: "sc-1t3heaa-3"
-})(["padding:0 7vw 1rem;", ";"], _constants_media__WEBPACK_IMPORTED_MODULE_10__["default"].md(_templateObject()));
+})(["padding:0 7vw 1rem;", ";"], _constants_media__WEBPACK_IMPORTED_MODULE_9__["default"].md(_templateObject()));
 /*
   outer NavbarGlobalNav component
 */
@@ -2165,22 +2167,19 @@ function (_Component) {
     value: function render() {
       var _this2 = this;
 
-      var _this$props = this.props,
-          toggleTitle = _this$props.toggleTitle,
-          mobileBreakpoint = _this$props.mobileBreakpoint,
-          restProps = _objectWithoutProperties(_this$props, ["toggleTitle", "mobileBreakpoint"]);
-
       var navIsOpen = this.state.navIsOpen;
       return react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(react_fns__WEBPACK_IMPORTED_MODULE_3__["WindowSize"], {
         render: function render(_ref5) {
           var width = _ref5.width;
           // TODO: update when `width` doesn't return 0 on initial render (see `react-fns` issue 84)
           var currentWidth = width === 0 ? window.innerWidth : width;
-          var renderMobile = currentWidth < mobileBreakpoint;
           return react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_NavbarContext__WEBPACK_IMPORTED_MODULE_5__["default"].Consumer, null, function (_ref6) {
-            var color = _ref6.color;
+            var color = _ref6.color,
+                mobileBreakpoint = _ref6.mobileBreakpoint,
+                toggleTitle = _ref6.toggleTitle;
             var childColor = getChildColor(color);
-            return react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", restProps, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(ToggleButton, {
+            var renderMobile = currentWidth < mobileBreakpoint;
+            return react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", _this2.props, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(ToggleButton, {
               type: "button",
               "aria-controls": "navbar-global-nav-collapse",
               "aria-expanded": navIsOpen,
@@ -2211,14 +2210,10 @@ function (_Component) {
 }(react__WEBPACK_IMPORTED_MODULE_1__["Component"]);
 
 NavbarGlobalNav.propTypes =  true ? {
-  toggleTitle: prop_types__WEBPACK_IMPORTED_MODULE_0___default.a.string,
-  mobileBreakpoint: prop_types__WEBPACK_IMPORTED_MODULE_0___default.a.number,
+  mobileBreakpoint: prop_types__WEBPACK_IMPORTED_MODULE_0___default.a.number.isRequired,
+  toggleTitle: prop_types__WEBPACK_IMPORTED_MODULE_0___default.a.string.isRequired,
   children: prop_types__WEBPACK_IMPORTED_MODULE_0___default.a.node.isRequired
 } : undefined;
-NavbarGlobalNav.defaultProps = {
-  toggleTitle: 'Global Navigation',
-  mobileBreakpoint: _constants_breakpoints__WEBPACK_IMPORTED_MODULE_8__["default"].md
-};
 NavbarGlobalNav.Item = _Nav__WEBPACK_IMPORTED_MODULE_7__["default"].Item;
 NavbarGlobalNav.Link = _Nav__WEBPACK_IMPORTED_MODULE_7__["default"].Link;
 /* harmony default export */ __webpack_exports__["default"] = (NavbarGlobalNav);
@@ -2505,10 +2500,10 @@ function (_Component) {
       var _this2 = this;
 
       var _this$props = this.props,
-          mobileToggleTitle = _this$props.mobileToggleTitle,
           mobileBreakpoint = _this$props.mobileBreakpoint,
+          mobileToggleTitle = _this$props.mobileToggleTitle,
           banner = _this$props.banner,
-          restProps = _objectWithoutProperties(_this$props, ["mobileToggleTitle", "mobileBreakpoint", "banner"]);
+          restProps = _objectWithoutProperties(_this$props, ["mobileBreakpoint", "mobileToggleTitle", "banner"]);
 
       var mobileNavIsOpen = this.state.mobileNavIsOpen;
       return react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(react_fns__WEBPACK_IMPORTED_MODULE_3__["WindowSize"], {
@@ -2550,14 +2545,14 @@ function (_Component) {
 }(react__WEBPACK_IMPORTED_MODULE_1__["Component"]);
 
 SiteNav.propTypes =  true ? {
-  mobileToggleTitle: prop_types__WEBPACK_IMPORTED_MODULE_0___default.a.string,
   mobileBreakpoint: prop_types__WEBPACK_IMPORTED_MODULE_0___default.a.number,
+  mobileToggleTitle: prop_types__WEBPACK_IMPORTED_MODULE_0___default.a.string,
   banner: prop_types__WEBPACK_IMPORTED_MODULE_0___default.a.bool,
   children: prop_types__WEBPACK_IMPORTED_MODULE_0___default.a.node.isRequired
 } : undefined;
 SiteNav.defaultProps = {
-  mobileToggleTitle: 'Site Navigation',
   mobileBreakpoint: _constants_breakpoints__WEBPACK_IMPORTED_MODULE_7__["default"].md,
+  mobileToggleTitle: 'Site Navigation',
   banner: false
 };
 SiteNav.Item = _Nav__WEBPACK_IMPORTED_MODULE_6__["default"].Item;

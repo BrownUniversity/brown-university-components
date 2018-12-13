@@ -7,7 +7,6 @@ import { Collapse } from 'react-collapse';
 import NavbarContext from './NavbarContext';
 import Hamburger from '../Hamburger';
 import Nav from '../Nav';
-import breakpoints from '../../constants/breakpoints';
 import colors from '../../constants/colors';
 import media from '../../constants/media';
 
@@ -59,7 +58,6 @@ class NavbarNav extends Component {
     }));
 
   render() {
-    const { mobileBreakpoint, ...restProps } = this.props;
     const { mobileNavIsOpen } = this.state;
 
     return (
@@ -67,16 +65,16 @@ class NavbarNav extends Component {
         render={({ width }) => {
           // TODO: update when `width` doesn't return 0 on initial render (see `react-fns` issue 84)
           const currentWidth = width === 0 ? window.innerWidth : width;
-          const renderMobile = currentWidth < mobileBreakpoint;
 
           return (
             <NavbarContext.Consumer>
-              {({ color }) => {
+              {({ color, mobileBreakpoint }) => {
                 const childColor = getChildColor(color);
+                const renderMobile = currentWidth < mobileBreakpoint;
 
                 if (renderMobile) {
                   return (
-                    <div {...restProps}>
+                    <div {...this.props}>
                       <Hamburger
                         aria-controls="navbar-nav-mobile-collapse"
                         color={childColor}
@@ -101,7 +99,7 @@ class NavbarNav extends Component {
                 }
 
                 return (
-                  <Nav {...restProps} navbar color={childColor}>
+                  <Nav {...this.props} navbar color={childColor}>
                     {this.props.children}
                   </Nav>
                 );
@@ -115,12 +113,8 @@ class NavbarNav extends Component {
 }
 
 NavbarNav.propTypes = {
-  mobileBreakpoint: PropTypes.number,
+  mobileBreakpoint: PropTypes.number.isRequired,
   children: PropTypes.node.isRequired
-};
-
-NavbarNav.defaultProps = {
-  mobileBreakpoint: breakpoints.md
 };
 
 NavbarNav.Item = Nav.Item;

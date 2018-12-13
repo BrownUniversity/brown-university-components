@@ -7,6 +7,7 @@ import NavbarNav from './NavbarNav';
 import NavbarGlobalNav from './NavbarGlobalNav';
 import LogoBlackSVG from '../../svg/inline/logo-black.svg';
 import LogoWhiteSVG from '../../svg/inline/logo-white.svg';
+import breakpoints from '../../constants/breakpoints';
 import colors from '../../constants/colors';
 import media from '../../constants/media';
 
@@ -14,9 +15,11 @@ import media from '../../constants/media';
   inner components
 */
 // filter props so they don't become dom attributes (see `styled-components` issue 439)
-const NavbarWrapper = styled(({ color, ...restProps }) => (
-  <nav {...restProps} />
-))`
+const NavbarWrapper = styled(
+  ({ color, mobileBreakpoint, toggleTitle, ...restProps }) => (
+    <nav {...restProps} />
+  )
+)`
   align-items: center;
   box-shadow: 0 5px 10px 0 #00000026;
   display: flex;
@@ -45,7 +48,13 @@ const NavbarChildrenWrapper = styled.div`
 */
 const logoProps = { height: 65, width: 131 };
 
-const Navbar = ({ color, children, ...restProps }) => (
+const Navbar = ({
+  color,
+  mobileBreakpoint,
+  toggleTitle,
+  children,
+  ...restProps
+}) => (
   <NavbarWrapper {...restProps} color={color}>
     <NavbarLogoLink
       href="http://www.brown.edu/"
@@ -59,7 +68,7 @@ const Navbar = ({ color, children, ...restProps }) => (
       )}
     </NavbarLogoLink>
     <NavbarChildrenWrapper>
-      <NavbarContext.Provider value={{ color }}>
+      <NavbarContext.Provider value={{ color, mobileBreakpoint, toggleTitle }}>
         {children}
       </NavbarContext.Provider>
     </NavbarChildrenWrapper>
@@ -68,11 +77,15 @@ const Navbar = ({ color, children, ...restProps }) => (
 
 Navbar.propTypes = {
   color: PropTypes.oneOf(['brown', 'white']),
+  mobileBreakpoint: PropTypes.number,
+  toggleTitle: PropTypes.string,
   children: PropTypes.node
 };
 
 Navbar.defaultProps = {
   color: 'brown',
+  mobileBreakpoint: breakpoints.md,
+  toggleTitle: 'Global Navigation',
   children: null
 };
 
