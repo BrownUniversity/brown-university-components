@@ -7,17 +7,17 @@ const renderLoader = ({ props = {} } = {}) => {
   const rtlUtils = render(<Loader {...props} />);
 
   return {
-    tree: rtlUtils.container.firstChild,
+    loader: rtlUtils.container.firstChild,
     ...rtlUtils
   };
 };
 
 describe('Loader', () => {
   it('should render loader with default height', () => {
-    const { tree } = renderLoader(/* { props: { height: 400 } } */);
+    const { loader } = renderLoader(/* { props: { height: 400 } } */);
 
     // TODO: update when animation name can be deterministic (see `jest-styled-components` issue 123)
-    expect(tree).toMatchInlineSnapshot(`
+    expect(loader).toMatchInlineSnapshot(`
 .c0 svg #rays {
   -webkit-transform-origin: center;
   -ms-transform-origin: center;

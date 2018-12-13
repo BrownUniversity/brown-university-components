@@ -12,7 +12,7 @@ const renderBackground = ({ props = {}, children = <div /> } = {}) => {
   );
 
   return {
-    tree: rtlUtils.container.firstChild,
+    background: rtlUtils.container.firstChild,
     ...rtlUtils
   };
 };
@@ -29,9 +29,9 @@ describe('Background', () => {
 
   describe('style', () => {
     it(' should render full white background by default', () => {
-      const { tree } = renderBackground();
+      const { background } = renderBackground();
 
-      expect(tree).toMatchInlineSnapshot(`
+      expect(background).toMatchInlineSnapshot(`
 .c0 {
   background-image: url('background.svg');
   background-repeat: repeat;
@@ -54,15 +54,15 @@ describe('Background', () => {
     });
 
     it('should render gray background if variant is provided', () => {
-      const { tree } = renderBackground({ props: { color: 'gray' } });
+      const { background } = renderBackground({ props: { color: 'gray' } });
 
-      expect(tree).toHaveStyleRule('background-color', '#F0F3F5');
+      expect(background).toHaveStyleRule('background-color', '#F0F3F5');
     });
 
     it('should render a responsive background if variant is provided', () => {
-      const { tree } = renderBackground({ props: { full: false } });
+      const { background } = renderBackground({ props: { full: false } });
 
-      expect(tree).not.toHaveStyleRule('background-size', '100%', {
+      expect(background).not.toHaveStyleRule('background-size', '100%', {
         media: '(min-width: 1600px)'
       });
     });

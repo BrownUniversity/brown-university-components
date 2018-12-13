@@ -7,7 +7,7 @@ const renderNavbar = ({ props = {}, children = jest.fn() } = {}) => {
   const rtlUtils = render(<Navbar {...props}>{children()}</Navbar>);
 
   return {
-    tree: rtlUtils.container.firstChild,
+    navbar: rtlUtils.container.firstChild,
     ...rtlUtils
   };
 };
@@ -24,9 +24,9 @@ describe('Navbar', () => {
 
   describe('style', () => {
     it('should render a brown navbar by default', () => {
-      const { tree } = renderNavbar();
+      const { navbar } = renderNavbar();
 
-      expect(tree).toMatchInlineSnapshot(`
+      expect(navbar).toMatchInlineSnapshot(`
 .c0 {
   -webkit-align-items: center;
   -webkit-box-align: center;
@@ -86,9 +86,9 @@ describe('Navbar', () => {
     });
 
     it('should render a navbar of another color when color variant is provided', () => {
-      const { tree } = renderNavbar({ props: { color: 'white' } });
+      const { navbar } = renderNavbar({ props: { color: 'white' } });
 
-      expect(tree).toHaveStyleRule('background-color', '#FFFFFF');
+      expect(navbar).toHaveStyleRule('background-color', '#FFFFFF');
     });
   });
 });

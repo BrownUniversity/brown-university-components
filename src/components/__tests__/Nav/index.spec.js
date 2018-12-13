@@ -7,7 +7,7 @@ const renderNav = ({ props = {}, children = <li /> } = {}) => {
   const rtlUtils = render(<Nav {...props}>{children}</Nav>);
 
   return {
-    tree: rtlUtils.container.firstChild,
+    nav: rtlUtils.container.firstChild,
     ...rtlUtils
   };
 };
@@ -30,9 +30,9 @@ describe('Nav', () => {
 
   describe('style', () => {
     it('should render nav with default styles', () => {
-      const { tree } = renderNav();
+      const { nav } = renderNav();
 
-      expect(tree).toMatchInlineSnapshot(`
+      expect(nav).toMatchInlineSnapshot(`
 .c0 {
   list-style: none;
   margin: 0;
@@ -54,23 +54,23 @@ describe('Nav', () => {
     });
 
     it('should render nav with mobile styles when alternate is provided', () => {
-      const { tree } = renderNav({
+      const { nav } = renderNav({
         props: { mobile: true }
       });
 
-      expect(tree).toHaveStyleRule('background-color', 'transparent');
-      expect(tree).toHaveStyleRule('display', 'block');
-      expect(tree).toHaveStyleRule('padding', '0');
-      expect(tree).toHaveStyleRule('width', '100%');
+      expect(nav).toHaveStyleRule('background-color', 'transparent');
+      expect(nav).toHaveStyleRule('display', 'block');
+      expect(nav).toHaveStyleRule('padding', '0');
+      expect(nav).toHaveStyleRule('width', '100%');
     });
 
     it('should render nav with sub styles when alternate is provided', () => {
-      const { tree } = renderNav({ props: { sub: true } });
+      const { nav } = renderNav({ props: { sub: true } });
 
-      expect(tree).toHaveStyleRule('background-color', '#F7F7F7');
-      expect(tree).toHaveStyleRule('display', 'block');
-      expect(tree).toHaveStyleRule('padding', '15px');
-      expect(tree).toHaveStyleRule('width', '100%');
+      expect(nav).toHaveStyleRule('background-color', '#F7F7F7');
+      expect(nav).toHaveStyleRule('display', 'block');
+      expect(nav).toHaveStyleRule('padding', '15px');
+      expect(nav).toHaveStyleRule('width', '100%');
     });
   });
 });

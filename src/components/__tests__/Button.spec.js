@@ -3,11 +3,11 @@ import { render, fireEvent } from 'react-testing-library';
 
 import Button from '../Button';
 
-const renderButton = ({ props = {}, children = 'Children' } = {}) => {
+const renderButton = ({ props = {}, children = 'Button' } = {}) => {
   const rtlUtils = render(<Button {...props}>{children}</Button>);
 
   return {
-    tree: rtlUtils.container.firstChild,
+    button: rtlUtils.container.firstChild,
     ...rtlUtils
   };
 };
@@ -15,9 +15,9 @@ const renderButton = ({ props = {}, children = 'Children' } = {}) => {
 describe('Button', () => {
   describe('children', () => {
     it('should render children', () => {
-      const { getByText } = renderButton({ children: 'Button Text' });
+      const { getByText } = renderButton({ children: 'Click Me' });
 
-      expect(getByText('Button Text')).toBeInTheDocument();
+      expect(getByText('Click Me')).toBeInTheDocument();
     });
   });
 
@@ -54,49 +54,49 @@ describe('Button', () => {
 
   describe('type', () => {
     it('should render type as undefined by default', () => {
-      const { tree } = renderButton();
+      const { button } = renderButton();
 
-      expect(tree).not.toHaveAttribute('type');
+      expect(button).not.toHaveAttribute('type');
     });
 
     it('should render type as button when tag is button and onClick is provided', () => {
-      const { tree } = renderButton({
+      const { button } = renderButton({
         props: { onClick: jest.fn() }
       });
 
-      expect(tree).toHaveAttribute('type', 'button');
+      expect(button).toHaveAttribute('type', 'button');
     });
 
     it('should render custom type when provided', () => {
-      const { tree } = renderButton({
+      const { button } = renderButton({
         props: { type: 'submit' }
       });
 
-      expect(tree).toHaveAttribute('type', 'submit');
+      expect(button).toHaveAttribute('type', 'submit');
     });
 
     it('should render type as undefined when the type is not provided and the tag is not button', () => {
-      const { tree } = renderButton({
+      const { button } = renderButton({
         props: { tag: 'a' }
       });
 
-      expect(tree).not.toHaveAttribute('type');
+      expect(button).not.toHaveAttribute('type');
     });
 
     it('should render type as undefined when the type is not provided and an href is provided', () => {
-      const { tree } = renderButton({
+      const { button } = renderButton({
         props: { href: 'https://www.brown.edu/' }
       });
 
-      expect(tree).not.toHaveAttribute('type');
+      expect(button).not.toHaveAttribute('type');
     });
   });
 
   describe('style', () => {
     it('should render a solid red button by default', () => {
-      const { tree } = renderButton();
+      const { button } = renderButton();
 
-      expect(tree).toMatchInlineSnapshot(`
+      expect(button).toMatchInlineSnapshot(`
 .c0 {
   border-width: 0;
   display: inline-block;
@@ -134,15 +134,15 @@ describe('Button', () => {
   class="c0"
   color="red"
 >
-  Children
+  Button
 </button>
 `);
     });
 
     it('should render a solid button of another color when color variant is provided', () => {
-      const { tree } = renderButton({ props: { color: 'yellow' } });
+      const { button } = renderButton({ props: { color: 'yellow' } });
 
-      expect(tree).toMatchInlineSnapshot(`
+      expect(button).toMatchInlineSnapshot(`
 .c0 {
   border-width: 0;
   display: inline-block;
@@ -180,27 +180,27 @@ describe('Button', () => {
   class="c0"
   color="yellow"
 >
-  Children
+  Button
 </button>
 `);
     });
 
     it('should render a small button when size variant is provided', () => {
-      const { tree } = renderButton({ props: { size: 'small' } });
+      const { button } = renderButton({ props: { size: 'small' } });
 
-      expect(tree).toHaveStyleRule('font-size', '0.55em');
+      expect(button).toHaveStyleRule('font-size', '0.55em');
     });
 
     it('should render a large button when size variant is provided', () => {
-      const { tree } = renderButton({ props: { size: 'large' } });
+      const { button } = renderButton({ props: { size: 'large' } });
 
-      expect(tree).toHaveStyleRule('font-size', '0.95em');
+      expect(button).toHaveStyleRule('font-size', '0.95em');
     });
 
     it('should render an outlined red button when outline variant is provided', () => {
-      const { tree } = renderButton({ props: { outline: true } });
+      const { button } = renderButton({ props: { outline: true } });
 
-      expect(tree).toMatchInlineSnapshot(`
+      expect(button).toMatchInlineSnapshot(`
 .c0 {
   border-width: 0;
   display: inline-block;
@@ -238,17 +238,17 @@ describe('Button', () => {
   class="c0"
   color="red"
 >
-  Children
+  Button
 </button>
 `);
     });
 
     it('should render an outlined button of another color when color and outline variants are provided', () => {
-      const { tree } = renderButton({
+      const { button } = renderButton({
         props: { color: 'brown', outline: true }
       });
 
-      expect(tree).toMatchInlineSnapshot(`
+      expect(button).toMatchInlineSnapshot(`
 .c0 {
   border-width: 0;
   display: inline-block;
@@ -286,17 +286,17 @@ describe('Button', () => {
   class="c0"
   color="brown"
 >
-  Children
+  Button
 </button>
 `);
     });
 
     it('should render a solid inverse red button when inverse variant is provided', () => {
-      const { tree } = renderButton({
+      const { button } = renderButton({
         props: { inverse: true }
       });
 
-      expect(tree).toMatchInlineSnapshot(`
+      expect(button).toMatchInlineSnapshot(`
 .c0 {
   border-width: 0;
   display: inline-block;
@@ -334,17 +334,17 @@ describe('Button', () => {
   class="c0"
   color="red"
 >
-  Children
+  Button
 </button>
 `);
     });
 
     it('should render a solid inverse button of another color when color and inverse variants are provided', () => {
-      const { tree } = renderButton({
+      const { button } = renderButton({
         props: { color: 'gray', inverse: true }
       });
 
-      expect(tree).toMatchInlineSnapshot(`
+      expect(button).toMatchInlineSnapshot(`
 .c0 {
   border-width: 0;
   display: inline-block;
@@ -382,17 +382,17 @@ describe('Button', () => {
   class="c0"
   color="gray"
 >
-  Children
+  Button
 </button>
 `);
     });
 
     it('should render an outlined inverse red button when outline and inverse variants are provided', () => {
-      const { tree } = renderButton({
+      const { button } = renderButton({
         props: { outline: true, inverse: true }
       });
 
-      expect(tree).toMatchInlineSnapshot(`
+      expect(button).toMatchInlineSnapshot(`
 .c0 {
   border-width: 0;
   display: inline-block;
@@ -430,17 +430,17 @@ describe('Button', () => {
   class="c0"
   color="red"
 >
-  Children
+  Button
 </button>
 `);
     });
 
     it('should render an outlined inverse button of another color when color, outline and inverse variants are provided', () => {
-      const { tree } = renderButton({
+      const { button } = renderButton({
         props: { color: 'emerald', outline: true, inverse: true }
       });
 
-      expect(tree).toMatchInlineSnapshot(`
+      expect(button).toMatchInlineSnapshot(`
 .c0 {
   border-width: 0;
   display: inline-block;
@@ -478,17 +478,17 @@ describe('Button', () => {
   class="c0"
   color="emerald"
 >
-  Children
+  Button
 </button>
 `);
     });
 
     it('should render button with pseudo-element when an href is provided', () => {
-      const { tree } = renderButton({
+      const { button } = renderButton({
         props: { href: 'https://www.brown.edu/' }
       });
 
-      expect(tree).toMatchInlineSnapshot(`
+      expect(button).toMatchInlineSnapshot(`
 .c0 {
   border-width: 0;
   display: inline-block;
@@ -561,7 +561,7 @@ describe('Button', () => {
   color="red"
   href="https://www.brown.edu/"
 >
-  Children
+  Button
 </a>
 `);
     });
@@ -569,23 +569,23 @@ describe('Button', () => {
 
   describe('disabled', () => {
     it('should render a disabled button when disabled variant is provided', () => {
-      const { tree } = renderButton({
+      const { button } = renderButton({
         props: { disabled: true }
       });
 
-      expect(tree).toHaveStyleRule('cursor', 'not-allowed');
-      expect(tree).toHaveStyleRule('opacity', '0.65');
-      expect(tree).toHaveStyleRule('pointer-events', 'auto');
+      expect(button).toHaveStyleRule('cursor', 'not-allowed');
+      expect(button).toHaveStyleRule('opacity', '0.65');
+      expect(button).toHaveStyleRule('pointer-events', 'auto');
     });
 
     it('should render a disabled button when an an href and disabled variant are provided', () => {
-      const { tree } = renderButton({
+      const { button } = renderButton({
         props: { href: 'http://www.brown.edu', disabled: true }
       });
 
-      expect(tree).toHaveStyleRule('cursor', 'pointer');
-      expect(tree).toHaveStyleRule('opacity', '0.65');
-      expect(tree).toHaveStyleRule('pointer-events', 'none');
+      expect(button).toHaveStyleRule('cursor', 'pointer');
+      expect(button).toHaveStyleRule('opacity', '0.65');
+      expect(button).toHaveStyleRule('pointer-events', 'none');
     });
   });
 

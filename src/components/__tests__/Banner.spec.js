@@ -5,14 +5,14 @@ import Banner from '../Banner';
 
 const renderBanner = ({ props = {}, children = null } = {}) => {
   const rtlUtils = render(<Banner {...props}>{children}</Banner>);
-  const tree = rtlUtils.container.firstChild;
+  const banner = rtlUtils.container.firstChild;
 
   return {
-    tree,
-    bannerImageColorWrapper: tree.firstChild,
-    bannerImage: tree.firstChild.firstChild,
-    bannerSVG: tree.firstChild.firstChild.firstChild,
-    bannerChildrenWrapper: tree.children[1],
+    banner,
+    bannerImageColorWrapper: banner.firstChild,
+    bannerImage: banner.firstChild.firstChild,
+    bannerSVG: banner.firstChild.firstChild.firstChild,
+    bannerChildrenWrapper: banner.children[1],
     ...rtlUtils
   };
 };

@@ -3,11 +3,11 @@ import { render } from 'react-testing-library';
 
 import Code from '../Code';
 
-const renderCode = ({ props = {}, children = 'children' } = {}) => {
+const renderCode = ({ props = {}, children = 'code' } = {}) => {
   const rtlUtils = render(<Code {...props}>{children}</Code>);
 
   return {
-    tree: rtlUtils.container.firstChild,
+    code: rtlUtils.container.firstChild,
     ...rtlUtils
   };
 };
@@ -15,17 +15,17 @@ const renderCode = ({ props = {}, children = 'children' } = {}) => {
 describe('Code', () => {
   describe('children', () => {
     it('should render children', () => {
-      const { getByText } = renderCode({ children: 'code' });
+      const { getByText } = renderCode({ children: 'lorem ipsum dolor' });
 
-      expect(getByText('code')).toBeInTheDocument();
+      expect(getByText('lorem ipsum dolor')).toBeInTheDocument();
     });
   });
 
   describe('style', () => {
     it('should render default', () => {
-      const { tree } = renderCode();
+      const { code } = renderCode();
 
-      expect(tree).toMatchInlineSnapshot(`
+      expect(code).toMatchInlineSnapshot(`
 .c0 {
   background: #F7F7F7;
   color: #3B302C;
@@ -40,7 +40,7 @@ describe('Code', () => {
 <code
   class="c0"
 >
-  children
+  code
 </code>
 `);
     });

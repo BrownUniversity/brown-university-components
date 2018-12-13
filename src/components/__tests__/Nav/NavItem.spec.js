@@ -17,10 +17,9 @@ const renderNavItem = ({
       </ul>
     </NavContext.Provider>
   );
-  const tree = rtlUtils.container.firstChild;
 
   return {
-    navItem: tree.firstChild,
+    navItem: rtlUtils.container.firstChild.firstChild,
     ...rtlUtils
   };
 };
