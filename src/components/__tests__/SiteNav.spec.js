@@ -73,15 +73,35 @@ describe('SiteNav', () => {
       });
     });
 
-    it('should toggle mobile site nav on mobile toggle button click', () => {
-      const { getByLabelText } = renderSiteNav();
-      const mobileToggleButton = getByLabelText('Toggle site navigation');
+    it('should render custom toggle title if provided', () => {
+      const { getByText } = renderSiteNav({
+        props: { mobileToggleTitle: 'Custom Navigation' }
+      });
 
-      expect(mobileToggleButton).toHaveAttribute('aria-expanded', 'false');
-      fireEvent.click(mobileToggleButton);
-      expect(mobileToggleButton).toHaveAttribute('aria-expanded', 'true');
-      fireEvent.click(mobileToggleButton);
-      expect(mobileToggleButton).toHaveAttribute('aria-expanded', 'false');
+      expect(getByText('Custom Navigation')).toBeInTheDocument();
+    });
+
+    it('should toggle mobile site nav on mobile toggle button click', () => {
+      const { getByLabelText, getByText } = renderSiteNav();
+      const mobileToggleButtonByLabelText = getByLabelText(
+        'Toggle site navigation'
+      );
+      const mobileToggleButtonByText = getByText('Site Navigation');
+
+      expect(mobileToggleButtonByLabelText).toHaveAttribute(
+        'aria-expanded',
+        'false'
+      );
+      fireEvent.click(mobileToggleButtonByLabelText);
+      expect(mobileToggleButtonByLabelText).toHaveAttribute(
+        'aria-expanded',
+        'true'
+      );
+      fireEvent.click(mobileToggleButtonByText);
+      expect(mobileToggleButtonByLabelText).toHaveAttribute(
+        'aria-expanded',
+        'false'
+      );
     });
   });
 });
