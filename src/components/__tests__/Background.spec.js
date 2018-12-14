@@ -27,8 +27,8 @@ describe('Background', () => {
     });
   });
 
-  describe('style', () => {
-    it(' should render full white background by default', () => {
+  describe('styles', () => {
+    it('should render full white background by default', () => {
       const { background } = renderBackground();
 
       expect(background).toMatchInlineSnapshot(`
@@ -53,13 +53,13 @@ describe('Background', () => {
 `);
     });
 
-    it('should render gray background if variant is provided', () => {
+    it('should render gray background when color variant is provided', () => {
       const { background } = renderBackground({ props: { color: 'gray' } });
 
       expect(background).toHaveStyleRule('background-color', '#F0F3F5');
     });
 
-    it('should render a responsive background if variant is provided', () => {
+    it('should render responsive background when variant is provided', () => {
       const { background } = renderBackground({ props: { full: false } });
 
       expect(background).not.toHaveStyleRule('background-size', '100%', {

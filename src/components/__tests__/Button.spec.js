@@ -22,13 +22,13 @@ describe('Button', () => {
   });
 
   describe('tag', () => {
-    it('should render a button element by default', () => {
+    it('should render button element by default', () => {
       const { container } = renderButton();
 
       expect(container.getElementsByTagName('button')).toHaveLength(1);
     });
 
-    it('should render an anchor element when an href is provided', () => {
+    it('should render anchor element when href is provided', () => {
       const { container } = renderButton({
         props: { href: 'https://www.brown.edu/' }
       });
@@ -36,7 +36,7 @@ describe('Button', () => {
       expect(container.getElementsByTagName('a')).toHaveLength(1);
     });
 
-    it('should render a custom element when provided', () => {
+    it('should render custom element when provided', () => {
       /* eslint-disable-next-line react/prop-types */
       const Link = ({ className, children }) => (
         <a href="/home" className={className} data-testid="custom-element">
@@ -83,7 +83,7 @@ describe('Button', () => {
       expect(button).not.toHaveAttribute('type');
     });
 
-    it('should render type as undefined when the type is not provided and an href is provided', () => {
+    it('should render type as undefined when the type is not provided and href is provided', () => {
       const { button } = renderButton({
         props: { href: 'https://www.brown.edu/' }
       });
@@ -92,8 +92,8 @@ describe('Button', () => {
     });
   });
 
-  describe('style', () => {
-    it('should render a solid red button by default', () => {
+  describe('styles', () => {
+    it('should render solid red button by default', () => {
       const { button } = renderButton();
 
       expect(button).toMatchInlineSnapshot(`
@@ -139,7 +139,7 @@ describe('Button', () => {
 `);
     });
 
-    it('should render a solid button of another color when color variant is provided', () => {
+    it('should render solid button of another color when color variant is provided', () => {
       const { button } = renderButton({ props: { color: 'yellow' } });
 
       expect(button).toMatchInlineSnapshot(`
@@ -185,19 +185,19 @@ describe('Button', () => {
 `);
     });
 
-    it('should render a small button when size variant is provided', () => {
+    it('should render small button when size variant is provided', () => {
       const { button } = renderButton({ props: { size: 'small' } });
 
       expect(button).toHaveStyleRule('font-size', '0.55em');
     });
 
-    it('should render a large button when size variant is provided', () => {
+    it('should render large button when size variant is provided', () => {
       const { button } = renderButton({ props: { size: 'large' } });
 
       expect(button).toHaveStyleRule('font-size', '0.95em');
     });
 
-    it('should render an outlined red button when outline variant is provided', () => {
+    it('should render outlined red button when outline variant is provided', () => {
       const { button } = renderButton({ props: { outline: true } });
 
       expect(button).toMatchInlineSnapshot(`
@@ -243,7 +243,7 @@ describe('Button', () => {
 `);
     });
 
-    it('should render an outlined button of another color when color and outline variants are provided', () => {
+    it('should render outlined button of another color when color and outline variants are provided', () => {
       const { button } = renderButton({
         props: { color: 'brown', outline: true }
       });
@@ -291,7 +291,7 @@ describe('Button', () => {
 `);
     });
 
-    it('should render a solid inverse red button when inverse variant is provided', () => {
+    it('should render solid inverse red button when inverse variant is provided', () => {
       const { button } = renderButton({
         props: { inverse: true }
       });
@@ -339,7 +339,7 @@ describe('Button', () => {
 `);
     });
 
-    it('should render a solid inverse button of another color when color and inverse variants are provided', () => {
+    it('should render solid inverse button of another color when color and inverse variants are provided', () => {
       const { button } = renderButton({
         props: { color: 'gray', inverse: true }
       });
@@ -387,7 +387,7 @@ describe('Button', () => {
 `);
     });
 
-    it('should render an outlined inverse red button when outline and inverse variants are provided', () => {
+    it('should render outlined inverse red button when outline and inverse variants are provided', () => {
       const { button } = renderButton({
         props: { outline: true, inverse: true }
       });
@@ -435,7 +435,7 @@ describe('Button', () => {
 `);
     });
 
-    it('should render an outlined inverse button of another color when color, outline and inverse variants are provided', () => {
+    it('should render outlined inverse button of another color when color, outline and inverse variants are provided', () => {
       const { button } = renderButton({
         props: { color: 'emerald', outline: true, inverse: true }
       });
@@ -483,7 +483,7 @@ describe('Button', () => {
 `);
     });
 
-    it('should render button with pseudo-element when an href is provided', () => {
+    it('should render button with pseudo-element when href is provided', () => {
       const { button } = renderButton({
         props: { href: 'https://www.brown.edu/' }
       });
@@ -568,7 +568,7 @@ describe('Button', () => {
   });
 
   describe('disabled', () => {
-    it('should render a disabled button when disabled variant is provided', () => {
+    it('should render disabled button when disabled variant is provided', () => {
       const { button } = renderButton({
         props: { disabled: true }
       });
@@ -578,7 +578,7 @@ describe('Button', () => {
       expect(button).toHaveStyleRule('pointer-events', 'auto');
     });
 
-    it('should render a disabled button when an an href and disabled variant are provided', () => {
+    it('should render disabled button when an href and disabled variant are provided', () => {
       const { button } = renderButton({
         props: { href: 'http://www.brown.edu', disabled: true }
       });

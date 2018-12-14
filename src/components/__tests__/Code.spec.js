@@ -21,7 +21,7 @@ describe('Code', () => {
     });
   });
 
-  describe('style', () => {
+  describe('styles', () => {
     it('should render default', () => {
       const { code } = renderCode();
 

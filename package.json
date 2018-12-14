@@ -12,6 +12,7 @@
     "format:check": "npm run prettier -- --list-different",
     "format:fix": "npm run prettier -- --write",
     "test": "jest --config ./jest/config.js",
+    "test:verbose": "npm test -- --verbose",
     "test:coverage": "npm test -- --coverage",
     "test:coverage:open": "npm run test:coverage && opener ./coverage/lcov-report/index.html",
     "test:watch": "npm test -- --watch --verbose false",

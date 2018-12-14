@@ -14,7 +14,7 @@ const renderNavbar = ({ props = {}, children = jest.fn() } = {}) => {
 
 describe('Navbar', () => {
   describe('children', () => {
-    it('should render children if provided', () => {
+    it('should render children when provided', () => {
       const NavbarChildren = () => <div data-testid="navbar-children" />;
       const { getByTestId } = renderNavbar({ children: NavbarChildren });
 
@@ -22,8 +22,8 @@ describe('Navbar', () => {
     });
   });
 
-  describe('style', () => {
-    it('should render a brown navbar by default', () => {
+  describe('styles', () => {
+    it('should render brown navbar by default', () => {
       const { navbar } = renderNavbar();
 
       expect(navbar).toMatchInlineSnapshot(`
@@ -85,7 +85,7 @@ describe('Navbar', () => {
 `);
     });
 
-    it('should render a navbar of another color when color variant is provided', () => {
+    it('should render white navbar when color variant is provided', () => {
       const { navbar } = renderNavbar({ props: { color: 'white' } });
 
       expect(navbar).toHaveStyleRule('background-color', '#FFFFFF');

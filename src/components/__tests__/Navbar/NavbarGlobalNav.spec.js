@@ -45,14 +45,14 @@ const renderNavbarGlobalNav = ({
 
 describe('NavbarGlobalNav', () => {
   describe('when window width is above mobileBreakpoint', () => {
-    describe('style', () => {
-      it('should render a brown navbar global nav by default', () => {
+    describe('styles', () => {
+      it('should render brown navbar global nav by default', () => {
         const { navbarGlobalNav } = renderNavbarGlobalNav();
 
         expect(navbarGlobalNav).toMatchSnapshot();
       });
 
-      it('should render a white navbar global nav if variant is provided', () => {
+      it('should render white navbar global nav when color variant is provided', () => {
         const {
           navbarGlobalNavToggleTitle,
           navbarGlobalNavCollapseWrapper
@@ -68,7 +68,7 @@ describe('NavbarGlobalNav', () => {
       });
     });
 
-    it('should render custom toggle title if provided', () => {
+    it('should render custom toggle title when provided', () => {
       const { getByText } = renderNavbarGlobalNav({
         context: { toggleTitle: 'Custom Navigation' }
       });
@@ -76,7 +76,7 @@ describe('NavbarGlobalNav', () => {
       expect(getByText('Custom Navigation')).toBeInTheDocument();
     });
 
-    it('should toggle navbar global nav collapsee', () => {
+    it('should toggle navbar global nav collapse', () => {
       const { getByLabelText, getByText } = renderNavbarGlobalNav();
       const toggleButtonByLabelText = getByLabelText(
         'Toggle global navigation'
@@ -96,14 +96,14 @@ describe('NavbarGlobalNav', () => {
       triggerWindowResize({ width: breakpoints.md - 1 });
     });
 
-    describe('style', () => {
-      it('should render a brown mobile navbar global nav by default', () => {
+    describe('styles', () => {
+      it('should render brown mobile navbar global nav by default', () => {
         const { navbarGlobalNav } = renderNavbarGlobalNav();
 
         expect(navbarGlobalNav).toMatchSnapshot();
       });
 
-      it('should render a white mobile navbar global nav if variant is provided', () => {
+      it('should render white mobile navbar global nav when color variant is provided', () => {
         const { navbarGlobalNavCollapseWrapper } = renderNavbarGlobalNav({
           context: { color: 'white' }
         });
@@ -115,7 +115,7 @@ describe('NavbarGlobalNav', () => {
       });
     });
 
-    it('should toggle navbar global nav collapsee', () => {
+    it('should toggle navbar global nav collapse', () => {
       const { getByLabelText } = renderNavbarGlobalNav();
       const toggleButtonByLabelText = getByLabelText(
         'Toggle global navigation'

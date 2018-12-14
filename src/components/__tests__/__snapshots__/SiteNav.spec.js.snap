@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`SiteNav when window width is above mobileBreakpoint style when banner variant is not provided should render default site nav 1`] = `
+exports[`SiteNav when window width is above mobileBreakpoint styles when banner variant is not provided should render default site nav 1`] = `
 .c3 {
   display: list-item;
   padding: 9px 15px;
@@ -199,7 +199,7 @@ exports[`SiteNav when window width is above mobileBreakpoint style when banner v
 </div>
 `;
 
-exports[`SiteNav when window width is above mobileBreakpoint style when banner variant is provided should render default site nav with banner positioning 1`] = `
+exports[`SiteNav when window width is above mobileBreakpoint styles when banner variant is provided should render default site nav with banner positioning 1`] = `
 .c3 {
   display: list-item;
   padding: 9px 15px;
@@ -404,7 +404,7 @@ exports[`SiteNav when window width is above mobileBreakpoint style when banner v
 </div>
 `;
 
-exports[`SiteNav when window width is below mobileBreakpoint style when banner variant is not provided should render mobile site nav 1`] = `
+exports[`SiteNav when window width is below mobileBreakpoint styles when banner variant is not provided should render mobile site nav 1`] = `
 .c4 {
   background: transparent;
   border: none;
@@ -702,7 +702,7 @@ exports[`SiteNav when window width is below mobileBreakpoint style when banner v
 </div>
 `;
 
-exports[`SiteNav when window width is below mobileBreakpoint style when banner variant is provided should render mobile site nav with banner positioning 1`] = `
+exports[`SiteNav when window width is below mobileBreakpoint styles when banner variant is provided should render mobile site nav with banner positioning 1`] = `
 .c5 {
   background: transparent;
   border: none;

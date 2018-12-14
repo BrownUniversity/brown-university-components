@@ -157,7 +157,7 @@ exports[`NavbarNav when window width is above mobileBreakpoint should render def
 </ul>
 `;
 
-exports[`NavbarNav when window width is below mobileBreakpoint style should render a brown mobile navbar nav by default 1`] = `
+exports[`NavbarNav when window width is below mobileBreakpoint styles should render brown mobile navbar nav by default 1`] = `
 .c0 {
   background: transparent;
   border: none;

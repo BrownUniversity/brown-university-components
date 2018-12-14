@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`NavbarGlobalNav when window width is above mobileBreakpoint style should render a brown navbar global nav by default 1`] = `
+exports[`NavbarGlobalNav when window width is above mobileBreakpoint styles should render brown navbar global nav by default 1`] = `
 .c1 {
   background: transparent;
   border: none;
@@ -264,7 +264,7 @@ exports[`NavbarGlobalNav when window width is above mobileBreakpoint style shoul
 </div>
 `;
 
-exports[`NavbarGlobalNav when window width is below mobileBreakpoint style should render a brown mobile navbar global nav by default 1`] = `
+exports[`NavbarGlobalNav when window width is below mobileBreakpoint styles should render brown mobile navbar global nav by default 1`] = `
 .c1 {
   background: transparent;
   border: none;

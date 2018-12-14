@@ -37,13 +37,13 @@ describe('NavLink', () => {
   });
 
   describe('tag', () => {
-    it('should render a button element by default', () => {
+    it('should render button element by default', () => {
       const { container } = renderNavLink();
 
       expect(container.getElementsByTagName('button')).toHaveLength(1);
     });
 
-    it('should render an anchor element when an href is provided', () => {
+    it('should render anchor element when href is provided', () => {
       const { container } = renderNavLink({
         props: { href: 'https://www.brown.edu/' }
       });
@@ -51,7 +51,7 @@ describe('NavLink', () => {
       expect(container.getElementsByTagName('a')).toHaveLength(1);
     });
 
-    it('should render a custom element when provided', () => {
+    it('should rendercustom element when provided', () => {
       /* eslint-disable-next-line react/prop-types */
       const Link = ({ className, children }) => (
         <a href="/home" className={className} data-testid="custom-element">
@@ -98,7 +98,7 @@ describe('NavLink', () => {
       expect(navLink).not.toHaveAttribute('type');
     });
 
-    it('should render type as undefined when the type is not provided and an href is provided', () => {
+    it('should render type as undefined when the type is not provided and href is provided', () => {
       const { navLink } = renderNavLink({
         props: { href: 'https://www.brown.edu/' }
       });
@@ -107,7 +107,7 @@ describe('NavLink', () => {
     });
   });
 
-  describe('style', () => {
+  describe('styles', () => {
     describe('with onClick', () => {
       describe('without variant', () => {
         it('should render red button element with default styles', () => {

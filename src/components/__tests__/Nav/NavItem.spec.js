@@ -34,7 +34,7 @@ describe('NavItem', () => {
     });
   });
 
-  describe('style', () => {
+  describe('styles', () => {
     it('should render nav item with default styles', () => {
       const { navItem } = renderNavItem();
 

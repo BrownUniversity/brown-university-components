@@ -13,9 +13,9 @@ const renderHamburger = ({ props = {} } = {}) => {
 };
 
 describe('Hamburger', () => {
-  describe('default', () => {
-    describe('style', () => {
-      it('should render a closed red hamburger button by default', () => {
+  describe('as a button', () => {
+    describe('styles', () => {
+      it('should render closed red hamburger button by default', () => {
         const { hamburger } = renderHamburger();
 
         expect(hamburger).toMatchInlineSnapshot(`
@@ -95,7 +95,7 @@ describe('Hamburger', () => {
 `);
       });
 
-      it('should render an open red hamburger button when isOpen variant is provided', () => {
+      it('should render open red hamburger button when isOpen variant is provided', () => {
         const { hamburger } = renderHamburger({
           props: { isOpen: true }
         });
@@ -203,7 +203,7 @@ describe('Hamburger', () => {
 `);
       });
 
-      it('should render a hamburger button of another color when color variant is provided', () => {
+      it('should render hamburger button of another color when color variant is provided', () => {
         const { hamburger } = renderHamburger({
           props: { color: 'white' }
         });
@@ -312,7 +312,7 @@ describe('Hamburger', () => {
       });
     });
 
-    it('should render a custom aria-label when provided', () => {
+    it('should render custom aria-label when provided', () => {
       const { hamburger } = renderHamburger({
         props: { ariaLabel: 'Custom label' }
       });

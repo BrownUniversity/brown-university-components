@@ -37,8 +37,6 @@ const renderNavbarNav = ({
   };
 };
 
-it('TODO', () => expect(1).toEqual(1));
-
 describe('NavbarNav', () => {
   describe('when window width is above mobileBreakpoint', () => {
     it('should render default', () => {
@@ -53,14 +51,14 @@ describe('NavbarNav', () => {
       triggerWindowResize({ width: breakpoints.md - 1 });
     });
 
-    describe('style', () => {
-      it('should render a brown mobile navbar nav by default', () => {
+    describe('styles', () => {
+      it('should render brown mobile navbar nav by default', () => {
         const { navbarNav } = renderNavbarNav();
 
         expect(navbarNav).toMatchSnapshot();
       });
 
-      it('should render a white mobile navbar nav if variant is provided', () => {
+      it('should render white mobile navbar nav when color variant is provided', () => {
         const { navbarNavMobileNavWrapper } = renderNavbarNav({
           context: { color: 'white' }
         });

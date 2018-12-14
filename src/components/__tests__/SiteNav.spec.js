@@ -31,7 +31,7 @@ const renderSiteNav = ({
 
 describe('SiteNav', () => {
   describe('when window width is above mobileBreakpoint', () => {
-    describe('style', () => {
+    describe('styles', () => {
       describe('when banner variant is not provided', () => {
         it('should render default site nav', () => {
           const { siteNav } = renderSiteNav();
@@ -55,7 +55,7 @@ describe('SiteNav', () => {
       triggerWindowResize({ width: breakpoints.md - 1 });
     });
 
-    describe('style', () => {
+    describe('styles', () => {
       describe('when banner variant is not provided', () => {
         it('should render mobile site nav', () => {
           const { siteNav } = renderSiteNav();
@@ -73,7 +73,7 @@ describe('SiteNav', () => {
       });
     });
 
-    it('should render custom mobile toggle title if provided', () => {
+    it('should render custom mobile toggle title when provided', () => {
       const { getByText } = renderSiteNav({
         props: { mobileToggleTitle: 'Custom Navigation' }
       });

@@ -41,7 +41,7 @@ describe('Loader', () => {
 `);
   });
 
-  it('should render with custom height when provided', () => {
+  it('should render loader with custom height when provided', () => {
     const { getByTestId } = renderLoader({ props: { height: 400 } });
 
     expect(getByTestId('mock-svg')).toHaveAttribute('height', '400');

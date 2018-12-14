@@ -28,7 +28,7 @@ describe('Nav', () => {
     });
   });
 
-  describe('style', () => {
+  describe('styles', () => {
     it('should render nav with default styles', () => {
       const { nav } = renderNav();
 
