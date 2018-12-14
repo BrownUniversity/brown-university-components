@@ -128,7 +128,7 @@ class Hamburger extends Component {
     );
 
   render() {
-    const { color, ariaLabel, tag, onOpen, onClose, ...restProps } = this.props;
+    const { tag, color, ariaLabel, onOpen, onClose, ...restProps } = this.props;
     const { isOpen } = this.state;
     const isButton = tag === 'button';
 
@@ -148,19 +148,19 @@ class Hamburger extends Component {
 }
 
 Hamburger.propTypes = {
-  color: PropTypes.oneOf(['red', 'white', 'gray']),
+  tag: PropTypes.oneOf(['button', 'div']),
+  color: PropTypes.oneOf(['red', 'white']),
   ariaLabel: PropTypes.string,
   isOpen: PropTypes.bool,
-  tag: PropTypes.oneOf(['button', 'div']),
   onOpen: PropTypes.func,
   onClose: PropTypes.func
 };
 
 Hamburger.defaultProps = {
+  tag: 'button',
   color: 'red',
   ariaLabel: 'Toggle navigation',
   isOpen: false,
-  tag: 'button',
   onOpen: null,
   onClose: null
 };

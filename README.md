@@ -142,14 +142,14 @@ _Brown University Theme is designed to be used alongside [Bootstrap](https://www
 
   **Properties:**
 
-  | property  | propType                        | required | default             |
-  | --------- | ------------------------------- | -------- | ------------------- |
-  | color     | oneOf(['red', 'white', 'gray']) | -        | 'red'               |
-  | ariaLabel | string                          | false    | 'Toggle navigation' |
-  | isOpen    | bool                            | -        | false               |
-  | tag       | oneOf(['button', 'div'])        | -        | 'button'            |
-  | onOpen    | func                            | -        | null                |
-  | onClose   | func                            | -        | null                |
+  | property  | propType                 | required | default             |
+  | --------- | ------------------------ | -------- | ------------------- |
+  | tag       | oneOf(['button', 'div']) | -        | 'button'            |
+  | color     | oneOf(['red', 'white'])  | -        | 'red'               |
+  | ariaLabel | string                   | false    | 'Toggle navigation' |
+  | isOpen    | bool                     | -        | false               |
+  | onOpen    | func                     | -        | null                |
+  | onClose   | func                     | -        | null                |
 
 - `Loader`
 

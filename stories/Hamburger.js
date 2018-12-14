@@ -5,11 +5,11 @@ import { action } from '@storybook/addon-actions';
 
 import { Hamburger } from '../src';
 
-const getColorProp = () => select('color', ['red', 'white', 'gray']);
+const getColorProp = () => select('color', ['red', 'white']);
 
 storiesOf('Hamburger', module)
   .addDecorator(withKnobs)
-  .add('default', () => (
+  .add('as button', () => (
     <Hamburger
       color={getColorProp()}
       ariaLabel={text('ariaLabel', 'Toggle navigation')}
@@ -17,10 +17,10 @@ storiesOf('Hamburger', module)
       onClose={action('close')}
     />
   ))
-  .add('as a div', () => (
+  .add('as div', () => (
     <Hamburger
+      tag="div"
       color={getColorProp()}
       isOpen={boolean('isOpen', false)}
-      tag="div"
     />
   ));

@@ -5,17 +5,19 @@ import Hamburger from '../Hamburger';
 
 const renderHamburger = ({ props = {} } = {}) => {
   const rtlUtils = render(<Hamburger {...props} />);
+  const hamburger = rtlUtils.container.firstChild;
 
   return {
-    hamburger: rtlUtils.container.firstChild,
+    hamburger,
+    hamburgerBars: hamburger.firstChild,
     ...rtlUtils
   };
 };
 
 describe('Hamburger', () => {
-  describe('as a button', () => {
+  describe('as button', () => {
     describe('styles', () => {
-      it('should render closed red hamburger button by default', () => {
+      it('should render closed red button element by default', () => {
         const { hamburger } = renderHamburger();
 
         expect(hamburger).toMatchInlineSnapshot(`
@@ -95,7 +97,7 @@ describe('Hamburger', () => {
 `);
       });
 
-      it('should render open red hamburger button when isOpen variant is provided', () => {
+      it('should render open red button element when variant is provided', () => {
         const { hamburger } = renderHamburger({
           props: { isOpen: true }
         });
@@ -203,86 +205,32 @@ describe('Hamburger', () => {
 `);
       });
 
-      it('should render hamburger button of another color when color variant is provided', () => {
-        const { hamburger } = renderHamburger({
+      it('should render closed white button element when variant is provided', () => {
+        const { hamburgerBars } = renderHamburger({
           props: { color: 'white' }
         });
 
-        expect(hamburger).toMatchInlineSnapshot(`
-.c0 {
-  background: transparent;
-  border: none;
-  cursor: pointer;
-  height: 24px;
-  padding: 0 25px 3px 0;
-}
+        expect(hamburgerBars).toHaveStyleRule('background-color', '#FFFFFF');
+        expect(hamburgerBars).toHaveStyleRule('background-color', '#FFFFFF', {
+          modifier: '&&:before'
+        });
+        expect(hamburgerBars).toHaveStyleRule('background-color', '#FFFFFF', {
+          modifier: '&&:after'
+        });
+      });
 
-.c1 {
-  height: 3px;
-  position: absolute;
-  width: 25px;
-  background-color: #FFFFFF;
-  -webkit-transition-property: -webkit-transform;
-  -webkit-transition-property: transform;
-  transition-property: transform;
-  -webkit-transition-timing-function: ease;
-  transition-timing-function: ease;
-  -webkit-transition-duration: .22s;
-  transition-duration: .22s;
-  -webkit-transition-timing-function: cubic-bezier(0.55,0.055,0.675,0.19);
-  transition-timing-function: cubic-bezier(0.55,0.055,0.675,0.19);
-}
+      it('should render open white button element when variant is provided', () => {
+        const { hamburgerBars } = renderHamburger({
+          props: { color: 'white', isOpen: true }
+        });
 
-.c1.c1:before {
-  height: 3px;
-  position: absolute;
-  width: 25px;
-  background-color: #FFFFFF;
-  content: '';
-  display: block;
-  -webkit-transition-property: -webkit-transform;
-  -webkit-transition-property: transform;
-  transition-property: transform;
-  -webkit-transition-timing-function: ease;
-  transition-timing-function: ease;
-  -webkit-transition-duration: .15s;
-  transition-duration: .15s;
-  -webkit-transition: top .1s .25s ease-in,opacity .1s ease-in;
-  transition: top .1s .25s ease-in,opacity .1s ease-in;
-  top: -7px;
-}
-
-.c1.c1:after {
-  height: 3px;
-  position: absolute;
-  width: 25px;
-  background-color: #FFFFFF;
-  content: '';
-  display: block;
-  -webkit-transition-property: -webkit-transform;
-  -webkit-transition-property: transform;
-  transition-property: transform;
-  -webkit-transition-timing-function: ease;
-  transition-timing-function: ease;
-  -webkit-transition-duration: .15s;
-  transition-duration: .15s;
-  -webkit-transition: bottom .1s .25s ease-in,-webkit-transform .22s cubic-bezier(0.55,0.055,0.675,0.19);
-  -webkit-transition: bottom .1s .25s ease-in,transform .22s cubic-bezier(0.55,0.055,0.675,0.19);
-  transition: bottom .1s .25s ease-in,transform .22s cubic-bezier(0.55,0.055,0.675,0.19);
-  bottom: -7px;
-}
-
-<button
-  aria-expanded="false"
-  aria-label="Toggle navigation"
-  class="c0"
-  type="button"
->
-  <span
-    class="c1"
-  />
-</button>
-`);
+        expect(hamburgerBars).toHaveStyleRule('background-color', '#FFFFFF');
+        expect(hamburgerBars).toHaveStyleRule('background-color', '#FFFFFF', {
+          modifier: '&&:before'
+        });
+        expect(hamburgerBars).toHaveStyleRule('background-color', '#FFFFFF', {
+          modifier: '&&:after'
+        });
       });
     });
 
@@ -331,22 +279,35 @@ describe('Hamburger', () => {
     });
   });
 
-  describe('as a div', () => {
-    it('should render with alternate styles', () => {
-      const { hamburger } = renderHamburger({ props: { tag: 'div' } });
-
-      expect(hamburger).toHaveStyleRule('cursor', 'inherit');
-      expect(hamburger).not.toHaveStyleRule('height');
-      expect(hamburger).toHaveStyleRule('display', 'inline-block');
-      expect(hamburger).toHaveStyleRule('padding', '0 25px 7px 0');
-    });
-
+  describe('as div', () => {
     it('should render without button attributes', () => {
       const { hamburger } = renderHamburger({ props: { tag: 'div' } });
 
       expect(hamburger).not.toHaveAttribute('type');
       expect(hamburger).not.toHaveAttribute('aria-expanded');
       expect(hamburger).not.toHaveAttribute('aria-label');
+    });
+
+    describe('styles', () => {
+      it('should render closed with alternate styles', () => {
+        const { hamburger } = renderHamburger({ props: { tag: 'div' } });
+
+        expect(hamburger).toHaveStyleRule('cursor', 'inherit');
+        expect(hamburger).not.toHaveStyleRule('height');
+        expect(hamburger).toHaveStyleRule('display', 'inline-block');
+        expect(hamburger).toHaveStyleRule('padding', '0 25px 7px 0');
+      });
+
+      it('should render open with alternate styles', () => {
+        const { hamburger } = renderHamburger({
+          props: { tag: 'div', isOpen: true }
+        });
+
+        expect(hamburger).toHaveStyleRule('cursor', 'inherit');
+        expect(hamburger).not.toHaveStyleRule('height');
+        expect(hamburger).toHaveStyleRule('display', 'inline-block');
+        expect(hamburger).toHaveStyleRule('padding', '0 25px 7px 0');
+      });
     });
   });
 });
