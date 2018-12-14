@@ -5,8 +5,7 @@ import styled, { css } from 'styled-components';
 /*
   inner Tag component
 */
-// TODO: revisit when filtering props from DOM is supported
-// https://github.com/styled-components/styled-components/issues/439
+// filter props so they don't become dom attributes (see `styled-components` issue 439)
 const Tag = styled(({ url, color, full, ...restProps }) => (
   <div {...restProps} />
 ))`

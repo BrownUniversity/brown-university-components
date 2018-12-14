@@ -1,33 +1,32 @@
 import React from 'react';
 import { render } from 'react-testing-library';
 
-import Navbar from '../Navbar';
+import Navbar from '../../Navbar';
 
 const renderNavbar = ({ props = {}, children = jest.fn() } = {}) => {
   const rtlUtils = render(<Navbar {...props}>{children()}</Navbar>);
 
   return {
-    tree: rtlUtils.container.firstChild,
+    navbar: rtlUtils.container.firstChild,
     ...rtlUtils
   };
 };
 
 describe('Navbar', () => {
   describe('children', () => {
-    it('should render children if provided', () => {
-      const NavbarChild = () => <div data-testid="navbar-child" />;
+    it('should render children when provided', () => {
+      const NavbarChildren = () => <div data-testid="navbar-children" />;
+      const { getByTestId } = renderNavbar({ children: NavbarChildren });
 
-      const { getByTestId } = renderNavbar({ children: NavbarChild });
-
-      expect(getByTestId('navbar-child')).toBeInTheDocument();
+      expect(getByTestId('navbar-children')).toBeInTheDocument();
     });
   });
 
-  describe('style', () => {
-    it('should render a brown navbar by default', () => {
-      const { tree } = renderNavbar();
+  describe('styles', () => {
+    it('should render brown navbar by default', () => {
+      const { navbar } = renderNavbar();
 
-      expect(tree).toMatchInlineSnapshot(`
+      expect(navbar).toMatchInlineSnapshot(`
 .c0 {
   -webkit-align-items: center;
   -webkit-box-align: center;
@@ -64,7 +63,7 @@ describe('Navbar', () => {
   }
 }
 
-<div
+<nav
   class="c0"
 >
   <a
@@ -82,14 +81,14 @@ describe('Navbar', () => {
   <div
     class="c2"
   />
-</div>
+</nav>
 `);
     });
 
-    it('should render a navbar of another color when color variant is provided', () => {
-      const { tree } = renderNavbar({ props: { color: 'white' } });
+    it('should render white navbar when color variant is provided', () => {
+      const { navbar } = renderNavbar({ props: { color: 'white' } });
 
-      expect(tree).toHaveStyleRule('background-color', '#FFFFFF');
+      expect(navbar).toHaveStyleRule('background-color', '#FFFFFF');
     });
   });
 });

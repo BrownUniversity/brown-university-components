@@ -5,20 +5,25 @@ import Banner from '../Banner';
 
 const renderBanner = ({ props = {}, children = null } = {}) => {
   const rtlUtils = render(<Banner {...props}>{children}</Banner>);
+  const banner = rtlUtils.container.firstChild;
 
   return {
-    tree: rtlUtils.container.firstChild,
+    banner,
+    bannerImageColorWrapper: banner.firstChild,
+    bannerImage: banner.firstChild.firstChild,
+    bannerSVG: banner.firstChild.firstChild.firstChild,
+    bannerChildrenWrapper: banner.children[1],
     ...rtlUtils
   };
 };
 
 describe('Banner', () => {
   describe('children', () => {
-    it('should render BannerText as child if provided', () => {
+    it('should render BannerText as child when provided', () => {
       const BannerChild = <Banner.Text>Banner Text</Banner.Text>;
-      const { tree } = renderBanner({ children: BannerChild });
+      const { bannerChildrenWrapper } = renderBanner({ children: BannerChild });
 
-      expect(tree.children[1]).toMatchInlineSnapshot(`
+      expect(bannerChildrenWrapper).toMatchInlineSnapshot(`
 .c1 {
   color: #FFFFFF;
   font-family: minion-pro,"Times New Roman",serif;
@@ -55,11 +60,11 @@ describe('Banner', () => {
     });
   });
 
-  describe('style', () => {
-    it('should render a banner with an emerald background by default', () => {
-      const { tree } = renderBanner();
+  describe('styles', () => {
+    it('should render banner with emerald background by default', () => {
+      const { bannerImageColorWrapper } = renderBanner();
 
-      expect(tree.firstChild).toMatchInlineSnapshot(`
+      expect(bannerImageColorWrapper).toMatchInlineSnapshot(`
 .c0 {
   width: 100%;
   overflow: hidden;
@@ -84,42 +89,45 @@ describe('Banner', () => {
 `);
     });
 
-    it('should render a banner with a background of another color when color variant is provided', () => {
-      const { tree } = renderBanner({ props: { color: 'red' } });
+    it('should render banner with background of another color when color variant is provided', () => {
+      const { bannerSVG } = renderBanner({ props: { color: 'red' } });
 
-      expect(tree.firstChild.firstChild.firstChild).toHaveAttribute(
-        'fill',
-        '#C00404'
-      );
+      expect(bannerSVG).toHaveAttribute('fill', '#C00404');
     });
 
-    it('should render a small banner when size variant is provided', () => {
-      const { tree } = renderBanner({ props: { size: 'small' } });
+    it('should render small banner when size variant is provided', () => {
+      const { bannerImageColorWrapper, bannerChildrenWrapper } = renderBanner({
+        props: { size: 'small' }
+      });
 
-      expect(tree.firstChild).toHaveStyleRule('max-height', '150px');
-      expect(tree.children[1]).toHaveStyleRule('top', '20%');
+      expect(bannerImageColorWrapper).toHaveStyleRule('max-height', '150px');
+      expect(bannerChildrenWrapper).toHaveStyleRule('top', '20%');
     });
 
-    it('should render a medium banner when size variant is provided', () => {
-      const { tree } = renderBanner({ props: { size: 'medium' } });
+    it('should render medium banner when size variant is provided', () => {
+      const { bannerImageColorWrapper, bannerChildrenWrapper } = renderBanner({
+        props: { size: 'medium' }
+      });
 
-      expect(tree.firstChild).toHaveStyleRule('max-height', '300px');
-      expect(tree.children[1]).toHaveStyleRule('top', '35%');
+      expect(bannerImageColorWrapper).toHaveStyleRule('max-height', '300px');
+      expect(bannerChildrenWrapper).toHaveStyleRule('top', '35%');
     });
 
-    it('should render a large banner when size variant is provided', () => {
-      const { tree } = renderBanner({ props: { size: 'large' } });
+    it('should render large banner when size variant is provided', () => {
+      const { bannerImageColorWrapper, bannerChildrenWrapper } = renderBanner({
+        props: { size: 'large' }
+      });
 
-      expect(tree.firstChild).toHaveStyleRule('max-height', '600px');
-      expect(tree.children[1]).toHaveStyleRule('top', '35%');
+      expect(bannerImageColorWrapper).toHaveStyleRule('max-height', '600px');
+      expect(bannerChildrenWrapper).toHaveStyleRule('top', '35%');
     });
 
-    it('should render a banner with an image background when src is provided', () => {
-      const { tree } = renderBanner({
+    it('should render banner with image background when src is provided', () => {
+      const { bannerImage } = renderBanner({
         props: { src: './path/to/img.jpg' }
       });
 
-      expect(tree.firstChild.firstChild).toMatchInlineSnapshot(`
+      expect(bannerImage).toMatchInlineSnapshot(`
 .c0 {
   height: auto;
   max-width: 100%;

@@ -1,4 +1,4 @@
-/*! brown-university-theme v0.3.9 */
+/*! brown-university-theme v0.3.10 */
 (function webpackUniversalModuleDefinition(root, factory) {
 	if(typeof exports === 'object' && typeof module === 'object')
 		module.exports = factory(require("prop-types"), require("react"), require("styled-components"), require("polished"), require("react-fns"), require("react-collapse"));
@@ -129,10 +129,10 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _components_Navbar__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(23);
 /* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "Navbar", function() { return _components_Navbar__WEBPACK_IMPORTED_MODULE_9__["default"]; });
 
-/* harmony import */ var _components_SiteNav__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(30);
+/* harmony import */ var _components_SiteNav__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(31);
 /* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "SiteNav", function() { return _components_SiteNav__WEBPACK_IMPORTED_MODULE_10__["default"]; });
 
-/* harmony import */ var _components_SubNav__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(31);
+/* harmony import */ var _components_SubNav__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(32);
 /* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "SubNav", function() { return _components_SubNav__WEBPACK_IMPORTED_MODULE_11__["default"]; });
 
 
@@ -184,8 +184,7 @@ function _objectWithoutPropertiesLoose(source, excluded) { if (source == null) r
 /*
   inner Tag component
 */
-// TODO: revisit when filtering props from DOM is supported
-// https://github.com/styled-components/styled-components/issues/439
+// filter props so they don't become dom attributes (see `styled-components` issue 439)
 
 var Tag = styled_components__WEBPACK_IMPORTED_MODULE_2___default()(function (_ref) {
   var url = _ref.url,
@@ -520,6 +519,10 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _constants_typography__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(12);
 function _extends() { _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends.apply(this, arguments); }
 
+function _objectWithoutProperties(source, excluded) { if (source == null) return {}; var target = _objectWithoutPropertiesLoose(source, excluded); var key, i; if (Object.getOwnPropertySymbols) { var sourceSymbolKeys = Object.getOwnPropertySymbols(source); for (i = 0; i < sourceSymbolKeys.length; i++) { key = sourceSymbolKeys[i]; if (excluded.indexOf(key) >= 0) continue; if (!Object.prototype.propertyIsEnumerable.call(source, key)) continue; target[key] = source[key]; } } return target; }
+
+function _objectWithoutPropertiesLoose(source, excluded) { if (source == null) return {}; var target = {}; var sourceKeys = Object.keys(source); var key, i; for (i = 0; i < sourceKeys.length; i++) { key = sourceKeys[i]; if (excluded.indexOf(key) >= 0) continue; target[key] = source[key]; } return target; }
+
 
 
 
@@ -680,8 +683,7 @@ var getColorWithHover = function getColorWithHover(_ref7) {
 /*
   inner Tag component
 */
-// TODO: filter color prop from DOM
-// https://github.com/styled-components/styled-components/issues/439
+// TODO: filter color prop with `as` usage (see `styled-components` issue 439)
 
 
 var Tag = styled_components__WEBPACK_IMPORTED_MODULE_2___default.a.div.withConfig({
@@ -722,10 +724,10 @@ var Tag = styled_components__WEBPACK_IMPORTED_MODULE_2___default.a.div.withConfi
 */
 
 var deriveTag = function deriveTag(_ref11) {
-  var href = _ref11.href,
-      tag = _ref11.tag;
+  var tag = _ref11.tag,
+      href = _ref11.href;
 
-  if (href && tag === 'button') {
+  if (tag === 'button' && href) {
     return 'a';
   }
 
@@ -733,30 +735,33 @@ var deriveTag = function deriveTag(_ref11) {
 };
 
 var Button = function Button(props) {
+  var tag = props.tag,
+      restProps = _objectWithoutProperties(props, ["tag"]);
+
   var derivedTag = deriveTag(props);
   return react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(Tag, _extends({
     as: derivedTag,
     type: derivedTag === 'button' && props.onClick ? 'button' : undefined
-  }, props));
+  }, restProps));
 };
 
 Button.propTypes =  true ? {
+  tag: prop_types__WEBPACK_IMPORTED_MODULE_0___default.a.oneOfType([prop_types__WEBPACK_IMPORTED_MODULE_0___default.a.func, prop_types__WEBPACK_IMPORTED_MODULE_0___default.a.string]),
   color: prop_types__WEBPACK_IMPORTED_MODULE_0___default.a.oneOf(['red', 'yellow', 'brown', 'gray', 'emerald', 'skyblue', 'navy']),
   size: prop_types__WEBPACK_IMPORTED_MODULE_0___default.a.oneOf(['default', 'small', 'large']),
   outline: prop_types__WEBPACK_IMPORTED_MODULE_0___default.a.bool,
   inverse: prop_types__WEBPACK_IMPORTED_MODULE_0___default.a.bool,
   disabled: prop_types__WEBPACK_IMPORTED_MODULE_0___default.a.bool,
-  tag: prop_types__WEBPACK_IMPORTED_MODULE_0___default.a.oneOfType([prop_types__WEBPACK_IMPORTED_MODULE_0___default.a.func, prop_types__WEBPACK_IMPORTED_MODULE_0___default.a.string]),
   onClick: prop_types__WEBPACK_IMPORTED_MODULE_0___default.a.func,
   href: prop_types__WEBPACK_IMPORTED_MODULE_0___default.a.string
 } : undefined;
 Button.defaultProps = {
+  tag: 'button',
   color: 'red',
   size: 'default',
   outline: false,
   inverse: false,
   disabled: false,
-  tag: 'button',
   onClick: null,
   href: null
 };
@@ -865,11 +870,18 @@ var hamburgerTransitionCSS = Object(styled_components__WEBPACK_IMPORTED_MODULE_2
   inner components
 */
 
-var HamburgerButton = styled_components__WEBPACK_IMPORTED_MODULE_2___default.a.button.withConfig({
-  displayName: "Hamburger__HamburgerButton",
+var HamburgerTag = styled_components__WEBPACK_IMPORTED_MODULE_2___default.a.div.withConfig({
+  displayName: "Hamburger__HamburgerTag",
   componentId: "u53pwq-0"
-})(["background:transparent;border:none;cursor:pointer;height:24px;padding:0 25px 3px 0;width:30px;"]); // TODO: revisit when filtering props from DOM is supported
-// https://github.com/styled-components/styled-components/issues/439
+})(["background:transparent;border:none;cursor:", ";", " ", " padding:", ";"], function (props) {
+  return props.as === 'button' ? 'pointer' : 'inherit';
+}, function (props) {
+  return props.as === 'div' && 'display: inline-block;';
+}, function (props) {
+  return props.as === 'button' && 'height: 24px;';
+}, function (props) {
+  return props.as === 'button' ? '0 25px 3px 0' : '0 25px 7px 0';
+}); // filter props so they don't become dom attributes (see `styled-components` issue 439)
 
 var HamburgerBars = styled_components__WEBPACK_IMPORTED_MODULE_2___default()(function (_ref2) {
   var color = _ref2.color,
@@ -953,17 +965,21 @@ function (_Component) {
     key: "render",
     value: function render() {
       var _this$props = this.props,
+          tag = _this$props.tag,
           color = _this$props.color,
+          ariaLabel = _this$props.ariaLabel,
           onOpen = _this$props.onOpen,
           onClose = _this$props.onClose,
-          restProps = _objectWithoutProperties(_this$props, ["color", "onOpen", "onClose"]);
+          restProps = _objectWithoutProperties(_this$props, ["tag", "color", "ariaLabel", "onOpen", "onClose"]);
 
       var isOpen = this.state.isOpen;
-      return react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(HamburgerButton, _extends({}, restProps, {
-        type: "button",
-        "aria-expanded": isOpen,
-        "aria-label": "Toggle navigation",
-        onClick: this.handleClick
+      var isButton = tag === 'button';
+      return react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(HamburgerTag, _extends({}, restProps, {
+        as: tag,
+        type: isButton ? 'button' : null,
+        "aria-expanded": isButton ? isOpen : null,
+        "aria-label": isButton ? ariaLabel : null,
+        onClick: isButton ? this.handleClick : null
       }), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(HamburgerBars, {
         color: color,
         isOpen: isOpen
@@ -975,14 +991,20 @@ function (_Component) {
 }(react__WEBPACK_IMPORTED_MODULE_1__["Component"]);
 
 Hamburger.propTypes =  true ? {
-  color: prop_types__WEBPACK_IMPORTED_MODULE_0___default.a.oneOf(['red', 'gray', 'black', 'white']),
+  tag: prop_types__WEBPACK_IMPORTED_MODULE_0___default.a.oneOf(['button', 'div']),
+  color: prop_types__WEBPACK_IMPORTED_MODULE_0___default.a.oneOf(['red', 'white']),
+  ariaLabel: prop_types__WEBPACK_IMPORTED_MODULE_0___default.a.string,
   isOpen: prop_types__WEBPACK_IMPORTED_MODULE_0___default.a.bool,
-  onOpen: prop_types__WEBPACK_IMPORTED_MODULE_0___default.a.func.isRequired,
-  onClose: prop_types__WEBPACK_IMPORTED_MODULE_0___default.a.func.isRequired
+  onOpen: prop_types__WEBPACK_IMPORTED_MODULE_0___default.a.func,
+  onClose: prop_types__WEBPACK_IMPORTED_MODULE_0___default.a.func
 } : undefined;
 Hamburger.defaultProps = {
+  tag: 'button',
   color: 'red',
-  isOpen: false
+  ariaLabel: 'Toggle navigation',
+  isOpen: false,
+  onOpen: null,
+  onClose: null
 };
 /* harmony default export */ __webpack_exports__["default"] = (Hamburger);
 
@@ -1119,6 +1141,10 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _NavItem__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(21);
 /* harmony import */ var _NavLink__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(22);
 /* harmony import */ var _constants_colors__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(9);
+function _objectWithoutProperties(source, excluded) { if (source == null) return {}; var target = _objectWithoutPropertiesLoose(source, excluded); var key, i; if (Object.getOwnPropertySymbols) { var sourceSymbolKeys = Object.getOwnPropertySymbols(source); for (i = 0; i < sourceSymbolKeys.length; i++) { key = sourceSymbolKeys[i]; if (excluded.indexOf(key) >= 0) continue; if (!Object.prototype.propertyIsEnumerable.call(source, key)) continue; target[key] = source[key]; } } return target; }
+
+function _objectWithoutPropertiesLoose(source, excluded) { if (source == null) return {}; var target = {}; var sourceKeys = Object.keys(source); var key, i; for (i = 0; i < sourceKeys.length; i++) { key = sourceKeys[i]; if (excluded.indexOf(key) >= 0) continue; target[key] = source[key]; } return target; }
+
 
 
 
@@ -1174,9 +1200,18 @@ var getWidth = function getWidth(_ref4) {
 /*
   inner Tag component
 */
+// filter props so they don't become dom attributes (see `styled-components` issue 439)
 
 
-var Tag = styled_components__WEBPACK_IMPORTED_MODULE_2___default.a.ul.withConfig({
+var Tag = styled_components__WEBPACK_IMPORTED_MODULE_2___default()(function (_ref5) {
+  var color = _ref5.color,
+      navbar = _ref5.navbar,
+      mobile = _ref5.mobile,
+      sub = _ref5.sub,
+      restProps = _objectWithoutProperties(_ref5, ["color", "navbar", "mobile", "sub"]);
+
+  return react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("ul", restProps);
+}).withConfig({
   displayName: "Nav__Tag",
   componentId: "sc-8l5kxq-0"
 })(["list-style:none;margin:0;background-color:", ";display:", ";padding:", ";width:", ";"], function (props) {
@@ -1325,6 +1360,10 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _constants_typography__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(12);
 function _extends() { _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends.apply(this, arguments); }
 
+function _objectWithoutProperties(source, excluded) { if (source == null) return {}; var target = _objectWithoutPropertiesLoose(source, excluded); var key, i; if (Object.getOwnPropertySymbols) { var sourceSymbolKeys = Object.getOwnPropertySymbols(source); for (i = 0; i < sourceSymbolKeys.length; i++) { key = sourceSymbolKeys[i]; if (excluded.indexOf(key) >= 0) continue; if (!Object.prototype.propertyIsEnumerable.call(source, key)) continue; target[key] = source[key]; } } return target; }
+
+function _objectWithoutPropertiesLoose(source, excluded) { if (source == null) return {}; var target = {}; var sourceKeys = Object.keys(source); var key, i; for (i = 0; i < sourceKeys.length; i++) { key = sourceKeys[i]; if (excluded.indexOf(key) >= 0) continue; target[key] = source[key]; } return target; }
+
 function _templateObject() {
   var data = _taggedTemplateLiteral(["\n    font-size: ", ";\n  "]);
 
@@ -1443,9 +1482,10 @@ var getLineHeight = function getLineHeight(_ref5) {
 };
 
 var getOpacity = function getOpacity(_ref6) {
-  var disabled = _ref6.disabled;
+  var disabled = _ref6.disabled,
+      color = _ref6.color;
 
-  if (disabled) {
+  if (disabled && color !== 'white') {
     return '0.65';
   }
 
@@ -1554,8 +1594,7 @@ var getAfterWidthWithHover = function getAfterWidthWithHover(_ref12) {
 /*
   inner Tag component
 */
-// TODO: filter active, navbar, mobile, sub and color props from DOM
-// https://github.com/styled-components/styled-components/issues/439
+// TODO: filter active, navbar, mobile, sub and color props with `as` usage (see `styled-components` issue 439)
 
 
 var Tag = styled_components__WEBPACK_IMPORTED_MODULE_2___default.a.div.withConfig({
@@ -1597,10 +1636,10 @@ var Tag = styled_components__WEBPACK_IMPORTED_MODULE_2___default.a.div.withConfi
 */
 
 var deriveTag = function deriveTag(_ref15) {
-  var href = _ref15.href,
-      tag = _ref15.tag;
+  var tag = _ref15.tag,
+      href = _ref15.href;
 
-  if (href && tag === 'button') {
+  if (tag === 'button' && href) {
     return 'a';
   }
 
@@ -1608,6 +1647,9 @@ var deriveTag = function deriveTag(_ref15) {
 };
 
 var NavLink = function NavLink(props) {
+  var tag = props.tag,
+      restProps = _objectWithoutProperties(props, ["tag"]);
+
   var derivedTag = deriveTag(props);
   return react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_NavContext__WEBPACK_IMPORTED_MODULE_3__["default"].Consumer, null, function (_ref16) {
     var navbar = _ref16.navbar,
@@ -1617,7 +1659,7 @@ var NavLink = function NavLink(props) {
     return react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(Tag, _extends({
       as: derivedTag,
       type: derivedTag === 'button' && props.onClick ? 'button' : undefined
-    }, props, {
+    }, restProps, {
       navbar: navbar,
       mobile: mobile,
       sub: sub,
@@ -1627,16 +1669,16 @@ var NavLink = function NavLink(props) {
 };
 
 NavLink.propTypes =  true ? {
+  tag: prop_types__WEBPACK_IMPORTED_MODULE_0___default.a.oneOfType([prop_types__WEBPACK_IMPORTED_MODULE_0___default.a.func, prop_types__WEBPACK_IMPORTED_MODULE_0___default.a.string]),
   active: prop_types__WEBPACK_IMPORTED_MODULE_0___default.a.bool,
   disabled: prop_types__WEBPACK_IMPORTED_MODULE_0___default.a.bool,
-  tag: prop_types__WEBPACK_IMPORTED_MODULE_0___default.a.oneOfType([prop_types__WEBPACK_IMPORTED_MODULE_0___default.a.func, prop_types__WEBPACK_IMPORTED_MODULE_0___default.a.string]),
   onClick: prop_types__WEBPACK_IMPORTED_MODULE_0___default.a.func,
   href: prop_types__WEBPACK_IMPORTED_MODULE_0___default.a.string
 } : undefined;
 NavLink.defaultProps = {
+  tag: 'button',
   active: false,
   disabled: false,
-  tag: 'button',
   onClick: null,
   href: null
 };
@@ -1656,10 +1698,12 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(styled_components__WEBPACK_IMPORTED_MODULE_2__);
 /* harmony import */ var _NavbarContext__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(24);
 /* harmony import */ var _NavbarNav__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(25);
-/* harmony import */ var _svg_inline_logo_black_svg__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(28);
-/* harmony import */ var _svg_inline_logo_white_svg__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(29);
-/* harmony import */ var _constants_colors__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(9);
-/* harmony import */ var _constants_media__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(10);
+/* harmony import */ var _NavbarGlobalNav__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(28);
+/* harmony import */ var _svg_inline_logo_black_svg__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(29);
+/* harmony import */ var _svg_inline_logo_white_svg__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(30);
+/* harmony import */ var _constants_breakpoints__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(11);
+/* harmony import */ var _constants_colors__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(9);
+/* harmony import */ var _constants_media__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(10);
 function _extends() { _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends.apply(this, arguments); }
 
 function _templateObject() {
@@ -1687,24 +1731,27 @@ function _objectWithoutPropertiesLoose(source, excluded) { if (source == null) r
 
 
 
+
+
 /*
   inner components
 */
-// TODO: revisit when filtering props from DOM is supported
-// https://github.com/styled-components/styled-components/issues/439
+// filter props so they don't become dom attributes (see `styled-components` issue 439)
 
 var NavbarWrapper = styled_components__WEBPACK_IMPORTED_MODULE_2___default()(function (_ref) {
   var color = _ref.color,
-      restProps = _objectWithoutProperties(_ref, ["color"]);
+      mobileBreakpoint = _ref.mobileBreakpoint,
+      toggleTitle = _ref.toggleTitle,
+      restProps = _objectWithoutProperties(_ref, ["color", "mobileBreakpoint", "toggleTitle"]);
 
-  return react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", restProps);
+  return react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("nav", restProps);
 }).withConfig({
   displayName: "Navbar__NavbarWrapper",
   componentId: "c3ezxu-0"
 })(["align-items:center;box-shadow:0 5px 10px 0 #00000026;display:flex;height:75px;justify-content:space-between;padding:0 7vw;position:relative;z-index:20;background-color:", ";", ";"], function (_ref2) {
   var color = _ref2.color;
-  return _constants_colors__WEBPACK_IMPORTED_MODULE_7__["default"][color];
-}, _constants_media__WEBPACK_IMPORTED_MODULE_8__["default"].md(_templateObject()));
+  return _constants_colors__WEBPACK_IMPORTED_MODULE_9__["default"][color];
+}, _constants_media__WEBPACK_IMPORTED_MODULE_10__["default"].md(_templateObject()));
 var NavbarLogoLink = styled_components__WEBPACK_IMPORTED_MODULE_2___default.a.a.withConfig({
   displayName: "Navbar__NavbarLogoLink",
   componentId: "c3ezxu-1"
@@ -1724,8 +1771,10 @@ var logoProps = {
 
 var Navbar = function Navbar(_ref3) {
   var color = _ref3.color,
+      mobileBreakpoint = _ref3.mobileBreakpoint,
+      toggleTitle = _ref3.toggleTitle,
       children = _ref3.children,
-      restProps = _objectWithoutProperties(_ref3, ["color", "children"]);
+      restProps = _objectWithoutProperties(_ref3, ["color", "mobileBreakpoint", "toggleTitle", "children"]);
 
   return react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(NavbarWrapper, _extends({}, restProps, {
     color: color
@@ -1733,22 +1782,29 @@ var Navbar = function Navbar(_ref3) {
     href: "http://www.brown.edu/",
     target: "_blank",
     rel: "noopener noreferrer"
-  }, color === 'white' ? react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_svg_inline_logo_black_svg__WEBPACK_IMPORTED_MODULE_5__["default"], logoProps) : react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_svg_inline_logo_white_svg__WEBPACK_IMPORTED_MODULE_6__["default"], logoProps)), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(NavbarChildrenWrapper, null, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_NavbarContext__WEBPACK_IMPORTED_MODULE_3__["default"].Provider, {
+  }, color === 'white' ? react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_svg_inline_logo_black_svg__WEBPACK_IMPORTED_MODULE_6__["default"], logoProps) : react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_svg_inline_logo_white_svg__WEBPACK_IMPORTED_MODULE_7__["default"], logoProps)), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(NavbarChildrenWrapper, null, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_NavbarContext__WEBPACK_IMPORTED_MODULE_3__["default"].Provider, {
     value: {
-      color: color
+      color: color,
+      mobileBreakpoint: mobileBreakpoint,
+      toggleTitle: toggleTitle
     }
   }, children)));
 };
 
 Navbar.propTypes =  true ? {
   color: prop_types__WEBPACK_IMPORTED_MODULE_0___default.a.oneOf(['brown', 'white']),
+  mobileBreakpoint: prop_types__WEBPACK_IMPORTED_MODULE_0___default.a.number,
+  toggleTitle: prop_types__WEBPACK_IMPORTED_MODULE_0___default.a.string,
   children: prop_types__WEBPACK_IMPORTED_MODULE_0___default.a.node
 } : undefined;
 Navbar.defaultProps = {
   color: 'brown',
+  mobileBreakpoint: _constants_breakpoints__WEBPACK_IMPORTED_MODULE_8__["default"].md,
+  toggleTitle: 'Global Navigation',
   children: null
 };
 Navbar.Nav = _NavbarNav__WEBPACK_IMPORTED_MODULE_4__["default"];
+Navbar.GlobalNav = _NavbarGlobalNav__WEBPACK_IMPORTED_MODULE_5__["default"];
 /* harmony default export */ __webpack_exports__["default"] = (Navbar);
 
 /***/ }),
@@ -1782,16 +1838,11 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _NavbarContext__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(24);
 /* harmony import */ var _Hamburger__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(16);
 /* harmony import */ var _Nav__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(19);
-/* harmony import */ var _constants_breakpoints__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(11);
-/* harmony import */ var _constants_colors__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(9);
-/* harmony import */ var _constants_media__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(10);
+/* harmony import */ var _constants_colors__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(9);
+/* harmony import */ var _constants_media__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(10);
 function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
 
 function _extends() { _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends.apply(this, arguments); }
-
-function _objectWithoutProperties(source, excluded) { if (source == null) return {}; var target = _objectWithoutPropertiesLoose(source, excluded); var key, i; if (Object.getOwnPropertySymbols) { var sourceSymbolKeys = Object.getOwnPropertySymbols(source); for (i = 0; i < sourceSymbolKeys.length; i++) { key = sourceSymbolKeys[i]; if (excluded.indexOf(key) >= 0) continue; if (!Object.prototype.propertyIsEnumerable.call(source, key)) continue; target[key] = source[key]; } } return target; }
-
-function _objectWithoutPropertiesLoose(source, excluded) { if (source == null) return {}; var target = {}; var sourceKeys = Object.keys(source); var key, i; for (i = 0; i < sourceKeys.length; i++) { key = sourceKeys[i]; if (excluded.indexOf(key) >= 0) continue; target[key] = source[key]; } return target; }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
@@ -1823,6 +1874,9 @@ function _templateObject() {
 
 function _taggedTemplateLiteral(strings, raw) { if (!raw) { raw = strings.slice(0); } return Object.freeze(Object.defineProperties(strings, { raw: { value: Object.freeze(raw) } })); }
 
+function _objectWithoutProperties(source, excluded) { if (source == null) return {}; var target = _objectWithoutPropertiesLoose(source, excluded); var key, i; if (Object.getOwnPropertySymbols) { var sourceSymbolKeys = Object.getOwnPropertySymbols(source); for (i = 0; i < sourceSymbolKeys.length; i++) { key = sourceSymbolKeys[i]; if (excluded.indexOf(key) >= 0) continue; if (!Object.prototype.propertyIsEnumerable.call(source, key)) continue; target[key] = source[key]; } } return target; }
+
+function _objectWithoutPropertiesLoose(source, excluded) { if (source == null) return {}; var target = {}; var sourceKeys = Object.keys(source); var key, i; for (i = 0; i < sourceKeys.length; i++) { key = sourceKeys[i]; if (excluded.indexOf(key) >= 0) continue; target[key] = source[key]; } return target; }
 
 
 
@@ -1837,18 +1891,24 @@ function _taggedTemplateLiteral(strings, raw) { if (!raw) { raw = strings.slice(
 /*
   inner components
 */
+// filter props so they don't become dom attributes (see `styled-components` issue 439)
 
-var MobileCollapseWrapper = styled_components__WEBPACK_IMPORTED_MODULE_2___default.a.div.withConfig({
+var MobileCollapseWrapper = styled_components__WEBPACK_IMPORTED_MODULE_2___default()(function (_ref) {
+  var color = _ref.color,
+      restProps = _objectWithoutProperties(_ref, ["color"]);
+
+  return react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", restProps);
+}).withConfig({
   displayName: "NavbarNav__MobileCollapseWrapper",
   componentId: "sc-15lu9u4-0"
-})(["box-shadow:0 5px 10px 0 #00000026;left:0;position:absolute;top:75px;width:100%;background-color:", ";"], function (_ref) {
-  var color = _ref.color;
-  return _constants_colors__WEBPACK_IMPORTED_MODULE_9__["default"][color];
+})(["box-shadow:0 5px 10px 0 #00000026;left:0;position:absolute;top:75px;width:100%;background-color:", ";"], function (_ref2) {
+  var color = _ref2.color;
+  return _constants_colors__WEBPACK_IMPORTED_MODULE_8__["default"][color];
 });
 var MobileNavWrapper = styled_components__WEBPACK_IMPORTED_MODULE_2___default.a.div.withConfig({
   displayName: "NavbarNav__MobileNavWrapper",
   componentId: "sc-15lu9u4-1"
-})(["padding:0 7vw 1rem;", ";"], _constants_media__WEBPACK_IMPORTED_MODULE_10__["default"].md(_templateObject()));
+})(["padding:0 7vw 1rem;", ";"], _constants_media__WEBPACK_IMPORTED_MODULE_9__["default"].md(_templateObject()));
 /*
   outer NavbarNav component
 */
@@ -1887,8 +1947,8 @@ function (_Component) {
     });
 
     _defineProperty(_assertThisInitialized(_assertThisInitialized(_this)), "handleMobileNavToggle", function () {
-      return _this.setState(function (_ref2) {
-        var mobileNavIsOpen = _ref2.mobileNavIsOpen;
+      return _this.setState(function (_ref3) {
+        var mobileNavIsOpen = _ref3.mobileNavIsOpen;
         return {
           mobileNavIsOpen: !mobileNavIsOpen
         };
@@ -1903,24 +1963,20 @@ function (_Component) {
     value: function render() {
       var _this2 = this;
 
-      var _this$props = this.props,
-          mobileNavBreakpoint = _this$props.mobileNavBreakpoint,
-          restProps = _objectWithoutProperties(_this$props, ["mobileNavBreakpoint"]);
-
       var mobileNavIsOpen = this.state.mobileNavIsOpen;
       return react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(react_fns__WEBPACK_IMPORTED_MODULE_3__["WindowSize"], {
-        render: function render(_ref3) {
-          var width = _ref3.width;
-          // TODO: update when width doesn't return 0 on initial render
-          // https://github.com/jaredpalmer/react-fns/issues/84
+        render: function render(_ref4) {
+          var width = _ref4.width;
+          // TODO: update when `width` doesn't return 0 on initial render (see `react-fns` issue 84)
           var currentWidth = width === 0 ? window.innerWidth : width;
-          var renderMobile = currentWidth < mobileNavBreakpoint;
-          return react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_NavbarContext__WEBPACK_IMPORTED_MODULE_5__["default"].Consumer, null, function (_ref4) {
-            var color = _ref4.color;
+          return react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_NavbarContext__WEBPACK_IMPORTED_MODULE_5__["default"].Consumer, null, function (_ref5) {
+            var color = _ref5.color,
+                mobileBreakpoint = _ref5.mobileBreakpoint;
             var childColor = getChildColor(color);
+            var renderMobile = currentWidth < mobileBreakpoint;
 
             if (renderMobile) {
-              return react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", restProps, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_Hamburger__WEBPACK_IMPORTED_MODULE_6__["default"], {
+              return react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", _this2.props, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_Hamburger__WEBPACK_IMPORTED_MODULE_6__["default"], {
                 "aria-controls": "navbar-nav-mobile-collapse",
                 color: childColor,
                 isOpen: mobileNavIsOpen,
@@ -1929,15 +1985,15 @@ function (_Component) {
               }), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(MobileCollapseWrapper, {
                 color: color
               }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(react_collapse__WEBPACK_IMPORTED_MODULE_4__["Collapse"], {
-                isOpened: mobileNavIsOpen,
-                id: "navbar-nav-mobile-collapse"
+                id: "navbar-nav-mobile-collapse",
+                isOpened: mobileNavIsOpen
               }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(MobileNavWrapper, null, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_Nav__WEBPACK_IMPORTED_MODULE_7__["default"], {
                 mobile: true,
                 color: childColor
               }, _this2.props.children)))));
             }
 
-            return react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_Nav__WEBPACK_IMPORTED_MODULE_7__["default"], _extends({}, restProps, {
+            return react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_Nav__WEBPACK_IMPORTED_MODULE_7__["default"], _extends({}, _this2.props, {
               navbar: true,
               color: childColor
             }), _this2.props.children);
@@ -1951,12 +2007,8 @@ function (_Component) {
 }(react__WEBPACK_IMPORTED_MODULE_1__["Component"]);
 
 NavbarNav.propTypes =  true ? {
-  mobileNavBreakpoint: prop_types__WEBPACK_IMPORTED_MODULE_0___default.a.number,
   children: prop_types__WEBPACK_IMPORTED_MODULE_0___default.a.node.isRequired
 } : undefined;
-NavbarNav.defaultProps = {
-  mobileNavBreakpoint: _constants_breakpoints__WEBPACK_IMPORTED_MODULE_8__["default"].md
-};
 NavbarNav.Item = _Nav__WEBPACK_IMPORTED_MODULE_7__["default"].Item;
 NavbarNav.Link = _Nav__WEBPACK_IMPORTED_MODULE_7__["default"].Link;
 /* harmony default export */ __webpack_exports__["default"] = (NavbarNav);
@@ -1975,6 +2027,216 @@ module.exports = __WEBPACK_EXTERNAL_MODULE__27__;
 
 /***/ }),
 /* 28 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(4);
+/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(prop_types__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(5);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(6);
+/* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(styled_components__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var react_fns__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(26);
+/* harmony import */ var react_fns__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(react_fns__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var react_collapse__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(27);
+/* harmony import */ var react_collapse__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(react_collapse__WEBPACK_IMPORTED_MODULE_4__);
+/* harmony import */ var _NavbarContext__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(24);
+/* harmony import */ var _Hamburger__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(16);
+/* harmony import */ var _Nav__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(19);
+/* harmony import */ var _constants_colors__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(9);
+/* harmony import */ var _constants_media__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(10);
+/* harmony import */ var _constants_typography__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(12);
+function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
+
+function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
+
+function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === "object" || typeof call === "function")) { return call; } return _assertThisInitialized(self); }
+
+function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); if (superClass) _setPrototypeOf(subClass, superClass); }
+
+function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
+
+function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
+
+function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
+function _templateObject() {
+  var data = _taggedTemplateLiteral(["\n    padding: 0 33px 1rem 33px;\n  "]);
+
+  _templateObject = function _templateObject() {
+    return data;
+  };
+
+  return data;
+}
+
+function _taggedTemplateLiteral(strings, raw) { if (!raw) { raw = strings.slice(0); } return Object.freeze(Object.defineProperties(strings, { raw: { value: Object.freeze(raw) } })); }
+
+function _objectWithoutProperties(source, excluded) { if (source == null) return {}; var target = _objectWithoutPropertiesLoose(source, excluded); var key, i; if (Object.getOwnPropertySymbols) { var sourceSymbolKeys = Object.getOwnPropertySymbols(source); for (i = 0; i < sourceSymbolKeys.length; i++) { key = sourceSymbolKeys[i]; if (excluded.indexOf(key) >= 0) continue; if (!Object.prototype.propertyIsEnumerable.call(source, key)) continue; target[key] = source[key]; } } return target; }
+
+function _objectWithoutPropertiesLoose(source, excluded) { if (source == null) return {}; var target = {}; var sourceKeys = Object.keys(source); var key, i; for (i = 0; i < sourceKeys.length; i++) { key = sourceKeys[i]; if (excluded.indexOf(key) >= 0) continue; target[key] = source[key]; } return target; }
+
+
+
+
+
+
+
+
+
+
+
+
+/*
+  inner components
+*/
+
+var ToggleButton = styled_components__WEBPACK_IMPORTED_MODULE_2___default.a.button.withConfig({
+  displayName: "NavbarGlobalNav__ToggleButton",
+  componentId: "sc-1t3heaa-0"
+})(["background-color:transparent;border:none;cursor:pointer;font-size:1em;padding:0;"]); // filter props so they don't become dom attributes (see `styled-components` issue 439)
+
+var ToggleTitle = styled_components__WEBPACK_IMPORTED_MODULE_2___default()(function (_ref) {
+  var color = _ref.color,
+      restProps = _objectWithoutProperties(_ref, ["color"]);
+
+  return react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("span", restProps);
+}).withConfig({
+  displayName: "NavbarGlobalNav__ToggleTitle",
+  componentId: "sc-1t3heaa-1"
+})(["color:", ";font-family:", ";font-weight:bold;letter-spacing:0.5px;margin-left:10px;text-transform:uppercase;"], function (_ref2) {
+  var color = _ref2.color;
+  return _constants_colors__WEBPACK_IMPORTED_MODULE_8__["default"][color];
+}, _constants_typography__WEBPACK_IMPORTED_MODULE_10__["sansBold"]); // filter props so they don't become dom attributes (see `styled-components` issue 439)
+
+var CollapseWrapper = styled_components__WEBPACK_IMPORTED_MODULE_2___default()(function (_ref3) {
+  var color = _ref3.color,
+      restProps = _objectWithoutProperties(_ref3, ["color"]);
+
+  return react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", restProps);
+}).withConfig({
+  displayName: "NavbarGlobalNav__CollapseWrapper",
+  componentId: "sc-1t3heaa-2"
+})(["box-shadow:0 5px 10px 0 #00000026;left:0;position:absolute;top:75px;width:100%;background-color:", ";"], function (_ref4) {
+  var color = _ref4.color;
+  return _constants_colors__WEBPACK_IMPORTED_MODULE_8__["default"][color];
+});
+var NavWrapper = styled_components__WEBPACK_IMPORTED_MODULE_2___default.a.div.withConfig({
+  displayName: "NavbarGlobalNav__NavWrapper",
+  componentId: "sc-1t3heaa-3"
+})(["padding:0 7vw 1rem;", ";"], _constants_media__WEBPACK_IMPORTED_MODULE_9__["default"].md(_templateObject()));
+/*
+  outer NavbarGlobalNav component
+*/
+
+var getChildColor = function getChildColor(color) {
+  switch (color) {
+    case 'white':
+      return 'red';
+    // brown
+
+    default:
+      return 'white';
+  }
+};
+
+var NavbarGlobalNav =
+/*#__PURE__*/
+function (_Component) {
+  _inherits(NavbarGlobalNav, _Component);
+
+  function NavbarGlobalNav() {
+    var _getPrototypeOf2;
+
+    var _this;
+
+    _classCallCheck(this, NavbarGlobalNav);
+
+    for (var _len = arguments.length, args = new Array(_len), _key = 0; _key < _len; _key++) {
+      args[_key] = arguments[_key];
+    }
+
+    _this = _possibleConstructorReturn(this, (_getPrototypeOf2 = _getPrototypeOf(NavbarGlobalNav)).call.apply(_getPrototypeOf2, [this].concat(args)));
+
+    _defineProperty(_assertThisInitialized(_assertThisInitialized(_this)), "state", {
+      navIsOpen: false
+    });
+
+    _defineProperty(_assertThisInitialized(_assertThisInitialized(_this)), "handleNavToggle", function () {
+      return _this.setState(function (_ref5) {
+        var navIsOpen = _ref5.navIsOpen;
+        return {
+          navIsOpen: !navIsOpen
+        };
+      });
+    });
+
+    return _this;
+  }
+
+  _createClass(NavbarGlobalNav, [{
+    key: "render",
+    value: function render() {
+      var _this2 = this;
+
+      var navIsOpen = this.state.navIsOpen;
+      return react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(react_fns__WEBPACK_IMPORTED_MODULE_3__["WindowSize"], {
+        render: function render(_ref6) {
+          var width = _ref6.width;
+          // TODO: update when `width` doesn't return 0 on initial render (see `react-fns` issue 84)
+          var currentWidth = width === 0 ? window.innerWidth : width;
+          return react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_NavbarContext__WEBPACK_IMPORTED_MODULE_5__["default"].Consumer, null, function (_ref7) {
+            var color = _ref7.color,
+                mobileBreakpoint = _ref7.mobileBreakpoint,
+                toggleTitle = _ref7.toggleTitle;
+            var childColor = getChildColor(color);
+            var renderMobile = currentWidth < mobileBreakpoint;
+            return react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", _this2.props, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(ToggleButton, {
+              type: "button",
+              "aria-controls": "navbar-global-nav-collapse",
+              "aria-expanded": navIsOpen,
+              "aria-label": "Toggle global navigation",
+              onClick: _this2.handleNavToggle
+            }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_Hamburger__WEBPACK_IMPORTED_MODULE_6__["default"], {
+              tag: "div",
+              color: childColor,
+              isOpen: navIsOpen
+            }), !renderMobile && react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(ToggleTitle, {
+              color: childColor
+            }, toggleTitle)), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(CollapseWrapper, {
+              color: color
+            }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(react_collapse__WEBPACK_IMPORTED_MODULE_4__["Collapse"], {
+              id: "navbar-global-nav-collapse",
+              isOpened: navIsOpen
+            }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(NavWrapper, null, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_Nav__WEBPACK_IMPORTED_MODULE_7__["default"], {
+              mobile: true,
+              color: childColor
+            }, _this2.props.children)))));
+          });
+        }
+      });
+    }
+  }]);
+
+  return NavbarGlobalNav;
+}(react__WEBPACK_IMPORTED_MODULE_1__["Component"]);
+
+NavbarGlobalNav.propTypes =  true ? {
+  children: prop_types__WEBPACK_IMPORTED_MODULE_0___default.a.node.isRequired
+} : undefined;
+NavbarGlobalNav.Item = _Nav__WEBPACK_IMPORTED_MODULE_7__["default"].Item;
+NavbarGlobalNav.Link = _Nav__WEBPACK_IMPORTED_MODULE_7__["default"].Link;
+/* harmony default export */ __webpack_exports__["default"] = (NavbarGlobalNav);
+
+/***/ }),
+/* 29 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -2046,7 +2308,7 @@ function _objectWithoutProperties(obj, keys) { var target = {}; for (var i in ob
 });
 
 /***/ }),
-/* 29 */
+/* 30 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -2117,7 +2379,7 @@ function _objectWithoutProperties(obj, keys) { var target = {}; for (var i in ob
 });
 
 /***/ }),
-/* 30 */
+/* 31 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -2138,8 +2400,6 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _constants_colors__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(9);
 /* harmony import */ var _constants_typography__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(12);
 function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
-
-function _extends() { _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends.apply(this, arguments); }
 
 function _objectWithoutProperties(source, excluded) { if (source == null) return {}; var target = _objectWithoutPropertiesLoose(source, excluded); var key, i; if (Object.getOwnPropertySymbols) { var sourceSymbolKeys = Object.getOwnPropertySymbols(source); for (i = 0; i < sourceSymbolKeys.length; i++) { key = sourceSymbolKeys[i]; if (excluded.indexOf(key) >= 0) continue; if (!Object.prototype.propertyIsEnumerable.call(source, key)) continue; target[key] = source[key]; } } return target; }
 
@@ -2177,37 +2437,41 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
   inner components
 */
 
-var MobileBannerWrapper = styled_components__WEBPACK_IMPORTED_MODULE_2___default.a.div.withConfig({
-  displayName: "SiteNav__MobileBannerWrapper",
+var MobileBannerPositioningWrapper = styled_components__WEBPACK_IMPORTED_MODULE_2___default.a.div.withConfig({
+  displayName: "SiteNav__MobileBannerPositioningWrapper",
   componentId: "sc-1hgikms-0"
 })(["", ";"], function (props) {
   return props.banner && Object(styled_components__WEBPACK_IMPORTED_MODULE_2__["css"])(["background-color:", ";margin:0 auto;margin-top:2rem;position:relative;width:95%;z-index:10;"], _constants_colors__WEBPACK_IMPORTED_MODULE_8__["default"].white);
 });
-var MobileWrapper = styled_components__WEBPACK_IMPORTED_MODULE_2___default.a.div.withConfig({
+var MobileWrapper = styled_components__WEBPACK_IMPORTED_MODULE_2___default.a.nav.withConfig({
   displayName: "SiteNav__MobileWrapper",
   componentId: "sc-1hgikms-1"
 })(["border:1px solid #ddd;"]);
-var MobileMenuWrapper = styled_components__WEBPACK_IMPORTED_MODULE_2___default.a.div.withConfig({
-  displayName: "SiteNav__MobileMenuWrapper",
+var MobileToggleButton = styled_components__WEBPACK_IMPORTED_MODULE_2___default.a.button.withConfig({
+  displayName: "SiteNav__MobileToggleButton",
   componentId: "sc-1hgikms-2"
-})(["align-items:center;display:flex;flex-direction:row;flex-wrap:wrap;justify-content:space-between;margin:0 auto;padding:1rem 0 1rem;width:92%;"]);
-var MobileMenuTitle = styled_components__WEBPACK_IMPORTED_MODULE_2___default.a.button.withConfig({
-  displayName: "SiteNav__MobileMenuTitle",
+})(["background-color:transparent;border:none;cursor:pointer;font-size:1em;padding:1rem 0 1rem;width:100%;"]);
+var MobileToggleButtonInner = styled_components__WEBPACK_IMPORTED_MODULE_2___default.a.div.withConfig({
+  displayName: "SiteNav__MobileToggleButtonInner",
   componentId: "sc-1hgikms-3"
-})(["background-color:transparent;border:none;cursor:pointer;color:", ";font-family:", ";font-size:1em;font-weight:bold;letter-spacing:0.5px;padding:11px 5px;text-transform:uppercase;"], _constants_colors__WEBPACK_IMPORTED_MODULE_8__["default"].red, _constants_typography__WEBPACK_IMPORTED_MODULE_9__["sansBold"]);
-var MobileNavWrapper = styled_components__WEBPACK_IMPORTED_MODULE_2___default.a.div.withConfig({
-  displayName: "SiteNav__MobileNavWrapper",
+})(["align-items:center;display:flex;flex-direction:row;flex-wrap:wrap;justify-content:space-between;margin:0 auto;width:92%;"]);
+var MobileToggleTitle = styled_components__WEBPACK_IMPORTED_MODULE_2___default.a.span.withConfig({
+  displayName: "SiteNav__MobileToggleTitle",
   componentId: "sc-1hgikms-4"
-})(["align-items:center;display:flex;justify-content:center;margin:0 auto;padding:16px 0;width:92%;z-index:10;"]);
-var BannerWrapper = styled_components__WEBPACK_IMPORTED_MODULE_2___default.a.div.withConfig({
-  displayName: "SiteNav__BannerWrapper",
+})(["color:", ";font-family:", ";font-weight:bold;letter-spacing:0.5px;padding:11px 5px;text-transform:uppercase;"], _constants_colors__WEBPACK_IMPORTED_MODULE_8__["default"].red, _constants_typography__WEBPACK_IMPORTED_MODULE_9__["sansBold"]);
+var MobileNavWrapper = styled_components__WEBPACK_IMPORTED_MODULE_2___default.a.nav.withConfig({
+  displayName: "SiteNav__MobileNavWrapper",
   componentId: "sc-1hgikms-5"
+})(["align-items:center;display:flex;justify-content:center;margin:0 auto;padding:16px 0;width:92%;z-index:10;"]);
+var BannerPositioningWrapper = styled_components__WEBPACK_IMPORTED_MODULE_2___default.a.div.withConfig({
+  displayName: "SiteNav__BannerPositioningWrapper",
+  componentId: "sc-1hgikms-6"
 })(["background-color:", ";", ""], _constants_colors__WEBPACK_IMPORTED_MODULE_8__["default"].white, function (props) {
   return props.banner && Object(styled_components__WEBPACK_IMPORTED_MODULE_2__["css"])(["margin:0 auto;margin-top:-50px;max-width:1300px;position:relative;width:96%;z-index:10;"]);
 });
-var Wrapper = styled_components__WEBPACK_IMPORTED_MODULE_2___default.a.div.withConfig({
-  displayName: "SiteNav__Wrapper",
-  componentId: "sc-1hgikms-6"
+var NavWrapper = styled_components__WEBPACK_IMPORTED_MODULE_2___default.a.div.withConfig({
+  displayName: "SiteNav__NavWrapper",
+  componentId: "sc-1hgikms-7"
 })(["display:flex;justify-content:center;padding:20px 0 30px;"]);
 /*
   outer SiteNav component
@@ -2253,45 +2517,42 @@ function (_Component) {
       var _this2 = this;
 
       var _this$props = this.props,
-          mobileMenuTitle = _this$props.mobileMenuTitle,
-          mobileNavBreakpoint = _this$props.mobileNavBreakpoint,
           banner = _this$props.banner,
-          restProps = _objectWithoutProperties(_this$props, ["mobileMenuTitle", "mobileNavBreakpoint", "banner"]);
+          mobileBreakpoint = _this$props.mobileBreakpoint,
+          mobileToggleTitle = _this$props.mobileToggleTitle,
+          restProps = _objectWithoutProperties(_this$props, ["banner", "mobileBreakpoint", "mobileToggleTitle"]);
 
       var mobileNavIsOpen = this.state.mobileNavIsOpen;
       return react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(react_fns__WEBPACK_IMPORTED_MODULE_3__["WindowSize"], {
         render: function render(_ref2) {
           var width = _ref2.width;
-          // TODO: update when width doesn't return 0 on initial render
-          // https://github.com/jaredpalmer/react-fns/issues/84
+          // TODO: update when `width` doesn't return 0 on initial render (see `react-fns` issue 84)
           var currentWidth = width === 0 ? window.innerWidth : width;
-          var renderMobile = currentWidth < mobileNavBreakpoint;
+          var renderMobile = currentWidth < mobileBreakpoint;
 
           if (renderMobile) {
-            return react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(MobileBannerWrapper, _extends({}, restProps, {
+            return react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(MobileBannerPositioningWrapper, {
               banner: banner
-            }), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(MobileWrapper, null, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(MobileMenuWrapper, null, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(MobileMenuTitle, {
+            }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(MobileWrapper, restProps, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(MobileToggleButton, {
               type: "button",
               "aria-controls": "site-nav-mobile-collapse",
               "aria-expanded": mobileNavIsOpen,
-              "aria-label": "Toggle navigation",
+              "aria-label": "Toggle site navigation",
               onClick: _this2.handleMobileNavToggle
-            }, mobileMenuTitle), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_Hamburger__WEBPACK_IMPORTED_MODULE_5__["default"], {
-              "aria-controls": "site-nav-mobile-collapse",
-              isOpen: mobileNavIsOpen,
-              onOpen: _this2.handleMobileNavToggle,
-              onClose: _this2.handleMobileNavToggle
-            })), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(react_collapse__WEBPACK_IMPORTED_MODULE_4__["Collapse"], {
-              isOpened: mobileNavIsOpen,
-              id: "site-nav-mobile-collapse"
+            }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(MobileToggleButtonInner, null, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(MobileToggleTitle, null, mobileToggleTitle), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_Hamburger__WEBPACK_IMPORTED_MODULE_5__["default"], {
+              tag: "div",
+              isOpen: mobileNavIsOpen
+            }))), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(react_collapse__WEBPACK_IMPORTED_MODULE_4__["Collapse"], {
+              id: "site-nav-mobile-collapse",
+              isOpened: mobileNavIsOpen
             }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(MobileNavWrapper, null, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_Nav__WEBPACK_IMPORTED_MODULE_6__["default"], {
               mobile: true
             }, _this2.props.children)))));
           }
 
-          return react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(BannerWrapper, _extends({}, restProps, {
+          return react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(BannerPositioningWrapper, {
             banner: banner
-          }), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(Wrapper, null, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_Nav__WEBPACK_IMPORTED_MODULE_6__["default"], null, _this2.props.children)));
+          }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(NavWrapper, restProps, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_Nav__WEBPACK_IMPORTED_MODULE_6__["default"], null, _this2.props.children)));
         }
       });
     }
@@ -2301,22 +2562,22 @@ function (_Component) {
 }(react__WEBPACK_IMPORTED_MODULE_1__["Component"]);
 
 SiteNav.propTypes =  true ? {
-  mobileMenuTitle: prop_types__WEBPACK_IMPORTED_MODULE_0___default.a.string,
-  mobileNavBreakpoint: prop_types__WEBPACK_IMPORTED_MODULE_0___default.a.number,
   banner: prop_types__WEBPACK_IMPORTED_MODULE_0___default.a.bool,
+  mobileBreakpoint: prop_types__WEBPACK_IMPORTED_MODULE_0___default.a.number,
+  mobileToggleTitle: prop_types__WEBPACK_IMPORTED_MODULE_0___default.a.string,
   children: prop_types__WEBPACK_IMPORTED_MODULE_0___default.a.node.isRequired
 } : undefined;
 SiteNav.defaultProps = {
-  mobileMenuTitle: 'Site Navigation',
-  mobileNavBreakpoint: _constants_breakpoints__WEBPACK_IMPORTED_MODULE_7__["default"].md,
-  banner: false
+  banner: false,
+  mobileBreakpoint: _constants_breakpoints__WEBPACK_IMPORTED_MODULE_7__["default"].md,
+  mobileToggleTitle: 'Site Navigation'
 };
 SiteNav.Item = _Nav__WEBPACK_IMPORTED_MODULE_6__["default"].Item;
 SiteNav.Link = _Nav__WEBPACK_IMPORTED_MODULE_6__["default"].Link;
 /* harmony default export */ __webpack_exports__["default"] = (SiteNav);
 
 /***/ }),
-/* 31 */
+/* 32 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -2326,8 +2587,6 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(5);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_1__);
 /* harmony import */ var _Nav__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(19);
-function _extends() { _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends.apply(this, arguments); }
-
 function _objectWithoutProperties(source, excluded) { if (source == null) return {}; var target = _objectWithoutPropertiesLoose(source, excluded); var key, i; if (Object.getOwnPropertySymbols) { var sourceSymbolKeys = Object.getOwnPropertySymbols(source); for (i = 0; i < sourceSymbolKeys.length; i++) { key = sourceSymbolKeys[i]; if (excluded.indexOf(key) >= 0) continue; if (!Object.prototype.propertyIsEnumerable.call(source, key)) continue; target[key] = source[key]; } } return target; }
 
 function _objectWithoutPropertiesLoose(source, excluded) { if (source == null) return {}; var target = {}; var sourceKeys = Object.keys(source); var key, i; for (i = 0; i < sourceKeys.length; i++) { key = sourceKeys[i]; if (excluded.indexOf(key) >= 0) continue; target[key] = source[key]; } return target; }
@@ -2340,9 +2599,9 @@ var SubNav = function SubNav(_ref) {
   var children = _ref.children,
       restProps = _objectWithoutProperties(_ref, ["children"]);
 
-  return react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_Nav__WEBPACK_IMPORTED_MODULE_2__["default"], _extends({}, restProps, {
+  return react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("nav", restProps, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_Nav__WEBPACK_IMPORTED_MODULE_2__["default"], {
     sub: true
-  }), children);
+  }, children));
 };
 
 SubNav.propTypes =  true ? {

@@ -7,14 +7,16 @@ import { Collapse } from 'react-collapse';
 import NavbarContext from './NavbarContext';
 import Hamburger from '../Hamburger';
 import Nav from '../Nav';
-import breakpoints from '../../constants/breakpoints';
 import colors from '../../constants/colors';
 import media from '../../constants/media';
 
 /*
   inner components
 */
-const MobileCollapseWrapper = styled.div`
+// filter props so they don't become dom attributes (see `styled-components` issue 439)
+const MobileCollapseWrapper = styled(({ color, ...restProps }) => (
+  <div {...restProps} />
+))`
   box-shadow: 0 5px 10px 0 #00000026;
   left: 0;
   position: absolute;
@@ -56,25 +58,23 @@ class NavbarNav extends Component {
     }));
 
   render() {
-    const { mobileNavBreakpoint, ...restProps } = this.props;
     const { mobileNavIsOpen } = this.state;
 
     return (
       <WindowSize
         render={({ width }) => {
-          // TODO: update when width doesn't return 0 on initial render
-          // https://github.com/jaredpalmer/react-fns/issues/84
+          // TODO: update when `width` doesn't return 0 on initial render (see `react-fns` issue 84)
           const currentWidth = width === 0 ? window.innerWidth : width;
-          const renderMobile = currentWidth < mobileNavBreakpoint;
 
           return (
             <NavbarContext.Consumer>
-              {({ color }) => {
+              {({ color, mobileBreakpoint }) => {
                 const childColor = getChildColor(color);
+                const renderMobile = currentWidth < mobileBreakpoint;
 
                 if (renderMobile) {
                   return (
-                    <div {...restProps}>
+                    <div {...this.props}>
                       <Hamburger
                         aria-controls="navbar-nav-mobile-collapse"
                         color={childColor}
@@ -84,8 +84,8 @@ class NavbarNav extends Component {
                       />
                       <MobileCollapseWrapper color={color}>
                         <Collapse
-                          isOpened={mobileNavIsOpen}
                           id="navbar-nav-mobile-collapse"
+                          isOpened={mobileNavIsOpen}
                         >
                           <MobileNavWrapper>
                             <Nav mobile color={childColor}>
@@ -99,7 +99,7 @@ class NavbarNav extends Component {
                 }
 
                 return (
-                  <Nav {...restProps} navbar color={childColor}>
+                  <Nav {...this.props} navbar color={childColor}>
                     {this.props.children}
                   </Nav>
                 );
@@ -113,12 +113,7 @@ class NavbarNav extends Component {
 }
 
 NavbarNav.propTypes = {
-  mobileNavBreakpoint: PropTypes.number,
   children: PropTypes.node.isRequired
-};
-
-NavbarNav.defaultProps = {
-  mobileNavBreakpoint: breakpoints.md
 };
 
 NavbarNav.Item = Nav.Item;

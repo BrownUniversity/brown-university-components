@@ -27,17 +27,17 @@ const hamburgerTransitionCSS = css`
 /*
   inner components
 */
-const HamburgerButton = styled.button`
+const HamburgerTag = styled.div`
   background: transparent;
   border: none;
-  cursor: pointer;
-  height: 24px;
-  padding: 0 25px 3px 0;
-  width: 30px;
+  cursor:  ${props => (props.as === 'button' ? 'pointer' : 'inherit')};
+  ${props => props.as === 'div' && 'display: inline-block;'}
+  ${props => props.as === 'button' && 'height: 24px;'}
+  padding: ${props =>
+    props.as === 'button' ? '0 25px 3px 0' : '0 25px 7px 0'};
 `;
 
-// TODO: revisit when filtering props from DOM is supported
-// https://github.com/styled-components/styled-components/issues/439
+// filter props so they don't become dom attributes (see `styled-components` issue 439)
 const HamburgerBars = styled(({ color, isOpen, ...restProps }) => (
   <span {...restProps} />
 ))`
@@ -128,33 +128,41 @@ class Hamburger extends Component {
     );
 
   render() {
-    const { color, onOpen, onClose, ...restProps } = this.props;
+    const { tag, color, ariaLabel, onOpen, onClose, ...restProps } = this.props;
     const { isOpen } = this.state;
+    const isButton = tag === 'button';
 
     return (
-      <HamburgerButton
+      <HamburgerTag
         {...restProps}
-        type="button"
-        aria-expanded={isOpen}
-        aria-label="Toggle navigation"
-        onClick={this.handleClick}
+        as={tag}
+        type={isButton ? 'button' : null}
+        aria-expanded={isButton ? isOpen : null}
+        aria-label={isButton ? ariaLabel : null}
+        onClick={isButton ? this.handleClick : null}
       >
         <HamburgerBars color={color} isOpen={isOpen} />
-      </HamburgerButton>
+      </HamburgerTag>
     );
   }
 }
 
 Hamburger.propTypes = {
-  color: PropTypes.oneOf(['red', 'gray', 'black', 'white']),
+  tag: PropTypes.oneOf(['button', 'div']),
+  color: PropTypes.oneOf(['red', 'white']),
+  ariaLabel: PropTypes.string,
   isOpen: PropTypes.bool,
-  onOpen: PropTypes.func.isRequired,
-  onClose: PropTypes.func.isRequired
+  onOpen: PropTypes.func,
+  onClose: PropTypes.func
 };
 
 Hamburger.defaultProps = {
+  tag: 'button',
   color: 'red',
-  isOpen: false
+  ariaLabel: 'Toggle navigation',
+  isOpen: false,
+  onOpen: null,
+  onClose: null
 };
 
 export default Hamburger;

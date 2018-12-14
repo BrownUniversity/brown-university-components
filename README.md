@@ -2,6 +2,10 @@
 
 Styles and components for building web applications based on the [Brown University Theme](https://www.brown.edu/university-communications/digital/university-theme).
 
+_On-prem Bitbucket doesn't render markdown very nicely; view this in a markdown editor like [Dillinger](https://dillinger.io/)._
+
+---
+
 ## Install
 
 ### Add Brown University Theme
@@ -21,6 +25,8 @@ These libraries are not bundled with Brown University Theme and are required at 
 - [**react**](https://www.npmjs.com/package/react)
 - [**styled-components**](https://www.npmjs.com/package/styled-components)
 
+---
+
 ## Documentation
 
 ### Styles
@@ -35,9 +41,9 @@ _Brown University Theme is designed to be used alongside [Bootstrap](https://www
 
 ### Components
 
-- `Background`
+#### `Background`
 
-  **Example:**
+- **Example:**
 
   ```javascript
   import React from 'react';
@@ -51,7 +57,7 @@ _Brown University Theme is designed to be used alongside [Bootstrap](https://www
   );
   ```
 
-  **Properties:**
+- **Properties:**
 
   | property | propType                 | required | default |
   | -------- | ------------------------ | -------- | ------- |
@@ -60,9 +66,9 @@ _Brown University Theme is designed to be used alongside [Bootstrap](https://www
   | full     | bool                     | -        | true    |
   | children | node                     | true     | -       |
 
-* `Banner`
+#### `Banner`
 
-  **Example:**
+- **Example:**
 
   ```javascript
   import React from 'react';
@@ -75,18 +81,18 @@ _Brown University Theme is designed to be used alongside [Bootstrap](https://www
   );
   ```
 
-  **Properties:**
+- **Properties:**
 
   | property | propType                                                                                                     | required | default   |
   | -------- | ------------------------------------------------------------------------------------------------------------ | -------- | --------- |
   | color    | oneOf(['emerald', 'red', 'brown', 'yellow', 'gray', 'sand', 'lightBrown', 'mediumBrown', 'navy', 'skyblue']) | -        | 'emerald' |
   | size     | oneOf(['default', 'small', 'medium', 'large'])                                                               | -        | 'default' |
-  | src      | string                                                                                                       | -        | false     |
-  | children | node                                                                                                         | -        | false     |
+  | src      | string                                                                                                       | -        | null      |
+  | children | node                                                                                                         | -        | null      |
 
-- [`Button`](https://www.brown.edu/university-communications/digital/university-theme/formatting/buttons)
+#### `Button`
 
-  **Example:**
+- **Example:**
 
   ```javascript
   import React from 'react';
@@ -95,66 +101,63 @@ _Brown University Theme is designed to be used alongside [Bootstrap](https://www
   export default () => <Button color="yellow">Click Me</Button>;
   ```
 
-  **Properties:**
+- **Properties:**
 
   | property | propType                                                                | required | default   |
   | -------- | ----------------------------------------------------------------------- | -------- | --------- |
+  | tag      | oneOfType([func, string])                                               | -        | 'button'  |
   | color    | oneOf(['red', 'yellow', 'brown', 'gray', 'emerald', 'skyblue', 'navy']) | -        | 'red'     |
   | size     | oneOf(['default', 'small', 'large'])                                    | -        | 'default' |
   | outline  | bool                                                                    | -        | false     |
   | inverse  | bool                                                                    | -        | false     |
   | disabled | bool                                                                    | -        | false     |
-  | tag      | oneOfType([func, string])                                               | -        | 'button'  |
   | onClick  | func                                                                    | -        | null      |
   | href     | string                                                                  | -        | null      |
 
-* `Code`
+#### `Code`
 
-  **Example:**
+- **Example:**
 
   ```javascript
   import React from 'react';
   import { Code } from 'brown-university-theme';
 
-  export default () => <Code>small</Code>;
+  export default () => <Code>code</Code>;
   ```
 
-  **Properties:**
+- **Properties:**
 
   | property | propType | required | default |
   | -------- | -------- | -------- | ------- |
   | children | node     | true     | -       |
 
-- `Hamburger`
+#### `Hamburger`
 
-  _This is a primitive used by `NavbarNav` and `SiteNav`. You might want to use one of those components instead._
+_This is a primitive used by `NavbarNav`, `NavbarGlobalNav` and `SiteNav`. You might want to use one of those components instead._
 
-  **Example:**
+- **Example:**
 
   ```javascript
   import React from 'react';
   import { Hamburger } from 'brown-university-theme';
 
-  export default () => (
-    <Hamburger
-      onOpen={() => 'your `handleOpen` fn'}
-      onClose={() => 'your `handleClose` fn'}
-    />
-  );
+  export default () => <Hamburger />;
   ```
 
-  **Properties:**
+- **Properties:**
 
-  | property | propType                                                                         | required | default |
-  | -------- | -------------------------------------------------------------------------------- | -------- | ------- |
-  | color    | oneOf(['red', 'yellow', 'brown', 'gray', 'emerald', 'skyblue', 'navy', 'white']) | -        | 'red'   |
-  | isOpen   | bool                                                                             | -        | false   |
-  | onOpen   | func                                                                             | true     | -       |
-  | onClose  | func                                                                             | true     | -       |
+  | property  | propType                 | required | default             |
+  | --------- | ------------------------ | -------- | ------------------- |
+  | tag       | oneOf(['button', 'div']) | -        | 'button'            |
+  | color     | oneOf(['red', 'white'])  | -        | 'red'               |
+  | ariaLabel | string                   | false    | 'Toggle navigation' |
+  | isOpen    | bool                     | -        | false               |
+  | onOpen    | func                     | -        | null                |
+  | onClose   | func                     | -        | null                |
 
-- `Loader`
+#### `Loader`
 
-  **Example:**
+- **Example:**
 
   ```javascript
   import React from 'react';
@@ -163,17 +166,17 @@ _Brown University Theme is designed to be used alongside [Bootstrap](https://www
   export default () => <Loader height={300} />;
   ```
 
-  **Properties:**
+- **Properties:**
 
   | property | propType | required | default |
   | -------- | -------- | -------- | ------- |
   | height   | number   | -        | 250     |
 
-* `Nav`
+#### `Nav`
 
-  _This is a primitive used by `NavbarNav`, `SiteNav`, and `SubNav`. You might want to use one of those components instead._
+_This is a primitive used by `NavbarNav`, `NavbarGlobalNav`, `SiteNav`, and `SubNav`. You might want to use one of those components instead._
 
-  **Example:**
+- **Example:**
 
   ```javascript
   import React from 'react';
@@ -194,35 +197,43 @@ _Brown University Theme is designed to be used alongside [Bootstrap](https://www
   );
   ```
 
-  **`Nav` Properties:**
+- **Properties:**
 
-  | property | propType              | required | default   |
-  | -------- | --------------------- | -------- | --------- |
-  | navbar   | bool                  | -        | false     |
-  | mobile   | bool                  | -        | false     |
-  | sub      | bool                  | -        | false     |
-  | color    | oneOf('red', 'white') | -        | 'red'     |
-  | children | node                  | true     | undefined |
+  - `Nav`
 
-  **`Nav.Item` Properties:**
+    | property | propType              | required | default |
+    | -------- | --------------------- | -------- | ------- |
+    | navbar   | bool                  | -        | false   |
+    | mobile   | bool                  | -        | false   |
+    | sub      | bool                  | -        | false   |
+    | color    | oneOf('red', 'white') | -        | 'red'   |
+    | children | node                  | true     | -       |
 
-  _`mobile` and `sub` props are passed down implicitly from `Nav` through `NavContext`._
+    _`mobile`, `sub` and `children` are used directly; `navbar`, `mobile`, `sub` and `color` are passed down through `NavContext`._
 
-  **`Nav.Link` Properties:**
+  - `Nav.Item`
 
-  | property | propType                  | required | default  |
-  | -------- | ------------------------- | -------- | -------- |
-  | active   | bool                      | -        | false    |
-  | disabled | bool                      | -        | false    |
-  | tag      | oneOfType([func, string]) | -        | 'button' |
-  | onClick  | func                      | -        | null     |
-  | href     | string                    | -        | null     |
+    | property | propType | required | default |
+    | -------- | -------- | -------- | ------- |
+    | children | node     | true     | -       |
 
-  _`navbar`, `mobile`, `sub` and 'color' props are passed down implicitly from `Nav` through `NavContext`._
+    _`mobile` and `sub` are passed in implicitly from `Nav` through `NavContext`._
 
-* `Navbar`
+  - `Nav.Link`
 
-  **Example:**
+    | property | propType                  | required | default  |
+    | -------- | ------------------------- | -------- | -------- |
+    | tag      | oneOfType([func, string]) | -        | 'button' |
+    | active   | bool                      | -        | false    |
+    | disabled | bool                      | -        | false    |
+    | onClick  | func                      | -        | null     |
+    | href     | string                    | -        | null     |
+
+    _`navbar`, `mobile`, `sub` and `color` are passed in implicitly from `Nav` through `NavContext`._
+
+#### `Navbar`
+
+- **Example:**
 
   ```javascript
   import React from 'react';
@@ -231,16 +242,106 @@ _Brown University Theme is designed to be used alongside [Bootstrap](https://www
   export default () => <Navbar color="white" />;
   ```
 
-  **Properties:**
+- **Properties:**
 
-  | property | propType                  | required | default |
-  | -------- | ------------------------- | -------- | ------- |
-  | color    | oneOf(['brown', 'white']) | -        | 'brown' |
-  | children | node                      | -        | false   |
+  | property         | propType                  | required | default |
+  | ---------------- | ------------------------- | -------- | ------- |
+  | color            | oneOf(['brown', 'white']) | -        | 'brown' |
+  | mobileBreakpoint | number                    | -        | null    |
+  | toggleTitle      | string                    | -        | null    |
+  | children         | node                      | -        | null    |
 
-* `SiteNav`
+  _`color` and `children` are used directly; `color`, `mobileBreakpoint` and `toggleTitle` are passed down through `NavbarContext`._
 
-  **Example:**
+#### `Navbar` with `NavbarNav`
+
+- **Example:**
+
+  ```javascript
+  import React from 'react';
+  import { Navbar } from 'brown-university-theme';
+
+  export default () => (
+    <Navbar>
+      <Navbar.Nav>
+        <Navbar.Nav.Item>
+          <Navbar.Nav.Link active>Active Link</Navbar.Nav.Link>
+        </Navbar.Nav.Item>
+        <Navbar.Nav.Item>
+          <Navbar.Nav.Link>Link</Navbar.Nav.Link>
+        </Navbar.Nav.Item>
+        <Navbar.Nav.Item>
+          <Navbar.Nav.Link disabled>Disabled Link</Navbar.Nav.Link>
+        </Navbar.Nav.Item>
+      </Navbar.Nav>
+    </Navbar>
+  );
+  ```
+
+- **Properties:**
+
+  - `Navbar.Nav`
+
+    | property | propType | required | default |
+    | -------- | -------- | -------- | ------- |
+    | children | node     | true     | -       |
+
+    _`color` and `mobileBreakpoint` are passed in implicitly from `Navbar` through `NavbarContext`._
+
+  - `Navbar.Nav.Item`
+
+    _See `Nav.Item`_
+
+  - `Navbar.Nav.Link`
+
+    _See `Nav.Link`_
+
+#### `Navbar` with `NavbarGlobalNav`
+
+- **Example:**
+
+  ```javascript
+  import React from 'react';
+  import { Navbar } from 'brown-university-theme';
+
+  export default () => (
+    <Navbar>
+      <Navbar.GlobalNav>
+        <Navbar.GlobalNav.Item>
+          <Navbar.GlobalNav.Link active>Active Link</Navbar.GlobalNav.Link>
+        </Navbar.GlobalNav.Item>
+        <Navbar.GlobalNav.Item>
+          <Navbar.GlobalNav.Link>Link</Navbar.GlobalNav.Link>
+        </Navbar.GlobalNav.Item>
+        <Navbar.GlobalNav.Item>
+          <Navbar.GlobalNav.Link disabled>Disabled Link</Navbar.GlobalNav.Link>
+        </Navbar.GlobalNav.Item>
+      </Navbar.GlobalNav>
+    </Navbar>
+  );
+  ```
+
+- **Properties:**
+
+  - `Navbar.GlobalNav`
+
+    | property | propType | required | default |
+    | -------- | -------- | -------- | ------- |
+    | children | node     | true     | -       |
+
+    _`color`, `mobileBreakpoint` and `toggleTitle` are passed in implicitly from `Navbar` through `NavbarContext`._
+
+  - `Navbar.GlobalNav.Item`
+
+    _See `Nav.Item`_
+
+  - `Navbar.GlobalNav.Link`
+
+    _See `Nav.Link`_
+
+#### `SiteNav`
+
+- **Example:**
 
   ```javascript
   import React from 'react';
@@ -261,26 +362,28 @@ _Brown University Theme is designed to be used alongside [Bootstrap](https://www
   );
   ```
 
-  **`SiteNav` Properties:**
+- **Properties:**
 
-  | property            | propType | required | default         |
-  | ------------------- | -------- | -------- | --------------- |
-  | mobileMenuTitle     | string   | -        | Site Navigation |
-  | mobileNavBreakpoint | number   | -        | 768             |
-  | banner              | bool     | -        | false           |
-  | children            | node     | true     | undefined       |
+  - `SiteNav`
 
-  **`SiteNav.Item` Properties:**
+    | property          | propType | required | default         |
+    | ----------------- | -------- | -------- | --------------- |
+    | banner            | bool     | -        | false           |
+    | mobileBreakpoint  | number   | -        | 768             |
+    | mobileToggleTitle | string   | -        | Site Navigation |
+    | children          | node     | true     | -               |
 
-  _See `Nav.Item`_
+  - `SiteNav.Item`
 
-  **`SiteNav.Link` Properties:**
+    _See `Nav.Item`_
 
-  _See `Nav.Link`_
+  - `SiteNav.Link`
 
-* `SubNav`
+    _See `Nav.Link`_
 
-  **Example:**
+#### `SubNav`
+
+- **Example:**
 
   ```javascript
   import React from 'react';
@@ -301,19 +404,23 @@ _Brown University Theme is designed to be used alongside [Bootstrap](https://www
   );
   ```
 
-  **`SubNav` Properties:**
+- **Properties:**
 
-  | property | propType | required | default   |
-  | -------- | -------- | -------- | --------- |
-  | children | node     | true     | undefined |
+  - `SubNav`
 
-  **`SubNav.Item` Properties:**
+    | property | propType | required | default |
+    | -------- | -------- | -------- | ------- |
+    | children | node     | true     | -       |
 
-  _See `Nav.Item`_
+  - `SubNav.Item`
 
-  **`SubNav.Link` Properties:**
+    _See `Nav.Item`_
 
-  _See `Nav.Link`_
+  - `SubNav.Link`
+
+    _See `Nav.Link`_
+
+---
 
 ## Development
 
@@ -323,7 +430,7 @@ Install dependencies:
 npm install
 ```
 
-Run examples at [http://localhost:8080/](http://localhost:8080/) with storybook:
+Run examples at [http://localhost:8080/](http://localhost:8080/) with [storybook](https://storybook.js.org/):
 
 ```sh
 npm start

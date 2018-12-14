@@ -45,7 +45,10 @@ const getWidth = ({ mobile, sub }) => {
 /*
   inner Tag component
 */
-const Tag = styled.ul`
+// filter props so they don't become dom attributes (see `styled-components` issue 439)
+const Tag = styled(({ color, navbar, mobile, sub, ...restProps }) => (
+  <ul {...restProps} />
+))`
   list-style: none;
   margin: 0;
   background-color: ${props => getBackgroundColor(props)};

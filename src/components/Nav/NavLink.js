@@ -98,8 +98,8 @@ const getLineHeight = ({ navbar, mobile, sub }) => {
 
   return '1';
 };
-const getOpacity = ({ disabled }) => {
-  if (disabled) {
+const getOpacity = ({ disabled, color }) => {
+  if (disabled && color !== 'white') {
     return '0.65';
   }
 
@@ -191,8 +191,7 @@ const getAfterWidthWithHover = ({ disabled }) => {
 /*
   inner Tag component
 */
-// TODO: filter active, navbar, mobile, sub and color props from DOM
-// https://github.com/styled-components/styled-components/issues/439
+// TODO: filter active, navbar, mobile, sub and color props with `as` usage (see `styled-components` issue 439)
 const Tag = styled.div`
   ${navLinkCSS}
   color: ${props => getColor(props)};
@@ -238,8 +237,8 @@ const Tag = styled.div`
 /*
   outer NavLink component
 */
-const deriveTag = ({ href, tag }) => {
-  if (href && tag === 'button') {
+const deriveTag = ({ tag, href }) => {
+  if (tag === 'button' && href) {
     return 'a';
   }
 
@@ -247,6 +246,7 @@ const deriveTag = ({ href, tag }) => {
 };
 
 const NavLink = props => {
+  const { tag, ...restProps } = props;
   const derivedTag = deriveTag(props);
 
   return (
@@ -255,7 +255,7 @@ const NavLink = props => {
         <Tag
           as={derivedTag}
           type={derivedTag === 'button' && props.onClick ? 'button' : undefined}
-          {...props}
+          {...restProps}
           navbar={navbar}
           mobile={mobile}
           sub={sub}
@@ -267,17 +267,17 @@ const NavLink = props => {
 };
 
 NavLink.propTypes = {
+  tag: PropTypes.oneOfType([PropTypes.func, PropTypes.string]),
   active: PropTypes.bool,
   disabled: PropTypes.bool,
-  tag: PropTypes.oneOfType([PropTypes.func, PropTypes.string]),
   onClick: PropTypes.func,
   href: PropTypes.string
 };
 
 NavLink.defaultProps = {
+  tag: 'button',
   active: false,
   disabled: false,
-  tag: 'button',
   onClick: null,
   href: null
 };

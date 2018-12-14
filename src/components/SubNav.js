@@ -4,9 +4,9 @@ import React from 'react';
 import Nav from './Nav';
 
 const SubNav = ({ children, ...restProps }) => (
-  <Nav {...restProps} sub>
-    {children}
-  </Nav>
+  <nav {...restProps}>
+    <Nav sub>{children}</Nav>
+  </nav>
 );
 
 SubNav.propTypes = {

@@ -13,7 +13,7 @@ import { sansBold } from '../constants/typography';
 /*
   inner components
 */
-const MobileBannerWrapper = styled.div`
+const MobileBannerPositioningWrapper = styled.div`
   ${props =>
     props.banner &&
     css`
@@ -26,35 +26,39 @@ const MobileBannerWrapper = styled.div`
     `};
 `;
 
-const MobileWrapper = styled.div`
+const MobileWrapper = styled.nav`
   border: 1px solid #ddd;
 `;
 
-const MobileMenuWrapper = styled.div`
+const MobileToggleButton = styled.button`
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  font-size: 1em;
+  padding: 1rem 0 1rem;
+  width: 100%;
+`;
+
+const MobileToggleButtonInner = styled.div`
   align-items: center;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: space-between;
   margin: 0 auto;
-  padding: 1rem 0 1rem;
   width: 92%;
 `;
 
-const MobileMenuTitle = styled.button`
-  background-color: transparent;
-  border: none;
-  cursor: pointer;
+const MobileToggleTitle = styled.span`
   color: ${colors.red};
   font-family: ${sansBold};
-  font-size: 1em;
   font-weight: bold;
   letter-spacing: 0.5px;
   padding: 11px 5px;
   text-transform: uppercase;
 `;
 
-const MobileNavWrapper = styled.div`
+const MobileNavWrapper = styled.nav`
   align-items: center;
   display: flex;
   justify-content: center;
@@ -64,7 +68,7 @@ const MobileNavWrapper = styled.div`
   z-index: 10;
 `;
 
-const BannerWrapper = styled.div`
+const BannerPositioningWrapper = styled.div`
   background-color: ${colors.white};
   ${props =>
     props.banner &&
@@ -78,7 +82,7 @@ const BannerWrapper = styled.div`
     `}
 `;
 
-const Wrapper = styled.div`
+const NavWrapper = styled.div`
   display: flex;
   justify-content: center;
   padding: 20px 0 30px;
@@ -99,9 +103,9 @@ class SiteNav extends Component {
 
   render() {
     const {
-      mobileMenuTitle,
-      mobileNavBreakpoint,
       banner,
+      mobileBreakpoint,
+      mobileToggleTitle,
       ...restProps
     } = this.props;
     const { mobileNavIsOpen } = this.state;
@@ -109,51 +113,45 @@ class SiteNav extends Component {
     return (
       <WindowSize
         render={({ width }) => {
-          // TODO: update when width doesn't return 0 on initial render
-          // https://github.com/jaredpalmer/react-fns/issues/84
+          // TODO: update when `width` doesn't return 0 on initial render (see `react-fns` issue 84)
           const currentWidth = width === 0 ? window.innerWidth : width;
-          const renderMobile = currentWidth < mobileNavBreakpoint;
+          const renderMobile = currentWidth < mobileBreakpoint;
 
           if (renderMobile) {
             return (
-              <MobileBannerWrapper {...restProps} banner={banner}>
-                <MobileWrapper>
-                  <MobileMenuWrapper>
-                    <MobileMenuTitle
-                      type="button"
-                      aria-controls="site-nav-mobile-collapse"
-                      aria-expanded={mobileNavIsOpen}
-                      aria-label="Toggle navigation"
-                      onClick={this.handleMobileNavToggle}
-                    >
-                      {mobileMenuTitle}
-                    </MobileMenuTitle>
-                    <Hamburger
-                      aria-controls="site-nav-mobile-collapse"
-                      isOpen={mobileNavIsOpen}
-                      onOpen={this.handleMobileNavToggle}
-                      onClose={this.handleMobileNavToggle}
-                    />
-                  </MobileMenuWrapper>
+              <MobileBannerPositioningWrapper banner={banner}>
+                <MobileWrapper {...restProps}>
+                  <MobileToggleButton
+                    type="button"
+                    aria-controls="site-nav-mobile-collapse"
+                    aria-expanded={mobileNavIsOpen}
+                    aria-label="Toggle site navigation"
+                    onClick={this.handleMobileNavToggle}
+                  >
+                    <MobileToggleButtonInner>
+                      <MobileToggleTitle>{mobileToggleTitle}</MobileToggleTitle>
+                      <Hamburger tag="div" isOpen={mobileNavIsOpen} />
+                    </MobileToggleButtonInner>
+                  </MobileToggleButton>
                   <Collapse
-                    isOpened={mobileNavIsOpen}
                     id="site-nav-mobile-collapse"
+                    isOpened={mobileNavIsOpen}
                   >
                     <MobileNavWrapper>
                       <Nav mobile>{this.props.children}</Nav>
                     </MobileNavWrapper>
                   </Collapse>
                 </MobileWrapper>
-              </MobileBannerWrapper>
+              </MobileBannerPositioningWrapper>
             );
           }
 
           return (
-            <BannerWrapper {...restProps} banner={banner}>
-              <Wrapper>
+            <BannerPositioningWrapper banner={banner}>
+              <NavWrapper {...restProps}>
                 <Nav>{this.props.children}</Nav>
-              </Wrapper>
-            </BannerWrapper>
+              </NavWrapper>
+            </BannerPositioningWrapper>
           );
         }}
       />
@@ -162,16 +160,16 @@ class SiteNav extends Component {
 }
 
 SiteNav.propTypes = {
-  mobileMenuTitle: PropTypes.string,
-  mobileNavBreakpoint: PropTypes.number,
   banner: PropTypes.bool,
+  mobileBreakpoint: PropTypes.number,
+  mobileToggleTitle: PropTypes.string,
   children: PropTypes.node.isRequired
 };
 
 SiteNav.defaultProps = {
-  mobileMenuTitle: 'Site Navigation',
-  mobileNavBreakpoint: breakpoints.md,
-  banner: false
+  banner: false,
+  mobileBreakpoint: breakpoints.md,
+  mobileToggleTitle: 'Site Navigation'
 };
 
 SiteNav.Item = Nav.Item;

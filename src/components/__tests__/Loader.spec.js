@@ -7,18 +7,17 @@ const renderLoader = ({ props = {} } = {}) => {
   const rtlUtils = render(<Loader {...props} />);
 
   return {
-    tree: rtlUtils.container.firstChild,
+    loader: rtlUtils.container.firstChild,
     ...rtlUtils
   };
 };
 
 describe('Loader', () => {
   it('should render loader with default height', () => {
-    const { tree } = renderLoader(/* { props: { height: 400 } } */);
+    const { loader } = renderLoader(/* { props: { height: 400 } } */);
 
-    // TODO: update when animation name can be deterministic
-    // https://github.com/styled-components/jest-styled-components/issues/123
-    expect(tree).toMatchInlineSnapshot(`
+    // TODO: update when animation name can be deterministic (see `jest-styled-components` issue 123)
+    expect(loader).toMatchInlineSnapshot(`
 .c0 svg #rays {
   -webkit-transform-origin: center;
   -ms-transform-origin: center;
@@ -42,7 +41,7 @@ describe('Loader', () => {
 `);
   });
 
-  it('should render with custom height when provided', () => {
+  it('should render loader with custom height when provided', () => {
     const { getByTestId } = renderLoader({ props: { height: 400 } });
 
     expect(getByTestId('mock-svg')).toHaveAttribute('height', '400');
