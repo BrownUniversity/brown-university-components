@@ -73,7 +73,7 @@ describe('SiteNav', () => {
       });
     });
 
-    it('should render custom toggle title if provided', () => {
+    it('should render custom mobile toggle title if provided', () => {
       const { getByText } = renderSiteNav({
         props: { mobileToggleTitle: 'Custom Navigation' }
       });
@@ -81,7 +81,7 @@ describe('SiteNav', () => {
       expect(getByText('Custom Navigation')).toBeInTheDocument();
     });
 
-    it('should toggle mobile site nav on mobile toggle button click', () => {
+    it('should toggle site nav mobile collapse', () => {
       const { getByLabelText, getByText } = renderSiteNav();
       const mobileToggleButtonByLabelText = getByLabelText(
         'Toggle site navigation'

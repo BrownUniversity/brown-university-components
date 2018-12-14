@@ -22,7 +22,10 @@ const ToggleButton = styled.button`
   padding: 0;
 `;
 
-const ToggleTitle = styled.span`
+// filter props so they don't become dom attributes (see `styled-components` issue 439)
+const ToggleTitle = styled(({ color, ...restProps }) => (
+  <span {...restProps} />
+))`
   color: ${({ color }) => colors[color]};
   font-family: ${sansBold};
   font-weight: bold;
@@ -134,8 +137,6 @@ class NavbarGlobalNav extends Component {
 }
 
 NavbarGlobalNav.propTypes = {
-  mobileBreakpoint: PropTypes.number.isRequired,
-  toggleTitle: PropTypes.string.isRequired,
   children: PropTypes.node.isRequired
 };
 
