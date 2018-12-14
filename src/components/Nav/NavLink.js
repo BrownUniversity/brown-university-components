@@ -237,8 +237,8 @@ const Tag = styled.div`
 /*
   outer NavLink component
 */
-const deriveTag = ({ href, tag }) => {
-  if (href && tag === 'button') {
+const deriveTag = ({ tag, href }) => {
+  if (tag === 'button' && href) {
     return 'a';
   }
 
@@ -246,6 +246,7 @@ const deriveTag = ({ href, tag }) => {
 };
 
 const NavLink = props => {
+  const { tag, ...restProps } = props;
   const derivedTag = deriveTag(props);
 
   return (
@@ -254,7 +255,7 @@ const NavLink = props => {
         <Tag
           as={derivedTag}
           type={derivedTag === 'button' && props.onClick ? 'button' : undefined}
-          {...props}
+          {...restProps}
           navbar={navbar}
           mobile={mobile}
           sub={sub}
@@ -266,17 +267,17 @@ const NavLink = props => {
 };
 
 NavLink.propTypes = {
+  tag: PropTypes.oneOfType([PropTypes.func, PropTypes.string]),
   active: PropTypes.bool,
   disabled: PropTypes.bool,
-  tag: PropTypes.oneOfType([PropTypes.func, PropTypes.string]),
   onClick: PropTypes.func,
   href: PropTypes.string
 };
 
 NavLink.defaultProps = {
+  tag: 'button',
   active: false,
   disabled: false,
-  tag: 'button',
   onClick: null,
   href: null
 };

@@ -519,6 +519,10 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _constants_typography__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(12);
 function _extends() { _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends.apply(this, arguments); }
 
+function _objectWithoutProperties(source, excluded) { if (source == null) return {}; var target = _objectWithoutPropertiesLoose(source, excluded); var key, i; if (Object.getOwnPropertySymbols) { var sourceSymbolKeys = Object.getOwnPropertySymbols(source); for (i = 0; i < sourceSymbolKeys.length; i++) { key = sourceSymbolKeys[i]; if (excluded.indexOf(key) >= 0) continue; if (!Object.prototype.propertyIsEnumerable.call(source, key)) continue; target[key] = source[key]; } } return target; }
+
+function _objectWithoutPropertiesLoose(source, excluded) { if (source == null) return {}; var target = {}; var sourceKeys = Object.keys(source); var key, i; for (i = 0; i < sourceKeys.length; i++) { key = sourceKeys[i]; if (excluded.indexOf(key) >= 0) continue; target[key] = source[key]; } return target; }
+
 
 
 
@@ -720,10 +724,10 @@ var Tag = styled_components__WEBPACK_IMPORTED_MODULE_2___default.a.div.withConfi
 */
 
 var deriveTag = function deriveTag(_ref11) {
-  var href = _ref11.href,
-      tag = _ref11.tag;
+  var tag = _ref11.tag,
+      href = _ref11.href;
 
-  if (href && tag === 'button') {
+  if (tag === 'button' && href) {
     return 'a';
   }
 
@@ -731,30 +735,33 @@ var deriveTag = function deriveTag(_ref11) {
 };
 
 var Button = function Button(props) {
+  var tag = props.tag,
+      restProps = _objectWithoutProperties(props, ["tag"]);
+
   var derivedTag = deriveTag(props);
   return react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(Tag, _extends({
     as: derivedTag,
     type: derivedTag === 'button' && props.onClick ? 'button' : undefined
-  }, props));
+  }, restProps));
 };
 
 Button.propTypes =  true ? {
+  tag: prop_types__WEBPACK_IMPORTED_MODULE_0___default.a.oneOfType([prop_types__WEBPACK_IMPORTED_MODULE_0___default.a.func, prop_types__WEBPACK_IMPORTED_MODULE_0___default.a.string]),
   color: prop_types__WEBPACK_IMPORTED_MODULE_0___default.a.oneOf(['red', 'yellow', 'brown', 'gray', 'emerald', 'skyblue', 'navy']),
   size: prop_types__WEBPACK_IMPORTED_MODULE_0___default.a.oneOf(['default', 'small', 'large']),
   outline: prop_types__WEBPACK_IMPORTED_MODULE_0___default.a.bool,
   inverse: prop_types__WEBPACK_IMPORTED_MODULE_0___default.a.bool,
   disabled: prop_types__WEBPACK_IMPORTED_MODULE_0___default.a.bool,
-  tag: prop_types__WEBPACK_IMPORTED_MODULE_0___default.a.oneOfType([prop_types__WEBPACK_IMPORTED_MODULE_0___default.a.func, prop_types__WEBPACK_IMPORTED_MODULE_0___default.a.string]),
   onClick: prop_types__WEBPACK_IMPORTED_MODULE_0___default.a.func,
   href: prop_types__WEBPACK_IMPORTED_MODULE_0___default.a.string
 } : undefined;
 Button.defaultProps = {
+  tag: 'button',
   color: 'red',
   size: 'default',
   outline: false,
   inverse: false,
   disabled: false,
-  tag: 'button',
   onClick: null,
   href: null
 };
@@ -958,12 +965,12 @@ function (_Component) {
     key: "render",
     value: function render() {
       var _this$props = this.props,
+          tag = _this$props.tag,
           color = _this$props.color,
           ariaLabel = _this$props.ariaLabel,
-          tag = _this$props.tag,
           onOpen = _this$props.onOpen,
           onClose = _this$props.onClose,
-          restProps = _objectWithoutProperties(_this$props, ["color", "ariaLabel", "tag", "onOpen", "onClose"]);
+          restProps = _objectWithoutProperties(_this$props, ["tag", "color", "ariaLabel", "onOpen", "onClose"]);
 
       var isOpen = this.state.isOpen;
       var isButton = tag === 'button';
@@ -984,18 +991,18 @@ function (_Component) {
 }(react__WEBPACK_IMPORTED_MODULE_1__["Component"]);
 
 Hamburger.propTypes =  true ? {
-  color: prop_types__WEBPACK_IMPORTED_MODULE_0___default.a.oneOf(['red', 'white', 'gray']),
+  tag: prop_types__WEBPACK_IMPORTED_MODULE_0___default.a.oneOf(['button', 'div']),
+  color: prop_types__WEBPACK_IMPORTED_MODULE_0___default.a.oneOf(['red', 'white']),
   ariaLabel: prop_types__WEBPACK_IMPORTED_MODULE_0___default.a.string,
   isOpen: prop_types__WEBPACK_IMPORTED_MODULE_0___default.a.bool,
-  tag: prop_types__WEBPACK_IMPORTED_MODULE_0___default.a.oneOf(['button', 'div']),
   onOpen: prop_types__WEBPACK_IMPORTED_MODULE_0___default.a.func,
   onClose: prop_types__WEBPACK_IMPORTED_MODULE_0___default.a.func
 } : undefined;
 Hamburger.defaultProps = {
+  tag: 'button',
   color: 'red',
   ariaLabel: 'Toggle navigation',
   isOpen: false,
-  tag: 'button',
   onOpen: null,
   onClose: null
 };
@@ -1353,6 +1360,10 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _constants_typography__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(12);
 function _extends() { _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends.apply(this, arguments); }
 
+function _objectWithoutProperties(source, excluded) { if (source == null) return {}; var target = _objectWithoutPropertiesLoose(source, excluded); var key, i; if (Object.getOwnPropertySymbols) { var sourceSymbolKeys = Object.getOwnPropertySymbols(source); for (i = 0; i < sourceSymbolKeys.length; i++) { key = sourceSymbolKeys[i]; if (excluded.indexOf(key) >= 0) continue; if (!Object.prototype.propertyIsEnumerable.call(source, key)) continue; target[key] = source[key]; } } return target; }
+
+function _objectWithoutPropertiesLoose(source, excluded) { if (source == null) return {}; var target = {}; var sourceKeys = Object.keys(source); var key, i; for (i = 0; i < sourceKeys.length; i++) { key = sourceKeys[i]; if (excluded.indexOf(key) >= 0) continue; target[key] = source[key]; } return target; }
+
 function _templateObject() {
   var data = _taggedTemplateLiteral(["\n    font-size: ", ";\n  "]);
 
@@ -1625,10 +1636,10 @@ var Tag = styled_components__WEBPACK_IMPORTED_MODULE_2___default.a.div.withConfi
 */
 
 var deriveTag = function deriveTag(_ref15) {
-  var href = _ref15.href,
-      tag = _ref15.tag;
+  var tag = _ref15.tag,
+      href = _ref15.href;
 
-  if (href && tag === 'button') {
+  if (tag === 'button' && href) {
     return 'a';
   }
 
@@ -1636,6 +1647,9 @@ var deriveTag = function deriveTag(_ref15) {
 };
 
 var NavLink = function NavLink(props) {
+  var tag = props.tag,
+      restProps = _objectWithoutProperties(props, ["tag"]);
+
   var derivedTag = deriveTag(props);
   return react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_NavContext__WEBPACK_IMPORTED_MODULE_3__["default"].Consumer, null, function (_ref16) {
     var navbar = _ref16.navbar,
@@ -1645,7 +1659,7 @@ var NavLink = function NavLink(props) {
     return react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(Tag, _extends({
       as: derivedTag,
       type: derivedTag === 'button' && props.onClick ? 'button' : undefined
-    }, props, {
+    }, restProps, {
       navbar: navbar,
       mobile: mobile,
       sub: sub,
@@ -1655,16 +1669,16 @@ var NavLink = function NavLink(props) {
 };
 
 NavLink.propTypes =  true ? {
+  tag: prop_types__WEBPACK_IMPORTED_MODULE_0___default.a.oneOfType([prop_types__WEBPACK_IMPORTED_MODULE_0___default.a.func, prop_types__WEBPACK_IMPORTED_MODULE_0___default.a.string]),
   active: prop_types__WEBPACK_IMPORTED_MODULE_0___default.a.bool,
   disabled: prop_types__WEBPACK_IMPORTED_MODULE_0___default.a.bool,
-  tag: prop_types__WEBPACK_IMPORTED_MODULE_0___default.a.oneOfType([prop_types__WEBPACK_IMPORTED_MODULE_0___default.a.func, prop_types__WEBPACK_IMPORTED_MODULE_0___default.a.string]),
   onClick: prop_types__WEBPACK_IMPORTED_MODULE_0___default.a.func,
   href: prop_types__WEBPACK_IMPORTED_MODULE_0___default.a.string
 } : undefined;
 NavLink.defaultProps = {
+  tag: 'button',
   active: false,
   disabled: false,
-  tag: 'button',
   onClick: null,
   href: null
 };
@@ -1993,7 +2007,6 @@ function (_Component) {
 }(react__WEBPACK_IMPORTED_MODULE_1__["Component"]);
 
 NavbarNav.propTypes =  true ? {
-  mobileBreakpoint: prop_types__WEBPACK_IMPORTED_MODULE_0___default.a.number.isRequired,
   children: prop_types__WEBPACK_IMPORTED_MODULE_0___default.a.node.isRequired
 } : undefined;
 NavbarNav.Item = _Nav__WEBPACK_IMPORTED_MODULE_7__["default"].Item;
@@ -2088,25 +2101,31 @@ function _objectWithoutPropertiesLoose(source, excluded) { if (source == null) r
 var ToggleButton = styled_components__WEBPACK_IMPORTED_MODULE_2___default.a.button.withConfig({
   displayName: "NavbarGlobalNav__ToggleButton",
   componentId: "sc-1t3heaa-0"
-})(["background-color:transparent;border:none;cursor:pointer;font-size:1em;padding:0;"]);
-var ToggleTitle = styled_components__WEBPACK_IMPORTED_MODULE_2___default.a.span.withConfig({
+})(["background-color:transparent;border:none;cursor:pointer;font-size:1em;padding:0;"]); // filter props so they don't become dom attributes (see `styled-components` issue 439)
+
+var ToggleTitle = styled_components__WEBPACK_IMPORTED_MODULE_2___default()(function (_ref) {
+  var color = _ref.color,
+      restProps = _objectWithoutProperties(_ref, ["color"]);
+
+  return react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("span", restProps);
+}).withConfig({
   displayName: "NavbarGlobalNav__ToggleTitle",
   componentId: "sc-1t3heaa-1"
-})(["color:", ";font-family:", ";font-weight:bold;letter-spacing:0.5px;margin-left:10px;text-transform:uppercase;"], function (_ref) {
-  var color = _ref.color;
+})(["color:", ";font-family:", ";font-weight:bold;letter-spacing:0.5px;margin-left:10px;text-transform:uppercase;"], function (_ref2) {
+  var color = _ref2.color;
   return _constants_colors__WEBPACK_IMPORTED_MODULE_8__["default"][color];
 }, _constants_typography__WEBPACK_IMPORTED_MODULE_10__["sansBold"]); // filter props so they don't become dom attributes (see `styled-components` issue 439)
 
-var CollapseWrapper = styled_components__WEBPACK_IMPORTED_MODULE_2___default()(function (_ref2) {
-  var color = _ref2.color,
-      restProps = _objectWithoutProperties(_ref2, ["color"]);
+var CollapseWrapper = styled_components__WEBPACK_IMPORTED_MODULE_2___default()(function (_ref3) {
+  var color = _ref3.color,
+      restProps = _objectWithoutProperties(_ref3, ["color"]);
 
   return react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", restProps);
 }).withConfig({
   displayName: "NavbarGlobalNav__CollapseWrapper",
   componentId: "sc-1t3heaa-2"
-})(["box-shadow:0 5px 10px 0 #00000026;left:0;position:absolute;top:75px;width:100%;background-color:", ";"], function (_ref3) {
-  var color = _ref3.color;
+})(["box-shadow:0 5px 10px 0 #00000026;left:0;position:absolute;top:75px;width:100%;background-color:", ";"], function (_ref4) {
+  var color = _ref4.color;
   return _constants_colors__WEBPACK_IMPORTED_MODULE_8__["default"][color];
 });
 var NavWrapper = styled_components__WEBPACK_IMPORTED_MODULE_2___default.a.div.withConfig({
@@ -2151,8 +2170,8 @@ function (_Component) {
     });
 
     _defineProperty(_assertThisInitialized(_assertThisInitialized(_this)), "handleNavToggle", function () {
-      return _this.setState(function (_ref4) {
-        var navIsOpen = _ref4.navIsOpen;
+      return _this.setState(function (_ref5) {
+        var navIsOpen = _ref5.navIsOpen;
         return {
           navIsOpen: !navIsOpen
         };
@@ -2169,14 +2188,14 @@ function (_Component) {
 
       var navIsOpen = this.state.navIsOpen;
       return react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(react_fns__WEBPACK_IMPORTED_MODULE_3__["WindowSize"], {
-        render: function render(_ref5) {
-          var width = _ref5.width;
+        render: function render(_ref6) {
+          var width = _ref6.width;
           // TODO: update when `width` doesn't return 0 on initial render (see `react-fns` issue 84)
           var currentWidth = width === 0 ? window.innerWidth : width;
-          return react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_NavbarContext__WEBPACK_IMPORTED_MODULE_5__["default"].Consumer, null, function (_ref6) {
-            var color = _ref6.color,
-                mobileBreakpoint = _ref6.mobileBreakpoint,
-                toggleTitle = _ref6.toggleTitle;
+          return react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_NavbarContext__WEBPACK_IMPORTED_MODULE_5__["default"].Consumer, null, function (_ref7) {
+            var color = _ref7.color,
+                mobileBreakpoint = _ref7.mobileBreakpoint,
+                toggleTitle = _ref7.toggleTitle;
             var childColor = getChildColor(color);
             var renderMobile = currentWidth < mobileBreakpoint;
             return react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", _this2.props, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(ToggleButton, {
@@ -2210,8 +2229,6 @@ function (_Component) {
 }(react__WEBPACK_IMPORTED_MODULE_1__["Component"]);
 
 NavbarGlobalNav.propTypes =  true ? {
-  mobileBreakpoint: prop_types__WEBPACK_IMPORTED_MODULE_0___default.a.number.isRequired,
-  toggleTitle: prop_types__WEBPACK_IMPORTED_MODULE_0___default.a.string.isRequired,
   children: prop_types__WEBPACK_IMPORTED_MODULE_0___default.a.node.isRequired
 } : undefined;
 NavbarGlobalNav.Item = _Nav__WEBPACK_IMPORTED_MODULE_7__["default"].Item;
@@ -2500,10 +2517,10 @@ function (_Component) {
       var _this2 = this;
 
       var _this$props = this.props,
+          banner = _this$props.banner,
           mobileBreakpoint = _this$props.mobileBreakpoint,
           mobileToggleTitle = _this$props.mobileToggleTitle,
-          banner = _this$props.banner,
-          restProps = _objectWithoutProperties(_this$props, ["mobileBreakpoint", "mobileToggleTitle", "banner"]);
+          restProps = _objectWithoutProperties(_this$props, ["banner", "mobileBreakpoint", "mobileToggleTitle"]);
 
       var mobileNavIsOpen = this.state.mobileNavIsOpen;
       return react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(react_fns__WEBPACK_IMPORTED_MODULE_3__["WindowSize"], {
@@ -2545,15 +2562,15 @@ function (_Component) {
 }(react__WEBPACK_IMPORTED_MODULE_1__["Component"]);
 
 SiteNav.propTypes =  true ? {
+  banner: prop_types__WEBPACK_IMPORTED_MODULE_0___default.a.bool,
   mobileBreakpoint: prop_types__WEBPACK_IMPORTED_MODULE_0___default.a.number,
   mobileToggleTitle: prop_types__WEBPACK_IMPORTED_MODULE_0___default.a.string,
-  banner: prop_types__WEBPACK_IMPORTED_MODULE_0___default.a.bool,
   children: prop_types__WEBPACK_IMPORTED_MODULE_0___default.a.node.isRequired
 } : undefined;
 SiteNav.defaultProps = {
+  banner: false,
   mobileBreakpoint: _constants_breakpoints__WEBPACK_IMPORTED_MODULE_7__["default"].md,
-  mobileToggleTitle: 'Site Navigation',
-  banner: false
+  mobileToggleTitle: 'Site Navigation'
 };
 SiteNav.Item = _Nav__WEBPACK_IMPORTED_MODULE_6__["default"].Item;
 SiteNav.Link = _Nav__WEBPACK_IMPORTED_MODULE_6__["default"].Link;
