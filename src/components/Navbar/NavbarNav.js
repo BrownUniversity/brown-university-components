@@ -113,7 +113,6 @@ class NavbarNav extends Component {
 }
 
 NavbarNav.propTypes = {
-  mobileBreakpoint: PropTypes.number.isRequired,
   children: PropTypes.node.isRequired
 };
 
