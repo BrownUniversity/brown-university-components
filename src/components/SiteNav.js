@@ -59,7 +59,7 @@ const MobileToggleTitle = styled.span`
   text-transform: uppercase;
 `;
 
-const MobileNavWrapper = styled.nav`
+const MobileNavWrapper = styled.div`
   align-items: center;
   display: flex;
   justify-content: center;
@@ -151,9 +151,11 @@ const SiteNav = ({
 
       return (
         <BannerPositioningWrapper banner={banner}>
-          <NavWrapper {...restProps}>
-            <Nav>{children}</Nav>
-          </NavWrapper>
+          <nav {...restProps}>
+            <NavWrapper>
+              <Nav>{children}</Nav>
+            </NavWrapper>
+          </nav>
         </BannerPositioningWrapper>
       );
     }}

@@ -657,7 +657,7 @@ exports[`SiteNav when window width is below mobileBreakpoint styles when banner 
       <div
         class="ReactCollapse--content"
       >
-        <nav
+        <div
           class="c6"
         >
           <ul
@@ -695,7 +695,7 @@ exports[`SiteNav when window width is below mobileBreakpoint styles when banner 
               </button>
             </li>
           </ul>
-        </nav>
+        </div>
       </div>
     </div>
   </nav>
@@ -964,7 +964,7 @@ exports[`SiteNav when window width is below mobileBreakpoint styles when banner 
       <div
         class="ReactCollapse--content"
       >
-        <nav
+        <div
           class="c7"
         >
           <ul
@@ -1002,7 +1002,7 @@ exports[`SiteNav when window width is below mobileBreakpoint styles when banner 
               </button>
             </li>
           </ul>
-        </nav>
+        </div>
       </div>
     </div>
   </nav>

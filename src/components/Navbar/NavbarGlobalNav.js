@@ -82,45 +82,47 @@ const NavbarGlobalNav = ({ children, ...restProps }) => (
             const renderMobile = currentWidth < mobileBreakpoint;
 
             return (
-              <NavToggle>
-                {({ navIsOpen, navCollapseDisplay, toggleNav }) => (
-                  <div {...restProps}>
-                    <ToggleButton
-                      type="button"
-                      aria-controls="navbar-global-nav-collapse"
-                      aria-expanded={navIsOpen}
-                      aria-label="Toggle global navigation"
-                      onClick={toggleNav}
-                    >
-                      <Hamburger
-                        tag="div"
-                        color={childColor}
-                        isOpen={navIsOpen}
-                      />
-                      {!renderMobile && (
-                        <ToggleTitle color={childColor}>
-                          {toggleTitle}
-                        </ToggleTitle>
-                      )}
-                    </ToggleButton>
-                    <CollapseWrapper color={color}>
-                      <Collapse
-                        id="navbar-global-nav-collapse"
-                        isOpened={navIsOpen}
-                        style={{
-                          display: navCollapseDisplay
-                        }}
+              <div {...restProps}>
+                <NavToggle>
+                  {({ navIsOpen, navCollapseDisplay, toggleNav }) => (
+                    <React.Fragment>
+                      <ToggleButton
+                        type="button"
+                        aria-controls="navbar-global-nav-collapse"
+                        aria-expanded={navIsOpen}
+                        aria-label="Toggle global navigation"
+                        onClick={toggleNav}
                       >
-                        <NavWrapper>
-                          <Nav mobile color={childColor}>
-                            {children}
-                          </Nav>
-                        </NavWrapper>
-                      </Collapse>
-                    </CollapseWrapper>
-                  </div>
-                )}
-              </NavToggle>
+                        <Hamburger
+                          tag="div"
+                          color={childColor}
+                          isOpen={navIsOpen}
+                        />
+                        {!renderMobile && (
+                          <ToggleTitle color={childColor}>
+                            {toggleTitle}
+                          </ToggleTitle>
+                        )}
+                      </ToggleButton>
+                      <CollapseWrapper color={color}>
+                        <Collapse
+                          id="navbar-global-nav-collapse"
+                          isOpened={navIsOpen}
+                          style={{
+                            display: navCollapseDisplay
+                          }}
+                        >
+                          <NavWrapper>
+                            <Nav mobile color={childColor}>
+                              {children}
+                            </Nav>
+                          </NavWrapper>
+                        </Collapse>
+                      </CollapseWrapper>
+                    </React.Fragment>
+                  )}
+                </NavToggle>
+              </div>
             );
           }}
         </NavbarContext.Consumer>
