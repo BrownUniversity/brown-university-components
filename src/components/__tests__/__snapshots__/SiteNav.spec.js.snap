@@ -652,7 +652,7 @@ exports[`SiteNav when window width is below mobileBreakpoint styles when banner 
     <div
       class="ReactCollapse--collapse"
       id="site-nav-mobile-collapse"
-      style="overflow: hidden; height: 0px;"
+      style="overflow: hidden; height: 0px; display: none;"
     >
       <div
         class="ReactCollapse--content"
@@ -959,7 +959,7 @@ exports[`SiteNav when window width is below mobileBreakpoint styles when banner 
     <div
       class="ReactCollapse--collapse"
       id="site-nav-mobile-collapse"
-      style="overflow: hidden; height: 0px;"
+      style="overflow: hidden; height: 0px; display: none;"
     >
       <div
         class="ReactCollapse--content"
