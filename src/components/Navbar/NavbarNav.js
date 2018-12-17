@@ -1,5 +1,5 @@
 import PropTypes from 'prop-types';
-import React, { Component } from 'react';
+import React from 'react';
 import styled from 'styled-components';
 import { WindowSize } from 'react-fns';
 import { Collapse } from 'react-collapse';
@@ -7,6 +7,7 @@ import { Collapse } from 'react-collapse';
 import NavbarContext from './NavbarContext';
 import Hamburger from '../Hamburger';
 import Nav from '../Nav';
+import NavToggle from '../NavToggle';
 import colors from '../../constants/colors';
 import media from '../../constants/media';
 
@@ -47,70 +48,68 @@ const getChildColor = color => {
   }
 };
 
-class NavbarNav extends Component {
-  state = {
-    mobileNavIsOpen: false
-  };
+const NavbarNav = ({ children, ...restProps }) => (
+  <WindowSize
+    render={({ width }) => {
+      // TODO: update when `width` doesn't return 0 on initial render (see `react-fns` issue 84)
+      const currentWidth = width === 0 ? window.innerWidth : width;
 
-  handleMobileNavToggle = () =>
-    this.setState(({ mobileNavIsOpen }) => ({
-      mobileNavIsOpen: !mobileNavIsOpen
-    }));
+      return (
+        <NavbarContext.Consumer>
+          {({ color, mobileBreakpoint }) => {
+            const childColor = getChildColor(color);
+            const renderMobile = currentWidth < mobileBreakpoint;
 
-  render() {
-    const { mobileNavIsOpen } = this.state;
+            if (renderMobile) {
+              return (
+                <div {...restProps}>
+                  <NavToggle>
+                    {({
+                      navIsOpen: mobileNavIsOpen,
+                      navCollapseDisplay: mobileNavCollapseDisplay,
+                      toggleNav: toggleMobileNav
+                    }) => (
+                      <React.Fragment>
+                        <Hamburger
+                          aria-controls="navbar-nav-mobile-collapse"
+                          color={childColor}
+                          isOpen={mobileNavIsOpen}
+                          onOpen={toggleMobileNav}
+                          onClose={toggleMobileNav}
+                        />
+                        <MobileCollapseWrapper color={color}>
+                          <Collapse
+                            id="navbar-nav-mobile-collapse"
+                            isOpened={mobileNavIsOpen}
+                            style={{
+                              display: mobileNavCollapseDisplay
+                            }}
+                          >
+                            <MobileNavWrapper>
+                              <Nav mobile color={childColor}>
+                                {children}
+                              </Nav>
+                            </MobileNavWrapper>
+                          </Collapse>
+                        </MobileCollapseWrapper>
+                      </React.Fragment>
+                    )}
+                  </NavToggle>
+                </div>
+              );
+            }
 
-    return (
-      <WindowSize
-        render={({ width }) => {
-          // TODO: update when `width` doesn't return 0 on initial render (see `react-fns` issue 84)
-          const currentWidth = width === 0 ? window.innerWidth : width;
-
-          return (
-            <NavbarContext.Consumer>
-              {({ color, mobileBreakpoint }) => {
-                const childColor = getChildColor(color);
-                const renderMobile = currentWidth < mobileBreakpoint;
-
-                if (renderMobile) {
-                  return (
-                    <div {...this.props}>
-                      <Hamburger
-                        aria-controls="navbar-nav-mobile-collapse"
-                        color={childColor}
-                        isOpen={mobileNavIsOpen}
-                        onOpen={this.handleMobileNavToggle}
-                        onClose={this.handleMobileNavToggle}
-                      />
-                      <MobileCollapseWrapper color={color}>
-                        <Collapse
-                          id="navbar-nav-mobile-collapse"
-                          isOpened={mobileNavIsOpen}
-                        >
-                          <MobileNavWrapper>
-                            <Nav mobile color={childColor}>
-                              {this.props.children}
-                            </Nav>
-                          </MobileNavWrapper>
-                        </Collapse>
-                      </MobileCollapseWrapper>
-                    </div>
-                  );
-                }
-
-                return (
-                  <Nav {...this.props} navbar color={childColor}>
-                    {this.props.children}
-                  </Nav>
-                );
-              }}
-            </NavbarContext.Consumer>
-          );
-        }}
-      />
-    );
-  }
-}
+            return (
+              <Nav {...restProps} navbar color={childColor}>
+                {children}
+              </Nav>
+            );
+          }}
+        </NavbarContext.Consumer>
+      );
+    }}
+  />
+);
 
 NavbarNav.propTypes = {
   children: PropTypes.node.isRequired

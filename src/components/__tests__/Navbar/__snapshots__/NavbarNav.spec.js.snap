@@ -342,7 +342,7 @@ exports[`NavbarNav when window width is below mobileBreakpoint styles should ren
     <div
       class="ReactCollapse--collapse"
       id="navbar-nav-mobile-collapse"
-      style="overflow: hidden; height: 0px;"
+      style="overflow: hidden; height: 0px; display: none;"
     >
       <div
         class="ReactCollapse--content"
