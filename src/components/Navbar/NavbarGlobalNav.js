@@ -1,5 +1,5 @@
 import PropTypes from 'prop-types';
-import React, { Component } from 'react';
+import React from 'react';
 import styled from 'styled-components';
 import { WindowSize } from 'react-fns';
 import { Collapse } from 'react-collapse';
@@ -7,6 +7,7 @@ import { Collapse } from 'react-collapse';
 import NavbarContext from './NavbarContext';
 import Hamburger from '../Hamburger';
 import Nav from '../Nav';
+import NavToggle from '../NavToggle';
 import colors from '../../constants/colors';
 import media from '../../constants/media';
 import { sansBold } from '../../constants/typography';
@@ -68,39 +69,28 @@ const getChildColor = color => {
   }
 };
 
-class NavbarGlobalNav extends Component {
-  state = {
-    navIsOpen: false
-  };
+const NavbarGlobalNav = ({ children, ...restProps }) => (
+  <WindowSize
+    render={({ width }) => {
+      // TODO: update when `width` doesn't return 0 on initial render (see `react-fns` issue 84)
+      const currentWidth = width === 0 ? window.innerWidth : width;
 
-  handleNavToggle = () =>
-    this.setState(({ navIsOpen }) => ({
-      navIsOpen: !navIsOpen
-    }));
+      return (
+        <NavbarContext.Consumer>
+          {({ color, mobileBreakpoint, toggleTitle }) => {
+            const childColor = getChildColor(color);
+            const renderMobile = currentWidth < mobileBreakpoint;
 
-  render() {
-    const { navIsOpen } = this.state;
-
-    return (
-      <WindowSize
-        render={({ width }) => {
-          // TODO: update when `width` doesn't return 0 on initial render (see `react-fns` issue 84)
-          const currentWidth = width === 0 ? window.innerWidth : width;
-
-          return (
-            <NavbarContext.Consumer>
-              {({ color, mobileBreakpoint, toggleTitle }) => {
-                const childColor = getChildColor(color);
-                const renderMobile = currentWidth < mobileBreakpoint;
-
-                return (
-                  <div {...this.props}>
+            return (
+              <NavToggle>
+                {({ navIsOpen, navCollapseDisplay, toggleNav }) => (
+                  <div {...restProps}>
                     <ToggleButton
                       type="button"
                       aria-controls="navbar-global-nav-collapse"
                       aria-expanded={navIsOpen}
                       aria-label="Toggle global navigation"
-                      onClick={this.handleNavToggle}
+                      onClick={toggleNav}
                     >
                       <Hamburger
                         tag="div"
@@ -117,24 +107,27 @@ class NavbarGlobalNav extends Component {
                       <Collapse
                         id="navbar-global-nav-collapse"
                         isOpened={navIsOpen}
+                        style={{
+                          display: navCollapseDisplay
+                        }}
                       >
                         <NavWrapper>
                           <Nav mobile color={childColor}>
-                            {this.props.children}
+                            {children}
                           </Nav>
                         </NavWrapper>
                       </Collapse>
                     </CollapseWrapper>
                   </div>
-                );
-              }}
-            </NavbarContext.Consumer>
-          );
-        }}
-      />
-    );
-  }
-}
+                )}
+              </NavToggle>
+            );
+          }}
+        </NavbarContext.Consumer>
+      );
+    }}
+  />
+);
 
 NavbarGlobalNav.propTypes = {
   children: PropTypes.node.isRequired

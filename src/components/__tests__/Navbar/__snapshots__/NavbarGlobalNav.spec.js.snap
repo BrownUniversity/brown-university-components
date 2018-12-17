@@ -214,7 +214,7 @@ exports[`NavbarGlobalNav when window width is above mobileBreakpoint styles shou
     <div
       class="ReactCollapse--collapse"
       id="navbar-global-nav-collapse"
-      style="overflow: hidden; height: 0px;"
+      style="overflow: hidden; height: 0px; display: none;"
     >
       <div
         class="ReactCollapse--content"
@@ -461,7 +461,7 @@ exports[`NavbarGlobalNav when window width is below mobileBreakpoint styles shou
     <div
       class="ReactCollapse--collapse"
       id="navbar-global-nav-collapse"
-      style="overflow: hidden; height: 0px;"
+      style="overflow: hidden; height: 0px; display: none;"
     >
       <div
         class="ReactCollapse--content"
