@@ -2,12 +2,12 @@ import PropTypes from 'prop-types';
 import React from 'react';
 import styled from 'styled-components';
 import { WindowSize } from 'react-fns';
-import { Collapse } from 'react-collapse';
 
 import NavbarContext from './NavbarContext';
 import Hamburger from '../Hamburger';
 import Nav from '../Nav';
-import NavToggle from '../NavToggle';
+import Collapse from '../utils/Collapse';
+import VisibilityToggle from '../utils/VisibilityToggle';
 import colors from '../../constants/colors';
 import media from '../../constants/media';
 
@@ -63,11 +63,10 @@ const NavbarNav = ({ children, ...restProps }) => (
             if (renderMobile) {
               return (
                 <div {...restProps}>
-                  <NavToggle>
+                  <VisibilityToggle>
                     {({
-                      navIsOpen: mobileNavIsOpen,
-                      navCollapseDisplay: mobileNavCollapseDisplay,
-                      toggleNav: toggleMobileNav
+                      isOpen: mobileNavIsOpen,
+                      toggleIsOpen: toggleMobileNav
                     }) => (
                       <React.Fragment>
                         <Hamburger
@@ -80,10 +79,7 @@ const NavbarNav = ({ children, ...restProps }) => (
                         <MobileCollapseWrapper color={color}>
                           <Collapse
                             id="navbar-nav-mobile-collapse"
-                            isOpened={mobileNavIsOpen}
-                            style={{
-                              display: mobileNavCollapseDisplay
-                            }}
+                            isOpen={mobileNavIsOpen}
                           >
                             <MobileNavWrapper>
                               <Nav mobile color={childColor}>
@@ -94,7 +90,7 @@ const NavbarNav = ({ children, ...restProps }) => (
                         </MobileCollapseWrapper>
                       </React.Fragment>
                     )}
-                  </NavToggle>
+                  </VisibilityToggle>
                 </div>
               );
             }

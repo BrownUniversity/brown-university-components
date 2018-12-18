@@ -2,11 +2,11 @@ import PropTypes from 'prop-types';
 import React from 'react';
 import styled, { css } from 'styled-components';
 import { WindowSize } from 'react-fns';
-import { Collapse } from 'react-collapse';
 
 import Hamburger from './Hamburger';
 import Nav from './Nav';
-import NavToggle from './NavToggle';
+import Collapse from './utils/Collapse';
+import VisibilityToggle from './utils/VisibilityToggle';
 import breakpoints from '../constants/breakpoints';
 import colors from '../constants/colors';
 import { sansBold } from '../constants/typography';
@@ -109,11 +109,10 @@ const SiteNav = ({
         return (
           <MobileBannerPositioningWrapper banner={banner}>
             <MobileWrapper {...restProps}>
-              <NavToggle>
+              <VisibilityToggle>
                 {({
-                  navIsOpen: mobileNavIsOpen,
-                  navCollapseDisplay: mobileNavCollapseDisplay,
-                  toggleNav: toggleMobileNav
+                  isOpen: mobileNavIsOpen,
+                  toggleIsOpen: toggleMobileNav
                 }) => (
                   <React.Fragment>
                     <MobileToggleButton
@@ -132,10 +131,7 @@ const SiteNav = ({
                     </MobileToggleButton>
                     <Collapse
                       id="site-nav-mobile-collapse"
-                      isOpened={mobileNavIsOpen}
-                      style={{
-                        display: mobileNavCollapseDisplay
-                      }}
+                      isOpen={mobileNavIsOpen}
                     >
                       <MobileNavWrapper>
                         <Nav mobile>{children}</Nav>
@@ -143,7 +139,7 @@ const SiteNav = ({
                     </Collapse>
                   </React.Fragment>
                 )}
-              </NavToggle>
+              </VisibilityToggle>
             </MobileWrapper>
           </MobileBannerPositioningWrapper>
         );

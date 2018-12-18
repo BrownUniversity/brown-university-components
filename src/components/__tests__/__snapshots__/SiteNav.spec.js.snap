@@ -157,45 +157,47 @@ exports[`SiteNav when window width is above mobileBreakpoint styles when banner 
 <div
   class="c0"
 >
-  <div
-    class="c1"
-  >
-    <ul
-      class="c2"
+  <nav>
+    <div
+      class="c1"
     >
-      <li
-        class="c3"
+      <ul
+        class="c2"
       >
-        <button
-          class="c4"
-          color="red"
+        <li
+          class="c3"
         >
-          Link
-        </button>
-      </li>
-      <li
-        class="c3"
-      >
-        <button
-          class="c5"
-          color="red"
+          <button
+            class="c4"
+            color="red"
+          >
+            Link
+          </button>
+        </li>
+        <li
+          class="c3"
         >
-          Active Link
-        </button>
-      </li>
-      <li
-        class="c3"
-      >
-        <button
-          class="c6"
-          color="red"
-          disabled=""
+          <button
+            class="c5"
+            color="red"
+          >
+            Active Link
+          </button>
+        </li>
+        <li
+          class="c3"
         >
-          Link
-        </button>
-      </li>
-    </ul>
-  </div>
+          <button
+            class="c6"
+            color="red"
+            disabled=""
+          >
+            Link
+          </button>
+        </li>
+      </ul>
+    </div>
+  </nav>
 </div>
 `;
 
@@ -362,45 +364,47 @@ exports[`SiteNav when window width is above mobileBreakpoint styles when banner 
 <div
   class="c0"
 >
-  <div
-    class="c1"
-  >
-    <ul
-      class="c2"
+  <nav>
+    <div
+      class="c1"
     >
-      <li
-        class="c3"
+      <ul
+        class="c2"
       >
-        <button
-          class="c4"
-          color="red"
+        <li
+          class="c3"
         >
-          Link
-        </button>
-      </li>
-      <li
-        class="c3"
-      >
-        <button
-          class="c5"
-          color="red"
+          <button
+            class="c4"
+            color="red"
+          >
+            Link
+          </button>
+        </li>
+        <li
+          class="c3"
         >
-          Active Link
-        </button>
-      </li>
-      <li
-        class="c3"
-      >
-        <button
-          class="c6"
-          color="red"
-          disabled=""
+          <button
+            class="c5"
+            color="red"
+          >
+            Active Link
+          </button>
+        </li>
+        <li
+          class="c3"
         >
-          Link
-        </button>
-      </li>
-    </ul>
-  </div>
+          <button
+            class="c6"
+            color="red"
+            disabled=""
+          >
+            Link
+          </button>
+        </li>
+      </ul>
+    </div>
+  </nav>
 </div>
 `;
 
@@ -449,304 +453,6 @@ exports[`SiteNav when window width is below mobileBreakpoint styles when banner 
 }
 
 .c5.c5:after {
-  height: 3px;
-  position: absolute;
-  width: 25px;
-  background-color: #C00404;
-  content: '';
-  display: block;
-  -webkit-transition-property: -webkit-transform;
-  -webkit-transition-property: transform;
-  transition-property: transform;
-  -webkit-transition-timing-function: ease;
-  transition-timing-function: ease;
-  -webkit-transition-duration: .15s;
-  transition-duration: .15s;
-  -webkit-transition: bottom .1s .25s ease-in,-webkit-transform .22s cubic-bezier(0.55,0.055,0.675,0.19);
-  -webkit-transition: bottom .1s .25s ease-in,transform .22s cubic-bezier(0.55,0.055,0.675,0.19);
-  transition: bottom .1s .25s ease-in,transform .22s cubic-bezier(0.55,0.055,0.675,0.19);
-  bottom: -7px;
-}
-
-.c8 {
-  display: list-item;
-  border-top: 0.5px solid #C8C8C880;
-  padding: 1rem 0;
-}
-
-.c9 {
-  background: transparent;
-  border: none;
-  display: block;
-  font-family: Circular-Book,Arial,Helvetica,sans-serif;
-  padding: 0;
-  -webkit-text-decoration: none !important;
-  text-decoration: none !important;
-  color: #C00404;
-  cursor: pointer;
-  font-size: 1em;
-  font-weight: 700;
-  line-height: 1.5;
-  opacity: 1;
-  pointer-events: auto;
-  -webkit-transition: all .2s ease-in-out;
-  transition: all .2s ease-in-out;
-}
-
-.c9:hover {
-  color: #3B302C;
-}
-
-.c10 {
-  background: transparent;
-  border: none;
-  display: block;
-  font-family: Circular-Book,Arial,Helvetica,sans-serif;
-  padding: 0;
-  -webkit-text-decoration: none !important;
-  text-decoration: none !important;
-  color: #3B302C;
-  cursor: pointer;
-  font-size: 1em;
-  font-weight: 700;
-  line-height: 1.5;
-  opacity: 1;
-  pointer-events: auto;
-  -webkit-transition: all .2s ease-in-out;
-  transition: all .2s ease-in-out;
-}
-
-.c10:hover {
-  color: #3B302C;
-}
-
-.c11 {
-  background: transparent;
-  border: none;
-  display: block;
-  font-family: Circular-Book,Arial,Helvetica,sans-serif;
-  padding: 0;
-  -webkit-text-decoration: none !important;
-  text-decoration: none !important;
-  color: #C00404;
-  cursor: not-allowed;
-  font-size: 1em;
-  font-weight: 700;
-  line-height: 1.5;
-  opacity: 0.65;
-  pointer-events: auto;
-  -webkit-transition: all .2s ease-in-out;
-  transition: all .2s ease-in-out;
-}
-
-.c11:hover {
-  color: #C00404;
-}
-
-.c7 {
-  list-style: none;
-  margin: 0;
-  background-color: transparent;
-  display: block;
-  padding: 0;
-  width: 100%;
-}
-
-.c0 {
-  border: 1px solid #ddd;
-}
-
-.c1 {
-  background-color: transparent;
-  border: none;
-  cursor: pointer;
-  font-size: 1em;
-  padding: 1rem 0 1rem;
-  width: 100%;
-}
-
-.c2 {
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  -webkit-flex-wrap: wrap;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
-  -webkit-box-pack: justify;
-  -webkit-justify-content: space-between;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
-  margin: 0 auto;
-  width: 92%;
-}
-
-.c3 {
-  color: #C00404;
-  font-family: Circular-Bold,Circular-Book,Arial,Helvetica,sans-serif;
-  font-weight: bold;
-  -webkit-letter-spacing: 0.5px;
-  -moz-letter-spacing: 0.5px;
-  -ms-letter-spacing: 0.5px;
-  letter-spacing: 0.5px;
-  padding: 11px 5px;
-  text-transform: uppercase;
-}
-
-.c6 {
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  margin: 0 auto;
-  padding: 16px 0;
-  width: 92%;
-  z-index: 10;
-}
-
-<div
-  class=""
->
-  <nav
-    class="c0"
-  >
-    <button
-      aria-controls="site-nav-mobile-collapse"
-      aria-expanded="false"
-      aria-label="Toggle site navigation"
-      class="c1"
-      type="button"
-    >
-      <div
-        class="c2"
-      >
-        <span
-          class="c3"
-        >
-          Site Navigation
-        </span>
-        <div
-          class="c4"
-        >
-          <span
-            class="c5"
-          />
-        </div>
-      </div>
-    </button>
-    <div
-      class="ReactCollapse--collapse"
-      id="site-nav-mobile-collapse"
-      style="overflow: hidden; height: 0px; display: none;"
-    >
-      <div
-        class="ReactCollapse--content"
-      >
-        <div
-          class="c6"
-        >
-          <ul
-            class="c7"
-          >
-            <li
-              class="c8"
-            >
-              <button
-                class="c9"
-                color="red"
-              >
-                Link
-              </button>
-            </li>
-            <li
-              class="c8"
-            >
-              <button
-                class="c10"
-                color="red"
-              >
-                Active Link
-              </button>
-            </li>
-            <li
-              class="c8"
-            >
-              <button
-                class="c11"
-                color="red"
-                disabled=""
-              >
-                Link
-              </button>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </div>
-  </nav>
-</div>
-`;
-
-exports[`SiteNav when window width is below mobileBreakpoint styles when banner variant is provided should render mobile site nav with banner positioning 1`] = `
-.c5 {
-  background: transparent;
-  border: none;
-  cursor: inherit;
-  display: inline-block;
-  padding: 0 25px 7px 0;
-}
-
-.c6 {
-  height: 3px;
-  position: absolute;
-  width: 25px;
-  background-color: #C00404;
-  -webkit-transition-property: -webkit-transform;
-  -webkit-transition-property: transform;
-  transition-property: transform;
-  -webkit-transition-timing-function: ease;
-  transition-timing-function: ease;
-  -webkit-transition-duration: .22s;
-  transition-duration: .22s;
-  -webkit-transition-timing-function: cubic-bezier(0.55,0.055,0.675,0.19);
-  transition-timing-function: cubic-bezier(0.55,0.055,0.675,0.19);
-}
-
-.c6.c6:before {
-  height: 3px;
-  position: absolute;
-  width: 25px;
-  background-color: #C00404;
-  content: '';
-  display: block;
-  -webkit-transition-property: -webkit-transform;
-  -webkit-transition-property: transform;
-  transition-property: transform;
-  -webkit-transition-timing-function: ease;
-  transition-timing-function: ease;
-  -webkit-transition-duration: .15s;
-  transition-duration: .15s;
-  -webkit-transition: top .1s .25s ease-in,opacity .1s ease-in;
-  transition: top .1s .25s ease-in,opacity .1s ease-in;
-  top: -7px;
-}
-
-.c6.c6:after {
   height: 3px;
   position: absolute;
   width: 25px;
@@ -850,6 +556,320 @@ exports[`SiteNav when window width is below mobileBreakpoint styles when banner 
   width: 100%;
 }
 
+.c6 {
+  -webkit-transition: height 250ms cubic-bezier(0.4,0,0.2,1);
+  transition: height 250ms cubic-bezier(0.4,0,0.2,1);
+  will-change: height;
+  display: none;
+  height: 0;
+  overflow: hidden;
+}
+
+.c0 {
+  border: 1px solid #ddd;
+}
+
+.c1 {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  font-size: 1em;
+  padding: 1rem 0 1rem;
+  width: 100%;
+}
+
+.c2 {
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  margin: 0 auto;
+  width: 92%;
+}
+
+.c3 {
+  color: #C00404;
+  font-family: Circular-Bold,Circular-Book,Arial,Helvetica,sans-serif;
+  font-weight: bold;
+  -webkit-letter-spacing: 0.5px;
+  -moz-letter-spacing: 0.5px;
+  -ms-letter-spacing: 0.5px;
+  letter-spacing: 0.5px;
+  padding: 11px 5px;
+  text-transform: uppercase;
+}
+
+.c7 {
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  margin: 0 auto;
+  padding: 16px 0;
+  width: 92%;
+  z-index: 10;
+}
+
+<div
+  class=""
+>
+  <nav
+    class="c0"
+  >
+    <button
+      aria-controls="site-nav-mobile-collapse"
+      aria-expanded="false"
+      aria-label="Toggle site navigation"
+      class="c1"
+      type="button"
+    >
+      <div
+        class="c2"
+      >
+        <span
+          class="c3"
+        >
+          Site Navigation
+        </span>
+        <div
+          class="c4"
+        >
+          <span
+            class="c5"
+          />
+        </div>
+      </div>
+    </button>
+    <div
+      class="c6"
+      display="none"
+      height="0"
+      id="site-nav-mobile-collapse"
+      overflow="hidden"
+    >
+      <div
+        class="c7"
+      >
+        <ul
+          class="c8"
+        >
+          <li
+            class="c9"
+          >
+            <button
+              class="c10"
+              color="red"
+            >
+              Link
+            </button>
+          </li>
+          <li
+            class="c9"
+          >
+            <button
+              class="c11"
+              color="red"
+            >
+              Active Link
+            </button>
+          </li>
+          <li
+            class="c9"
+          >
+            <button
+              class="c12"
+              color="red"
+              disabled=""
+            >
+              Link
+            </button>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+</div>
+`;
+
+exports[`SiteNav when window width is below mobileBreakpoint styles when banner variant is provided should render mobile site nav with banner positioning 1`] = `
+.c5 {
+  background: transparent;
+  border: none;
+  cursor: inherit;
+  display: inline-block;
+  padding: 0 25px 7px 0;
+}
+
+.c6 {
+  height: 3px;
+  position: absolute;
+  width: 25px;
+  background-color: #C00404;
+  -webkit-transition-property: -webkit-transform;
+  -webkit-transition-property: transform;
+  transition-property: transform;
+  -webkit-transition-timing-function: ease;
+  transition-timing-function: ease;
+  -webkit-transition-duration: .22s;
+  transition-duration: .22s;
+  -webkit-transition-timing-function: cubic-bezier(0.55,0.055,0.675,0.19);
+  transition-timing-function: cubic-bezier(0.55,0.055,0.675,0.19);
+}
+
+.c6.c6:before {
+  height: 3px;
+  position: absolute;
+  width: 25px;
+  background-color: #C00404;
+  content: '';
+  display: block;
+  -webkit-transition-property: -webkit-transform;
+  -webkit-transition-property: transform;
+  transition-property: transform;
+  -webkit-transition-timing-function: ease;
+  transition-timing-function: ease;
+  -webkit-transition-duration: .15s;
+  transition-duration: .15s;
+  -webkit-transition: top .1s .25s ease-in,opacity .1s ease-in;
+  transition: top .1s .25s ease-in,opacity .1s ease-in;
+  top: -7px;
+}
+
+.c6.c6:after {
+  height: 3px;
+  position: absolute;
+  width: 25px;
+  background-color: #C00404;
+  content: '';
+  display: block;
+  -webkit-transition-property: -webkit-transform;
+  -webkit-transition-property: transform;
+  transition-property: transform;
+  -webkit-transition-timing-function: ease;
+  transition-timing-function: ease;
+  -webkit-transition-duration: .15s;
+  transition-duration: .15s;
+  -webkit-transition: bottom .1s .25s ease-in,-webkit-transform .22s cubic-bezier(0.55,0.055,0.675,0.19);
+  -webkit-transition: bottom .1s .25s ease-in,transform .22s cubic-bezier(0.55,0.055,0.675,0.19);
+  transition: bottom .1s .25s ease-in,transform .22s cubic-bezier(0.55,0.055,0.675,0.19);
+  bottom: -7px;
+}
+
+.c10 {
+  display: list-item;
+  border-top: 0.5px solid #C8C8C880;
+  padding: 1rem 0;
+}
+
+.c11 {
+  background: transparent;
+  border: none;
+  display: block;
+  font-family: Circular-Book,Arial,Helvetica,sans-serif;
+  padding: 0;
+  -webkit-text-decoration: none !important;
+  text-decoration: none !important;
+  color: #C00404;
+  cursor: pointer;
+  font-size: 1em;
+  font-weight: 700;
+  line-height: 1.5;
+  opacity: 1;
+  pointer-events: auto;
+  -webkit-transition: all .2s ease-in-out;
+  transition: all .2s ease-in-out;
+}
+
+.c11:hover {
+  color: #3B302C;
+}
+
+.c12 {
+  background: transparent;
+  border: none;
+  display: block;
+  font-family: Circular-Book,Arial,Helvetica,sans-serif;
+  padding: 0;
+  -webkit-text-decoration: none !important;
+  text-decoration: none !important;
+  color: #3B302C;
+  cursor: pointer;
+  font-size: 1em;
+  font-weight: 700;
+  line-height: 1.5;
+  opacity: 1;
+  pointer-events: auto;
+  -webkit-transition: all .2s ease-in-out;
+  transition: all .2s ease-in-out;
+}
+
+.c12:hover {
+  color: #3B302C;
+}
+
+.c13 {
+  background: transparent;
+  border: none;
+  display: block;
+  font-family: Circular-Book,Arial,Helvetica,sans-serif;
+  padding: 0;
+  -webkit-text-decoration: none !important;
+  text-decoration: none !important;
+  color: #C00404;
+  cursor: not-allowed;
+  font-size: 1em;
+  font-weight: 700;
+  line-height: 1.5;
+  opacity: 0.65;
+  pointer-events: auto;
+  -webkit-transition: all .2s ease-in-out;
+  transition: all .2s ease-in-out;
+}
+
+.c13:hover {
+  color: #C00404;
+}
+
+.c9 {
+  list-style: none;
+  margin: 0;
+  background-color: transparent;
+  display: block;
+  padding: 0;
+  width: 100%;
+}
+
+.c7 {
+  -webkit-transition: height 250ms cubic-bezier(0.4,0,0.2,1);
+  transition: height 250ms cubic-bezier(0.4,0,0.2,1);
+  will-change: height;
+  display: none;
+  height: 0;
+  overflow: hidden;
+}
+
 .c0 {
   background-color: #FFFFFF;
   margin: 0 auto;
@@ -907,7 +927,7 @@ exports[`SiteNav when window width is below mobileBreakpoint styles when banner 
   text-transform: uppercase;
 }
 
-.c7 {
+.c8 {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -957,52 +977,50 @@ exports[`SiteNav when window width is below mobileBreakpoint styles when banner 
       </div>
     </button>
     <div
-      class="ReactCollapse--collapse"
+      class="c7"
+      display="none"
+      height="0"
       id="site-nav-mobile-collapse"
-      style="overflow: hidden; height: 0px; display: none;"
+      overflow="hidden"
     >
       <div
-        class="ReactCollapse--content"
+        class="c8"
       >
-        <div
-          class="c7"
+        <ul
+          class="c9"
         >
-          <ul
-            class="c8"
+          <li
+            class="c10"
           >
-            <li
-              class="c9"
+            <button
+              class="c11"
+              color="red"
             >
-              <button
-                class="c10"
-                color="red"
-              >
-                Link
-              </button>
-            </li>
-            <li
-              class="c9"
+              Link
+            </button>
+          </li>
+          <li
+            class="c10"
+          >
+            <button
+              class="c12"
+              color="red"
             >
-              <button
-                class="c11"
-                color="red"
-              >
-                Active Link
-              </button>
-            </li>
-            <li
-              class="c9"
+              Active Link
+            </button>
+          </li>
+          <li
+            class="c10"
+          >
+            <button
+              class="c13"
+              color="red"
+              disabled=""
             >
-              <button
-                class="c12"
-                color="red"
-                disabled=""
-              >
-                Link
-              </button>
-            </li>
-          </ul>
-        </div>
+              Link
+            </button>
+          </li>
+        </ul>
       </div>
     </div>
   </nav>

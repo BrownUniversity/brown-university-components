@@ -2,12 +2,12 @@ import PropTypes from 'prop-types';
 import React from 'react';
 import styled from 'styled-components';
 import { WindowSize } from 'react-fns';
-import { Collapse } from 'react-collapse';
 
 import NavbarContext from './NavbarContext';
 import Hamburger from '../Hamburger';
 import Nav from '../Nav';
-import NavToggle from '../NavToggle';
+import Collapse from '../utils/Collapse';
+import VisibilityToggle from '../utils/VisibilityToggle';
 import colors from '../../constants/colors';
 import media from '../../constants/media';
 import { sansBold } from '../../constants/typography';
@@ -83,8 +83,8 @@ const NavbarGlobalNav = ({ children, ...restProps }) => (
 
             return (
               <div {...restProps}>
-                <NavToggle>
-                  {({ navIsOpen, navCollapseDisplay, toggleNav }) => (
+                <VisibilityToggle>
+                  {({ isOpen: navIsOpen, toggleIsOpen: toggleNav }) => (
                     <React.Fragment>
                       <ToggleButton
                         type="button"
@@ -107,10 +107,7 @@ const NavbarGlobalNav = ({ children, ...restProps }) => (
                       <CollapseWrapper color={color}>
                         <Collapse
                           id="navbar-global-nav-collapse"
-                          isOpened={navIsOpen}
-                          style={{
-                            display: navCollapseDisplay
-                          }}
+                          isOpen={navIsOpen}
                         >
                           <NavWrapper>
                             <Nav mobile color={childColor}>
@@ -121,7 +118,7 @@ const NavbarGlobalNav = ({ children, ...restProps }) => (
                       </CollapseWrapper>
                     </React.Fragment>
                   )}
-                </NavToggle>
+                </VisibilityToggle>
               </div>
             );
           }}
