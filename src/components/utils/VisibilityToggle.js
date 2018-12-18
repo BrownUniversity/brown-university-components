@@ -6,17 +6,7 @@ class VisibilityToggle extends Component {
     isOpen: false
   };
 
-  toggleIsOpen = () => {
-    if (this.state.isOpen) {
-      this.setState({
-        isOpen: false
-      });
-    } else {
-      this.setState({
-        isOpen: true
-      });
-    }
-  };
+  toggleIsOpen = () => this.setState(({ isOpen }) => ({ isOpen: !isOpen }));
 
   render() {
     const { children, ...restProps } = this.props;
