@@ -306,12 +306,12 @@ exports[`NavbarNav when window width is below mobileBreakpoint styles should ren
 }
 
 .c3 {
-  -webkit-transition: height 250ms cubic-bezier(0.4,0,0.2,1);
-  transition: height 250ms cubic-bezier(0.4,0,0.2,1);
   will-change: height;
   display: none;
   height: 0;
   overflow: hidden;
+  -webkit-transition: height 250ms cubic-bezier(0.4,0,0.2,1);
+  transition: height 250ms cubic-bezier(0.4,0,0.2,1);
 }
 
 .c2 {

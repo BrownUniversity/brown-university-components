@@ -8,11 +8,12 @@ import styled from 'styled-components';
 */
 // TODO: filter display, height and overflow props with `ref` usage (see `styled-components` issue 439)
 const Tag = styled.div`
-  transition: height 250ms cubic-bezier(0.4, 0, 0.2, 1);
   will-change: height;
   display: ${({ display }) => display};
   height: ${({ height }) => height};
   overflow: ${({ overflow }) => overflow};
+  transition: ${({ transitionDuration }) =>
+    `height ${transitionDuration}ms cubic-bezier(0.4, 0, 0.2, 1)`};
 `;
 
 /*
@@ -97,7 +98,12 @@ class Collapse extends Component {
 
 Collapse.propTypes = {
   isOpen: PropTypes.bool.isRequired,
+  transitionDuration: PropTypes.number,
   children: PropTypes.node.isRequired
+};
+
+Collapse.defaultProps = {
+  transitionDuration: 250
 };
 
 export default Collapse;

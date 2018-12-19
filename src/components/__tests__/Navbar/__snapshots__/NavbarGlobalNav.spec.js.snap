@@ -149,12 +149,12 @@ exports[`NavbarGlobalNav when window width is above mobileBreakpoint styles shou
 }
 
 .c5 {
-  -webkit-transition: height 250ms cubic-bezier(0.4,0,0.2,1);
-  transition: height 250ms cubic-bezier(0.4,0,0.2,1);
   will-change: height;
   display: none;
   height: 0;
   overflow: hidden;
+  -webkit-transition: height 250ms cubic-bezier(0.4,0,0.2,1);
+  transition: height 250ms cubic-bezier(0.4,0,0.2,1);
 }
 
 .c0 {
@@ -420,12 +420,12 @@ exports[`NavbarGlobalNav when window width is below mobileBreakpoint styles shou
 }
 
 .c4 {
-  -webkit-transition: height 250ms cubic-bezier(0.4,0,0.2,1);
-  transition: height 250ms cubic-bezier(0.4,0,0.2,1);
   will-change: height;
   display: none;
   height: 0;
   overflow: hidden;
+  -webkit-transition: height 250ms cubic-bezier(0.4,0,0.2,1);
+  transition: height 250ms cubic-bezier(0.4,0,0.2,1);
 }
 
 .c0 {
