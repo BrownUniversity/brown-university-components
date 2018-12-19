@@ -12,8 +12,7 @@ const Tag = styled.div`
   display: ${({ display }) => display};
   height: ${({ height }) => height};
   overflow: ${({ overflow }) => overflow};
-  transition: ${({ transitionDuration }) =>
-    `height ${transitionDuration}ms cubic-bezier(0.4, 0, 0.2, 1)`};
+  transition: ${({ transition }) => transition};
 `;
 
 /*
@@ -98,12 +97,12 @@ class Collapse extends Component {
 
 Collapse.propTypes = {
   isOpen: PropTypes.bool.isRequired,
-  transitionDuration: PropTypes.number,
+  transition: PropTypes.string,
   children: PropTypes.node.isRequired
 };
 
 Collapse.defaultProps = {
-  transitionDuration: 250
+  transition: 'height 250ms cubic-bezier(0.4,0,0.2,1)'
 };
 
 export default Collapse;
