@@ -60,17 +60,22 @@ class Collapse extends Component {
 
   getHeight = () => this.tagRef.scrollHeight;
 
-  setCollapsed = () => this.setState({ display: 'none' });
-
-  setExpanded = () =>
+  setExpanded = () => {
     this.setState({
       display: 'block',
       height: 'auto',
       overflow: 'visible'
     });
+  };
+
+  setCollapsed = () => {
+    this.setState({ display: 'none' });
+  };
 
   handleTransitionEnd = e => {
-    if (e.target === this.tagRef && e.propertyName === 'height') {
+    const ePropertyName =
+      process.NODE_ENV === 'jest' ? 'height' : e.propertyName;
+    if (e.target === this.tagRef && ePropertyName === 'height') {
       if (this.props.isOpen) {
         this.setExpanded();
       } else {
