@@ -221,33 +221,10 @@ exports[`NavbarNav when window width is below mobileBreakpoint styles should ren
   bottom: -7px;
 }
 
-.c5 {
+.c6 {
   display: list-item;
   border-top: 0.5px solid #C8C8C880;
   padding: 1rem 0;
-}
-
-.c6 {
-  background: transparent;
-  border: none;
-  display: block;
-  font-family: Circular-Book,Arial,Helvetica,sans-serif;
-  padding: 0;
-  -webkit-text-decoration: none !important;
-  text-decoration: none !important;
-  color: #FFFFFF;
-  cursor: pointer;
-  font-size: 1em;
-  font-weight: 700;
-  line-height: 1.5;
-  opacity: 1;
-  pointer-events: auto;
-  -webkit-transition: all .2s ease-in-out;
-  transition: all .2s ease-in-out;
-}
-
-.c6:hover {
-  color: #CCC6B8;
 }
 
 .c7 {
@@ -258,7 +235,7 @@ exports[`NavbarNav when window width is below mobileBreakpoint styles should ren
   padding: 0;
   -webkit-text-decoration: none !important;
   text-decoration: none !important;
-  color: #CCC6B8;
+  color: #FFFFFF;
   cursor: pointer;
   font-size: 1em;
   font-weight: 700;
@@ -281,6 +258,29 @@ exports[`NavbarNav when window width is below mobileBreakpoint styles should ren
   padding: 0;
   -webkit-text-decoration: none !important;
   text-decoration: none !important;
+  color: #CCC6B8;
+  cursor: pointer;
+  font-size: 1em;
+  font-weight: 700;
+  line-height: 1.5;
+  opacity: 1;
+  pointer-events: auto;
+  -webkit-transition: all .2s ease-in-out;
+  transition: all .2s ease-in-out;
+}
+
+.c8:hover {
+  color: #CCC6B8;
+}
+
+.c9 {
+  background: transparent;
+  border: none;
+  display: block;
+  font-family: Circular-Book,Arial,Helvetica,sans-serif;
+  padding: 0;
+  -webkit-text-decoration: none !important;
+  text-decoration: none !important;
   color: #FFFFFF;
   cursor: not-allowed;
   font-size: 1em;
@@ -292,17 +292,26 @@ exports[`NavbarNav when window width is below mobileBreakpoint styles should ren
   transition: all .2s ease-in-out;
 }
 
-.c8:hover {
+.c9:hover {
   color: #FFFFFF;
 }
 
-.c4 {
+.c5 {
   list-style: none;
   margin: 0;
   background-color: transparent;
   display: block;
   padding: 0;
   width: 100%;
+}
+
+.c3 {
+  will-change: height;
+  display: none;
+  height: 0;
+  overflow: hidden;
+  -webkit-transition: height 250ms cubic-bezier(0.4,0,0.2,1);
+  transition: height 250ms cubic-bezier(0.4,0,0.2,1);
 }
 
 .c2 {
@@ -314,12 +323,12 @@ exports[`NavbarNav when window width is below mobileBreakpoint styles should ren
   background-color: #4E3629;
 }
 
-.c3 {
+.c4 {
   padding: 0 7vw 1rem;
 }
 
 @media (min-width:768px) {
-  .c3 {
+  .c4 {
     padding: 0 33px;
   }
 }
@@ -340,52 +349,50 @@ exports[`NavbarNav when window width is below mobileBreakpoint styles should ren
     class="c2"
   >
     <div
-      class="ReactCollapse--collapse"
+      class="c3"
+      display="none"
+      height="0"
       id="navbar-nav-mobile-collapse"
-      style="overflow: hidden; height: 0px;"
+      overflow="hidden"
     >
       <div
-        class="ReactCollapse--content"
+        class="c4"
       >
-        <div
-          class="c3"
+        <ul
+          class="c5"
         >
-          <ul
-            class="c4"
+          <li
+            class="c6"
           >
-            <li
-              class="c5"
+            <button
+              class="c7"
+              color="white"
             >
-              <button
-                class="c6"
-                color="white"
-              >
-                Link
-              </button>
-            </li>
-            <li
-              class="c5"
+              Link
+            </button>
+          </li>
+          <li
+            class="c6"
+          >
+            <button
+              class="c8"
+              color="white"
             >
-              <button
-                class="c7"
-                color="white"
-              >
-                Active Link
-              </button>
-            </li>
-            <li
-              class="c5"
+              Active Link
+            </button>
+          </li>
+          <li
+            class="c6"
+          >
+            <button
+              class="c9"
+              color="white"
+              disabled=""
             >
-              <button
-                class="c8"
-                color="white"
-                disabled=""
-              >
-                Link
-              </button>
-            </li>
-          </ul>
-        </div>
+              Link
+            </button>
+          </li>
+        </ul>
       </div>
     </div>
   </div>

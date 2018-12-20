@@ -1,12 +1,13 @@
 import PropTypes from 'prop-types';
-import React, { Component } from 'react';
+import React from 'react';
 import styled from 'styled-components';
 import { WindowSize } from 'react-fns';
-import { Collapse } from 'react-collapse';
 
 import NavbarContext from './NavbarContext';
 import Hamburger from '../Hamburger';
 import Nav from '../Nav';
+import Collapse from '../utils/Collapse';
+import VisibilityToggle from '../utils/VisibilityToggle';
 import colors from '../../constants/colors';
 import media from '../../constants/media';
 import { sansBold } from '../../constants/typography';
@@ -68,73 +69,64 @@ const getChildColor = color => {
   }
 };
 
-class NavbarGlobalNav extends Component {
-  state = {
-    navIsOpen: false
-  };
+const NavbarGlobalNav = ({ children, ...restProps }) => (
+  <WindowSize
+    render={({ width }) => {
+      // TODO: update when `width` doesn't return 0 on initial render (see `react-fns` issue 84)
+      const currentWidth = width === 0 ? window.innerWidth : width;
 
-  handleNavToggle = () =>
-    this.setState(({ navIsOpen }) => ({
-      navIsOpen: !navIsOpen
-    }));
+      return (
+        <NavbarContext.Consumer>
+          {({ color, mobileBreakpoint, toggleTitle }) => {
+            const childColor = getChildColor(color);
+            const renderMobile = currentWidth < mobileBreakpoint;
 
-  render() {
-    const { navIsOpen } = this.state;
-
-    return (
-      <WindowSize
-        render={({ width }) => {
-          // TODO: update when `width` doesn't return 0 on initial render (see `react-fns` issue 84)
-          const currentWidth = width === 0 ? window.innerWidth : width;
-
-          return (
-            <NavbarContext.Consumer>
-              {({ color, mobileBreakpoint, toggleTitle }) => {
-                const childColor = getChildColor(color);
-                const renderMobile = currentWidth < mobileBreakpoint;
-
-                return (
-                  <div {...this.props}>
-                    <ToggleButton
-                      type="button"
-                      aria-controls="navbar-global-nav-collapse"
-                      aria-expanded={navIsOpen}
-                      aria-label="Toggle global navigation"
-                      onClick={this.handleNavToggle}
-                    >
-                      <Hamburger
-                        tag="div"
-                        color={childColor}
-                        isOpen={navIsOpen}
-                      />
-                      {!renderMobile && (
-                        <ToggleTitle color={childColor}>
-                          {toggleTitle}
-                        </ToggleTitle>
-                      )}
-                    </ToggleButton>
-                    <CollapseWrapper color={color}>
-                      <Collapse
-                        id="navbar-global-nav-collapse"
-                        isOpened={navIsOpen}
+            return (
+              <div {...restProps}>
+                <VisibilityToggle>
+                  {({ isOpen: navIsOpen, toggleIsOpen: toggleNav }) => (
+                    <React.Fragment>
+                      <ToggleButton
+                        type="button"
+                        aria-controls="navbar-global-nav-collapse"
+                        aria-expanded={navIsOpen}
+                        aria-label="Toggle global navigation"
+                        onClick={toggleNav}
                       >
-                        <NavWrapper>
-                          <Nav mobile color={childColor}>
-                            {this.props.children}
-                          </Nav>
-                        </NavWrapper>
-                      </Collapse>
-                    </CollapseWrapper>
-                  </div>
-                );
-              }}
-            </NavbarContext.Consumer>
-          );
-        }}
-      />
-    );
-  }
-}
+                        <Hamburger
+                          tag="div"
+                          color={childColor}
+                          isOpen={navIsOpen}
+                        />
+                        {!renderMobile && (
+                          <ToggleTitle color={childColor}>
+                            {toggleTitle}
+                          </ToggleTitle>
+                        )}
+                      </ToggleButton>
+                      <CollapseWrapper color={color}>
+                        <Collapse
+                          id="navbar-global-nav-collapse"
+                          isOpen={navIsOpen}
+                        >
+                          <NavWrapper>
+                            <Nav mobile color={childColor}>
+                              {children}
+                            </Nav>
+                          </NavWrapper>
+                        </Collapse>
+                      </CollapseWrapper>
+                    </React.Fragment>
+                  )}
+                </VisibilityToggle>
+              </div>
+            );
+          }}
+        </NavbarContext.Consumer>
+      );
+    }}
+  />
+);
 
 NavbarGlobalNav.propTypes = {
   children: PropTypes.node.isRequired

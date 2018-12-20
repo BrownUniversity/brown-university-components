@@ -42,9 +42,7 @@ module.exports = {
     react: 'react',
     'styled-components': 'styled-components',
     'prop-types': 'prop-types',
-    'react-collapse': 'react-collapse',
     'react-fns': 'react-fns',
-    'react-motion': 'react-motion',
     polished: 'polished'
   },
   plugins: [

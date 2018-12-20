@@ -430,7 +430,7 @@ Install dependencies:
 npm install
 ```
 
-Run examples at [http://localhost:8080/](http://localhost:8080/) with [storybook](https://storybook.js.org/):
+Run examples at [http://localhost:8080](http://localhost:8080/) with [storybook](https://storybook.js.org/):
 
 ```sh
 npm start

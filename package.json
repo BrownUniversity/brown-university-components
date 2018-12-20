@@ -2,7 +2,7 @@
   "name": "brown-university-theme",
   "description": "Styles and components for building web applications based on the Brown University Theme",
   "author": "Colin Cummings <colin_cummings@brown.edu>",
-  "version": "0.3.10",
+  "version": "0.3.11",
   "private": true,
   "homepage": "https://bitbucket.brown.edu/projects/CCUM/repos/brown-university-theme",
   "main": "dist/brown-university-theme.js",
@@ -28,9 +28,7 @@
   "dependencies": {
     "polished": "^2.3.0",
     "prop-types": "^15.6.2",
-    "react-collapse": "^4.0.3",
-    "react-fns": "^1.4.0",
-    "react-motion": "^0.5.2"
+    "react-fns": "^1.4.0"
   },
   "devDependencies": {
     "@babel/cli": "^7.1.5",
