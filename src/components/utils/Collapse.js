@@ -6,7 +6,7 @@ import styled from 'styled-components';
 /*
   inner Tag component
 */
-// TODO: filter display, height and overflow props with `ref` usage (see `styled-components` issue 439)
+// TODO: filter display, height, overflow and transition props with `ref` usage (see `styled-components` issue 439)
 const Tag = styled.div`
   will-change: height;
   display: ${({ display }) => display};
