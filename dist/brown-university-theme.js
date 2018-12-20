@@ -1,4 +1,4 @@
-/*! brown-university-theme v0.3.11 */
+/*! brown-university-theme v0.3.12 */
 (function webpackUniversalModuleDefinition(root, factory) {
 	if(typeof exports === 'object' && typeof module === 'object')
 		module.exports = factory(require("prop-types"), require("react"), require("styled-components"), require("polished"), require("react-fns"));
@@ -190,18 +190,22 @@ var Tag = styled_components__WEBPACK_IMPORTED_MODULE_2___default()(function (_re
   var url = _ref.url,
       color = _ref.color,
       full = _ref.full,
-      restProps = _objectWithoutProperties(_ref, ["url", "color", "full"]);
+      marginTop = _ref.marginTop,
+      restProps = _objectWithoutProperties(_ref, ["url", "color", "full", "marginTop"]);
 
   return react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", restProps);
 }).withConfig({
   displayName: "Background__Tag",
   componentId: "o15l4w-0"
-})(["background-image:url('", "');background-repeat:repeat;background-size:1600px;background-color:", ";", ""], function (_ref2) {
+})(["background-image:url('", "');background-repeat:repeat;background-size:1600px;background-color:", ";background-position-y:", "px;", ""], function (_ref2) {
   var url = _ref2.url;
   return url;
 }, function (_ref3) {
   var color = _ref3.color;
   return color === 'gray' ? '#F0F3F5' : '#FFF';
+}, function (_ref4) {
+  var marginTop = _ref4.marginTop;
+  return marginTop;
 }, function (props) {
   return props.full && Object(styled_components__WEBPACK_IMPORTED_MODULE_2__["css"])(["@media (min-width:1600px){background-size:100%;}"]);
 });
@@ -209,11 +213,11 @@ var Tag = styled_components__WEBPACK_IMPORTED_MODULE_2___default()(function (_re
   outer Background component
 */
 
-var Background = function Background(_ref4) {
-  var url = _ref4.url,
-      color = _ref4.color,
-      full = _ref4.full,
-      restProps = _objectWithoutProperties(_ref4, ["url", "color", "full"]);
+var Background = function Background(_ref5) {
+  var url = _ref5.url,
+      color = _ref5.color,
+      full = _ref5.full,
+      restProps = _objectWithoutProperties(_ref5, ["url", "color", "full"]);
 
   return react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(Tag, _extends({}, restProps, {
     url: url,
@@ -226,11 +230,13 @@ Background.propTypes =  true ? {
   url: prop_types__WEBPACK_IMPORTED_MODULE_0___default.a.string.isRequired,
   color: prop_types__WEBPACK_IMPORTED_MODULE_0___default.a.oneOf(['white', 'gray']),
   full: prop_types__WEBPACK_IMPORTED_MODULE_0___default.a.bool,
+  marginTop: prop_types__WEBPACK_IMPORTED_MODULE_0___default.a.number,
   children: prop_types__WEBPACK_IMPORTED_MODULE_0___default.a.node.isRequired
 } : undefined;
 Background.defaultProps = {
   color: 'white',
-  full: true
+  full: true,
+  marginTop: 0
 };
 /* harmony default export */ __webpack_exports__["default"] = (Background);
 
@@ -2009,7 +2015,7 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 /*
   inner Tag component
 */
-// TODO: filter display, height and overflow props with `ref` usage (see `styled-components` issue 439)
+// TODO: filter display, height, overflow and transition props with `ref` usage (see `styled-components` issue 439)
 
 var Tag = styled_components__WEBPACK_IMPORTED_MODULE_2___default.a.div.withConfig({
   displayName: "Collapse__Tag",
@@ -2784,12 +2790,12 @@ var MobileBannerPositioningWrapper = styled_components__WEBPACK_IMPORTED_MODULE_
   displayName: "SiteNav__MobileBannerPositioningWrapper",
   componentId: "sc-1hgikms-0"
 })(["", ";"], function (props) {
-  return props.banner && Object(styled_components__WEBPACK_IMPORTED_MODULE_2__["css"])(["background-color:", ";margin:0 auto;margin-top:2rem;position:relative;width:95%;z-index:10;"], _constants_colors__WEBPACK_IMPORTED_MODULE_9__["default"].white);
+  return props.banner && Object(styled_components__WEBPACK_IMPORTED_MODULE_2__["css"])(["margin:0 auto;margin-top:2rem;position:relative;width:95%;z-index:10;"]);
 });
 var MobileWrapper = styled_components__WEBPACK_IMPORTED_MODULE_2___default.a.nav.withConfig({
   displayName: "SiteNav__MobileWrapper",
   componentId: "sc-1hgikms-1"
-})(["border:1px solid #ddd;"]);
+})(["background-color:", ";border:1px solid #ddd;"], _constants_colors__WEBPACK_IMPORTED_MODULE_9__["default"].white);
 var MobileToggleButton = styled_components__WEBPACK_IMPORTED_MODULE_2___default.a.button.withConfig({
   displayName: "SiteNav__MobileToggleButton",
   componentId: "sc-1hgikms-2"
@@ -2809,8 +2815,8 @@ var MobileNavWrapper = styled_components__WEBPACK_IMPORTED_MODULE_2___default.a.
 var BannerPositioningWrapper = styled_components__WEBPACK_IMPORTED_MODULE_2___default.a.div.withConfig({
   displayName: "SiteNav__BannerPositioningWrapper",
   componentId: "sc-1hgikms-6"
-})(["background-color:", ";", ""], _constants_colors__WEBPACK_IMPORTED_MODULE_9__["default"].white, function (props) {
-  return props.banner && Object(styled_components__WEBPACK_IMPORTED_MODULE_2__["css"])(["margin:0 auto;margin-top:-50px;max-width:1300px;position:relative;width:96%;z-index:10;"]);
+})(["", ""], function (props) {
+  return props.banner && Object(styled_components__WEBPACK_IMPORTED_MODULE_2__["css"])(["background-color:", ";margin:0 auto;margin-top:-50px;max-width:1300px;position:relative;width:96%;z-index:10;"], _constants_colors__WEBPACK_IMPORTED_MODULE_9__["default"].white);
 });
 var NavWrapper = styled_components__WEBPACK_IMPORTED_MODULE_2___default.a.div.withConfig({
   displayName: "SiteNav__NavWrapper",

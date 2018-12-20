@@ -6,13 +6,14 @@ import styled, { css } from 'styled-components';
   inner Tag component
 */
 // filter props so they don't become dom attributes (see `styled-components` issue 439)
-const Tag = styled(({ url, color, full, ...restProps }) => (
+const Tag = styled(({ url, color, full, marginTop, ...restProps }) => (
   <div {...restProps} />
 ))`
   background-image: url('${({ url }) => url}');
   background-repeat: repeat;
   background-size: 1600px;
   background-color: ${({ color }) => (color === 'gray' ? '#F0F3F5' : '#FFF')};
+  background-position-y: ${({ marginTop }) => marginTop}px;
 
   ${props =>
     props.full &&
@@ -34,12 +35,14 @@ Background.propTypes = {
   url: PropTypes.string.isRequired,
   color: PropTypes.oneOf(['white', 'gray']),
   full: PropTypes.bool,
+  marginTop: PropTypes.number,
   children: PropTypes.node.isRequired
 };
 
 Background.defaultProps = {
   color: 'white',
-  full: true
+  full: true,
+  marginTop: 0
 };
 
 export default Background;

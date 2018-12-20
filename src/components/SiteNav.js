@@ -18,7 +18,6 @@ const MobileBannerPositioningWrapper = styled.div`
   ${props =>
     props.banner &&
     css`
-      background-color: ${colors.white};
       margin: 0 auto;
       margin-top: 2rem;
       position: relative;
@@ -28,6 +27,7 @@ const MobileBannerPositioningWrapper = styled.div`
 `;
 
 const MobileWrapper = styled.nav`
+  background-color: ${colors.white};
   border: 1px solid #ddd;
 `;
 
@@ -70,10 +70,10 @@ const MobileNavWrapper = styled.div`
 `;
 
 const BannerPositioningWrapper = styled.div`
-  background-color: ${colors.white};
   ${props =>
     props.banner &&
     css`
+      background-color: ${colors.white};
       margin: 0 auto;
       margin-top: -50px;
       max-width: 1300px;

@@ -37,6 +37,7 @@ describe('Background', () => {
   background-repeat: repeat;
   background-size: 1600px;
   background-color: #FFF;
+  background-position-y: 0px;
 }
 
 @media (min-width:1600px) {
@@ -65,6 +66,12 @@ describe('Background', () => {
       expect(background).not.toHaveStyleRule('background-size', '100%', {
         media: '(min-width: 1600px)'
       });
+    });
+
+    it('should render with marginTop when variant is provided', () => {
+      const { background } = renderBackground({ props: { marginTop: 150 } });
+
+      expect(background).toHaveStyleRule('background-position-y', '150px');
     });
   });
 });
