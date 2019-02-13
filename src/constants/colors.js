@@ -10,6 +10,7 @@ export default {
   sand: '#CCC6B8',
   lightBrown: '#A79A94',
   mediumBrown: '#745D54',
+  darkBrown: '#3A1E1A',
   skyblue: '#59CBE8',
   emerald: '#00B398',
   emeraldLight: '#AAD6CB',
