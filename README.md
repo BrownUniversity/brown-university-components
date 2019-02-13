@@ -11,7 +11,7 @@ _On-prem Bitbucket doesn't render markdown very nicely; view this in a markdown 
 ### Add Brown University Theme
 
 ```
-  yarn add git+https://bitbucket.brown.edu/scm/ccum/brown-university-theme.git#^0.3
+  yarn add git+https://bitbucket.brown.edu/scm/ccum/brown-university-theme.git#^0.4
 ```
 
 _Ensure you're on the network and that your SSH key has been added to the ssh-agent (`ssh-add ~/.ssh/id_rsa`) and uploaded to [bitbucket.brown.edu](https://bitbucket.brown.edu/plugins/servlet/ssh/account/keys)._
@@ -31,7 +31,7 @@ These libraries are not bundled with Brown University Theme and are required at 
 
 ### Styles
 
-```javascript
+```
 // Includes fonts and layout classes. This only needs to be done once; probably
 // where you're calling `ReactDOM.render`.
 import 'brown-university-theme/dist/styles.css';
@@ -45,7 +45,7 @@ _Brown University Theme is designed to be used alongside [Bootstrap](https://www
 
 - **Example:**
 
-  ```javascript
+  ```
   import React from 'react';
   import { Background } from 'brown-university-theme';
   import backgroundURL from 'brown-university-theme/dist/background.svg';
@@ -71,7 +71,7 @@ _Brown University Theme is designed to be used alongside [Bootstrap](https://www
 
 - **Example:**
 
-  ```javascript
+  ```
   import React from 'react';
   import { Banner } from 'brown-university-theme';
 
@@ -95,7 +95,7 @@ _Brown University Theme is designed to be used alongside [Bootstrap](https://www
 
 - **Example:**
 
-  ```javascript
+  ```
   import React from 'react';
   import { Button } from 'brown-university-theme';
 
@@ -119,7 +119,7 @@ _Brown University Theme is designed to be used alongside [Bootstrap](https://www
 
 - **Example:**
 
-  ```javascript
+  ```
   import React from 'react';
   import { Code } from 'brown-university-theme';
 
@@ -138,7 +138,7 @@ _This is a primitive used by `NavbarNav`, `NavbarGlobalNav` and `SiteNav`. You m
 
 - **Example:**
 
-  ```javascript
+  ```
   import React from 'react';
   import { Hamburger } from 'brown-university-theme';
 
@@ -160,7 +160,7 @@ _This is a primitive used by `NavbarNav`, `NavbarGlobalNav` and `SiteNav`. You m
 
 - **Example:**
 
-  ```javascript
+  ```
   import React from 'react';
   import { Loader } from 'brown-university-theme';
 
@@ -179,7 +179,7 @@ _This is a primitive used by `NavbarNav`, `NavbarGlobalNav`, `SiteNav`, and `Sub
 
 - **Example:**
 
-  ```javascript
+  ```
   import React from 'react';
   import { Nav } from 'brown-university-theme';
 
@@ -236,7 +236,7 @@ _This is a primitive used by `NavbarNav`, `NavbarGlobalNav`, `SiteNav`, and `Sub
 
 - **Example:**
 
-  ```javascript
+  ```
   import React from 'react';
   import { Navbar } from 'brown-university-theme';
 
@@ -258,7 +258,7 @@ _This is a primitive used by `NavbarNav`, `NavbarGlobalNav`, `SiteNav`, and `Sub
 
 - **Example:**
 
-  ```javascript
+  ```
   import React from 'react';
   import { Navbar } from 'brown-university-theme';
 
@@ -301,7 +301,7 @@ _This is a primitive used by `NavbarNav`, `NavbarGlobalNav`, `SiteNav`, and `Sub
 
 - **Example:**
 
-  ```javascript
+  ```
   import React from 'react';
   import { Navbar } from 'brown-university-theme';
 
@@ -344,7 +344,7 @@ _This is a primitive used by `NavbarNav`, `NavbarGlobalNav`, `SiteNav`, and `Sub
 
 - **Example:**
 
-  ```javascript
+  ```
   import React from 'react';
   import { SiteNav } from 'brown-university-theme';
 
@@ -386,7 +386,7 @@ _This is a primitive used by `NavbarNav`, `NavbarGlobalNav`, `SiteNav`, and `Sub
 
 - **Example:**
 
-  ```javascript
+  ```
   import React from 'react';
   import { SubNav } from 'brown-university-theme';
 
