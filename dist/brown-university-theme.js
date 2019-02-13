@@ -1,4 +1,4 @@
-/*! brown-university-theme v0.3.12 */
+/*! brown-university-theme v0.4.0 */
 (function webpackUniversalModuleDefinition(root, factory) {
 	if(typeof exports === 'object' && typeof module === 'object')
 		module.exports = factory(require("prop-types"), require("react"), require("styled-components"), require("polished"), require("react-fns"));
@@ -444,6 +444,7 @@ __webpack_require__.r(__webpack_exports__);
   sand: '#CCC6B8',
   lightBrown: '#A79A94',
   mediumBrown: '#745D54',
+  darkBrown: '#3A1E1A',
   skyblue: '#59CBE8',
   emerald: '#00B398',
   emeraldLight: '#AAD6CB',
