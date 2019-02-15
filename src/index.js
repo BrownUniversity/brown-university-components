@@ -1,5 +1,4 @@
 import './styles.css';
-import './svg/background.svg';
 
 export { default as Background } from './components/Background';
 export { default as Banner } from './components/Banner';
