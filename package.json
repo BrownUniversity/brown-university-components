@@ -20,10 +20,10 @@
     "validate": "npm-run-all lint format:check test:coverage",
     "prebuild": "npm run validate",
     "build:commonjs": "BABEL_ENV=commonjs webpack --config webpack/config.js",
+    "build:commonjs:analyze": "RUN_WEBPACK_BUNDLE_ANALYZER=true npm run build:commonjs",
     "prebuild:es": "rimraf dist/es",
     "build:es": "BABEL_ENV=es babel src -d dist/es --copy-files",
     "postbuild:es": "rimraf dist/es/components/__tests__ dist/es/fonts dist/es/svg/background.svg dist/es/styles.css",
-    "build:es:analyze": "RUN_WEBPACK_BUNDLE_ANALYZER=true npm run build:commonjs",
     "build": "npm-run-all build:commonjs build:es",
     "start": "start-storybook -p 8080 -c .storybook"
   },
