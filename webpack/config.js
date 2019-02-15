@@ -3,10 +3,11 @@ const webpack = require('webpack');
 const CleanWebpackPlugin = require('clean-webpack-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
-// const { BundleAnalyzerPlugin } = require('webpack-bundle-analyzer');
-
+const { BundleAnalyzerPlugin } = require('webpack-bundle-analyzer');
 const svgRule = require('./rules/svg');
 const { version } = require('../package.json');
+
+const runAnalyzer = process.env.RUN_WEBPACK_BUNDLE_ANALYZER;
 
 module.exports = {
   mode: 'none',
@@ -55,7 +56,7 @@ module.exports = {
     new CopyWebpackPlugin(['src/svg/background.svg']),
     new MiniCssExtractPlugin({
       filename: 'styles.css'
-    })
-    // new BundleAnalyzerPlugin()
-  ]
+    }),
+    runAnalyzer && new BundleAnalyzerPlugin()
+  ].filter(Boolean)
 };
