@@ -11,7 +11,7 @@ _On-prem Bitbucket doesn't render markdown very nicely; view this in a markdown 
 ### Add Brown University Theme
 
 ```
-  yarn add git+https://bitbucket.brown.edu/scm/ccum/brown-university-theme.git#^0.4
+  yarn add git+https://bitbucket.brown.edu/scm/ccum/brown-university-theme.git#^0.5
 ```
 
 _Ensure you're on the network and that your SSH key has been added to the ssh-agent (`ssh-add ~/.ssh/id_rsa`) and uploaded to [bitbucket.brown.edu](https://bitbucket.brown.edu/plugins/servlet/ssh/account/keys)._
@@ -33,7 +33,8 @@ These libraries are not bundled with Brown University Theme and are required at 
 
 ```
 // Includes fonts and layout classes. This only needs to be done once; probably
-// where you're calling `ReactDOM.render`.
+// where you're calling `ReactDOM.render`. Remember to configure Webpack to load
+// stylesheets and font files.
 import 'brown-university-theme/dist/styles.css';
 ```
 
