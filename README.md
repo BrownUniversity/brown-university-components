@@ -33,7 +33,8 @@ These libraries are not bundled with Brown University Theme and are required at 
 
 ```
 // Includes fonts and layout classes. This only needs to be done once; probably
-// where you're calling `ReactDOM.render`.
+// where you're calling `ReactDOM.render`. Remember to configure Webpack to load
+// stylesheets and font files.
 import 'brown-university-theme/dist/styles.css';
 ```
 
