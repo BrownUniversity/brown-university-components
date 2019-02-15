@@ -1,4 +1,4 @@
-/*! brown-university-theme v0.5.0 */
+/*! brown-university-theme v0.5.1 */
 (function webpackUniversalModuleDefinition(root, factory) {
 	if(typeof exports === 'object' && typeof module === 'object')
 		module.exports = factory(require("prop-types"), require("react"), require("styled-components"), require("polished"), require("react-fns"));
