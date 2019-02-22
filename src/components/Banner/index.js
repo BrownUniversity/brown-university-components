@@ -45,8 +45,6 @@ const BannerImage = styled.img`
 `;
 
 const BannerChildrenWrapper = styled.div`
-  bottom: 0;
-  left: 0;
   position: absolute;
   text-align: center;
   top: ${({ size }) => (size === 'small' ? '20%' : '35%')};

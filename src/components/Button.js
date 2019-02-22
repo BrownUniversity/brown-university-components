@@ -17,7 +17,6 @@ const buttonCSS = css`
   font-weight: 700;
   letter-spacing: 0.6px;
   line-height: 1.5;
-  padding: 12px 25px 12px 20px;
   text-align: center;
   text-decoration: none !important;
   text-transform: uppercase;
@@ -167,6 +166,7 @@ const Tag = styled.div`
     disabled && !href ? 'not-allowed' : 'pointer'};
   font-size: ${props => getFontSize(props)};
   opacity: ${({ disabled }) => (disabled ? '0.65' : '1')};
+  padding: ${({ href }) => (href ? '12px 25px 12px 20px' : '12px 25px')};
   pointer-events: ${({ disabled, href }) =>
     disabled && href ? 'none' : 'auto'};
 

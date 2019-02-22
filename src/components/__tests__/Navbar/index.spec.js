@@ -74,6 +74,7 @@ describe('Navbar', () => {
   >
     <div
       data-testid="mock-svg"
+      display="block"
       height="65"
       width="131"
     />
