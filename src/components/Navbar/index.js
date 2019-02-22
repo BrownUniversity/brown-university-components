@@ -46,7 +46,7 @@ const NavbarChildrenWrapper = styled.div`
 /*
   outer Navbar component
 */
-const logoProps = { height: 65, width: 131 };
+const logoProps = { display: 'block', height: 65, width: 131 };
 
 const Navbar = ({
   color,
