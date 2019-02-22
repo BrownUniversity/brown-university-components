@@ -14,7 +14,7 @@ import { sans } from '../constants/typography';
   css mixins
 */
 
-var buttonCSS = css(["border-width:0;display:inline-block;font-family:", ";font-style:normal;font-weight:700;letter-spacing:0.6px;line-height:1.5;padding:12px 25px 12px 20px;text-align:center;text-decoration:none !important;text-transform:uppercase;transition:color 0.25s,background 0.25s,border 0.25s,box-shadow 0.25s;"], sans);
+var buttonCSS = css(["border-width:0;display:inline-block;font-family:", ";font-style:normal;font-weight:700;letter-spacing:0.6px;line-height:1.5;text-align:center;text-decoration:none !important;text-transform:uppercase;transition:color 0.25s,background 0.25s,border 0.25s,box-shadow 0.25s;"], sans);
 var buttonAfterCSS = css(["border-color:transparent transparent transparent transparent;border-style:solid;border-width:3.5px 0 3.5px 5px;content:'';display:inline-block;height:0;position:relative;right:-8px;top:-1px;transition:border 0.25s,color 0.25s;width:0;"]);
 var buttonAfterShiftCSS = css(["-ms-transform:translate3d(0,0,0);-webkit-transform:translate3d(0,0,0);transform:translate3d(0,0,0);transition:all 0.25s;"]);
 var buttonAfterShiftHoverCSS = css(["-ms-transform:translate3d(4px,0,0);-webkit-transform:translate3d(4px,0,0);transform:translate3d(4px,0,0);transition:all 0.25s;"]);
@@ -170,7 +170,7 @@ var getColorWithHover = function getColorWithHover(_ref7) {
 var Tag = styled.div.withConfig({
   displayName: "Button__Tag",
   componentId: "sc-2usyzz-0"
-})(["", " background-color:", ";box-shadow:inset 0 0 0 1px ", ";color:", ";cursor:", ";font-size:", ";opacity:", ";pointer-events:", ";", " &:hover{background-color:", ";box-shadow:inset 0 0 0 1px ", ";color:", ";", "}"], buttonCSS, function (props) {
+})(["", " background-color:", ";box-shadow:inset 0 0 0 1px ", ";color:", ";cursor:", ";font-size:", ";opacity:", ";padding:", ";pointer-events:", ";", " &:hover{background-color:", ";box-shadow:inset 0 0 0 1px ", ";color:", ";", "}"], buttonCSS, function (props) {
   return getBackgroundColor(props);
 }, function (props) {
   return getBoxShadow(props);
@@ -186,8 +186,11 @@ var Tag = styled.div.withConfig({
   var disabled = _ref9.disabled;
   return disabled ? '0.65' : '1';
 }, function (_ref10) {
-  var disabled = _ref10.disabled,
-      href = _ref10.href;
+  var href = _ref10.href;
+  return href ? '12px 25px 12px 20px' : '12px 25px';
+}, function (_ref11) {
+  var disabled = _ref11.disabled,
+      href = _ref11.href;
   return disabled && href ? 'none' : 'auto';
 }, function (props) {
   return props.href && css(["&::after{", " ", " border-color:transparent transparent transparent ", ";}"], buttonAfterCSS, buttonAfterShiftCSS, getColor(props));
@@ -204,9 +207,9 @@ var Tag = styled.div.withConfig({
   outer Button component
 */
 
-var deriveTag = function deriveTag(_ref11) {
-  var tag = _ref11.tag,
-      href = _ref11.href;
+var deriveTag = function deriveTag(_ref12) {
+  var tag = _ref12.tag,
+      href = _ref12.href;
 
   if (tag === 'button' && href) {
     return 'a';

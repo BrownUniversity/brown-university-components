@@ -11,7 +11,7 @@ _On-prem Bitbucket doesn't render markdown very nicely; view this in a markdown 
 ### Add Brown University Theme
 
 ```
-  yarn add git+https://bitbucket.brown.edu/scm/ccum/brown-university-theme.git#^0.5
+  yarn add git+https://bitbucket.brown.edu/scm/ccum/brown-university-theme.git#^0.6
 ```
 
 _Ensure you're on the network and that your SSH key has been added to the ssh-agent (`ssh-add ~/.ssh/id_rsa`) and uploaded to [bitbucket.brown.edu](https://bitbucket.brown.edu/plugins/servlet/ssh/account/keys)._

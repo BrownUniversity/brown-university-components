@@ -2,7 +2,7 @@
   "name": "brown-university-theme",
   "description": "Styles and components for building web applications based on the Brown University Theme",
   "author": "Colin Cummings <colin_cummings@brown.edu>",
-  "version": "0.5.1",
+  "version": "0.6.0",
   "private": true,
   "homepage": "https://bitbucket.brown.edu/projects/CCUM/repos/brown-university-theme",
   "main": "dist/brown-university-theme.commonjs.js",

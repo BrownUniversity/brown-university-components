@@ -180,6 +180,7 @@ var NavbarChildrenWrapper = styled.div.withConfig({
 */
 
 var logoProps = {
+  display: 'block',
   height: 65,
   width: 131
 };

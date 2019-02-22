@@ -50,7 +50,7 @@ var BannerImage = styled.img.withConfig({
 var BannerChildrenWrapper = styled.div.withConfig({
   displayName: "Banner__BannerChildrenWrapper",
   componentId: "tzfnvw-3"
-})(["bottom:0;left:0;position:absolute;text-align:center;top:", ";width:100%;z-index:15;"], function (_ref2) {
+})(["position:absolute;text-align:center;top:", ";width:100%;z-index:15;"], function (_ref2) {
   var size = _ref2.size;
   return size === 'small' ? '20%' : '35%';
 });
