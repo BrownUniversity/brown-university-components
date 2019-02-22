@@ -32,8 +32,6 @@ describe('Banner', () => {
 }
 
 .c0 {
-  bottom: 0;
-  left: 0;
   position: absolute;
   text-align: center;
   top: 35%;
