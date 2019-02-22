@@ -109,7 +109,6 @@ describe('Button', () => {
   -ms-letter-spacing: 0.6px;
   letter-spacing: 0.6px;
   line-height: 1.5;
-  padding: 12px 25px 12px 20px;
   text-align: center;
   -webkit-text-decoration: none !important;
   text-decoration: none !important;
@@ -122,6 +121,7 @@ describe('Button', () => {
   cursor: pointer;
   font-size: 0.75em;
   opacity: 1;
+  padding: 12px 25px;
   pointer-events: auto;
 }
 
@@ -158,7 +158,6 @@ describe('Button', () => {
   -ms-letter-spacing: 0.6px;
   letter-spacing: 0.6px;
   line-height: 1.5;
-  padding: 12px 25px 12px 20px;
   text-align: center;
   -webkit-text-decoration: none !important;
   text-decoration: none !important;
@@ -171,6 +170,7 @@ describe('Button', () => {
   cursor: pointer;
   font-size: 0.75em;
   opacity: 1;
+  padding: 12px 25px;
   pointer-events: auto;
 }
 
@@ -207,7 +207,6 @@ describe('Button', () => {
   -ms-letter-spacing: 0.6px;
   letter-spacing: 0.6px;
   line-height: 1.5;
-  padding: 12px 25px 12px 20px;
   text-align: center;
   -webkit-text-decoration: none !important;
   text-decoration: none !important;
@@ -220,6 +219,7 @@ describe('Button', () => {
   cursor: pointer;
   font-size: 0.75em;
   opacity: 1;
+  padding: 12px 25px;
   pointer-events: auto;
 }
 
@@ -256,7 +256,6 @@ describe('Button', () => {
   -ms-letter-spacing: 0.6px;
   letter-spacing: 0.6px;
   line-height: 1.5;
-  padding: 12px 25px 12px 20px;
   text-align: center;
   -webkit-text-decoration: none !important;
   text-decoration: none !important;
@@ -269,6 +268,7 @@ describe('Button', () => {
   cursor: pointer;
   font-size: 0.75em;
   opacity: 1;
+  padding: 12px 25px;
   pointer-events: auto;
 }
 
@@ -305,7 +305,6 @@ describe('Button', () => {
   -ms-letter-spacing: 0.6px;
   letter-spacing: 0.6px;
   line-height: 1.5;
-  padding: 12px 25px 12px 20px;
   text-align: center;
   -webkit-text-decoration: none !important;
   text-decoration: none !important;
@@ -318,6 +317,7 @@ describe('Button', () => {
   cursor: pointer;
   font-size: 0.75em;
   opacity: 1;
+  padding: 12px 25px;
   pointer-events: auto;
 }
 
@@ -354,7 +354,6 @@ describe('Button', () => {
   -ms-letter-spacing: 0.6px;
   letter-spacing: 0.6px;
   line-height: 1.5;
-  padding: 12px 25px 12px 20px;
   text-align: center;
   -webkit-text-decoration: none !important;
   text-decoration: none !important;
@@ -367,6 +366,7 @@ describe('Button', () => {
   cursor: pointer;
   font-size: 0.75em;
   opacity: 1;
+  padding: 12px 25px;
   pointer-events: auto;
 }
 
@@ -403,7 +403,6 @@ describe('Button', () => {
   -ms-letter-spacing: 0.6px;
   letter-spacing: 0.6px;
   line-height: 1.5;
-  padding: 12px 25px 12px 20px;
   text-align: center;
   -webkit-text-decoration: none !important;
   text-decoration: none !important;
@@ -416,6 +415,7 @@ describe('Button', () => {
   cursor: pointer;
   font-size: 0.75em;
   opacity: 1;
+  padding: 12px 25px;
   pointer-events: auto;
 }
 
@@ -457,7 +457,6 @@ describe('Button', () => {
   -ms-letter-spacing: 0.6px;
   letter-spacing: 0.6px;
   line-height: 1.5;
-  padding: 12px 25px 12px 20px;
   text-align: center;
   -webkit-text-decoration: none !important;
   text-decoration: none !important;
@@ -470,6 +469,7 @@ describe('Button', () => {
   cursor: pointer;
   font-size: 0.75em;
   opacity: 1;
+  padding: 12px 25px;
   pointer-events: auto;
 }
 
@@ -518,7 +518,6 @@ describe('Button', () => {
   -ms-letter-spacing: 0.6px;
   letter-spacing: 0.6px;
   line-height: 1.5;
-  padding: 12px 25px 12px 20px;
   text-align: center;
   -webkit-text-decoration: none !important;
   text-decoration: none !important;
@@ -531,6 +530,7 @@ describe('Button', () => {
   cursor: pointer;
   font-size: 0.75em;
   opacity: 1;
+  padding: 12px 25px 12px 20px;
   pointer-events: auto;
 }
 
@@ -601,7 +601,6 @@ describe('Button', () => {
   -ms-letter-spacing: 0.6px;
   letter-spacing: 0.6px;
   line-height: 1.5;
-  padding: 12px 25px 12px 20px;
   text-align: center;
   -webkit-text-decoration: none !important;
   text-decoration: none !important;
@@ -614,6 +613,7 @@ describe('Button', () => {
   cursor: pointer;
   font-size: 0.75em;
   opacity: 1;
+  padding: 12px 25px 12px 20px;
   pointer-events: auto;
 }
 
@@ -684,7 +684,6 @@ describe('Button', () => {
   -ms-letter-spacing: 0.6px;
   letter-spacing: 0.6px;
   line-height: 1.5;
-  padding: 12px 25px 12px 20px;
   text-align: center;
   -webkit-text-decoration: none !important;
   text-decoration: none !important;
@@ -697,6 +696,7 @@ describe('Button', () => {
   cursor: pointer;
   font-size: 0.75em;
   opacity: 1;
+  padding: 12px 25px 12px 20px;
   pointer-events: auto;
 }
 
@@ -771,7 +771,6 @@ describe('Button', () => {
   -ms-letter-spacing: 0.6px;
   letter-spacing: 0.6px;
   line-height: 1.5;
-  padding: 12px 25px 12px 20px;
   text-align: center;
   -webkit-text-decoration: none !important;
   text-decoration: none !important;
@@ -784,6 +783,7 @@ describe('Button', () => {
   cursor: pointer;
   font-size: 0.75em;
   opacity: 1;
+  padding: 12px 25px 12px 20px;
   pointer-events: auto;
 }
 
@@ -854,7 +854,6 @@ describe('Button', () => {
   -ms-letter-spacing: 0.6px;
   letter-spacing: 0.6px;
   line-height: 1.5;
-  padding: 12px 25px 12px 20px;
   text-align: center;
   -webkit-text-decoration: none !important;
   text-decoration: none !important;
@@ -867,6 +866,7 @@ describe('Button', () => {
   cursor: pointer;
   font-size: 0.75em;
   opacity: 1;
+  padding: 12px 25px 12px 20px;
   pointer-events: auto;
 }
 
@@ -941,7 +941,6 @@ describe('Button', () => {
   -ms-letter-spacing: 0.6px;
   letter-spacing: 0.6px;
   line-height: 1.5;
-  padding: 12px 25px 12px 20px;
   text-align: center;
   -webkit-text-decoration: none !important;
   text-decoration: none !important;
@@ -954,6 +953,7 @@ describe('Button', () => {
   cursor: pointer;
   font-size: 0.75em;
   opacity: 1;
+  padding: 12px 25px 12px 20px;
   pointer-events: auto;
 }
 
@@ -1024,7 +1024,6 @@ describe('Button', () => {
   -ms-letter-spacing: 0.6px;
   letter-spacing: 0.6px;
   line-height: 1.5;
-  padding: 12px 25px 12px 20px;
   text-align: center;
   -webkit-text-decoration: none !important;
   text-decoration: none !important;
@@ -1037,6 +1036,7 @@ describe('Button', () => {
   cursor: pointer;
   font-size: 0.75em;
   opacity: 1;
+  padding: 12px 25px 12px 20px;
   pointer-events: auto;
 }
 
@@ -1112,7 +1112,6 @@ describe('Button', () => {
   -ms-letter-spacing: 0.6px;
   letter-spacing: 0.6px;
   line-height: 1.5;
-  padding: 12px 25px 12px 20px;
   text-align: center;
   -webkit-text-decoration: none !important;
   text-decoration: none !important;
@@ -1125,6 +1124,7 @@ describe('Button', () => {
   cursor: pointer;
   font-size: 0.75em;
   opacity: 1;
+  padding: 12px 25px 12px 20px;
   pointer-events: auto;
 }
 
