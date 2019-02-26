@@ -1200,6 +1200,12 @@ describe("Button", () => {
 
       expect(button).toHaveStyleRule("font-size", "0.95em");
     });
+
+    it("should render rounded button when variant is provided", () => {
+      const { button } = renderButton({ props: { rounded: true } });
+
+      expect(button).toHaveStyleRule("border-radius", "5px");
+    });
   });
 
   describe("onClick", () => {

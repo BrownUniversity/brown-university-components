@@ -110,6 +110,7 @@ _Brown University Theme is designed to be used alongside [Bootstrap](https://www
   | tag      | oneOfType([func, string])                                               | -        | 'button'  |
   | color    | oneOf(['red', 'yellow', 'brown', 'gray', 'emerald', 'skyblue', 'navy']) | -        | 'red'     |
   | size     | oneOf(['default', 'small', 'large'])                                    | -        | 'default' |
+  | rounded  | bool                                                                    | -        | false     |
   | outline  | bool                                                                    | -        | false     |
   | inverse  | bool                                                                    | -        | false     |
   | disabled | bool                                                                    | -        | false     |

@@ -160,6 +160,7 @@ const getColorWithHover = ({ color, outline, inverse, disabled }) => {
 const Tag = styled.div`
   ${buttonCSS}
   background-color: ${props => getBackgroundColor(props)};
+  border-radius: ${props => (props.rounded ? "5px" : null)};
   box-shadow: inset 0 0 0 1px ${props => getBoxShadow(props)};
   color: ${props => getColor(props)};
   cursor: ${({ disabled, href }) =>
@@ -234,6 +235,7 @@ Button.propTypes = {
     "navy"
   ]),
   size: PropTypes.oneOf(["default", "small", "large"]),
+  rounded: PropTypes.bool,
   outline: PropTypes.bool,
   inverse: PropTypes.bool,
   disabled: PropTypes.bool,
@@ -245,6 +247,7 @@ Button.defaultProps = {
   tag: "button",
   color: "red",
   size: "default",
+  rounded: false,
   outline: false,
   inverse: false,
   disabled: false,
