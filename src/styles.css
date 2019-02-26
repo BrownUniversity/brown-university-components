@@ -2,57 +2,57 @@
 
 /* ---- fonts ---- */
 @font-face {
-  font-family: 'Bitstream Vera Sans Mono';
+  font-family: "Bitstream Vera Sans Mono";
   font-style: normal;
-  src: url('./fonts/bitstream-vera-sans-mono.woff') format('woff');
+  src: url("./fonts/bitstream-vera-sans-mono.woff") format("woff");
 }
 
 @font-face {
   font-family: brown-icons;
   font-style: normal;
-  src: url('./fonts/brown-icons.woff') format('woff');
+  src: url("./fonts/brown-icons.woff") format("woff");
 }
 
 @font-face {
-  font-family: 'Circular-Bold';
+  font-family: "Circular-Bold";
   font-style: normal;
-  src: url('./fonts/circular-bold.woff') format('woff');
+  src: url("./fonts/circular-bold.woff") format("woff");
 }
 
 @font-face {
-  font-family: 'Circular-Bold';
+  font-family: "Circular-Bold";
   font-style: italic;
-  src: url('./fonts/circular-bolditalic.woff') format('woff');
+  src: url("./fonts/circular-bolditalic.woff") format("woff");
 }
 
 @font-face {
-  font-family: 'Circular-Book';
+  font-family: "Circular-Book";
   font-style: normal;
-  src: url('./fonts/circular-book.woff') format('woff');
+  src: url("./fonts/circular-book.woff") format("woff");
 }
 
 @font-face {
-  font-family: 'Circular-Book';
+  font-family: "Circular-Book";
   font-style: italic;
-  src: url('./fonts/circular-bookitalic.woff') format('woff');
+  src: url("./fonts/circular-bookitalic.woff") format("woff");
 }
 
 @font-face {
-  font-family: 'Circular-Medium';
+  font-family: "Circular-Medium";
   font-style: normal;
-  src: url('./fonts/circular-medium.woff') format('woff');
+  src: url("./fonts/circular-medium.woff") format("woff");
 }
 
 @font-face {
-  font-family: 'Circular-Medium';
+  font-family: "Circular-Medium";
   font-style: italic;
-  src: url('./fonts/circular-mediumitalic.woff') format('woff');
+  src: url("./fonts/circular-mediumitalic.woff") format("woff");
 }
 
 @font-face {
   font-family: minion-pro;
   font-style: normal;
-  src: url('./fonts/minion-pro.woff') format('woff');
+  src: url("./fonts/minion-pro.woff") format("woff");
 }
 
 .sans {
@@ -64,11 +64,11 @@
 }
 
 .serif {
-  font-family: minion-pro, 'Times New Roman', serif !important;
+  font-family: minion-pro, "Times New Roman", serif !important;
 }
 
 .mono {
-  font-family: 'Bitstream Vera Sans Mono', Menlo, Monaco, Consolas, Courier,
+  font-family: "Bitstream Vera Sans Mono", Menlo, Monaco, Consolas, Courier,
     monospace !important;
 }
 
@@ -248,7 +248,7 @@ h6,
 
 /* ---- paragraphs ---- */
 p {
-  font-family: minion-pro, 'Times New Roman', serif;
+  font-family: minion-pro, "Times New Roman", serif;
   font-size: 1em;
   line-height: 1.75;
 }

@@ -1,10 +1,10 @@
-import React from 'react';
-import { render, fireEvent } from 'react-testing-library';
-import { triggerWindowResize } from 'window-test-utils';
+import React from "react";
+import { render, fireEvent } from "react-testing-library";
+import { triggerWindowResize } from "window-test-utils";
 
-import NavbarContext from '../../Navbar/NavbarContext';
-import NavbarNav from '../../Navbar/NavbarNav';
-import breakpoints from '../../../constants/breakpoints';
+import NavbarContext from "../../Navbar/NavbarContext";
+import NavbarNav from "../../Navbar/NavbarNav";
+import breakpoints from "../../../constants/breakpoints";
 
 const renderNavbarNav = ({
   context = {},
@@ -23,7 +23,7 @@ const renderNavbarNav = ({
     </React.Fragment>
   )
 } = {}) => {
-  const { color = 'brown', mobileBreakpoint = breakpoints.md } = context;
+  const { color = "brown", mobileBreakpoint = breakpoints.md } = context;
   const rtlUtils = render(
     <NavbarContext.Provider value={{ color, mobileBreakpoint }}>
       <NavbarNav {...props}>{children}</NavbarNav>
@@ -37,48 +37,48 @@ const renderNavbarNav = ({
   };
 };
 
-describe('NavbarNav', () => {
-  describe('when window width is above mobileBreakpoint', () => {
-    it('should render default', () => {
+describe("NavbarNav", () => {
+  describe("when window width is above mobileBreakpoint", () => {
+    it("should render default", () => {
       const { navbarNav } = renderNavbarNav();
 
       expect(navbarNav).toMatchSnapshot();
     });
   });
 
-  describe('when window width is below mobileBreakpoint', () => {
+  describe("when window width is below mobileBreakpoint", () => {
     beforeEach(() => {
       triggerWindowResize({ width: breakpoints.md - 1 });
     });
 
-    describe('styles', () => {
-      it('should render brown mobile navbar nav by default', () => {
+    describe("styles", () => {
+      it("should render brown mobile navbar nav by default", () => {
         const { navbarNav } = renderNavbarNav();
 
         expect(navbarNav).toMatchSnapshot();
       });
 
-      it('should render white mobile navbar nav when color variant is provided', () => {
+      it("should render white mobile navbar nav when color variant is provided", () => {
         const { navbarNavMobileNavWrapper } = renderNavbarNav({
-          context: { color: 'white' }
+          context: { color: "white" }
         });
 
         expect(navbarNavMobileNavWrapper).toHaveStyleRule(
-          'background-color',
-          '#FFFFFF'
+          "background-color",
+          "#FFFFFF"
         );
       });
     });
 
-    it('should toggle navbar nav collapse', () => {
+    it("should toggle navbar nav collapse", () => {
       const { getByLabelText } = renderNavbarNav();
-      const toggleButtonByLabelText = getByLabelText('Toggle navigation');
+      const toggleButtonByLabelText = getByLabelText("Toggle navigation");
 
-      expect(toggleButtonByLabelText).toHaveAttribute('aria-expanded', 'false');
+      expect(toggleButtonByLabelText).toHaveAttribute("aria-expanded", "false");
       fireEvent.click(toggleButtonByLabelText);
-      expect(toggleButtonByLabelText).toHaveAttribute('aria-expanded', 'true');
+      expect(toggleButtonByLabelText).toHaveAttribute("aria-expanded", "true");
       fireEvent.click(toggleButtonByLabelText);
-      expect(toggleButtonByLabelText).toHaveAttribute('aria-expanded', 'false');
+      expect(toggleButtonByLabelText).toHaveAttribute("aria-expanded", "false");
     });
   });
 });

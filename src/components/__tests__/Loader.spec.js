@@ -1,7 +1,7 @@
-import React from 'react';
-import { render } from 'react-testing-library';
+import React from "react";
+import { render } from "react-testing-library";
 
-import Loader from '../Loader';
+import Loader from "../Loader";
 
 const renderLoader = ({ props = {} } = {}) => {
   const rtlUtils = render(<Loader {...props} />);
@@ -12,8 +12,8 @@ const renderLoader = ({ props = {} } = {}) => {
   };
 };
 
-describe('Loader', () => {
-  it('should render loader with default height', () => {
+describe("Loader", () => {
+  it("should render loader with default height", () => {
     const { loader } = renderLoader(/* { props: { height: 400 } } */);
 
     // TODO: update when animation name can be deterministic (see `jest-styled-components` issue 123)
@@ -41,9 +41,9 @@ describe('Loader', () => {
 `);
   });
 
-  it('should render loader with custom height when provided', () => {
+  it("should render loader with custom height when provided", () => {
     const { getByTestId } = renderLoader({ props: { height: 400 } });
 
-    expect(getByTestId('mock-svg')).toHaveAttribute('height', '400');
+    expect(getByTestId("mock-svg")).toHaveAttribute("height", "400");
   });
 });

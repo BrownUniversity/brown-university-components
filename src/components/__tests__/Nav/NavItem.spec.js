@@ -1,8 +1,8 @@
-import React from 'react';
-import { render } from 'react-testing-library';
+import React from "react";
+import { render } from "react-testing-library";
 
-import NavContext from '../../Nav/NavContext';
-import NavItem from '../../Nav/NavItem';
+import NavContext from "../../Nav/NavContext";
+import NavItem from "../../Nav/NavItem";
 
 const renderNavItem = ({
   context = {},
@@ -24,18 +24,18 @@ const renderNavItem = ({
   };
 };
 
-describe('NavItem', () => {
-  describe('children', () => {
-    it('should render children', () => {
+describe("NavItem", () => {
+  describe("children", () => {
+    it("should render children", () => {
       const children = <span data-testid="nav-item-children" />;
       const { getByTestId } = renderNavItem({ children });
 
-      expect(getByTestId('nav-item-children')).toBeInTheDocument();
+      expect(getByTestId("nav-item-children")).toBeInTheDocument();
     });
   });
 
-  describe('styles', () => {
-    it('should render nav item with default styles', () => {
+  describe("styles", () => {
+    it("should render nav item with default styles", () => {
       const { navItem } = renderNavItem();
 
       expect(navItem).toMatchInlineSnapshot(`
@@ -52,18 +52,18 @@ describe('NavItem', () => {
 `);
     });
 
-    it('should render nav item with mobile styles when variant is provided', () => {
+    it("should render nav item with mobile styles when variant is provided", () => {
       const { navItem } = renderNavItem({ context: { mobile: true } });
 
-      expect(navItem).toHaveStyleRule('border-top', '0.5px solid #C8C8C880');
-      expect(navItem).toHaveStyleRule('padding', '1rem 0');
+      expect(navItem).toHaveStyleRule("border-top", "0.5px solid #C8C8C880");
+      expect(navItem).toHaveStyleRule("padding", "1rem 0");
     });
 
-    it('should render nav item with sub styles when variant is provided', () => {
+    it("should render nav item with sub styles when variant is provided", () => {
       const { navItem } = renderNavItem({ context: { sub: true } });
 
-      expect(navItem).not.toHaveStyleRule('border-top');
-      expect(navItem).toHaveStyleRule('padding', '8px 0 8px 0');
+      expect(navItem).not.toHaveStyleRule("border-top");
+      expect(navItem).toHaveStyleRule("padding", "8px 0 8px 0");
     });
   });
 });

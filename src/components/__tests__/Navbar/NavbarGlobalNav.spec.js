@@ -1,10 +1,10 @@
-import React from 'react';
-import { render, fireEvent } from 'react-testing-library';
-import { triggerWindowResize } from 'window-test-utils';
+import React from "react";
+import { render, fireEvent } from "react-testing-library";
+import { triggerWindowResize } from "window-test-utils";
 
-import NavbarContext from '../../Navbar/NavbarContext';
-import NavbarGlobalNav from '../../Navbar/NavbarGlobalNav';
-import breakpoints from '../../../constants/breakpoints';
+import NavbarContext from "../../Navbar/NavbarContext";
+import NavbarGlobalNav from "../../Navbar/NavbarGlobalNav";
+import breakpoints from "../../../constants/breakpoints";
 
 const renderNavbarGlobalNav = ({
   context = {},
@@ -24,9 +24,9 @@ const renderNavbarGlobalNav = ({
   )
 } = {}) => {
   const {
-    color = 'brown',
+    color = "brown",
     mobileBreakpoint = breakpoints.md,
-    toggleTitle = 'Global Navigation'
+    toggleTitle = "Global Navigation"
   } = context;
   const rtlUtils = render(
     <NavbarContext.Provider value={{ color, mobileBreakpoint, toggleTitle }}>
@@ -43,89 +43,89 @@ const renderNavbarGlobalNav = ({
   };
 };
 
-describe('NavbarGlobalNav', () => {
-  describe('when window width is above mobileBreakpoint', () => {
-    describe('styles', () => {
-      it('should render brown navbar global nav by default', () => {
+describe("NavbarGlobalNav", () => {
+  describe("when window width is above mobileBreakpoint", () => {
+    describe("styles", () => {
+      it("should render brown navbar global nav by default", () => {
         const { navbarGlobalNav } = renderNavbarGlobalNav();
 
         expect(navbarGlobalNav).toMatchSnapshot();
       });
 
-      it('should render white navbar global nav when color variant is provided', () => {
+      it("should render white navbar global nav when color variant is provided", () => {
         const {
           navbarGlobalNavToggleTitle,
           navbarGlobalNavCollapseWrapper
         } = renderNavbarGlobalNav({
-          context: { color: 'white' }
+          context: { color: "white" }
         });
 
-        expect(navbarGlobalNavToggleTitle).toHaveStyleRule('color', '#C00404');
+        expect(navbarGlobalNavToggleTitle).toHaveStyleRule("color", "#C00404");
         expect(navbarGlobalNavCollapseWrapper).toHaveStyleRule(
-          'background-color',
-          '#FFFFFF'
+          "background-color",
+          "#FFFFFF"
         );
       });
     });
 
-    it('should render custom toggle title when provided', () => {
+    it("should render custom toggle title when provided", () => {
       const { getByText } = renderNavbarGlobalNav({
-        context: { toggleTitle: 'Custom Navigation' }
+        context: { toggleTitle: "Custom Navigation" }
       });
 
-      expect(getByText('Custom Navigation')).toBeInTheDocument();
+      expect(getByText("Custom Navigation")).toBeInTheDocument();
     });
 
-    it('should toggle navbar global nav collapse', () => {
+    it("should toggle navbar global nav collapse", () => {
       const { getByLabelText, getByText } = renderNavbarGlobalNav();
       const toggleButtonByLabelText = getByLabelText(
-        'Toggle global navigation'
+        "Toggle global navigation"
       );
-      const toggleButtonByText = getByText('Global Navigation');
+      const toggleButtonByText = getByText("Global Navigation");
 
-      expect(toggleButtonByLabelText).toHaveAttribute('aria-expanded', 'false');
+      expect(toggleButtonByLabelText).toHaveAttribute("aria-expanded", "false");
       fireEvent.click(toggleButtonByLabelText);
-      expect(toggleButtonByLabelText).toHaveAttribute('aria-expanded', 'true');
+      expect(toggleButtonByLabelText).toHaveAttribute("aria-expanded", "true");
       fireEvent.click(toggleButtonByText);
-      expect(toggleButtonByLabelText).toHaveAttribute('aria-expanded', 'false');
+      expect(toggleButtonByLabelText).toHaveAttribute("aria-expanded", "false");
     });
   });
 
-  describe('when window width is below mobileBreakpoint', () => {
+  describe("when window width is below mobileBreakpoint", () => {
     beforeEach(() => {
       triggerWindowResize({ width: breakpoints.md - 1 });
     });
 
-    describe('styles', () => {
-      it('should render brown mobile navbar global nav by default', () => {
+    describe("styles", () => {
+      it("should render brown mobile navbar global nav by default", () => {
         const { navbarGlobalNav } = renderNavbarGlobalNav();
 
         expect(navbarGlobalNav).toMatchSnapshot();
       });
 
-      it('should render white mobile navbar global nav when color variant is provided', () => {
+      it("should render white mobile navbar global nav when color variant is provided", () => {
         const { navbarGlobalNavCollapseWrapper } = renderNavbarGlobalNav({
-          context: { color: 'white' }
+          context: { color: "white" }
         });
 
         expect(navbarGlobalNavCollapseWrapper).toHaveStyleRule(
-          'background-color',
-          '#FFFFFF'
+          "background-color",
+          "#FFFFFF"
         );
       });
     });
 
-    it('should toggle navbar global nav collapse', () => {
+    it("should toggle navbar global nav collapse", () => {
       const { getByLabelText } = renderNavbarGlobalNav();
       const toggleButtonByLabelText = getByLabelText(
-        'Toggle global navigation'
+        "Toggle global navigation"
       );
 
-      expect(toggleButtonByLabelText).toHaveAttribute('aria-expanded', 'false');
+      expect(toggleButtonByLabelText).toHaveAttribute("aria-expanded", "false");
       fireEvent.click(toggleButtonByLabelText);
-      expect(toggleButtonByLabelText).toHaveAttribute('aria-expanded', 'true');
+      expect(toggleButtonByLabelText).toHaveAttribute("aria-expanded", "true");
       fireEvent.click(toggleButtonByLabelText);
-      expect(toggleButtonByLabelText).toHaveAttribute('aria-expanded', 'false');
+      expect(toggleButtonByLabelText).toHaveAttribute("aria-expanded", "false");
     });
   });
 });

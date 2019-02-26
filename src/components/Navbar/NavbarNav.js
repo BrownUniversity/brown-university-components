@@ -1,15 +1,15 @@
-import PropTypes from 'prop-types';
-import React from 'react';
-import styled from 'styled-components';
-import { WindowSize } from 'react-fns';
+import PropTypes from "prop-types";
+import React from "react";
+import styled from "styled-components";
+import { WindowSize } from "react-fns";
 
-import NavbarContext from './NavbarContext';
-import Hamburger from '../Hamburger';
-import Nav from '../Nav';
-import Collapse from '../utils/Collapse';
-import VisibilityToggle from '../utils/VisibilityToggle';
-import colors from '../../constants/colors';
-import media from '../../constants/media';
+import NavbarContext from "./NavbarContext";
+import Hamburger from "../Hamburger";
+import Nav from "../Nav";
+import Collapse from "../utils/Collapse";
+import VisibilityToggle from "../utils/VisibilityToggle";
+import colors from "../../constants/colors";
+import media from "../../constants/media";
 
 /*
   inner components
@@ -39,12 +39,12 @@ const MobileNavWrapper = styled.div`
 */
 const getChildColor = color => {
   switch (color) {
-    case 'white':
-      return 'red';
+    case "white":
+      return "red";
 
     // brown
     default:
-      return 'white';
+      return "white";
   }
 };
 

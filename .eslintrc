@@ -1,8 +1,9 @@
 {
-  "extends": "colinrcummings",
+  "extends": ["brown", "brown/jest", "brown/prettier", "brown/prettier/react"],
+  "env": {
+    "browser": true
+  },
   "rules": {
-    "import/no-extraneous-dependencies": "off",
-    "react/no-did-update-set-state": "off",
-    "react/sort-comp": "off"
+    "react/no-did-update-set-state": "off"
   }
 }

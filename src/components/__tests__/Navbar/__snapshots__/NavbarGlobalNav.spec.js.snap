@@ -30,7 +30,7 @@ exports[`NavbarGlobalNav when window width is above mobileBreakpoint styles shou
   position: absolute;
   width: 25px;
   background-color: #FFFFFF;
-  content: '';
+  content: "";
   display: block;
   -webkit-transition-property: -webkit-transform;
   -webkit-transition-property: transform;
@@ -49,7 +49,7 @@ exports[`NavbarGlobalNav when window width is above mobileBreakpoint styles shou
   position: absolute;
   width: 25px;
   background-color: #FFFFFF;
-  content: '';
+  content: "";
   display: block;
   -webkit-transition-property: -webkit-transform;
   -webkit-transition-property: transform;
@@ -301,7 +301,7 @@ exports[`NavbarGlobalNav when window width is below mobileBreakpoint styles shou
   position: absolute;
   width: 25px;
   background-color: #FFFFFF;
-  content: '';
+  content: "";
   display: block;
   -webkit-transition-property: -webkit-transform;
   -webkit-transition-property: transform;
@@ -320,7 +320,7 @@ exports[`NavbarGlobalNav when window width is below mobileBreakpoint styles shou
   position: absolute;
   width: 25px;
   background-color: #FFFFFF;
-  content: '';
+  content: "";
   display: block;
   -webkit-transition-property: -webkit-transform;
   -webkit-transition-property: transform;

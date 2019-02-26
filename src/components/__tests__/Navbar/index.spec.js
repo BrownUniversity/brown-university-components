@@ -1,7 +1,7 @@
-import React from 'react';
-import { render } from 'react-testing-library';
+import React from "react";
+import { render } from "react-testing-library";
 
-import Navbar from '../../Navbar';
+import Navbar from "../../Navbar";
 
 const renderNavbar = ({ props = {}, children = jest.fn() } = {}) => {
   const rtlUtils = render(<Navbar {...props}>{children()}</Navbar>);
@@ -12,18 +12,18 @@ const renderNavbar = ({ props = {}, children = jest.fn() } = {}) => {
   };
 };
 
-describe('Navbar', () => {
-  describe('children', () => {
-    it('should render children when provided', () => {
+describe("Navbar", () => {
+  describe("children", () => {
+    it("should render children when provided", () => {
       const NavbarChildren = () => <div data-testid="navbar-children" />;
       const { getByTestId } = renderNavbar({ children: NavbarChildren });
 
-      expect(getByTestId('navbar-children')).toBeInTheDocument();
+      expect(getByTestId("navbar-children")).toBeInTheDocument();
     });
   });
 
-  describe('styles', () => {
-    it('should render brown navbar by default', () => {
+  describe("styles", () => {
+    it("should render brown navbar by default", () => {
       const { navbar } = renderNavbar();
 
       expect(navbar).toMatchInlineSnapshot(`
@@ -86,10 +86,10 @@ describe('Navbar', () => {
 `);
     });
 
-    it('should render white navbar when color variant is provided', () => {
-      const { navbar } = renderNavbar({ props: { color: 'white' } });
+    it("should render white navbar when color variant is provided", () => {
+      const { navbar } = renderNavbar({ props: { color: "white" } });
 
-      expect(navbar).toHaveStyleRule('background-color', '#FFFFFF');
+      expect(navbar).toHaveStyleRule("background-color", "#FFFFFF");
     });
   });
 });

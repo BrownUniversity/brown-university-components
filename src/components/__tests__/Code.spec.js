@@ -1,9 +1,9 @@
-import React from 'react';
-import { render } from 'react-testing-library';
+import React from "react";
+import { render } from "react-testing-library";
 
-import Code from '../Code';
+import Code from "../Code";
 
-const renderCode = ({ props = {}, children = 'code' } = {}) => {
+const renderCode = ({ props = {}, children = "code" } = {}) => {
   const rtlUtils = render(<Code {...props}>{children}</Code>);
 
   return {
@@ -12,17 +12,17 @@ const renderCode = ({ props = {}, children = 'code' } = {}) => {
   };
 };
 
-describe('Code', () => {
-  describe('children', () => {
-    it('should render children', () => {
-      const { getByText } = renderCode({ children: 'lorem ipsum dolor' });
+describe("Code", () => {
+  describe("children", () => {
+    it("should render children", () => {
+      const { getByText } = renderCode({ children: "lorem ipsum dolor" });
 
-      expect(getByText('lorem ipsum dolor')).toBeInTheDocument();
+      expect(getByText("lorem ipsum dolor")).toBeInTheDocument();
     });
   });
 
-  describe('styles', () => {
-    it('should render default', () => {
+  describe("styles", () => {
+    it("should render default", () => {
       const { code } = renderCode();
 
       expect(code).toMatchInlineSnapshot(`

@@ -1,9 +1,9 @@
-import React from 'react';
-import { render, fireEvent } from 'react-testing-library';
-import { triggerWindowResize } from 'window-test-utils';
+import React from "react";
+import { render, fireEvent } from "react-testing-library";
+import { triggerWindowResize } from "window-test-utils";
 
-import SiteNav from '../SiteNav';
-import breakpoints from '../../constants/breakpoints';
+import SiteNav from "../SiteNav";
+import breakpoints from "../../constants/breakpoints";
 
 const renderSiteNav = ({
   props = {},
@@ -29,19 +29,19 @@ const renderSiteNav = ({
   };
 };
 
-describe('SiteNav', () => {
-  describe('when window width is above mobileBreakpoint', () => {
-    describe('styles', () => {
-      describe('when banner variant is not provided', () => {
-        it('should render default site nav', () => {
+describe("SiteNav", () => {
+  describe("when window width is above mobileBreakpoint", () => {
+    describe("styles", () => {
+      describe("when banner variant is not provided", () => {
+        it("should render default site nav", () => {
           const { siteNav } = renderSiteNav();
 
           expect(siteNav).toMatchSnapshot();
         });
       });
 
-      describe('when banner variant is provided', () => {
-        it('should render default site nav with banner positioning', () => {
+      describe("when banner variant is provided", () => {
+        it("should render default site nav with banner positioning", () => {
           const { siteNav } = renderSiteNav({ props: { banner: true } });
 
           expect(siteNav).toMatchSnapshot();
@@ -50,22 +50,22 @@ describe('SiteNav', () => {
     });
   });
 
-  describe('when window width is below mobileBreakpoint', () => {
+  describe("when window width is below mobileBreakpoint", () => {
     beforeEach(() => {
       triggerWindowResize({ width: breakpoints.md - 1 });
     });
 
-    describe('styles', () => {
-      describe('when banner variant is not provided', () => {
-        it('should render mobile site nav', () => {
+    describe("styles", () => {
+      describe("when banner variant is not provided", () => {
+        it("should render mobile site nav", () => {
           const { siteNav } = renderSiteNav();
 
           expect(siteNav).toMatchSnapshot();
         });
       });
 
-      describe('when banner variant is provided', () => {
-        it('should render mobile site nav with banner positioning', () => {
+      describe("when banner variant is provided", () => {
+        it("should render mobile site nav with banner positioning", () => {
           const { siteNav } = renderSiteNav({ props: { banner: true } });
 
           expect(siteNav).toMatchSnapshot();
@@ -73,34 +73,34 @@ describe('SiteNav', () => {
       });
     });
 
-    it('should render custom mobile toggle title when provided', () => {
+    it("should render custom mobile toggle title when provided", () => {
       const { getByText } = renderSiteNav({
-        props: { mobileToggleTitle: 'Custom Navigation' }
+        props: { mobileToggleTitle: "Custom Navigation" }
       });
 
-      expect(getByText('Custom Navigation')).toBeInTheDocument();
+      expect(getByText("Custom Navigation")).toBeInTheDocument();
     });
 
-    it('should toggle site nav mobile collapse', () => {
+    it("should toggle site nav mobile collapse", () => {
       const { getByLabelText, getByText } = renderSiteNav();
       const mobileToggleButtonByLabelText = getByLabelText(
-        'Toggle site navigation'
+        "Toggle site navigation"
       );
-      const mobileToggleButtonByText = getByText('Site Navigation');
+      const mobileToggleButtonByText = getByText("Site Navigation");
 
       expect(mobileToggleButtonByLabelText).toHaveAttribute(
-        'aria-expanded',
-        'false'
+        "aria-expanded",
+        "false"
       );
       fireEvent.click(mobileToggleButtonByLabelText);
       expect(mobileToggleButtonByLabelText).toHaveAttribute(
-        'aria-expanded',
-        'true'
+        "aria-expanded",
+        "true"
       );
       fireEvent.click(mobileToggleButtonByText);
       expect(mobileToggleButtonByLabelText).toHaveAttribute(
-        'aria-expanded',
-        'false'
+        "aria-expanded",
+        "false"
       );
     });
   });

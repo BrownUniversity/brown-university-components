@@ -1,15 +1,15 @@
-import PropTypes from 'prop-types';
-import React from 'react';
-import styled, { css } from 'styled-components';
-import { WindowSize } from 'react-fns';
+import PropTypes from "prop-types";
+import React from "react";
+import styled, { css } from "styled-components";
+import { WindowSize } from "react-fns";
 
-import Hamburger from './Hamburger';
-import Nav from './Nav';
-import Collapse from './utils/Collapse';
-import VisibilityToggle from './utils/VisibilityToggle';
-import breakpoints from '../constants/breakpoints';
-import colors from '../constants/colors';
-import { sansBold } from '../constants/typography';
+import Hamburger from "./Hamburger";
+import Nav from "./Nav";
+import Collapse from "./utils/Collapse";
+import VisibilityToggle from "./utils/VisibilityToggle";
+import breakpoints from "../constants/breakpoints";
+import colors from "../constants/colors";
+import { sansBold } from "../constants/typography";
 
 /*
   inner components
@@ -168,7 +168,7 @@ SiteNav.propTypes = {
 SiteNav.defaultProps = {
   banner: false,
   mobileBreakpoint: breakpoints.md,
-  mobileToggleTitle: 'Site Navigation'
+  mobileToggleTitle: "Site Navigation"
 };
 
 SiteNav.Item = Nav.Item;

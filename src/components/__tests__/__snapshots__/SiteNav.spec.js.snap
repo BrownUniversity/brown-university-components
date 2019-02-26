@@ -24,7 +24,7 @@ exports[`SiteNav when window width is above mobileBreakpoint styles when banner 
 }
 
 .c3::after {
-  content: '';
+  content: "";
   display: block;
   height: 3px;
   background: #C00404;
@@ -58,7 +58,7 @@ exports[`SiteNav when window width is above mobileBreakpoint styles when banner 
 }
 
 .c4::after {
-  content: '';
+  content: "";
   display: block;
   height: 3px;
   background: #C00404;
@@ -92,7 +92,7 @@ exports[`SiteNav when window width is above mobileBreakpoint styles when banner 
 }
 
 .c5::after {
-  content: '';
+  content: "";
   display: block;
   height: 3px;
   background: #C00404;
@@ -221,7 +221,7 @@ exports[`SiteNav when window width is above mobileBreakpoint styles when banner 
 }
 
 .c4::after {
-  content: '';
+  content: "";
   display: block;
   height: 3px;
   background: #C00404;
@@ -255,7 +255,7 @@ exports[`SiteNav when window width is above mobileBreakpoint styles when banner 
 }
 
 .c5::after {
-  content: '';
+  content: "";
   display: block;
   height: 3px;
   background: #C00404;
@@ -289,7 +289,7 @@ exports[`SiteNav when window width is above mobileBreakpoint styles when banner 
 }
 
 .c6::after {
-  content: '';
+  content: "";
   display: block;
   height: 3px;
   background: #C00404;
@@ -434,7 +434,7 @@ exports[`SiteNav when window width is below mobileBreakpoint styles when banner 
   position: absolute;
   width: 25px;
   background-color: #C00404;
-  content: '';
+  content: "";
   display: block;
   -webkit-transition-property: -webkit-transform;
   -webkit-transition-property: transform;
@@ -453,7 +453,7 @@ exports[`SiteNav when window width is below mobileBreakpoint styles when banner 
   position: absolute;
   width: 25px;
   background-color: #C00404;
-  content: '';
+  content: "";
   display: block;
   -webkit-transition-property: -webkit-transform;
   -webkit-transition-property: transform;
@@ -740,7 +740,7 @@ exports[`SiteNav when window width is below mobileBreakpoint styles when banner 
   position: absolute;
   width: 25px;
   background-color: #C00404;
-  content: '';
+  content: "";
   display: block;
   -webkit-transition-property: -webkit-transform;
   -webkit-transition-property: transform;
@@ -759,7 +759,7 @@ exports[`SiteNav when window width is below mobileBreakpoint styles when banner 
   position: absolute;
   width: 25px;
   background-color: #C00404;
-  content: '';
+  content: "";
   display: block;
   -webkit-transition-property: -webkit-transform;
   -webkit-transition-property: transform;

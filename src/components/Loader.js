@@ -1,8 +1,8 @@
-import PropTypes from 'prop-types';
-import React from 'react';
-import styled, { keyframes } from 'styled-components';
+import PropTypes from "prop-types";
+import React from "react";
+import styled, { keyframes } from "styled-components";
 
-import LoaderSVG from '../svg/inline/loader.svg';
+import LoaderSVG from "../svg/inline/loader.svg";
 
 /*
   inner components

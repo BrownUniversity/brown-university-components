@@ -1,19 +1,19 @@
-import React from 'react';
-import { render, fireEvent } from 'react-testing-library';
+import React from "react";
+import { render, fireEvent } from "react-testing-library";
 
-import NavContext from '../../Nav/NavContext';
-import NavLink from '../../Nav/NavLink';
+import NavContext from "../../Nav/NavContext";
+import NavLink from "../../Nav/NavLink";
 
 const renderNavLink = ({
   context = {},
   props = {},
-  children = 'Link'
+  children = "Link"
 } = {}) => {
   const {
     navbar = false,
     mobile = false,
     sub = false,
-    color = 'red'
+    color = "red"
   } = context;
   const rtlUtils = render(
     <NavContext.Provider value={{ navbar, mobile, sub, color }}>
@@ -27,31 +27,31 @@ const renderNavLink = ({
   };
 };
 
-describe('NavLink', () => {
-  describe('children', () => {
-    it('should render children', () => {
-      const { getByText } = renderNavLink({ children: 'Click Me' });
+describe("NavLink", () => {
+  describe("children", () => {
+    it("should render children", () => {
+      const { getByText } = renderNavLink({ children: "Click Me" });
 
-      expect(getByText('Click Me')).toBeInTheDocument();
+      expect(getByText("Click Me")).toBeInTheDocument();
     });
   });
 
-  describe('tag', () => {
-    it('should render button element by default', () => {
+  describe("tag", () => {
+    it("should render button element by default", () => {
       const { container } = renderNavLink();
 
-      expect(container.getElementsByTagName('button')).toHaveLength(1);
+      expect(container.getElementsByTagName("button")).toHaveLength(1);
     });
 
-    it('should render anchor element when href is provided', () => {
+    it("should render anchor element when href is provided", () => {
       const { container } = renderNavLink({
-        props: { href: 'https://www.brown.edu/' }
+        props: { href: "https://www.brown.edu/" }
       });
 
-      expect(container.getElementsByTagName('a')).toHaveLength(1);
+      expect(container.getElementsByTagName("a")).toHaveLength(1);
     });
 
-    it('should rendercustom element when provided', () => {
+    it("should rendercustom element when provided", () => {
       /* eslint-disable-next-line react/prop-types */
       const Link = ({ className, children }) => (
         <a href="/home" className={className} data-testid="custom-element">
@@ -63,54 +63,54 @@ describe('NavLink', () => {
         props: { tag: Link }
       });
 
-      expect(getByTestId('custom-element')).toBeInTheDocument();
+      expect(getByTestId("custom-element")).toBeInTheDocument();
     });
   });
 
-  describe('type', () => {
-    it('should render type as undefined by default', () => {
+  describe("type", () => {
+    it("should render type as undefined by default", () => {
       const { navLink } = renderNavLink();
 
-      expect(navLink).not.toHaveAttribute('type');
+      expect(navLink).not.toHaveAttribute("type");
     });
 
-    it('should render type as button when tag is button and onClick is provided', () => {
+    it("should render type as button when tag is button and onClick is provided", () => {
       const { navLink } = renderNavLink({
         props: { onClick: jest.fn() }
       });
 
-      expect(navLink).toHaveAttribute('type', 'button');
+      expect(navLink).toHaveAttribute("type", "button");
     });
 
-    it('should render custom type when provided', () => {
+    it("should render custom type when provided", () => {
       const { navLink } = renderNavLink({
-        props: { type: 'submit' }
+        props: { type: "submit" }
       });
 
-      expect(navLink).toHaveAttribute('type', 'submit');
+      expect(navLink).toHaveAttribute("type", "submit");
     });
 
-    it('should render type as undefined when the type is not provided and the tag is not button', () => {
+    it("should render type as undefined when the type is not provided and the tag is not button", () => {
       const { navLink } = renderNavLink({
-        props: { tag: 'a' }
+        props: { tag: "a" }
       });
 
-      expect(navLink).not.toHaveAttribute('type');
+      expect(navLink).not.toHaveAttribute("type");
     });
 
-    it('should render type as undefined when the type is not provided and href is provided', () => {
+    it("should render type as undefined when the type is not provided and href is provided", () => {
       const { navLink } = renderNavLink({
-        props: { href: 'https://www.brown.edu/' }
+        props: { href: "https://www.brown.edu/" }
       });
 
-      expect(navLink).not.toHaveAttribute('type');
+      expect(navLink).not.toHaveAttribute("type");
     });
   });
 
-  describe('styles', () => {
-    describe('with onClick', () => {
-      describe('without variant', () => {
-        it('should render red button element with default styles', () => {
+  describe("styles", () => {
+    describe("with onClick", () => {
+      describe("without variant", () => {
+        it("should render red button element with default styles", () => {
           const { navLink } = renderNavLink({ props: { onClick: jest.fn() } });
 
           expect(navLink).toMatchInlineSnapshot(`
@@ -132,7 +132,7 @@ describe('NavLink', () => {
 }
 
 .c0::after {
-  content: '';
+  content: "";
   display: block;
   height: 3px;
   background: #C00404;
@@ -164,7 +164,7 @@ describe('NavLink', () => {
 `);
         });
 
-        it('should render red button element with active default styles when variant is provided', () => {
+        it("should render red button element with active default styles when variant is provided", () => {
           const { navLink } = renderNavLink({
             props: { active: true, onClick: jest.fn() }
           });
@@ -188,7 +188,7 @@ describe('NavLink', () => {
 }
 
 .c0::after {
-  content: '';
+  content: "";
   display: block;
   height: 3px;
   background: #C00404;
@@ -220,7 +220,7 @@ describe('NavLink', () => {
 `);
         });
 
-        it('should render red button element with disabled default styles when variant is provided', () => {
+        it("should render red button element with disabled default styles when variant is provided", () => {
           const { navLink } = renderNavLink({
             props: { disabled: true, onClick: jest.fn() }
           });
@@ -244,7 +244,7 @@ describe('NavLink', () => {
 }
 
 .c0::after {
-  content: '';
+  content: "";
   display: block;
   height: 3px;
   background: #C00404;
@@ -278,9 +278,9 @@ describe('NavLink', () => {
         });
       });
 
-      describe('with navbar variant', () => {
-        describe('when color is red', () => {
-          it('should render red button element with navbar styles', () => {
+      describe("with navbar variant", () => {
+        describe("when color is red", () => {
+          it("should render red button element with navbar styles", () => {
             const { navLink } = renderNavLink({
               props: { onClick: jest.fn() },
               context: { navbar: true }
@@ -305,7 +305,7 @@ describe('NavLink', () => {
 }
 
 .c0::after {
-  content: '';
+  content: "";
   display: block;
   height: 3px;
   background: #C00404;
@@ -331,7 +331,7 @@ describe('NavLink', () => {
 `);
           });
 
-          it('should render red button element with active navbar styles when variant is provided', () => {
+          it("should render red button element with active navbar styles when variant is provided", () => {
             const { navLink } = renderNavLink({
               context: { navbar: true },
               props: { active: true, onClick: jest.fn() }
@@ -356,7 +356,7 @@ describe('NavLink', () => {
 }
 
 .c0::after {
-  content: '';
+  content: "";
   display: block;
   height: 3px;
   background: #C00404;
@@ -382,7 +382,7 @@ describe('NavLink', () => {
 `);
           });
 
-          it('should render red button element with disabled navbar styles when variant is provided', () => {
+          it("should render red button element with disabled navbar styles when variant is provided", () => {
             const { navLink } = renderNavLink({
               context: { navbar: true },
               props: { disabled: true, onClick: jest.fn() }
@@ -407,7 +407,7 @@ describe('NavLink', () => {
 }
 
 .c0::after {
-  content: '';
+  content: "";
   display: block;
   height: 3px;
   background: #C00404;
@@ -435,10 +435,10 @@ describe('NavLink', () => {
           });
         });
 
-        describe('when color is white', () => {
-          it('should render white button element with navbar styles', () => {
+        describe("when color is white", () => {
+          it("should render white button element with navbar styles", () => {
             const { navLink } = renderNavLink({
-              context: { navbar: true, color: 'white' },
+              context: { navbar: true, color: "white" },
               props: { onClick: jest.fn() }
             });
 
@@ -461,7 +461,7 @@ describe('NavLink', () => {
 }
 
 .c0::after {
-  content: '';
+  content: "";
   display: block;
   height: 3px;
   background: #CCC6B8;
@@ -487,9 +487,9 @@ describe('NavLink', () => {
 `);
           });
 
-          it('should render white button element with active navbar styles when variant is provided', () => {
+          it("should render white button element with active navbar styles when variant is provided", () => {
             const { navLink } = renderNavLink({
-              context: { navbar: true, color: 'white' },
+              context: { navbar: true, color: "white" },
               props: { active: true, onClick: jest.fn() }
             });
 
@@ -512,7 +512,7 @@ describe('NavLink', () => {
 }
 
 .c0::after {
-  content: '';
+  content: "";
   display: block;
   height: 3px;
   background: #CCC6B8;
@@ -538,9 +538,9 @@ describe('NavLink', () => {
 `);
           });
 
-          it('should render white button element with disabled navbar styles when variant is provided', () => {
+          it("should render white button element with disabled navbar styles when variant is provided", () => {
             const { navLink } = renderNavLink({
-              context: { navbar: true, color: 'white' },
+              context: { navbar: true, color: "white" },
               props: { disabled: true, onClick: jest.fn() }
             });
 
@@ -563,7 +563,7 @@ describe('NavLink', () => {
 }
 
 .c0::after {
-  content: '';
+  content: "";
   display: block;
   height: 3px;
   background: #CCC6B8;
@@ -592,9 +592,9 @@ describe('NavLink', () => {
         });
       });
 
-      describe('with mobile variant', () => {
-        describe('when color is red', () => {
-          it('should render red button element with mobile styles', () => {
+      describe("with mobile variant", () => {
+        describe("when color is red", () => {
+          it("should render red button element with mobile styles", () => {
             const { navLink } = renderNavLink({
               context: { mobile: true },
               props: { onClick: jest.fn() }
@@ -634,7 +634,7 @@ describe('NavLink', () => {
 `);
           });
 
-          it('should render red button element with active mobile styles when variant is provided', () => {
+          it("should render red button element with active mobile styles when variant is provided", () => {
             const { navLink } = renderNavLink({
               context: { mobile: true },
               props: { active: true, onClick: jest.fn() }
@@ -674,7 +674,7 @@ describe('NavLink', () => {
 `);
           });
 
-          it('should render red button element with disabled mobile styles when variant is provided', () => {
+          it("should render red button element with disabled mobile styles when variant is provided", () => {
             const { navLink } = renderNavLink({
               context: { mobile: true },
               props: { disabled: true, onClick: jest.fn() }
@@ -716,10 +716,10 @@ describe('NavLink', () => {
           });
         });
 
-        describe('when color is white', () => {
-          it('should render white button element with mobile styles', () => {
+        describe("when color is white", () => {
+          it("should render white button element with mobile styles", () => {
             const { navLink } = renderNavLink({
-              context: { mobile: true, color: 'white' },
+              context: { mobile: true, color: "white" },
               props: { onClick: jest.fn() }
             });
 
@@ -757,9 +757,9 @@ describe('NavLink', () => {
 `);
           });
 
-          it('should render white button element with active mobile styles when variant is provided', () => {
+          it("should render white button element with active mobile styles when variant is provided", () => {
             const { navLink } = renderNavLink({
-              context: { mobile: true, color: 'white' },
+              context: { mobile: true, color: "white" },
               props: { active: true, onClick: jest.fn() }
             });
 
@@ -797,9 +797,9 @@ describe('NavLink', () => {
 `);
           });
 
-          it('should render white button element with disabled mobile styles when variant is provided', () => {
+          it("should render white button element with disabled mobile styles when variant is provided", () => {
             const { navLink } = renderNavLink({
-              context: { mobile: true, color: 'white' },
+              context: { mobile: true, color: "white" },
               props: { disabled: true, onClick: jest.fn() }
             });
 
@@ -840,8 +840,8 @@ describe('NavLink', () => {
         });
       });
 
-      describe('with sub variant', () => {
-        it('should render red button element with sub styles', () => {
+      describe("with sub variant", () => {
+        it("should render red button element with sub styles", () => {
           const { navLink } = renderNavLink({
             context: { sub: true },
             props: { onClick: jest.fn() }
@@ -881,7 +881,7 @@ describe('NavLink', () => {
 `);
         });
 
-        it('should render red button element with active sub styles when variant is provided', () => {
+        it("should render red button element with active sub styles when variant is provided", () => {
           const { navLink } = renderNavLink({
             context: { sub: true },
             props: { active: true, onClick: jest.fn() }
@@ -921,7 +921,7 @@ describe('NavLink', () => {
 `);
         });
 
-        it('should render red button element with disabled sub styles when variant is provided', () => {
+        it("should render red button element with disabled sub styles when variant is provided", () => {
           const { navLink } = renderNavLink({
             context: { sub: true },
             props: { disabled: true, onClick: jest.fn() }
@@ -964,11 +964,11 @@ describe('NavLink', () => {
       });
     });
 
-    describe('with href', () => {
-      describe('without variants', () => {
-        it('should render red anchor element with default styles', () => {
+    describe("with href", () => {
+      describe("without variants", () => {
+        it("should render red anchor element with default styles", () => {
           const { navLink } = renderNavLink({
-            props: { href: 'https://www.brown.edu' }
+            props: { href: "https://www.brown.edu" }
           });
 
           expect(navLink).toMatchInlineSnapshot(`
@@ -992,7 +992,7 @@ describe('NavLink', () => {
 }
 
 .c0::after {
-  content: '';
+  content: "";
   display: block;
   height: 3px;
   -webkit-transition: width 0.3s;
@@ -1026,9 +1026,9 @@ describe('NavLink', () => {
 `);
         });
 
-        it('should render red anchor element with active default styles when variant is provided', () => {
+        it("should render red anchor element with active default styles when variant is provided", () => {
           const { navLink } = renderNavLink({
-            props: { active: true, href: 'https://www.brown.edu' }
+            props: { active: true, href: "https://www.brown.edu" }
           });
 
           expect(navLink).toMatchInlineSnapshot(`
@@ -1052,7 +1052,7 @@ describe('NavLink', () => {
 }
 
 .c0::after {
-  content: '';
+  content: "";
   display: block;
   height: 3px;
   -webkit-transition: width 0.3s;
@@ -1086,9 +1086,9 @@ describe('NavLink', () => {
 `);
         });
 
-        it('should render red anchor element with disabled default styles when variant is provided', () => {
+        it("should render red anchor element with disabled default styles when variant is provided", () => {
           const { navLink } = renderNavLink({
-            props: { disabled: true, href: 'https://www.brown.edu' }
+            props: { disabled: true, href: "https://www.brown.edu" }
           });
 
           expect(navLink).toMatchInlineSnapshot(`
@@ -1112,7 +1112,7 @@ describe('NavLink', () => {
 }
 
 .c0::after {
-  content: '';
+  content: "";
   display: block;
   height: 3px;
   -webkit-transition: width 0.3s;
@@ -1148,12 +1148,12 @@ describe('NavLink', () => {
         });
       });
 
-      describe('with navbar variant', () => {
-        describe('when color is red', () => {
-          it('should render red anchor element with navbar styles', () => {
+      describe("with navbar variant", () => {
+        describe("when color is red", () => {
+          it("should render red anchor element with navbar styles", () => {
             const { navLink } = renderNavLink({
               context: { navbar: true },
-              props: { href: 'https://www.brown.edu' }
+              props: { href: "https://www.brown.edu" }
             });
 
             expect(navLink).toMatchInlineSnapshot(`
@@ -1177,7 +1177,7 @@ describe('NavLink', () => {
 }
 
 .c0::after {
-  content: '';
+  content: "";
   display: block;
   height: 3px;
   -webkit-transition: width 0.3s;
@@ -1205,10 +1205,10 @@ describe('NavLink', () => {
 `);
           });
 
-          it('should render red anchor element with active navbar styles when variant is provided', () => {
+          it("should render red anchor element with active navbar styles when variant is provided", () => {
             const { navLink } = renderNavLink({
               context: { navbar: true },
-              props: { active: true, href: 'https://www.brown.edu' }
+              props: { active: true, href: "https://www.brown.edu" }
             });
 
             expect(navLink).toMatchInlineSnapshot(`
@@ -1232,7 +1232,7 @@ describe('NavLink', () => {
 }
 
 .c0::after {
-  content: '';
+  content: "";
   display: block;
   height: 3px;
   -webkit-transition: width 0.3s;
@@ -1260,10 +1260,10 @@ describe('NavLink', () => {
 `);
           });
 
-          it('should render red anchor element with disabled navbar styles when variant is provided', () => {
+          it("should render red anchor element with disabled navbar styles when variant is provided", () => {
             const { navLink } = renderNavLink({
               context: { navbar: true },
-              props: { disabled: true, href: 'https://www.brown.edu' }
+              props: { disabled: true, href: "https://www.brown.edu" }
             });
 
             expect(navLink).toMatchInlineSnapshot(`
@@ -1287,7 +1287,7 @@ describe('NavLink', () => {
 }
 
 .c0::after {
-  content: '';
+  content: "";
   display: block;
   height: 3px;
   -webkit-transition: width 0.3s;
@@ -1317,11 +1317,11 @@ describe('NavLink', () => {
           });
         });
 
-        describe('when color is white', () => {
-          it('should render white anchor element with navbar styles', () => {
+        describe("when color is white", () => {
+          it("should render white anchor element with navbar styles", () => {
             const { navLink } = renderNavLink({
-              context: { navbar: true, color: 'white' },
-              props: { href: 'https://www.brown.edu' }
+              context: { navbar: true, color: "white" },
+              props: { href: "https://www.brown.edu" }
             });
 
             expect(navLink).toMatchInlineSnapshot(`
@@ -1345,7 +1345,7 @@ describe('NavLink', () => {
 }
 
 .c0::after {
-  content: '';
+  content: "";
   display: block;
   height: 3px;
   -webkit-transition: width 0.3s;
@@ -1373,10 +1373,10 @@ describe('NavLink', () => {
 `);
           });
 
-          it('should render white anchor element with active navbar styles when variant is provided', () => {
+          it("should render white anchor element with active navbar styles when variant is provided", () => {
             const { navLink } = renderNavLink({
-              context: { navbar: true, color: 'white' },
-              props: { active: true, href: 'https://www.brown.edu' }
+              context: { navbar: true, color: "white" },
+              props: { active: true, href: "https://www.brown.edu" }
             });
 
             expect(navLink).toMatchInlineSnapshot(`
@@ -1400,7 +1400,7 @@ describe('NavLink', () => {
 }
 
 .c0::after {
-  content: '';
+  content: "";
   display: block;
   height: 3px;
   -webkit-transition: width 0.3s;
@@ -1428,10 +1428,10 @@ describe('NavLink', () => {
 `);
           });
 
-          it('should render white anchor element with disabled navbar styles when variant is provided', () => {
+          it("should render white anchor element with disabled navbar styles when variant is provided", () => {
             const { navLink } = renderNavLink({
-              context: { navbar: true, color: 'white' },
-              props: { disabled: true, href: 'https://www.brown.edu' }
+              context: { navbar: true, color: "white" },
+              props: { disabled: true, href: "https://www.brown.edu" }
             });
 
             expect(navLink).toMatchInlineSnapshot(`
@@ -1455,7 +1455,7 @@ describe('NavLink', () => {
 }
 
 .c0::after {
-  content: '';
+  content: "";
   display: block;
   height: 3px;
   -webkit-transition: width 0.3s;
@@ -1486,12 +1486,12 @@ describe('NavLink', () => {
         });
       });
 
-      describe('with mobile variant', () => {
-        describe('when color is red', () => {
-          it('should render red anchor element with mobile styles', () => {
+      describe("with mobile variant", () => {
+        describe("when color is red", () => {
+          it("should render red anchor element with mobile styles", () => {
             const { navLink } = renderNavLink({
               context: { mobile: true },
-              props: { href: 'https://www.brown.edu' }
+              props: { href: "https://www.brown.edu" }
             });
 
             expect(navLink).toMatchInlineSnapshot(`
@@ -1528,10 +1528,10 @@ describe('NavLink', () => {
 `);
           });
 
-          it('should render red anchor element with active mobile styles when variant is provided', () => {
+          it("should render red anchor element with active mobile styles when variant is provided", () => {
             const { navLink } = renderNavLink({
               context: { mobile: true },
-              props: { active: true, href: 'https://www.brown.edu' }
+              props: { active: true, href: "https://www.brown.edu" }
             });
 
             expect(navLink).toMatchInlineSnapshot(`
@@ -1568,10 +1568,10 @@ describe('NavLink', () => {
 `);
           });
 
-          it('should render red anchor element with disabled mobile styles when variant is provided', () => {
+          it("should render red anchor element with disabled mobile styles when variant is provided", () => {
             const { navLink } = renderNavLink({
               context: { mobile: true },
-              props: { disabled: true, href: 'https://www.brown.edu' }
+              props: { disabled: true, href: "https://www.brown.edu" }
             });
 
             expect(navLink).toMatchInlineSnapshot(`
@@ -1610,11 +1610,11 @@ describe('NavLink', () => {
           });
         });
 
-        describe('when color is white', () => {
-          it('should render white anchor element with mobile styles', () => {
+        describe("when color is white", () => {
+          it("should render white anchor element with mobile styles", () => {
             const { navLink } = renderNavLink({
-              context: { mobile: true, color: 'white' },
-              props: { href: 'https://www.brown.edu' }
+              context: { mobile: true, color: "white" },
+              props: { href: "https://www.brown.edu" }
             });
 
             expect(navLink).toMatchInlineSnapshot(`
@@ -1651,10 +1651,10 @@ describe('NavLink', () => {
 `);
           });
 
-          it('should render white anchor element with active mobile styles when variant is provided', () => {
+          it("should render white anchor element with active mobile styles when variant is provided", () => {
             const { navLink } = renderNavLink({
-              context: { mobile: true, color: 'white' },
-              props: { active: true, href: 'https://www.brown.edu' }
+              context: { mobile: true, color: "white" },
+              props: { active: true, href: "https://www.brown.edu" }
             });
 
             expect(navLink).toMatchInlineSnapshot(`
@@ -1691,10 +1691,10 @@ describe('NavLink', () => {
 `);
           });
 
-          it('should render white anchor element with disabled mobile styles when variant is provided', () => {
+          it("should render white anchor element with disabled mobile styles when variant is provided", () => {
             const { navLink } = renderNavLink({
-              context: { mobile: true, color: 'white' },
-              props: { disabled: true, href: 'https://www.brown.edu' }
+              context: { mobile: true, color: "white" },
+              props: { disabled: true, href: "https://www.brown.edu" }
             });
 
             expect(navLink).toMatchInlineSnapshot(`
@@ -1734,11 +1734,11 @@ describe('NavLink', () => {
         });
       });
 
-      describe('with sub variant', () => {
-        it('should render red anchor element with sub styles', () => {
+      describe("with sub variant", () => {
+        it("should render red anchor element with sub styles", () => {
           const { navLink } = renderNavLink({
             context: { sub: true },
-            props: { href: 'https://www.brown.edu' }
+            props: { href: "https://www.brown.edu" }
           });
 
           expect(navLink).toMatchInlineSnapshot(`
@@ -1775,10 +1775,10 @@ describe('NavLink', () => {
 `);
         });
 
-        it('should render red anchor element with active sub styles when variant is provided', () => {
+        it("should render red anchor element with active sub styles when variant is provided", () => {
           const { navLink } = renderNavLink({
             context: { sub: true },
-            props: { active: true, href: 'https://www.brown.edu' }
+            props: { active: true, href: "https://www.brown.edu" }
           });
 
           expect(navLink).toMatchInlineSnapshot(`
@@ -1815,10 +1815,10 @@ describe('NavLink', () => {
 `);
         });
 
-        it('should render red anchor element with disabled sub styles when variant is provided', () => {
+        it("should render red anchor element with disabled sub styles when variant is provided", () => {
           const { navLink } = renderNavLink({
             context: { sub: true },
-            props: { disabled: true, href: 'https://www.brown.edu' }
+            props: { disabled: true, href: "https://www.brown.edu" }
           });
 
           expect(navLink).toMatchInlineSnapshot(`
@@ -1859,26 +1859,26 @@ describe('NavLink', () => {
     });
   });
 
-  describe('onClick', () => {
-    it('should call onClick when disabled is false', () => {
+  describe("onClick", () => {
+    it("should call onClick when disabled is false", () => {
       const onClick = jest.fn();
       const { getByText } = renderNavLink({
         props: { onClick },
-        children: 'Click Me'
+        children: "Click Me"
       });
 
-      fireEvent.click(getByText('Click Me'));
+      fireEvent.click(getByText("Click Me"));
       expect(onClick).toHaveBeenCalledTimes(1);
     });
 
-    it('should not call onClick when disabled is true', () => {
+    it("should not call onClick when disabled is true", () => {
       const onClick = jest.fn();
       const { getByText } = renderNavLink({
         props: { disabled: true, onClick },
-        children: 'Click Me'
+        children: "Click Me"
       });
 
-      fireEvent.click(getByText('Click Me'));
+      fireEvent.click(getByText("Click Me"));
       expect(onClick).not.toHaveBeenCalled();
     });
   });

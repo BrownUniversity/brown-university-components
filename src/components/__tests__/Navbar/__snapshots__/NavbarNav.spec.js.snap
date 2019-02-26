@@ -24,7 +24,7 @@ exports[`NavbarNav when window width is above mobileBreakpoint should render def
 }
 
 .c2::after {
-  content: '';
+  content: "";
   display: block;
   height: 3px;
   background: #CCC6B8;
@@ -58,7 +58,7 @@ exports[`NavbarNav when window width is above mobileBreakpoint should render def
 }
 
 .c3::after {
-  content: '';
+  content: "";
   display: block;
   height: 3px;
   background: #CCC6B8;
@@ -92,7 +92,7 @@ exports[`NavbarNav when window width is above mobileBreakpoint should render def
 }
 
 .c4::after {
-  content: '';
+  content: "";
   display: block;
   height: 3px;
   background: #CCC6B8;
@@ -187,7 +187,7 @@ exports[`NavbarNav when window width is below mobileBreakpoint styles should ren
   position: absolute;
   width: 25px;
   background-color: #FFFFFF;
-  content: '';
+  content: "";
   display: block;
   -webkit-transition-property: -webkit-transform;
   -webkit-transition-property: transform;
@@ -206,7 +206,7 @@ exports[`NavbarNav when window width is below mobileBreakpoint styles should ren
   position: absolute;
   width: 25px;
   background-color: #FFFFFF;
-  content: '';
+  content: "";
   display: block;
   -webkit-transition-property: -webkit-transform;
   -webkit-transition-property: transform;

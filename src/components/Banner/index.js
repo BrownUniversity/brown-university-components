@@ -1,26 +1,26 @@
-import PropTypes from 'prop-types';
-import React from 'react';
-import styled from 'styled-components';
+import PropTypes from "prop-types";
+import React from "react";
+import styled from "styled-components";
 
-import BannerText from './BannerText';
-import colors from '../../constants/colors';
+import BannerText from "./BannerText";
+import colors from "../../constants/colors";
 
 /*
   css prop getters
 */
 const getMaxHeight = ({ size }) => {
   switch (size) {
-    case 'small':
-      return '150px';
+    case "small":
+      return "150px";
 
-    case 'medium':
-      return '300px';
+    case "medium":
+      return "300px";
 
-    case 'large':
-      return '600px';
+    case "large":
+      return "600px";
 
     default:
-      return '200px';
+      return "200px";
   }
 };
 
@@ -47,7 +47,7 @@ const BannerImage = styled.img`
 const BannerChildrenWrapper = styled.div`
   position: absolute;
   text-align: center;
-  top: ${({ size }) => (size === 'small' ? '20%' : '35%')};
+  top: ${({ size }) => (size === "small" ? "20%" : "35%")};
   width: 100%;
   z-index: 15;
 `;
@@ -78,25 +78,25 @@ const Banner = ({ color, size, src, children, ...restProps }) => (
 
 Banner.propTypes = {
   color: PropTypes.oneOf([
-    'emerald',
-    'red',
-    'brown',
-    'yellow',
-    'gray',
-    'sand',
-    'lightBrown',
-    'mediumBrown',
-    'navy',
-    'skyblue'
+    "emerald",
+    "red",
+    "brown",
+    "yellow",
+    "gray",
+    "sand",
+    "lightBrown",
+    "mediumBrown",
+    "navy",
+    "skyblue"
   ]),
-  size: PropTypes.oneOf(['default', 'small', 'medium', 'large']),
+  size: PropTypes.oneOf(["default", "small", "medium", "large"]),
   src: PropTypes.string,
   children: PropTypes.node
 };
 
 Banner.defaultProps = {
-  color: 'emerald',
-  size: 'default',
+  color: "emerald",
+  size: "default",
   src: null,
   children: null
 };

@@ -1,15 +1,15 @@
-import PropTypes from 'prop-types';
-import React from 'react';
-import styled from 'styled-components';
+import PropTypes from "prop-types";
+import React from "react";
+import styled from "styled-components";
 
-import NavbarContext from './NavbarContext';
-import NavbarNav from './NavbarNav';
-import NavbarGlobalNav from './NavbarGlobalNav';
-import LogoBlackSVG from '../../svg/inline/logo-black.svg';
-import LogoWhiteSVG from '../../svg/inline/logo-white.svg';
-import breakpoints from '../../constants/breakpoints';
-import colors from '../../constants/colors';
-import media from '../../constants/media';
+import NavbarContext from "./NavbarContext";
+import NavbarNav from "./NavbarNav";
+import NavbarGlobalNav from "./NavbarGlobalNav";
+import LogoBlackSVG from "../../svg/inline/logo-black.svg";
+import LogoWhiteSVG from "../../svg/inline/logo-white.svg";
+import breakpoints from "../../constants/breakpoints";
+import colors from "../../constants/colors";
+import media from "../../constants/media";
 
 /*
   inner components
@@ -46,7 +46,7 @@ const NavbarChildrenWrapper = styled.div`
 /*
   outer Navbar component
 */
-const logoProps = { display: 'block', height: 65, width: 131 };
+const logoProps = { display: "block", height: 65, width: 131 };
 
 const Navbar = ({
   color,
@@ -61,7 +61,7 @@ const Navbar = ({
       target="_blank"
       rel="noopener noreferrer"
     >
-      {color === 'white' ? (
+      {color === "white" ? (
         <LogoBlackSVG {...logoProps} />
       ) : (
         <LogoWhiteSVG {...logoProps} />
@@ -76,16 +76,16 @@ const Navbar = ({
 );
 
 Navbar.propTypes = {
-  color: PropTypes.oneOf(['brown', 'white']),
+  color: PropTypes.oneOf(["brown", "white"]),
   mobileBreakpoint: PropTypes.number,
   toggleTitle: PropTypes.string,
   children: PropTypes.node
 };
 
 Navbar.defaultProps = {
-  color: 'brown',
+  color: "brown",
   mobileBreakpoint: breakpoints.md,
-  toggleTitle: 'Global Navigation',
+  toggleTitle: "Global Navigation",
   children: null
 };
 
