@@ -16,6 +16,7 @@ const getCommonProps = () => ({
     'navy'
   ]),
   size: select('size', ['default', 'small', 'large']),
+  rounded: boolean('rounded', false),
   outline: boolean('outline', false),
   inverse: boolean('inverse', false),
   disabled: boolean('disabled', false)
