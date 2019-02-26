@@ -1,18 +1,18 @@
-import React from 'react';
-import { storiesOf } from '@storybook/react';
-import { withKnobs, select, number, text } from '@storybook/addon-knobs';
+import React from "react";
+import { storiesOf } from "@storybook/react";
+import { withKnobs, select, number, text } from "@storybook/addon-knobs";
 
-import { Navbar } from '../src';
-import breakpoints from '../src/constants/breakpoints';
+import { Navbar } from "../src";
+import breakpoints from "../src/constants/breakpoints";
 
-const getColorProp = () => select('color', ['brown', 'white']);
+const getColorProp = () => select("color", ["brown", "white"]);
 const getMobileBreakpointProp = () =>
-  number('mobileBreakpoint', breakpoints.md);
+  number("mobileBreakpoint", breakpoints.md);
 
-storiesOf('Navbar', module)
+storiesOf("Navbar", module)
   .addDecorator(withKnobs)
-  .add('default', () => <Navbar color={getColorProp()} />)
-  .add('with Nav', () => (
+  .add("default", () => <Navbar color={getColorProp()} />)
+  .add("with Nav", () => (
     <Navbar color={getColorProp()} mobileBreakpoint={getMobileBreakpointProp()}>
       <Navbar.Nav>
         <Navbar.Nav.Item>
@@ -27,11 +27,11 @@ storiesOf('Navbar', module)
       </Navbar.Nav>
     </Navbar>
   ))
-  .add('with GlobalNav', () => (
+  .add("with GlobalNav", () => (
     <Navbar
       color={getColorProp()}
       mobileBreakpoint={getMobileBreakpointProp()}
-      toggleTitle={text('toggleTitle', 'Global Navigation')}
+      toggleTitle={text("toggleTitle", "Global Navigation")}
     >
       <Navbar.GlobalNav>
         <Navbar.GlobalNav.Item>

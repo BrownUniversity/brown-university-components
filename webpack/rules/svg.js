@@ -1,12 +1,12 @@
-const path = require('path');
+const path = require("path");
 
 module.exports = {
   test: /\.svg$/,
   oneOf: [
     {
-      include: path.resolve(__dirname, '../../src/svg/inline/'),
+      include: path.resolve(__dirname, "../../src/svg/inline/"),
       use: {
-        loader: 'react-svg-loader',
+        loader: "react-svg-loader",
         options: {
           svgo: {
             plugins: [
@@ -22,11 +22,11 @@ module.exports = {
       }
     },
     {
-      exclude: path.resolve(__dirname, '../../src/svg/inline/'),
+      exclude: path.resolve(__dirname, "../../src/svg/inline/"),
       use: {
-        loader: 'file-loader',
+        loader: "file-loader",
         options: {
-          name: '[name].[ext]'
+          name: "[name].[ext]"
         }
       }
     }
