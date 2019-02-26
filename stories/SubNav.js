@@ -1,9 +1,9 @@
-import React from 'react';
-import { storiesOf } from '@storybook/react';
+import React from "react";
+import { storiesOf } from "@storybook/react";
 
-import { SubNav } from '../src';
+import { SubNav } from "../src";
 
-storiesOf('SubNav', module).add('default', () => (
+storiesOf("SubNav", module).add("default", () => (
   <SubNav>
     <SubNav.Item>
       <SubNav.Link>Link</SubNav.Link>
