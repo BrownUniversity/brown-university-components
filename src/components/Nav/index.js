@@ -1,11 +1,11 @@
-import PropTypes from 'prop-types';
-import React from 'react';
-import styled from 'styled-components';
+import PropTypes from "prop-types";
+import React from "react";
+import styled from "styled-components";
 
-import NavContext from './NavContext';
-import NavItem from './NavItem';
-import NavLink from './NavLink';
-import colors from '../../constants/colors';
+import NavContext from "./NavContext";
+import NavItem from "./NavItem";
+import NavLink from "./NavLink";
+import colors from "../../constants/colors";
 
 /*
   css prop getters
@@ -15,31 +15,31 @@ const getBackgroundColor = ({ sub }) => {
     return colors.lightGray;
   }
 
-  return 'transparent';
+  return "transparent";
 };
 
 const getDisplay = ({ mobile, sub }) => {
   if (mobile || sub) {
-    return 'block';
+    return "block";
   }
 
-  return 'flex';
+  return "flex";
 };
 
 const getPadding = ({ sub }) => {
   if (sub) {
-    return '15px';
+    return "15px";
   }
 
-  return '0';
+  return "0";
 };
 
 const getWidth = ({ mobile, sub }) => {
   if (mobile || sub) {
-    return '100%';
+    return "100%";
   }
 
-  return 'auto';
+  return "auto";
 };
 
 /*
@@ -74,7 +74,7 @@ Nav.propTypes = {
   navbar: PropTypes.bool,
   mobile: PropTypes.bool,
   sub: PropTypes.bool,
-  color: PropTypes.oneOf(['red', 'white']),
+  color: PropTypes.oneOf(["red", "white"]),
   children: PropTypes.node.isRequired
 };
 
@@ -82,7 +82,7 @@ Nav.defaultProps = {
   navbar: false,
   mobile: false,
   sub: false,
-  color: 'red'
+  color: "red"
 };
 
 Nav.Item = NavItem;

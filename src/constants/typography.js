@@ -1,7 +1,7 @@
-export const sans = 'Circular-Book, Arial, Helvetica, sans-serif';
+export const sans = "Circular-Book, Arial, Helvetica, sans-serif";
 
 export const sansBold =
-  'Circular-Bold, Circular-Book, Arial, Helvetica, sans-serif';
+  "Circular-Bold, Circular-Book, Arial, Helvetica, sans-serif";
 
 export const serif = 'minion-pro, "Times New Roman", serif';
 

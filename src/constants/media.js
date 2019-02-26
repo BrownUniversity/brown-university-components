@@ -1,6 +1,6 @@
-import { css } from 'styled-components';
+import { css } from "styled-components";
 
-import breakpoints from './breakpoints';
+import breakpoints from "./breakpoints";
 
 export default {
   sm: (...args) => css`

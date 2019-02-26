@@ -1,10 +1,10 @@
-import PropTypes from 'prop-types';
-import React from 'react';
-import styled, { css } from 'styled-components';
-import { darken } from 'polished';
+import PropTypes from "prop-types";
+import React from "react";
+import styled, { css } from "styled-components";
+import { darken } from "polished";
 
-import colors from '../constants/colors';
-import { sans } from '../constants/typography';
+import colors from "../constants/colors";
+import { sans } from "../constants/typography";
 
 /*
   css mixins
@@ -27,7 +27,7 @@ const buttonAfterCSS = css`
   border-color: transparent transparent transparent transparent;
   border-style: solid;
   border-width: 3.5px 0 3.5px 5px;
-  content: '';
+  content: "";
   display: inline-block;
   height: 0;
   position: relative;
@@ -64,7 +64,7 @@ const getBackgroundColor = ({ color, outline, inverse }) => {
   }
 
   if (outline) {
-    return 'transparent';
+    return "transparent";
   }
 
   return colors[color];
@@ -96,12 +96,12 @@ const getColor = ({ color, outline, inverse }) => {
 
 const getFontSize = ({ size }) => {
   switch (size) {
-    case 'small':
-      return '0.55em';
-    case 'large':
-      return '0.95em';
+    case "small":
+      return "0.55em";
+    case "large":
+      return "0.95em";
     default:
-      return '0.75em';
+      return "0.75em";
   }
 };
 
@@ -163,12 +163,12 @@ const Tag = styled.div`
   box-shadow: inset 0 0 0 1px ${props => getBoxShadow(props)};
   color: ${props => getColor(props)};
   cursor: ${({ disabled, href }) =>
-    disabled && !href ? 'not-allowed' : 'pointer'};
+    disabled && !href ? "not-allowed" : "pointer"};
   font-size: ${props => getFontSize(props)};
-  opacity: ${({ disabled }) => (disabled ? '0.65' : '1')};
-  padding: ${({ href }) => (href ? '12px 25px 12px 20px' : '12px 25px')};
+  opacity: ${({ disabled }) => (disabled ? "0.65" : "1")};
+  padding: ${({ href }) => (href ? "12px 25px 12px 20px" : "12px 25px")};
   pointer-events: ${({ disabled, href }) =>
-    disabled && href ? 'none' : 'auto'};
+    disabled && href ? "none" : "auto"};
 
   ${props =>
     props.href &&
@@ -202,8 +202,8 @@ const Tag = styled.div`
   outer Button component
 */
 const deriveTag = ({ tag, href }) => {
-  if (tag === 'button' && href) {
-    return 'a';
+  if (tag === "button" && href) {
+    return "a";
   }
 
   return tag;
@@ -216,7 +216,7 @@ const Button = props => {
   return (
     <Tag
       as={derivedTag}
-      type={derivedTag === 'button' && props.onClick ? 'button' : undefined}
+      type={derivedTag === "button" && props.onClick ? "button" : undefined}
       {...restProps}
     />
   );
@@ -225,15 +225,15 @@ const Button = props => {
 Button.propTypes = {
   tag: PropTypes.oneOfType([PropTypes.func, PropTypes.string]),
   color: PropTypes.oneOf([
-    'red',
-    'yellow',
-    'brown',
-    'gray',
-    'emerald',
-    'skyblue',
-    'navy'
+    "red",
+    "yellow",
+    "brown",
+    "gray",
+    "emerald",
+    "skyblue",
+    "navy"
   ]),
-  size: PropTypes.oneOf(['default', 'small', 'large']),
+  size: PropTypes.oneOf(["default", "small", "large"]),
   outline: PropTypes.bool,
   inverse: PropTypes.bool,
   disabled: PropTypes.bool,
@@ -242,9 +242,9 @@ Button.propTypes = {
 };
 
 Button.defaultProps = {
-  tag: 'button',
-  color: 'red',
-  size: 'default',
+  tag: "button",
+  color: "red",
+  size: "default",
   outline: false,
   inverse: false,
   disabled: false,

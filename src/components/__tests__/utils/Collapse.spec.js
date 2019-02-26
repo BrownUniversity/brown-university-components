@@ -1,7 +1,7 @@
-import React from 'react';
-import { render, fireEvent, wait } from 'react-testing-library';
+import React from "react";
+import { render, fireEvent, wait } from "react-testing-library";
 
-import Collapse from '../../utils/Collapse';
+import Collapse from "../../utils/Collapse";
 
 const renderCollapse = ({ props = {}, children = <div /> } = {}) => {
   const { isOpen = false, ...restProps } = props;
@@ -21,18 +21,18 @@ afterEach(() => {
   process.NODE_ENV = undefined;
 });
 
-describe('Collapse', () => {
-  describe('children', () => {
-    it('should render children', () => {
+describe("Collapse", () => {
+  describe("children", () => {
+    it("should render children", () => {
       const children = <div data-testid="collapse-children" />;
       const { getByTestId } = renderCollapse({ children });
 
-      expect(getByTestId('collapse-children')).toBeInTheDocument();
+      expect(getByTestId("collapse-children")).toBeInTheDocument();
     });
   });
 
-  describe('style', () => {
-    it('should render closed collapse when isOpen variant is provided', () => {
+  describe("style", () => {
+    it("should render closed collapse when isOpen variant is provided", () => {
       const { collapse } = renderCollapse();
 
       expect(collapse).toMatchInlineSnapshot(`
@@ -56,7 +56,7 @@ describe('Collapse', () => {
 `);
     });
 
-    it('should render opened collapse when isOpen variant is provided', () => {
+    it("should render opened collapse when isOpen variant is provided", () => {
       const { collapse } = renderCollapse({ props: { isOpen: true } });
 
       expect(collapse).toMatchInlineSnapshot(`
@@ -80,11 +80,11 @@ describe('Collapse', () => {
 `);
     });
 
-    it('should render custom transition when provided', () => {
-      const transition = 'height 5ms cubic-bezier(0.4,0,0.2,1)';
+    it("should render custom transition when provided", () => {
+      const transition = "height 5ms cubic-bezier(0.4,0,0.2,1)";
       const { collapse } = renderCollapse({ props: { transition } });
 
-      expect(collapse).toHaveStyleRule('transition', transition);
+      expect(collapse).toHaveStyleRule("transition", transition);
     });
   });
 
@@ -98,11 +98,11 @@ describe('Collapse', () => {
     https://github.com/kentcdodds/dom-testing-library/issues/144
   */
 
-  it('should transition from closed to open', async () => {
-    process.NODE_ENV = 'jest';
+  it("should transition from closed to open", async () => {
+    process.NODE_ENV = "jest";
     const { collapse, rerender } = renderCollapse();
 
-    expect(collapse).toHaveStyleRule('display', 'none');
+    expect(collapse).toHaveStyleRule("display", "none");
 
     rerender(
       <Collapse isOpen>
@@ -111,18 +111,18 @@ describe('Collapse', () => {
     );
     fireEvent.transitionEnd(collapse);
 
-    await wait(() => expect(collapse).toHaveStyleRule('height', 'auto'));
-    expect(collapse).toHaveStyleRule('overflow', 'visible');
-    expect(collapse).toHaveStyleRule('display', 'block');
+    await wait(() => expect(collapse).toHaveStyleRule("height", "auto"));
+    expect(collapse).toHaveStyleRule("overflow", "visible");
+    expect(collapse).toHaveStyleRule("display", "block");
   });
 
-  it('should transition from open to closed', async () => {
-    process.NODE_ENV = 'jest';
+  it("should transition from open to closed", async () => {
+    process.NODE_ENV = "jest";
     const { collapse, rerender } = renderCollapse({
       props: { isOpen: true }
     });
 
-    expect(collapse).toHaveStyleRule('display', 'block');
+    expect(collapse).toHaveStyleRule("display", "block");
 
     rerender(
       <Collapse isOpen={false}>
@@ -131,8 +131,8 @@ describe('Collapse', () => {
     );
     fireEvent.transitionEnd(collapse);
 
-    await wait(() => expect(collapse).toHaveStyleRule('display', 'none'));
-    expect(collapse).toHaveStyleRule('height', '0');
-    expect(collapse).toHaveStyleRule('overflow', 'hidden');
+    await wait(() => expect(collapse).toHaveStyleRule("display", "none"));
+    expect(collapse).toHaveStyleRule("height", "0");
+    expect(collapse).toHaveStyleRule("overflow", "hidden");
   });
 });

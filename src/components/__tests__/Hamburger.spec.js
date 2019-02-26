@@ -1,7 +1,7 @@
-import React from 'react';
-import { render, fireEvent } from 'react-testing-library';
+import React from "react";
+import { render, fireEvent } from "react-testing-library";
 
-import Hamburger from '../Hamburger';
+import Hamburger from "../Hamburger";
 
 const renderHamburger = ({ props = {} } = {}) => {
   const rtlUtils = render(<Hamburger {...props} />);
@@ -14,10 +14,10 @@ const renderHamburger = ({ props = {} } = {}) => {
   };
 };
 
-describe('Hamburger', () => {
-  describe('as button', () => {
-    describe('styles', () => {
-      it('should render closed red button element by default', () => {
+describe("Hamburger", () => {
+  describe("as button", () => {
+    describe("styles", () => {
+      it("should render closed red button element by default", () => {
         const { hamburger } = renderHamburger();
 
         expect(hamburger).toMatchInlineSnapshot(`
@@ -50,7 +50,7 @@ describe('Hamburger', () => {
   position: absolute;
   width: 25px;
   background-color: #C00404;
-  content: '';
+  content: "";
   display: block;
   -webkit-transition-property: -webkit-transform;
   -webkit-transition-property: transform;
@@ -69,7 +69,7 @@ describe('Hamburger', () => {
   position: absolute;
   width: 25px;
   background-color: #C00404;
-  content: '';
+  content: "";
   display: block;
   -webkit-transition-property: -webkit-transform;
   -webkit-transition-property: transform;
@@ -97,7 +97,7 @@ describe('Hamburger', () => {
 `);
       });
 
-      it('should render open red button element when variant is provided', () => {
+      it("should render open red button element when variant is provided", () => {
         const { hamburger } = renderHamburger({
           props: { isOpen: true }
         });
@@ -145,7 +145,7 @@ describe('Hamburger', () => {
   position: absolute;
   width: 25px;
   background-color: #C00404;
-  content: '';
+  content: "";
   display: block;
   -webkit-transition-property: -webkit-transform;
   -webkit-transition-property: transform;
@@ -169,7 +169,7 @@ describe('Hamburger', () => {
   position: absolute;
   width: 25px;
   background-color: #C00404;
-  content: '';
+  content: "";
   display: block;
   -webkit-transition-property: -webkit-transform;
   -webkit-transition-property: transform;
@@ -205,37 +205,37 @@ describe('Hamburger', () => {
 `);
       });
 
-      it('should render closed white button element when variant is provided', () => {
+      it("should render closed white button element when variant is provided", () => {
         const { hamburgerBars } = renderHamburger({
-          props: { color: 'white' }
+          props: { color: "white" }
         });
 
-        expect(hamburgerBars).toHaveStyleRule('background-color', '#FFFFFF');
-        expect(hamburgerBars).toHaveStyleRule('background-color', '#FFFFFF', {
-          modifier: '&&:before'
+        expect(hamburgerBars).toHaveStyleRule("background-color", "#FFFFFF");
+        expect(hamburgerBars).toHaveStyleRule("background-color", "#FFFFFF", {
+          modifier: "&&:before"
         });
-        expect(hamburgerBars).toHaveStyleRule('background-color', '#FFFFFF', {
-          modifier: '&&:after'
+        expect(hamburgerBars).toHaveStyleRule("background-color", "#FFFFFF", {
+          modifier: "&&:after"
         });
       });
 
-      it('should render open white button element when variant is provided', () => {
+      it("should render open white button element when variant is provided", () => {
         const { hamburgerBars } = renderHamburger({
-          props: { color: 'white', isOpen: true }
+          props: { color: "white", isOpen: true }
         });
 
-        expect(hamburgerBars).toHaveStyleRule('background-color', '#FFFFFF');
-        expect(hamburgerBars).toHaveStyleRule('background-color', '#FFFFFF', {
-          modifier: '&&:before'
+        expect(hamburgerBars).toHaveStyleRule("background-color", "#FFFFFF");
+        expect(hamburgerBars).toHaveStyleRule("background-color", "#FFFFFF", {
+          modifier: "&&:before"
         });
-        expect(hamburgerBars).toHaveStyleRule('background-color', '#FFFFFF', {
-          modifier: '&&:after'
+        expect(hamburgerBars).toHaveStyleRule("background-color", "#FFFFFF", {
+          modifier: "&&:after"
         });
       });
     });
 
-    describe('onClick', () => {
-      it('should call onOpen when hamburger is opened', () => {
+    describe("onClick", () => {
+      it("should call onOpen when hamburger is opened", () => {
         const onOpen = jest.fn();
         const onClose = jest.fn();
         const { hamburger } = renderHamburger({
@@ -247,7 +247,7 @@ describe('Hamburger', () => {
         expect(onClose).not.toHaveBeenCalled();
       });
 
-      it('should call onClose when hamburger is closed', () => {
+      it("should call onClose when hamburger is closed", () => {
         const onOpen = jest.fn();
         const onClose = jest.fn();
         const { hamburger } = renderHamburger({
@@ -260,53 +260,53 @@ describe('Hamburger', () => {
       });
     });
 
-    it('should render custom aria-label when provided', () => {
+    it("should render custom aria-label when provided", () => {
       const { hamburger } = renderHamburger({
-        props: { ariaLabel: 'Custom label' }
+        props: { ariaLabel: "Custom label" }
       });
 
-      expect(hamburger).toHaveAttribute('aria-label', 'Custom label');
+      expect(hamburger).toHaveAttribute("aria-label", "Custom label");
     });
 
-    it('should update when isOpen prop changes', () => {
+    it("should update when isOpen prop changes", () => {
       const { hamburger, rerender } = renderHamburger();
 
-      expect(hamburger).toHaveAttribute('aria-expanded', 'false');
+      expect(hamburger).toHaveAttribute("aria-expanded", "false");
 
       rerender(<Hamburger isOpen onOpen={jest.fn()} onClose={jest.fn()} />);
 
-      expect(hamburger).toHaveAttribute('aria-expanded', 'true');
+      expect(hamburger).toHaveAttribute("aria-expanded", "true");
     });
   });
 
-  describe('as div', () => {
-    it('should render without button attributes', () => {
-      const { hamburger } = renderHamburger({ props: { tag: 'div' } });
+  describe("as div", () => {
+    it("should render without button attributes", () => {
+      const { hamburger } = renderHamburger({ props: { tag: "div" } });
 
-      expect(hamburger).not.toHaveAttribute('type');
-      expect(hamburger).not.toHaveAttribute('aria-expanded');
-      expect(hamburger).not.toHaveAttribute('aria-label');
+      expect(hamburger).not.toHaveAttribute("type");
+      expect(hamburger).not.toHaveAttribute("aria-expanded");
+      expect(hamburger).not.toHaveAttribute("aria-label");
     });
 
-    describe('styles', () => {
-      it('should render closed with alternate styles', () => {
-        const { hamburger } = renderHamburger({ props: { tag: 'div' } });
+    describe("styles", () => {
+      it("should render closed with alternate styles", () => {
+        const { hamburger } = renderHamburger({ props: { tag: "div" } });
 
-        expect(hamburger).toHaveStyleRule('cursor', 'inherit');
-        expect(hamburger).not.toHaveStyleRule('height');
-        expect(hamburger).toHaveStyleRule('display', 'inline-block');
-        expect(hamburger).toHaveStyleRule('padding', '0 25px 7px 0');
+        expect(hamburger).toHaveStyleRule("cursor", "inherit");
+        expect(hamburger).not.toHaveStyleRule("height");
+        expect(hamburger).toHaveStyleRule("display", "inline-block");
+        expect(hamburger).toHaveStyleRule("padding", "0 25px 7px 0");
       });
 
-      it('should render open with alternate styles', () => {
+      it("should render open with alternate styles", () => {
         const { hamburger } = renderHamburger({
-          props: { tag: 'div', isOpen: true }
+          props: { tag: "div", isOpen: true }
         });
 
-        expect(hamburger).toHaveStyleRule('cursor', 'inherit');
-        expect(hamburger).not.toHaveStyleRule('height');
-        expect(hamburger).toHaveStyleRule('display', 'inline-block');
-        expect(hamburger).toHaveStyleRule('padding', '0 25px 7px 0');
+        expect(hamburger).toHaveStyleRule("cursor", "inherit");
+        expect(hamburger).not.toHaveStyleRule("height");
+        expect(hamburger).toHaveStyleRule("display", "inline-block");
+        expect(hamburger).toHaveStyleRule("padding", "0 25px 7px 0");
       });
     });
   });

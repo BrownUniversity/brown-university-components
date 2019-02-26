@@ -1,7 +1,7 @@
 /* eslint-disable no-return-assign */
-import PropTypes from 'prop-types';
-import React, { Component } from 'react';
-import styled from 'styled-components';
+import PropTypes from "prop-types";
+import React, { Component } from "react";
+import styled from "styled-components";
 
 /*
   inner Tag component
@@ -20,9 +20,9 @@ const Tag = styled.div`
 */
 class Collapse extends Component {
   state = {
-    display: 'none',
-    height: '0',
-    overflow: 'hidden'
+    display: "none",
+    height: "0",
+    overflow: "hidden"
   };
 
   tagRef = null;
@@ -37,7 +37,7 @@ class Collapse extends Component {
     if (!prevProps.isOpen && this.props.isOpen) {
       this.setState(
         {
-          display: 'block'
+          display: "block"
         },
         () =>
           this.setState({
@@ -50,8 +50,8 @@ class Collapse extends Component {
       this.setState({ height: `${this.getHeight()}px` }, () =>
         setTimeout(() =>
           this.setState({
-            height: '0',
-            overflow: 'hidden'
+            height: "0",
+            overflow: "hidden"
           })
         )
       );
@@ -62,20 +62,20 @@ class Collapse extends Component {
 
   setExpanded = () => {
     this.setState({
-      display: 'block',
-      height: 'auto',
-      overflow: 'visible'
+      display: "block",
+      height: "auto",
+      overflow: "visible"
     });
   };
 
   setCollapsed = () => {
-    this.setState({ display: 'none' });
+    this.setState({ display: "none" });
   };
 
   handleTransitionEnd = e => {
     const ePropertyName =
-      process.NODE_ENV === 'jest' ? 'height' : e.propertyName;
-    if (e.target === this.tagRef && ePropertyName === 'height') {
+      process.NODE_ENV === "jest" ? "height" : e.propertyName;
+    if (e.target === this.tagRef && ePropertyName === "height") {
       if (this.props.isOpen) {
         this.setExpanded();
       } else {
@@ -107,7 +107,7 @@ Collapse.propTypes = {
 };
 
 Collapse.defaultProps = {
-  transition: 'height 250ms cubic-bezier(0.4,0,0.2,1)'
+  transition: "height 250ms cubic-bezier(0.4,0,0.2,1)"
 };
 
 export default Collapse;

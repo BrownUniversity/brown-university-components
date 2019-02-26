@@ -1,7 +1,7 @@
-import PropTypes from 'prop-types';
-import React from 'react';
+import PropTypes from "prop-types";
+import React from "react";
 
-import Nav from './Nav';
+import Nav from "./Nav";
 
 const SubNav = ({ children, ...restProps }) => (
   <nav {...restProps}>

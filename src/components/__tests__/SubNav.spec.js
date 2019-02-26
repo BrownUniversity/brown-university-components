@@ -1,7 +1,7 @@
-import React from 'react';
-import { render } from 'react-testing-library';
+import React from "react";
+import { render } from "react-testing-library";
 
-import SubNav from '../SubNav';
+import SubNav from "../SubNav";
 
 const renderSubNav = ({
   props = {},
@@ -27,8 +27,8 @@ const renderSubNav = ({
   };
 };
 
-describe('SubNav', () => {
-  it('should render default', () => {
+describe("SubNav", () => {
+  it("should render default", () => {
     const { subNav } = renderSubNav();
 
     expect(subNav).toMatchSnapshot();

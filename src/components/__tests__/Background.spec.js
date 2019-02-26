@@ -1,10 +1,10 @@
-import React from 'react';
-import { render } from 'react-testing-library';
+import React from "react";
+import { render } from "react-testing-library";
 
-import Background from '../Background';
+import Background from "../Background";
 
 const renderBackground = ({ props = {}, children = <div /> } = {}) => {
-  const { url = 'background.svg', ...restProps } = props;
+  const { url = "background.svg", ...restProps } = props;
   const rtlUtils = render(
     <Background {...restProps} url={url}>
       {children}
@@ -17,18 +17,18 @@ const renderBackground = ({ props = {}, children = <div /> } = {}) => {
   };
 };
 
-describe('Background', () => {
-  describe('children', () => {
-    it('should render children', () => {
+describe("Background", () => {
+  describe("children", () => {
+    it("should render children", () => {
       const children = <div data-testid="background-children" />;
       const { getByTestId } = renderBackground({ children });
 
-      expect(getByTestId('background-children')).toBeInTheDocument();
+      expect(getByTestId("background-children")).toBeInTheDocument();
     });
   });
 
-  describe('styles', () => {
-    it('should render full white background by default', () => {
+  describe("styles", () => {
+    it("should render full white background by default", () => {
       const { background } = renderBackground();
 
       expect(background).toMatchInlineSnapshot(`
@@ -54,24 +54,24 @@ describe('Background', () => {
 `);
     });
 
-    it('should render gray background when color variant is provided', () => {
-      const { background } = renderBackground({ props: { color: 'gray' } });
+    it("should render gray background when color variant is provided", () => {
+      const { background } = renderBackground({ props: { color: "gray" } });
 
-      expect(background).toHaveStyleRule('background-color', '#F0F3F5');
+      expect(background).toHaveStyleRule("background-color", "#F0F3F5");
     });
 
-    it('should render responsive background when variant is provided', () => {
+    it("should render responsive background when variant is provided", () => {
       const { background } = renderBackground({ props: { full: false } });
 
-      expect(background).not.toHaveStyleRule('background-size', '100%', {
-        media: '(min-width: 1600px)'
+      expect(background).not.toHaveStyleRule("background-size", "100%", {
+        media: "(min-width: 1600px)"
       });
     });
 
-    it('should render with marginTop when variant is provided', () => {
+    it("should render with marginTop when variant is provided", () => {
       const { background } = renderBackground({ props: { marginTop: 150 } });
 
-      expect(background).toHaveStyleRule('background-position-y', '150px');
+      expect(background).toHaveStyleRule("background-position-y", "150px");
     });
   });
 });

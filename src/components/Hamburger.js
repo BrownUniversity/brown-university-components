@@ -1,8 +1,8 @@
-import PropTypes from 'prop-types';
-import React, { Component } from 'react';
-import styled, { css } from 'styled-components';
+import PropTypes from "prop-types";
+import React, { Component } from "react";
+import styled, { css } from "styled-components";
 
-import colors from '../constants/colors';
+import colors from "../constants/colors";
 
 /*
   css mixins
@@ -15,7 +15,7 @@ const hamburgerBarCSS = css`
 `;
 
 const hamburgerBarPseudoElementCSS = css`
-  content: '';
+  content: "";
   display: block;
 `;
 
@@ -30,11 +30,11 @@ const hamburgerTransitionCSS = css`
 const HamburgerTag = styled.div`
   background: transparent;
   border: none;
-  cursor:  ${props => (props.as === 'button' ? 'pointer' : 'inherit')};
-  ${props => props.as === 'div' && 'display: inline-block;'}
-  ${props => props.as === 'button' && 'height: 24px;'}
+  cursor:  ${props => (props.as === "button" ? "pointer" : "inherit")};
+  ${props => props.as === "div" && "display: inline-block;"}
+  ${props => props.as === "button" && "height: 24px;"}
   padding: ${props =>
-    props.as === 'button' ? '0 25px 3px 0' : '0 25px 7px 0'};
+    props.as === "button" ? "0 25px 3px 0" : "0 25px 7px 0"};
 `;
 
 // filter props so they don't become dom attributes (see `styled-components` issue 439)
@@ -66,8 +66,8 @@ const HamburgerBars = styled(({ color, isOpen, ...restProps }) => (
     ${hamburgerTransitionCSS}
     transition-duration: .15s;
     transition: top .1s .25s ease-in, opacity .1s ease-in;
-    opacity: ${props => props.isOpen && '0'};
-    top: ${props => (props.isOpen ? '0' : '-7px')};
+    opacity: ${props => props.isOpen && "0"};
+    top: ${props => (props.isOpen ? "0" : "-7px")};
 
     ${props =>
       props.isOpen &&
@@ -84,7 +84,7 @@ const HamburgerBars = styled(({ color, isOpen, ...restProps }) => (
     ${hamburgerTransitionCSS}
     transition-duration: .15s;
     transition: bottom .1s .25s ease-in, transform .22s cubic-bezier(0.55, 0.055, 0.675, 0.19);
-    bottom: ${props => (props.isOpen ? '0' : '-7px')};
+    bottom: ${props => (props.isOpen ? "0" : "-7px")};
 
     ${props =>
       props.isOpen &&
@@ -130,13 +130,13 @@ class Hamburger extends Component {
   render() {
     const { tag, color, ariaLabel, onOpen, onClose, ...restProps } = this.props;
     const { isOpen } = this.state;
-    const isButton = tag === 'button';
+    const isButton = tag === "button";
 
     return (
       <HamburgerTag
         {...restProps}
         as={tag}
-        type={isButton ? 'button' : null}
+        type={isButton ? "button" : null}
         aria-expanded={isButton ? isOpen : null}
         aria-label={isButton ? ariaLabel : null}
         onClick={isButton ? this.handleClick : null}
@@ -148,8 +148,8 @@ class Hamburger extends Component {
 }
 
 Hamburger.propTypes = {
-  tag: PropTypes.oneOf(['button', 'div']),
-  color: PropTypes.oneOf(['red', 'white']),
+  tag: PropTypes.oneOf(["button", "div"]),
+  color: PropTypes.oneOf(["red", "white"]),
   ariaLabel: PropTypes.string,
   isOpen: PropTypes.bool,
   onOpen: PropTypes.func,
@@ -157,9 +157,9 @@ Hamburger.propTypes = {
 };
 
 Hamburger.defaultProps = {
-  tag: 'button',
-  color: 'red',
-  ariaLabel: 'Toggle navigation',
+  tag: "button",
+  color: "red",
+  ariaLabel: "Toggle navigation",
   isOpen: false,
   onOpen: null,
   onClose: null

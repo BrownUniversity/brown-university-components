@@ -1,11 +1,11 @@
-import PropTypes from 'prop-types';
-import React from 'react';
-import styled, { css } from 'styled-components';
+import PropTypes from "prop-types";
+import React from "react";
+import styled, { css } from "styled-components";
 
-import NavContext from './NavContext';
-import colors from '../../constants/colors';
-import media from '../../constants/media';
-import { sans } from '../../constants/typography';
+import NavContext from "./NavContext";
+import colors from "../../constants/colors";
+import media from "../../constants/media";
+import { sans } from "../../constants/typography";
 
 /*
   css mixins
@@ -20,7 +20,7 @@ const navLinkCSS = css`
 `;
 
 const navLinkAfterCSS = css`
-  content: '';
+  content: "";
   display: block;
   height: 3px;
 `;
@@ -34,7 +34,7 @@ const getColor = ({ active, mobile, sub, color }) => {
 
   if (mobile || sub) {
     switch (color) {
-      case 'white':
+      case "white":
         activeColor = colors.sand;
         defaultColor = colors.white;
         break;
@@ -47,7 +47,7 @@ const getColor = ({ active, mobile, sub, color }) => {
     }
   } else {
     switch (color) {
-      case 'white':
+      case "white":
         activeColor = colors.sand;
         defaultColor = colors.white;
         break;
@@ -69,76 +69,76 @@ const getColor = ({ active, mobile, sub, color }) => {
 
 const getCursor = ({ disabled, href }) => {
   if (disabled && !href) {
-    return 'not-allowed';
+    return "not-allowed";
   }
 
-  return 'pointer';
+  return "pointer";
 };
 
 const getFontSize = ({ navbar, mobile }) => {
   if (navbar || mobile) {
-    return '1em';
+    return "1em";
   }
 
-  return '1.1em';
+  return "1.1em";
 };
 
 const getFontWeight = ({ navbar, sub }) => {
   if (navbar || sub) {
-    return '400';
+    return "400";
   }
 
-  return '700';
+  return "700";
 };
 
 const getLineHeight = ({ navbar, mobile, sub }) => {
   if (navbar || mobile || sub) {
-    return '1.5';
+    return "1.5";
   }
 
-  return '1';
+  return "1";
 };
 const getOpacity = ({ disabled, color }) => {
-  if (disabled && color !== 'white') {
-    return '0.65';
+  if (disabled && color !== "white") {
+    return "0.65";
   }
 
-  return '1';
+  return "1";
 };
 
 const getPointerEvents = ({ disabled, href }) => {
   if (disabled && href) {
-    return 'none';
+    return "none";
   }
 
-  return 'auto';
+  return "auto";
 };
 
 const getTransition = ({ mobile, sub, href }) => {
   if (mobile || sub) {
-    return 'all .2s ease-in-out';
+    return "all .2s ease-in-out";
   }
 
   if (!href) {
     return null;
   }
 
-  return 'background-color .55s linear,border-color .25s linear,box-shadow .25s linear,color .25s linear';
+  return "background-color .55s linear,border-color .25s linear,box-shadow .25s linear,color .25s linear";
 };
 
 const getAfterMarginTop = ({ navbar }) => {
   if (navbar) {
-    return '0.25em';
+    return "0.25em";
   }
 
-  return '1em';
+  return "1em";
 };
 const getAfterWidth = ({ active }) => {
   if (active) {
-    return '100%';
+    return "100%";
   }
 
-  return '0';
+  return "0";
 };
 
 const getColorWithHover = ({ disabled, mobile, sub, color }) => {
@@ -147,7 +147,7 @@ const getColorWithHover = ({ disabled, mobile, sub, color }) => {
 
   if (mobile || sub) {
     switch (color) {
-      case 'white':
+      case "white":
         disabledColor = colors.white;
         defaultColor = colors.sand;
         break;
@@ -160,7 +160,7 @@ const getColorWithHover = ({ disabled, mobile, sub, color }) => {
     }
   } else {
     switch (color) {
-      case 'white':
+      case "white":
         disabledColor = colors.white;
         defaultColor = colors.sand;
         break;
@@ -182,10 +182,10 @@ const getColorWithHover = ({ disabled, mobile, sub, color }) => {
 
 const getAfterWidthWithHover = ({ disabled }) => {
   if (disabled) {
-    return '0';
+    return "0";
   }
 
-  return '100%';
+  return "100%";
 };
 
 /*
@@ -205,16 +205,16 @@ const Tag = styled.div`
 
   ${media.xl`
     font-size: ${({ navbar, mobile, sub }) =>
-      !(navbar || mobile || sub) && ' 1.2em'};
+      !(navbar || mobile || sub) && " 1.2em"};
   `};
 
   ${props =>
     !(props.mobile || props.sub) &&
     css`&::after {
       ${navLinkAfterCSS}
-      ${props.href && 'transition: width 0.3s;'}
+      ${props.href && "transition: width 0.3s;"}
       background: ${({ color }) =>
-        color === 'white' ? colors.sand : colors.red};
+        color === "white" ? colors.sand : colors.red};
       margin-top: ${getAfterMarginTop(props)};
       width: ${getAfterWidth(props)};
     }
@@ -238,8 +238,8 @@ const Tag = styled.div`
   outer NavLink component
 */
 const deriveTag = ({ tag, href }) => {
-  if (tag === 'button' && href) {
-    return 'a';
+  if (tag === "button" && href) {
+    return "a";
   }
 
   return tag;
@@ -254,7 +254,7 @@ const NavLink = props => {
       {({ navbar, mobile, sub, color }) => (
         <Tag
           as={derivedTag}
-          type={derivedTag === 'button' && props.onClick ? 'button' : undefined}
+          type={derivedTag === "button" && props.onClick ? "button" : undefined}
           {...restProps}
           navbar={navbar}
           mobile={mobile}
@@ -275,7 +275,7 @@ NavLink.propTypes = {
 };
 
 NavLink.defaultProps = {
-  tag: 'button',
+  tag: "button",
   active: false,
   disabled: false,
   onClick: null,
