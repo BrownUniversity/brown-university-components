@@ -19,7 +19,6 @@ const buttonCSS = css`
   line-height: 1.5;
   text-align: center;
   text-decoration: none !important;
-  text-transform: uppercase;
   transition: color 0.25s, background 0.25s, border 0.25s, box-shadow 0.25s;
 `;
 
@@ -160,7 +159,7 @@ const getColorWithHover = ({ color, outline, inverse, disabled }) => {
 const Tag = styled.div`
   ${buttonCSS}
   background-color: ${props => getBackgroundColor(props)};
-  border-radius: ${props => (props.rounded ? "5px" : null)};
+  border-radius: ${({ rounded }) => (rounded ? "5px" : null)};
   box-shadow: inset 0 0 0 1px ${props => getBoxShadow(props)};
   color: ${props => getColor(props)};
   cursor: ${({ disabled, href }) =>
@@ -170,6 +169,7 @@ const Tag = styled.div`
   padding: ${({ href }) => (href ? "12px 25px 12px 20px" : "12px 25px")};
   pointer-events: ${({ disabled, href }) =>
     disabled && href ? "none" : "auto"};
+  text-transform: ${({ uppercase }) => (uppercase ? "uppercase" : null)};
 
   ${props =>
     props.href &&
@@ -235,6 +235,7 @@ Button.propTypes = {
     "navy"
   ]),
   size: PropTypes.oneOf(["default", "small", "large"]),
+  uppercase: PropTypes.bool,
   rounded: PropTypes.bool,
   outline: PropTypes.bool,
   inverse: PropTypes.bool,
@@ -247,6 +248,7 @@ Button.defaultProps = {
   tag: "button",
   color: "red",
   size: "default",
+  uppercase: true,
   rounded: false,
   outline: false,
   inverse: false,

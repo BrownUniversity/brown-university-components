@@ -112,7 +112,6 @@ describe("Button", () => {
   text-align: center;
   -webkit-text-decoration: none !important;
   text-decoration: none !important;
-  text-transform: uppercase;
   -webkit-transition: color 0.25s,background 0.25s,border 0.25s,box-shadow 0.25s;
   transition: color 0.25s,background 0.25s,border 0.25s,box-shadow 0.25s;
   background-color: #C00404;
@@ -123,6 +122,7 @@ describe("Button", () => {
   opacity: 1;
   padding: 12px 25px;
   pointer-events: auto;
+  text-transform: uppercase;
 }
 
 .c0:hover {
@@ -161,7 +161,6 @@ describe("Button", () => {
   text-align: center;
   -webkit-text-decoration: none !important;
   text-decoration: none !important;
-  text-transform: uppercase;
   -webkit-transition: color 0.25s,background 0.25s,border 0.25s,box-shadow 0.25s;
   transition: color 0.25s,background 0.25s,border 0.25s,box-shadow 0.25s;
   background-color: #FFC72C;
@@ -172,6 +171,7 @@ describe("Button", () => {
   opacity: 1;
   padding: 12px 25px;
   pointer-events: auto;
+  text-transform: uppercase;
 }
 
 .c0:hover {
@@ -210,7 +210,6 @@ describe("Button", () => {
   text-align: center;
   -webkit-text-decoration: none !important;
   text-decoration: none !important;
-  text-transform: uppercase;
   -webkit-transition: color 0.25s,background 0.25s,border 0.25s,box-shadow 0.25s;
   transition: color 0.25s,background 0.25s,border 0.25s,box-shadow 0.25s;
   background-color: transparent;
@@ -221,6 +220,7 @@ describe("Button", () => {
   opacity: 1;
   padding: 12px 25px;
   pointer-events: auto;
+  text-transform: uppercase;
 }
 
 .c0:hover {
@@ -259,7 +259,6 @@ describe("Button", () => {
   text-align: center;
   -webkit-text-decoration: none !important;
   text-decoration: none !important;
-  text-transform: uppercase;
   -webkit-transition: color 0.25s,background 0.25s,border 0.25s,box-shadow 0.25s;
   transition: color 0.25s,background 0.25s,border 0.25s,box-shadow 0.25s;
   background-color: transparent;
@@ -270,6 +269,7 @@ describe("Button", () => {
   opacity: 1;
   padding: 12px 25px;
   pointer-events: auto;
+  text-transform: uppercase;
 }
 
 .c0:hover {
@@ -308,7 +308,6 @@ describe("Button", () => {
   text-align: center;
   -webkit-text-decoration: none !important;
   text-decoration: none !important;
-  text-transform: uppercase;
   -webkit-transition: color 0.25s,background 0.25s,border 0.25s,box-shadow 0.25s;
   transition: color 0.25s,background 0.25s,border 0.25s,box-shadow 0.25s;
   background-color: #FFFFFF;
@@ -319,6 +318,7 @@ describe("Button", () => {
   opacity: 1;
   padding: 12px 25px;
   pointer-events: auto;
+  text-transform: uppercase;
 }
 
 .c0:hover {
@@ -357,7 +357,6 @@ describe("Button", () => {
   text-align: center;
   -webkit-text-decoration: none !important;
   text-decoration: none !important;
-  text-transform: uppercase;
   -webkit-transition: color 0.25s,background 0.25s,border 0.25s,box-shadow 0.25s;
   transition: color 0.25s,background 0.25s,border 0.25s,box-shadow 0.25s;
   background-color: #FFFFFF;
@@ -368,6 +367,7 @@ describe("Button", () => {
   opacity: 1;
   padding: 12px 25px;
   pointer-events: auto;
+  text-transform: uppercase;
 }
 
 .c0:hover {
@@ -406,7 +406,6 @@ describe("Button", () => {
   text-align: center;
   -webkit-text-decoration: none !important;
   text-decoration: none !important;
-  text-transform: uppercase;
   -webkit-transition: color 0.25s,background 0.25s,border 0.25s,box-shadow 0.25s;
   transition: color 0.25s,background 0.25s,border 0.25s,box-shadow 0.25s;
   background-color: #C00404;
@@ -417,6 +416,7 @@ describe("Button", () => {
   opacity: 1;
   padding: 12px 25px;
   pointer-events: auto;
+  text-transform: uppercase;
 }
 
 .c0:hover {
@@ -460,7 +460,6 @@ describe("Button", () => {
   text-align: center;
   -webkit-text-decoration: none !important;
   text-decoration: none !important;
-  text-transform: uppercase;
   -webkit-transition: color 0.25s,background 0.25s,border 0.25s,box-shadow 0.25s;
   transition: color 0.25s,background 0.25s,border 0.25s,box-shadow 0.25s;
   background-color: #00B398;
@@ -471,6 +470,7 @@ describe("Button", () => {
   opacity: 1;
   padding: 12px 25px;
   pointer-events: auto;
+  text-transform: uppercase;
 }
 
 .c0:hover {
@@ -521,7 +521,6 @@ describe("Button", () => {
   text-align: center;
   -webkit-text-decoration: none !important;
   text-decoration: none !important;
-  text-transform: uppercase;
   -webkit-transition: color 0.25s,background 0.25s,border 0.25s,box-shadow 0.25s;
   transition: color 0.25s,background 0.25s,border 0.25s,box-shadow 0.25s;
   background-color: #C00404;
@@ -532,6 +531,7 @@ describe("Button", () => {
   opacity: 1;
   padding: 12px 25px 12px 20px;
   pointer-events: auto;
+  text-transform: uppercase;
 }
 
 .c0::after {
@@ -604,7 +604,6 @@ describe("Button", () => {
   text-align: center;
   -webkit-text-decoration: none !important;
   text-decoration: none !important;
-  text-transform: uppercase;
   -webkit-transition: color 0.25s,background 0.25s,border 0.25s,box-shadow 0.25s;
   transition: color 0.25s,background 0.25s,border 0.25s,box-shadow 0.25s;
   background-color: #003C71;
@@ -615,6 +614,7 @@ describe("Button", () => {
   opacity: 1;
   padding: 12px 25px 12px 20px;
   pointer-events: auto;
+  text-transform: uppercase;
 }
 
 .c0::after {
@@ -687,7 +687,6 @@ describe("Button", () => {
   text-align: center;
   -webkit-text-decoration: none !important;
   text-decoration: none !important;
-  text-transform: uppercase;
   -webkit-transition: color 0.25s,background 0.25s,border 0.25s,box-shadow 0.25s;
   transition: color 0.25s,background 0.25s,border 0.25s,box-shadow 0.25s;
   background-color: transparent;
@@ -698,6 +697,7 @@ describe("Button", () => {
   opacity: 1;
   padding: 12px 25px 12px 20px;
   pointer-events: auto;
+  text-transform: uppercase;
 }
 
 .c0::after {
@@ -774,7 +774,6 @@ describe("Button", () => {
   text-align: center;
   -webkit-text-decoration: none !important;
   text-decoration: none !important;
-  text-transform: uppercase;
   -webkit-transition: color 0.25s,background 0.25s,border 0.25s,box-shadow 0.25s;
   transition: color 0.25s,background 0.25s,border 0.25s,box-shadow 0.25s;
   background-color: transparent;
@@ -785,6 +784,7 @@ describe("Button", () => {
   opacity: 1;
   padding: 12px 25px 12px 20px;
   pointer-events: auto;
+  text-transform: uppercase;
 }
 
 .c0::after {
@@ -857,7 +857,6 @@ describe("Button", () => {
   text-align: center;
   -webkit-text-decoration: none !important;
   text-decoration: none !important;
-  text-transform: uppercase;
   -webkit-transition: color 0.25s,background 0.25s,border 0.25s,box-shadow 0.25s;
   transition: color 0.25s,background 0.25s,border 0.25s,box-shadow 0.25s;
   background-color: #FFFFFF;
@@ -868,6 +867,7 @@ describe("Button", () => {
   opacity: 1;
   padding: 12px 25px 12px 20px;
   pointer-events: auto;
+  text-transform: uppercase;
 }
 
 .c0::after {
@@ -944,7 +944,6 @@ describe("Button", () => {
   text-align: center;
   -webkit-text-decoration: none !important;
   text-decoration: none !important;
-  text-transform: uppercase;
   -webkit-transition: color 0.25s,background 0.25s,border 0.25s,box-shadow 0.25s;
   transition: color 0.25s,background 0.25s,border 0.25s,box-shadow 0.25s;
   background-color: #FFFFFF;
@@ -955,6 +954,7 @@ describe("Button", () => {
   opacity: 1;
   padding: 12px 25px 12px 20px;
   pointer-events: auto;
+  text-transform: uppercase;
 }
 
 .c0::after {
@@ -1027,7 +1027,6 @@ describe("Button", () => {
   text-align: center;
   -webkit-text-decoration: none !important;
   text-decoration: none !important;
-  text-transform: uppercase;
   -webkit-transition: color 0.25s,background 0.25s,border 0.25s,box-shadow 0.25s;
   transition: color 0.25s,background 0.25s,border 0.25s,box-shadow 0.25s;
   background-color: #C00404;
@@ -1038,6 +1037,7 @@ describe("Button", () => {
   opacity: 1;
   padding: 12px 25px 12px 20px;
   pointer-events: auto;
+  text-transform: uppercase;
 }
 
 .c0::after {
@@ -1115,7 +1115,6 @@ describe("Button", () => {
   text-align: center;
   -webkit-text-decoration: none !important;
   text-decoration: none !important;
-  text-transform: uppercase;
   -webkit-transition: color 0.25s,background 0.25s,border 0.25s,box-shadow 0.25s;
   transition: color 0.25s,background 0.25s,border 0.25s,box-shadow 0.25s;
   background-color: #98A4AE;
@@ -1126,6 +1125,7 @@ describe("Button", () => {
   opacity: 1;
   padding: 12px 25px 12px 20px;
   pointer-events: auto;
+  text-transform: uppercase;
 }
 
 .c0::after {
@@ -1187,6 +1187,12 @@ describe("Button", () => {
         expect(button).toHaveStyleRule("opacity", "0.65");
         expect(button).toHaveStyleRule("pointer-events", "none");
       });
+    });
+
+    it("should render button with proper case text when uppercase is disabled", () => {
+      const { button } = renderButton({ props: { uppercase: false } });
+
+      expect(button).not.toHaveStyleRule("text-transform");
     });
 
     it("should render small button when size variant is provided", () => {
