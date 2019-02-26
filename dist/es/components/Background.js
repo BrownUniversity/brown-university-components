@@ -4,9 +4,9 @@ function _objectWithoutProperties(source, excluded) { if (source == null) return
 
 function _objectWithoutPropertiesLoose(source, excluded) { if (source == null) return {}; var target = {}; var sourceKeys = Object.keys(source); var key, i; for (i = 0; i < sourceKeys.length; i++) { key = sourceKeys[i]; if (excluded.indexOf(key) >= 0) continue; target[key] = source[key]; } return target; }
 
-import PropTypes from 'prop-types';
-import React from 'react';
-import styled, { css } from 'styled-components';
+import PropTypes from "prop-types";
+import React from "react";
+import styled, { css } from "styled-components";
 /*
   inner Tag component
 */
@@ -28,7 +28,7 @@ var Tag = styled(function (_ref) {
   return url;
 }, function (_ref3) {
   var color = _ref3.color;
-  return color === 'gray' ? '#F0F3F5' : '#FFF';
+  return color === "gray" ? "#F0F3F5" : "#FFF";
 }, function (_ref4) {
   var marginTop = _ref4.marginTop;
   return marginTop;
@@ -54,13 +54,13 @@ var Background = function Background(_ref5) {
 
 Background.propTypes = {
   url: PropTypes.string.isRequired,
-  color: PropTypes.oneOf(['white', 'gray']),
+  color: PropTypes.oneOf(["white", "gray"]),
   full: PropTypes.bool,
   marginTop: PropTypes.number,
   children: PropTypes.node.isRequired
 };
 Background.defaultProps = {
-  color: 'white',
+  color: "white",
   full: true,
   marginTop: 0
 };

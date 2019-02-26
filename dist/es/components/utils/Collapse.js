@@ -16,18 +16,18 @@ function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) ===
 
 function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
 
+function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
+
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); if (superClass) _setPrototypeOf(subClass, superClass); }
 
 function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
 
-function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
-
 function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
 
 /* eslint-disable no-return-assign */
-import PropTypes from 'prop-types';
-import React, { Component } from 'react';
-import styled from 'styled-components';
+import PropTypes from "prop-types";
+import React, { Component } from "react";
+import styled from "styled-components";
 /*
   inner Tag component
 */
@@ -71,36 +71,36 @@ function (_Component) {
 
     _this = _possibleConstructorReturn(this, (_getPrototypeOf2 = _getPrototypeOf(Collapse)).call.apply(_getPrototypeOf2, [this].concat(args)));
 
-    _defineProperty(_assertThisInitialized(_assertThisInitialized(_this)), "state", {
-      display: 'none',
-      height: '0',
-      overflow: 'hidden'
+    _defineProperty(_assertThisInitialized(_this), "state", {
+      display: "none",
+      height: "0",
+      overflow: "hidden"
     });
 
-    _defineProperty(_assertThisInitialized(_assertThisInitialized(_this)), "tagRef", null);
+    _defineProperty(_assertThisInitialized(_this), "tagRef", null);
 
-    _defineProperty(_assertThisInitialized(_assertThisInitialized(_this)), "getHeight", function () {
+    _defineProperty(_assertThisInitialized(_this), "getHeight", function () {
       return _this.tagRef.scrollHeight;
     });
 
-    _defineProperty(_assertThisInitialized(_assertThisInitialized(_this)), "setExpanded", function () {
+    _defineProperty(_assertThisInitialized(_this), "setExpanded", function () {
       _this.setState({
-        display: 'block',
-        height: 'auto',
-        overflow: 'visible'
+        display: "block",
+        height: "auto",
+        overflow: "visible"
       });
     });
 
-    _defineProperty(_assertThisInitialized(_assertThisInitialized(_this)), "setCollapsed", function () {
+    _defineProperty(_assertThisInitialized(_this), "setCollapsed", function () {
       _this.setState({
-        display: 'none'
+        display: "none"
       });
     });
 
-    _defineProperty(_assertThisInitialized(_assertThisInitialized(_this)), "handleTransitionEnd", function (e) {
-      var ePropertyName = process.NODE_ENV === 'jest' ? 'height' : e.propertyName;
+    _defineProperty(_assertThisInitialized(_this), "handleTransitionEnd", function (e) {
+      var ePropertyName = process.NODE_ENV === "jest" ? "height" : e.propertyName;
 
-      if (e.target === _this.tagRef && ePropertyName === 'height') {
+      if (e.target === _this.tagRef && ePropertyName === "height") {
         if (_this.props.isOpen) {
           _this.setExpanded();
         } else {
@@ -126,7 +126,7 @@ function (_Component) {
 
       if (!prevProps.isOpen && this.props.isOpen) {
         this.setState({
-          display: 'block'
+          display: "block"
         }, function () {
           return _this2.setState({
             height: "".concat(_this2.getHeight(), "px")
@@ -140,8 +140,8 @@ function (_Component) {
         }, function () {
           return setTimeout(function () {
             return _this2.setState({
-              height: '0',
-              overflow: 'hidden'
+              height: "0",
+              overflow: "hidden"
             });
           });
         });
@@ -175,6 +175,6 @@ Collapse.propTypes = {
   children: PropTypes.node.isRequired
 };
 Collapse.defaultProps = {
-  transition: 'height 250ms cubic-bezier(0.4,0,0.2,1)'
+  transition: "height 250ms cubic-bezier(0.4,0,0.2,1)"
 };
 export default Collapse;

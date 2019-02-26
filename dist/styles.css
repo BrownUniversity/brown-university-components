@@ -1,59 +1,59 @@
-/*! brown-university-theme v0.6.0 */
+/*! brown-university-theme v0.7.0 */
 @charset "UTF-8";
 
 /* ---- fonts ---- */
 @font-face {
-  font-family: 'Bitstream Vera Sans Mono';
+  font-family: "Bitstream Vera Sans Mono";
   font-style: normal;
-  src: url(bitstream-vera-sans-mono.3276a5efeb99130cfca212bc354be36d.woff) format('woff');
+  src: url(bitstream-vera-sans-mono.3276a5efeb99130cfca212bc354be36d.woff) format("woff");
 }
 
 @font-face {
   font-family: brown-icons;
   font-style: normal;
-  src: url(brown-icons.7b3e919f5400cd97733af21735ca5f8a.woff) format('woff');
+  src: url(brown-icons.7b3e919f5400cd97733af21735ca5f8a.woff) format("woff");
 }
 
 @font-face {
-  font-family: 'Circular-Bold';
+  font-family: "Circular-Bold";
   font-style: normal;
-  src: url(circular-bold.926416f00d9c1431f52d424135e15ead.woff) format('woff');
+  src: url(circular-bold.926416f00d9c1431f52d424135e15ead.woff) format("woff");
 }
 
 @font-face {
-  font-family: 'Circular-Bold';
+  font-family: "Circular-Bold";
   font-style: italic;
-  src: url(circular-bolditalic.0c2a5e57f1e42ec288d0a398bb48323f.woff) format('woff');
+  src: url(circular-bolditalic.0c2a5e57f1e42ec288d0a398bb48323f.woff) format("woff");
 }
 
 @font-face {
-  font-family: 'Circular-Book';
+  font-family: "Circular-Book";
   font-style: normal;
-  src: url(circular-book.2ac8bef002d92b00dd2c9efa1b9b28dc.woff) format('woff');
+  src: url(circular-book.2ac8bef002d92b00dd2c9efa1b9b28dc.woff) format("woff");
 }
 
 @font-face {
-  font-family: 'Circular-Book';
+  font-family: "Circular-Book";
   font-style: italic;
-  src: url(circular-bookitalic.96286d950720539a92c9805b48ee469c.woff) format('woff');
+  src: url(circular-bookitalic.96286d950720539a92c9805b48ee469c.woff) format("woff");
 }
 
 @font-face {
-  font-family: 'Circular-Medium';
+  font-family: "Circular-Medium";
   font-style: normal;
-  src: url(circular-medium.5b4d06887f372350cc39fa4269024a5f.woff) format('woff');
+  src: url(circular-medium.5b4d06887f372350cc39fa4269024a5f.woff) format("woff");
 }
 
 @font-face {
-  font-family: 'Circular-Medium';
+  font-family: "Circular-Medium";
   font-style: italic;
-  src: url(circular-mediumitalic.82a2a90b2e26b7e50296f3a24735c710.woff) format('woff');
+  src: url(circular-mediumitalic.82a2a90b2e26b7e50296f3a24735c710.woff) format("woff");
 }
 
 @font-face {
   font-family: minion-pro;
   font-style: normal;
-  src: url(minion-pro.882822c68b3e5ff52e06a5fcdbe3fa8e.woff) format('woff');
+  src: url(minion-pro.882822c68b3e5ff52e06a5fcdbe3fa8e.woff) format("woff");
 }
 
 .sans {
@@ -65,11 +65,11 @@
 }
 
 .serif {
-  font-family: minion-pro, 'Times New Roman', serif !important;
+  font-family: minion-pro, "Times New Roman", serif !important;
 }
 
 .mono {
-  font-family: 'Bitstream Vera Sans Mono', Menlo, Monaco, Consolas, Courier,
+  font-family: "Bitstream Vera Sans Mono", Menlo, Monaco, Consolas, Courier,
     monospace !important;
 }
 
@@ -249,7 +249,7 @@ h6,
 
 /* ---- paragraphs ---- */
 p {
-  font-family: minion-pro, 'Times New Roman', serif;
+  font-family: minion-pro, "Times New Roman", serif;
   font-size: 1em;
   line-height: 1.75;
 }

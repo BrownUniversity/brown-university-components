@@ -10,12 +10,12 @@ function _templateObject() {
 
 function _taggedTemplateLiteral(strings, raw) { if (!raw) { raw = strings.slice(0); } return Object.freeze(Object.defineProperties(strings, { raw: { value: Object.freeze(raw) } })); }
 
-import PropTypes from 'prop-types';
-import React from 'react';
-import styled from 'styled-components';
-import colors from '../../constants/colors';
-import media from '../../constants/media';
-import { serif } from '../../constants/typography';
+import PropTypes from "prop-types";
+import React from "react";
+import styled from "styled-components";
+import colors from "../../constants/colors";
+import media from "../../constants/media";
+import { serif } from "../../constants/typography";
 /*
   inner Tag component
 */

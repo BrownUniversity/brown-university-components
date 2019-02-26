@@ -4,18 +4,18 @@ function _objectWithoutProperties(source, excluded) { if (source == null) return
 
 function _objectWithoutPropertiesLoose(source, excluded) { if (source == null) return {}; var target = {}; var sourceKeys = Object.keys(source); var key, i; for (i = 0; i < sourceKeys.length; i++) { key = sourceKeys[i]; if (excluded.indexOf(key) >= 0) continue; target[key] = source[key]; } return target; }
 
-import PropTypes from 'prop-types';
-import React from 'react';
-import styled, { css } from 'styled-components';
-import { darken } from 'polished';
-import colors from '../constants/colors';
-import { sans } from '../constants/typography';
+import PropTypes from "prop-types";
+import React from "react";
+import styled, { css } from "styled-components";
+import { darken } from "polished";
+import colors from "../constants/colors";
+import { sans } from "../constants/typography";
 /*
   css mixins
 */
 
-var buttonCSS = css(["border-width:0;display:inline-block;font-family:", ";font-style:normal;font-weight:700;letter-spacing:0.6px;line-height:1.5;text-align:center;text-decoration:none !important;text-transform:uppercase;transition:color 0.25s,background 0.25s,border 0.25s,box-shadow 0.25s;"], sans);
-var buttonAfterCSS = css(["border-color:transparent transparent transparent transparent;border-style:solid;border-width:3.5px 0 3.5px 5px;content:'';display:inline-block;height:0;position:relative;right:-8px;top:-1px;transition:border 0.25s,color 0.25s;width:0;"]);
+var buttonCSS = css(["border-width:0;display:inline-block;font-family:", ";font-style:normal;font-weight:700;letter-spacing:0.6px;line-height:1.5;text-align:center;text-decoration:none !important;transition:color 0.25s,background 0.25s,border 0.25s,box-shadow 0.25s;"], sans);
+var buttonAfterCSS = css(["border-color:transparent transparent transparent transparent;border-style:solid;border-width:3.5px 0 3.5px 5px;content:\"\";display:inline-block;height:0;position:relative;right:-8px;top:-1px;transition:border 0.25s,color 0.25s;width:0;"]);
 var buttonAfterShiftCSS = css(["-ms-transform:translate3d(0,0,0);-webkit-transform:translate3d(0,0,0);transform:translate3d(0,0,0);transition:all 0.25s;"]);
 var buttonAfterShiftHoverCSS = css(["-ms-transform:translate3d(4px,0,0);-webkit-transform:translate3d(4px,0,0);transform:translate3d(4px,0,0);transition:all 0.25s;"]);
 /*
@@ -36,7 +36,7 @@ var getBackgroundColor = function getBackgroundColor(_ref) {
   }
 
   if (outline) {
-    return 'transparent';
+    return "transparent";
   }
 
   return colors[color];
@@ -77,14 +77,14 @@ var getFontSize = function getFontSize(_ref4) {
   var size = _ref4.size;
 
   switch (size) {
-    case 'small':
-      return '0.55em';
+    case "small":
+      return "0.55em";
 
-    case 'large':
-      return '0.95em';
+    case "large":
+      return "0.95em";
 
     default:
-      return '0.75em';
+      return "0.75em";
   }
 };
 
@@ -170,28 +170,34 @@ var getColorWithHover = function getColorWithHover(_ref7) {
 var Tag = styled.div.withConfig({
   displayName: "Button__Tag",
   componentId: "sc-2usyzz-0"
-})(["", " background-color:", ";box-shadow:inset 0 0 0 1px ", ";color:", ";cursor:", ";font-size:", ";opacity:", ";padding:", ";pointer-events:", ";", " &:hover{background-color:", ";box-shadow:inset 0 0 0 1px ", ";color:", ";", "}"], buttonCSS, function (props) {
+})(["", " background-color:", ";border-radius:", ";box-shadow:inset 0 0 0 1px ", ";color:", ";cursor:", ";font-size:", ";opacity:", ";padding:", ";pointer-events:", ";text-transform:", ";", " &:hover{background-color:", ";box-shadow:inset 0 0 0 1px ", ";color:", ";", "}"], buttonCSS, function (props) {
   return getBackgroundColor(props);
+}, function (_ref8) {
+  var rounded = _ref8.rounded;
+  return rounded ? "5px" : null;
 }, function (props) {
   return getBoxShadow(props);
 }, function (props) {
   return getColor(props);
-}, function (_ref8) {
-  var disabled = _ref8.disabled,
-      href = _ref8.href;
-  return disabled && !href ? 'not-allowed' : 'pointer';
+}, function (_ref9) {
+  var disabled = _ref9.disabled,
+      href = _ref9.href;
+  return disabled && !href ? "not-allowed" : "pointer";
 }, function (props) {
   return getFontSize(props);
-}, function (_ref9) {
-  var disabled = _ref9.disabled;
-  return disabled ? '0.65' : '1';
 }, function (_ref10) {
-  var href = _ref10.href;
-  return href ? '12px 25px 12px 20px' : '12px 25px';
+  var disabled = _ref10.disabled;
+  return disabled ? "0.65" : "1";
 }, function (_ref11) {
-  var disabled = _ref11.disabled,
-      href = _ref11.href;
-  return disabled && href ? 'none' : 'auto';
+  var href = _ref11.href;
+  return href ? "12px 25px 12px 20px" : "12px 25px";
+}, function (_ref12) {
+  var disabled = _ref12.disabled,
+      href = _ref12.href;
+  return disabled && href ? "none" : "auto";
+}, function (_ref13) {
+  var uppercase = _ref13.uppercase;
+  return uppercase ? "uppercase" : null;
 }, function (props) {
   return props.href && css(["&::after{", " ", " border-color:transparent transparent transparent ", ";}"], buttonAfterCSS, buttonAfterShiftCSS, getColor(props));
 }, function (props) {
@@ -207,12 +213,12 @@ var Tag = styled.div.withConfig({
   outer Button component
 */
 
-var deriveTag = function deriveTag(_ref12) {
-  var tag = _ref12.tag,
-      href = _ref12.href;
+var deriveTag = function deriveTag(_ref14) {
+  var tag = _ref14.tag,
+      href = _ref14.href;
 
-  if (tag === 'button' && href) {
-    return 'a';
+  if (tag === "button" && href) {
+    return "a";
   }
 
   return tag;
@@ -225,14 +231,16 @@ var Button = function Button(props) {
   var derivedTag = deriveTag(props);
   return React.createElement(Tag, _extends({
     as: derivedTag,
-    type: derivedTag === 'button' && props.onClick ? 'button' : undefined
+    type: derivedTag === "button" && props.onClick ? "button" : undefined
   }, restProps));
 };
 
 Button.propTypes = {
   tag: PropTypes.oneOfType([PropTypes.func, PropTypes.string]),
-  color: PropTypes.oneOf(['red', 'yellow', 'brown', 'gray', 'emerald', 'skyblue', 'navy']),
-  size: PropTypes.oneOf(['default', 'small', 'large']),
+  color: PropTypes.oneOf(["red", "yellow", "brown", "gray", "emerald", "skyblue", "navy"]),
+  size: PropTypes.oneOf(["default", "small", "large"]),
+  uppercase: PropTypes.bool,
+  rounded: PropTypes.bool,
   outline: PropTypes.bool,
   inverse: PropTypes.bool,
   disabled: PropTypes.bool,
@@ -240,9 +248,11 @@ Button.propTypes = {
   href: PropTypes.string
 };
 Button.defaultProps = {
-  tag: 'button',
-  color: 'red',
-  size: 'default',
+  tag: "button",
+  color: "red",
+  size: "default",
+  uppercase: true,
+  rounded: false,
   outline: false,
   inverse: false,
   disabled: false,

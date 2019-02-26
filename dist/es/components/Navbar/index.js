@@ -16,12 +16,12 @@ function _objectWithoutProperties(source, excluded) { if (source == null) return
 
 function _objectWithoutPropertiesLoose(source, excluded) { if (source == null) return {}; var target = {}; var sourceKeys = Object.keys(source); var key, i; for (i = 0; i < sourceKeys.length; i++) { key = sourceKeys[i]; if (excluded.indexOf(key) >= 0) continue; target[key] = source[key]; } return target; }
 
-import PropTypes from 'prop-types';
-import React from 'react';
-import styled from 'styled-components';
-import NavbarContext from './NavbarContext';
-import NavbarNav from './NavbarNav';
-import NavbarGlobalNav from './NavbarGlobalNav';
+import PropTypes from "prop-types";
+import React from "react";
+import styled from "styled-components";
+import NavbarContext from "./NavbarContext";
+import NavbarNav from "./NavbarNav";
+import NavbarGlobalNav from "./NavbarGlobalNav";
 
 var LogoBlackSVG = function LogoBlackSVG(props) {
   return React.createElement("svg", props, React.createElement("title", {
@@ -145,9 +145,9 @@ LogoWhiteSVG.defaultProps = {
   role: "img",
   'aria-labelledby': "title"
 };
-import breakpoints from '../../constants/breakpoints';
-import colors from '../../constants/colors';
-import media from '../../constants/media';
+import breakpoints from "../../constants/breakpoints";
+import colors from "../../constants/colors";
+import media from "../../constants/media";
 /*
   inner components
 */
@@ -180,7 +180,7 @@ var NavbarChildrenWrapper = styled.div.withConfig({
 */
 
 var logoProps = {
-  display: 'block',
+  display: "block",
   height: 65,
   width: 131
 };
@@ -198,7 +198,7 @@ var Navbar = function Navbar(_ref3) {
     href: "http://www.brown.edu/",
     target: "_blank",
     rel: "noopener noreferrer"
-  }, color === 'white' ? React.createElement(LogoBlackSVG, logoProps) : React.createElement(LogoWhiteSVG, logoProps)), React.createElement(NavbarChildrenWrapper, null, React.createElement(NavbarContext.Provider, {
+  }, color === "white" ? React.createElement(LogoBlackSVG, logoProps) : React.createElement(LogoWhiteSVG, logoProps)), React.createElement(NavbarChildrenWrapper, null, React.createElement(NavbarContext.Provider, {
     value: {
       color: color,
       mobileBreakpoint: mobileBreakpoint,
@@ -208,15 +208,15 @@ var Navbar = function Navbar(_ref3) {
 };
 
 Navbar.propTypes = {
-  color: PropTypes.oneOf(['brown', 'white']),
+  color: PropTypes.oneOf(["brown", "white"]),
   mobileBreakpoint: PropTypes.number,
   toggleTitle: PropTypes.string,
   children: PropTypes.node
 };
 Navbar.defaultProps = {
-  color: 'brown',
+  color: "brown",
   mobileBreakpoint: breakpoints.md,
-  toggleTitle: 'Global Navigation',
+  toggleTitle: "Global Navigation",
   children: null
 };
 Navbar.Nav = NavbarNav;

@@ -1,4 +1,4 @@
-/*! brown-university-theme v0.6.0 */
+/*! brown-university-theme v0.7.0 */
 (function webpackUniversalModuleDefinition(root, factory) {
 	if(typeof exports === 'object' && typeof module === 'object')
 		module.exports = factory(require("prop-types"), require("react"), require("styled-components"), require("polished"), require("react-fns"));
@@ -193,7 +193,7 @@ var Tag = styled_components__WEBPACK_IMPORTED_MODULE_2___default()(function (_re
   return url;
 }, function (_ref3) {
   var color = _ref3.color;
-  return color === 'gray' ? '#F0F3F5' : '#FFF';
+  return color === "gray" ? "#F0F3F5" : "#FFF";
 }, function (_ref4) {
   var marginTop = _ref4.marginTop;
   return marginTop;
@@ -219,13 +219,13 @@ var Background = function Background(_ref5) {
 
 Background.propTypes =  true ? {
   url: prop_types__WEBPACK_IMPORTED_MODULE_0___default.a.string.isRequired,
-  color: prop_types__WEBPACK_IMPORTED_MODULE_0___default.a.oneOf(['white', 'gray']),
+  color: prop_types__WEBPACK_IMPORTED_MODULE_0___default.a.oneOf(["white", "gray"]),
   full: prop_types__WEBPACK_IMPORTED_MODULE_0___default.a.bool,
   marginTop: prop_types__WEBPACK_IMPORTED_MODULE_0___default.a.number,
   children: prop_types__WEBPACK_IMPORTED_MODULE_0___default.a.node.isRequired
 } : undefined;
 Background.defaultProps = {
-  color: 'white',
+  color: "white",
   full: true,
   marginTop: 0
 };
@@ -280,17 +280,17 @@ var getMaxHeight = function getMaxHeight(_ref) {
   var size = _ref.size;
 
   switch (size) {
-    case 'small':
-      return '150px';
+    case "small":
+      return "150px";
 
-    case 'medium':
-      return '300px';
+    case "medium":
+      return "300px";
 
-    case 'large':
-      return '600px';
+    case "large":
+      return "600px";
 
     default:
-      return '200px';
+      return "200px";
   }
 };
 /*
@@ -317,7 +317,7 @@ var BannerChildrenWrapper = styled_components__WEBPACK_IMPORTED_MODULE_2___defau
   componentId: "tzfnvw-3"
 })(["position:absolute;text-align:center;top:", ";width:100%;z-index:15;"], function (_ref2) {
   var size = _ref2.size;
-  return size === 'small' ? '20%' : '35%';
+  return size === "small" ? "20%" : "35%";
 });
 /*
   outer Banner component
@@ -349,14 +349,14 @@ var Banner = function Banner(_ref3) {
 };
 
 Banner.propTypes =  true ? {
-  color: prop_types__WEBPACK_IMPORTED_MODULE_0___default.a.oneOf(['emerald', 'red', 'brown', 'yellow', 'gray', 'sand', 'lightBrown', 'mediumBrown', 'navy', 'skyblue']),
-  size: prop_types__WEBPACK_IMPORTED_MODULE_0___default.a.oneOf(['default', 'small', 'medium', 'large']),
+  color: prop_types__WEBPACK_IMPORTED_MODULE_0___default.a.oneOf(["emerald", "red", "brown", "yellow", "gray", "sand", "lightBrown", "mediumBrown", "navy", "skyblue"]),
+  size: prop_types__WEBPACK_IMPORTED_MODULE_0___default.a.oneOf(["default", "small", "medium", "large"]),
   src: prop_types__WEBPACK_IMPORTED_MODULE_0___default.a.string,
   children: prop_types__WEBPACK_IMPORTED_MODULE_0___default.a.node
 } : undefined;
 Banner.defaultProps = {
-  color: 'emerald',
-  size: 'default',
+  color: "emerald",
+  size: "default",
   src: null,
   children: null
 };
@@ -424,25 +424,25 @@ BannerText.propTypes =  true ? {
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony default export */ __webpack_exports__["default"] = ({
-  black: '#3B302C',
-  brown: '#4E3629',
-  red: '#C00404',
-  yellow: '#FFC72C',
-  gray: '#98A4AE',
-  lightGray: '#F7F7F7',
-  darkGray: '#3C3C3C',
-  beige: '#EFECE5',
-  sand: '#CCC6B8',
-  lightBrown: '#A79A94',
-  mediumBrown: '#745D54',
-  darkBrown: '#3A1E1A',
-  skyblue: '#59CBE8',
-  emerald: '#00B398',
-  emeraldLight: '#AAD6CB',
-  emeraldDark: '#008672',
-  navy: '#003C71',
-  white: '#FFFFFF',
-  trueblack: '#000000'
+  black: "#3B302C",
+  brown: "#4E3629",
+  red: "#C00404",
+  yellow: "#FFC72C",
+  gray: "#98A4AE",
+  lightGray: "#F7F7F7",
+  darkGray: "#3C3C3C",
+  beige: "#EFECE5",
+  sand: "#CCC6B8",
+  lightBrown: "#A79A94",
+  mediumBrown: "#745D54",
+  darkBrown: "#3A1E1A",
+  skyblue: "#59CBE8",
+  emerald: "#00B398",
+  emeraldLight: "#AAD6CB",
+  emeraldDark: "#008672",
+  navy: "#003C71",
+  white: "#FFFFFF",
+  trueblack: "#000000"
 });
 
 /***/ }),
@@ -494,8 +494,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "sansBold", function() { return sansBold; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "serif", function() { return serif; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "mono", function() { return mono; });
-var sans = 'Circular-Book, Arial, Helvetica, sans-serif';
-var sansBold = 'Circular-Bold, Circular-Book, Arial, Helvetica, sans-serif';
+var sans = "Circular-Book, Arial, Helvetica, sans-serif";
+var sansBold = "Circular-Bold, Circular-Book, Arial, Helvetica, sans-serif";
 var serif = 'minion-pro, "Times New Roman", serif';
 var mono = '"Bitstream Vera Sans Mono", Menlo, Monaco, Consolas, Courier, monospace';
 
@@ -531,8 +531,8 @@ function _objectWithoutPropertiesLoose(source, excluded) { if (source == null) r
   css mixins
 */
 
-var buttonCSS = Object(styled_components__WEBPACK_IMPORTED_MODULE_2__["css"])(["border-width:0;display:inline-block;font-family:", ";font-style:normal;font-weight:700;letter-spacing:0.6px;line-height:1.5;text-align:center;text-decoration:none !important;text-transform:uppercase;transition:color 0.25s,background 0.25s,border 0.25s,box-shadow 0.25s;"], _constants_typography__WEBPACK_IMPORTED_MODULE_5__["sans"]);
-var buttonAfterCSS = Object(styled_components__WEBPACK_IMPORTED_MODULE_2__["css"])(["border-color:transparent transparent transparent transparent;border-style:solid;border-width:3.5px 0 3.5px 5px;content:'';display:inline-block;height:0;position:relative;right:-8px;top:-1px;transition:border 0.25s,color 0.25s;width:0;"]);
+var buttonCSS = Object(styled_components__WEBPACK_IMPORTED_MODULE_2__["css"])(["border-width:0;display:inline-block;font-family:", ";font-style:normal;font-weight:700;letter-spacing:0.6px;line-height:1.5;text-align:center;text-decoration:none !important;transition:color 0.25s,background 0.25s,border 0.25s,box-shadow 0.25s;"], _constants_typography__WEBPACK_IMPORTED_MODULE_5__["sans"]);
+var buttonAfterCSS = Object(styled_components__WEBPACK_IMPORTED_MODULE_2__["css"])(["border-color:transparent transparent transparent transparent;border-style:solid;border-width:3.5px 0 3.5px 5px;content:\"\";display:inline-block;height:0;position:relative;right:-8px;top:-1px;transition:border 0.25s,color 0.25s;width:0;"]);
 var buttonAfterShiftCSS = Object(styled_components__WEBPACK_IMPORTED_MODULE_2__["css"])(["-ms-transform:translate3d(0,0,0);-webkit-transform:translate3d(0,0,0);transform:translate3d(0,0,0);transition:all 0.25s;"]);
 var buttonAfterShiftHoverCSS = Object(styled_components__WEBPACK_IMPORTED_MODULE_2__["css"])(["-ms-transform:translate3d(4px,0,0);-webkit-transform:translate3d(4px,0,0);transform:translate3d(4px,0,0);transition:all 0.25s;"]);
 /*
@@ -553,7 +553,7 @@ var getBackgroundColor = function getBackgroundColor(_ref) {
   }
 
   if (outline) {
-    return 'transparent';
+    return "transparent";
   }
 
   return _constants_colors__WEBPACK_IMPORTED_MODULE_4__["default"][color];
@@ -594,14 +594,14 @@ var getFontSize = function getFontSize(_ref4) {
   var size = _ref4.size;
 
   switch (size) {
-    case 'small':
-      return '0.55em';
+    case "small":
+      return "0.55em";
 
-    case 'large':
-      return '0.95em';
+    case "large":
+      return "0.95em";
 
     default:
-      return '0.75em';
+      return "0.75em";
   }
 };
 
@@ -687,28 +687,34 @@ var getColorWithHover = function getColorWithHover(_ref7) {
 var Tag = styled_components__WEBPACK_IMPORTED_MODULE_2___default.a.div.withConfig({
   displayName: "Button__Tag",
   componentId: "sc-2usyzz-0"
-})(["", " background-color:", ";box-shadow:inset 0 0 0 1px ", ";color:", ";cursor:", ";font-size:", ";opacity:", ";padding:", ";pointer-events:", ";", " &:hover{background-color:", ";box-shadow:inset 0 0 0 1px ", ";color:", ";", "}"], buttonCSS, function (props) {
+})(["", " background-color:", ";border-radius:", ";box-shadow:inset 0 0 0 1px ", ";color:", ";cursor:", ";font-size:", ";opacity:", ";padding:", ";pointer-events:", ";text-transform:", ";", " &:hover{background-color:", ";box-shadow:inset 0 0 0 1px ", ";color:", ";", "}"], buttonCSS, function (props) {
   return getBackgroundColor(props);
+}, function (_ref8) {
+  var rounded = _ref8.rounded;
+  return rounded ? "5px" : null;
 }, function (props) {
   return getBoxShadow(props);
 }, function (props) {
   return getColor(props);
-}, function (_ref8) {
-  var disabled = _ref8.disabled,
-      href = _ref8.href;
-  return disabled && !href ? 'not-allowed' : 'pointer';
+}, function (_ref9) {
+  var disabled = _ref9.disabled,
+      href = _ref9.href;
+  return disabled && !href ? "not-allowed" : "pointer";
 }, function (props) {
   return getFontSize(props);
-}, function (_ref9) {
-  var disabled = _ref9.disabled;
-  return disabled ? '0.65' : '1';
 }, function (_ref10) {
-  var href = _ref10.href;
-  return href ? '12px 25px 12px 20px' : '12px 25px';
+  var disabled = _ref10.disabled;
+  return disabled ? "0.65" : "1";
 }, function (_ref11) {
-  var disabled = _ref11.disabled,
-      href = _ref11.href;
-  return disabled && href ? 'none' : 'auto';
+  var href = _ref11.href;
+  return href ? "12px 25px 12px 20px" : "12px 25px";
+}, function (_ref12) {
+  var disabled = _ref12.disabled,
+      href = _ref12.href;
+  return disabled && href ? "none" : "auto";
+}, function (_ref13) {
+  var uppercase = _ref13.uppercase;
+  return uppercase ? "uppercase" : null;
 }, function (props) {
   return props.href && Object(styled_components__WEBPACK_IMPORTED_MODULE_2__["css"])(["&::after{", " ", " border-color:transparent transparent transparent ", ";}"], buttonAfterCSS, buttonAfterShiftCSS, getColor(props));
 }, function (props) {
@@ -724,12 +730,12 @@ var Tag = styled_components__WEBPACK_IMPORTED_MODULE_2___default.a.div.withConfi
   outer Button component
 */
 
-var deriveTag = function deriveTag(_ref12) {
-  var tag = _ref12.tag,
-      href = _ref12.href;
+var deriveTag = function deriveTag(_ref14) {
+  var tag = _ref14.tag,
+      href = _ref14.href;
 
-  if (tag === 'button' && href) {
-    return 'a';
+  if (tag === "button" && href) {
+    return "a";
   }
 
   return tag;
@@ -742,14 +748,16 @@ var Button = function Button(props) {
   var derivedTag = deriveTag(props);
   return react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(Tag, _extends({
     as: derivedTag,
-    type: derivedTag === 'button' && props.onClick ? 'button' : undefined
+    type: derivedTag === "button" && props.onClick ? "button" : undefined
   }, restProps));
 };
 
 Button.propTypes =  true ? {
   tag: prop_types__WEBPACK_IMPORTED_MODULE_0___default.a.oneOfType([prop_types__WEBPACK_IMPORTED_MODULE_0___default.a.func, prop_types__WEBPACK_IMPORTED_MODULE_0___default.a.string]),
-  color: prop_types__WEBPACK_IMPORTED_MODULE_0___default.a.oneOf(['red', 'yellow', 'brown', 'gray', 'emerald', 'skyblue', 'navy']),
-  size: prop_types__WEBPACK_IMPORTED_MODULE_0___default.a.oneOf(['default', 'small', 'large']),
+  color: prop_types__WEBPACK_IMPORTED_MODULE_0___default.a.oneOf(["red", "yellow", "brown", "gray", "emerald", "skyblue", "navy"]),
+  size: prop_types__WEBPACK_IMPORTED_MODULE_0___default.a.oneOf(["default", "small", "large"]),
+  uppercase: prop_types__WEBPACK_IMPORTED_MODULE_0___default.a.bool,
+  rounded: prop_types__WEBPACK_IMPORTED_MODULE_0___default.a.bool,
   outline: prop_types__WEBPACK_IMPORTED_MODULE_0___default.a.bool,
   inverse: prop_types__WEBPACK_IMPORTED_MODULE_0___default.a.bool,
   disabled: prop_types__WEBPACK_IMPORTED_MODULE_0___default.a.bool,
@@ -757,9 +765,11 @@ Button.propTypes =  true ? {
   href: prop_types__WEBPACK_IMPORTED_MODULE_0___default.a.string
 } : undefined;
 Button.defaultProps = {
-  tag: 'button',
-  color: 'red',
-  size: 'default',
+  tag: "button",
+  color: "red",
+  size: "default",
+  uppercase: true,
+  rounded: false,
   outline: false,
   inverse: false,
   disabled: false,
@@ -841,11 +851,11 @@ function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) ===
 
 function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
 
+function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
+
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); if (superClass) _setPrototypeOf(subClass, superClass); }
 
 function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
-
-function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
 
 function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
 
@@ -865,7 +875,7 @@ var hamburgerBarCSS = Object(styled_components__WEBPACK_IMPORTED_MODULE_2__["css
   var color = _ref.color;
   return _constants_colors__WEBPACK_IMPORTED_MODULE_3__["default"][color];
 });
-var hamburgerBarPseudoElementCSS = Object(styled_components__WEBPACK_IMPORTED_MODULE_2__["css"])(["content:'';display:block;"]);
+var hamburgerBarPseudoElementCSS = Object(styled_components__WEBPACK_IMPORTED_MODULE_2__["css"])(["content:\"\";display:block;"]);
 var hamburgerTransitionCSS = Object(styled_components__WEBPACK_IMPORTED_MODULE_2__["css"])(["transition-property:transform;transition-timing-function:ease;"]);
 /*
   inner components
@@ -875,13 +885,13 @@ var HamburgerTag = styled_components__WEBPACK_IMPORTED_MODULE_2___default.a.div.
   displayName: "Hamburger__HamburgerTag",
   componentId: "u53pwq-0"
 })(["background:transparent;border:none;cursor:", ";", " ", " padding:", ";"], function (props) {
-  return props.as === 'button' ? 'pointer' : 'inherit';
+  return props.as === "button" ? "pointer" : "inherit";
 }, function (props) {
-  return props.as === 'div' && 'display: inline-block;';
+  return props.as === "div" && "display: inline-block;";
 }, function (props) {
-  return props.as === 'button' && 'height: 24px;';
+  return props.as === "button" && "height: 24px;";
 }, function (props) {
-  return props.as === 'button' ? '0 25px 3px 0' : '0 25px 7px 0';
+  return props.as === "button" ? "0 25px 3px 0" : "0 25px 7px 0";
 }); // filter props so they don't become dom attributes (see `styled-components` issue 439)
 
 var HamburgerBars = styled_components__WEBPACK_IMPORTED_MODULE_2___default()(function (_ref2) {
@@ -896,13 +906,13 @@ var HamburgerBars = styled_components__WEBPACK_IMPORTED_MODULE_2___default()(fun
 })(["", " ", " transition-duration:.22s;transition-timing-function:cubic-bezier(0.55,0.055,0.675,0.19);", " &&:before{", " ", " ", " transition-duration:.15s;transition:top .1s .25s ease-in,opacity .1s ease-in;opacity:", ";top:", ";", "}&&:after{", " ", " ", " transition-duration:.15s;transition:bottom .1s .25s ease-in,transform .22s cubic-bezier(0.55,0.055,0.675,0.19);bottom:", ";", "}"], hamburgerBarCSS, hamburgerTransitionCSS, function (props) {
   return props.isOpen && Object(styled_components__WEBPACK_IMPORTED_MODULE_2__["css"])(["-webkit-transform:rotate(225deg);-ms-transform:rotate(225deg);transform:rotate(225deg);-webkit-transition-delay:0.12s;-o-transition-delay:0.12s;transition-delay:0.12s;-webkit-transition-timing-function:cubic-bezier(0.215,0.61,0.355,1);-o-transition-timing-function:cubic-bezier(0.215,0.61,0.355,1);transition-timing-function:cubic-bezier(0.215,0.61,0.355,1);"]);
 }, hamburgerBarCSS, hamburgerBarPseudoElementCSS, hamburgerTransitionCSS, function (props) {
-  return props.isOpen && '0';
+  return props.isOpen && "0";
 }, function (props) {
-  return props.isOpen ? '0' : '-7px';
+  return props.isOpen ? "0" : "-7px";
 }, function (props) {
   return props.isOpen && Object(styled_components__WEBPACK_IMPORTED_MODULE_2__["css"])(["-webkit-transition:top 0.1s ease-out,opacity 0.1s 0.12s ease-out;-o-transition:top 0.1s ease-out,opacity 0.1s 0.12s ease-out;transition:top 0.1s ease-out,opacity 0.1s 0.12s ease-out;"]);
 }, hamburgerBarCSS, hamburgerBarPseudoElementCSS, hamburgerTransitionCSS, function (props) {
-  return props.isOpen ? '0' : '-7px';
+  return props.isOpen ? "0" : "-7px";
 }, function (props) {
   return props.isOpen && Object(styled_components__WEBPACK_IMPORTED_MODULE_2__["css"])(["-webkit-transform:rotate(-90deg);-ms-transform:rotate(-90deg);transform:rotate(-90deg);transition:bottom 0.1s ease-out,-webkit-transform 0.22s 0.12s cubic-bezier(0.215,0.61,0.355,1);"]);
 });
@@ -928,11 +938,11 @@ function (_Component) {
 
     _this = _possibleConstructorReturn(this, (_getPrototypeOf2 = _getPrototypeOf(Hamburger)).call.apply(_getPrototypeOf2, [this].concat(args)));
 
-    _defineProperty(_assertThisInitialized(_assertThisInitialized(_this)), "state", {
+    _defineProperty(_assertThisInitialized(_this), "state", {
       isOpen: _this.props.isOpen
     });
 
-    _defineProperty(_assertThisInitialized(_assertThisInitialized(_this)), "handleClick", function () {
+    _defineProperty(_assertThisInitialized(_this), "handleClick", function () {
       return _this.setState(function (_ref3) {
         var isOpen = _ref3.isOpen;
         return {
@@ -974,10 +984,10 @@ function (_Component) {
           restProps = _objectWithoutProperties(_this$props, ["tag", "color", "ariaLabel", "onOpen", "onClose"]);
 
       var isOpen = this.state.isOpen;
-      var isButton = tag === 'button';
+      var isButton = tag === "button";
       return react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(HamburgerTag, _extends({}, restProps, {
         as: tag,
-        type: isButton ? 'button' : null,
+        type: isButton ? "button" : null,
         "aria-expanded": isButton ? isOpen : null,
         "aria-label": isButton ? ariaLabel : null,
         onClick: isButton ? this.handleClick : null
@@ -992,17 +1002,17 @@ function (_Component) {
 }(react__WEBPACK_IMPORTED_MODULE_1__["Component"]);
 
 Hamburger.propTypes =  true ? {
-  tag: prop_types__WEBPACK_IMPORTED_MODULE_0___default.a.oneOf(['button', 'div']),
-  color: prop_types__WEBPACK_IMPORTED_MODULE_0___default.a.oneOf(['red', 'white']),
+  tag: prop_types__WEBPACK_IMPORTED_MODULE_0___default.a.oneOf(["button", "div"]),
+  color: prop_types__WEBPACK_IMPORTED_MODULE_0___default.a.oneOf(["red", "white"]),
   ariaLabel: prop_types__WEBPACK_IMPORTED_MODULE_0___default.a.string,
   isOpen: prop_types__WEBPACK_IMPORTED_MODULE_0___default.a.bool,
   onOpen: prop_types__WEBPACK_IMPORTED_MODULE_0___default.a.func,
   onClose: prop_types__WEBPACK_IMPORTED_MODULE_0___default.a.func
 } : undefined;
 Hamburger.defaultProps = {
-  tag: 'button',
-  color: 'red',
-  ariaLabel: 'Toggle navigation',
+  tag: "button",
+  color: "red",
+  ariaLabel: "Toggle navigation",
   isOpen: false,
   onOpen: null,
   onClose: null
@@ -1164,7 +1174,7 @@ var getBackgroundColor = function getBackgroundColor(_ref) {
     return _constants_colors__WEBPACK_IMPORTED_MODULE_6__["default"].lightGray;
   }
 
-  return 'transparent';
+  return "transparent";
 };
 
 var getDisplay = function getDisplay(_ref2) {
@@ -1172,20 +1182,20 @@ var getDisplay = function getDisplay(_ref2) {
       sub = _ref2.sub;
 
   if (mobile || sub) {
-    return 'block';
+    return "block";
   }
 
-  return 'flex';
+  return "flex";
 };
 
 var getPadding = function getPadding(_ref3) {
   var sub = _ref3.sub;
 
   if (sub) {
-    return '15px';
+    return "15px";
   }
 
-  return '0';
+  return "0";
 };
 
 var getWidth = function getWidth(_ref4) {
@@ -1193,10 +1203,10 @@ var getWidth = function getWidth(_ref4) {
       sub = _ref4.sub;
 
   if (mobile || sub) {
-    return '100%';
+    return "100%";
   }
 
-  return 'auto';
+  return "auto";
 };
 /*
   inner Tag component
@@ -1247,14 +1257,14 @@ Nav.propTypes =  true ? {
   navbar: prop_types__WEBPACK_IMPORTED_MODULE_0___default.a.bool,
   mobile: prop_types__WEBPACK_IMPORTED_MODULE_0___default.a.bool,
   sub: prop_types__WEBPACK_IMPORTED_MODULE_0___default.a.bool,
-  color: prop_types__WEBPACK_IMPORTED_MODULE_0___default.a.oneOf(['red', 'white']),
+  color: prop_types__WEBPACK_IMPORTED_MODULE_0___default.a.oneOf(["red", "white"]),
   children: prop_types__WEBPACK_IMPORTED_MODULE_0___default.a.node.isRequired
 } : undefined;
 Nav.defaultProps = {
   navbar: false,
   mobile: false,
   sub: false,
-  color: 'red'
+  color: "red"
 };
 Nav.Item = _NavItem__WEBPACK_IMPORTED_MODULE_4__["default"];
 Nav.Link = _NavLink__WEBPACK_IMPORTED_MODULE_5__["default"];
@@ -1300,14 +1310,14 @@ var getPadding = function getPadding(_ref) {
       sub = _ref.sub;
 
   if (mobile) {
-    return '1rem 0';
+    return "1rem 0";
   }
 
   if (sub) {
-    return '8px 0 8px 0';
+    return "8px 0 8px 0";
   }
 
-  return '9px 15px';
+  return "9px 15px";
 };
 /*
   inner Tag component
@@ -1319,7 +1329,7 @@ var Tag = styled_components__WEBPACK_IMPORTED_MODULE_2___default.a.li.withConfig
   componentId: "wy3bck-0"
 })(["display:list-item;border-top:", ";padding:", ";"], function (_ref2) {
   var mobile = _ref2.mobile;
-  return mobile && '0.5px solid #C8C8C880';
+  return mobile && "0.5px solid #C8C8C880";
 }, function (props) {
   return getPadding(props);
 });
@@ -1389,7 +1399,7 @@ function _taggedTemplateLiteral(strings, raw) { if (!raw) { raw = strings.slice(
 */
 
 var navLinkCSS = Object(styled_components__WEBPACK_IMPORTED_MODULE_2__["css"])(["background:transparent;border:none;display:block;font-family:", ";padding:0;text-decoration:none !important;"], _constants_typography__WEBPACK_IMPORTED_MODULE_6__["sans"]);
-var navLinkAfterCSS = Object(styled_components__WEBPACK_IMPORTED_MODULE_2__["css"])(["content:'';display:block;height:3px;"]);
+var navLinkAfterCSS = Object(styled_components__WEBPACK_IMPORTED_MODULE_2__["css"])(["content:\"\";display:block;height:3px;"]);
 /*
   css prop getters
 */
@@ -1404,7 +1414,7 @@ var getColor = function getColor(_ref) {
 
   if (mobile || sub) {
     switch (color) {
-      case 'white':
+      case "white":
         activeColor = _constants_colors__WEBPACK_IMPORTED_MODULE_4__["default"].sand;
         defaultColor = _constants_colors__WEBPACK_IMPORTED_MODULE_4__["default"].white;
         break;
@@ -1417,7 +1427,7 @@ var getColor = function getColor(_ref) {
     }
   } else {
     switch (color) {
-      case 'white':
+      case "white":
         activeColor = _constants_colors__WEBPACK_IMPORTED_MODULE_4__["default"].sand;
         defaultColor = _constants_colors__WEBPACK_IMPORTED_MODULE_4__["default"].white;
         break;
@@ -1442,10 +1452,10 @@ var getCursor = function getCursor(_ref2) {
       href = _ref2.href;
 
   if (disabled && !href) {
-    return 'not-allowed';
+    return "not-allowed";
   }
 
-  return 'pointer';
+  return "pointer";
 };
 
 var getFontSize = function getFontSize(_ref3) {
@@ -1453,10 +1463,10 @@ var getFontSize = function getFontSize(_ref3) {
       mobile = _ref3.mobile;
 
   if (navbar || mobile) {
-    return '1em';
+    return "1em";
   }
 
-  return '1.1em';
+  return "1.1em";
 };
 
 var getFontWeight = function getFontWeight(_ref4) {
@@ -1464,10 +1474,10 @@ var getFontWeight = function getFontWeight(_ref4) {
       sub = _ref4.sub;
 
   if (navbar || sub) {
-    return '400';
+    return "400";
   }
 
-  return '700';
+  return "700";
 };
 
 var getLineHeight = function getLineHeight(_ref5) {
@@ -1476,21 +1486,21 @@ var getLineHeight = function getLineHeight(_ref5) {
       sub = _ref5.sub;
 
   if (navbar || mobile || sub) {
-    return '1.5';
+    return "1.5";
   }
 
-  return '1';
+  return "1";
 };
 
 var getOpacity = function getOpacity(_ref6) {
   var disabled = _ref6.disabled,
       color = _ref6.color;
 
-  if (disabled && color !== 'white') {
-    return '0.65';
+  if (disabled && color !== "white") {
+    return "0.65";
   }
 
-  return '1';
+  return "1";
 };
 
 var getPointerEvents = function getPointerEvents(_ref7) {
@@ -1498,10 +1508,10 @@ var getPointerEvents = function getPointerEvents(_ref7) {
       href = _ref7.href;
 
   if (disabled && href) {
-    return 'none';
+    return "none";
   }
 
-  return 'auto';
+  return "auto";
 };
 
 var getTransition = function getTransition(_ref8) {
@@ -1510,34 +1520,34 @@ var getTransition = function getTransition(_ref8) {
       href = _ref8.href;
 
   if (mobile || sub) {
-    return 'all .2s ease-in-out';
+    return "all .2s ease-in-out";
   }
 
   if (!href) {
     return null;
   }
 
-  return 'background-color .55s linear,border-color .25s linear,box-shadow .25s linear,color .25s linear';
+  return "background-color .55s linear,border-color .25s linear,box-shadow .25s linear,color .25s linear";
 };
 
 var getAfterMarginTop = function getAfterMarginTop(_ref9) {
   var navbar = _ref9.navbar;
 
   if (navbar) {
-    return '0.25em';
+    return "0.25em";
   }
 
-  return '1em';
+  return "1em";
 };
 
 var getAfterWidth = function getAfterWidth(_ref10) {
   var active = _ref10.active;
 
   if (active) {
-    return '100%';
+    return "100%";
   }
 
-  return '0';
+  return "0";
 };
 
 var getColorWithHover = function getColorWithHover(_ref11) {
@@ -1550,7 +1560,7 @@ var getColorWithHover = function getColorWithHover(_ref11) {
 
   if (mobile || sub) {
     switch (color) {
-      case 'white':
+      case "white":
         disabledColor = _constants_colors__WEBPACK_IMPORTED_MODULE_4__["default"].white;
         defaultColor = _constants_colors__WEBPACK_IMPORTED_MODULE_4__["default"].sand;
         break;
@@ -1563,7 +1573,7 @@ var getColorWithHover = function getColorWithHover(_ref11) {
     }
   } else {
     switch (color) {
-      case 'white':
+      case "white":
         disabledColor = _constants_colors__WEBPACK_IMPORTED_MODULE_4__["default"].white;
         defaultColor = _constants_colors__WEBPACK_IMPORTED_MODULE_4__["default"].sand;
         break;
@@ -1587,10 +1597,10 @@ var getAfterWidthWithHover = function getAfterWidthWithHover(_ref12) {
   var disabled = _ref12.disabled;
 
   if (disabled) {
-    return '0';
+    return "0";
   }
 
-  return '100%';
+  return "100%";
 };
 /*
   inner Tag component
@@ -1621,11 +1631,11 @@ var Tag = styled_components__WEBPACK_IMPORTED_MODULE_2___default.a.div.withConfi
   var navbar = _ref13.navbar,
       mobile = _ref13.mobile,
       sub = _ref13.sub;
-  return !(navbar || mobile || sub) && ' 1.2em';
+  return !(navbar || mobile || sub) && " 1.2em";
 }), function (props) {
-  return !(props.mobile || props.sub) && Object(styled_components__WEBPACK_IMPORTED_MODULE_2__["css"])(["&::after{", " ", " background:", ";margin-top:", ";width:", ";}"], navLinkAfterCSS, props.href && 'transition: width 0.3s;', function (_ref14) {
+  return !(props.mobile || props.sub) && Object(styled_components__WEBPACK_IMPORTED_MODULE_2__["css"])(["&::after{", " ", " background:", ";margin-top:", ";width:", ";}"], navLinkAfterCSS, props.href && "transition: width 0.3s;", function (_ref14) {
     var color = _ref14.color;
-    return color === 'white' ? _constants_colors__WEBPACK_IMPORTED_MODULE_4__["default"].sand : _constants_colors__WEBPACK_IMPORTED_MODULE_4__["default"].red;
+    return color === "white" ? _constants_colors__WEBPACK_IMPORTED_MODULE_4__["default"].sand : _constants_colors__WEBPACK_IMPORTED_MODULE_4__["default"].red;
   }, getAfterMarginTop(props), getAfterWidth(props));
 }, function (props) {
   return getColorWithHover(props);
@@ -1640,8 +1650,8 @@ var deriveTag = function deriveTag(_ref15) {
   var tag = _ref15.tag,
       href = _ref15.href;
 
-  if (tag === 'button' && href) {
-    return 'a';
+  if (tag === "button" && href) {
+    return "a";
   }
 
   return tag;
@@ -1659,7 +1669,7 @@ var NavLink = function NavLink(props) {
         color = _ref16.color;
     return react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(Tag, _extends({
       as: derivedTag,
-      type: derivedTag === 'button' && props.onClick ? 'button' : undefined
+      type: derivedTag === "button" && props.onClick ? "button" : undefined
     }, restProps, {
       navbar: navbar,
       mobile: mobile,
@@ -1677,7 +1687,7 @@ NavLink.propTypes =  true ? {
   href: prop_types__WEBPACK_IMPORTED_MODULE_0___default.a.string
 } : undefined;
 NavLink.defaultProps = {
-  tag: 'button',
+  tag: "button",
   active: false,
   disabled: false,
   onClick: null,
@@ -1766,7 +1776,7 @@ var NavbarChildrenWrapper = styled_components__WEBPACK_IMPORTED_MODULE_2___defau
 */
 
 var logoProps = {
-  display: 'block',
+  display: "block",
   height: 65,
   width: 131
 };
@@ -1784,7 +1794,7 @@ var Navbar = function Navbar(_ref3) {
     href: "http://www.brown.edu/",
     target: "_blank",
     rel: "noopener noreferrer"
-  }, color === 'white' ? react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_svg_inline_logo_black_svg__WEBPACK_IMPORTED_MODULE_6__["default"], logoProps) : react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_svg_inline_logo_white_svg__WEBPACK_IMPORTED_MODULE_7__["default"], logoProps)), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(NavbarChildrenWrapper, null, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_NavbarContext__WEBPACK_IMPORTED_MODULE_3__["default"].Provider, {
+  }, color === "white" ? react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_svg_inline_logo_black_svg__WEBPACK_IMPORTED_MODULE_6__["default"], logoProps) : react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_svg_inline_logo_white_svg__WEBPACK_IMPORTED_MODULE_7__["default"], logoProps)), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(NavbarChildrenWrapper, null, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_NavbarContext__WEBPACK_IMPORTED_MODULE_3__["default"].Provider, {
     value: {
       color: color,
       mobileBreakpoint: mobileBreakpoint,
@@ -1794,15 +1804,15 @@ var Navbar = function Navbar(_ref3) {
 };
 
 Navbar.propTypes =  true ? {
-  color: prop_types__WEBPACK_IMPORTED_MODULE_0___default.a.oneOf(['brown', 'white']),
+  color: prop_types__WEBPACK_IMPORTED_MODULE_0___default.a.oneOf(["brown", "white"]),
   mobileBreakpoint: prop_types__WEBPACK_IMPORTED_MODULE_0___default.a.number,
   toggleTitle: prop_types__WEBPACK_IMPORTED_MODULE_0___default.a.string,
   children: prop_types__WEBPACK_IMPORTED_MODULE_0___default.a.node
 } : undefined;
 Navbar.defaultProps = {
-  color: 'brown',
+  color: "brown",
   mobileBreakpoint: _constants_breakpoints__WEBPACK_IMPORTED_MODULE_8__["default"].md,
-  toggleTitle: 'Global Navigation',
+  toggleTitle: "Global Navigation",
   children: null
 };
 Navbar.Nav = _NavbarNav__WEBPACK_IMPORTED_MODULE_4__["default"];
@@ -1898,12 +1908,12 @@ var MobileNavWrapper = styled_components__WEBPACK_IMPORTED_MODULE_2___default.a.
 
 var getChildColor = function getChildColor(color) {
   switch (color) {
-    case 'white':
-      return 'red';
+    case "white":
+      return "red";
     // brown
 
     default:
-      return 'white';
+      return "white";
   }
 };
 
@@ -1996,11 +2006,11 @@ function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) ===
 
 function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
 
+function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
+
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); if (superClass) _setPrototypeOf(subClass, superClass); }
 
 function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
-
-function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
 
 function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
 
@@ -2051,36 +2061,36 @@ function (_Component) {
 
     _this = _possibleConstructorReturn(this, (_getPrototypeOf2 = _getPrototypeOf(Collapse)).call.apply(_getPrototypeOf2, [this].concat(args)));
 
-    _defineProperty(_assertThisInitialized(_assertThisInitialized(_this)), "state", {
-      display: 'none',
-      height: '0',
-      overflow: 'hidden'
+    _defineProperty(_assertThisInitialized(_this), "state", {
+      display: "none",
+      height: "0",
+      overflow: "hidden"
     });
 
-    _defineProperty(_assertThisInitialized(_assertThisInitialized(_this)), "tagRef", null);
+    _defineProperty(_assertThisInitialized(_this), "tagRef", null);
 
-    _defineProperty(_assertThisInitialized(_assertThisInitialized(_this)), "getHeight", function () {
+    _defineProperty(_assertThisInitialized(_this), "getHeight", function () {
       return _this.tagRef.scrollHeight;
     });
 
-    _defineProperty(_assertThisInitialized(_assertThisInitialized(_this)), "setExpanded", function () {
+    _defineProperty(_assertThisInitialized(_this), "setExpanded", function () {
       _this.setState({
-        display: 'block',
-        height: 'auto',
-        overflow: 'visible'
+        display: "block",
+        height: "auto",
+        overflow: "visible"
       });
     });
 
-    _defineProperty(_assertThisInitialized(_assertThisInitialized(_this)), "setCollapsed", function () {
+    _defineProperty(_assertThisInitialized(_this), "setCollapsed", function () {
       _this.setState({
-        display: 'none'
+        display: "none"
       });
     });
 
-    _defineProperty(_assertThisInitialized(_assertThisInitialized(_this)), "handleTransitionEnd", function (e) {
-      var ePropertyName = process.NODE_ENV === 'jest' ? 'height' : e.propertyName;
+    _defineProperty(_assertThisInitialized(_this), "handleTransitionEnd", function (e) {
+      var ePropertyName = process.NODE_ENV === "jest" ? "height" : e.propertyName;
 
-      if (e.target === _this.tagRef && ePropertyName === 'height') {
+      if (e.target === _this.tagRef && ePropertyName === "height") {
         if (_this.props.isOpen) {
           _this.setExpanded();
         } else {
@@ -2106,7 +2116,7 @@ function (_Component) {
 
       if (!prevProps.isOpen && this.props.isOpen) {
         this.setState({
-          display: 'block'
+          display: "block"
         }, function () {
           return _this2.setState({
             height: "".concat(_this2.getHeight(), "px")
@@ -2120,8 +2130,8 @@ function (_Component) {
         }, function () {
           return setTimeout(function () {
             return _this2.setState({
-              height: '0',
-              overflow: 'hidden'
+              height: "0",
+              overflow: "hidden"
             });
           });
         });
@@ -2155,7 +2165,7 @@ Collapse.propTypes =  true ? {
   children: prop_types__WEBPACK_IMPORTED_MODULE_0___default.a.node.isRequired
 } : undefined;
 Collapse.defaultProps = {
-  transition: 'height 250ms cubic-bezier(0.4,0,0.2,1)'
+  transition: "height 250ms cubic-bezier(0.4,0,0.2,1)"
 };
 /* harmony default export */ __webpack_exports__["default"] = (Collapse);
 /* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(27)))
@@ -2378,11 +2388,11 @@ function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) ===
 
 function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
 
+function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
+
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); if (superClass) _setPrototypeOf(subClass, superClass); }
 
 function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
-
-function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
 
 function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
 
@@ -2407,11 +2417,11 @@ function (_Component) {
 
     _this = _possibleConstructorReturn(this, (_getPrototypeOf2 = _getPrototypeOf(VisibilityToggle)).call.apply(_getPrototypeOf2, [this].concat(args)));
 
-    _defineProperty(_assertThisInitialized(_assertThisInitialized(_this)), "state", {
+    _defineProperty(_assertThisInitialized(_this), "state", {
       isOpen: false
     });
 
-    _defineProperty(_assertThisInitialized(_assertThisInitialized(_this)), "toggleIsOpen", function () {
+    _defineProperty(_assertThisInitialized(_this), "toggleIsOpen", function () {
       return _this.setState(function (_ref) {
         var isOpen = _ref.isOpen;
         return {
@@ -2538,12 +2548,12 @@ var NavWrapper = styled_components__WEBPACK_IMPORTED_MODULE_2___default.a.div.wi
 
 var getChildColor = function getChildColor(color) {
   switch (color) {
-    case 'white':
-      return 'red';
+    case "white":
+      return "red";
     // brown
 
     default:
-      return 'white';
+      return "white";
   }
 };
 
@@ -2876,7 +2886,7 @@ SiteNav.propTypes =  true ? {
 SiteNav.defaultProps = {
   banner: false,
   mobileBreakpoint: _constants_breakpoints__WEBPACK_IMPORTED_MODULE_8__["default"].md,
-  mobileToggleTitle: 'Site Navigation'
+  mobileToggleTitle: "Site Navigation"
 };
 SiteNav.Item = _Nav__WEBPACK_IMPORTED_MODULE_5__["default"].Item;
 SiteNav.Link = _Nav__WEBPACK_IMPORTED_MODULE_5__["default"].Link;

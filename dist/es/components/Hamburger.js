@@ -12,11 +12,11 @@ function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) ===
 
 function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
 
+function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
+
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); if (superClass) _setPrototypeOf(subClass, superClass); }
 
 function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
-
-function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
 
 function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
 
@@ -24,10 +24,10 @@ function _objectWithoutProperties(source, excluded) { if (source == null) return
 
 function _objectWithoutPropertiesLoose(source, excluded) { if (source == null) return {}; var target = {}; var sourceKeys = Object.keys(source); var key, i; for (i = 0; i < sourceKeys.length; i++) { key = sourceKeys[i]; if (excluded.indexOf(key) >= 0) continue; target[key] = source[key]; } return target; }
 
-import PropTypes from 'prop-types';
-import React, { Component } from 'react';
-import styled, { css } from 'styled-components';
-import colors from '../constants/colors';
+import PropTypes from "prop-types";
+import React, { Component } from "react";
+import styled, { css } from "styled-components";
+import colors from "../constants/colors";
 /*
   css mixins
 */
@@ -36,7 +36,7 @@ var hamburgerBarCSS = css(["height:3px;position:absolute;width:25px;background-c
   var color = _ref.color;
   return colors[color];
 });
-var hamburgerBarPseudoElementCSS = css(["content:'';display:block;"]);
+var hamburgerBarPseudoElementCSS = css(["content:\"\";display:block;"]);
 var hamburgerTransitionCSS = css(["transition-property:transform;transition-timing-function:ease;"]);
 /*
   inner components
@@ -46,13 +46,13 @@ var HamburgerTag = styled.div.withConfig({
   displayName: "Hamburger__HamburgerTag",
   componentId: "u53pwq-0"
 })(["background:transparent;border:none;cursor:", ";", " ", " padding:", ";"], function (props) {
-  return props.as === 'button' ? 'pointer' : 'inherit';
+  return props.as === "button" ? "pointer" : "inherit";
 }, function (props) {
-  return props.as === 'div' && 'display: inline-block;';
+  return props.as === "div" && "display: inline-block;";
 }, function (props) {
-  return props.as === 'button' && 'height: 24px;';
+  return props.as === "button" && "height: 24px;";
 }, function (props) {
-  return props.as === 'button' ? '0 25px 3px 0' : '0 25px 7px 0';
+  return props.as === "button" ? "0 25px 3px 0" : "0 25px 7px 0";
 }); // filter props so they don't become dom attributes (see `styled-components` issue 439)
 
 var HamburgerBars = styled(function (_ref2) {
@@ -67,13 +67,13 @@ var HamburgerBars = styled(function (_ref2) {
 })(["", " ", " transition-duration:.22s;transition-timing-function:cubic-bezier(0.55,0.055,0.675,0.19);", " &&:before{", " ", " ", " transition-duration:.15s;transition:top .1s .25s ease-in,opacity .1s ease-in;opacity:", ";top:", ";", "}&&:after{", " ", " ", " transition-duration:.15s;transition:bottom .1s .25s ease-in,transform .22s cubic-bezier(0.55,0.055,0.675,0.19);bottom:", ";", "}"], hamburgerBarCSS, hamburgerTransitionCSS, function (props) {
   return props.isOpen && css(["-webkit-transform:rotate(225deg);-ms-transform:rotate(225deg);transform:rotate(225deg);-webkit-transition-delay:0.12s;-o-transition-delay:0.12s;transition-delay:0.12s;-webkit-transition-timing-function:cubic-bezier(0.215,0.61,0.355,1);-o-transition-timing-function:cubic-bezier(0.215,0.61,0.355,1);transition-timing-function:cubic-bezier(0.215,0.61,0.355,1);"]);
 }, hamburgerBarCSS, hamburgerBarPseudoElementCSS, hamburgerTransitionCSS, function (props) {
-  return props.isOpen && '0';
+  return props.isOpen && "0";
 }, function (props) {
-  return props.isOpen ? '0' : '-7px';
+  return props.isOpen ? "0" : "-7px";
 }, function (props) {
   return props.isOpen && css(["-webkit-transition:top 0.1s ease-out,opacity 0.1s 0.12s ease-out;-o-transition:top 0.1s ease-out,opacity 0.1s 0.12s ease-out;transition:top 0.1s ease-out,opacity 0.1s 0.12s ease-out;"]);
 }, hamburgerBarCSS, hamburgerBarPseudoElementCSS, hamburgerTransitionCSS, function (props) {
-  return props.isOpen ? '0' : '-7px';
+  return props.isOpen ? "0" : "-7px";
 }, function (props) {
   return props.isOpen && css(["-webkit-transform:rotate(-90deg);-ms-transform:rotate(-90deg);transform:rotate(-90deg);transition:bottom 0.1s ease-out,-webkit-transform 0.22s 0.12s cubic-bezier(0.215,0.61,0.355,1);"]);
 });
@@ -99,11 +99,11 @@ function (_Component) {
 
     _this = _possibleConstructorReturn(this, (_getPrototypeOf2 = _getPrototypeOf(Hamburger)).call.apply(_getPrototypeOf2, [this].concat(args)));
 
-    _defineProperty(_assertThisInitialized(_assertThisInitialized(_this)), "state", {
+    _defineProperty(_assertThisInitialized(_this), "state", {
       isOpen: _this.props.isOpen
     });
 
-    _defineProperty(_assertThisInitialized(_assertThisInitialized(_this)), "handleClick", function () {
+    _defineProperty(_assertThisInitialized(_this), "handleClick", function () {
       return _this.setState(function (_ref3) {
         var isOpen = _ref3.isOpen;
         return {
@@ -145,10 +145,10 @@ function (_Component) {
           restProps = _objectWithoutProperties(_this$props, ["tag", "color", "ariaLabel", "onOpen", "onClose"]);
 
       var isOpen = this.state.isOpen;
-      var isButton = tag === 'button';
+      var isButton = tag === "button";
       return React.createElement(HamburgerTag, _extends({}, restProps, {
         as: tag,
-        type: isButton ? 'button' : null,
+        type: isButton ? "button" : null,
         "aria-expanded": isButton ? isOpen : null,
         "aria-label": isButton ? ariaLabel : null,
         onClick: isButton ? this.handleClick : null
@@ -163,17 +163,17 @@ function (_Component) {
 }(Component);
 
 Hamburger.propTypes = {
-  tag: PropTypes.oneOf(['button', 'div']),
-  color: PropTypes.oneOf(['red', 'white']),
+  tag: PropTypes.oneOf(["button", "div"]),
+  color: PropTypes.oneOf(["red", "white"]),
   ariaLabel: PropTypes.string,
   isOpen: PropTypes.bool,
   onOpen: PropTypes.func,
   onClose: PropTypes.func
 };
 Hamburger.defaultProps = {
-  tag: 'button',
-  color: 'red',
-  ariaLabel: 'Toggle navigation',
+  tag: "button",
+  color: "red",
+  ariaLabel: "Toggle navigation",
   isOpen: false,
   onOpen: null,
   onClose: null

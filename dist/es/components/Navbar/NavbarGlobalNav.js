@@ -14,18 +14,18 @@ function _objectWithoutProperties(source, excluded) { if (source == null) return
 
 function _objectWithoutPropertiesLoose(source, excluded) { if (source == null) return {}; var target = {}; var sourceKeys = Object.keys(source); var key, i; for (i = 0; i < sourceKeys.length; i++) { key = sourceKeys[i]; if (excluded.indexOf(key) >= 0) continue; target[key] = source[key]; } return target; }
 
-import PropTypes from 'prop-types';
-import React from 'react';
-import styled from 'styled-components';
-import { WindowSize } from 'react-fns';
-import NavbarContext from './NavbarContext';
-import Hamburger from '../Hamburger';
-import Nav from '../Nav';
-import Collapse from '../utils/Collapse';
-import VisibilityToggle from '../utils/VisibilityToggle';
-import colors from '../../constants/colors';
-import media from '../../constants/media';
-import { sansBold } from '../../constants/typography';
+import PropTypes from "prop-types";
+import React from "react";
+import styled from "styled-components";
+import { WindowSize } from "react-fns";
+import NavbarContext from "./NavbarContext";
+import Hamburger from "../Hamburger";
+import Nav from "../Nav";
+import Collapse from "../utils/Collapse";
+import VisibilityToggle from "../utils/VisibilityToggle";
+import colors from "../../constants/colors";
+import media from "../../constants/media";
+import { sansBold } from "../../constants/typography";
 /*
   inner components
 */
@@ -70,12 +70,12 @@ var NavWrapper = styled.div.withConfig({
 
 var getChildColor = function getChildColor(color) {
   switch (color) {
-    case 'white':
-      return 'red';
+    case "white":
+      return "red";
     // brown
 
     default:
-      return 'white';
+      return "white";
   }
 };
 

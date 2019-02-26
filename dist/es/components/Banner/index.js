@@ -2,11 +2,11 @@ function _objectWithoutProperties(source, excluded) { if (source == null) return
 
 function _objectWithoutPropertiesLoose(source, excluded) { if (source == null) return {}; var target = {}; var sourceKeys = Object.keys(source); var key, i; for (i = 0; i < sourceKeys.length; i++) { key = sourceKeys[i]; if (excluded.indexOf(key) >= 0) continue; target[key] = source[key]; } return target; }
 
-import PropTypes from 'prop-types';
-import React from 'react';
-import styled from 'styled-components';
-import BannerText from './BannerText';
-import colors from '../../constants/colors';
+import PropTypes from "prop-types";
+import React from "react";
+import styled from "styled-components";
+import BannerText from "./BannerText";
+import colors from "../../constants/colors";
 /*
   css prop getters
 */
@@ -15,17 +15,17 @@ var getMaxHeight = function getMaxHeight(_ref) {
   var size = _ref.size;
 
   switch (size) {
-    case 'small':
-      return '150px';
+    case "small":
+      return "150px";
 
-    case 'medium':
-      return '300px';
+    case "medium":
+      return "300px";
 
-    case 'large':
-      return '600px';
+    case "large":
+      return "600px";
 
     default:
-      return '200px';
+      return "200px";
   }
 };
 /*
@@ -52,7 +52,7 @@ var BannerChildrenWrapper = styled.div.withConfig({
   componentId: "tzfnvw-3"
 })(["position:absolute;text-align:center;top:", ";width:100%;z-index:15;"], function (_ref2) {
   var size = _ref2.size;
-  return size === 'small' ? '20%' : '35%';
+  return size === "small" ? "20%" : "35%";
 });
 /*
   outer Banner component
@@ -84,14 +84,14 @@ var Banner = function Banner(_ref3) {
 };
 
 Banner.propTypes = {
-  color: PropTypes.oneOf(['emerald', 'red', 'brown', 'yellow', 'gray', 'sand', 'lightBrown', 'mediumBrown', 'navy', 'skyblue']),
-  size: PropTypes.oneOf(['default', 'small', 'medium', 'large']),
+  color: PropTypes.oneOf(["emerald", "red", "brown", "yellow", "gray", "sand", "lightBrown", "mediumBrown", "navy", "skyblue"]),
+  size: PropTypes.oneOf(["default", "small", "medium", "large"]),
   src: PropTypes.string,
   children: PropTypes.node
 };
 Banner.defaultProps = {
-  color: 'emerald',
-  size: 'default',
+  color: "emerald",
+  size: "default",
   src: null,
   children: null
 };

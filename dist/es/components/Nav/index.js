@@ -2,13 +2,13 @@ function _objectWithoutProperties(source, excluded) { if (source == null) return
 
 function _objectWithoutPropertiesLoose(source, excluded) { if (source == null) return {}; var target = {}; var sourceKeys = Object.keys(source); var key, i; for (i = 0; i < sourceKeys.length; i++) { key = sourceKeys[i]; if (excluded.indexOf(key) >= 0) continue; target[key] = source[key]; } return target; }
 
-import PropTypes from 'prop-types';
-import React from 'react';
-import styled from 'styled-components';
-import NavContext from './NavContext';
-import NavItem from './NavItem';
-import NavLink from './NavLink';
-import colors from '../../constants/colors';
+import PropTypes from "prop-types";
+import React from "react";
+import styled from "styled-components";
+import NavContext from "./NavContext";
+import NavItem from "./NavItem";
+import NavLink from "./NavLink";
+import colors from "../../constants/colors";
 /*
   css prop getters
 */
@@ -20,7 +20,7 @@ var getBackgroundColor = function getBackgroundColor(_ref) {
     return colors.lightGray;
   }
 
-  return 'transparent';
+  return "transparent";
 };
 
 var getDisplay = function getDisplay(_ref2) {
@@ -28,20 +28,20 @@ var getDisplay = function getDisplay(_ref2) {
       sub = _ref2.sub;
 
   if (mobile || sub) {
-    return 'block';
+    return "block";
   }
 
-  return 'flex';
+  return "flex";
 };
 
 var getPadding = function getPadding(_ref3) {
   var sub = _ref3.sub;
 
   if (sub) {
-    return '15px';
+    return "15px";
   }
 
-  return '0';
+  return "0";
 };
 
 var getWidth = function getWidth(_ref4) {
@@ -49,10 +49,10 @@ var getWidth = function getWidth(_ref4) {
       sub = _ref4.sub;
 
   if (mobile || sub) {
-    return '100%';
+    return "100%";
   }
 
-  return 'auto';
+  return "auto";
 };
 /*
   inner Tag component
@@ -103,14 +103,14 @@ Nav.propTypes = {
   navbar: PropTypes.bool,
   mobile: PropTypes.bool,
   sub: PropTypes.bool,
-  color: PropTypes.oneOf(['red', 'white']),
+  color: PropTypes.oneOf(["red", "white"]),
   children: PropTypes.node.isRequired
 };
 Nav.defaultProps = {
   navbar: false,
   mobile: false,
   sub: false,
-  color: 'red'
+  color: "red"
 };
 Nav.Item = NavItem;
 Nav.Link = NavLink;

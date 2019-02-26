@@ -2,9 +2,9 @@ function _objectWithoutProperties(source, excluded) { if (source == null) return
 
 function _objectWithoutPropertiesLoose(source, excluded) { if (source == null) return {}; var target = {}; var sourceKeys = Object.keys(source); var key, i; for (i = 0; i < sourceKeys.length; i++) { key = sourceKeys[i]; if (excluded.indexOf(key) >= 0) continue; target[key] = source[key]; } return target; }
 
-import PropTypes from 'prop-types';
-import React from 'react';
-import styled, { keyframes } from 'styled-components';
+import PropTypes from "prop-types";
+import React from "react";
+import styled, { keyframes } from "styled-components";
 
 var LoaderSVG = function LoaderSVG(props) {
   return React.createElement("svg", props, React.createElement("title", {
