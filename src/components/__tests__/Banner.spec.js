@@ -73,6 +73,7 @@ describe("Banner", () => {
   class="c0"
 >
   <svg
+    display="block"
     viewBox="0 0 2600 600"
   >
     <rect

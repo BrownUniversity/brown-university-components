@@ -61,7 +61,7 @@ const Banner = ({ color, size, src, children, ...restProps }) => (
       {src ? (
         <BannerImage src={src} alt="Banner" />
       ) : (
-        <svg viewBox="0 0 2600 600">
+        <svg display="block" viewBox="0 0 2600 600">
           <rect
             aria-hidden="true"
             focusable="false"
