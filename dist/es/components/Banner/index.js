@@ -71,6 +71,7 @@ var Banner = function Banner(_ref3) {
     src: src,
     alt: "Banner"
   }) : React.createElement("svg", {
+    display: "block",
     viewBox: "0 0 2600 600"
   }, React.createElement("rect", {
     "aria-hidden": "true",

@@ -1,4 +1,4 @@
-/*! brown-university-theme v0.7.0 */
+/*! brown-university-theme v0.7.1 */
 (function webpackUniversalModuleDefinition(root, factory) {
 	if(typeof exports === 'object' && typeof module === 'object')
 		module.exports = factory(require("prop-types"), require("react"), require("styled-components"), require("polished"), require("react-fns"));
@@ -336,6 +336,7 @@ var Banner = function Banner(_ref3) {
     src: src,
     alt: "Banner"
   }) : react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("svg", {
+    display: "block",
     viewBox: "0 0 2600 600"
   }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("rect", {
     "aria-hidden": "true",
