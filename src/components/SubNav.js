@@ -1,6 +1,5 @@
 import PropTypes from "prop-types";
 import React from "react";
-
 import Nav from "./Nav";
 
 const SubNav = ({ children, ...restProps }) => (

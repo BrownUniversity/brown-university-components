@@ -1,10 +1,10 @@
 import PropTypes from "prop-types";
 import React from "react";
 import styled from "styled-components";
-
-import colors from "../../constants/colors";
+import { colors, typography } from "brown-university-styles";
 import media from "../../constants/media";
-import { serif } from "../../constants/typography";
+
+const { serif } = typography;
 
 /*
   inner Tag component

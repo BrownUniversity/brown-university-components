@@ -1,11 +1,10 @@
 import PropTypes from "prop-types";
 import React from "react";
 import styled from "styled-components";
-
+import { colors } from "brown-university-styles";
 import NavContext from "./NavContext";
 import NavItem from "./NavItem";
 import NavLink from "./NavLink";
-import colors from "../../constants/colors";
 
 /*
   css prop getters

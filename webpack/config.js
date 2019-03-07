@@ -2,7 +2,6 @@ const path = require("path");
 const webpack = require("webpack");
 const CleanWebpackPlugin = require("clean-webpack-plugin");
 const CopyWebpackPlugin = require("copy-webpack-plugin");
-const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const { BundleAnalyzerPlugin } = require("webpack-bundle-analyzer");
 const svgRule = require("./rules/svg");
 const { version } = require("../package.json");
@@ -13,7 +12,7 @@ module.exports = {
   mode: "none",
   entry: path.join(__dirname, "../src/index.js"),
   output: {
-    filename: "brown-university-theme.commonjs.js",
+    filename: "brown-university-components.commonjs.js",
     path: path.resolve(__dirname, "../dist"),
     libraryTarget: "umd"
   },
@@ -29,15 +28,7 @@ module.exports = {
           }
         }
       },
-      {
-        test: /\.css$/,
-        use: [MiniCssExtractPlugin.loader, "css-loader"]
-      },
-      svgRule,
-      {
-        test: /\.woff$/,
-        use: "file-loader?name=[name].[hash].[ext]"
-      }
+      svgRule
     ]
   },
   externals: {
@@ -48,15 +39,12 @@ module.exports = {
     polished: "polished"
   },
   plugins: [
-    new webpack.BannerPlugin(`brown-university-theme v${version}`),
+    new webpack.BannerPlugin(`brown-university-components v${version}`),
     new CleanWebpackPlugin(["dist"], {
       root: `${__dirname}/../`,
       exclude: ["es"]
     }),
     new CopyWebpackPlugin(["src/svg/background.svg"]),
-    new MiniCssExtractPlugin({
-      filename: "styles.css"
-    }),
     runAnalyzer && new BundleAnalyzerPlugin()
   ].filter(Boolean)
 };

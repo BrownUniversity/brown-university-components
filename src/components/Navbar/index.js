@@ -1,14 +1,13 @@
 import PropTypes from "prop-types";
 import React from "react";
 import styled from "styled-components";
-
+import { colors } from "brown-university-styles";
 import NavbarContext from "./NavbarContext";
 import NavbarNav from "./NavbarNav";
 import NavbarGlobalNav from "./NavbarGlobalNav";
 import LogoBlackSVG from "../../svg/inline/logo-black.svg";
 import LogoWhiteSVG from "../../svg/inline/logo-white.svg";
 import breakpoints from "../../constants/breakpoints";
-import colors from "../../constants/colors";
 import media from "../../constants/media";
 
 /*

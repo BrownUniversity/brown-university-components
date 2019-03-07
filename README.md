@@ -1,6 +1,6 @@
-# Brown University Theme
+# Brown University Components
 
-Styles and components for building web applications based on the [Brown University Theme](https://www.brown.edu/university-communications/digital/university-theme).
+Components for building React-based applications at Brown University.
 
 _On-prem Bitbucket doesn't render markdown very nicely; view this in a markdown editor like [Dillinger](https://dillinger.io/)._
 
@@ -8,10 +8,13 @@ _On-prem Bitbucket doesn't render markdown very nicely; view this in a markdown 
 
 ## Install
 
-### Add Brown University Theme
+### Add Brown University Components
 
 ```
-  yarn add git+https://bitbucket.brown.edu/scm/ccum/brown-university-theme.git#^0.7
+  // npm
+  npm i -D eslint git+https://bitbucket.brown.edu/scm/react/brown-university-components.git#semver:^0.7
+  // yarn
+  yarn add -D eslint git+https://bitbucket.brown.edu/scm/react/brown-university-components.git#^0.7
 ```
 
 _Ensure you're on the network and that your SSH key has been added to the ssh-agent (`ssh-add ~/.ssh/id_rsa`) and uploaded to [bitbucket.brown.edu](https://bitbucket.brown.edu/plugins/servlet/ssh/account/keys)._
@@ -20,8 +23,9 @@ _Ensure you're on the network and that your SSH key has been added to the ssh-ag
 
 #### Required Peer Dependencies
 
-These libraries are not bundled with Brown University Theme and are required at runtime:
+These libraries are not bundled with Brown University Components and are required at runtime:
 
+- [**brown-university-styles**](https://bitbucket.brown.edu/projects/REACT/repos/brown-university-styles)
 - [**react**](https://www.npmjs.com/package/react)
 - [**styled-components**](https://www.npmjs.com/package/styled-components)
 
@@ -31,14 +35,7 @@ These libraries are not bundled with Brown University Theme and are required at 
 
 ### Styles
 
-```
-// Includes fonts and layout classes. This only needs to be done once; probably
-// where you're calling `ReactDOM.render`. Remember to configure Webpack to load
-// stylesheets and font files.
-import 'brown-university-theme/dist/styles.css';
-```
-
-_Brown University Theme is designed to be used alongside [Bootstrap](https://www.npmjs.com/package/bootstrap) and [Reactstrap](https://www.npmjs.com/package/reactstrap), specifically for things like [layout](https://reactstrap.github.io/components/layout/) and [alerts](https://reactstrap.github.io/components/alerts/)._
+Import styles from Brown University Styles.
 
 ### Components
 
@@ -48,8 +45,8 @@ _Brown University Theme is designed to be used alongside [Bootstrap](https://www
 
   ```
   import React from 'react';
-  import { Background } from 'brown-university-theme';
-  import backgroundURL from 'brown-university-theme/dist/background.svg';
+  import { Background } from 'brown-university-components';
+  import backgroundURL from 'brown-university-components/dist/background.svg';
 
   export default () => (
     <Background url={backgroundURL}>
@@ -74,7 +71,7 @@ _Brown University Theme is designed to be used alongside [Bootstrap](https://www
 
   ```
   import React from 'react';
-  import { Banner } from 'brown-university-theme';
+  import { Banner } from 'brown-university-components';
 
   export default () => (
     <Banner src={'./path/to/img.jpg'}>
@@ -98,7 +95,7 @@ _Brown University Theme is designed to be used alongside [Bootstrap](https://www
 
   ```
   import React from 'react';
-  import { Button } from 'brown-university-theme';
+  import { Button } from 'brown-university-components';
 
   export default () => <Button color="yellow">Click Me</Button>;
   ```
@@ -124,7 +121,7 @@ _Brown University Theme is designed to be used alongside [Bootstrap](https://www
 
   ```
   import React from 'react';
-  import { Code } from 'brown-university-theme';
+  import { Code } from 'brown-university-components';
 
   export default () => <Code>code</Code>;
   ```
@@ -143,7 +140,7 @@ _This is a primitive used by `NavbarNav`, `NavbarGlobalNav` and `SiteNav`. You m
 
   ```
   import React from 'react';
-  import { Hamburger } from 'brown-university-theme';
+  import { Hamburger } from 'brown-university-components';
 
   export default () => <Hamburger />;
   ```
@@ -165,7 +162,7 @@ _This is a primitive used by `NavbarNav`, `NavbarGlobalNav` and `SiteNav`. You m
 
   ```
   import React from 'react';
-  import { Loader } from 'brown-university-theme';
+  import { Loader } from 'brown-university-components';
 
   export default () => <Loader height={300} />;
   ```
@@ -184,7 +181,7 @@ _This is a primitive used by `NavbarNav`, `NavbarGlobalNav`, `SiteNav`, and `Sub
 
   ```
   import React from 'react';
-  import { Nav } from 'brown-university-theme';
+  import { Nav } from 'brown-university-components';
 
   export default () => (
     <Nav>
@@ -241,7 +238,7 @@ _This is a primitive used by `NavbarNav`, `NavbarGlobalNav`, `SiteNav`, and `Sub
 
   ```
   import React from 'react';
-  import { Navbar } from 'brown-university-theme';
+  import { Navbar } from 'brown-university-components';
 
   export default () => <Navbar color="white" />;
   ```
@@ -263,7 +260,7 @@ _This is a primitive used by `NavbarNav`, `NavbarGlobalNav`, `SiteNav`, and `Sub
 
   ```
   import React from 'react';
-  import { Navbar } from 'brown-university-theme';
+  import { Navbar } from 'brown-university-components';
 
   export default () => (
     <Navbar>
@@ -306,7 +303,7 @@ _This is a primitive used by `NavbarNav`, `NavbarGlobalNav`, `SiteNav`, and `Sub
 
   ```
   import React from 'react';
-  import { Navbar } from 'brown-university-theme';
+  import { Navbar } from 'brown-university-components';
 
   export default () => (
     <Navbar>
@@ -349,7 +346,7 @@ _This is a primitive used by `NavbarNav`, `NavbarGlobalNav`, `SiteNav`, and `Sub
 
   ```
   import React from 'react';
-  import { SiteNav } from 'brown-university-theme';
+  import { SiteNav } from 'brown-university-components';
 
   export default () => (
     <SiteNav>
@@ -391,7 +388,7 @@ _This is a primitive used by `NavbarNav`, `NavbarGlobalNav`, `SiteNav`, and `Sub
 
   ```
   import React from 'react';
-  import { SubNav } from 'brown-university-theme';
+  import { SubNav } from 'brown-university-components';
 
   export default () => (
     <SubNav>

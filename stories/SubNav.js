@@ -1,6 +1,5 @@
 import React from "react";
 import { storiesOf } from "@storybook/react";
-
 import { SubNav } from "../src";
 
 storiesOf("SubNav", module).add("default", () => (

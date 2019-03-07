@@ -1,9 +1,9 @@
 import PropTypes from "prop-types";
 import React from "react";
 import styled from "styled-components";
+import { colors, typography } from "brown-university-styles";
 
-import colors from "../constants/colors";
-import { mono } from "../constants/typography";
+const { mono } = typography;
 
 /*
   inner Tag component

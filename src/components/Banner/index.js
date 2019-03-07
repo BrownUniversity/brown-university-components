@@ -1,9 +1,8 @@
 import PropTypes from "prop-types";
 import React from "react";
 import styled from "styled-components";
-
+import { colors } from "brown-university-styles";
 import BannerText from "./BannerText";
-import colors from "../../constants/colors";
 
 /*
   css prop getters
