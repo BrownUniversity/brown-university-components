@@ -1,7 +1,6 @@
 import React from "react";
 import { storiesOf } from "@storybook/react";
 import { withKnobs, boolean, number, text } from "@storybook/addon-knobs";
-
 import { SiteNav, Banner } from "../src";
 import breakpoints from "../src/constants/breakpoints";
 import bannerImage from "./images/banner.png";

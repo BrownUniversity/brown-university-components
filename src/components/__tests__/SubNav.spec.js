@@ -1,6 +1,5 @@
 import React from "react";
 import { render } from "react-testing-library";
-
 import SubNav from "../SubNav";
 
 const renderSubNav = ({

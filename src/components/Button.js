@@ -2,9 +2,9 @@ import PropTypes from "prop-types";
 import React from "react";
 import styled, { css } from "styled-components";
 import { darken } from "polished";
+import { colors, typography } from "brown-university-styles";
 
-import colors from "../constants/colors";
-import { sans } from "../constants/typography";
+const { sans } = typography;
 
 /*
   css mixins

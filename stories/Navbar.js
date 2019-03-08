@@ -1,7 +1,6 @@
 import React from "react";
 import { storiesOf } from "@storybook/react";
 import { withKnobs, select, number, text } from "@storybook/addon-knobs";
-
 import { Navbar } from "../src";
 import breakpoints from "../src/constants/breakpoints";
 

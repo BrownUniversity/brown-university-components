@@ -1,6 +1,5 @@
 import React from "react";
 import { render } from "react-testing-library";
-
 import Code from "../Code";
 
 const renderCode = ({ props = {}, children = "code" } = {}) => {

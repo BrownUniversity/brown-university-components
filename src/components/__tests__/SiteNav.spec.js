@@ -1,7 +1,6 @@
 import React from "react";
 import { render, fireEvent } from "react-testing-library";
 import { triggerWindowResize } from "window-test-utils";
-
 import SiteNav from "../SiteNav";
 import breakpoints from "../../constants/breakpoints";
 

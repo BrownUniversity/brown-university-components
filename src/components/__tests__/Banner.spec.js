@@ -1,6 +1,5 @@
 import React from "react";
 import { render } from "react-testing-library";
-
 import Banner from "../Banner";
 
 const renderBanner = ({ props = {}, children = null } = {}) => {

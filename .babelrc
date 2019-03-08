@@ -25,12 +25,6 @@
               ]
             }
           }
-        ],
-        [
-          "babel-plugin-transform-require-ignore",
-          {
-            "extensions": [".css"]
-          }
         ]
       ],
       "presets": [

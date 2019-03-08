@@ -1,8 +1,7 @@
 import PropTypes from "prop-types";
 import React, { Component } from "react";
 import styled, { css } from "styled-components";
-
-import colors from "../constants/colors";
+import { colors } from "brown-university-styles";
 
 /*
   css mixins

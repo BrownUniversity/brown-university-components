@@ -2,13 +2,12 @@ import PropTypes from "prop-types";
 import React from "react";
 import styled from "styled-components";
 import { WindowSize } from "react-fns";
-
+import { colors } from "brown-university-styles";
 import NavbarContext from "./NavbarContext";
 import Hamburger from "../Hamburger";
 import Nav from "../Nav";
 import Collapse from "../utils/Collapse";
 import VisibilityToggle from "../utils/VisibilityToggle";
-import colors from "../../constants/colors";
 import media from "../../constants/media";
 
 /*

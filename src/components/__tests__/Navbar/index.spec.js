@@ -1,6 +1,5 @@
 import React from "react";
 import { render } from "react-testing-library";
-
 import Navbar from "../../Navbar";
 
 const renderNavbar = ({ props = {}, children = jest.fn() } = {}) => {
