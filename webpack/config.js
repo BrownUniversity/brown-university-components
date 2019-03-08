@@ -32,6 +32,7 @@ module.exports = {
     ]
   },
   externals: {
+    "brown-university-styles": "brown-university-styles",
     react: "react",
     "styled-components": "styled-components",
     "prop-types": "prop-types",
