@@ -7,6 +7,7 @@ function _objectWithoutPropertiesLoose(source, excluded) { if (source == null) r
 import PropTypes from "prop-types";
 import React from "react";
 import styled, { css } from "styled-components";
+import { colors } from "brown-university-styles";
 /*
   inner Tag component
 */
@@ -28,7 +29,7 @@ var Tag = styled(function (_ref) {
   return url;
 }, function (_ref3) {
   var color = _ref3.color;
-  return color === "gray" ? "#F0F3F5" : "#FFF";
+  return colors[color];
 }, function (_ref4) {
   var marginTop = _ref4.marginTop;
   return marginTop;
@@ -54,7 +55,7 @@ var Background = function Background(_ref5) {
 
 Background.propTypes = {
   url: PropTypes.string.isRequired,
-  color: PropTypes.oneOf(["white", "gray"]),
+  color: PropTypes.oneOf(["white", "lightGray"]),
   full: PropTypes.bool,
   marginTop: PropTypes.number,
   children: PropTypes.node.isRequired

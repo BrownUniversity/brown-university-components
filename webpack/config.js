@@ -12,7 +12,7 @@ module.exports = {
   mode: "none",
   entry: path.join(__dirname, "../src/index.js"),
   output: {
-    filename: "brown-university-components.commonjs.js",
+    filename: "index.commonjs.js",
     path: path.resolve(__dirname, "../dist"),
     libraryTarget: "umd"
   },

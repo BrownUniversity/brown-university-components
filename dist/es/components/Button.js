@@ -237,7 +237,7 @@ var Button = function Button(props) {
 
 Button.propTypes = {
   tag: PropTypes.oneOfType([PropTypes.func, PropTypes.string]),
-  color: PropTypes.oneOf(["red", "yellow", "brown", "gray", "emerald", "skyblue", "navy"]),
+  color: PropTypes.oneOf(["red", "yellow", "brown", "gray", "emerald", "skyBlue", "navy", "idRed"]),
   size: PropTypes.oneOf(["default", "small", "large"]),
   uppercase: PropTypes.bool,
   rounded: PropTypes.bool,

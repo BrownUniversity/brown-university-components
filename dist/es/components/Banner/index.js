@@ -85,7 +85,7 @@ var Banner = function Banner(_ref3) {
 };
 
 Banner.propTypes = {
-  color: PropTypes.oneOf(["emerald", "red", "brown", "yellow", "gray", "sand", "lightBrown", "mediumBrown", "navy", "skyblue"]),
+  color: PropTypes.oneOf(["emerald", "red", "brown", "yellow", "gray", "sand", "lightBrown", "mediumBrown", "navy", "skyBlue"]),
   size: PropTypes.oneOf(["default", "small", "medium", "large"]),
   src: PropTypes.string,
   children: PropTypes.node

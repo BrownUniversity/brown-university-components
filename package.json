@@ -2,10 +2,10 @@
   "name": "brown-university-components",
   "description": "Components for building React-based applications at Brown University",
   "author": "Colin Cummings <colin_cummings@brown.edu>",
-  "version": "0.8.3",
+  "version": "1.0.0",
   "private": true,
   "homepage": "https://bitbucket.brown.edu/projects/react/repos/brown-university-components",
-  "main": "dist/brown-university-components.commonjs.js",
+  "main": "dist/index.commonjs.js",
   "module": "dist/es/index.js",
   "sideEffects": "false",
   "scripts": {
