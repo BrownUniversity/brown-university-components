@@ -466,9 +466,9 @@ npm run test:watch
 To publish a new version, do the following:
 
 1. Bump version in `package.json` and `package-lock.json`
-1. Bump version in `README.md` install instructions (for major and minor version bumps only)
-1. Update `CHANGELOG.md`
-1. `npm run build`
-1. Commit changes
-1. Tag new version
-1. Push master and tags to all remotes
+2. Bump version in `README.md` install instructions (for major and minor version bumps only)
+3. Update `CHANGELOG.md`
+4. `npm run build`
+5. Commit changes
+6. Tag new version
+7. Push master and tags to all remotes

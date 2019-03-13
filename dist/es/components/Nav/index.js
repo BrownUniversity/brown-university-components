@@ -5,7 +5,6 @@ function _objectWithoutPropertiesLoose(source, excluded) { if (source == null) r
 import PropTypes from "prop-types";
 import React from "react";
 import styled from "styled-components";
-import { colors } from "brown-university-styles";
 import NavContext from "./NavContext";
 import NavItem from "./NavItem";
 import NavLink from "./NavLink";
@@ -17,7 +16,7 @@ var getBackgroundColor = function getBackgroundColor(_ref) {
   var sub = _ref.sub;
 
   if (sub) {
-    return colors.lightGray;
+    return "#F7F7F7";
   }
 
   return "transparent";
