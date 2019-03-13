@@ -124,7 +124,8 @@ describe("Button", () => {
   text-transform: uppercase;
 }
 
-.c0:hover {
+.c0:hover,
+.c0:focus {
   background-color: #8e0303;
   box-shadow: inset 0 0 0 1px #8e0303;
   color: #FFFFFF;
@@ -173,7 +174,8 @@ describe("Button", () => {
   text-transform: uppercase;
 }
 
-.c0:hover {
+.c0:hover,
+.c0:focus {
   background-color: #f8b600;
   box-shadow: inset 0 0 0 1px #f8b600;
   color: #FFFFFF;
@@ -222,7 +224,8 @@ describe("Button", () => {
   text-transform: uppercase;
 }
 
-.c0:hover {
+.c0:hover,
+.c0:focus {
   background-color: #C00404;
   box-shadow: inset 0 0 0 1px #C00404;
   color: #FFFFFF;
@@ -271,7 +274,8 @@ describe("Button", () => {
   text-transform: uppercase;
 }
 
-.c0:hover {
+.c0:hover,
+.c0:focus {
   background-color: #4E3629;
   box-shadow: inset 0 0 0 1px #4E3629;
   color: #FFFFFF;
@@ -320,7 +324,8 @@ describe("Button", () => {
   text-transform: uppercase;
 }
 
-.c0:hover {
+.c0:hover,
+.c0:focus {
   background-color: #C00404;
   box-shadow: inset 0 0 0 1px #FFFFFF;
   color: #FFFFFF;
@@ -369,7 +374,8 @@ describe("Button", () => {
   text-transform: uppercase;
 }
 
-.c0:hover {
+.c0:hover,
+.c0:focus {
   background-color: #98A4AE;
   box-shadow: inset 0 0 0 1px #FFFFFF;
   color: #FFFFFF;
@@ -418,7 +424,8 @@ describe("Button", () => {
   text-transform: uppercase;
 }
 
-.c0:hover {
+.c0:hover,
+.c0:focus {
   background-color: #FFFFFF;
   box-shadow: inset 0 0 0 1px #FFFFFF;
   color: #98A4AE;
@@ -472,7 +479,8 @@ describe("Button", () => {
   text-transform: uppercase;
 }
 
-.c0:hover {
+.c0:hover,
+.c0:focus {
   background-color: #FFFFFF;
   box-shadow: inset 0 0 0 1px #FFFFFF;
   color: #98A4AE;
@@ -556,13 +564,15 @@ describe("Button", () => {
   border-color: transparent transparent transparent #FFFFFF;
 }
 
-.c0:hover {
+.c0:hover,
+.c0:focus {
   background-color: #8e0303;
   box-shadow: inset 0 0 0 1px #8e0303;
   color: #FFFFFF;
 }
 
-.c0:hover::after {
+.c0:hover::after,
+.c0:focus::after {
   -ms-transform: translate3d(4px,0,0);
   -webkit-transform: translate3d(4px,0,0);
   -webkit-transform: translate3d(4px,0,0);
@@ -639,13 +649,15 @@ describe("Button", () => {
   border-color: transparent transparent transparent #FFFFFF;
 }
 
-.c0:hover {
+.c0:hover,
+.c0:focus {
   background-color: #00213e;
   box-shadow: inset 0 0 0 1px #00213e;
   color: #FFFFFF;
 }
 
-.c0:hover::after {
+.c0:hover::after,
+.c0:focus::after {
   -ms-transform: translate3d(4px,0,0);
   -webkit-transform: translate3d(4px,0,0);
   -webkit-transform: translate3d(4px,0,0);
@@ -722,13 +734,15 @@ describe("Button", () => {
   border-color: transparent transparent transparent #C00404;
 }
 
-.c0:hover {
+.c0:hover,
+.c0:focus {
   background-color: #C00404;
   box-shadow: inset 0 0 0 1px #C00404;
   color: #FFFFFF;
 }
 
-.c0:hover::after {
+.c0:hover::after,
+.c0:focus::after {
   -ms-transform: translate3d(4px,0,0);
   -webkit-transform: translate3d(4px,0,0);
   -webkit-transform: translate3d(4px,0,0);
@@ -809,13 +823,15 @@ describe("Button", () => {
   border-color: transparent transparent transparent #59CBE8;
 }
 
-.c0:hover {
+.c0:hover,
+.c0:focus {
   background-color: #59CBE8;
   box-shadow: inset 0 0 0 1px #59CBE8;
   color: #FFFFFF;
 }
 
-.c0:hover::after {
+.c0:hover::after,
+.c0:focus::after {
   -ms-transform: translate3d(4px,0,0);
   -webkit-transform: translate3d(4px,0,0);
   -webkit-transform: translate3d(4px,0,0);
@@ -892,13 +908,15 @@ describe("Button", () => {
   border-color: transparent transparent transparent #98A4AE;
 }
 
-.c0:hover {
+.c0:hover,
+.c0:focus {
   background-color: #C00404;
   box-shadow: inset 0 0 0 1px #FFFFFF;
   color: #FFFFFF;
 }
 
-.c0:hover::after {
+.c0:hover::after,
+.c0:focus::after {
   -ms-transform: translate3d(4px,0,0);
   -webkit-transform: translate3d(4px,0,0);
   -webkit-transform: translate3d(4px,0,0);
@@ -979,13 +997,15 @@ describe("Button", () => {
   border-color: transparent transparent transparent #98A4AE;
 }
 
-.c0:hover {
+.c0:hover,
+.c0:focus {
   background-color: #00B398;
   box-shadow: inset 0 0 0 1px #FFFFFF;
   color: #FFFFFF;
 }
 
-.c0:hover::after {
+.c0:hover::after,
+.c0:focus::after {
   -ms-transform: translate3d(4px,0,0);
   -webkit-transform: translate3d(4px,0,0);
   -webkit-transform: translate3d(4px,0,0);
@@ -1062,13 +1082,15 @@ describe("Button", () => {
   border-color: transparent transparent transparent #FFFFFF;
 }
 
-.c0:hover {
+.c0:hover,
+.c0:focus {
   background-color: #FFFFFF;
   box-shadow: inset 0 0 0 1px #FFFFFF;
   color: #98A4AE;
 }
 
-.c0:hover::after {
+.c0:hover::after,
+.c0:focus::after {
   -ms-transform: translate3d(4px,0,0);
   -webkit-transform: translate3d(4px,0,0);
   -webkit-transform: translate3d(4px,0,0);
@@ -1150,13 +1172,15 @@ describe("Button", () => {
   border-color: transparent transparent transparent #FFFFFF;
 }
 
-.c0:hover {
+.c0:hover,
+.c0:focus {
   background-color: #FFFFFF;
   box-shadow: inset 0 0 0 1px #FFFFFF;
   color: #98A4AE;
 }
 
-.c0:hover::after {
+.c0:hover::after,
+.c0:focus::after {
   -ms-transform: translate3d(4px,0,0);
   -webkit-transform: translate3d(4px,0,0);
   -webkit-transform: translate3d(4px,0,0);
