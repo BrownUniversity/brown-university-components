@@ -181,7 +181,7 @@ const Tag = styled.div`
       }
     `}
 
-  &:hover {
+  &:hover, &:focus {
     background-color: ${props => getBackgroundColorWithHover(props)};
     box-shadow: inset 0 0 0 1px ${props => getBoxShadowWithHover(props)};
     color: ${props => getColorWithHover(props)};
