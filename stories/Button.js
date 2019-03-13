@@ -11,7 +11,7 @@ const getCommonProps = () => ({
     "brown",
     "gray",
     "emerald",
-    "skyblue",
+    "skyBlue",
     "navy",
     "idRed"
   ]),
