@@ -170,7 +170,7 @@ var getColorWithHover = function getColorWithHover(_ref7) {
 var Tag = styled.div.withConfig({
   displayName: "Button__Tag",
   componentId: "sc-4pqrql-0"
-})(["", " background-color:", ";border-radius:", ";box-shadow:inset 0 0 0 1px ", ";color:", ";cursor:", ";font-size:", ";opacity:", ";padding:", ";pointer-events:", ";text-transform:", ";", " &:hover{background-color:", ";box-shadow:inset 0 0 0 1px ", ";color:", ";", "}"], buttonCSS, function (props) {
+})(["", " background-color:", ";border-radius:", ";box-shadow:inset 0 0 0 1px ", ";color:", ";cursor:", ";font-size:", ";opacity:", ";padding:", ";pointer-events:", ";text-transform:", ";", " &:hover,&:focus{background-color:", ";box-shadow:inset 0 0 0 1px ", ";color:", ";", "}"], buttonCSS, function (props) {
   return getBackgroundColor(props);
 }, function (_ref8) {
   var rounded = _ref8.rounded;

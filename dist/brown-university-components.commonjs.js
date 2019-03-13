@@ -1,4 +1,4 @@
-/*! brown-university-components v0.8.2 */
+/*! brown-university-components v0.8.3 */
 (function webpackUniversalModuleDefinition(root, factory) {
 	if(typeof exports === 'object' && typeof module === 'object')
 		module.exports = factory(require("styled-components"), require("prop-types"), require("react"), require("brown-university-styles"), require("polished"), require("react-fns"));
@@ -651,7 +651,7 @@ var getColorWithHover = function getColorWithHover(_ref7) {
 var Tag = styled_components__WEBPACK_IMPORTED_MODULE_2___default.a.div.withConfig({
   displayName: "Button__Tag",
   componentId: "sc-4pqrql-0"
-})(["", " background-color:", ";border-radius:", ";box-shadow:inset 0 0 0 1px ", ";color:", ";cursor:", ";font-size:", ";opacity:", ";padding:", ";pointer-events:", ";text-transform:", ";", " &:hover{background-color:", ";box-shadow:inset 0 0 0 1px ", ";color:", ";", "}"], buttonCSS, function (props) {
+})(["", " background-color:", ";border-radius:", ";box-shadow:inset 0 0 0 1px ", ";color:", ";cursor:", ";font-size:", ";opacity:", ";padding:", ";pointer-events:", ";text-transform:", ";", " &:hover,&:focus{background-color:", ";box-shadow:inset 0 0 0 1px ", ";color:", ";", "}"], buttonCSS, function (props) {
   return getBackgroundColor(props);
 }, function (_ref8) {
   var rounded = _ref8.rounded;
