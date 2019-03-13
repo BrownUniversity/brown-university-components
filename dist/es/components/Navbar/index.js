@@ -24,7 +24,7 @@ import NavbarContext from "./NavbarContext";
 import NavbarNav from "./NavbarNav";
 import NavbarGlobalNav from "./NavbarGlobalNav";
 
-var LogoBlackSVG = function LogoBlackSVG(props) {
+var LogoFullColorSVG = function LogoFullColorSVG(props) {
   return React.createElement("svg", props, React.createElement("title", {
     id: "title"
   }, "Brown University Logo"), React.createElement("path", {
@@ -95,13 +95,13 @@ var LogoBlackSVG = function LogoBlackSVG(props) {
   })));
 };
 
-LogoBlackSVG.defaultProps = {
+LogoFullColorSVG.defaultProps = {
   viewBox: "0 0 384 192",
   role: "img",
   'aria-labelledby': "title"
 };
 
-var LogoWhiteSVG = function LogoWhiteSVG(props) {
+var LogoTwoColorSVG = function LogoTwoColorSVG(props) {
   return React.createElement("svg", props, React.createElement("title", {
     id: "title"
   }, "Brown University Logo"), React.createElement("g", {
@@ -141,7 +141,7 @@ var LogoWhiteSVG = function LogoWhiteSVG(props) {
   }))));
 };
 
-LogoWhiteSVG.defaultProps = {
+LogoTwoColorSVG.defaultProps = {
   viewBox: "0 0 384 192",
   role: "img",
   'aria-labelledby': "title"
@@ -198,7 +198,7 @@ var Navbar = function Navbar(_ref3) {
     href: "http://www.brown.edu/",
     target: "_blank",
     rel: "noopener noreferrer"
-  }, color === "white" ? React.createElement(LogoBlackSVG, logoProps) : React.createElement(LogoWhiteSVG, logoProps)), React.createElement(NavbarChildrenWrapper, null, React.createElement(NavbarContext.Provider, {
+  }, color === "white" ? React.createElement(LogoFullColorSVG, logoProps) : React.createElement(LogoTwoColorSVG, logoProps)), React.createElement(NavbarChildrenWrapper, null, React.createElement(NavbarContext.Provider, {
     value: {
       color: color,
       mobileBreakpoint: mobileBreakpoint,
