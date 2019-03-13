@@ -84,7 +84,7 @@ Import styles from Brown University Styles.
 
   | property | propType                                                                                                     | required | default   |
   | -------- | ------------------------------------------------------------------------------------------------------------ | -------- | --------- |
-  | color    | oneOf(['emerald', 'red', 'brown', 'yellow', 'gray', 'sand', 'lightBrown', 'mediumBrown', 'navy', 'skyblue']) | -        | 'emerald' |
+  | color    | oneOf(['emerald', 'red', 'brown', 'yellow', 'gray', 'sand', 'lightBrown', 'mediumBrown', 'navy', 'skyBlue']) | -        | 'emerald' |
   | size     | oneOf(['default', 'small', 'medium', 'large'])                                                               | -        | 'default' |
   | src      | string                                                                                                       | -        | null      |
   | children | node                                                                                                         | -        | null      |

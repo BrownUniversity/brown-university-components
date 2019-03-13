@@ -86,7 +86,7 @@ Banner.propTypes = {
     "lightBrown",
     "mediumBrown",
     "navy",
-    "skyblue"
+    "skyBlue"
   ]),
   size: PropTypes.oneOf(["default", "small", "medium", "large"]),
   src: PropTypes.string,
