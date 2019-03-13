@@ -78,7 +78,7 @@ exports[`SubNav should render default 1`] = `
 .c0 {
   list-style: none;
   margin: 0;
-  background-color: #F0F3F5;
+  background-color: #F7F7F7;
   display: block;
   padding: 15px;
   width: 100%;
