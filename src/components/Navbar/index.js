@@ -5,8 +5,8 @@ import { colors } from "brown-university-styles";
 import NavbarContext from "./NavbarContext";
 import NavbarNav from "./NavbarNav";
 import NavbarGlobalNav from "./NavbarGlobalNav";
-import LogoBlackSVG from "../../svg/inline/logo-black.svg";
-import LogoWhiteSVG from "../../svg/inline/logo-white.svg";
+import LogoFullColorSVG from "../../svg/inline/logo-full-color.svg";
+import LogoTwoColorSVG from "../../svg/inline/logo-two-color.svg";
 import breakpoints from "../../constants/breakpoints";
 import media from "../../constants/media";
 
@@ -61,9 +61,9 @@ const Navbar = ({
       rel="noopener noreferrer"
     >
       {color === "white" ? (
-        <LogoBlackSVG {...logoProps} />
+        <LogoFullColorSVG {...logoProps} />
       ) : (
-        <LogoWhiteSVG {...logoProps} />
+        <LogoTwoColorSVG {...logoProps} />
       )}
     </NavbarLogoLink>
     <NavbarChildrenWrapper>
