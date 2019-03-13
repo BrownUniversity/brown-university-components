@@ -57,13 +57,13 @@ Import styles from Brown University Styles.
 
 - **Properties:**
 
-  | property  | propType                 | required | default |
-  | --------- | ------------------------ | -------- | ------- |
-  | url       | string                   | true     | -       |
-  | color     | oneOf(['white', 'gray']) | -        | 'white' |
-  | full      | bool                     | -        | true    |
-  | marginTop | number                   | -        | 0       |
-  | children  | node                     | true     | -       |
+  | property  | propType                      | required | default |
+  | --------- | ----------------------------- | -------- | ------- |
+  | url       | string                        | true     | -       |
+  | color     | oneOf(['white', 'lightGray']) | -        | 'white' |
+  | full      | bool                          | -        | true    |
+  | marginTop | number                        | -        | 0       |
+  | children  | node                          | true     | -       |
 
 #### `Banner`
 
