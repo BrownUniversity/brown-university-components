@@ -26,7 +26,7 @@ exports[`SubNav should render default 1`] = `
 }
 
 .c2:hover {
-  color: #3B302C;
+  color: #000000;
 }
 
 .c3 {
@@ -37,7 +37,7 @@ exports[`SubNav should render default 1`] = `
   padding: 0;
   -webkit-text-decoration: none !important;
   text-decoration: none !important;
-  color: #3B302C;
+  color: #000000;
   cursor: pointer;
   font-size: 1.1em;
   font-weight: 400;
@@ -49,7 +49,7 @@ exports[`SubNav should render default 1`] = `
 }
 
 .c3:hover {
-  color: #3B302C;
+  color: #000000;
 }
 
 .c4 {
@@ -78,7 +78,7 @@ exports[`SubNav should render default 1`] = `
 .c0 {
   list-style: none;
   margin: 0;
-  background-color: #F7F7F7;
+  background-color: #F0F3F5;
   display: block;
   padding: 15px;
   width: 100%;

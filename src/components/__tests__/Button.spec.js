@@ -766,7 +766,7 @@ describe("Button", () => {
       it("should render outlined anchor element of another color when color and outline variants are provided", () => {
         const { button } = renderButton({
           props: {
-            color: "skyblue",
+            color: "skyBlue",
             outline: true,
             href: "https://www.brown.edu"
           }
@@ -844,7 +844,7 @@ describe("Button", () => {
 
 <a
   class="c0"
-  color="skyblue"
+  color="skyBlue"
   href="https://www.brown.edu"
 >
   Button

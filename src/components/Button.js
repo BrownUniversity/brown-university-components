@@ -231,8 +231,9 @@ Button.propTypes = {
     "brown",
     "gray",
     "emerald",
-    "skyblue",
-    "navy"
+    "skyBlue",
+    "navy",
+    "idRed"
   ]),
   size: PropTypes.oneOf(["default", "small", "large"]),
   uppercase: PropTypes.bool,

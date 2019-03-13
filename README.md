@@ -57,13 +57,13 @@ Import styles from Brown University Styles.
 
 - **Properties:**
 
-  | property  | propType                 | required | default |
-  | --------- | ------------------------ | -------- | ------- |
-  | url       | string                   | true     | -       |
-  | color     | oneOf(['white', 'gray']) | -        | 'white' |
-  | full      | bool                     | -        | true    |
-  | marginTop | number                   | -        | 0       |
-  | children  | node                     | true     | -       |
+  | property  | propType                      | required | default |
+  | --------- | ----------------------------- | -------- | ------- |
+  | url       | string                        | true     | -       |
+  | color     | oneOf(['white', 'lightGray']) | -        | 'white' |
+  | full      | bool                          | -        | true    |
+  | marginTop | number                        | -        | 0       |
+  | children  | node                          | true     | -       |
 
 #### `Banner`
 
@@ -84,7 +84,7 @@ Import styles from Brown University Styles.
 
   | property | propType                                                                                                     | required | default   |
   | -------- | ------------------------------------------------------------------------------------------------------------ | -------- | --------- |
-  | color    | oneOf(['emerald', 'red', 'brown', 'yellow', 'gray', 'sand', 'lightBrown', 'mediumBrown', 'navy', 'skyblue']) | -        | 'emerald' |
+  | color    | oneOf(['emerald', 'red', 'brown', 'yellow', 'gray', 'sand', 'lightBrown', 'mediumBrown', 'navy', 'skyBlue']) | -        | 'emerald' |
   | size     | oneOf(['default', 'small', 'medium', 'large'])                                                               | -        | 'default' |
   | src      | string                                                                                                       | -        | null      |
   | children | node                                                                                                         | -        | null      |
@@ -102,18 +102,18 @@ Import styles from Brown University Styles.
 
 - **Properties:**
 
-  | property  | propType                                                                | required | default   |
-  | --------- | ----------------------------------------------------------------------- | -------- | --------- |
-  | tag       | oneOfType([func, string])                                               | -        | 'button'  |
-  | color     | oneOf(['red', 'yellow', 'brown', 'gray', 'emerald', 'skyblue', 'navy']) | -        | 'red'     |
-  | size      | oneOf(['default', 'small', 'large'])                                    | -        | 'default' |
-  | uppercase | bool                                                                    | -        | true      |
-  | rounded   | bool                                                                    | -        | false     |
-  | outline   | bool                                                                    | -        | false     |
-  | inverse   | bool                                                                    | -        | false     |
-  | disabled  | bool                                                                    | -        | false     |
-  | onClick   | func                                                                    | -        | null      |
-  | href      | string                                                                  | -        | null      |
+  | property  | propType                                                                         | required | default   |
+  | --------- | -------------------------------------------------------------------------------- | -------- | --------- |
+  | tag       | oneOfType([func, string])                                                        | -        | 'button'  |
+  | color     | oneOf(['red', 'yellow', 'brown', 'gray', 'emerald', 'skyBlue', 'navy', 'idRed']) | -        | 'red'     |
+  | size      | oneOf(['default', 'small', 'large'])                                             | -        | 'default' |
+  | uppercase | bool                                                                             | -        | true      |
+  | rounded   | bool                                                                             | -        | false     |
+  | outline   | bool                                                                             | -        | false     |
+  | inverse   | bool                                                                             | -        | false     |
+  | disabled  | bool                                                                             | -        | false     |
+  | onClick   | func                                                                             | -        | null      |
+  | href      | string                                                                           | -        | null      |
 
 #### `Code`
 

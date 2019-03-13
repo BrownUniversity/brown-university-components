@@ -35,7 +35,7 @@ describe("Background", () => {
   background-image: url('background.svg');
   background-repeat: repeat;
   background-size: 1600px;
-  background-color: #FFF;
+  background-color: #FFFFFF;
   background-position-y: 0px;
 }
 
@@ -53,8 +53,10 @@ describe("Background", () => {
 `);
     });
 
-    it("should render gray background when color variant is provided", () => {
-      const { background } = renderBackground({ props: { color: "gray" } });
+    it("should render lightGray background when color variant is provided", () => {
+      const { background } = renderBackground({
+        props: { color: "lightGray" }
+      });
 
       expect(background).toHaveStyleRule("background-color", "#F0F3F5");
     });

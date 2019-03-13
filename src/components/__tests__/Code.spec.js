@@ -26,8 +26,8 @@ describe("Code", () => {
 
       expect(code).toMatchInlineSnapshot(`
 .c0 {
-  background: #F7F7F7;
-  color: #3B302C;
+  background: #F0F3F5;
+  color: #000000;
   border: 0.5px solid #dfe3e6;
   border-radius: 3px;
   font-family: "Bitstream Vera Sans Mono",Menlo,Monaco,Consolas,Courier,monospace;

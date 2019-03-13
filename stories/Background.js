@@ -9,7 +9,7 @@ storiesOf("Background", module)
   .add("default", () => (
     <Background
       url={backgroundURL}
-      color={select("color", ["white", "gray"])}
+      color={select("color", ["white", "lightGray"])}
       full={boolean("full", true)}
       marginTop={number("marginTop", 0)}
     >

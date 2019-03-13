@@ -11,8 +11,9 @@ const getCommonProps = () => ({
     "brown",
     "gray",
     "emerald",
-    "skyblue",
-    "navy"
+    "skyBlue",
+    "navy",
+    "idRed"
   ]),
   size: select("size", ["default", "small", "large"]),
   uppercase: boolean("uppercase", true),

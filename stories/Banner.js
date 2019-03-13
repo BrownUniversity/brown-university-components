@@ -15,7 +15,7 @@ const getColorProp = () =>
     "lightBrown",
     "mediumBrown",
     "navy",
-    "skyblue"
+    "skyBlue"
   ]);
 
 const getSizeProp = () =>

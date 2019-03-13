@@ -121,7 +121,7 @@ describe("NavLink", () => {
   padding: 0;
   -webkit-text-decoration: none !important;
   text-decoration: none !important;
-  color: #3B302C;
+  color: #000000;
   cursor: pointer;
   font-size: 1.1em;
   font-weight: 700;
@@ -233,7 +233,7 @@ describe("NavLink", () => {
   padding: 0;
   -webkit-text-decoration: none !important;
   text-decoration: none !important;
-  color: #3B302C;
+  color: #000000;
   cursor: not-allowed;
   font-size: 1.1em;
   font-weight: 700;
@@ -252,7 +252,7 @@ describe("NavLink", () => {
 }
 
 .c0:hover {
-  color: #3B302C;
+  color: #000000;
 }
 
 .c0:hover::after {
@@ -294,7 +294,7 @@ describe("NavLink", () => {
   padding: 0;
   -webkit-text-decoration: none !important;
   text-decoration: none !important;
-  color: #3B302C;
+  color: #000000;
   cursor: pointer;
   font-size: 1em;
   font-weight: 400;
@@ -396,7 +396,7 @@ describe("NavLink", () => {
   padding: 0;
   -webkit-text-decoration: none !important;
   text-decoration: none !important;
-  color: #3B302C;
+  color: #000000;
   cursor: not-allowed;
   font-size: 1em;
   font-weight: 400;
@@ -415,7 +415,7 @@ describe("NavLink", () => {
 }
 
 .c0:hover {
-  color: #3B302C;
+  color: #000000;
 }
 
 .c0:hover::after {
@@ -620,7 +620,7 @@ describe("NavLink", () => {
 }
 
 .c0:hover {
-  color: #3B302C;
+  color: #000000;
 }
 
 <button
@@ -648,7 +648,7 @@ describe("NavLink", () => {
   padding: 0;
   -webkit-text-decoration: none !important;
   text-decoration: none !important;
-  color: #3B302C;
+  color: #000000;
   cursor: pointer;
   font-size: 1em;
   font-weight: 700;
@@ -660,7 +660,7 @@ describe("NavLink", () => {
 }
 
 .c0:hover {
-  color: #3B302C;
+  color: #000000;
 }
 
 <button
@@ -867,7 +867,7 @@ describe("NavLink", () => {
 }
 
 .c0:hover {
-  color: #3B302C;
+  color: #000000;
 }
 
 <button
@@ -895,7 +895,7 @@ describe("NavLink", () => {
   padding: 0;
   -webkit-text-decoration: none !important;
   text-decoration: none !important;
-  color: #3B302C;
+  color: #000000;
   cursor: pointer;
   font-size: 1.1em;
   font-weight: 400;
@@ -907,7 +907,7 @@ describe("NavLink", () => {
 }
 
 .c0:hover {
-  color: #3B302C;
+  color: #000000;
 }
 
 <button
@@ -979,7 +979,7 @@ describe("NavLink", () => {
   padding: 0;
   -webkit-text-decoration: none !important;
   text-decoration: none !important;
-  color: #3B302C;
+  color: #000000;
   cursor: pointer;
   font-size: 1.1em;
   font-weight: 700;
@@ -1099,7 +1099,7 @@ describe("NavLink", () => {
   padding: 0;
   -webkit-text-decoration: none !important;
   text-decoration: none !important;
-  color: #3B302C;
+  color: #000000;
   cursor: pointer;
   font-size: 1.1em;
   font-weight: 700;
@@ -1122,7 +1122,7 @@ describe("NavLink", () => {
 }
 
 .c0:hover {
-  color: #3B302C;
+  color: #000000;
 }
 
 .c0:hover::after {
@@ -1164,7 +1164,7 @@ describe("NavLink", () => {
   padding: 0;
   -webkit-text-decoration: none !important;
   text-decoration: none !important;
-  color: #3B302C;
+  color: #000000;
   cursor: pointer;
   font-size: 1em;
   font-weight: 400;
@@ -1274,7 +1274,7 @@ describe("NavLink", () => {
   padding: 0;
   -webkit-text-decoration: none !important;
   text-decoration: none !important;
-  color: #3B302C;
+  color: #000000;
   cursor: pointer;
   font-size: 1em;
   font-weight: 400;
@@ -1297,7 +1297,7 @@ describe("NavLink", () => {
 }
 
 .c0:hover {
-  color: #3B302C;
+  color: #000000;
 }
 
 .c0:hover::after {
@@ -1514,7 +1514,7 @@ describe("NavLink", () => {
 }
 
 .c0:hover {
-  color: #3B302C;
+  color: #000000;
 }
 
 <a
@@ -1542,7 +1542,7 @@ describe("NavLink", () => {
   padding: 0;
   -webkit-text-decoration: none !important;
   text-decoration: none !important;
-  color: #3B302C;
+  color: #000000;
   cursor: pointer;
   font-size: 1em;
   font-weight: 700;
@@ -1554,7 +1554,7 @@ describe("NavLink", () => {
 }
 
 .c0:hover {
-  color: #3B302C;
+  color: #000000;
 }
 
 <a
@@ -1761,7 +1761,7 @@ describe("NavLink", () => {
 }
 
 .c0:hover {
-  color: #3B302C;
+  color: #000000;
 }
 
 <a
@@ -1789,7 +1789,7 @@ describe("NavLink", () => {
   padding: 0;
   -webkit-text-decoration: none !important;
   text-decoration: none !important;
-  color: #3B302C;
+  color: #000000;
   cursor: pointer;
   font-size: 1.1em;
   font-weight: 400;
@@ -1801,7 +1801,7 @@ describe("NavLink", () => {
 }
 
 .c0:hover {
-  color: #3B302C;
+  color: #000000;
 }
 
 <a
