@@ -2,7 +2,7 @@ import PropTypes from "prop-types";
 import React from "react";
 import styled from "styled-components";
 import { colors, typography } from "brown-university-styles";
-import media from "../../constants/media";
+import media from "../../media";
 
 const { serif } = typography;
 

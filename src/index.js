@@ -1,5 +1,4 @@
-export { default as breakpoints } from "./constants/breakpoints";
-export { default as media } from "./constants/media";
+export { default as media } from "./media";
 export { default as Background } from "./components/Background";
 export { default as Banner } from "./components/Banner";
 export { default as Button } from "./components/Button";

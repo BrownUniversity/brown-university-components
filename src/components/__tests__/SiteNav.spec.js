@@ -1,8 +1,8 @@
 import React from "react";
+import { breakpoints } from "brown-university-styles";
 import { render, fireEvent } from "react-testing-library";
 import { triggerWindowResize } from "window-test-utils";
 import SiteNav from "../SiteNav";
-import breakpoints from "../../constants/breakpoints";
 
 const renderSiteNav = ({
   props = {},

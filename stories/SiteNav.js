@@ -1,8 +1,8 @@
 import React from "react";
+import { breakpoints } from "brown-university-styles";
 import { storiesOf } from "@storybook/react";
 import { withKnobs, boolean, number, text } from "@storybook/addon-knobs";
 import { SiteNav, Banner } from "../src";
-import breakpoints from "../src/constants/breakpoints";
 import bannerImage from "./images/banner.png";
 
 const getCommonProps = () => ({

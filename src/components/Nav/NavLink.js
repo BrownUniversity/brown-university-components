@@ -3,7 +3,7 @@ import React from "react";
 import styled, { css } from "styled-components";
 import { colors, typography } from "brown-university-styles";
 import NavContext from "./NavContext";
-import media from "../../constants/media";
+import media from "../../media";
 
 const { sans } = typography;
 
