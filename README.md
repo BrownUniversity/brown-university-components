@@ -2,24 +2,23 @@
 
 Components for building React-based applications at Brown University.
 
-_On-prem Bitbucket doesn't render markdown very nicely; view this in a markdown editor like [Dillinger](https://dillinger.io/)._
-
 ---
 
-## Install
+## Usage
 
-### Add Brown University Components
+### 1. Install packages
 
-```
-  // npm
-  npm i git+https://bitbucket.brown.edu/scm/react/brown-university-components.git#semver:^1.0
-  // yarn
-  yarn add git+https://bitbucket.brown.edu/scm/react/brown-university-components.git#^1.0
+#### Brown University Components
+
+```sh
+// npm
+npm i git+https://bitbucket.brown.edu/scm/react/brown-university-components.git#semver:^1.0
+
+// yarn
+yarn add git+https://bitbucket.brown.edu/scm/react/brown-university-components.git#^1.0
 ```
 
 _Ensure you're on the network and that your SSH key has been added to the ssh-agent (`ssh-add ~/.ssh/id_rsa`) and uploaded to [bitbucket.brown.edu](https://bitbucket.brown.edu/plugins/servlet/ssh/account/keys)._
-
-### Dependencies
 
 #### Required Peer Dependencies
 
@@ -29,24 +28,76 @@ These libraries are not bundled with Brown University Components and are require
 - [**react**](https://www.npmjs.com/package/react)
 - [**styled-components**](https://www.npmjs.com/package/styled-components)
 
+### 2. Import styles from Brown University Styles
+
+---
+
+## Development
+
+Install dependencies:
+
+```sh
+npm install
+```
+
+Run examples at [http://localhost:8080](http://localhost:8080/) with [storybook](https://storybook.js.org/):
+
+```sh
+npm start
+```
+
+Run tests:
+
+```sh
+npm test
+```
+
+Run tests with code coverage:
+
+```sh
+npm test:coverage
+```
+
+Run tests with code coverage and open report:
+
+```sh
+npm test:coverage:open
+```
+
+Watch tests:
+
+```sh
+npm run test:watch
+```
+
+---
+
+## Deployment
+
+To publish a new version, do the following:
+
+1. Bump version in `package.json` and `package-lock.json`
+2. Bump version in `README.md` install instructions (for major and minor version bumps only)
+3. Update `CHANGELOG.md`
+4. `npm run build`
+5. Commit changes
+6. Tag new version
+7. Push master and tags to all remotes
+
 ---
 
 ## Documentation
 
-### Styles
-
-Import styles from Brown University Styles.
-
-### Components
+_View this in a markdown editor like [Dillinger](https://dillinger.io/)._
 
 #### `Background`
 
 - **Example:**
 
-  ```
-  import React from 'react';
-  import { Background } from 'brown-university-components';
-  import backgroundURL from 'brown-university-components/dist/background.svg';
+  ```javascript
+  import React from "react";
+  import { Background } from "brown-university-components";
+  import backgroundURL from "brown-university-components/dist/background.svg";
 
   export default () => (
     <Background url={backgroundURL}>
@@ -69,12 +120,12 @@ Import styles from Brown University Styles.
 
 - **Example:**
 
-  ```
-  import React from 'react';
-  import { Banner } from 'brown-university-components';
+  ```javascript
+  import React from "react";
+  import { Banner } from "brown-university-components";
 
   export default () => (
-    <Banner src={'./path/to/img.jpg'}>
+    <Banner src={"./path/to/img.jpg"}>
       <Banner.Text>App Name</Banner.Text>
     </Banner>
   );
@@ -93,9 +144,9 @@ Import styles from Brown University Styles.
 
 - **Example:**
 
-  ```
-  import React from 'react';
-  import { Button } from 'brown-university-components';
+  ```javascript
+  import React from "react";
+  import { Button } from "brown-university-components";
 
   export default () => <Button color="yellow">Click Me</Button>;
   ```
@@ -119,9 +170,9 @@ Import styles from Brown University Styles.
 
 - **Example:**
 
-  ```
-  import React from 'react';
-  import { Code } from 'brown-university-components';
+  ```javascript
+  import React from "react";
+  import { Code } from "brown-university-components";
 
   export default () => <Code>code</Code>;
   ```
@@ -138,9 +189,9 @@ _This is a primitive used by `NavbarNav`, `NavbarGlobalNav` and `SiteNav`. You m
 
 - **Example:**
 
-  ```
-  import React from 'react';
-  import { Hamburger } from 'brown-university-components';
+  ```javascript
+  import React from "react";
+  import { Hamburger } from "brown-university-components";
 
   export default () => <Hamburger />;
   ```
@@ -160,9 +211,9 @@ _This is a primitive used by `NavbarNav`, `NavbarGlobalNav` and `SiteNav`. You m
 
 - **Example:**
 
-  ```
-  import React from 'react';
-  import { Loader } from 'brown-university-components';
+  ```javascript
+  import React from "react";
+  import { Loader } from "brown-university-components";
 
   export default () => <Loader height={300} />;
   ```
@@ -179,9 +230,9 @@ _This is a primitive used by `NavbarNav`, `NavbarGlobalNav`, `SiteNav`, and `Sub
 
 - **Example:**
 
-  ```
-  import React from 'react';
-  import { Nav } from 'brown-university-components';
+  ```javascript
+  import React from "react";
+  import { Nav } from "brown-university-components";
 
   export default () => (
     <Nav>
@@ -236,9 +287,9 @@ _This is a primitive used by `NavbarNav`, `NavbarGlobalNav`, `SiteNav`, and `Sub
 
 - **Example:**
 
-  ```
-  import React from 'react';
-  import { Navbar } from 'brown-university-components';
+  ```javascript
+  import React from "react";
+  import { Navbar } from "brown-university-components";
 
   export default () => <Navbar color="white" />;
   ```
@@ -258,9 +309,9 @@ _This is a primitive used by `NavbarNav`, `NavbarGlobalNav`, `SiteNav`, and `Sub
 
 - **Example:**
 
-  ```
-  import React from 'react';
-  import { Navbar } from 'brown-university-components';
+  ```javascript
+  import React from "react";
+  import { Navbar } from "brown-university-components";
 
   export default () => (
     <Navbar>
@@ -301,9 +352,9 @@ _This is a primitive used by `NavbarNav`, `NavbarGlobalNav`, `SiteNav`, and `Sub
 
 - **Example:**
 
-  ```
-  import React from 'react';
-  import { Navbar } from 'brown-university-components';
+  ```javascript
+  import React from "react";
+  import { Navbar } from "brown-university-components";
 
   export default () => (
     <Navbar>
@@ -344,9 +395,9 @@ _This is a primitive used by `NavbarNav`, `NavbarGlobalNav`, `SiteNav`, and `Sub
 
 - **Example:**
 
-  ```
-  import React from 'react';
-  import { SiteNav } from 'brown-university-components';
+  ```javascript
+  import React from "react";
+  import { SiteNav } from "brown-university-components";
 
   export default () => (
     <SiteNav>
@@ -386,9 +437,9 @@ _This is a primitive used by `NavbarNav`, `NavbarGlobalNav`, `SiteNav`, and `Sub
 
 - **Example:**
 
-  ```
-  import React from 'react';
-  import { SubNav } from 'brown-university-components';
+  ```javascript
+  import React from "react";
+  import { SubNav } from "brown-university-components";
 
   export default () => (
     <SubNav>
@@ -420,55 +471,3 @@ _This is a primitive used by `NavbarNav`, `NavbarGlobalNav`, `SiteNav`, and `Sub
   - `SubNav.Link`
 
     _See `Nav.Link`_
-
----
-
-## Development
-
-Install dependencies:
-
-```sh
-npm install
-```
-
-Run examples at [http://localhost:8080](http://localhost:8080/) with [storybook](https://storybook.js.org/):
-
-```sh
-npm start
-```
-
-Run tests:
-
-```sh
-npm test
-```
-
-Run tests with code coverage:
-
-```sh
-npm test:coverage
-```
-
-Run tests with code coverage and open report:
-
-```sh
-npm test:coverage:open
-```
-
-Watch tests:
-
-```sh
-npm run test:watch
-```
-
-## Deployment
-
-To publish a new version, do the following:
-
-1. Bump version in `package.json` and `package-lock.json`
-2. Bump version in `README.md` install instructions (for major and minor version bumps only)
-3. Update `CHANGELOG.md`
-4. `npm run build`
-5. Commit changes
-6. Tag new version
-7. Push master and tags to all remotes
