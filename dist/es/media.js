@@ -1,5 +1,5 @@
 import { css } from "styled-components";
-import breakpoints from "./breakpoints";
+import { breakpoints } from "brown-university-styles";
 export default {
   sm: function sm() {
     return css(["@media (min-width:", "px){", ";}"], breakpoints.sm, css.apply(void 0, arguments));

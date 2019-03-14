@@ -19,7 +19,7 @@ function _objectWithoutPropertiesLoose(source, excluded) { if (source == null) r
 import PropTypes from "prop-types";
 import React from "react";
 import styled from "styled-components";
-import { colors } from "brown-university-styles";
+import { breakpoints, colors } from "brown-university-styles";
 import NavbarContext from "./NavbarContext";
 import NavbarNav from "./NavbarNav";
 import NavbarGlobalNav from "./NavbarGlobalNav";
@@ -146,8 +146,7 @@ LogoTwoColorSVG.defaultProps = {
   role: "img",
   'aria-labelledby': "title"
 };
-import breakpoints from "../../constants/breakpoints";
-import media from "../../constants/media";
+import media from "../../media";
 /*
   inner components
 */

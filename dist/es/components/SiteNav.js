@@ -6,12 +6,11 @@ import PropTypes from "prop-types";
 import React from "react";
 import styled, { css } from "styled-components";
 import { WindowSize } from "react-fns";
-import { colors, typography } from "brown-university-styles";
+import { breakpoints, colors, typography } from "brown-university-styles";
 import Hamburger from "./Hamburger";
 import Nav from "./Nav";
 import Collapse from "./utils/Collapse";
 import VisibilityToggle from "./utils/VisibilityToggle";
-import breakpoints from "../constants/breakpoints";
 var sansBold = typography.sansBold;
 /*
   inner components
