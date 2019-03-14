@@ -8,7 +8,7 @@ import Hamburger from "../Hamburger";
 import Nav from "../Nav";
 import Collapse from "../utils/Collapse";
 import VisibilityToggle from "../utils/VisibilityToggle";
-import media from "../../constants/media";
+import media from "../../media";
 
 /*
   inner components
