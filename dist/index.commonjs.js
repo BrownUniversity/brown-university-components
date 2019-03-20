@@ -1,4 +1,4 @@
-/*! brown-university-components v1.1.1 */
+/*! brown-university-components v1.1.2 */
 (function webpackUniversalModuleDefinition(root, factory) {
 	if(typeof exports === 'object' && typeof module === 'object')
 		module.exports = factory(require("styled-components"), require("brown-university-styles"), require("prop-types"), require("react"), require("polished"), require("react-fns"));
@@ -343,7 +343,7 @@ var BannerImageColorWrapper = styled_components__WEBPACK_IMPORTED_MODULE_2___def
 var BannerImage = styled_components__WEBPACK_IMPORTED_MODULE_2___default.a.img.withConfig({
   displayName: "Banner__BannerImage",
   componentId: "sc-11l4cxl-2"
-})(["height:auto;max-width:100%;width:100%;"]);
+})(["height:auto;max-width:100%;width:100%;display:block;"]);
 var BannerChildrenWrapper = styled_components__WEBPACK_IMPORTED_MODULE_2___default.a.div.withConfig({
   displayName: "Banner__BannerChildrenWrapper",
   componentId: "sc-11l4cxl-3"

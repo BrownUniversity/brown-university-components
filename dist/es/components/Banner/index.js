@@ -46,7 +46,7 @@ var BannerImageColorWrapper = styled.div.withConfig({
 var BannerImage = styled.img.withConfig({
   displayName: "Banner__BannerImage",
   componentId: "sc-11l4cxl-2"
-})(["height:auto;max-width:100%;width:100%;"]);
+})(["height:auto;max-width:100%;width:100%;display:block;"]);
 var BannerChildrenWrapper = styled.div.withConfig({
   displayName: "Banner__BannerChildrenWrapper",
   componentId: "sc-11l4cxl-3"
