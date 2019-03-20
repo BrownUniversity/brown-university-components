@@ -130,6 +130,7 @@ describe("Banner", () => {
   height: auto;
   max-width: 100%;
   width: 100%;
+  display: block;
 }
 
 <img
