@@ -3,15 +3,15 @@ import { breakpoints } from "brown-university-styles";
 import { storiesOf } from "@storybook/react";
 import { withKnobs, boolean, number, text } from "@storybook/addon-knobs";
 import { SiteNav, Banner } from "../src";
-import bannerImage from "./images/banner.png";
+import bannerDefaultImage from "./images/banner-default.png";
+import bannerSmallImage from "./images/banner-small.png";
 
 const getCommonProps = () => ({
-  mobileBreakpoint: number("mobileBreakpoint", breakpoints.md),
   mobileToggleTitle: text("mobileToggleTitle", "Site Navigation")
 });
 
 const renderSiteNav = additionalProps => (
-  <SiteNav {...additionalProps} {...getCommonProps()}>
+  <SiteNav {...getCommonProps()} {...additionalProps}>
     <SiteNav.Item>
       <SiteNav.Link>Link</SiteNav.Link>
     </SiteNav.Item>
@@ -27,11 +27,25 @@ const renderSiteNav = additionalProps => (
 storiesOf("SiteNav", module)
   .addDecorator(withKnobs)
   .add("default", () => renderSiteNav())
-  .add("with banner", () => (
-    <React.Fragment>
-      <Banner src={bannerImage}>
+  .add("with default banner", () => (
+    <>
+      <Banner src={bannerDefaultImage} size="medium">
         <Banner.Text>University Theme</Banner.Text>
       </Banner>
-      {renderSiteNav({ banner: boolean("banner", true) })}
-    </React.Fragment>
+      {renderSiteNav({
+        banner: boolean("banner", true),
+        mobileBreakpoint: number("mobileBreakpoint", breakpoints.md)
+      })}
+    </>
+  ))
+  .add("with small banner", () => (
+    <>
+      <Banner src={bannerSmallImage} size="small">
+        <Banner.Text>University Theme</Banner.Text>
+      </Banner>
+      {renderSiteNav({
+        banner: boolean("banner", true),
+        mobileBreakpoint: number("mobileBreakpoint", breakpoints.lg)
+      })}
+    </>
   ));
