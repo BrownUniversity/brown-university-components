@@ -32,14 +32,6 @@ These libraries are not bundled with Brown University Components and are require
 
 ---
 
-## Documentation
-
-See [http://docs.webservices.brown.edu/components](http://docs.webservices.brown.edu/components).
-
-_Ensure you're on the network and that `10.55.29.58 docs.webservices.brown.edu` has been added to your hosts file._
-
----
-
 ## Development
 
 Install dependencies:
