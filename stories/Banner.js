@@ -3,6 +3,7 @@ import { storiesOf } from "@storybook/react";
 import { withKnobs, select } from "@storybook/addon-knobs";
 import { Banner } from "../src";
 import bannerImage from "./images/banner.png";
+import todayImage from "./images/today-at-brown-admin.png";
 
 const getColorProp = () =>
   select("color", [
@@ -28,5 +29,10 @@ storiesOf("Banner", module)
   .add("with children", () => (
     <Banner color={getColorProp()} size={getSizeProp()}>
       <Banner.Text>University Theme</Banner.Text>
+    </Banner>
+  ))
+  .add("Today@Brown Admin", () => (
+    <Banner size="small" src={todayImage} style={{ border: "1px solid red" }}>
+      <Banner.Text>Today@Brown</Banner.Text>
     </Banner>
   ));
