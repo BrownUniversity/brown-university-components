@@ -41,6 +41,7 @@ const BannerImage = styled.img`
   height: auto;
   max-width: 100%;
   width: 100%;
+  display: block;
 `;
 
 const BannerChildrenWrapper = styled.div`
