@@ -1,7 +1,7 @@
 import React from "react";
 import { breakpoints } from "brown-university-styles";
 import { render, fireEvent } from "react-testing-library";
-import { triggerWindowResize } from "window-test-utils";
+import { triggerWindowResize, resetWindowSize } from "window-test-utils";
 import NavbarContext from "../../Navbar/NavbarContext";
 import NavbarGlobalNav from "../../Navbar/NavbarGlobalNav";
 
@@ -93,6 +93,10 @@ describe("NavbarGlobalNav", () => {
   describe("when window width is below mobileBreakpoint", () => {
     beforeEach(() => {
       triggerWindowResize({ width: breakpoints.md - 1 });
+    });
+
+    afterAll(() => {
+      resetWindowSize();
     });
 
     describe("styles", () => {
