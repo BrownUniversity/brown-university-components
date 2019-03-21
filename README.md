@@ -30,6 +30,10 @@ These libraries are not bundled with Brown University Components and are require
 
 ### 2. Import styles from Brown University Styles
 
+## Documentation
+
+[View on VPN](http://design.cis.brown.edu/brown-university-components/)
+
 ---
 
 ## Development
