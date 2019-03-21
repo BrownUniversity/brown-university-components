@@ -32,7 +32,7 @@ These libraries are not bundled with Brown University Components and are require
 
 ## Documentation
 
-[View on VPN](http://design.cis.brown.edu/brown-university-components/)
+[View on VPN](https://design.cis.brown.edu/brown-university-components/)
 
 ---
 
