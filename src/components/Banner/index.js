@@ -39,6 +39,7 @@ const BannerImageColorWrapper = styled.div`
 
 const BannerImage = styled.img`
   height: auto;
+  min-width: 320px;
   max-width: 100%;
   width: 100%;
   display: block;
@@ -48,6 +49,7 @@ const BannerChildrenWrapper = styled.div`
   position: absolute;
   text-align: center;
   top: ${({ size }) => (size === "small" ? "20%" : "35%")};
+  top: ${({ size, mobile }) => size === "small" && mobile && "5%"};
   width: 100%;
   z-index: 15;
 `;
@@ -55,7 +57,7 @@ const BannerChildrenWrapper = styled.div`
 /*
   outer Banner component
 */
-const Banner = ({ color, size, src, children, ...restProps }) => (
+const Banner = ({ color, size, src, children, mobile, ...restProps }) => (
   <BannerWrapper {...restProps}>
     <BannerImageColorWrapper size={size}>
       {src ? (
@@ -72,7 +74,9 @@ const Banner = ({ color, size, src, children, ...restProps }) => (
         </svg>
       )}
     </BannerImageColorWrapper>
-    <BannerChildrenWrapper size={size}>{children}</BannerChildrenWrapper>
+    <BannerChildrenWrapper size={size} mobile={mobile}>
+      {children}
+    </BannerChildrenWrapper>
   </BannerWrapper>
 );
 
@@ -91,14 +95,16 @@ Banner.propTypes = {
   ]),
   size: PropTypes.oneOf(["default", "small", "medium", "large"]),
   src: PropTypes.string,
-  children: PropTypes.node
+  children: PropTypes.node,
+  mobile: PropTypes.bool
 };
 
 Banner.defaultProps = {
   color: "emerald",
   size: "default",
   src: null,
-  children: null
+  children: null,
+  mobile: false
 };
 
 Banner.Text = BannerText;

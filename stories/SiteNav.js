@@ -40,8 +40,8 @@ storiesOf("SiteNav", module)
   ))
   .add("with small banner", () => (
     <>
-      <Banner src={bannerSmallImage} size="small">
-        <Banner.Text>University Theme</Banner.Text>
+      <Banner src={bannerSmallImage} size="small" mobile="true">
+        <Banner.Text>Today@Brown</Banner.Text>
       </Banner>
       {renderSiteNav({
         banner: boolean("banner", true),

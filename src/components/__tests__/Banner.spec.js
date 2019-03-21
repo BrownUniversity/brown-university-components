@@ -128,6 +128,7 @@ describe("Banner", () => {
       expect(bannerImage).toMatchInlineSnapshot(`
 .c0 {
   height: auto;
+  min-width: 320px;
   max-width: 100%;
   width: 100%;
   display: block;
