@@ -69,28 +69,28 @@ const Banner = ({
   mobileBreakpoint,
   ...restProps
 }) => (
-  <BannerContext.Provider value={{ mobileBreakpoint }}>
-    <BannerWrapper {...restProps}>
-      <BannerImageColorWrapper size={size}>
-        {src ? (
-          <BannerImage src={src} alt="Banner" />
-        ) : (
-          <svg display="block" viewBox="0 0 2600 600">
-            <rect
-              aria-hidden="true"
-              focusable="false"
-              width="100%"
-              height="100%"
-              fill={colors[color]}
-            />
-          </svg>
-        )}
-      </BannerImageColorWrapper>
-      <BannerChildrenWrapper size={size} mobileBreakpoint={mobileBreakpoint}>
+  <BannerWrapper {...restProps}>
+    <BannerImageColorWrapper size={size}>
+      {src ? (
+        <BannerImage src={src} alt="Banner" />
+      ) : (
+        <svg display="block" viewBox="0 0 2600 600">
+          <rect
+            aria-hidden="true"
+            focusable="false"
+            width="100%"
+            height="100%"
+            fill={colors[color]}
+          />
+        </svg>
+      )}
+    </BannerImageColorWrapper>
+    <BannerChildrenWrapper size={size} mobileBreakpoint={mobileBreakpoint}>
+      <BannerContext.Provider value={{ mobileBreakpoint }}>
         {children}
-      </BannerChildrenWrapper>
-    </BannerWrapper>
-  </BannerContext.Provider>
+      </BannerContext.Provider>
+    </BannerChildrenWrapper>
+  </BannerWrapper>
 );
 
 Banner.propTypes = {
