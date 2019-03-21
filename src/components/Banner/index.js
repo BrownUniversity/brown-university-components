@@ -1,7 +1,8 @@
 import PropTypes from "prop-types";
 import React from "react";
 import styled from "styled-components";
-import { colors } from "brown-university-styles";
+import { breakpoints, colors } from "brown-university-styles";
+import BannerContext from "./BannerContext";
 import BannerText from "./BannerText";
 
 /*
@@ -48,36 +49,48 @@ const BannerImage = styled.img`
 const BannerChildrenWrapper = styled.div`
   position: absolute;
   text-align: center;
-  top: ${({ size }) => (size === "small" ? "20%" : "35%")};
-  top: ${({ size, mobile }) => size === "small" && mobile && "5%"};
   width: 100%;
   z-index: 15;
+  top: ${props => (props.size === "small" ? "5%" : "35%")};
+
+  @media (min-width: ${props => props.mobileBreakpoint}px) {
+    top: ${({ size }) => (size === "small" ? "20%" : "35%")};
+  }
 `;
 
 /*
   outer Banner component
 */
-const Banner = ({ color, size, src, children, mobile, ...restProps }) => (
-  <BannerWrapper {...restProps}>
-    <BannerImageColorWrapper size={size}>
-      {src ? (
-        <BannerImage src={src} alt="Banner" />
-      ) : (
-        <svg display="block" viewBox="0 0 2600 600">
-          <rect
-            aria-hidden="true"
-            focusable="false"
-            width="100%"
-            height="100%"
-            fill={colors[color]}
-          />
-        </svg>
-      )}
-    </BannerImageColorWrapper>
-    <BannerChildrenWrapper size={size} mobile={mobile}>
-      {children}
-    </BannerChildrenWrapper>
-  </BannerWrapper>
+const Banner = ({
+  color,
+  size,
+  src,
+  children,
+  mobileBreakpoint,
+  ...restProps
+}) => (
+  <BannerContext.Provider value={{ mobileBreakpoint }}>
+    <BannerWrapper {...restProps}>
+      <BannerImageColorWrapper size={size}>
+        {src ? (
+          <BannerImage src={src} alt="Banner" />
+        ) : (
+          <svg display="block" viewBox="0 0 2600 600">
+            <rect
+              aria-hidden="true"
+              focusable="false"
+              width="100%"
+              height="100%"
+              fill={colors[color]}
+            />
+          </svg>
+        )}
+      </BannerImageColorWrapper>
+      <BannerChildrenWrapper size={size} mobileBreakpoint={mobileBreakpoint}>
+        {children}
+      </BannerChildrenWrapper>
+    </BannerWrapper>
+  </BannerContext.Provider>
 );
 
 Banner.propTypes = {
@@ -96,7 +109,7 @@ Banner.propTypes = {
   size: PropTypes.oneOf(["default", "small", "medium", "large"]),
   src: PropTypes.string,
   children: PropTypes.node,
-  mobile: PropTypes.bool
+  mobileBreakpoint: PropTypes.number
 };
 
 Banner.defaultProps = {
@@ -104,7 +117,7 @@ Banner.defaultProps = {
   size: "default",
   src: null,
   children: null,
-  mobile: false
+  mobileBreakpoint: breakpoints.md
 };
 
 Banner.Text = BannerText;
