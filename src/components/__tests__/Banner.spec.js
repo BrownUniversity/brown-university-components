@@ -33,14 +33,20 @@ describe("Banner", () => {
 .c0 {
   position: absolute;
   text-align: center;
-  top: 35%;
   width: 100%;
   z-index: 15;
+  top: 35%;
 }
 
 @media (min-width:768px) {
   .c1 {
     font-size: 2.5em;
+  }
+}
+
+@media (min-width:768px) {
+  .c0 {
+    top: 35%;
   }
 }
 
@@ -99,7 +105,7 @@ describe("Banner", () => {
       });
 
       expect(bannerImageColorWrapper).toHaveStyleRule("max-height", "150px");
-      expect(bannerChildrenWrapper).toHaveStyleRule("top", "20%");
+      expect(bannerChildrenWrapper).toHaveStyleRule("top", "5%");
     });
 
     it("should render medium banner when size variant is provided", () => {
