@@ -7,20 +7,19 @@ import { SiteNav, Banner } from "../src";
 import bannerDefaultImage from "./images/banner-default.png";
 import bannerSmallImage from "./images/banner-small.png";
 
-const renderBanner = ({ src, size, title }) => (
+const renderBanner = ({ title, ...bannerProps }) => (
   <>
-    <Banner src={src} size={size}>
+    <Banner {...bannerProps}>
       <Banner.Text>{title}</Banner.Text>
     </Banner>
   </>
 );
 
-const getCommonProps = () => ({
-  mobileToggleTitle: text("mobileToggleTitle", "Site Navigation")
-});
-
-const renderSiteNav = additionalProps => (
-  <SiteNav {...getCommonProps()} {...additionalProps}>
+const renderSiteNav = props => (
+  <SiteNav
+    {...props}
+    mobileToggleTitle={text("mobileToggleTitle", "Site Navigation")}
+  >
     <SiteNav.Item>
       <SiteNav.Link>Link</SiteNav.Link>
     </SiteNav.Item>
