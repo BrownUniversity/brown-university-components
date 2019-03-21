@@ -1,17 +1,23 @@
-import { configure } from "@storybook/react";
+import { addParameters, configure } from "@storybook/react";
 import "brown-university-styles/dist/styles.css";
+import { version } from "../package.json";
+
+/*
+  customize name
+*/
+addParameters({
+  options: {
+    name: `Brown University Components ${version}`
+  }
+});
+
+/*
+  automatically import all files ending in `*.stories.js` from `stories` directory
+*/
+const req = require.context("../stories", true, /.stories.js$/);
 
 function loadStories() {
-  require("../stories/Background");
-  require("../stories/Banner");
-  require("../stories/Button");
-  require("../stories/Code");
-  require("../stories/Hamburger");
-  require("../stories/Loader");
-  require("../stories/Nav");
-  require("../stories/Navbar");
-  require("../stories/SiteNav");
-  require("../stories/SubNav");
+  req.keys().forEach(filename => req(filename));
 }
 
 configure(loadStories, module);
