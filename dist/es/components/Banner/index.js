@@ -5,7 +5,8 @@ function _objectWithoutPropertiesLoose(source, excluded) { if (source == null) r
 import PropTypes from "prop-types";
 import React from "react";
 import styled from "styled-components";
-import { colors } from "brown-university-styles";
+import { breakpoints, colors } from "brown-university-styles";
+import BannerContext from "./BannerContext";
 import BannerText from "./BannerText";
 /*
   css prop getters
@@ -46,11 +47,15 @@ var BannerImageColorWrapper = styled.div.withConfig({
 var BannerImage = styled.img.withConfig({
   displayName: "Banner__BannerImage",
   componentId: "sc-11l4cxl-2"
-})(["height:auto;max-width:100%;width:100%;display:block;"]);
+})(["height:auto;min-width:320px;max-width:100%;width:100%;display:block;"]);
 var BannerChildrenWrapper = styled.div.withConfig({
   displayName: "Banner__BannerChildrenWrapper",
   componentId: "sc-11l4cxl-3"
-})(["position:absolute;text-align:center;top:", ";width:100%;z-index:15;"], function (_ref2) {
+})(["position:absolute;text-align:center;width:100%;z-index:15;top:", ";@media (min-width:", "px){top:", ";}"], function (props) {
+  return props.size === "small" ? "5%" : "35%";
+}, function (props) {
+  return props.mobileBreakpoint;
+}, function (_ref2) {
   var size = _ref2.size;
   return size === "small" ? "20%" : "35%";
 });
@@ -63,7 +68,8 @@ var Banner = function Banner(_ref3) {
       size = _ref3.size,
       src = _ref3.src,
       children = _ref3.children,
-      restProps = _objectWithoutProperties(_ref3, ["color", "size", "src", "children"]);
+      mobileBreakpoint = _ref3.mobileBreakpoint,
+      restProps = _objectWithoutProperties(_ref3, ["color", "size", "src", "children", "mobileBreakpoint"]);
 
   return React.createElement(BannerWrapper, restProps, React.createElement(BannerImageColorWrapper, {
     size: size
@@ -80,21 +86,28 @@ var Banner = function Banner(_ref3) {
     height: "100%",
     fill: colors[color]
   }))), React.createElement(BannerChildrenWrapper, {
-    size: size
-  }, children));
+    size: size,
+    mobileBreakpoint: mobileBreakpoint
+  }, React.createElement(BannerContext.Provider, {
+    value: {
+      mobileBreakpoint: mobileBreakpoint
+    }
+  }, children)));
 };
 
 Banner.propTypes = {
   color: PropTypes.oneOf(["emerald", "red", "brown", "yellow", "gray", "sand", "lightBrown", "mediumBrown", "navy", "skyBlue"]),
   size: PropTypes.oneOf(["default", "small", "medium", "large"]),
   src: PropTypes.string,
-  children: PropTypes.node
+  children: PropTypes.node,
+  mobileBreakpoint: PropTypes.number
 };
 Banner.defaultProps = {
   color: "emerald",
   size: "default",
   src: null,
-  children: null
+  children: null,
+  mobileBreakpoint: breakpoints.md
 };
 Banner.Text = BannerText;
 export default Banner;
