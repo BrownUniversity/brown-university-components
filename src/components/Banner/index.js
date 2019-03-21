@@ -1,7 +1,8 @@
 import PropTypes from "prop-types";
 import React from "react";
 import styled from "styled-components";
-import { colors } from "brown-university-styles";
+import { breakpoints, colors } from "brown-university-styles";
+import BannerContext from "./BannerContext";
 import BannerText from "./BannerText";
 
 /*
@@ -39,6 +40,7 @@ const BannerImageColorWrapper = styled.div`
 
 const BannerImage = styled.img`
   height: auto;
+  min-width: 320px;
   max-width: 100%;
   width: 100%;
   display: block;
@@ -47,15 +49,26 @@ const BannerImage = styled.img`
 const BannerChildrenWrapper = styled.div`
   position: absolute;
   text-align: center;
-  top: ${({ size }) => (size === "small" ? "20%" : "35%")};
   width: 100%;
   z-index: 15;
+  top: ${props => (props.size === "small" ? "5%" : "35%")};
+
+  @media (min-width: ${props => props.mobileBreakpoint}px) {
+    top: ${({ size }) => (size === "small" ? "20%" : "35%")};
+  }
 `;
 
 /*
   outer Banner component
 */
-const Banner = ({ color, size, src, children, ...restProps }) => (
+const Banner = ({
+  color,
+  size,
+  src,
+  children,
+  mobileBreakpoint,
+  ...restProps
+}) => (
   <BannerWrapper {...restProps}>
     <BannerImageColorWrapper size={size}>
       {src ? (
@@ -72,7 +85,11 @@ const Banner = ({ color, size, src, children, ...restProps }) => (
         </svg>
       )}
     </BannerImageColorWrapper>
-    <BannerChildrenWrapper size={size}>{children}</BannerChildrenWrapper>
+    <BannerChildrenWrapper size={size} mobileBreakpoint={mobileBreakpoint}>
+      <BannerContext.Provider value={{ mobileBreakpoint }}>
+        {children}
+      </BannerContext.Provider>
+    </BannerChildrenWrapper>
   </BannerWrapper>
 );
 
@@ -91,14 +108,16 @@ Banner.propTypes = {
   ]),
   size: PropTypes.oneOf(["default", "small", "medium", "large"]),
   src: PropTypes.string,
-  children: PropTypes.node
+  children: PropTypes.node,
+  mobileBreakpoint: PropTypes.number
 };
 
 Banner.defaultProps = {
   color: "emerald",
   size: "default",
   src: null,
-  children: null
+  children: null,
+  mobileBreakpoint: breakpoints.md
 };
 
 Banner.Text = BannerText;

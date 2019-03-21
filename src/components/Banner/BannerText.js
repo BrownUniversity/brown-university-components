@@ -2,7 +2,7 @@ import PropTypes from "prop-types";
 import React from "react";
 import styled from "styled-components";
 import { colors, typography } from "brown-university-styles";
-import media from "../../media";
+import BannerContext from "./BannerContext";
 
 const { serif } = typography;
 
@@ -15,15 +15,21 @@ const Tag = styled.div`
   font-size: 1.9em;
   text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.4);
 
-  ${media.md`
+  @media (min-width: ${props => props.mobileBreakpoint}px) {
     font-size: 2.5em;
-  `};
+  }
 `;
 
 /*
   outer BannerText component
 */
-const BannerText = props => <Tag {...props} />;
+const BannerText = props => (
+  <BannerContext.Consumer>
+    {({ mobileBreakpoint }) => (
+      <Tag {...props} mobileBreakpoint={mobileBreakpoint} />
+    )}
+  </BannerContext.Consumer>
+);
 
 BannerText.propTypes = {
   children: PropTypes.string.isRequired
