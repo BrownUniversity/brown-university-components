@@ -30,6 +30,8 @@ These libraries are not bundled with Brown University Components and are require
 
 ### 2. Import styles from Brown University Styles
 
+---
+
 ## Documentation
 
 [View on VPN](https://design.cis.brown.edu/brown-university-components/)
