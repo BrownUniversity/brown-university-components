@@ -502,7 +502,7 @@ describe("Button", () => {
         });
 
         expect(button).toHaveStyleRule("cursor", "not-allowed");
-        expect(button).toHaveStyleRule("opacity", "0.65");
+        expect(button).toHaveStyleRule("opacity", "0.45");
         expect(button).toHaveStyleRule("pointer-events", "auto");
       });
     });
@@ -1207,7 +1207,7 @@ describe("Button", () => {
         });
 
         expect(button).toHaveStyleRule("cursor", "pointer");
-        expect(button).toHaveStyleRule("opacity", "0.65");
+        expect(button).toHaveStyleRule("opacity", "0.45");
         expect(button).toHaveStyleRule("pointer-events", "none");
       });
     });
