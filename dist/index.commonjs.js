@@ -1,4 +1,4 @@
-/*! brown-university-components v1.2.0 */
+/*! brown-university-components v1.2.1 */
 (function webpackUniversalModuleDefinition(root, factory) {
 	if(typeof exports === 'object' && typeof module === 'object')
 		module.exports = factory(require("styled-components"), require("brown-university-styles"), require("prop-types"), require("react"), require("polished"), require("react-fns"));
@@ -678,7 +678,7 @@ var Tag = styled_components__WEBPACK_IMPORTED_MODULE_2___default.a.div.withConfi
   return getFontSize(props);
 }, function (_ref10) {
   var disabled = _ref10.disabled;
-  return disabled ? "0.65" : "1";
+  return disabled ? "0.45" : "1";
 }, function (_ref11) {
   var href = _ref11.href;
   return href ? "12px 25px 12px 20px" : "12px 25px";

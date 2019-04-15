@@ -187,7 +187,7 @@ var Tag = styled.div.withConfig({
   return getFontSize(props);
 }, function (_ref10) {
   var disabled = _ref10.disabled;
-  return disabled ? "0.65" : "1";
+  return disabled ? "0.45" : "1";
 }, function (_ref11) {
   var href = _ref11.href;
   return href ? "12px 25px 12px 20px" : "12px 25px";
