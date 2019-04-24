@@ -148,4 +148,11 @@ describe("Banner", () => {
 `);
     });
   });
+
+  describe("a11y", () => {
+    it("should have banner role", () => {
+      const { banner } = renderBanner();
+      expect(banner).toHaveAttribute("role", "banner");
+    });
+  });
 });

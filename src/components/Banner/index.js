@@ -69,7 +69,7 @@ const Banner = ({
   mobileBreakpoint,
   ...restProps
 }) => (
-  <BannerWrapper {...restProps}>
+  <BannerWrapper {...restProps} role="banner">
     <BannerImageColorWrapper size={size}>
       {src ? (
         <BannerImage src={src} alt="Banner" />
