@@ -1,4 +1,4 @@
-/*! brown-university-components v1.2.1 */
+/*! brown-university-components v1.2.2 */
 (function webpackUniversalModuleDefinition(root, factory) {
 	if(typeof exports === 'object' && typeof module === 'object')
 		module.exports = factory(require("styled-components"), require("brown-university-styles"), require("prop-types"), require("react"), require("polished"), require("react-fns"));
@@ -296,6 +296,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var brown_university_styles__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(brown_university_styles__WEBPACK_IMPORTED_MODULE_3__);
 /* harmony import */ var _BannerContext__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(8);
 /* harmony import */ var _BannerText__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(9);
+function _extends() { _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends.apply(this, arguments); }
+
 function _objectWithoutProperties(source, excluded) { if (source == null) return {}; var target = _objectWithoutPropertiesLoose(source, excluded); var key, i; if (Object.getOwnPropertySymbols) { var sourceSymbolKeys = Object.getOwnPropertySymbols(source); for (i = 0; i < sourceSymbolKeys.length; i++) { key = sourceSymbolKeys[i]; if (excluded.indexOf(key) >= 0) continue; if (!Object.prototype.propertyIsEnumerable.call(source, key)) continue; target[key] = source[key]; } } return target; }
 
 function _objectWithoutPropertiesLoose(source, excluded) { if (source == null) return {}; var target = {}; var sourceKeys = Object.keys(source); var key, i; for (i = 0; i < sourceKeys.length; i++) { key = sourceKeys[i]; if (excluded.indexOf(key) >= 0) continue; target[key] = source[key]; } return target; }
@@ -369,7 +371,9 @@ var Banner = function Banner(_ref3) {
       mobileBreakpoint = _ref3.mobileBreakpoint,
       restProps = _objectWithoutProperties(_ref3, ["color", "size", "src", "children", "mobileBreakpoint"]);
 
-  return react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(BannerWrapper, restProps, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(BannerImageColorWrapper, {
+  return react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(BannerWrapper, _extends({}, restProps, {
+    role: "banner"
+  }), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(BannerImageColorWrapper, {
     size: size
   }, src ? react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(BannerImage, {
     src: src,
