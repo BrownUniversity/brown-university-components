@@ -29,7 +29,7 @@
     "start": "start-storybook -p 8080 -c .storybook"
   },
   "peerDependencies": {
-    "brown-university-styles": "git+https://bitbucket.brown.edu/scm/react/brown-university-styles.git#semver:^0.5",
+    "brown-university-styles": "git+https://bitbucket.brown.edu/scm/react/brown-university-styles.git#semver:^0.6",
     "react": "^16.0.0",
     "styled-components": "^4.0.0"
   },
