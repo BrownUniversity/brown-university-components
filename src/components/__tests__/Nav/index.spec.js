@@ -66,7 +66,7 @@ describe("Nav", () => {
     it("should render nav with sub styles when variant is provided", () => {
       const { nav } = renderNav({ props: { sub: true } });
 
-      expect(nav).toHaveStyleRule("background-color", "#F7F7F7");
+      expect(nav).toHaveStyleRule("background-color", "#f7f7f7");
       expect(nav).toHaveStyleRule("display", "block");
       expect(nav).toHaveStyleRule("padding", "15px");
       expect(nav).toHaveStyleRule("width", "100%");
