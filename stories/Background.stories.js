@@ -2,7 +2,7 @@ import React from "react";
 import { storiesOf } from "@storybook/react";
 import { withKnobs, select, boolean, number } from "@storybook/addon-knobs";
 import { Background } from "../src";
-import backgroundURL from "../src/svg/background.svg";
+import backgroundURL from "../src/assets/svg/background.svg";
 
 storiesOf("Background", module)
   .addDecorator(withKnobs)
