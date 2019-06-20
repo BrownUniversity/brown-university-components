@@ -6,11 +6,45 @@ import {
   typography,
   getRems
 } from "brown-university-styles";
-import media from "../media";
-import { unstyledLinkCSS } from "../mixins";
-import MarkerSVG from "../assets/svg/inline/marker.svg";
-import PhoneSVG from "../assets/svg/inline/phone.svg";
+import FooterLink from "./FooterLink";
+import giveLogoSrc from "./logo-together";
+import media from "../../media";
+import { unstyledLinkCSS } from "../../mixins";
+import MarkerSVG from "../../assets/svg/inline/marker.svg";
+import PhoneSVG from "../../assets/svg/inline/phone.svg";
 
+const ribbonAssideWidth = 325;
+
+/*
+  css mixins
+*/
+const addressItemCSS = css`
+  ${unstyledLinkCSS}
+  display: block;
+  padding-left: 25px;
+  position: relative;
+
+  ${media.lg`
+    display: inline-block;
+    vertical-align: top;
+  `};
+`;
+
+const addressIconCSS = css`
+  fill: rgba(255, 255, 255, 0.2);
+  left: 0;
+  position: absolute;
+  top: 0;
+  transform-origin: left top;
+
+  ${media.xl`
+    top: 2px;
+  `};
+`;
+
+/*
+  inner components
+*/
 const Margins = styled.div`
   display: flex;
   flex-wrap: wrap;
@@ -47,20 +81,23 @@ const RibbonOuter = styled.div`
   padding: 40px 0 50px;
 
   ${media.md`
-  padding: 60px 0 70px;
-`};
+    padding: 60px 0 70px;
+  `};
 
   ${media.lg`
-  padding: 90px 0 45px;
-`};
+    padding: 90px 0 45px;
+  `};
 `;
 
 const RibbonInner = styled.div`
   display: flex;
+  flex-direction: column;
   width: 100%;
-`;
 
-const ribbonAssideWidth = 325;
+  ${media.lg`
+    flex-direction: row;
+  `};
+`;
 
 const RibbonGroup = styled.div`
   ${media.lg`
@@ -101,18 +138,6 @@ const AddressName = styled.span`
 
 const AddressItems = styled.div``;
 
-const addressItemCSS = css`
-  ${unstyledLinkCSS}
-  display: block;
-  padding-left: 25px;
-  position: relative;
-
-  ${media.lg`
-    display: inline-block;
-    vertical-align: top;
-  `};
-`;
-
 const AddressBaseItem = styled.a`
   ${addressItemCSS}
   margin-bottom: 14px;
@@ -125,18 +150,6 @@ const AddressBaseItem = styled.a`
 
 const AddressPhoneItem = styled.a`
   ${addressItemCSS}
-`;
-
-const addressIconCSS = css`
-  fill: rgba(255, 255, 255, 0.2);
-  left: 0;
-  position: absolute;
-  top: 0;
-  transform-origin: left top;
-
-  ${media.xl`
-    top: 2px;
-  `};
 `;
 
 const AddressBaseIcon = styled(MarkerSVG)`
@@ -175,6 +188,28 @@ const RibbonAsside = styled.div`
   `};
 `;
 
+const GiveWrapper = styled.div`
+  ${media.lg`
+    width: 100%;
+  `};
+`;
+
+const GiveLogo = styled.img`
+  max-width: 202px;
+  width: 100%;
+  margin-bottom: 18px;
+`;
+
+const GiveCaption = styled.p`
+  color: ${colors.taupe};
+  font-family: ${typography.serif};
+  font-size: ${getRems(24)};
+  font-weight: 400;
+  font-style: italic;
+  line-height: 1.5;
+  margin: 0 0 16px;
+`;
+
 const SoleOuter = styled.div`
   background: ${colors.transparentBlack};
   padding: 14px 0 26px;
@@ -193,6 +228,9 @@ const SoleInner = styled.div`
   `};
 `;
 
+/*
+  outer Footer component
+*/
 const Footer = () => (
   <Wrapper>
     <RibbonOuter>
@@ -216,7 +254,17 @@ const Footer = () => (
               </AddressItems>
             </AddressWrapper>
           </RibbonGroup>
-          <RibbonAsside>TODO</RibbonAsside>
+          <RibbonAsside>
+            <GiveWrapper>
+              <GiveLogo src={giveLogoSrc} />
+              <GiveCaption>
+                The campaign for building on distinction
+              </GiveCaption>
+              <FooterLink href="https://giving.brown.edu/">
+                Give To Brown
+              </FooterLink>
+            </GiveWrapper>
+          </RibbonAsside>
         </RibbonInner>
       </Margins>
     </RibbonOuter>
