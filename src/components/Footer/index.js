@@ -10,8 +10,14 @@ import FooterLink from "./FooterLink";
 import giveLogoSrc from "./logo-together";
 import media from "../../media";
 import { srOnlyCSS, unstyledLinkCSS } from "../../mixins";
-import MarkerSVG from "../../assets/svg/inline/marker.svg";
-import PhoneSVG from "../../assets/svg/inline/phone.svg";
+import MarkerSVG from "../../assets/svg/inline/icons/marker.svg";
+import PhoneSVG from "../../assets/svg/inline/icons/phone.svg";
+import FacebookSVG from "../../assets/svg/inline/icons/facebook.svg";
+import InstagramSVG from "../../assets/svg/inline/icons/instagram.svg";
+import LinkedInSVG from "../../assets/svg/inline/icons/linkedin.svg";
+import SnapchatSVG from "../../assets/svg/inline/icons/snapchat.svg";
+import TwitterSVG from "../../assets/svg/inline/icons/twitter.svg";
+import YouTubeSVG from "../../assets/svg/inline/icons/youtube.svg";
 
 const ribbonAssideWidth = 325;
 
@@ -40,6 +46,15 @@ const addressIconCSS = css`
   ${media.xl`
     top: 2px;
   `};
+`;
+
+const socialIconCSS = css`
+  fill: ${colors.white};
+
+  &:hover,
+  &:focus {
+    fill: ${colors.gold};
+  }
 `;
 
 /*
@@ -165,10 +180,14 @@ const AddressPhoneItem = styled.a`
 const AddressBaseIcon = styled(MarkerSVG)`
   ${addressIconCSS}
   transform: scale(0.85);
+  height: 24px;
+  width: 17px;
 `;
 
 const AddressPhoneIcon = styled(PhoneSVG)`
   ${addressIconCSS}
+  height: 17px;
+  width: 17px;
 `;
 
 const AddressInfo = styled.span`
@@ -330,6 +349,91 @@ const SoleInner = styled.div`
   `};
 `;
 
+const SocialNavWrapper = styled.nav`
+  margin-bottom: 14px;
+
+  ${media.md`
+    margin-bottom: 0;
+    order: 2;
+  `};
+`;
+
+const SocialNavList = styled.ul`
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+  margin: 0 -8px;
+  padding: 0;
+`;
+
+const SocialNavListItem = styled.li`
+  display: inline-block;
+  vertical-align: middle;
+
+  ${media.md`
+    width: auto;
+  `};
+`;
+
+const SocialNavLink = styled.a.attrs({
+  target: "_blank",
+  rel: "noopener noreferrer"
+})`
+  ${unstyledLinkCSS}
+  box-shadow: inset 0 0 0 1px transparent;
+  display: flex;
+  justify-content: center;
+  padding: 17px 8px;
+  position: relative;
+  text-align: center;
+  transition: color 0.25s;
+
+  ${media.md`
+    padding: 19px 15px;
+  `};
+`;
+
+const SocialFacebookIcon = styled(FacebookSVG)`
+  ${socialIconCSS}
+  height: 22px;
+  width: 22px;
+`;
+
+const SocialInstagramIcon = styled(InstagramSVG)`
+  ${socialIconCSS}
+  height: 22px;
+  width: 22px;
+`;
+
+const SocialLinkedInIcon = styled(LinkedInSVG)`
+  ${socialIconCSS}
+  height: 22px;
+  width: 22px;
+`;
+
+const SocialSnapchatIcon = styled(SnapchatSVG)`
+  ${socialIconCSS}
+  height: 20px;
+  width: 22px;
+`;
+
+const SocialTwitterIcon = styled(TwitterSVG)`
+  ${socialIconCSS}
+  height: 18px;
+  width: 22px;
+`;
+
+const SocialYouTubeIcon = styled(YouTubeSVG)`
+  ${socialIconCSS}
+  height: 16px;
+  width: 22px;
+`;
+
+const SocialIconLabel = styled.span`
+  ${srOnlyCSS}
+`;
+
 const Copyright = styled.p`
   border-top: 1px solid rgba(183, 176, 156, 0.2);
   color: ${colors.taupe};
@@ -448,6 +552,47 @@ const Footer = () => (
     <SoleOuter>
       <Margins>
         <SoleInner>
+          <SocialNavWrapper>
+            <NavigationHeader>Social Navigation</NavigationHeader>
+            <SocialNavList aria-label="Social Navigation">
+              <SocialNavListItem>
+                <SocialNavLink href="https://www.facebook.com/BrownUniversity">
+                  <SocialFacebookIcon />
+                  <SocialIconLabel>Facebook</SocialIconLabel>
+                </SocialNavLink>
+              </SocialNavListItem>
+              <SocialNavListItem>
+                <SocialNavLink href="https://instagram.com/brownu">
+                  <SocialInstagramIcon />
+                  <SocialIconLabel>Instagram</SocialIconLabel>
+                </SocialNavLink>
+              </SocialNavListItem>
+              <SocialNavListItem>
+                <SocialNavLink href="https://www.linkedin.com/edu/school?id=19348">
+                  <SocialLinkedInIcon />
+                  <SocialIconLabel>LinkedIn</SocialIconLabel>
+                </SocialNavLink>
+              </SocialNavListItem>
+              <SocialNavListItem>
+                <SocialNavLink href="https://www.snapchat.com/add/brown-u">
+                  <SocialSnapchatIcon />
+                  <SocialIconLabel>Snapchat</SocialIconLabel>
+                </SocialNavLink>
+              </SocialNavListItem>
+              <SocialNavListItem>
+                <SocialNavLink href="https://twitter.com/BrownUniversity">
+                  <SocialTwitterIcon />
+                  <SocialIconLabel>Twitter</SocialIconLabel>
+                </SocialNavLink>
+              </SocialNavListItem>
+              <SocialNavListItem>
+                <SocialNavLink href="https://www.youtube.com/brownuniversity">
+                  <SocialYouTubeIcon />
+                  <SocialIconLabel>YouTube</SocialIconLabel>
+                </SocialNavLink>
+              </SocialNavListItem>
+            </SocialNavList>
+          </SocialNavWrapper>
           <Copyright>© Brown University</Copyright>
         </SoleInner>
       </Margins>

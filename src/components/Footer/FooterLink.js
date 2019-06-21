@@ -4,8 +4,8 @@ import styled, { css } from "styled-components";
 import { colors, typography, getRems } from "brown-university-styles";
 import media from "../../media";
 import { unstyledLinkCSS } from "../../mixins";
-import ArrowRightSVG from "../../assets/svg/inline/arrow-right.svg";
-import LinkSVG from "../../assets/svg/inline/link.svg";
+import ArrowRightSVG from "../../assets/svg/inline/icons/arrow-right.svg";
+import LinkSVG from "../../assets/svg/inline/icons/link.svg";
 
 /*
   css mixins
