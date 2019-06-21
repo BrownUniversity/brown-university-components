@@ -3,6 +3,7 @@
 exports[`Footer should render default 1`] = `
 .c18 {
   display: inline;
+  font-family: Circular-Book,Arial,Helvetica,sans-serif;
   font-size: 0.75rem;
   font-weight: 400;
   -webkit-letter-spacing: 0.09375rem;
