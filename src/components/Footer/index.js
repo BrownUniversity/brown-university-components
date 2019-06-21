@@ -19,7 +19,7 @@ import SnapchatSVG from "../../assets/svg/inline/icons/snapchat.svg";
 import TwitterSVG from "../../assets/svg/inline/icons/twitter.svg";
 import YouTubeSVG from "../../assets/svg/inline/icons/youtube.svg";
 
-const ribbonAssideWidth = 325;
+const ribbonAsideWidth = 325;
 
 /*
   css mixins
@@ -129,7 +129,7 @@ const RibbonGroup = styled.div`
     border-right: 1px solid rgba(183, 176, 156, 0.2);
     padding-top: 15px;
     padding-right: 50px;
-    width: calc(100% - ${ribbonAssideWidth}px);
+    width: calc(100% - ${ribbonAsideWidth}px);
   `};
 `;
 
@@ -297,13 +297,13 @@ const FooterNavListItem = styled.li`
   `};
 `;
 
-const RibbonAsside = styled.div`
+const RibbonAside = styled.div`
   ${media.lg`
     align-items: center;
     display: flex;
     flex-wrap: wrap;
     padding-left: 50px;
-    width: ${ribbonAssideWidth}px;
+    width: ${ribbonAsideWidth}px;
   `};
 `;
 
@@ -535,7 +535,7 @@ const Footer = () => (
               </FooterNavList>
             </FooterNavWrapper>
           </RibbonGroup>
-          <RibbonAsside>
+          <RibbonAside>
             <GiveWrapper>
               <GiveLogo src={giveLogoSrc} alt="Brown Together" />
               <GiveCaption>
@@ -545,7 +545,7 @@ const Footer = () => (
                 Give To Brown
               </FooterLink>
             </GiveWrapper>
-          </RibbonAsside>
+          </RibbonAside>
         </RibbonInner>
       </Margins>
     </RibbonOuter>

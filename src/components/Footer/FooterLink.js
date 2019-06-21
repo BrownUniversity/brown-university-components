@@ -28,7 +28,7 @@ const iconCSS = css`
 */
 const Label = styled.span`
   display: inline;
-  font-family: ${typography.sansSerif};
+  font-family: ${typography.sans};
   font-size: ${getRems(12)};
   font-weight: 400;
   letter-spacing: ${getRems(1.5)};
