@@ -56,6 +56,7 @@ const Margins = styled.div`
   margin-left: auto;
   margin-right: auto;
   min-width: 320px;
+  width: calc(100% - 40px);
 
   ${media.sm`
     width: ${breakpoints.sm - 20}px;
@@ -319,11 +320,33 @@ const SoleOuter = styled.div`
 `;
 
 const SoleInner = styled.div`
+  width: 100%;
+
   ${media.md`
     align-items: center;
     display: flex;
     flex-wrap: none;
     justify-content: space-between;
+  `};
+`;
+
+const Copyright = styled.p`
+  border-top: 1px solid rgba(183, 176, 156, 0.2);
+  color: ${colors.taupe};
+  font-family: ${typography.serif};
+  font-size: ${getRems(14)};
+  font-weight: 400;
+  margin: 0 -10px;
+  padding-top: 20px;
+
+  ${media.md`
+    border-top: 0;
+    font-size: ${getRems(20)};
+    margin: 0;
+    order: 1;
+    padding-top: 0;
+    position: relative;
+    top: 2px;
   `};
 `;
 
@@ -424,7 +447,9 @@ const Footer = () => (
     </RibbonOuter>
     <SoleOuter>
       <Margins>
-        <SoleInner>TODO</SoleInner>
+        <SoleInner>
+          <Copyright>© Brown University</Copyright>
+        </SoleInner>
       </Margins>
     </SoleOuter>
   </Wrapper>
