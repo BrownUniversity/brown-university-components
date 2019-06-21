@@ -11,7 +11,8 @@ import LinkSVG from "../../assets/svg/inline/link.svg";
   css mixins
 */
 const iconWrapperCSS = css`
-  position: relative;
+  display: inline-block;
+  vertical-align: middle;
 `;
 
 const iconCSS = css`
@@ -31,7 +32,7 @@ const Label = styled.span`
   font-size: ${getRems(12)};
   font-weight: 400;
   letter-spacing: ${getRems(1.5)};
-  margin-right: 2px;
+  margin-right: 4px;
   text-transform: uppercase;
 
   ${media.sm`
@@ -39,12 +40,23 @@ const Label = styled.span`
   `};
 `;
 
+const IconsWrapper = styled.span`
+  ${iconWrapperCSS}
+  height: 14px;
+  position: relative;
+  width: 14px;
+`;
+
 const DefaultIconWrapper = styled.span`
   ${iconWrapperCSS}
+  height: 9px;
+  width: 14px;
 `;
 
 const ActionIconWrapper = styled.span`
   ${iconWrapperCSS}
+  height: 14px;
+  width: 14px;
 `;
 
 const DefaultIcon = styled(ArrowRightSVG)`
@@ -60,7 +72,6 @@ const ActionIcon = styled(LinkSVG)`
 const Tag = styled.a`
   ${unstyledLinkCSS}
   color: ${colors.gold};
-  padding: 10px 0;
   transition: background 0.25s, color 0.25s;
 
   ${ActionIcon} {
@@ -79,22 +90,23 @@ const Tag = styled.a`
       opacity: 1;
     }
   }
-
 `;
 
 /*
   outer FooterLink component
 */
-const FooterLink = ({ href, children }) => {
+const FooterLink = ({ href, children, ...restProps }) => {
   return (
-    <Tag href={href}>
+    <Tag href={href} {...restProps}>
       <Label>{children}</Label>
-      <DefaultIconWrapper>
-        <DefaultIcon />
-      </DefaultIconWrapper>
-      <ActionIconWrapper>
-        <ActionIcon />
-      </ActionIconWrapper>
+      <IconsWrapper>
+        <DefaultIconWrapper>
+          <DefaultIcon />
+        </DefaultIconWrapper>
+        <ActionIconWrapper>
+          <ActionIcon />
+        </ActionIconWrapper>
+      </IconsWrapper>
     </Tag>
   );
 };

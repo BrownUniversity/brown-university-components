@@ -9,7 +9,7 @@ import {
 import FooterLink from "./FooterLink";
 import giveLogoSrc from "./logo-together";
 import media from "../../media";
-import { unstyledLinkCSS } from "../../mixins";
+import { srOnlyCSS, unstyledLinkCSS } from "../../mixins";
 import MarkerSVG from "../../assets/svg/inline/marker.svg";
 import PhoneSVG from "../../assets/svg/inline/phone.svg";
 
@@ -45,6 +45,11 @@ const addressIconCSS = css`
 /*
   inner components
 */
+const PaddedFooterLink = styled(FooterLink)`
+  display: block;
+  padding: 10px 0;
+`;
+
 const Margins = styled.div`
   display: flex;
   flex-wrap: wrap;
@@ -68,13 +73,17 @@ const Margins = styled.div`
     width: ${breakpoints.xl - 20}px;
   `};
 
-  @media (min-width: 1370px) {
-    width: 1350px;
-  }
+  ${media.xxl`
+    width: ${breakpoints.xxl - 20}px;
+  `};
 `;
 
 const Wrapper = styled.footer`
   background-color: ${colors.brown};
+
+  * {
+    box-sizing: border-box;
+  }
 `;
 
 const RibbonOuter = styled.div`
@@ -178,6 +187,96 @@ const AddressInfo = styled.span`
   `};
 `;
 
+const NavigationHeader = styled.h2`
+  ${srOnlyCSS}
+`;
+
+const QuickNavWrapper = styled.nav`
+  margin-bottom: 20px;
+
+  ${media.xxl`
+    margin-bottom: 30px;
+  `};
+`;
+
+const QuickNavList = styled.ul`
+  list-style: none;
+  margin: 0;
+  padding: 0;
+
+  ${media.md`
+    display: flex;
+    flex-wrap: wrap;
+  `};
+`;
+
+const QuickNavListItem = styled.li`
+  ${media.md`
+    padding-right: 20px;
+    width: 50%;
+  `};
+
+  ${media.xxl`
+    padding-right: 32px;
+    width: auto;
+  `};
+`;
+
+const FooterNavWrapper = styled.nav`
+  margin-bottom: 40px;
+
+  ${media.lg`
+    border-top: 1px solid rgba(183, 176, 156, 0.2);
+    margin-bottom: 0;
+  `};
+
+  ${media.xxl`
+    display: inline-block;
+    vertical-align: top;
+  `};
+
+  &:before,
+  &:after {
+    background: rgba(183, 176, 156, 0.4);
+    content: "";
+    display: block;
+    height: 1px;
+    margin: 0 -10px;
+    width: calc(100% + 20px);
+
+    ${media.lg`
+      display: none;
+    `};
+  }
+`;
+
+const FooterNavList = styled.ul`
+  list-style: none;
+  margin: 0;
+  padding: 20px 0;
+
+  ${media.md`
+    display: flex;
+    flex-wrap: wrap;
+  `};
+
+  ${media.xxl`
+    padding: 30px 0 35px;
+  `};
+`;
+
+const FooterNavListItem = styled.li`
+  ${media.md`
+    padding-right: 20px;
+    width: 50%;
+  `};
+
+  ${media.xxl`
+    padding-right: 32px;
+    width: auto;
+  `};
+`;
+
 const RibbonAsside = styled.div`
   ${media.lg`
     align-items: center;
@@ -253,10 +352,65 @@ const Footer = () => (
                 </AddressPhoneItem>
               </AddressItems>
             </AddressWrapper>
+            <QuickNavWrapper>
+              <NavigationHeader>Quick Navigation</NavigationHeader>
+              <QuickNavList aria-label="Quick Navigation">
+                <QuickNavListItem>
+                  <PaddedFooterLink href="https://www.brown.edu/about/visit">
+                    Visit Brown
+                  </PaddedFooterLink>
+                </QuickNavListItem>
+                <QuickNavListItem>
+                  <PaddedFooterLink href="https://www.brown.edu/Facilities/Facilities_Management/maps/#building/">
+                    Campus Map
+                  </PaddedFooterLink>
+                </QuickNavListItem>
+                <QuickNavListItem>
+                  <PaddedFooterLink href="https://www.brown.edu/a-z">
+                    A to Z
+                  </PaddedFooterLink>
+                </QuickNavListItem>
+                <QuickNavListItem>
+                  <PaddedFooterLink href="https://www.brown.edu/about/contact-us">
+                    Contact Us
+                  </PaddedFooterLink>
+                </QuickNavListItem>
+              </QuickNavList>
+            </QuickNavWrapper>
+            <FooterNavWrapper>
+              <NavigationHeader>Footer Navigation</NavigationHeader>
+              <FooterNavList aria-label="Footer Navigation">
+                <FooterNavListItem>
+                  <PaddedFooterLink href="https://www.brown.edu/news">
+                    News
+                  </PaddedFooterLink>
+                </FooterNavListItem>
+                <FooterNavListItem>
+                  <PaddedFooterLink href="https://events.brown.edu/">
+                    Events
+                  </PaddedFooterLink>
+                </FooterNavListItem>
+                <FooterNavListItem>
+                  <PaddedFooterLink href="https://www.brown.edu/about/administration/public-safety/">
+                    Campus Safety
+                  </PaddedFooterLink>
+                </FooterNavListItem>
+                <FooterNavListItem>
+                  <PaddedFooterLink href="https://www.brown.edu/website-accessibility">
+                    Accessibility
+                  </PaddedFooterLink>
+                </FooterNavListItem>
+                <FooterNavListItem>
+                  <PaddedFooterLink href="https://www.brown.edu/about/administration/human-resources/employment-performance-development/jobsbrown">
+                    Careers At Brown
+                  </PaddedFooterLink>
+                </FooterNavListItem>
+              </FooterNavList>
+            </FooterNavWrapper>
           </RibbonGroup>
           <RibbonAsside>
             <GiveWrapper>
-              <GiveLogo src={giveLogoSrc} />
+              <GiveLogo src={giveLogoSrc} alt="Brown Together" />
               <GiveCaption>
                 The campaign for building on distinction
               </GiveCaption>
