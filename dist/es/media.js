@@ -12,5 +12,8 @@ export default {
   },
   xl: function xl() {
     return css(["@media (min-width:", "px){", ";}"], breakpoints.xl, css.apply(void 0, arguments));
+  },
+  xxl: function xxl() {
+    return css(["@media (min-width:", "px){", ";}"], breakpoints.xxl, css.apply(void 0, arguments));
   }
 };
