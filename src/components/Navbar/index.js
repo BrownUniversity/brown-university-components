@@ -5,8 +5,8 @@ import { breakpoints, colors } from "brown-university-styles";
 import NavbarContext from "./NavbarContext";
 import NavbarNav from "./NavbarNav";
 import NavbarGlobalNav from "./NavbarGlobalNav";
-import LogoFullColorSVG from "../../svg/inline/logo-full-color.svg";
-import LogoTwoColorSVG from "../../svg/inline/logo-two-color.svg";
+import LogoFullColorSVG from "../../assets/svg/inline/logo-full-color.svg";
+import LogoTwoColorSVG from "../../assets/svg/inline/logo-two-color.svg";
 import media from "../../media";
 
 /*

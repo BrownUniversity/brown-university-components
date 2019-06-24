@@ -23,13 +23,13 @@
     "build:commonjs:analyze": "RUN_WEBPACK_BUNDLE_ANALYZER=true npm run build:commonjs",
     "prebuild:es": "rimraf dist/es",
     "build:es": "BABEL_ENV=es babel src -d dist/es --copy-files",
-    "postbuild:es": "rimraf dist/es/components/__tests__ dist/es/svg",
+    "postbuild:es": "rimraf dist/es/components/__tests__ dist/es/assets/svg",
     "prebuild": "npm run validate",
     "build": "npm-run-all build:commonjs build:es",
     "start": "start-storybook -p 8080 -c .storybook"
   },
   "peerDependencies": {
-    "brown-university-styles": "git+https://bitbucket.brown.edu/scm/react/brown-university-styles.git#semver:^0.6",
+    "brown-university-styles": "git+https://bitbucket.brown.edu/scm/react/brown-university-styles.git#semver:^0.9",
     "react": "^16.0.0",
     "styled-components": "^4.0.0"
   },
@@ -55,7 +55,7 @@
     "babel-plugin-inline-react-svg": "^1.1.0",
     "babel-plugin-styled-components": "^1.9.3",
     "babel-plugin-transform-react-remove-prop-types": "^0.4.21",
-    "brown-university-styles": "git+https://bitbucket.brown.edu/scm/react/brown-university-styles.git#semver:^0.6",
+    "brown-university-styles": "git+https://bitbucket.brown.edu/scm/react/brown-university-styles.git#semver:^0.9",
     "clean-webpack-plugin": "^1.0.0",
     "copy-webpack-plugin": "^4.6.0",
     "css-loader": "^1.0.1",

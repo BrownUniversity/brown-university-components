@@ -45,7 +45,7 @@ module.exports = {
       root: `${__dirname}/../`,
       exclude: ["es"]
     }),
-    new CopyWebpackPlugin(["src/svg/background.svg"]),
+    new CopyWebpackPlugin(["src/assets/svg/background.svg"]),
     runAnalyzer && new BundleAnalyzerPlugin()
   ].filter(Boolean)
 };

@@ -4,7 +4,7 @@ module.exports = {
   test: /\.svg$/,
   oneOf: [
     {
-      include: path.resolve(__dirname, "../../src/svg/inline/"),
+      include: path.resolve(__dirname, "../../src/assets/svg/inline/"),
       use: {
         loader: "react-svg-loader",
         options: {
@@ -22,7 +22,7 @@ module.exports = {
       }
     },
     {
-      exclude: path.resolve(__dirname, "../../src/svg/inline/"),
+      exclude: path.resolve(__dirname, "../../src/assets/svg/inline/"),
       use: {
         loader: "file-loader",
         options: {
