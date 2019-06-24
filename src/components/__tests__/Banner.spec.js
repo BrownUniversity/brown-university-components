@@ -23,43 +23,43 @@ describe("Banner", () => {
       const { bannerChildrenWrapper } = renderBanner({ children: BannerChild });
 
       expect(bannerChildrenWrapper).toMatchInlineSnapshot(`
-.c1 {
-  color: #FFFFFF;
-  font-family: minion-pro,"Times New Roman",serif;
-  font-size: 1.9em;
-  text-shadow: 1px 1px 2px rgba(0,0,0,0.4);
-}
+        .c1 {
+          color: #FFFFFF;
+          font-family: MinionPro,"Times New Roman",serif;
+          font-size: 1.9em;
+          text-shadow: 1px 1px 2px rgba(0,0,0,0.4);
+        }
 
-.c0 {
-  position: absolute;
-  text-align: center;
-  width: 100%;
-  z-index: 15;
-  top: 35%;
-}
+        .c0 {
+          position: absolute;
+          text-align: center;
+          width: 100%;
+          z-index: 15;
+          top: 35%;
+        }
 
-@media (min-width:768px) {
-  .c1 {
-    font-size: 2.5em;
-  }
-}
+        @media (min-width:768px) {
+          .c1 {
+            font-size: 2.5em;
+          }
+        }
 
-@media (min-width:768px) {
-  .c0 {
-    top: 35%;
-  }
-}
+        @media (min-width:768px) {
+          .c0 {
+            top: 35%;
+          }
+        }
 
-<div
-  class="c0"
->
-  <div
-    class="c1"
-  >
-    Banner Text
-  </div>
-</div>
-`);
+        <div
+          class="c0"
+        >
+          <div
+            class="c1"
+          >
+            Banner Text
+          </div>
+        </div>
+      `);
     });
   });
 
@@ -68,29 +68,29 @@ describe("Banner", () => {
       const { bannerImageColorWrapper } = renderBanner();
 
       expect(bannerImageColorWrapper).toMatchInlineSnapshot(`
-.c0 {
-  width: 100%;
-  overflow: hidden;
-  max-height: 200px;
-}
+        .c0 {
+          width: 100%;
+          overflow: hidden;
+          max-height: 200px;
+        }
 
-<div
-  class="c0"
->
-  <svg
-    display="block"
-    viewBox="0 0 2600 600"
-  >
-    <rect
-      aria-hidden="true"
-      fill="#00B398"
-      focusable="false"
-      height="100%"
-      width="100%"
-    />
-  </svg>
-</div>
-`);
+        <div
+          class="c0"
+        >
+          <svg
+            display="block"
+            viewBox="0 0 2600 600"
+          >
+            <rect
+              aria-hidden="true"
+              fill="#00B398"
+              focusable="false"
+              height="100%"
+              width="100%"
+            />
+          </svg>
+        </div>
+      `);
     });
 
     it("should render banner with background of another color when color variant is provided", () => {
@@ -132,20 +132,20 @@ describe("Banner", () => {
       });
 
       expect(bannerImage).toMatchInlineSnapshot(`
-.c0 {
-  height: auto;
-  min-width: 320px;
-  max-width: 100%;
-  width: 100%;
-  display: block;
-}
+        .c0 {
+          height: auto;
+          min-width: 320px;
+          max-width: 100%;
+          width: 100%;
+          display: block;
+        }
 
-<img
-  alt="Banner"
-  class="c0"
-  src="./path/to/img.jpg"
-/>
-`);
+        <img
+          alt="Banner"
+          class="c0"
+          src="./path/to/img.jpg"
+        />
+      `);
     });
   });
 
