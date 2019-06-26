@@ -58,7 +58,6 @@ export { default as DownloadSVG } from "./assets/svg/inline/icons/download.svg";
 export { default as EmailSVG } from "./assets/svg/inline/icons/email.svg";
 export { default as FacebookSVG } from "./assets/svg/inline/icons/facebook.svg";
 export { default as FlickrSVG } from "./assets/svg/inline/icons/flickr.svg";
-export { default as GoogleSVG } from "./assets/svg/inline/icons/google.svg";
 export {
   default as InstagramSVG
 } from "./assets/svg/inline/icons/instagram.svg";

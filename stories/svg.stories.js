@@ -24,7 +24,6 @@ import {
   EmailSVG,
   FacebookSVG,
   FlickrSVG,
-  GoogleSVG,
   InstagramSVG,
   LinkSVG,
   LinkedInSVG,
@@ -149,10 +148,6 @@ storiesOf("svg", module).add("icons (Fastspot)", () => (
     <SVGWrapper>
       <SVGName>FlickrSVG</SVGName>
       <FlickrSVG />
-    </SVGWrapper>
-    <SVGWrapper>
-      <SVGName>GoogleSVG</SVGName>
-      <GoogleSVG />
     </SVGWrapper>
     <SVGWrapper>
       <SVGName>InstagramSVG</SVGName>
