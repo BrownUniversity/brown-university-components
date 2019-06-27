@@ -21,6 +21,7 @@ export { default as SubNav } from "./components/SubNav";
 /*
   svgs
 */
+// icons (fastspot)
 export { default as AppleSVG } from "./assets/svg/inline/icons/apple.svg";
 export {
   default as ArrowLeftSVG
@@ -82,3 +83,16 @@ export { default as UserSVG } from "./assets/svg/inline/icons/user.svg";
 export { default as VimeoSVG } from "./assets/svg/inline/icons/vimeo.svg";
 export { default as WorldSVG } from "./assets/svg/inline/icons/world.svg";
 export { default as YouTubeSVG } from "./assets/svg/inline/icons/youtube.svg";
+// icons (other)
+export { default as CalendarSVG } from "./assets/svg/inline/icons/calendar.svg";
+export {
+  default as CheckMarkSVG
+} from "./assets/svg/inline/icons/check-mark.svg";
+export {
+  default as DraggableSVG
+} from "./assets/svg/inline/icons/draggable.svg";
+export { default as ErrorSVG } from "./assets/svg/inline/icons/error.svg";
+export { default as FilterSVG } from "./assets/svg/inline/icons/filter.svg";
+export {
+  default as ListSearchSVG
+} from "./assets/svg/inline/icons/list-search.svg";
