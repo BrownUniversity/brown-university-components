@@ -76,6 +76,11 @@ exports[`Footer should render default 1`] = `
   transition: background 0.25s,color 0.25s;
 }
 
+.c17:hover {
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
 .c17 .c24 {
   opacity: 0;
 }
@@ -172,6 +177,11 @@ exports[`Footer should render default 1`] = `
   margin-bottom: 14px;
 }
 
+.c7:hover {
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
 .c10 {
   background-color: transparent;
   color: inherit;
@@ -186,6 +196,11 @@ exports[`Footer should render default 1`] = `
   display: block;
   padding-left: 25px;
   position: relative;
+}
+
+.c10:hover {
+  -webkit-text-decoration: none;
+  text-decoration: none;
 }
 
 .c8 {
@@ -343,6 +358,11 @@ exports[`Footer should render default 1`] = `
   text-align: center;
   -webkit-transition: color 0.25s;
   transition: color 0.25s;
+}
+
+.c38:hover {
+  -webkit-text-decoration: none;
+  text-decoration: none;
 }
 
 .c39 {
