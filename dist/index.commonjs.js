@@ -1,4 +1,4 @@
-/*! brown-university-components v1.5.0 */
+/*! brown-university-components v1.5.1 */
 (function webpackUniversalModuleDefinition(root, factory) {
 	if(typeof exports === 'object' && typeof module === 'object')
 		module.exports = factory(require("styled-components"), require("brown-university-styles"), require("prop-types"), require("react"), require("polished"), require("react-fns"));
@@ -1750,7 +1750,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(styled_components__WEBPACK_IMPORTED_MODULE_0__);
 
 var srOnlyCSS = Object(styled_components__WEBPACK_IMPORTED_MODULE_0__["css"])(["border:0;clip-path:inset(50%);clip:rect(0,0,0,0);height:1px;margin:-1px;overflow:hidden;padding:0;position:absolute;white-space:nowrap;width:1px;"]);
-var unstyledLinkCSS = Object(styled_components__WEBPACK_IMPORTED_MODULE_0__["css"])(["background-color:transparent;color:inherit;font-family:inherit;font-size:inherit;font-style:inherit;line-height:inherit;font-variant:inherit;font-weight:inherit;text-decoration:none;"]);
+var unstyledLinkCSS = Object(styled_components__WEBPACK_IMPORTED_MODULE_0__["css"])(["background-color:transparent;color:inherit;font-family:inherit;font-size:inherit;font-style:inherit;line-height:inherit;font-variant:inherit;font-weight:inherit;text-decoration:none;&:hover{text-decoration:none;}"]);
 
 /***/ }),
 /* 16 */
