@@ -23,4 +23,8 @@ export const unstyledLinkCSS = css`
   font-variant: inherit;
   font-weight: inherit;
   text-decoration: none;
+
+  &:hover {
+    text-decoration: none;
+  }
 `;
