@@ -1,4 +1,4 @@
-/*! brown-university-components v1.5.1 */
+/*! brown-university-components v1.5.2 */
 (function webpackUniversalModuleDefinition(root, factory) {
 	if(typeof exports === 'object' && typeof module === 'object')
 		module.exports = factory(require("styled-components"), require("brown-university-styles"), require("prop-types"), require("react"), require("polished"), require("react-fns"));
@@ -1870,7 +1870,7 @@ function _extends() { _extends = Object.assign || function (target) { for (var i
   xmlns: "http://www.w3.org/2000/svg",
   viewBox: "0 0 18 18"
 }, props), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("path", {
-  d: "M0 0v17.99h9.58v-6.95H7.238V8.204H9.58V5.82a3.137 3.137 0 0 1 3.138-3.137h2.448v2.551h-1.752a.997.997 0 0 0-.997.997v1.972h2.705l-.374 2.836h-2.33v6.95h5.571V0H0z"
+  d: "M18 9.055C18 4.055 13.97 0 9 0S0 4.054 0 9.055C0 13.574 3.29 17.32 7.594 18v-6.327H5.308V9.055h2.286V7.059c0-2.269 1.344-3.523 3.4-3.523.984 0 2.014.177 2.014.177v2.228h-1.135c-1.118 0-1.467.698-1.467 1.415v1.699h2.496l-.399 2.618h-2.097V18C14.71 17.321 18 13.575 18 9.055z"
 })));
 
 /***/ }),
