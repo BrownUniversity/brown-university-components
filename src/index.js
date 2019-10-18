@@ -9,6 +9,7 @@ export { default as media } from "./media";
 export { default as Background } from "./components/Background";
 export { default as Banner } from "./components/Banner";
 export { default as Button } from "./components/Button";
+export { default as Collapse } from "./components/utils/Collapse";
 export { default as Code } from "./components/Code";
 export { default as Footer } from "./components/Footer";
 export { default as Hamburger } from "./components/Hamburger";
