@@ -5,21 +5,26 @@ module.exports = {
   oneOf: [
     {
       include: path.resolve(__dirname, "../../src/assets/svg/inline/"),
-      use: {
-        loader: "react-svg-loader",
-        options: {
-          svgo: {
-            plugins: [
-              {
-                cleanupIDs: false
-              },
-              {
-                removeUnknownsAndDefaults: false
-              }
-            ]
+      use: [
+        {
+          loader: "babel-loader"
+        },
+        {
+          loader: "react-svg-loader",
+          options: {
+            svgo: {
+              plugins: [
+                {
+                  cleanupIDs: false
+                },
+                {
+                  removeUnknownsAndDefaults: false
+                }
+              ]
+            }
           }
         }
-      }
+      ]
     },
     {
       exclude: path.resolve(__dirname, "../../src/assets/svg/inline/"),
