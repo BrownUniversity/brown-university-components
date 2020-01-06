@@ -231,6 +231,7 @@ Button.propTypes = {
     "brown",
     "gray",
     "emerald",
+    "darkEmerald",
     "skyBlue",
     "navy",
     "idRed"
