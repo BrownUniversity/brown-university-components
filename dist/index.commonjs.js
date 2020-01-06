@@ -1,4 +1,4 @@
-/*! brown-university-components v1.6.1 */
+/*! brown-university-components v1.7.0 */
 (function webpackUniversalModuleDefinition(root, factory) {
 	if(typeof exports === 'object' && typeof module === 'object')
 		module.exports = factory(require("styled-components"), require("brown-university-styles"), require("prop-types"), require("react"), require("polished"), require("react-fns"));
@@ -607,7 +607,7 @@ var Banner = function Banner(_ref3) {
 };
 
 Banner.propTypes =  true ? {
-  color: prop_types__WEBPACK_IMPORTED_MODULE_0___default.a.oneOf(["emerald", "red", "brown", "yellow", "gray", "sand", "lightBrown", "mediumBrown", "navy", "skyBlue"]),
+  color: prop_types__WEBPACK_IMPORTED_MODULE_0___default.a.oneOf(["emerald", "darkEmerald", "red", "brown", "yellow", "gray", "sand", "lightBrown", "mediumBrown", "navy", "skyBlue"]),
   size: prop_types__WEBPACK_IMPORTED_MODULE_0___default.a.oneOf(["default", "small", "medium", "large"]),
   src: prop_types__WEBPACK_IMPORTED_MODULE_0___default.a.string,
   children: prop_types__WEBPACK_IMPORTED_MODULE_0___default.a.node,
@@ -941,7 +941,7 @@ var Button = function Button(props) {
 
 Button.propTypes =  true ? {
   tag: prop_types__WEBPACK_IMPORTED_MODULE_0___default.a.oneOfType([prop_types__WEBPACK_IMPORTED_MODULE_0___default.a.func, prop_types__WEBPACK_IMPORTED_MODULE_0___default.a.string]),
-  color: prop_types__WEBPACK_IMPORTED_MODULE_0___default.a.oneOf(["red", "yellow", "brown", "gray", "emerald", "skyBlue", "navy", "idRed"]),
+  color: prop_types__WEBPACK_IMPORTED_MODULE_0___default.a.oneOf(["red", "yellow", "brown", "gray", "emerald", "darkEmerald", "skyBlue", "navy", "idRed"]),
   size: prop_types__WEBPACK_IMPORTED_MODULE_0___default.a.oneOf(["default", "small", "large"]),
   uppercase: prop_types__WEBPACK_IMPORTED_MODULE_0___default.a.bool,
   rounded: prop_types__WEBPACK_IMPORTED_MODULE_0___default.a.bool,
