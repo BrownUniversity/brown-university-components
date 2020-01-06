@@ -96,6 +96,7 @@ const Banner = ({
 Banner.propTypes = {
   color: PropTypes.oneOf([
     "emerald",
+    "darkEmerald",
     "red",
     "brown",
     "yellow",
