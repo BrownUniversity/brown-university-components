@@ -1,0 +1,400 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`NavbarNav when window width is above mobileBreakpoint should render default 1`] = `
+.c1 {
+  display: list-item;
+  padding: 9px 15px;
+}
+
+.c2 {
+  background: transparent;
+  border: none;
+  display: block;
+  font-family: Circular-Book,Arial,Helvetica,sans-serif;
+  padding: 0;
+  -webkit-text-decoration: none !important;
+  text-decoration: none !important;
+  color: #FFFFFF;
+  cursor: pointer;
+  font-size: 1em;
+  font-weight: 400;
+  line-height: 1.5;
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.c2::after {
+  content: "";
+  display: block;
+  height: 3px;
+  background: #CCC6B8;
+  margin-top: 0.25em;
+  width: 0;
+}
+
+.c2:hover {
+  color: #CCC6B8;
+}
+
+.c2:hover::after {
+  width: 100%;
+}
+
+.c3 {
+  background: transparent;
+  border: none;
+  display: block;
+  font-family: Circular-Book,Arial,Helvetica,sans-serif;
+  padding: 0;
+  -webkit-text-decoration: none !important;
+  text-decoration: none !important;
+  color: #CCC6B8;
+  cursor: pointer;
+  font-size: 1em;
+  font-weight: 400;
+  line-height: 1.5;
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.c3::after {
+  content: "";
+  display: block;
+  height: 3px;
+  background: #CCC6B8;
+  margin-top: 0.25em;
+  width: 100%;
+}
+
+.c3:hover {
+  color: #CCC6B8;
+}
+
+.c3:hover::after {
+  width: 100%;
+}
+
+.c4 {
+  background: transparent;
+  border: none;
+  display: block;
+  font-family: Circular-Book,Arial,Helvetica,sans-serif;
+  padding: 0;
+  -webkit-text-decoration: none !important;
+  text-decoration: none !important;
+  color: #FFFFFF;
+  cursor: not-allowed;
+  font-size: 1em;
+  font-weight: 400;
+  line-height: 1.5;
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.c4::after {
+  content: "";
+  display: block;
+  height: 3px;
+  background: #CCC6B8;
+  margin-top: 0.25em;
+  width: 0;
+}
+
+.c4:hover {
+  color: #FFFFFF;
+}
+
+.c4:hover::after {
+  width: 0;
+}
+
+.c0 {
+  list-style: none;
+  margin: 0;
+  background-color: transparent;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 0;
+  width: auto;
+}
+
+<ul
+  class="c0"
+>
+  <li
+    class="c1"
+  >
+    <button
+      class="c2"
+      color="white"
+    >
+      Link
+    </button>
+  </li>
+  <li
+    class="c1"
+  >
+    <button
+      class="c3"
+      color="white"
+    >
+      Active Link
+    </button>
+  </li>
+  <li
+    class="c1"
+  >
+    <button
+      class="c4"
+      color="white"
+      disabled=""
+    >
+      Link
+    </button>
+  </li>
+</ul>
+`;
+
+exports[`NavbarNav when window width is below mobileBreakpoint styles should render brown mobile navbar nav by default 1`] = `
+.c0 {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  height: 24px;
+  padding: 0 25px 3px 0;
+}
+
+.c1 {
+  height: 3px;
+  position: absolute;
+  width: 25px;
+  background-color: #FFFFFF;
+  -webkit-transition-property: -webkit-transform;
+  -webkit-transition-property: transform;
+  transition-property: transform;
+  -webkit-transition-timing-function: ease;
+  transition-timing-function: ease;
+  -webkit-transition-duration: .22s;
+  transition-duration: .22s;
+  -webkit-transition-timing-function: cubic-bezier(0.55,0.055,0.675,0.19);
+  transition-timing-function: cubic-bezier(0.55,0.055,0.675,0.19);
+}
+
+.c1.c1:before {
+  height: 3px;
+  position: absolute;
+  width: 25px;
+  background-color: #FFFFFF;
+  content: "";
+  display: block;
+  -webkit-transition-property: -webkit-transform;
+  -webkit-transition-property: transform;
+  transition-property: transform;
+  -webkit-transition-timing-function: ease;
+  transition-timing-function: ease;
+  -webkit-transition-duration: .15s;
+  transition-duration: .15s;
+  -webkit-transition: top .1s .25s ease-in,opacity .1s ease-in;
+  transition: top .1s .25s ease-in,opacity .1s ease-in;
+  top: -7px;
+}
+
+.c1.c1:after {
+  height: 3px;
+  position: absolute;
+  width: 25px;
+  background-color: #FFFFFF;
+  content: "";
+  display: block;
+  -webkit-transition-property: -webkit-transform;
+  -webkit-transition-property: transform;
+  transition-property: transform;
+  -webkit-transition-timing-function: ease;
+  transition-timing-function: ease;
+  -webkit-transition-duration: .15s;
+  transition-duration: .15s;
+  -webkit-transition: bottom .1s .25s ease-in,-webkit-transform .22s cubic-bezier(0.55,0.055,0.675,0.19);
+  -webkit-transition: bottom .1s .25s ease-in,transform .22s cubic-bezier(0.55,0.055,0.675,0.19);
+  transition: bottom .1s .25s ease-in,transform .22s cubic-bezier(0.55,0.055,0.675,0.19);
+  bottom: -7px;
+}
+
+.c6 {
+  display: list-item;
+  border-top: 0.5px solid #C8C8C880;
+  padding: 1rem 0;
+}
+
+.c7 {
+  background: transparent;
+  border: none;
+  display: block;
+  font-family: Circular-Book,Arial,Helvetica,sans-serif;
+  padding: 0;
+  -webkit-text-decoration: none !important;
+  text-decoration: none !important;
+  color: #FFFFFF;
+  cursor: pointer;
+  font-size: 1em;
+  font-weight: 700;
+  line-height: 1.5;
+  opacity: 1;
+  pointer-events: auto;
+  -webkit-transition: all .2s ease-in-out;
+  transition: all .2s ease-in-out;
+}
+
+.c7:hover {
+  color: #CCC6B8;
+}
+
+.c8 {
+  background: transparent;
+  border: none;
+  display: block;
+  font-family: Circular-Book,Arial,Helvetica,sans-serif;
+  padding: 0;
+  -webkit-text-decoration: none !important;
+  text-decoration: none !important;
+  color: #CCC6B8;
+  cursor: pointer;
+  font-size: 1em;
+  font-weight: 700;
+  line-height: 1.5;
+  opacity: 1;
+  pointer-events: auto;
+  -webkit-transition: all .2s ease-in-out;
+  transition: all .2s ease-in-out;
+}
+
+.c8:hover {
+  color: #CCC6B8;
+}
+
+.c9 {
+  background: transparent;
+  border: none;
+  display: block;
+  font-family: Circular-Book,Arial,Helvetica,sans-serif;
+  padding: 0;
+  -webkit-text-decoration: none !important;
+  text-decoration: none !important;
+  color: #FFFFFF;
+  cursor: not-allowed;
+  font-size: 1em;
+  font-weight: 700;
+  line-height: 1.5;
+  opacity: 1;
+  pointer-events: auto;
+  -webkit-transition: all .2s ease-in-out;
+  transition: all .2s ease-in-out;
+}
+
+.c9:hover {
+  color: #FFFFFF;
+}
+
+.c5 {
+  list-style: none;
+  margin: 0;
+  background-color: transparent;
+  display: block;
+  padding: 0;
+  width: 100%;
+}
+
+.c3 {
+  will-change: height;
+  display: none;
+  height: 0;
+  overflow: hidden;
+  -webkit-transition: height 250ms cubic-bezier(0.4,0,0.2,1);
+  transition: height 250ms cubic-bezier(0.4,0,0.2,1);
+}
+
+.c2 {
+  box-shadow: 0 5px 10px 0 #00000026;
+  left: 0;
+  position: absolute;
+  top: 75px;
+  width: 100%;
+  background-color: #4E3629;
+}
+
+.c4 {
+  padding: 0 7vw 1rem;
+}
+
+@media (min-width:768px) {
+  .c4 {
+    padding: 0 33px;
+  }
+}
+
+<div>
+  <button
+    aria-controls="navbar-nav-mobile-collapse"
+    aria-expanded="false"
+    aria-label="Toggle navigation"
+    class="c0"
+    type="button"
+  >
+    <span
+      class="c1"
+    />
+  </button>
+  <div
+    class="c2"
+  >
+    <div
+      class="c3"
+      display="none"
+      height="0"
+      id="navbar-nav-mobile-collapse"
+      overflow="hidden"
+    >
+      <div
+        class="c4"
+      >
+        <ul
+          class="c5"
+        >
+          <li
+            class="c6"
+          >
+            <button
+              class="c7"
+              color="white"
+            >
+              Link
+            </button>
+          </li>
+          <li
+            class="c6"
+          >
+            <button
+              class="c8"
+              color="white"
+            >
+              Active Link
+            </button>
+          </li>
+          <li
+            class="c6"
+          >
+            <button
+              class="c9"
+              color="white"
+              disabled=""
+            >
+              Link
+            </button>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+`;
