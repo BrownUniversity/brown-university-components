@@ -12,7 +12,7 @@ Components for building React-based applications at Brown University.
 
 ```sh
 // npm
-npm i git+https://github.com/BrownUniversity/brown-university-components.git#semver:^1.7
+npm i BrownUniversity/brown-university-components
 
 // yarn
 yarn add git+https://github.com/BrownUniversity/brown-university-components.git#^1.7
