@@ -60,7 +60,7 @@
     "copy-webpack-plugin": "^4.6.0",
     "css-loader": "^1.0.1",
     "eslint": "^5.16.0",
-    "eslint-config-brown": "git+https://github.com/BrownUniversity/eslint-config-brown.git#semver:^0.14",
+    "eslint-config-brown": "github:BrownUniversity/eslint-config-brown",
     "file-loader": "^2.0.0",
     "jest": "^24.9.0",
     "jest-dom": "^3.5.0",
