@@ -15,7 +15,7 @@ Components for building React-based applications at Brown University.
 npm i BrownUniversity/brown-university-components
 
 // yarn
-yarn add git+https://github.com/BrownUniversity/brown-university-components.git#^1.7
+yarn add git+https://github.com/BrownUniversity/brown-university-components.git#^1.8
 ```
 
 #### Required Peer Dependencies
