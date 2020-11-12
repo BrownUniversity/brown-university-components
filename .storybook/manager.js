@@ -1,6 +1,9 @@
 import { create } from "@storybook/theming/create";
+import { addons } from "@storybook/addons";
 import { version } from "../package.json";
 
-export default create({
-  brandTitle: `Brown University Components ${version}`,
+addons.setConfig({
+  theme: create({
+    brandTitle: `Brown University Components ${version}`,
+  }),
 });
