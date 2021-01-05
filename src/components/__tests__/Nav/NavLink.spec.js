@@ -113,54 +113,54 @@ describe("NavLink", () => {
           const { navLink } = renderNavLink({ props: { onClick: jest.fn() } });
 
           expect(navLink).toMatchInlineSnapshot(`
-.c0 {
-  background: transparent;
-  border: none;
-  display: block;
-  font-family: Circular-Book,Arial,Helvetica,sans-serif;
-  padding: 0;
-  -webkit-text-decoration: none !important;
-  text-decoration: none !important;
-  color: #000000;
-  cursor: pointer;
-  font-size: 1.1em;
-  font-weight: 700;
-  line-height: 1;
-  opacity: 1;
-  pointer-events: auto;
-}
+            .c0 {
+              background: transparent;
+              border: none;
+              display: block;
+              font-family: CircularStd,Arial,Helvetica,sans-serif;
+              padding: 0;
+              -webkit-text-decoration: none !important;
+              text-decoration: none !important;
+              color: #000000;
+              cursor: pointer;
+              font-size: 1.1em;
+              font-weight: 700;
+              line-height: 1;
+              opacity: 1;
+              pointer-events: auto;
+            }
 
-.c0::after {
-  content: "";
-  display: block;
-  height: 3px;
-  background: #C00404;
-  margin-top: 1em;
-  width: 0;
-}
+            .c0::after {
+              content: "";
+              display: block;
+              height: 3px;
+              background: #C00404;
+              margin-top: 1em;
+              width: 0;
+            }
 
-.c0:hover {
-  color: #C00404;
-}
+            .c0:hover {
+              color: #C00404;
+            }
 
-.c0:hover::after {
-  width: 100%;
-}
+            .c0:hover::after {
+              width: 100%;
+            }
 
-@media (min-width:1200px) {
-  .c0 {
-    font-size: 1.2em;
-  }
-}
+            @media (min-width:1200px) {
+              .c0 {
+                font-size: 1.2em;
+              }
+            }
 
-<button
-  class="c0"
-  color="red"
-  type="button"
->
-  Link
-</button>
-`);
+            <button
+              class="c0"
+              color="red"
+              type="button"
+            >
+              Link
+            </button>
+          `);
         });
 
         it("should render red button element with active default styles when variant is provided", () => {
@@ -169,54 +169,54 @@ describe("NavLink", () => {
           });
 
           expect(navLink).toMatchInlineSnapshot(`
-.c0 {
-  background: transparent;
-  border: none;
-  display: block;
-  font-family: Circular-Book,Arial,Helvetica,sans-serif;
-  padding: 0;
-  -webkit-text-decoration: none !important;
-  text-decoration: none !important;
-  color: #C00404;
-  cursor: pointer;
-  font-size: 1.1em;
-  font-weight: 700;
-  line-height: 1;
-  opacity: 1;
-  pointer-events: auto;
-}
+            .c0 {
+              background: transparent;
+              border: none;
+              display: block;
+              font-family: CircularStd,Arial,Helvetica,sans-serif;
+              padding: 0;
+              -webkit-text-decoration: none !important;
+              text-decoration: none !important;
+              color: #C00404;
+              cursor: pointer;
+              font-size: 1.1em;
+              font-weight: 700;
+              line-height: 1;
+              opacity: 1;
+              pointer-events: auto;
+            }
 
-.c0::after {
-  content: "";
-  display: block;
-  height: 3px;
-  background: #C00404;
-  margin-top: 1em;
-  width: 100%;
-}
+            .c0::after {
+              content: "";
+              display: block;
+              height: 3px;
+              background: #C00404;
+              margin-top: 1em;
+              width: 100%;
+            }
 
-.c0:hover {
-  color: #C00404;
-}
+            .c0:hover {
+              color: #C00404;
+            }
 
-.c0:hover::after {
-  width: 100%;
-}
+            .c0:hover::after {
+              width: 100%;
+            }
 
-@media (min-width:1200px) {
-  .c0 {
-    font-size: 1.2em;
-  }
-}
+            @media (min-width:1200px) {
+              .c0 {
+                font-size: 1.2em;
+              }
+            }
 
-<button
-  class="c0"
-  color="red"
-  type="button"
->
-  Link
-</button>
-`);
+            <button
+              class="c0"
+              color="red"
+              type="button"
+            >
+              Link
+            </button>
+          `);
         });
 
         it("should render red button element with disabled default styles when variant is provided", () => {
@@ -225,55 +225,55 @@ describe("NavLink", () => {
           });
 
           expect(navLink).toMatchInlineSnapshot(`
-.c0 {
-  background: transparent;
-  border: none;
-  display: block;
-  font-family: Circular-Book,Arial,Helvetica,sans-serif;
-  padding: 0;
-  -webkit-text-decoration: none !important;
-  text-decoration: none !important;
-  color: #000000;
-  cursor: not-allowed;
-  font-size: 1.1em;
-  font-weight: 700;
-  line-height: 1;
-  opacity: 0.65;
-  pointer-events: auto;
-}
+            .c0 {
+              background: transparent;
+              border: none;
+              display: block;
+              font-family: CircularStd,Arial,Helvetica,sans-serif;
+              padding: 0;
+              -webkit-text-decoration: none !important;
+              text-decoration: none !important;
+              color: #000000;
+              cursor: not-allowed;
+              font-size: 1.1em;
+              font-weight: 700;
+              line-height: 1;
+              opacity: 0.65;
+              pointer-events: auto;
+            }
 
-.c0::after {
-  content: "";
-  display: block;
-  height: 3px;
-  background: #C00404;
-  margin-top: 1em;
-  width: 0;
-}
+            .c0::after {
+              content: "";
+              display: block;
+              height: 3px;
+              background: #C00404;
+              margin-top: 1em;
+              width: 0;
+            }
 
-.c0:hover {
-  color: #000000;
-}
+            .c0:hover {
+              color: #000000;
+            }
 
-.c0:hover::after {
-  width: 0;
-}
+            .c0:hover::after {
+              width: 0;
+            }
 
-@media (min-width:1200px) {
-  .c0 {
-    font-size: 1.2em;
-  }
-}
+            @media (min-width:1200px) {
+              .c0 {
+                font-size: 1.2em;
+              }
+            }
 
-<button
-  class="c0"
-  color="red"
-  disabled=""
-  type="button"
->
-  Link
-</button>
-`);
+            <button
+              class="c0"
+              color="red"
+              disabled=""
+              type="button"
+            >
+              Link
+            </button>
+          `);
         });
       });
 
@@ -286,48 +286,48 @@ describe("NavLink", () => {
             });
 
             expect(navLink).toMatchInlineSnapshot(`
-.c0 {
-  background: transparent;
-  border: none;
-  display: block;
-  font-family: Circular-Book,Arial,Helvetica,sans-serif;
-  padding: 0;
-  -webkit-text-decoration: none !important;
-  text-decoration: none !important;
-  color: #000000;
-  cursor: pointer;
-  font-size: 1em;
-  font-weight: 400;
-  line-height: 1.5;
-  opacity: 1;
-  pointer-events: auto;
-}
+              .c0 {
+                background: transparent;
+                border: none;
+                display: block;
+                font-family: CircularStd,Arial,Helvetica,sans-serif;
+                padding: 0;
+                -webkit-text-decoration: none !important;
+                text-decoration: none !important;
+                color: #000000;
+                cursor: pointer;
+                font-size: 1em;
+                font-weight: 400;
+                line-height: 1.5;
+                opacity: 1;
+                pointer-events: auto;
+              }
 
-.c0::after {
-  content: "";
-  display: block;
-  height: 3px;
-  background: #C00404;
-  margin-top: 0.25em;
-  width: 0;
-}
+              .c0::after {
+                content: "";
+                display: block;
+                height: 3px;
+                background: #C00404;
+                margin-top: 0.25em;
+                width: 0;
+              }
 
-.c0:hover {
-  color: #C00404;
-}
+              .c0:hover {
+                color: #C00404;
+              }
 
-.c0:hover::after {
-  width: 100%;
-}
+              .c0:hover::after {
+                width: 100%;
+              }
 
-<button
-  class="c0"
-  color="red"
-  type="button"
->
-  Link
-</button>
-`);
+              <button
+                class="c0"
+                color="red"
+                type="button"
+              >
+                Link
+              </button>
+            `);
           });
 
           it("should render red button element with active navbar styles when variant is provided", () => {
@@ -337,48 +337,48 @@ describe("NavLink", () => {
             });
 
             expect(navLink).toMatchInlineSnapshot(`
-.c0 {
-  background: transparent;
-  border: none;
-  display: block;
-  font-family: Circular-Book,Arial,Helvetica,sans-serif;
-  padding: 0;
-  -webkit-text-decoration: none !important;
-  text-decoration: none !important;
-  color: #C00404;
-  cursor: pointer;
-  font-size: 1em;
-  font-weight: 400;
-  line-height: 1.5;
-  opacity: 1;
-  pointer-events: auto;
-}
+              .c0 {
+                background: transparent;
+                border: none;
+                display: block;
+                font-family: CircularStd,Arial,Helvetica,sans-serif;
+                padding: 0;
+                -webkit-text-decoration: none !important;
+                text-decoration: none !important;
+                color: #C00404;
+                cursor: pointer;
+                font-size: 1em;
+                font-weight: 400;
+                line-height: 1.5;
+                opacity: 1;
+                pointer-events: auto;
+              }
 
-.c0::after {
-  content: "";
-  display: block;
-  height: 3px;
-  background: #C00404;
-  margin-top: 0.25em;
-  width: 100%;
-}
+              .c0::after {
+                content: "";
+                display: block;
+                height: 3px;
+                background: #C00404;
+                margin-top: 0.25em;
+                width: 100%;
+              }
 
-.c0:hover {
-  color: #C00404;
-}
+              .c0:hover {
+                color: #C00404;
+              }
 
-.c0:hover::after {
-  width: 100%;
-}
+              .c0:hover::after {
+                width: 100%;
+              }
 
-<button
-  class="c0"
-  color="red"
-  type="button"
->
-  Link
-</button>
-`);
+              <button
+                class="c0"
+                color="red"
+                type="button"
+              >
+                Link
+              </button>
+            `);
           });
 
           it("should render red button element with disabled navbar styles when variant is provided", () => {
@@ -388,49 +388,49 @@ describe("NavLink", () => {
             });
 
             expect(navLink).toMatchInlineSnapshot(`
-.c0 {
-  background: transparent;
-  border: none;
-  display: block;
-  font-family: Circular-Book,Arial,Helvetica,sans-serif;
-  padding: 0;
-  -webkit-text-decoration: none !important;
-  text-decoration: none !important;
-  color: #000000;
-  cursor: not-allowed;
-  font-size: 1em;
-  font-weight: 400;
-  line-height: 1.5;
-  opacity: 0.65;
-  pointer-events: auto;
-}
+              .c0 {
+                background: transparent;
+                border: none;
+                display: block;
+                font-family: CircularStd,Arial,Helvetica,sans-serif;
+                padding: 0;
+                -webkit-text-decoration: none !important;
+                text-decoration: none !important;
+                color: #000000;
+                cursor: not-allowed;
+                font-size: 1em;
+                font-weight: 400;
+                line-height: 1.5;
+                opacity: 0.65;
+                pointer-events: auto;
+              }
 
-.c0::after {
-  content: "";
-  display: block;
-  height: 3px;
-  background: #C00404;
-  margin-top: 0.25em;
-  width: 0;
-}
+              .c0::after {
+                content: "";
+                display: block;
+                height: 3px;
+                background: #C00404;
+                margin-top: 0.25em;
+                width: 0;
+              }
 
-.c0:hover {
-  color: #000000;
-}
+              .c0:hover {
+                color: #000000;
+              }
 
-.c0:hover::after {
-  width: 0;
-}
+              .c0:hover::after {
+                width: 0;
+              }
 
-<button
-  class="c0"
-  color="red"
-  disabled=""
-  type="button"
->
-  Link
-</button>
-`);
+              <button
+                class="c0"
+                color="red"
+                disabled=""
+                type="button"
+              >
+                Link
+              </button>
+            `);
           });
         });
 
@@ -442,48 +442,48 @@ describe("NavLink", () => {
             });
 
             expect(navLink).toMatchInlineSnapshot(`
-.c0 {
-  background: transparent;
-  border: none;
-  display: block;
-  font-family: Circular-Book,Arial,Helvetica,sans-serif;
-  padding: 0;
-  -webkit-text-decoration: none !important;
-  text-decoration: none !important;
-  color: #FFFFFF;
-  cursor: pointer;
-  font-size: 1em;
-  font-weight: 400;
-  line-height: 1.5;
-  opacity: 1;
-  pointer-events: auto;
-}
+              .c0 {
+                background: transparent;
+                border: none;
+                display: block;
+                font-family: CircularStd,Arial,Helvetica,sans-serif;
+                padding: 0;
+                -webkit-text-decoration: none !important;
+                text-decoration: none !important;
+                color: #FFFFFF;
+                cursor: pointer;
+                font-size: 1em;
+                font-weight: 400;
+                line-height: 1.5;
+                opacity: 1;
+                pointer-events: auto;
+              }
 
-.c0::after {
-  content: "";
-  display: block;
-  height: 3px;
-  background: #CCC6B8;
-  margin-top: 0.25em;
-  width: 0;
-}
+              .c0::after {
+                content: "";
+                display: block;
+                height: 3px;
+                background: #CCC6B8;
+                margin-top: 0.25em;
+                width: 0;
+              }
 
-.c0:hover {
-  color: #CCC6B8;
-}
+              .c0:hover {
+                color: #CCC6B8;
+              }
 
-.c0:hover::after {
-  width: 100%;
-}
+              .c0:hover::after {
+                width: 100%;
+              }
 
-<button
-  class="c0"
-  color="white"
-  type="button"
->
-  Link
-</button>
-`);
+              <button
+                class="c0"
+                color="white"
+                type="button"
+              >
+                Link
+              </button>
+            `);
           });
 
           it("should render white button element with active navbar styles when variant is provided", () => {
@@ -493,48 +493,48 @@ describe("NavLink", () => {
             });
 
             expect(navLink).toMatchInlineSnapshot(`
-.c0 {
-  background: transparent;
-  border: none;
-  display: block;
-  font-family: Circular-Book,Arial,Helvetica,sans-serif;
-  padding: 0;
-  -webkit-text-decoration: none !important;
-  text-decoration: none !important;
-  color: #CCC6B8;
-  cursor: pointer;
-  font-size: 1em;
-  font-weight: 400;
-  line-height: 1.5;
-  opacity: 1;
-  pointer-events: auto;
-}
+              .c0 {
+                background: transparent;
+                border: none;
+                display: block;
+                font-family: CircularStd,Arial,Helvetica,sans-serif;
+                padding: 0;
+                -webkit-text-decoration: none !important;
+                text-decoration: none !important;
+                color: #CCC6B8;
+                cursor: pointer;
+                font-size: 1em;
+                font-weight: 400;
+                line-height: 1.5;
+                opacity: 1;
+                pointer-events: auto;
+              }
 
-.c0::after {
-  content: "";
-  display: block;
-  height: 3px;
-  background: #CCC6B8;
-  margin-top: 0.25em;
-  width: 100%;
-}
+              .c0::after {
+                content: "";
+                display: block;
+                height: 3px;
+                background: #CCC6B8;
+                margin-top: 0.25em;
+                width: 100%;
+              }
 
-.c0:hover {
-  color: #CCC6B8;
-}
+              .c0:hover {
+                color: #CCC6B8;
+              }
 
-.c0:hover::after {
-  width: 100%;
-}
+              .c0:hover::after {
+                width: 100%;
+              }
 
-<button
-  class="c0"
-  color="white"
-  type="button"
->
-  Link
-</button>
-`);
+              <button
+                class="c0"
+                color="white"
+                type="button"
+              >
+                Link
+              </button>
+            `);
           });
 
           it("should render white button element with disabled navbar styles when variant is provided", () => {
@@ -544,49 +544,49 @@ describe("NavLink", () => {
             });
 
             expect(navLink).toMatchInlineSnapshot(`
-.c0 {
-  background: transparent;
-  border: none;
-  display: block;
-  font-family: Circular-Book,Arial,Helvetica,sans-serif;
-  padding: 0;
-  -webkit-text-decoration: none !important;
-  text-decoration: none !important;
-  color: #FFFFFF;
-  cursor: not-allowed;
-  font-size: 1em;
-  font-weight: 400;
-  line-height: 1.5;
-  opacity: 1;
-  pointer-events: auto;
-}
+              .c0 {
+                background: transparent;
+                border: none;
+                display: block;
+                font-family: CircularStd,Arial,Helvetica,sans-serif;
+                padding: 0;
+                -webkit-text-decoration: none !important;
+                text-decoration: none !important;
+                color: #FFFFFF;
+                cursor: not-allowed;
+                font-size: 1em;
+                font-weight: 400;
+                line-height: 1.5;
+                opacity: 1;
+                pointer-events: auto;
+              }
 
-.c0::after {
-  content: "";
-  display: block;
-  height: 3px;
-  background: #CCC6B8;
-  margin-top: 0.25em;
-  width: 0;
-}
+              .c0::after {
+                content: "";
+                display: block;
+                height: 3px;
+                background: #CCC6B8;
+                margin-top: 0.25em;
+                width: 0;
+              }
 
-.c0:hover {
-  color: #FFFFFF;
-}
+              .c0:hover {
+                color: #FFFFFF;
+              }
 
-.c0:hover::after {
-  width: 0;
-}
+              .c0:hover::after {
+                width: 0;
+              }
 
-<button
-  class="c0"
-  color="white"
-  disabled=""
-  type="button"
->
-  Link
-</button>
-`);
+              <button
+                class="c0"
+                color="white"
+                disabled=""
+                type="button"
+              >
+                Link
+              </button>
+            `);
           });
         });
       });
@@ -600,37 +600,37 @@ describe("NavLink", () => {
             });
 
             expect(navLink).toMatchInlineSnapshot(`
-.c0 {
-  background: transparent;
-  border: none;
-  display: block;
-  font-family: Circular-Book,Arial,Helvetica,sans-serif;
-  padding: 0;
-  -webkit-text-decoration: none !important;
-  text-decoration: none !important;
-  color: #C00404;
-  cursor: pointer;
-  font-size: 1em;
-  font-weight: 700;
-  line-height: 1.5;
-  opacity: 1;
-  pointer-events: auto;
-  -webkit-transition: all .2s ease-in-out;
-  transition: all .2s ease-in-out;
-}
+              .c0 {
+                background: transparent;
+                border: none;
+                display: block;
+                font-family: CircularStd,Arial,Helvetica,sans-serif;
+                padding: 0;
+                -webkit-text-decoration: none !important;
+                text-decoration: none !important;
+                color: #C00404;
+                cursor: pointer;
+                font-size: 1em;
+                font-weight: 700;
+                line-height: 1.5;
+                opacity: 1;
+                pointer-events: auto;
+                -webkit-transition: all .2s ease-in-out;
+                transition: all .2s ease-in-out;
+              }
 
-.c0:hover {
-  color: #000000;
-}
+              .c0:hover {
+                color: #000000;
+              }
 
-<button
-  class="c0"
-  color="red"
-  type="button"
->
-  Link
-</button>
-`);
+              <button
+                class="c0"
+                color="red"
+                type="button"
+              >
+                Link
+              </button>
+            `);
           });
 
           it("should render red button element with active mobile styles when variant is provided", () => {
@@ -640,37 +640,37 @@ describe("NavLink", () => {
             });
 
             expect(navLink).toMatchInlineSnapshot(`
-.c0 {
-  background: transparent;
-  border: none;
-  display: block;
-  font-family: Circular-Book,Arial,Helvetica,sans-serif;
-  padding: 0;
-  -webkit-text-decoration: none !important;
-  text-decoration: none !important;
-  color: #000000;
-  cursor: pointer;
-  font-size: 1em;
-  font-weight: 700;
-  line-height: 1.5;
-  opacity: 1;
-  pointer-events: auto;
-  -webkit-transition: all .2s ease-in-out;
-  transition: all .2s ease-in-out;
-}
+              .c0 {
+                background: transparent;
+                border: none;
+                display: block;
+                font-family: CircularStd,Arial,Helvetica,sans-serif;
+                padding: 0;
+                -webkit-text-decoration: none !important;
+                text-decoration: none !important;
+                color: #000000;
+                cursor: pointer;
+                font-size: 1em;
+                font-weight: 700;
+                line-height: 1.5;
+                opacity: 1;
+                pointer-events: auto;
+                -webkit-transition: all .2s ease-in-out;
+                transition: all .2s ease-in-out;
+              }
 
-.c0:hover {
-  color: #000000;
-}
+              .c0:hover {
+                color: #000000;
+              }
 
-<button
-  class="c0"
-  color="red"
-  type="button"
->
-  Link
-</button>
-`);
+              <button
+                class="c0"
+                color="red"
+                type="button"
+              >
+                Link
+              </button>
+            `);
           });
 
           it("should render red button element with disabled mobile styles when variant is provided", () => {
@@ -680,38 +680,38 @@ describe("NavLink", () => {
             });
 
             expect(navLink).toMatchInlineSnapshot(`
-.c0 {
-  background: transparent;
-  border: none;
-  display: block;
-  font-family: Circular-Book,Arial,Helvetica,sans-serif;
-  padding: 0;
-  -webkit-text-decoration: none !important;
-  text-decoration: none !important;
-  color: #C00404;
-  cursor: not-allowed;
-  font-size: 1em;
-  font-weight: 700;
-  line-height: 1.5;
-  opacity: 0.65;
-  pointer-events: auto;
-  -webkit-transition: all .2s ease-in-out;
-  transition: all .2s ease-in-out;
-}
+              .c0 {
+                background: transparent;
+                border: none;
+                display: block;
+                font-family: CircularStd,Arial,Helvetica,sans-serif;
+                padding: 0;
+                -webkit-text-decoration: none !important;
+                text-decoration: none !important;
+                color: #C00404;
+                cursor: not-allowed;
+                font-size: 1em;
+                font-weight: 700;
+                line-height: 1.5;
+                opacity: 0.65;
+                pointer-events: auto;
+                -webkit-transition: all .2s ease-in-out;
+                transition: all .2s ease-in-out;
+              }
 
-.c0:hover {
-  color: #C00404;
-}
+              .c0:hover {
+                color: #C00404;
+              }
 
-<button
-  class="c0"
-  color="red"
-  disabled=""
-  type="button"
->
-  Link
-</button>
-`);
+              <button
+                class="c0"
+                color="red"
+                disabled=""
+                type="button"
+              >
+                Link
+              </button>
+            `);
           });
         });
 
@@ -723,37 +723,37 @@ describe("NavLink", () => {
             });
 
             expect(navLink).toMatchInlineSnapshot(`
-.c0 {
-  background: transparent;
-  border: none;
-  display: block;
-  font-family: Circular-Book,Arial,Helvetica,sans-serif;
-  padding: 0;
-  -webkit-text-decoration: none !important;
-  text-decoration: none !important;
-  color: #FFFFFF;
-  cursor: pointer;
-  font-size: 1em;
-  font-weight: 700;
-  line-height: 1.5;
-  opacity: 1;
-  pointer-events: auto;
-  -webkit-transition: all .2s ease-in-out;
-  transition: all .2s ease-in-out;
-}
+              .c0 {
+                background: transparent;
+                border: none;
+                display: block;
+                font-family: CircularStd,Arial,Helvetica,sans-serif;
+                padding: 0;
+                -webkit-text-decoration: none !important;
+                text-decoration: none !important;
+                color: #FFFFFF;
+                cursor: pointer;
+                font-size: 1em;
+                font-weight: 700;
+                line-height: 1.5;
+                opacity: 1;
+                pointer-events: auto;
+                -webkit-transition: all .2s ease-in-out;
+                transition: all .2s ease-in-out;
+              }
 
-.c0:hover {
-  color: #CCC6B8;
-}
+              .c0:hover {
+                color: #CCC6B8;
+              }
 
-<button
-  class="c0"
-  color="white"
-  type="button"
->
-  Link
-</button>
-`);
+              <button
+                class="c0"
+                color="white"
+                type="button"
+              >
+                Link
+              </button>
+            `);
           });
 
           it("should render white button element with active mobile styles when variant is provided", () => {
@@ -763,37 +763,37 @@ describe("NavLink", () => {
             });
 
             expect(navLink).toMatchInlineSnapshot(`
-.c0 {
-  background: transparent;
-  border: none;
-  display: block;
-  font-family: Circular-Book,Arial,Helvetica,sans-serif;
-  padding: 0;
-  -webkit-text-decoration: none !important;
-  text-decoration: none !important;
-  color: #CCC6B8;
-  cursor: pointer;
-  font-size: 1em;
-  font-weight: 700;
-  line-height: 1.5;
-  opacity: 1;
-  pointer-events: auto;
-  -webkit-transition: all .2s ease-in-out;
-  transition: all .2s ease-in-out;
-}
+              .c0 {
+                background: transparent;
+                border: none;
+                display: block;
+                font-family: CircularStd,Arial,Helvetica,sans-serif;
+                padding: 0;
+                -webkit-text-decoration: none !important;
+                text-decoration: none !important;
+                color: #CCC6B8;
+                cursor: pointer;
+                font-size: 1em;
+                font-weight: 700;
+                line-height: 1.5;
+                opacity: 1;
+                pointer-events: auto;
+                -webkit-transition: all .2s ease-in-out;
+                transition: all .2s ease-in-out;
+              }
 
-.c0:hover {
-  color: #CCC6B8;
-}
+              .c0:hover {
+                color: #CCC6B8;
+              }
 
-<button
-  class="c0"
-  color="white"
-  type="button"
->
-  Link
-</button>
-`);
+              <button
+                class="c0"
+                color="white"
+                type="button"
+              >
+                Link
+              </button>
+            `);
           });
 
           it("should render white button element with disabled mobile styles when variant is provided", () => {
@@ -803,38 +803,38 @@ describe("NavLink", () => {
             });
 
             expect(navLink).toMatchInlineSnapshot(`
-.c0 {
-  background: transparent;
-  border: none;
-  display: block;
-  font-family: Circular-Book,Arial,Helvetica,sans-serif;
-  padding: 0;
-  -webkit-text-decoration: none !important;
-  text-decoration: none !important;
-  color: #FFFFFF;
-  cursor: not-allowed;
-  font-size: 1em;
-  font-weight: 700;
-  line-height: 1.5;
-  opacity: 1;
-  pointer-events: auto;
-  -webkit-transition: all .2s ease-in-out;
-  transition: all .2s ease-in-out;
-}
+              .c0 {
+                background: transparent;
+                border: none;
+                display: block;
+                font-family: CircularStd,Arial,Helvetica,sans-serif;
+                padding: 0;
+                -webkit-text-decoration: none !important;
+                text-decoration: none !important;
+                color: #FFFFFF;
+                cursor: not-allowed;
+                font-size: 1em;
+                font-weight: 700;
+                line-height: 1.5;
+                opacity: 1;
+                pointer-events: auto;
+                -webkit-transition: all .2s ease-in-out;
+                transition: all .2s ease-in-out;
+              }
 
-.c0:hover {
-  color: #FFFFFF;
-}
+              .c0:hover {
+                color: #FFFFFF;
+              }
 
-<button
-  class="c0"
-  color="white"
-  disabled=""
-  type="button"
->
-  Link
-</button>
-`);
+              <button
+                class="c0"
+                color="white"
+                disabled=""
+                type="button"
+              >
+                Link
+              </button>
+            `);
           });
         });
       });
@@ -847,37 +847,37 @@ describe("NavLink", () => {
           });
 
           expect(navLink).toMatchInlineSnapshot(`
-.c0 {
-  background: transparent;
-  border: none;
-  display: block;
-  font-family: Circular-Book,Arial,Helvetica,sans-serif;
-  padding: 0;
-  -webkit-text-decoration: none !important;
-  text-decoration: none !important;
-  color: #C00404;
-  cursor: pointer;
-  font-size: 1.1em;
-  font-weight: 400;
-  line-height: 1.5;
-  opacity: 1;
-  pointer-events: auto;
-  -webkit-transition: all .2s ease-in-out;
-  transition: all .2s ease-in-out;
-}
+            .c0 {
+              background: transparent;
+              border: none;
+              display: block;
+              font-family: CircularStd,Arial,Helvetica,sans-serif;
+              padding: 0;
+              -webkit-text-decoration: none !important;
+              text-decoration: none !important;
+              color: #C00404;
+              cursor: pointer;
+              font-size: 1.1em;
+              font-weight: 400;
+              line-height: 1.5;
+              opacity: 1;
+              pointer-events: auto;
+              -webkit-transition: all .2s ease-in-out;
+              transition: all .2s ease-in-out;
+            }
 
-.c0:hover {
-  color: #000000;
-}
+            .c0:hover {
+              color: #000000;
+            }
 
-<button
-  class="c0"
-  color="red"
-  type="button"
->
-  Link
-</button>
-`);
+            <button
+              class="c0"
+              color="red"
+              type="button"
+            >
+              Link
+            </button>
+          `);
         });
 
         it("should render red button element with active sub styles when variant is provided", () => {
@@ -887,37 +887,37 @@ describe("NavLink", () => {
           });
 
           expect(navLink).toMatchInlineSnapshot(`
-.c0 {
-  background: transparent;
-  border: none;
-  display: block;
-  font-family: Circular-Book,Arial,Helvetica,sans-serif;
-  padding: 0;
-  -webkit-text-decoration: none !important;
-  text-decoration: none !important;
-  color: #000000;
-  cursor: pointer;
-  font-size: 1.1em;
-  font-weight: 400;
-  line-height: 1.5;
-  opacity: 1;
-  pointer-events: auto;
-  -webkit-transition: all .2s ease-in-out;
-  transition: all .2s ease-in-out;
-}
+            .c0 {
+              background: transparent;
+              border: none;
+              display: block;
+              font-family: CircularStd,Arial,Helvetica,sans-serif;
+              padding: 0;
+              -webkit-text-decoration: none !important;
+              text-decoration: none !important;
+              color: #000000;
+              cursor: pointer;
+              font-size: 1.1em;
+              font-weight: 400;
+              line-height: 1.5;
+              opacity: 1;
+              pointer-events: auto;
+              -webkit-transition: all .2s ease-in-out;
+              transition: all .2s ease-in-out;
+            }
 
-.c0:hover {
-  color: #000000;
-}
+            .c0:hover {
+              color: #000000;
+            }
 
-<button
-  class="c0"
-  color="red"
-  type="button"
->
-  Link
-</button>
-`);
+            <button
+              class="c0"
+              color="red"
+              type="button"
+            >
+              Link
+            </button>
+          `);
         });
 
         it("should render red button element with disabled sub styles when variant is provided", () => {
@@ -927,38 +927,38 @@ describe("NavLink", () => {
           });
 
           expect(navLink).toMatchInlineSnapshot(`
-.c0 {
-  background: transparent;
-  border: none;
-  display: block;
-  font-family: Circular-Book,Arial,Helvetica,sans-serif;
-  padding: 0;
-  -webkit-text-decoration: none !important;
-  text-decoration: none !important;
-  color: #C00404;
-  cursor: not-allowed;
-  font-size: 1.1em;
-  font-weight: 400;
-  line-height: 1.5;
-  opacity: 0.65;
-  pointer-events: auto;
-  -webkit-transition: all .2s ease-in-out;
-  transition: all .2s ease-in-out;
-}
+            .c0 {
+              background: transparent;
+              border: none;
+              display: block;
+              font-family: CircularStd,Arial,Helvetica,sans-serif;
+              padding: 0;
+              -webkit-text-decoration: none !important;
+              text-decoration: none !important;
+              color: #C00404;
+              cursor: not-allowed;
+              font-size: 1.1em;
+              font-weight: 400;
+              line-height: 1.5;
+              opacity: 0.65;
+              pointer-events: auto;
+              -webkit-transition: all .2s ease-in-out;
+              transition: all .2s ease-in-out;
+            }
 
-.c0:hover {
-  color: #C00404;
-}
+            .c0:hover {
+              color: #C00404;
+            }
 
-<button
-  class="c0"
-  color="red"
-  disabled=""
-  type="button"
->
-  Link
-</button>
-`);
+            <button
+              class="c0"
+              color="red"
+              disabled=""
+              type="button"
+            >
+              Link
+            </button>
+          `);
         });
       });
     });
@@ -971,58 +971,58 @@ describe("NavLink", () => {
           });
 
           expect(navLink).toMatchInlineSnapshot(`
-.c0 {
-  background: transparent;
-  border: none;
-  display: block;
-  font-family: Circular-Book,Arial,Helvetica,sans-serif;
-  padding: 0;
-  -webkit-text-decoration: none !important;
-  text-decoration: none !important;
-  color: #000000;
-  cursor: pointer;
-  font-size: 1.1em;
-  font-weight: 700;
-  line-height: 1;
-  opacity: 1;
-  pointer-events: auto;
-  -webkit-transition: background-color .55s linear,border-color .25s linear,box-shadow .25s linear,color .25s linear;
-  transition: background-color .55s linear,border-color .25s linear,box-shadow .25s linear,color .25s linear;
-}
+            .c0 {
+              background: transparent;
+              border: none;
+              display: block;
+              font-family: CircularStd,Arial,Helvetica,sans-serif;
+              padding: 0;
+              -webkit-text-decoration: none !important;
+              text-decoration: none !important;
+              color: #000000;
+              cursor: pointer;
+              font-size: 1.1em;
+              font-weight: 700;
+              line-height: 1;
+              opacity: 1;
+              pointer-events: auto;
+              -webkit-transition: background-color .55s linear,border-color .25s linear,box-shadow .25s linear,color .25s linear;
+              transition: background-color .55s linear,border-color .25s linear,box-shadow .25s linear,color .25s linear;
+            }
 
-.c0::after {
-  content: "";
-  display: block;
-  height: 3px;
-  -webkit-transition: width 0.3s;
-  transition: width 0.3s;
-  background: #C00404;
-  margin-top: 1em;
-  width: 0;
-}
+            .c0::after {
+              content: "";
+              display: block;
+              height: 3px;
+              -webkit-transition: width 0.3s;
+              transition: width 0.3s;
+              background: #C00404;
+              margin-top: 1em;
+              width: 0;
+            }
 
-.c0:hover {
-  color: #C00404;
-}
+            .c0:hover {
+              color: #C00404;
+            }
 
-.c0:hover::after {
-  width: 100%;
-}
+            .c0:hover::after {
+              width: 100%;
+            }
 
-@media (min-width:1200px) {
-  .c0 {
-    font-size: 1.2em;
-  }
-}
+            @media (min-width:1200px) {
+              .c0 {
+                font-size: 1.2em;
+              }
+            }
 
-<a
-  class="c0"
-  color="red"
-  href="https://www.brown.edu"
->
-  Link
-</a>
-`);
+            <a
+              class="c0"
+              color="red"
+              href="https://www.brown.edu"
+            >
+              Link
+            </a>
+          `);
         });
 
         it("should render red anchor element with active default styles when variant is provided", () => {
@@ -1031,58 +1031,58 @@ describe("NavLink", () => {
           });
 
           expect(navLink).toMatchInlineSnapshot(`
-.c0 {
-  background: transparent;
-  border: none;
-  display: block;
-  font-family: Circular-Book,Arial,Helvetica,sans-serif;
-  padding: 0;
-  -webkit-text-decoration: none !important;
-  text-decoration: none !important;
-  color: #C00404;
-  cursor: pointer;
-  font-size: 1.1em;
-  font-weight: 700;
-  line-height: 1;
-  opacity: 1;
-  pointer-events: auto;
-  -webkit-transition: background-color .55s linear,border-color .25s linear,box-shadow .25s linear,color .25s linear;
-  transition: background-color .55s linear,border-color .25s linear,box-shadow .25s linear,color .25s linear;
-}
+            .c0 {
+              background: transparent;
+              border: none;
+              display: block;
+              font-family: CircularStd,Arial,Helvetica,sans-serif;
+              padding: 0;
+              -webkit-text-decoration: none !important;
+              text-decoration: none !important;
+              color: #C00404;
+              cursor: pointer;
+              font-size: 1.1em;
+              font-weight: 700;
+              line-height: 1;
+              opacity: 1;
+              pointer-events: auto;
+              -webkit-transition: background-color .55s linear,border-color .25s linear,box-shadow .25s linear,color .25s linear;
+              transition: background-color .55s linear,border-color .25s linear,box-shadow .25s linear,color .25s linear;
+            }
 
-.c0::after {
-  content: "";
-  display: block;
-  height: 3px;
-  -webkit-transition: width 0.3s;
-  transition: width 0.3s;
-  background: #C00404;
-  margin-top: 1em;
-  width: 100%;
-}
+            .c0::after {
+              content: "";
+              display: block;
+              height: 3px;
+              -webkit-transition: width 0.3s;
+              transition: width 0.3s;
+              background: #C00404;
+              margin-top: 1em;
+              width: 100%;
+            }
 
-.c0:hover {
-  color: #C00404;
-}
+            .c0:hover {
+              color: #C00404;
+            }
 
-.c0:hover::after {
-  width: 100%;
-}
+            .c0:hover::after {
+              width: 100%;
+            }
 
-@media (min-width:1200px) {
-  .c0 {
-    font-size: 1.2em;
-  }
-}
+            @media (min-width:1200px) {
+              .c0 {
+                font-size: 1.2em;
+              }
+            }
 
-<a
-  class="c0"
-  color="red"
-  href="https://www.brown.edu"
->
-  Link
-</a>
-`);
+            <a
+              class="c0"
+              color="red"
+              href="https://www.brown.edu"
+            >
+              Link
+            </a>
+          `);
         });
 
         it("should render red anchor element with disabled default styles when variant is provided", () => {
@@ -1091,59 +1091,59 @@ describe("NavLink", () => {
           });
 
           expect(navLink).toMatchInlineSnapshot(`
-.c0 {
-  background: transparent;
-  border: none;
-  display: block;
-  font-family: Circular-Book,Arial,Helvetica,sans-serif;
-  padding: 0;
-  -webkit-text-decoration: none !important;
-  text-decoration: none !important;
-  color: #000000;
-  cursor: pointer;
-  font-size: 1.1em;
-  font-weight: 700;
-  line-height: 1;
-  opacity: 0.65;
-  pointer-events: none;
-  -webkit-transition: background-color .55s linear,border-color .25s linear,box-shadow .25s linear,color .25s linear;
-  transition: background-color .55s linear,border-color .25s linear,box-shadow .25s linear,color .25s linear;
-}
+            .c0 {
+              background: transparent;
+              border: none;
+              display: block;
+              font-family: CircularStd,Arial,Helvetica,sans-serif;
+              padding: 0;
+              -webkit-text-decoration: none !important;
+              text-decoration: none !important;
+              color: #000000;
+              cursor: pointer;
+              font-size: 1.1em;
+              font-weight: 700;
+              line-height: 1;
+              opacity: 0.65;
+              pointer-events: none;
+              -webkit-transition: background-color .55s linear,border-color .25s linear,box-shadow .25s linear,color .25s linear;
+              transition: background-color .55s linear,border-color .25s linear,box-shadow .25s linear,color .25s linear;
+            }
 
-.c0::after {
-  content: "";
-  display: block;
-  height: 3px;
-  -webkit-transition: width 0.3s;
-  transition: width 0.3s;
-  background: #C00404;
-  margin-top: 1em;
-  width: 0;
-}
+            .c0::after {
+              content: "";
+              display: block;
+              height: 3px;
+              -webkit-transition: width 0.3s;
+              transition: width 0.3s;
+              background: #C00404;
+              margin-top: 1em;
+              width: 0;
+            }
 
-.c0:hover {
-  color: #000000;
-}
+            .c0:hover {
+              color: #000000;
+            }
 
-.c0:hover::after {
-  width: 0;
-}
+            .c0:hover::after {
+              width: 0;
+            }
 
-@media (min-width:1200px) {
-  .c0 {
-    font-size: 1.2em;
-  }
-}
+            @media (min-width:1200px) {
+              .c0 {
+                font-size: 1.2em;
+              }
+            }
 
-<a
-  class="c0"
-  color="red"
-  disabled=""
-  href="https://www.brown.edu"
->
-  Link
-</a>
-`);
+            <a
+              class="c0"
+              color="red"
+              disabled=""
+              href="https://www.brown.edu"
+            >
+              Link
+            </a>
+          `);
         });
       });
 
@@ -1156,52 +1156,52 @@ describe("NavLink", () => {
             });
 
             expect(navLink).toMatchInlineSnapshot(`
-.c0 {
-  background: transparent;
-  border: none;
-  display: block;
-  font-family: Circular-Book,Arial,Helvetica,sans-serif;
-  padding: 0;
-  -webkit-text-decoration: none !important;
-  text-decoration: none !important;
-  color: #000000;
-  cursor: pointer;
-  font-size: 1em;
-  font-weight: 400;
-  line-height: 1.5;
-  opacity: 1;
-  pointer-events: auto;
-  -webkit-transition: background-color .55s linear,border-color .25s linear,box-shadow .25s linear,color .25s linear;
-  transition: background-color .55s linear,border-color .25s linear,box-shadow .25s linear,color .25s linear;
-}
+              .c0 {
+                background: transparent;
+                border: none;
+                display: block;
+                font-family: CircularStd,Arial,Helvetica,sans-serif;
+                padding: 0;
+                -webkit-text-decoration: none !important;
+                text-decoration: none !important;
+                color: #000000;
+                cursor: pointer;
+                font-size: 1em;
+                font-weight: 400;
+                line-height: 1.5;
+                opacity: 1;
+                pointer-events: auto;
+                -webkit-transition: background-color .55s linear,border-color .25s linear,box-shadow .25s linear,color .25s linear;
+                transition: background-color .55s linear,border-color .25s linear,box-shadow .25s linear,color .25s linear;
+              }
 
-.c0::after {
-  content: "";
-  display: block;
-  height: 3px;
-  -webkit-transition: width 0.3s;
-  transition: width 0.3s;
-  background: #C00404;
-  margin-top: 0.25em;
-  width: 0;
-}
+              .c0::after {
+                content: "";
+                display: block;
+                height: 3px;
+                -webkit-transition: width 0.3s;
+                transition: width 0.3s;
+                background: #C00404;
+                margin-top: 0.25em;
+                width: 0;
+              }
 
-.c0:hover {
-  color: #C00404;
-}
+              .c0:hover {
+                color: #C00404;
+              }
 
-.c0:hover::after {
-  width: 100%;
-}
+              .c0:hover::after {
+                width: 100%;
+              }
 
-<a
-  class="c0"
-  color="red"
-  href="https://www.brown.edu"
->
-  Link
-</a>
-`);
+              <a
+                class="c0"
+                color="red"
+                href="https://www.brown.edu"
+              >
+                Link
+              </a>
+            `);
           });
 
           it("should render red anchor element with active navbar styles when variant is provided", () => {
@@ -1211,52 +1211,52 @@ describe("NavLink", () => {
             });
 
             expect(navLink).toMatchInlineSnapshot(`
-.c0 {
-  background: transparent;
-  border: none;
-  display: block;
-  font-family: Circular-Book,Arial,Helvetica,sans-serif;
-  padding: 0;
-  -webkit-text-decoration: none !important;
-  text-decoration: none !important;
-  color: #C00404;
-  cursor: pointer;
-  font-size: 1em;
-  font-weight: 400;
-  line-height: 1.5;
-  opacity: 1;
-  pointer-events: auto;
-  -webkit-transition: background-color .55s linear,border-color .25s linear,box-shadow .25s linear,color .25s linear;
-  transition: background-color .55s linear,border-color .25s linear,box-shadow .25s linear,color .25s linear;
-}
+              .c0 {
+                background: transparent;
+                border: none;
+                display: block;
+                font-family: CircularStd,Arial,Helvetica,sans-serif;
+                padding: 0;
+                -webkit-text-decoration: none !important;
+                text-decoration: none !important;
+                color: #C00404;
+                cursor: pointer;
+                font-size: 1em;
+                font-weight: 400;
+                line-height: 1.5;
+                opacity: 1;
+                pointer-events: auto;
+                -webkit-transition: background-color .55s linear,border-color .25s linear,box-shadow .25s linear,color .25s linear;
+                transition: background-color .55s linear,border-color .25s linear,box-shadow .25s linear,color .25s linear;
+              }
 
-.c0::after {
-  content: "";
-  display: block;
-  height: 3px;
-  -webkit-transition: width 0.3s;
-  transition: width 0.3s;
-  background: #C00404;
-  margin-top: 0.25em;
-  width: 100%;
-}
+              .c0::after {
+                content: "";
+                display: block;
+                height: 3px;
+                -webkit-transition: width 0.3s;
+                transition: width 0.3s;
+                background: #C00404;
+                margin-top: 0.25em;
+                width: 100%;
+              }
 
-.c0:hover {
-  color: #C00404;
-}
+              .c0:hover {
+                color: #C00404;
+              }
 
-.c0:hover::after {
-  width: 100%;
-}
+              .c0:hover::after {
+                width: 100%;
+              }
 
-<a
-  class="c0"
-  color="red"
-  href="https://www.brown.edu"
->
-  Link
-</a>
-`);
+              <a
+                class="c0"
+                color="red"
+                href="https://www.brown.edu"
+              >
+                Link
+              </a>
+            `);
           });
 
           it("should render red anchor element with disabled navbar styles when variant is provided", () => {
@@ -1266,53 +1266,53 @@ describe("NavLink", () => {
             });
 
             expect(navLink).toMatchInlineSnapshot(`
-.c0 {
-  background: transparent;
-  border: none;
-  display: block;
-  font-family: Circular-Book,Arial,Helvetica,sans-serif;
-  padding: 0;
-  -webkit-text-decoration: none !important;
-  text-decoration: none !important;
-  color: #000000;
-  cursor: pointer;
-  font-size: 1em;
-  font-weight: 400;
-  line-height: 1.5;
-  opacity: 0.65;
-  pointer-events: none;
-  -webkit-transition: background-color .55s linear,border-color .25s linear,box-shadow .25s linear,color .25s linear;
-  transition: background-color .55s linear,border-color .25s linear,box-shadow .25s linear,color .25s linear;
-}
+              .c0 {
+                background: transparent;
+                border: none;
+                display: block;
+                font-family: CircularStd,Arial,Helvetica,sans-serif;
+                padding: 0;
+                -webkit-text-decoration: none !important;
+                text-decoration: none !important;
+                color: #000000;
+                cursor: pointer;
+                font-size: 1em;
+                font-weight: 400;
+                line-height: 1.5;
+                opacity: 0.65;
+                pointer-events: none;
+                -webkit-transition: background-color .55s linear,border-color .25s linear,box-shadow .25s linear,color .25s linear;
+                transition: background-color .55s linear,border-color .25s linear,box-shadow .25s linear,color .25s linear;
+              }
 
-.c0::after {
-  content: "";
-  display: block;
-  height: 3px;
-  -webkit-transition: width 0.3s;
-  transition: width 0.3s;
-  background: #C00404;
-  margin-top: 0.25em;
-  width: 0;
-}
+              .c0::after {
+                content: "";
+                display: block;
+                height: 3px;
+                -webkit-transition: width 0.3s;
+                transition: width 0.3s;
+                background: #C00404;
+                margin-top: 0.25em;
+                width: 0;
+              }
 
-.c0:hover {
-  color: #000000;
-}
+              .c0:hover {
+                color: #000000;
+              }
 
-.c0:hover::after {
-  width: 0;
-}
+              .c0:hover::after {
+                width: 0;
+              }
 
-<a
-  class="c0"
-  color="red"
-  disabled=""
-  href="https://www.brown.edu"
->
-  Link
-</a>
-`);
+              <a
+                class="c0"
+                color="red"
+                disabled=""
+                href="https://www.brown.edu"
+              >
+                Link
+              </a>
+            `);
           });
         });
 
@@ -1324,52 +1324,52 @@ describe("NavLink", () => {
             });
 
             expect(navLink).toMatchInlineSnapshot(`
-.c0 {
-  background: transparent;
-  border: none;
-  display: block;
-  font-family: Circular-Book,Arial,Helvetica,sans-serif;
-  padding: 0;
-  -webkit-text-decoration: none !important;
-  text-decoration: none !important;
-  color: #FFFFFF;
-  cursor: pointer;
-  font-size: 1em;
-  font-weight: 400;
-  line-height: 1.5;
-  opacity: 1;
-  pointer-events: auto;
-  -webkit-transition: background-color .55s linear,border-color .25s linear,box-shadow .25s linear,color .25s linear;
-  transition: background-color .55s linear,border-color .25s linear,box-shadow .25s linear,color .25s linear;
-}
+              .c0 {
+                background: transparent;
+                border: none;
+                display: block;
+                font-family: CircularStd,Arial,Helvetica,sans-serif;
+                padding: 0;
+                -webkit-text-decoration: none !important;
+                text-decoration: none !important;
+                color: #FFFFFF;
+                cursor: pointer;
+                font-size: 1em;
+                font-weight: 400;
+                line-height: 1.5;
+                opacity: 1;
+                pointer-events: auto;
+                -webkit-transition: background-color .55s linear,border-color .25s linear,box-shadow .25s linear,color .25s linear;
+                transition: background-color .55s linear,border-color .25s linear,box-shadow .25s linear,color .25s linear;
+              }
 
-.c0::after {
-  content: "";
-  display: block;
-  height: 3px;
-  -webkit-transition: width 0.3s;
-  transition: width 0.3s;
-  background: #CCC6B8;
-  margin-top: 0.25em;
-  width: 0;
-}
+              .c0::after {
+                content: "";
+                display: block;
+                height: 3px;
+                -webkit-transition: width 0.3s;
+                transition: width 0.3s;
+                background: #CCC6B8;
+                margin-top: 0.25em;
+                width: 0;
+              }
 
-.c0:hover {
-  color: #CCC6B8;
-}
+              .c0:hover {
+                color: #CCC6B8;
+              }
 
-.c0:hover::after {
-  width: 100%;
-}
+              .c0:hover::after {
+                width: 100%;
+              }
 
-<a
-  class="c0"
-  color="white"
-  href="https://www.brown.edu"
->
-  Link
-</a>
-`);
+              <a
+                class="c0"
+                color="white"
+                href="https://www.brown.edu"
+              >
+                Link
+              </a>
+            `);
           });
 
           it("should render white anchor element with active navbar styles when variant is provided", () => {
@@ -1379,52 +1379,52 @@ describe("NavLink", () => {
             });
 
             expect(navLink).toMatchInlineSnapshot(`
-.c0 {
-  background: transparent;
-  border: none;
-  display: block;
-  font-family: Circular-Book,Arial,Helvetica,sans-serif;
-  padding: 0;
-  -webkit-text-decoration: none !important;
-  text-decoration: none !important;
-  color: #CCC6B8;
-  cursor: pointer;
-  font-size: 1em;
-  font-weight: 400;
-  line-height: 1.5;
-  opacity: 1;
-  pointer-events: auto;
-  -webkit-transition: background-color .55s linear,border-color .25s linear,box-shadow .25s linear,color .25s linear;
-  transition: background-color .55s linear,border-color .25s linear,box-shadow .25s linear,color .25s linear;
-}
+              .c0 {
+                background: transparent;
+                border: none;
+                display: block;
+                font-family: CircularStd,Arial,Helvetica,sans-serif;
+                padding: 0;
+                -webkit-text-decoration: none !important;
+                text-decoration: none !important;
+                color: #CCC6B8;
+                cursor: pointer;
+                font-size: 1em;
+                font-weight: 400;
+                line-height: 1.5;
+                opacity: 1;
+                pointer-events: auto;
+                -webkit-transition: background-color .55s linear,border-color .25s linear,box-shadow .25s linear,color .25s linear;
+                transition: background-color .55s linear,border-color .25s linear,box-shadow .25s linear,color .25s linear;
+              }
 
-.c0::after {
-  content: "";
-  display: block;
-  height: 3px;
-  -webkit-transition: width 0.3s;
-  transition: width 0.3s;
-  background: #CCC6B8;
-  margin-top: 0.25em;
-  width: 100%;
-}
+              .c0::after {
+                content: "";
+                display: block;
+                height: 3px;
+                -webkit-transition: width 0.3s;
+                transition: width 0.3s;
+                background: #CCC6B8;
+                margin-top: 0.25em;
+                width: 100%;
+              }
 
-.c0:hover {
-  color: #CCC6B8;
-}
+              .c0:hover {
+                color: #CCC6B8;
+              }
 
-.c0:hover::after {
-  width: 100%;
-}
+              .c0:hover::after {
+                width: 100%;
+              }
 
-<a
-  class="c0"
-  color="white"
-  href="https://www.brown.edu"
->
-  Link
-</a>
-`);
+              <a
+                class="c0"
+                color="white"
+                href="https://www.brown.edu"
+              >
+                Link
+              </a>
+            `);
           });
 
           it("should render white anchor element with disabled navbar styles when variant is provided", () => {
@@ -1434,53 +1434,53 @@ describe("NavLink", () => {
             });
 
             expect(navLink).toMatchInlineSnapshot(`
-.c0 {
-  background: transparent;
-  border: none;
-  display: block;
-  font-family: Circular-Book,Arial,Helvetica,sans-serif;
-  padding: 0;
-  -webkit-text-decoration: none !important;
-  text-decoration: none !important;
-  color: #FFFFFF;
-  cursor: pointer;
-  font-size: 1em;
-  font-weight: 400;
-  line-height: 1.5;
-  opacity: 1;
-  pointer-events: none;
-  -webkit-transition: background-color .55s linear,border-color .25s linear,box-shadow .25s linear,color .25s linear;
-  transition: background-color .55s linear,border-color .25s linear,box-shadow .25s linear,color .25s linear;
-}
+              .c0 {
+                background: transparent;
+                border: none;
+                display: block;
+                font-family: CircularStd,Arial,Helvetica,sans-serif;
+                padding: 0;
+                -webkit-text-decoration: none !important;
+                text-decoration: none !important;
+                color: #FFFFFF;
+                cursor: pointer;
+                font-size: 1em;
+                font-weight: 400;
+                line-height: 1.5;
+                opacity: 1;
+                pointer-events: none;
+                -webkit-transition: background-color .55s linear,border-color .25s linear,box-shadow .25s linear,color .25s linear;
+                transition: background-color .55s linear,border-color .25s linear,box-shadow .25s linear,color .25s linear;
+              }
 
-.c0::after {
-  content: "";
-  display: block;
-  height: 3px;
-  -webkit-transition: width 0.3s;
-  transition: width 0.3s;
-  background: #CCC6B8;
-  margin-top: 0.25em;
-  width: 0;
-}
+              .c0::after {
+                content: "";
+                display: block;
+                height: 3px;
+                -webkit-transition: width 0.3s;
+                transition: width 0.3s;
+                background: #CCC6B8;
+                margin-top: 0.25em;
+                width: 0;
+              }
 
-.c0:hover {
-  color: #FFFFFF;
-}
+              .c0:hover {
+                color: #FFFFFF;
+              }
 
-.c0:hover::after {
-  width: 0;
-}
+              .c0:hover::after {
+                width: 0;
+              }
 
-<a
-  class="c0"
-  color="white"
-  disabled=""
-  href="https://www.brown.edu"
->
-  Link
-</a>
-`);
+              <a
+                class="c0"
+                color="white"
+                disabled=""
+                href="https://www.brown.edu"
+              >
+                Link
+              </a>
+            `);
           });
         });
       });
@@ -1494,37 +1494,37 @@ describe("NavLink", () => {
             });
 
             expect(navLink).toMatchInlineSnapshot(`
-.c0 {
-  background: transparent;
-  border: none;
-  display: block;
-  font-family: Circular-Book,Arial,Helvetica,sans-serif;
-  padding: 0;
-  -webkit-text-decoration: none !important;
-  text-decoration: none !important;
-  color: #C00404;
-  cursor: pointer;
-  font-size: 1em;
-  font-weight: 700;
-  line-height: 1.5;
-  opacity: 1;
-  pointer-events: auto;
-  -webkit-transition: all .2s ease-in-out;
-  transition: all .2s ease-in-out;
-}
+              .c0 {
+                background: transparent;
+                border: none;
+                display: block;
+                font-family: CircularStd,Arial,Helvetica,sans-serif;
+                padding: 0;
+                -webkit-text-decoration: none !important;
+                text-decoration: none !important;
+                color: #C00404;
+                cursor: pointer;
+                font-size: 1em;
+                font-weight: 700;
+                line-height: 1.5;
+                opacity: 1;
+                pointer-events: auto;
+                -webkit-transition: all .2s ease-in-out;
+                transition: all .2s ease-in-out;
+              }
 
-.c0:hover {
-  color: #000000;
-}
+              .c0:hover {
+                color: #000000;
+              }
 
-<a
-  class="c0"
-  color="red"
-  href="https://www.brown.edu"
->
-  Link
-</a>
-`);
+              <a
+                class="c0"
+                color="red"
+                href="https://www.brown.edu"
+              >
+                Link
+              </a>
+            `);
           });
 
           it("should render red anchor element with active mobile styles when variant is provided", () => {
@@ -1534,37 +1534,37 @@ describe("NavLink", () => {
             });
 
             expect(navLink).toMatchInlineSnapshot(`
-.c0 {
-  background: transparent;
-  border: none;
-  display: block;
-  font-family: Circular-Book,Arial,Helvetica,sans-serif;
-  padding: 0;
-  -webkit-text-decoration: none !important;
-  text-decoration: none !important;
-  color: #000000;
-  cursor: pointer;
-  font-size: 1em;
-  font-weight: 700;
-  line-height: 1.5;
-  opacity: 1;
-  pointer-events: auto;
-  -webkit-transition: all .2s ease-in-out;
-  transition: all .2s ease-in-out;
-}
+              .c0 {
+                background: transparent;
+                border: none;
+                display: block;
+                font-family: CircularStd,Arial,Helvetica,sans-serif;
+                padding: 0;
+                -webkit-text-decoration: none !important;
+                text-decoration: none !important;
+                color: #000000;
+                cursor: pointer;
+                font-size: 1em;
+                font-weight: 700;
+                line-height: 1.5;
+                opacity: 1;
+                pointer-events: auto;
+                -webkit-transition: all .2s ease-in-out;
+                transition: all .2s ease-in-out;
+              }
 
-.c0:hover {
-  color: #000000;
-}
+              .c0:hover {
+                color: #000000;
+              }
 
-<a
-  class="c0"
-  color="red"
-  href="https://www.brown.edu"
->
-  Link
-</a>
-`);
+              <a
+                class="c0"
+                color="red"
+                href="https://www.brown.edu"
+              >
+                Link
+              </a>
+            `);
           });
 
           it("should render red anchor element with disabled mobile styles when variant is provided", () => {
@@ -1574,38 +1574,38 @@ describe("NavLink", () => {
             });
 
             expect(navLink).toMatchInlineSnapshot(`
-.c0 {
-  background: transparent;
-  border: none;
-  display: block;
-  font-family: Circular-Book,Arial,Helvetica,sans-serif;
-  padding: 0;
-  -webkit-text-decoration: none !important;
-  text-decoration: none !important;
-  color: #C00404;
-  cursor: pointer;
-  font-size: 1em;
-  font-weight: 700;
-  line-height: 1.5;
-  opacity: 0.65;
-  pointer-events: none;
-  -webkit-transition: all .2s ease-in-out;
-  transition: all .2s ease-in-out;
-}
+              .c0 {
+                background: transparent;
+                border: none;
+                display: block;
+                font-family: CircularStd,Arial,Helvetica,sans-serif;
+                padding: 0;
+                -webkit-text-decoration: none !important;
+                text-decoration: none !important;
+                color: #C00404;
+                cursor: pointer;
+                font-size: 1em;
+                font-weight: 700;
+                line-height: 1.5;
+                opacity: 0.65;
+                pointer-events: none;
+                -webkit-transition: all .2s ease-in-out;
+                transition: all .2s ease-in-out;
+              }
 
-.c0:hover {
-  color: #C00404;
-}
+              .c0:hover {
+                color: #C00404;
+              }
 
-<a
-  class="c0"
-  color="red"
-  disabled=""
-  href="https://www.brown.edu"
->
-  Link
-</a>
-`);
+              <a
+                class="c0"
+                color="red"
+                disabled=""
+                href="https://www.brown.edu"
+              >
+                Link
+              </a>
+            `);
           });
         });
 
@@ -1617,37 +1617,37 @@ describe("NavLink", () => {
             });
 
             expect(navLink).toMatchInlineSnapshot(`
-.c0 {
-  background: transparent;
-  border: none;
-  display: block;
-  font-family: Circular-Book,Arial,Helvetica,sans-serif;
-  padding: 0;
-  -webkit-text-decoration: none !important;
-  text-decoration: none !important;
-  color: #FFFFFF;
-  cursor: pointer;
-  font-size: 1em;
-  font-weight: 700;
-  line-height: 1.5;
-  opacity: 1;
-  pointer-events: auto;
-  -webkit-transition: all .2s ease-in-out;
-  transition: all .2s ease-in-out;
-}
+              .c0 {
+                background: transparent;
+                border: none;
+                display: block;
+                font-family: CircularStd,Arial,Helvetica,sans-serif;
+                padding: 0;
+                -webkit-text-decoration: none !important;
+                text-decoration: none !important;
+                color: #FFFFFF;
+                cursor: pointer;
+                font-size: 1em;
+                font-weight: 700;
+                line-height: 1.5;
+                opacity: 1;
+                pointer-events: auto;
+                -webkit-transition: all .2s ease-in-out;
+                transition: all .2s ease-in-out;
+              }
 
-.c0:hover {
-  color: #CCC6B8;
-}
+              .c0:hover {
+                color: #CCC6B8;
+              }
 
-<a
-  class="c0"
-  color="white"
-  href="https://www.brown.edu"
->
-  Link
-</a>
-`);
+              <a
+                class="c0"
+                color="white"
+                href="https://www.brown.edu"
+              >
+                Link
+              </a>
+            `);
           });
 
           it("should render white anchor element with active mobile styles when variant is provided", () => {
@@ -1657,37 +1657,37 @@ describe("NavLink", () => {
             });
 
             expect(navLink).toMatchInlineSnapshot(`
-.c0 {
-  background: transparent;
-  border: none;
-  display: block;
-  font-family: Circular-Book,Arial,Helvetica,sans-serif;
-  padding: 0;
-  -webkit-text-decoration: none !important;
-  text-decoration: none !important;
-  color: #CCC6B8;
-  cursor: pointer;
-  font-size: 1em;
-  font-weight: 700;
-  line-height: 1.5;
-  opacity: 1;
-  pointer-events: auto;
-  -webkit-transition: all .2s ease-in-out;
-  transition: all .2s ease-in-out;
-}
+              .c0 {
+                background: transparent;
+                border: none;
+                display: block;
+                font-family: CircularStd,Arial,Helvetica,sans-serif;
+                padding: 0;
+                -webkit-text-decoration: none !important;
+                text-decoration: none !important;
+                color: #CCC6B8;
+                cursor: pointer;
+                font-size: 1em;
+                font-weight: 700;
+                line-height: 1.5;
+                opacity: 1;
+                pointer-events: auto;
+                -webkit-transition: all .2s ease-in-out;
+                transition: all .2s ease-in-out;
+              }
 
-.c0:hover {
-  color: #CCC6B8;
-}
+              .c0:hover {
+                color: #CCC6B8;
+              }
 
-<a
-  class="c0"
-  color="white"
-  href="https://www.brown.edu"
->
-  Link
-</a>
-`);
+              <a
+                class="c0"
+                color="white"
+                href="https://www.brown.edu"
+              >
+                Link
+              </a>
+            `);
           });
 
           it("should render white anchor element with disabled mobile styles when variant is provided", () => {
@@ -1697,38 +1697,38 @@ describe("NavLink", () => {
             });
 
             expect(navLink).toMatchInlineSnapshot(`
-.c0 {
-  background: transparent;
-  border: none;
-  display: block;
-  font-family: Circular-Book,Arial,Helvetica,sans-serif;
-  padding: 0;
-  -webkit-text-decoration: none !important;
-  text-decoration: none !important;
-  color: #FFFFFF;
-  cursor: pointer;
-  font-size: 1em;
-  font-weight: 700;
-  line-height: 1.5;
-  opacity: 1;
-  pointer-events: none;
-  -webkit-transition: all .2s ease-in-out;
-  transition: all .2s ease-in-out;
-}
+              .c0 {
+                background: transparent;
+                border: none;
+                display: block;
+                font-family: CircularStd,Arial,Helvetica,sans-serif;
+                padding: 0;
+                -webkit-text-decoration: none !important;
+                text-decoration: none !important;
+                color: #FFFFFF;
+                cursor: pointer;
+                font-size: 1em;
+                font-weight: 700;
+                line-height: 1.5;
+                opacity: 1;
+                pointer-events: none;
+                -webkit-transition: all .2s ease-in-out;
+                transition: all .2s ease-in-out;
+              }
 
-.c0:hover {
-  color: #FFFFFF;
-}
+              .c0:hover {
+                color: #FFFFFF;
+              }
 
-<a
-  class="c0"
-  color="white"
-  disabled=""
-  href="https://www.brown.edu"
->
-  Link
-</a>
-`);
+              <a
+                class="c0"
+                color="white"
+                disabled=""
+                href="https://www.brown.edu"
+              >
+                Link
+              </a>
+            `);
           });
         });
       });
@@ -1741,37 +1741,37 @@ describe("NavLink", () => {
           });
 
           expect(navLink).toMatchInlineSnapshot(`
-.c0 {
-  background: transparent;
-  border: none;
-  display: block;
-  font-family: Circular-Book,Arial,Helvetica,sans-serif;
-  padding: 0;
-  -webkit-text-decoration: none !important;
-  text-decoration: none !important;
-  color: #C00404;
-  cursor: pointer;
-  font-size: 1.1em;
-  font-weight: 400;
-  line-height: 1.5;
-  opacity: 1;
-  pointer-events: auto;
-  -webkit-transition: all .2s ease-in-out;
-  transition: all .2s ease-in-out;
-}
+            .c0 {
+              background: transparent;
+              border: none;
+              display: block;
+              font-family: CircularStd,Arial,Helvetica,sans-serif;
+              padding: 0;
+              -webkit-text-decoration: none !important;
+              text-decoration: none !important;
+              color: #C00404;
+              cursor: pointer;
+              font-size: 1.1em;
+              font-weight: 400;
+              line-height: 1.5;
+              opacity: 1;
+              pointer-events: auto;
+              -webkit-transition: all .2s ease-in-out;
+              transition: all .2s ease-in-out;
+            }
 
-.c0:hover {
-  color: #000000;
-}
+            .c0:hover {
+              color: #000000;
+            }
 
-<a
-  class="c0"
-  color="red"
-  href="https://www.brown.edu"
->
-  Link
-</a>
-`);
+            <a
+              class="c0"
+              color="red"
+              href="https://www.brown.edu"
+            >
+              Link
+            </a>
+          `);
         });
 
         it("should render red anchor element with active sub styles when variant is provided", () => {
@@ -1781,37 +1781,37 @@ describe("NavLink", () => {
           });
 
           expect(navLink).toMatchInlineSnapshot(`
-.c0 {
-  background: transparent;
-  border: none;
-  display: block;
-  font-family: Circular-Book,Arial,Helvetica,sans-serif;
-  padding: 0;
-  -webkit-text-decoration: none !important;
-  text-decoration: none !important;
-  color: #000000;
-  cursor: pointer;
-  font-size: 1.1em;
-  font-weight: 400;
-  line-height: 1.5;
-  opacity: 1;
-  pointer-events: auto;
-  -webkit-transition: all .2s ease-in-out;
-  transition: all .2s ease-in-out;
-}
+            .c0 {
+              background: transparent;
+              border: none;
+              display: block;
+              font-family: CircularStd,Arial,Helvetica,sans-serif;
+              padding: 0;
+              -webkit-text-decoration: none !important;
+              text-decoration: none !important;
+              color: #000000;
+              cursor: pointer;
+              font-size: 1.1em;
+              font-weight: 400;
+              line-height: 1.5;
+              opacity: 1;
+              pointer-events: auto;
+              -webkit-transition: all .2s ease-in-out;
+              transition: all .2s ease-in-out;
+            }
 
-.c0:hover {
-  color: #000000;
-}
+            .c0:hover {
+              color: #000000;
+            }
 
-<a
-  class="c0"
-  color="red"
-  href="https://www.brown.edu"
->
-  Link
-</a>
-`);
+            <a
+              class="c0"
+              color="red"
+              href="https://www.brown.edu"
+            >
+              Link
+            </a>
+          `);
         });
 
         it("should render red anchor element with disabled sub styles when variant is provided", () => {
@@ -1821,38 +1821,38 @@ describe("NavLink", () => {
           });
 
           expect(navLink).toMatchInlineSnapshot(`
-.c0 {
-  background: transparent;
-  border: none;
-  display: block;
-  font-family: Circular-Book,Arial,Helvetica,sans-serif;
-  padding: 0;
-  -webkit-text-decoration: none !important;
-  text-decoration: none !important;
-  color: #C00404;
-  cursor: pointer;
-  font-size: 1.1em;
-  font-weight: 400;
-  line-height: 1.5;
-  opacity: 0.65;
-  pointer-events: none;
-  -webkit-transition: all .2s ease-in-out;
-  transition: all .2s ease-in-out;
-}
+            .c0 {
+              background: transparent;
+              border: none;
+              display: block;
+              font-family: CircularStd,Arial,Helvetica,sans-serif;
+              padding: 0;
+              -webkit-text-decoration: none !important;
+              text-decoration: none !important;
+              color: #C00404;
+              cursor: pointer;
+              font-size: 1.1em;
+              font-weight: 400;
+              line-height: 1.5;
+              opacity: 0.65;
+              pointer-events: none;
+              -webkit-transition: all .2s ease-in-out;
+              transition: all .2s ease-in-out;
+            }
 
-.c0:hover {
-  color: #C00404;
-}
+            .c0:hover {
+              color: #C00404;
+            }
 
-<a
-  class="c0"
-  color="red"
-  disabled=""
-  href="https://www.brown.edu"
->
-  Link
-</a>
-`);
+            <a
+              class="c0"
+              color="red"
+              disabled=""
+              href="https://www.brown.edu"
+            >
+              Link
+            </a>
+          `);
         });
       });
     });

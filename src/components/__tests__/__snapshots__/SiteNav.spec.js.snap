@@ -10,7 +10,7 @@ exports[`SiteNav when window width is above mobileBreakpoint styles when banner 
   background: transparent;
   border: none;
   display: block;
-  font-family: Circular-Book,Arial,Helvetica,sans-serif;
+  font-family: CircularStd,Arial,Helvetica,sans-serif;
   padding: 0;
   -webkit-text-decoration: none !important;
   text-decoration: none !important;
@@ -44,7 +44,7 @@ exports[`SiteNav when window width is above mobileBreakpoint styles when banner 
   background: transparent;
   border: none;
   display: block;
-  font-family: Circular-Book,Arial,Helvetica,sans-serif;
+  font-family: CircularStd,Arial,Helvetica,sans-serif;
   padding: 0;
   -webkit-text-decoration: none !important;
   text-decoration: none !important;
@@ -78,7 +78,7 @@ exports[`SiteNav when window width is above mobileBreakpoint styles when banner 
   background: transparent;
   border: none;
   display: block;
-  font-family: Circular-Book,Arial,Helvetica,sans-serif;
+  font-family: CircularStd,Arial,Helvetica,sans-serif;
   padding: 0;
   -webkit-text-decoration: none !important;
   text-decoration: none !important;
@@ -207,7 +207,7 @@ exports[`SiteNav when window width is above mobileBreakpoint styles when banner 
   background: transparent;
   border: none;
   display: block;
-  font-family: Circular-Book,Arial,Helvetica,sans-serif;
+  font-family: CircularStd,Arial,Helvetica,sans-serif;
   padding: 0;
   -webkit-text-decoration: none !important;
   text-decoration: none !important;
@@ -241,7 +241,7 @@ exports[`SiteNav when window width is above mobileBreakpoint styles when banner 
   background: transparent;
   border: none;
   display: block;
-  font-family: Circular-Book,Arial,Helvetica,sans-serif;
+  font-family: CircularStd,Arial,Helvetica,sans-serif;
   padding: 0;
   -webkit-text-decoration: none !important;
   text-decoration: none !important;
@@ -275,7 +275,7 @@ exports[`SiteNav when window width is above mobileBreakpoint styles when banner 
   background: transparent;
   border: none;
   display: block;
-  font-family: Circular-Book,Arial,Helvetica,sans-serif;
+  font-family: CircularStd,Arial,Helvetica,sans-serif;
   padding: 0;
   -webkit-text-decoration: none !important;
   text-decoration: none !important;
@@ -478,7 +478,7 @@ exports[`SiteNav when window width is below mobileBreakpoint styles when banner 
   background: transparent;
   border: none;
   display: block;
-  font-family: Circular-Book,Arial,Helvetica,sans-serif;
+  font-family: CircularStd,Arial,Helvetica,sans-serif;
   padding: 0;
   -webkit-text-decoration: none !important;
   text-decoration: none !important;
@@ -501,7 +501,7 @@ exports[`SiteNav when window width is below mobileBreakpoint styles when banner 
   background: transparent;
   border: none;
   display: block;
-  font-family: Circular-Book,Arial,Helvetica,sans-serif;
+  font-family: CircularStd,Arial,Helvetica,sans-serif;
   padding: 0;
   -webkit-text-decoration: none !important;
   text-decoration: none !important;
@@ -524,7 +524,7 @@ exports[`SiteNav when window width is below mobileBreakpoint styles when banner 
   background: transparent;
   border: none;
   display: block;
-  font-family: Circular-Book,Arial,Helvetica,sans-serif;
+  font-family: CircularStd,Arial,Helvetica,sans-serif;
   padding: 0;
   -webkit-text-decoration: none !important;
   text-decoration: none !important;
@@ -600,7 +600,7 @@ exports[`SiteNav when window width is below mobileBreakpoint styles when banner 
 
 .c3 {
   color: #C00404;
-  font-family: Circular-Bold,Circular-Book,Arial,Helvetica,sans-serif;
+  font-family: CircularStdBold,CircularStd,Arial,Helvetica,sans-serif;
   font-weight: bold;
   -webkit-letter-spacing: 0.5px;
   -moz-letter-spacing: 0.5px;
@@ -784,7 +784,7 @@ exports[`SiteNav when window width is below mobileBreakpoint styles when banner 
   background: transparent;
   border: none;
   display: block;
-  font-family: Circular-Book,Arial,Helvetica,sans-serif;
+  font-family: CircularStd,Arial,Helvetica,sans-serif;
   padding: 0;
   -webkit-text-decoration: none !important;
   text-decoration: none !important;
@@ -807,7 +807,7 @@ exports[`SiteNav when window width is below mobileBreakpoint styles when banner 
   background: transparent;
   border: none;
   display: block;
-  font-family: Circular-Book,Arial,Helvetica,sans-serif;
+  font-family: CircularStd,Arial,Helvetica,sans-serif;
   padding: 0;
   -webkit-text-decoration: none !important;
   text-decoration: none !important;
@@ -830,7 +830,7 @@ exports[`SiteNav when window width is below mobileBreakpoint styles when banner 
   background: transparent;
   border: none;
   display: block;
-  font-family: Circular-Book,Arial,Helvetica,sans-serif;
+  font-family: CircularStd,Arial,Helvetica,sans-serif;
   padding: 0;
   -webkit-text-decoration: none !important;
   text-decoration: none !important;
@@ -914,7 +914,7 @@ exports[`SiteNav when window width is below mobileBreakpoint styles when banner 
 
 .c4 {
   color: #C00404;
-  font-family: Circular-Bold,Circular-Book,Arial,Helvetica,sans-serif;
+  font-family: CircularStdBold,CircularStd,Arial,Helvetica,sans-serif;
   font-weight: bold;
   -webkit-letter-spacing: 0.5px;
   -moz-letter-spacing: 0.5px;

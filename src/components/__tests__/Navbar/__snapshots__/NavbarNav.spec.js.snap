@@ -10,7 +10,7 @@ exports[`NavbarNav when window width is above mobileBreakpoint should render def
   background: transparent;
   border: none;
   display: block;
-  font-family: Circular-Book,Arial,Helvetica,sans-serif;
+  font-family: CircularStd,Arial,Helvetica,sans-serif;
   padding: 0;
   -webkit-text-decoration: none !important;
   text-decoration: none !important;
@@ -44,7 +44,7 @@ exports[`NavbarNav when window width is above mobileBreakpoint should render def
   background: transparent;
   border: none;
   display: block;
-  font-family: Circular-Book,Arial,Helvetica,sans-serif;
+  font-family: CircularStd,Arial,Helvetica,sans-serif;
   padding: 0;
   -webkit-text-decoration: none !important;
   text-decoration: none !important;
@@ -78,7 +78,7 @@ exports[`NavbarNav when window width is above mobileBreakpoint should render def
   background: transparent;
   border: none;
   display: block;
-  font-family: Circular-Book,Arial,Helvetica,sans-serif;
+  font-family: CircularStd,Arial,Helvetica,sans-serif;
   padding: 0;
   -webkit-text-decoration: none !important;
   text-decoration: none !important;
@@ -231,7 +231,7 @@ exports[`NavbarNav when window width is below mobileBreakpoint styles should ren
   background: transparent;
   border: none;
   display: block;
-  font-family: Circular-Book,Arial,Helvetica,sans-serif;
+  font-family: CircularStd,Arial,Helvetica,sans-serif;
   padding: 0;
   -webkit-text-decoration: none !important;
   text-decoration: none !important;
@@ -254,7 +254,7 @@ exports[`NavbarNav when window width is below mobileBreakpoint styles should ren
   background: transparent;
   border: none;
   display: block;
-  font-family: Circular-Book,Arial,Helvetica,sans-serif;
+  font-family: CircularStd,Arial,Helvetica,sans-serif;
   padding: 0;
   -webkit-text-decoration: none !important;
   text-decoration: none !important;
@@ -277,7 +277,7 @@ exports[`NavbarNav when window width is below mobileBreakpoint styles should ren
   background: transparent;
   border: none;
   display: block;
-  font-family: Circular-Book,Arial,Helvetica,sans-serif;
+  font-family: CircularStd,Arial,Helvetica,sans-serif;
   padding: 0;
   -webkit-text-decoration: none !important;
   text-decoration: none !important;
@@ -327,7 +327,7 @@ exports[`NavbarNav when window width is below mobileBreakpoint styles should ren
   padding: 0 7vw 1rem;
 }
 
-@media (min-width:768px) {
+@media (min-width:740px) {
   .c4 {
     padding: 0 33px;
   }

@@ -74,7 +74,7 @@ exports[`NavbarGlobalNav when window width is above mobileBreakpoint styles shou
   background: transparent;
   border: none;
   display: block;
-  font-family: Circular-Book,Arial,Helvetica,sans-serif;
+  font-family: CircularStd,Arial,Helvetica,sans-serif;
   padding: 0;
   -webkit-text-decoration: none !important;
   text-decoration: none !important;
@@ -97,7 +97,7 @@ exports[`NavbarGlobalNav when window width is above mobileBreakpoint styles shou
   background: transparent;
   border: none;
   display: block;
-  font-family: Circular-Book,Arial,Helvetica,sans-serif;
+  font-family: CircularStd,Arial,Helvetica,sans-serif;
   padding: 0;
   -webkit-text-decoration: none !important;
   text-decoration: none !important;
@@ -120,7 +120,7 @@ exports[`NavbarGlobalNav when window width is above mobileBreakpoint styles shou
   background: transparent;
   border: none;
   display: block;
-  font-family: Circular-Book,Arial,Helvetica,sans-serif;
+  font-family: CircularStd,Arial,Helvetica,sans-serif;
   padding: 0;
   -webkit-text-decoration: none !important;
   text-decoration: none !important;
@@ -167,7 +167,7 @@ exports[`NavbarGlobalNav when window width is above mobileBreakpoint styles shou
 
 .c3 {
   color: #FFFFFF;
-  font-family: Circular-Bold,Circular-Book,Arial,Helvetica,sans-serif;
+  font-family: CircularStdBold,CircularStd,Arial,Helvetica,sans-serif;
   font-weight: bold;
   -webkit-letter-spacing: 0.5px;
   -moz-letter-spacing: 0.5px;
@@ -190,7 +190,7 @@ exports[`NavbarGlobalNav when window width is above mobileBreakpoint styles shou
   padding: 0 7vw 1rem;
 }
 
-@media (min-width:768px) {
+@media (min-width:740px) {
   .c6 {
     padding: 0 33px 1rem 33px;
   }
@@ -345,7 +345,7 @@ exports[`NavbarGlobalNav when window width is below mobileBreakpoint styles shou
   background: transparent;
   border: none;
   display: block;
-  font-family: Circular-Book,Arial,Helvetica,sans-serif;
+  font-family: CircularStd,Arial,Helvetica,sans-serif;
   padding: 0;
   -webkit-text-decoration: none !important;
   text-decoration: none !important;
@@ -368,7 +368,7 @@ exports[`NavbarGlobalNav when window width is below mobileBreakpoint styles shou
   background: transparent;
   border: none;
   display: block;
-  font-family: Circular-Book,Arial,Helvetica,sans-serif;
+  font-family: CircularStd,Arial,Helvetica,sans-serif;
   padding: 0;
   -webkit-text-decoration: none !important;
   text-decoration: none !important;
@@ -391,7 +391,7 @@ exports[`NavbarGlobalNav when window width is below mobileBreakpoint styles shou
   background: transparent;
   border: none;
   display: block;
-  font-family: Circular-Book,Arial,Helvetica,sans-serif;
+  font-family: CircularStd,Arial,Helvetica,sans-serif;
   padding: 0;
   -webkit-text-decoration: none !important;
   text-decoration: none !important;
@@ -449,7 +449,7 @@ exports[`NavbarGlobalNav when window width is below mobileBreakpoint styles shou
   padding: 0 7vw 1rem;
 }
 
-@media (min-width:768px) {
+@media (min-width:740px) {
   .c5 {
     padding: 0 33px 1rem 33px;
   }
