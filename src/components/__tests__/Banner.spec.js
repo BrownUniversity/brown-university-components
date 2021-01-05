@@ -38,13 +38,13 @@ describe("Banner", () => {
           top: 35%;
         }
 
-        @media (min-width:768px) {
+        @media (min-width:740px) {
           .c1 {
             font-size: 2.5em;
           }
         }
 
-        @media (min-width:768px) {
+        @media (min-width:740px) {
           .c0 {
             top: 35%;
           }

@@ -3,7 +3,7 @@
 exports[`Footer should render default 1`] = `
 .c18 {
   display: inline;
-  font-family: Circular-Book,Arial,Helvetica,sans-serif;
+  font-family: CircularStd,Arial,Helvetica,sans-serif;
   font-size: 0.75rem;
   font-weight: 400;
   -webkit-letter-spacing: 0.09375rem;
@@ -60,7 +60,7 @@ exports[`Footer should render default 1`] = `
   fill: #FFFFFF;
 }
 
-.c17 {
+.c16 {
   background-color: transparent;
   color: inherit;
   font-family: inherit;
@@ -76,31 +76,31 @@ exports[`Footer should render default 1`] = `
   transition: background 0.25s,color 0.25s;
 }
 
-.c17:hover {
+.c16:hover {
   -webkit-text-decoration: none;
   text-decoration: none;
 }
 
-.c17 .c24 {
+.c16 .c24 {
   opacity: 0;
 }
 
-.c17:hover,
-.c17:focus {
+.c16:hover,
+.c16:focus {
   color: #FFFFFF;
 }
 
-.c17:hover .c21,
-.c17:focus .c21 {
+.c16:hover .c21,
+.c16:focus .c21 {
   opacity: 0;
 }
 
-.c17:hover .c24,
-.c17:focus .c24 {
+.c16:hover .c24,
+.c16:focus .c24 {
   opacity: 1;
 }
 
-.c16 {
+.c17 {
   display: block;
   padding: 10px 0;
 }
@@ -149,7 +149,7 @@ exports[`Footer should render default 1`] = `
 .c6 {
   color: #B7B09C;
   display: block;
-  font-family: Circular-Book,Arial,Helvetica,sans-serif;
+  font-family: CircularStd,Arial,Helvetica,sans-serif;
   font-size: 0.6875rem;
   font-weight: 400;
   -webkit-letter-spacing: 0.078125rem;
@@ -468,9 +468,9 @@ exports[`Footer should render default 1`] = `
   }
 }
 
-@media (min-width:768px) {
+@media (min-width:740px) {
   .c2 {
-    width: 748px;
+    width: 720px;
   }
 }
 
@@ -492,7 +492,7 @@ exports[`Footer should render default 1`] = `
   }
 }
 
-@media (min-width:768px) {
+@media (min-width:740px) {
   .c1 {
     padding: 60px 0 70px;
   }
@@ -527,7 +527,7 @@ exports[`Footer should render default 1`] = `
   }
 }
 
-@media (min-width:768px) {
+@media (min-width:740px) {
   .c6 {
     font-size: 0.8125rem;
     -webkit-letter-spacing: 0.09375rem;
@@ -576,7 +576,7 @@ exports[`Footer should render default 1`] = `
   }
 }
 
-@media (min-width:768px) {
+@media (min-width:740px) {
   .c9 {
     font-size: 1.25rem;
     line-height: 1.25;
@@ -596,7 +596,7 @@ exports[`Footer should render default 1`] = `
   }
 }
 
-@media (min-width:768px) {
+@media (min-width:740px) {
   .c14 {
     display: -webkit-box;
     display: -webkit-flex;
@@ -608,7 +608,7 @@ exports[`Footer should render default 1`] = `
   }
 }
 
-@media (min-width:768px) {
+@media (min-width:740px) {
   .c15 {
     padding-right: 20px;
     width: 50%;
@@ -643,7 +643,7 @@ exports[`Footer should render default 1`] = `
   }
 }
 
-@media (min-width:768px) {
+@media (min-width:740px) {
   .c27 {
     display: -webkit-box;
     display: -webkit-flex;
@@ -661,7 +661,7 @@ exports[`Footer should render default 1`] = `
   }
 }
 
-@media (min-width:768px) {
+@media (min-width:740px) {
   .c28 {
     padding-right: 20px;
     width: 50%;
@@ -699,13 +699,13 @@ exports[`Footer should render default 1`] = `
   }
 }
 
-@media (min-width:768px) {
+@media (min-width:740px) {
   .c33 {
     padding: 0;
   }
 }
 
-@media (min-width:768px) {
+@media (min-width:740px) {
   .c34 {
     -webkit-align-items: center;
     -webkit-box-align: center;
@@ -725,7 +725,7 @@ exports[`Footer should render default 1`] = `
   }
 }
 
-@media (min-width:768px) {
+@media (min-width:740px) {
   .c35 {
     margin-bottom: 0;
     -webkit-order: 2;
@@ -734,19 +734,19 @@ exports[`Footer should render default 1`] = `
   }
 }
 
-@media (min-width:768px) {
+@media (min-width:740px) {
   .c37 {
     width: auto;
   }
 }
 
-@media (min-width:768px) {
+@media (min-width:740px) {
   .c38 {
     padding: 19px 15px;
   }
 }
 
-@media (min-width:768px) {
+@media (min-width:740px) {
   .c46 {
     border-top: 0;
     font-size: 1.25rem;
@@ -1172,7 +1172,7 @@ exports[`Footer should render default 1`] = `
               The campaign for building on distinction
             </p>
             <a
-              class="c17"
+              class="c16"
               href="https://giving.brown.edu/"
             >
               <span

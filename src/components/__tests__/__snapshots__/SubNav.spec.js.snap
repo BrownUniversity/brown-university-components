@@ -10,7 +10,7 @@ exports[`SubNav should render default 1`] = `
   background: transparent;
   border: none;
   display: block;
-  font-family: Circular-Book,Arial,Helvetica,sans-serif;
+  font-family: CircularStd,Arial,Helvetica,sans-serif;
   padding: 0;
   -webkit-text-decoration: none !important;
   text-decoration: none !important;
@@ -33,7 +33,7 @@ exports[`SubNav should render default 1`] = `
   background: transparent;
   border: none;
   display: block;
-  font-family: Circular-Book,Arial,Helvetica,sans-serif;
+  font-family: CircularStd,Arial,Helvetica,sans-serif;
   padding: 0;
   -webkit-text-decoration: none !important;
   text-decoration: none !important;
@@ -56,7 +56,7 @@ exports[`SubNav should render default 1`] = `
   background: transparent;
   border: none;
   display: block;
-  font-family: Circular-Book,Arial,Helvetica,sans-serif;
+  font-family: CircularStd,Arial,Helvetica,sans-serif;
   padding: 0;
   -webkit-text-decoration: none !important;
   text-decoration: none !important;

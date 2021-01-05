@@ -97,48 +97,48 @@ describe("Button", () => {
         const { button } = renderButton({ props: { onClick: jest.fn() } });
 
         expect(button).toMatchInlineSnapshot(`
-.c0 {
-  border-width: 0;
-  display: inline-block;
-  font-family: Circular-Book,Arial,Helvetica,sans-serif;
-  font-style: normal;
-  font-weight: 700;
-  -webkit-letter-spacing: 0.6px;
-  -moz-letter-spacing: 0.6px;
-  -ms-letter-spacing: 0.6px;
-  letter-spacing: 0.6px;
-  line-height: 1.5;
-  text-align: center;
-  -webkit-text-decoration: none !important;
-  text-decoration: none !important;
-  -webkit-transition: color 0.25s,background 0.25s,border 0.25s,box-shadow 0.25s;
-  transition: color 0.25s,background 0.25s,border 0.25s,box-shadow 0.25s;
-  background-color: #C00404;
-  box-shadow: inset 0 0 0 1px #C00404;
-  color: #FFFFFF;
-  cursor: pointer;
-  font-size: 0.75em;
-  opacity: 1;
-  padding: 12px 25px;
-  pointer-events: auto;
-  text-transform: uppercase;
-}
+          .c0 {
+            border-width: 0;
+            display: inline-block;
+            font-family: CircularStd,Arial,Helvetica,sans-serif;
+            font-style: normal;
+            font-weight: 700;
+            -webkit-letter-spacing: 0.6px;
+            -moz-letter-spacing: 0.6px;
+            -ms-letter-spacing: 0.6px;
+            letter-spacing: 0.6px;
+            line-height: 1.5;
+            text-align: center;
+            -webkit-text-decoration: none !important;
+            text-decoration: none !important;
+            -webkit-transition: color 0.25s,background 0.25s,border 0.25s,box-shadow 0.25s;
+            transition: color 0.25s,background 0.25s,border 0.25s,box-shadow 0.25s;
+            background-color: #C00404;
+            box-shadow: inset 0 0 0 1px #C00404;
+            color: #FFFFFF;
+            cursor: pointer;
+            font-size: 0.75em;
+            opacity: 1;
+            padding: 12px 25px;
+            pointer-events: auto;
+            text-transform: uppercase;
+          }
 
-.c0:hover,
-.c0:focus {
-  background-color: #8e0303;
-  box-shadow: inset 0 0 0 1px #8e0303;
-  color: #FFFFFF;
-}
+          .c0:hover,
+          .c0:focus {
+            background-color: #8e0303;
+            box-shadow: inset 0 0 0 1px #8e0303;
+            color: #FFFFFF;
+          }
 
-<button
-  class="c0"
-  color="red"
-  type="button"
->
-  Button
-</button>
-`);
+          <button
+            class="c0"
+            color="red"
+            type="button"
+          >
+            Button
+          </button>
+        `);
       });
 
       it("should render solid button element of another color when color variant is provided", () => {
@@ -147,48 +147,48 @@ describe("Button", () => {
         });
 
         expect(button).toMatchInlineSnapshot(`
-.c0 {
-  border-width: 0;
-  display: inline-block;
-  font-family: Circular-Book,Arial,Helvetica,sans-serif;
-  font-style: normal;
-  font-weight: 700;
-  -webkit-letter-spacing: 0.6px;
-  -moz-letter-spacing: 0.6px;
-  -ms-letter-spacing: 0.6px;
-  letter-spacing: 0.6px;
-  line-height: 1.5;
-  text-align: center;
-  -webkit-text-decoration: none !important;
-  text-decoration: none !important;
-  -webkit-transition: color 0.25s,background 0.25s,border 0.25s,box-shadow 0.25s;
-  transition: color 0.25s,background 0.25s,border 0.25s,box-shadow 0.25s;
-  background-color: #FFC72C;
-  box-shadow: inset 0 0 0 1px #FFC72C;
-  color: #FFFFFF;
-  cursor: pointer;
-  font-size: 0.75em;
-  opacity: 1;
-  padding: 12px 25px;
-  pointer-events: auto;
-  text-transform: uppercase;
-}
+          .c0 {
+            border-width: 0;
+            display: inline-block;
+            font-family: CircularStd,Arial,Helvetica,sans-serif;
+            font-style: normal;
+            font-weight: 700;
+            -webkit-letter-spacing: 0.6px;
+            -moz-letter-spacing: 0.6px;
+            -ms-letter-spacing: 0.6px;
+            letter-spacing: 0.6px;
+            line-height: 1.5;
+            text-align: center;
+            -webkit-text-decoration: none !important;
+            text-decoration: none !important;
+            -webkit-transition: color 0.25s,background 0.25s,border 0.25s,box-shadow 0.25s;
+            transition: color 0.25s,background 0.25s,border 0.25s,box-shadow 0.25s;
+            background-color: #FFC72C;
+            box-shadow: inset 0 0 0 1px #FFC72C;
+            color: #FFFFFF;
+            cursor: pointer;
+            font-size: 0.75em;
+            opacity: 1;
+            padding: 12px 25px;
+            pointer-events: auto;
+            text-transform: uppercase;
+          }
 
-.c0:hover,
-.c0:focus {
-  background-color: #f8b600;
-  box-shadow: inset 0 0 0 1px #f8b600;
-  color: #FFFFFF;
-}
+          .c0:hover,
+          .c0:focus {
+            background-color: #f8b600;
+            box-shadow: inset 0 0 0 1px #f8b600;
+            color: #FFFFFF;
+          }
 
-<button
-  class="c0"
-  color="yellow"
-  type="button"
->
-  Button
-</button>
-`);
+          <button
+            class="c0"
+            color="yellow"
+            type="button"
+          >
+            Button
+          </button>
+        `);
       });
 
       it("should render outlined red button element when outline variant is provided", () => {
@@ -197,48 +197,48 @@ describe("Button", () => {
         });
 
         expect(button).toMatchInlineSnapshot(`
-.c0 {
-  border-width: 0;
-  display: inline-block;
-  font-family: Circular-Book,Arial,Helvetica,sans-serif;
-  font-style: normal;
-  font-weight: 700;
-  -webkit-letter-spacing: 0.6px;
-  -moz-letter-spacing: 0.6px;
-  -ms-letter-spacing: 0.6px;
-  letter-spacing: 0.6px;
-  line-height: 1.5;
-  text-align: center;
-  -webkit-text-decoration: none !important;
-  text-decoration: none !important;
-  -webkit-transition: color 0.25s,background 0.25s,border 0.25s,box-shadow 0.25s;
-  transition: color 0.25s,background 0.25s,border 0.25s,box-shadow 0.25s;
-  background-color: transparent;
-  box-shadow: inset 0 0 0 1px #C00404;
-  color: #C00404;
-  cursor: pointer;
-  font-size: 0.75em;
-  opacity: 1;
-  padding: 12px 25px;
-  pointer-events: auto;
-  text-transform: uppercase;
-}
+          .c0 {
+            border-width: 0;
+            display: inline-block;
+            font-family: CircularStd,Arial,Helvetica,sans-serif;
+            font-style: normal;
+            font-weight: 700;
+            -webkit-letter-spacing: 0.6px;
+            -moz-letter-spacing: 0.6px;
+            -ms-letter-spacing: 0.6px;
+            letter-spacing: 0.6px;
+            line-height: 1.5;
+            text-align: center;
+            -webkit-text-decoration: none !important;
+            text-decoration: none !important;
+            -webkit-transition: color 0.25s,background 0.25s,border 0.25s,box-shadow 0.25s;
+            transition: color 0.25s,background 0.25s,border 0.25s,box-shadow 0.25s;
+            background-color: transparent;
+            box-shadow: inset 0 0 0 1px #C00404;
+            color: #C00404;
+            cursor: pointer;
+            font-size: 0.75em;
+            opacity: 1;
+            padding: 12px 25px;
+            pointer-events: auto;
+            text-transform: uppercase;
+          }
 
-.c0:hover,
-.c0:focus {
-  background-color: #C00404;
-  box-shadow: inset 0 0 0 1px #C00404;
-  color: #FFFFFF;
-}
+          .c0:hover,
+          .c0:focus {
+            background-color: #C00404;
+            box-shadow: inset 0 0 0 1px #C00404;
+            color: #FFFFFF;
+          }
 
-<button
-  class="c0"
-  color="red"
-  type="button"
->
-  Button
-</button>
-`);
+          <button
+            class="c0"
+            color="red"
+            type="button"
+          >
+            Button
+          </button>
+        `);
       });
 
       it("should render outlined button element of another color when color and outline variants are provided", () => {
@@ -247,48 +247,48 @@ describe("Button", () => {
         });
 
         expect(button).toMatchInlineSnapshot(`
-.c0 {
-  border-width: 0;
-  display: inline-block;
-  font-family: Circular-Book,Arial,Helvetica,sans-serif;
-  font-style: normal;
-  font-weight: 700;
-  -webkit-letter-spacing: 0.6px;
-  -moz-letter-spacing: 0.6px;
-  -ms-letter-spacing: 0.6px;
-  letter-spacing: 0.6px;
-  line-height: 1.5;
-  text-align: center;
-  -webkit-text-decoration: none !important;
-  text-decoration: none !important;
-  -webkit-transition: color 0.25s,background 0.25s,border 0.25s,box-shadow 0.25s;
-  transition: color 0.25s,background 0.25s,border 0.25s,box-shadow 0.25s;
-  background-color: transparent;
-  box-shadow: inset 0 0 0 1px #4E3629;
-  color: #4E3629;
-  cursor: pointer;
-  font-size: 0.75em;
-  opacity: 1;
-  padding: 12px 25px;
-  pointer-events: auto;
-  text-transform: uppercase;
-}
+          .c0 {
+            border-width: 0;
+            display: inline-block;
+            font-family: CircularStd,Arial,Helvetica,sans-serif;
+            font-style: normal;
+            font-weight: 700;
+            -webkit-letter-spacing: 0.6px;
+            -moz-letter-spacing: 0.6px;
+            -ms-letter-spacing: 0.6px;
+            letter-spacing: 0.6px;
+            line-height: 1.5;
+            text-align: center;
+            -webkit-text-decoration: none !important;
+            text-decoration: none !important;
+            -webkit-transition: color 0.25s,background 0.25s,border 0.25s,box-shadow 0.25s;
+            transition: color 0.25s,background 0.25s,border 0.25s,box-shadow 0.25s;
+            background-color: transparent;
+            box-shadow: inset 0 0 0 1px #4E3629;
+            color: #4E3629;
+            cursor: pointer;
+            font-size: 0.75em;
+            opacity: 1;
+            padding: 12px 25px;
+            pointer-events: auto;
+            text-transform: uppercase;
+          }
 
-.c0:hover,
-.c0:focus {
-  background-color: #4E3629;
-  box-shadow: inset 0 0 0 1px #4E3629;
-  color: #FFFFFF;
-}
+          .c0:hover,
+          .c0:focus {
+            background-color: #4E3629;
+            box-shadow: inset 0 0 0 1px #4E3629;
+            color: #FFFFFF;
+          }
 
-<button
-  class="c0"
-  color="brown"
-  type="button"
->
-  Button
-</button>
-`);
+          <button
+            class="c0"
+            color="brown"
+            type="button"
+          >
+            Button
+          </button>
+        `);
       });
 
       it("should render solid inverse red button element when inverse variant is provided", () => {
@@ -297,48 +297,48 @@ describe("Button", () => {
         });
 
         expect(button).toMatchInlineSnapshot(`
-.c0 {
-  border-width: 0;
-  display: inline-block;
-  font-family: Circular-Book,Arial,Helvetica,sans-serif;
-  font-style: normal;
-  font-weight: 700;
-  -webkit-letter-spacing: 0.6px;
-  -moz-letter-spacing: 0.6px;
-  -ms-letter-spacing: 0.6px;
-  letter-spacing: 0.6px;
-  line-height: 1.5;
-  text-align: center;
-  -webkit-text-decoration: none !important;
-  text-decoration: none !important;
-  -webkit-transition: color 0.25s,background 0.25s,border 0.25s,box-shadow 0.25s;
-  transition: color 0.25s,background 0.25s,border 0.25s,box-shadow 0.25s;
-  background-color: #FFFFFF;
-  box-shadow: inset 0 0 0 1px #FFFFFF;
-  color: #98A4AE;
-  cursor: pointer;
-  font-size: 0.75em;
-  opacity: 1;
-  padding: 12px 25px;
-  pointer-events: auto;
-  text-transform: uppercase;
-}
+          .c0 {
+            border-width: 0;
+            display: inline-block;
+            font-family: CircularStd,Arial,Helvetica,sans-serif;
+            font-style: normal;
+            font-weight: 700;
+            -webkit-letter-spacing: 0.6px;
+            -moz-letter-spacing: 0.6px;
+            -ms-letter-spacing: 0.6px;
+            letter-spacing: 0.6px;
+            line-height: 1.5;
+            text-align: center;
+            -webkit-text-decoration: none !important;
+            text-decoration: none !important;
+            -webkit-transition: color 0.25s,background 0.25s,border 0.25s,box-shadow 0.25s;
+            transition: color 0.25s,background 0.25s,border 0.25s,box-shadow 0.25s;
+            background-color: #FFFFFF;
+            box-shadow: inset 0 0 0 1px #FFFFFF;
+            color: #98A4AE;
+            cursor: pointer;
+            font-size: 0.75em;
+            opacity: 1;
+            padding: 12px 25px;
+            pointer-events: auto;
+            text-transform: uppercase;
+          }
 
-.c0:hover,
-.c0:focus {
-  background-color: #C00404;
-  box-shadow: inset 0 0 0 1px #FFFFFF;
-  color: #FFFFFF;
-}
+          .c0:hover,
+          .c0:focus {
+            background-color: #C00404;
+            box-shadow: inset 0 0 0 1px #FFFFFF;
+            color: #FFFFFF;
+          }
 
-<button
-  class="c0"
-  color="red"
-  type="button"
->
-  Button
-</button>
-`);
+          <button
+            class="c0"
+            color="red"
+            type="button"
+          >
+            Button
+          </button>
+        `);
       });
 
       it("should render solid inverse button element of another color when color and inverse variants are provided", () => {
@@ -347,48 +347,48 @@ describe("Button", () => {
         });
 
         expect(button).toMatchInlineSnapshot(`
-.c0 {
-  border-width: 0;
-  display: inline-block;
-  font-family: Circular-Book,Arial,Helvetica,sans-serif;
-  font-style: normal;
-  font-weight: 700;
-  -webkit-letter-spacing: 0.6px;
-  -moz-letter-spacing: 0.6px;
-  -ms-letter-spacing: 0.6px;
-  letter-spacing: 0.6px;
-  line-height: 1.5;
-  text-align: center;
-  -webkit-text-decoration: none !important;
-  text-decoration: none !important;
-  -webkit-transition: color 0.25s,background 0.25s,border 0.25s,box-shadow 0.25s;
-  transition: color 0.25s,background 0.25s,border 0.25s,box-shadow 0.25s;
-  background-color: #FFFFFF;
-  box-shadow: inset 0 0 0 1px #FFFFFF;
-  color: #98A4AE;
-  cursor: pointer;
-  font-size: 0.75em;
-  opacity: 1;
-  padding: 12px 25px;
-  pointer-events: auto;
-  text-transform: uppercase;
-}
+          .c0 {
+            border-width: 0;
+            display: inline-block;
+            font-family: CircularStd,Arial,Helvetica,sans-serif;
+            font-style: normal;
+            font-weight: 700;
+            -webkit-letter-spacing: 0.6px;
+            -moz-letter-spacing: 0.6px;
+            -ms-letter-spacing: 0.6px;
+            letter-spacing: 0.6px;
+            line-height: 1.5;
+            text-align: center;
+            -webkit-text-decoration: none !important;
+            text-decoration: none !important;
+            -webkit-transition: color 0.25s,background 0.25s,border 0.25s,box-shadow 0.25s;
+            transition: color 0.25s,background 0.25s,border 0.25s,box-shadow 0.25s;
+            background-color: #FFFFFF;
+            box-shadow: inset 0 0 0 1px #FFFFFF;
+            color: #98A4AE;
+            cursor: pointer;
+            font-size: 0.75em;
+            opacity: 1;
+            padding: 12px 25px;
+            pointer-events: auto;
+            text-transform: uppercase;
+          }
 
-.c0:hover,
-.c0:focus {
-  background-color: #98A4AE;
-  box-shadow: inset 0 0 0 1px #FFFFFF;
-  color: #FFFFFF;
-}
+          .c0:hover,
+          .c0:focus {
+            background-color: #98A4AE;
+            box-shadow: inset 0 0 0 1px #FFFFFF;
+            color: #FFFFFF;
+          }
 
-<button
-  class="c0"
-  color="gray"
-  type="button"
->
-  Button
-</button>
-`);
+          <button
+            class="c0"
+            color="gray"
+            type="button"
+          >
+            Button
+          </button>
+        `);
       });
 
       it("should render outlined inverse red button element when outline and inverse variants are provided", () => {
@@ -397,48 +397,48 @@ describe("Button", () => {
         });
 
         expect(button).toMatchInlineSnapshot(`
-.c0 {
-  border-width: 0;
-  display: inline-block;
-  font-family: Circular-Book,Arial,Helvetica,sans-serif;
-  font-style: normal;
-  font-weight: 700;
-  -webkit-letter-spacing: 0.6px;
-  -moz-letter-spacing: 0.6px;
-  -ms-letter-spacing: 0.6px;
-  letter-spacing: 0.6px;
-  line-height: 1.5;
-  text-align: center;
-  -webkit-text-decoration: none !important;
-  text-decoration: none !important;
-  -webkit-transition: color 0.25s,background 0.25s,border 0.25s,box-shadow 0.25s;
-  transition: color 0.25s,background 0.25s,border 0.25s,box-shadow 0.25s;
-  background-color: #C00404;
-  box-shadow: inset 0 0 0 1px #FFFFFF;
-  color: #FFFFFF;
-  cursor: pointer;
-  font-size: 0.75em;
-  opacity: 1;
-  padding: 12px 25px;
-  pointer-events: auto;
-  text-transform: uppercase;
-}
+          .c0 {
+            border-width: 0;
+            display: inline-block;
+            font-family: CircularStd,Arial,Helvetica,sans-serif;
+            font-style: normal;
+            font-weight: 700;
+            -webkit-letter-spacing: 0.6px;
+            -moz-letter-spacing: 0.6px;
+            -ms-letter-spacing: 0.6px;
+            letter-spacing: 0.6px;
+            line-height: 1.5;
+            text-align: center;
+            -webkit-text-decoration: none !important;
+            text-decoration: none !important;
+            -webkit-transition: color 0.25s,background 0.25s,border 0.25s,box-shadow 0.25s;
+            transition: color 0.25s,background 0.25s,border 0.25s,box-shadow 0.25s;
+            background-color: #C00404;
+            box-shadow: inset 0 0 0 1px #FFFFFF;
+            color: #FFFFFF;
+            cursor: pointer;
+            font-size: 0.75em;
+            opacity: 1;
+            padding: 12px 25px;
+            pointer-events: auto;
+            text-transform: uppercase;
+          }
 
-.c0:hover,
-.c0:focus {
-  background-color: #FFFFFF;
-  box-shadow: inset 0 0 0 1px #FFFFFF;
-  color: #98A4AE;
-}
+          .c0:hover,
+          .c0:focus {
+            background-color: #FFFFFF;
+            box-shadow: inset 0 0 0 1px #FFFFFF;
+            color: #98A4AE;
+          }
 
-<button
-  class="c0"
-  color="red"
-  type="button"
->
-  Button
-</button>
-`);
+          <button
+            class="c0"
+            color="red"
+            type="button"
+          >
+            Button
+          </button>
+        `);
       });
 
       it("should render outlined inverse button element of another color when color, outline and inverse variants are provided", () => {
@@ -452,48 +452,48 @@ describe("Button", () => {
         });
 
         expect(button).toMatchInlineSnapshot(`
-.c0 {
-  border-width: 0;
-  display: inline-block;
-  font-family: Circular-Book,Arial,Helvetica,sans-serif;
-  font-style: normal;
-  font-weight: 700;
-  -webkit-letter-spacing: 0.6px;
-  -moz-letter-spacing: 0.6px;
-  -ms-letter-spacing: 0.6px;
-  letter-spacing: 0.6px;
-  line-height: 1.5;
-  text-align: center;
-  -webkit-text-decoration: none !important;
-  text-decoration: none !important;
-  -webkit-transition: color 0.25s,background 0.25s,border 0.25s,box-shadow 0.25s;
-  transition: color 0.25s,background 0.25s,border 0.25s,box-shadow 0.25s;
-  background-color: #00B398;
-  box-shadow: inset 0 0 0 1px #FFFFFF;
-  color: #FFFFFF;
-  cursor: pointer;
-  font-size: 0.75em;
-  opacity: 1;
-  padding: 12px 25px;
-  pointer-events: auto;
-  text-transform: uppercase;
-}
+          .c0 {
+            border-width: 0;
+            display: inline-block;
+            font-family: CircularStd,Arial,Helvetica,sans-serif;
+            font-style: normal;
+            font-weight: 700;
+            -webkit-letter-spacing: 0.6px;
+            -moz-letter-spacing: 0.6px;
+            -ms-letter-spacing: 0.6px;
+            letter-spacing: 0.6px;
+            line-height: 1.5;
+            text-align: center;
+            -webkit-text-decoration: none !important;
+            text-decoration: none !important;
+            -webkit-transition: color 0.25s,background 0.25s,border 0.25s,box-shadow 0.25s;
+            transition: color 0.25s,background 0.25s,border 0.25s,box-shadow 0.25s;
+            background-color: #00B398;
+            box-shadow: inset 0 0 0 1px #FFFFFF;
+            color: #FFFFFF;
+            cursor: pointer;
+            font-size: 0.75em;
+            opacity: 1;
+            padding: 12px 25px;
+            pointer-events: auto;
+            text-transform: uppercase;
+          }
 
-.c0:hover,
-.c0:focus {
-  background-color: #FFFFFF;
-  box-shadow: inset 0 0 0 1px #FFFFFF;
-  color: #98A4AE;
-}
+          .c0:hover,
+          .c0:focus {
+            background-color: #FFFFFF;
+            box-shadow: inset 0 0 0 1px #FFFFFF;
+            color: #98A4AE;
+          }
 
-<button
-  class="c0"
-  color="emerald"
-  type="button"
->
-  Button
-</button>
-`);
+          <button
+            class="c0"
+            color="emerald"
+            type="button"
+          >
+            Button
+          </button>
+        `);
       });
 
       it("should render disabled button element when variant is provided", () => {
@@ -514,83 +514,83 @@ describe("Button", () => {
         });
 
         expect(button).toMatchInlineSnapshot(`
-.c0 {
-  border-width: 0;
-  display: inline-block;
-  font-family: Circular-Book,Arial,Helvetica,sans-serif;
-  font-style: normal;
-  font-weight: 700;
-  -webkit-letter-spacing: 0.6px;
-  -moz-letter-spacing: 0.6px;
-  -ms-letter-spacing: 0.6px;
-  letter-spacing: 0.6px;
-  line-height: 1.5;
-  text-align: center;
-  -webkit-text-decoration: none !important;
-  text-decoration: none !important;
-  -webkit-transition: color 0.25s,background 0.25s,border 0.25s,box-shadow 0.25s;
-  transition: color 0.25s,background 0.25s,border 0.25s,box-shadow 0.25s;
-  background-color: #C00404;
-  box-shadow: inset 0 0 0 1px #C00404;
-  color: #FFFFFF;
-  cursor: pointer;
-  font-size: 0.75em;
-  opacity: 1;
-  padding: 12px 25px 12px 20px;
-  pointer-events: auto;
-  text-transform: uppercase;
-}
+          .c0 {
+            border-width: 0;
+            display: inline-block;
+            font-family: CircularStd,Arial,Helvetica,sans-serif;
+            font-style: normal;
+            font-weight: 700;
+            -webkit-letter-spacing: 0.6px;
+            -moz-letter-spacing: 0.6px;
+            -ms-letter-spacing: 0.6px;
+            letter-spacing: 0.6px;
+            line-height: 1.5;
+            text-align: center;
+            -webkit-text-decoration: none !important;
+            text-decoration: none !important;
+            -webkit-transition: color 0.25s,background 0.25s,border 0.25s,box-shadow 0.25s;
+            transition: color 0.25s,background 0.25s,border 0.25s,box-shadow 0.25s;
+            background-color: #C00404;
+            box-shadow: inset 0 0 0 1px #C00404;
+            color: #FFFFFF;
+            cursor: pointer;
+            font-size: 0.75em;
+            opacity: 1;
+            padding: 12px 25px 12px 20px;
+            pointer-events: auto;
+            text-transform: uppercase;
+          }
 
-.c0::after {
-  border-color: transparent transparent transparent transparent;
-  border-style: solid;
-  border-width: 3.5px 0 3.5px 5px;
-  content: "";
-  display: inline-block;
-  height: 0;
-  position: relative;
-  right: -8px;
-  top: -1px;
-  -webkit-transition: border 0.25s,color 0.25s;
-  transition: border 0.25s,color 0.25s;
-  width: 0;
-  -ms-transform: translate3d(0,0,0);
-  -webkit-transform: translate3d(0,0,0);
-  -webkit-transform: translate3d(0,0,0);
-  -ms-transform: translate3d(0,0,0);
-  transform: translate3d(0,0,0);
-  -webkit-transition: all 0.25s;
-  transition: all 0.25s;
-  border-color: transparent transparent transparent #FFFFFF;
-}
+          .c0::after {
+            border-color: transparent transparent transparent transparent;
+            border-style: solid;
+            border-width: 3.5px 0 3.5px 5px;
+            content: "";
+            display: inline-block;
+            height: 0;
+            position: relative;
+            right: -8px;
+            top: -1px;
+            -webkit-transition: border 0.25s,color 0.25s;
+            transition: border 0.25s,color 0.25s;
+            width: 0;
+            -ms-transform: translate3d(0,0,0);
+            -webkit-transform: translate3d(0,0,0);
+            -webkit-transform: translate3d(0,0,0);
+            -ms-transform: translate3d(0,0,0);
+            transform: translate3d(0,0,0);
+            -webkit-transition: all 0.25s;
+            transition: all 0.25s;
+            border-color: transparent transparent transparent #FFFFFF;
+          }
 
-.c0:hover,
-.c0:focus {
-  background-color: #8e0303;
-  box-shadow: inset 0 0 0 1px #8e0303;
-  color: #FFFFFF;
-}
+          .c0:hover,
+          .c0:focus {
+            background-color: #8e0303;
+            box-shadow: inset 0 0 0 1px #8e0303;
+            color: #FFFFFF;
+          }
 
-.c0:hover::after,
-.c0:focus::after {
-  -ms-transform: translate3d(4px,0,0);
-  -webkit-transform: translate3d(4px,0,0);
-  -webkit-transform: translate3d(4px,0,0);
-  -ms-transform: translate3d(4px,0,0);
-  transform: translate3d(4px,0,0);
-  -webkit-transition: all 0.25s;
-  transition: all 0.25s;
-  border-color: transparent transparent transparent #FFFFFF;
-}
+          .c0:hover::after,
+          .c0:focus::after {
+            -ms-transform: translate3d(4px,0,0);
+            -webkit-transform: translate3d(4px,0,0);
+            -webkit-transform: translate3d(4px,0,0);
+            -ms-transform: translate3d(4px,0,0);
+            transform: translate3d(4px,0,0);
+            -webkit-transition: all 0.25s;
+            transition: all 0.25s;
+            border-color: transparent transparent transparent #FFFFFF;
+          }
 
-<a
-  class="c0"
-  color="red"
-  href="https://www.brown.edu"
->
-  Button
-</a>
-`);
+          <a
+            class="c0"
+            color="red"
+            href="https://www.brown.edu"
+          >
+            Button
+          </a>
+        `);
       });
 
       it("should render solid anchor element of another color when color variant is provided", () => {
@@ -599,83 +599,83 @@ describe("Button", () => {
         });
 
         expect(button).toMatchInlineSnapshot(`
-.c0 {
-  border-width: 0;
-  display: inline-block;
-  font-family: Circular-Book,Arial,Helvetica,sans-serif;
-  font-style: normal;
-  font-weight: 700;
-  -webkit-letter-spacing: 0.6px;
-  -moz-letter-spacing: 0.6px;
-  -ms-letter-spacing: 0.6px;
-  letter-spacing: 0.6px;
-  line-height: 1.5;
-  text-align: center;
-  -webkit-text-decoration: none !important;
-  text-decoration: none !important;
-  -webkit-transition: color 0.25s,background 0.25s,border 0.25s,box-shadow 0.25s;
-  transition: color 0.25s,background 0.25s,border 0.25s,box-shadow 0.25s;
-  background-color: #003C71;
-  box-shadow: inset 0 0 0 1px #003C71;
-  color: #FFFFFF;
-  cursor: pointer;
-  font-size: 0.75em;
-  opacity: 1;
-  padding: 12px 25px 12px 20px;
-  pointer-events: auto;
-  text-transform: uppercase;
-}
+          .c0 {
+            border-width: 0;
+            display: inline-block;
+            font-family: CircularStd,Arial,Helvetica,sans-serif;
+            font-style: normal;
+            font-weight: 700;
+            -webkit-letter-spacing: 0.6px;
+            -moz-letter-spacing: 0.6px;
+            -ms-letter-spacing: 0.6px;
+            letter-spacing: 0.6px;
+            line-height: 1.5;
+            text-align: center;
+            -webkit-text-decoration: none !important;
+            text-decoration: none !important;
+            -webkit-transition: color 0.25s,background 0.25s,border 0.25s,box-shadow 0.25s;
+            transition: color 0.25s,background 0.25s,border 0.25s,box-shadow 0.25s;
+            background-color: #003C71;
+            box-shadow: inset 0 0 0 1px #003C71;
+            color: #FFFFFF;
+            cursor: pointer;
+            font-size: 0.75em;
+            opacity: 1;
+            padding: 12px 25px 12px 20px;
+            pointer-events: auto;
+            text-transform: uppercase;
+          }
 
-.c0::after {
-  border-color: transparent transparent transparent transparent;
-  border-style: solid;
-  border-width: 3.5px 0 3.5px 5px;
-  content: "";
-  display: inline-block;
-  height: 0;
-  position: relative;
-  right: -8px;
-  top: -1px;
-  -webkit-transition: border 0.25s,color 0.25s;
-  transition: border 0.25s,color 0.25s;
-  width: 0;
-  -ms-transform: translate3d(0,0,0);
-  -webkit-transform: translate3d(0,0,0);
-  -webkit-transform: translate3d(0,0,0);
-  -ms-transform: translate3d(0,0,0);
-  transform: translate3d(0,0,0);
-  -webkit-transition: all 0.25s;
-  transition: all 0.25s;
-  border-color: transparent transparent transparent #FFFFFF;
-}
+          .c0::after {
+            border-color: transparent transparent transparent transparent;
+            border-style: solid;
+            border-width: 3.5px 0 3.5px 5px;
+            content: "";
+            display: inline-block;
+            height: 0;
+            position: relative;
+            right: -8px;
+            top: -1px;
+            -webkit-transition: border 0.25s,color 0.25s;
+            transition: border 0.25s,color 0.25s;
+            width: 0;
+            -ms-transform: translate3d(0,0,0);
+            -webkit-transform: translate3d(0,0,0);
+            -webkit-transform: translate3d(0,0,0);
+            -ms-transform: translate3d(0,0,0);
+            transform: translate3d(0,0,0);
+            -webkit-transition: all 0.25s;
+            transition: all 0.25s;
+            border-color: transparent transparent transparent #FFFFFF;
+          }
 
-.c0:hover,
-.c0:focus {
-  background-color: #00213e;
-  box-shadow: inset 0 0 0 1px #00213e;
-  color: #FFFFFF;
-}
+          .c0:hover,
+          .c0:focus {
+            background-color: #00213e;
+            box-shadow: inset 0 0 0 1px #00213e;
+            color: #FFFFFF;
+          }
 
-.c0:hover::after,
-.c0:focus::after {
-  -ms-transform: translate3d(4px,0,0);
-  -webkit-transform: translate3d(4px,0,0);
-  -webkit-transform: translate3d(4px,0,0);
-  -ms-transform: translate3d(4px,0,0);
-  transform: translate3d(4px,0,0);
-  -webkit-transition: all 0.25s;
-  transition: all 0.25s;
-  border-color: transparent transparent transparent #FFFFFF;
-}
+          .c0:hover::after,
+          .c0:focus::after {
+            -ms-transform: translate3d(4px,0,0);
+            -webkit-transform: translate3d(4px,0,0);
+            -webkit-transform: translate3d(4px,0,0);
+            -ms-transform: translate3d(4px,0,0);
+            transform: translate3d(4px,0,0);
+            -webkit-transition: all 0.25s;
+            transition: all 0.25s;
+            border-color: transparent transparent transparent #FFFFFF;
+          }
 
-<a
-  class="c0"
-  color="navy"
-  href="https://www.brown.edu"
->
-  Button
-</a>
-`);
+          <a
+            class="c0"
+            color="navy"
+            href="https://www.brown.edu"
+          >
+            Button
+          </a>
+        `);
       });
 
       it("should render outlined red anchor element when outline variant is provided", () => {
@@ -684,83 +684,83 @@ describe("Button", () => {
         });
 
         expect(button).toMatchInlineSnapshot(`
-.c0 {
-  border-width: 0;
-  display: inline-block;
-  font-family: Circular-Book,Arial,Helvetica,sans-serif;
-  font-style: normal;
-  font-weight: 700;
-  -webkit-letter-spacing: 0.6px;
-  -moz-letter-spacing: 0.6px;
-  -ms-letter-spacing: 0.6px;
-  letter-spacing: 0.6px;
-  line-height: 1.5;
-  text-align: center;
-  -webkit-text-decoration: none !important;
-  text-decoration: none !important;
-  -webkit-transition: color 0.25s,background 0.25s,border 0.25s,box-shadow 0.25s;
-  transition: color 0.25s,background 0.25s,border 0.25s,box-shadow 0.25s;
-  background-color: transparent;
-  box-shadow: inset 0 0 0 1px #C00404;
-  color: #C00404;
-  cursor: pointer;
-  font-size: 0.75em;
-  opacity: 1;
-  padding: 12px 25px 12px 20px;
-  pointer-events: auto;
-  text-transform: uppercase;
-}
+          .c0 {
+            border-width: 0;
+            display: inline-block;
+            font-family: CircularStd,Arial,Helvetica,sans-serif;
+            font-style: normal;
+            font-weight: 700;
+            -webkit-letter-spacing: 0.6px;
+            -moz-letter-spacing: 0.6px;
+            -ms-letter-spacing: 0.6px;
+            letter-spacing: 0.6px;
+            line-height: 1.5;
+            text-align: center;
+            -webkit-text-decoration: none !important;
+            text-decoration: none !important;
+            -webkit-transition: color 0.25s,background 0.25s,border 0.25s,box-shadow 0.25s;
+            transition: color 0.25s,background 0.25s,border 0.25s,box-shadow 0.25s;
+            background-color: transparent;
+            box-shadow: inset 0 0 0 1px #C00404;
+            color: #C00404;
+            cursor: pointer;
+            font-size: 0.75em;
+            opacity: 1;
+            padding: 12px 25px 12px 20px;
+            pointer-events: auto;
+            text-transform: uppercase;
+          }
 
-.c0::after {
-  border-color: transparent transparent transparent transparent;
-  border-style: solid;
-  border-width: 3.5px 0 3.5px 5px;
-  content: "";
-  display: inline-block;
-  height: 0;
-  position: relative;
-  right: -8px;
-  top: -1px;
-  -webkit-transition: border 0.25s,color 0.25s;
-  transition: border 0.25s,color 0.25s;
-  width: 0;
-  -ms-transform: translate3d(0,0,0);
-  -webkit-transform: translate3d(0,0,0);
-  -webkit-transform: translate3d(0,0,0);
-  -ms-transform: translate3d(0,0,0);
-  transform: translate3d(0,0,0);
-  -webkit-transition: all 0.25s;
-  transition: all 0.25s;
-  border-color: transparent transparent transparent #C00404;
-}
+          .c0::after {
+            border-color: transparent transparent transparent transparent;
+            border-style: solid;
+            border-width: 3.5px 0 3.5px 5px;
+            content: "";
+            display: inline-block;
+            height: 0;
+            position: relative;
+            right: -8px;
+            top: -1px;
+            -webkit-transition: border 0.25s,color 0.25s;
+            transition: border 0.25s,color 0.25s;
+            width: 0;
+            -ms-transform: translate3d(0,0,0);
+            -webkit-transform: translate3d(0,0,0);
+            -webkit-transform: translate3d(0,0,0);
+            -ms-transform: translate3d(0,0,0);
+            transform: translate3d(0,0,0);
+            -webkit-transition: all 0.25s;
+            transition: all 0.25s;
+            border-color: transparent transparent transparent #C00404;
+          }
 
-.c0:hover,
-.c0:focus {
-  background-color: #C00404;
-  box-shadow: inset 0 0 0 1px #C00404;
-  color: #FFFFFF;
-}
+          .c0:hover,
+          .c0:focus {
+            background-color: #C00404;
+            box-shadow: inset 0 0 0 1px #C00404;
+            color: #FFFFFF;
+          }
 
-.c0:hover::after,
-.c0:focus::after {
-  -ms-transform: translate3d(4px,0,0);
-  -webkit-transform: translate3d(4px,0,0);
-  -webkit-transform: translate3d(4px,0,0);
-  -ms-transform: translate3d(4px,0,0);
-  transform: translate3d(4px,0,0);
-  -webkit-transition: all 0.25s;
-  transition: all 0.25s;
-  border-color: transparent transparent transparent #FFFFFF;
-}
+          .c0:hover::after,
+          .c0:focus::after {
+            -ms-transform: translate3d(4px,0,0);
+            -webkit-transform: translate3d(4px,0,0);
+            -webkit-transform: translate3d(4px,0,0);
+            -ms-transform: translate3d(4px,0,0);
+            transform: translate3d(4px,0,0);
+            -webkit-transition: all 0.25s;
+            transition: all 0.25s;
+            border-color: transparent transparent transparent #FFFFFF;
+          }
 
-<a
-  class="c0"
-  color="red"
-  href="https://www.brown.edu"
->
-  Button
-</a>
-`);
+          <a
+            class="c0"
+            color="red"
+            href="https://www.brown.edu"
+          >
+            Button
+          </a>
+        `);
       });
 
       it("should render outlined anchor element of another color when color and outline variants are provided", () => {
@@ -773,83 +773,83 @@ describe("Button", () => {
         });
 
         expect(button).toMatchInlineSnapshot(`
-.c0 {
-  border-width: 0;
-  display: inline-block;
-  font-family: Circular-Book,Arial,Helvetica,sans-serif;
-  font-style: normal;
-  font-weight: 700;
-  -webkit-letter-spacing: 0.6px;
-  -moz-letter-spacing: 0.6px;
-  -ms-letter-spacing: 0.6px;
-  letter-spacing: 0.6px;
-  line-height: 1.5;
-  text-align: center;
-  -webkit-text-decoration: none !important;
-  text-decoration: none !important;
-  -webkit-transition: color 0.25s,background 0.25s,border 0.25s,box-shadow 0.25s;
-  transition: color 0.25s,background 0.25s,border 0.25s,box-shadow 0.25s;
-  background-color: transparent;
-  box-shadow: inset 0 0 0 1px #59CBE8;
-  color: #59CBE8;
-  cursor: pointer;
-  font-size: 0.75em;
-  opacity: 1;
-  padding: 12px 25px 12px 20px;
-  pointer-events: auto;
-  text-transform: uppercase;
-}
+          .c0 {
+            border-width: 0;
+            display: inline-block;
+            font-family: CircularStd,Arial,Helvetica,sans-serif;
+            font-style: normal;
+            font-weight: 700;
+            -webkit-letter-spacing: 0.6px;
+            -moz-letter-spacing: 0.6px;
+            -ms-letter-spacing: 0.6px;
+            letter-spacing: 0.6px;
+            line-height: 1.5;
+            text-align: center;
+            -webkit-text-decoration: none !important;
+            text-decoration: none !important;
+            -webkit-transition: color 0.25s,background 0.25s,border 0.25s,box-shadow 0.25s;
+            transition: color 0.25s,background 0.25s,border 0.25s,box-shadow 0.25s;
+            background-color: transparent;
+            box-shadow: inset 0 0 0 1px #59CBE8;
+            color: #59CBE8;
+            cursor: pointer;
+            font-size: 0.75em;
+            opacity: 1;
+            padding: 12px 25px 12px 20px;
+            pointer-events: auto;
+            text-transform: uppercase;
+          }
 
-.c0::after {
-  border-color: transparent transparent transparent transparent;
-  border-style: solid;
-  border-width: 3.5px 0 3.5px 5px;
-  content: "";
-  display: inline-block;
-  height: 0;
-  position: relative;
-  right: -8px;
-  top: -1px;
-  -webkit-transition: border 0.25s,color 0.25s;
-  transition: border 0.25s,color 0.25s;
-  width: 0;
-  -ms-transform: translate3d(0,0,0);
-  -webkit-transform: translate3d(0,0,0);
-  -webkit-transform: translate3d(0,0,0);
-  -ms-transform: translate3d(0,0,0);
-  transform: translate3d(0,0,0);
-  -webkit-transition: all 0.25s;
-  transition: all 0.25s;
-  border-color: transparent transparent transparent #59CBE8;
-}
+          .c0::after {
+            border-color: transparent transparent transparent transparent;
+            border-style: solid;
+            border-width: 3.5px 0 3.5px 5px;
+            content: "";
+            display: inline-block;
+            height: 0;
+            position: relative;
+            right: -8px;
+            top: -1px;
+            -webkit-transition: border 0.25s,color 0.25s;
+            transition: border 0.25s,color 0.25s;
+            width: 0;
+            -ms-transform: translate3d(0,0,0);
+            -webkit-transform: translate3d(0,0,0);
+            -webkit-transform: translate3d(0,0,0);
+            -ms-transform: translate3d(0,0,0);
+            transform: translate3d(0,0,0);
+            -webkit-transition: all 0.25s;
+            transition: all 0.25s;
+            border-color: transparent transparent transparent #59CBE8;
+          }
 
-.c0:hover,
-.c0:focus {
-  background-color: #59CBE8;
-  box-shadow: inset 0 0 0 1px #59CBE8;
-  color: #FFFFFF;
-}
+          .c0:hover,
+          .c0:focus {
+            background-color: #59CBE8;
+            box-shadow: inset 0 0 0 1px #59CBE8;
+            color: #FFFFFF;
+          }
 
-.c0:hover::after,
-.c0:focus::after {
-  -ms-transform: translate3d(4px,0,0);
-  -webkit-transform: translate3d(4px,0,0);
-  -webkit-transform: translate3d(4px,0,0);
-  -ms-transform: translate3d(4px,0,0);
-  transform: translate3d(4px,0,0);
-  -webkit-transition: all 0.25s;
-  transition: all 0.25s;
-  border-color: transparent transparent transparent #FFFFFF;
-}
+          .c0:hover::after,
+          .c0:focus::after {
+            -ms-transform: translate3d(4px,0,0);
+            -webkit-transform: translate3d(4px,0,0);
+            -webkit-transform: translate3d(4px,0,0);
+            -ms-transform: translate3d(4px,0,0);
+            transform: translate3d(4px,0,0);
+            -webkit-transition: all 0.25s;
+            transition: all 0.25s;
+            border-color: transparent transparent transparent #FFFFFF;
+          }
 
-<a
-  class="c0"
-  color="skyBlue"
-  href="https://www.brown.edu"
->
-  Button
-</a>
-`);
+          <a
+            class="c0"
+            color="skyBlue"
+            href="https://www.brown.edu"
+          >
+            Button
+          </a>
+        `);
       });
 
       it("should render solid inverse red anchor element when inverse variant is provided", () => {
@@ -858,83 +858,83 @@ describe("Button", () => {
         });
 
         expect(button).toMatchInlineSnapshot(`
-.c0 {
-  border-width: 0;
-  display: inline-block;
-  font-family: Circular-Book,Arial,Helvetica,sans-serif;
-  font-style: normal;
-  font-weight: 700;
-  -webkit-letter-spacing: 0.6px;
-  -moz-letter-spacing: 0.6px;
-  -ms-letter-spacing: 0.6px;
-  letter-spacing: 0.6px;
-  line-height: 1.5;
-  text-align: center;
-  -webkit-text-decoration: none !important;
-  text-decoration: none !important;
-  -webkit-transition: color 0.25s,background 0.25s,border 0.25s,box-shadow 0.25s;
-  transition: color 0.25s,background 0.25s,border 0.25s,box-shadow 0.25s;
-  background-color: #FFFFFF;
-  box-shadow: inset 0 0 0 1px #FFFFFF;
-  color: #98A4AE;
-  cursor: pointer;
-  font-size: 0.75em;
-  opacity: 1;
-  padding: 12px 25px 12px 20px;
-  pointer-events: auto;
-  text-transform: uppercase;
-}
+          .c0 {
+            border-width: 0;
+            display: inline-block;
+            font-family: CircularStd,Arial,Helvetica,sans-serif;
+            font-style: normal;
+            font-weight: 700;
+            -webkit-letter-spacing: 0.6px;
+            -moz-letter-spacing: 0.6px;
+            -ms-letter-spacing: 0.6px;
+            letter-spacing: 0.6px;
+            line-height: 1.5;
+            text-align: center;
+            -webkit-text-decoration: none !important;
+            text-decoration: none !important;
+            -webkit-transition: color 0.25s,background 0.25s,border 0.25s,box-shadow 0.25s;
+            transition: color 0.25s,background 0.25s,border 0.25s,box-shadow 0.25s;
+            background-color: #FFFFFF;
+            box-shadow: inset 0 0 0 1px #FFFFFF;
+            color: #98A4AE;
+            cursor: pointer;
+            font-size: 0.75em;
+            opacity: 1;
+            padding: 12px 25px 12px 20px;
+            pointer-events: auto;
+            text-transform: uppercase;
+          }
 
-.c0::after {
-  border-color: transparent transparent transparent transparent;
-  border-style: solid;
-  border-width: 3.5px 0 3.5px 5px;
-  content: "";
-  display: inline-block;
-  height: 0;
-  position: relative;
-  right: -8px;
-  top: -1px;
-  -webkit-transition: border 0.25s,color 0.25s;
-  transition: border 0.25s,color 0.25s;
-  width: 0;
-  -ms-transform: translate3d(0,0,0);
-  -webkit-transform: translate3d(0,0,0);
-  -webkit-transform: translate3d(0,0,0);
-  -ms-transform: translate3d(0,0,0);
-  transform: translate3d(0,0,0);
-  -webkit-transition: all 0.25s;
-  transition: all 0.25s;
-  border-color: transparent transparent transparent #98A4AE;
-}
+          .c0::after {
+            border-color: transparent transparent transparent transparent;
+            border-style: solid;
+            border-width: 3.5px 0 3.5px 5px;
+            content: "";
+            display: inline-block;
+            height: 0;
+            position: relative;
+            right: -8px;
+            top: -1px;
+            -webkit-transition: border 0.25s,color 0.25s;
+            transition: border 0.25s,color 0.25s;
+            width: 0;
+            -ms-transform: translate3d(0,0,0);
+            -webkit-transform: translate3d(0,0,0);
+            -webkit-transform: translate3d(0,0,0);
+            -ms-transform: translate3d(0,0,0);
+            transform: translate3d(0,0,0);
+            -webkit-transition: all 0.25s;
+            transition: all 0.25s;
+            border-color: transparent transparent transparent #98A4AE;
+          }
 
-.c0:hover,
-.c0:focus {
-  background-color: #C00404;
-  box-shadow: inset 0 0 0 1px #FFFFFF;
-  color: #FFFFFF;
-}
+          .c0:hover,
+          .c0:focus {
+            background-color: #C00404;
+            box-shadow: inset 0 0 0 1px #FFFFFF;
+            color: #FFFFFF;
+          }
 
-.c0:hover::after,
-.c0:focus::after {
-  -ms-transform: translate3d(4px,0,0);
-  -webkit-transform: translate3d(4px,0,0);
-  -webkit-transform: translate3d(4px,0,0);
-  -ms-transform: translate3d(4px,0,0);
-  transform: translate3d(4px,0,0);
-  -webkit-transition: all 0.25s;
-  transition: all 0.25s;
-  border-color: transparent transparent transparent #FFFFFF;
-}
+          .c0:hover::after,
+          .c0:focus::after {
+            -ms-transform: translate3d(4px,0,0);
+            -webkit-transform: translate3d(4px,0,0);
+            -webkit-transform: translate3d(4px,0,0);
+            -ms-transform: translate3d(4px,0,0);
+            transform: translate3d(4px,0,0);
+            -webkit-transition: all 0.25s;
+            transition: all 0.25s;
+            border-color: transparent transparent transparent #FFFFFF;
+          }
 
-<a
-  class="c0"
-  color="red"
-  href="https://www.brown.edu"
->
-  Button
-</a>
-`);
+          <a
+            class="c0"
+            color="red"
+            href="https://www.brown.edu"
+          >
+            Button
+          </a>
+        `);
       });
 
       it("should render solid inverse anchor element of another color when color and inverse variants are provided", () => {
@@ -947,83 +947,83 @@ describe("Button", () => {
         });
 
         expect(button).toMatchInlineSnapshot(`
-.c0 {
-  border-width: 0;
-  display: inline-block;
-  font-family: Circular-Book,Arial,Helvetica,sans-serif;
-  font-style: normal;
-  font-weight: 700;
-  -webkit-letter-spacing: 0.6px;
-  -moz-letter-spacing: 0.6px;
-  -ms-letter-spacing: 0.6px;
-  letter-spacing: 0.6px;
-  line-height: 1.5;
-  text-align: center;
-  -webkit-text-decoration: none !important;
-  text-decoration: none !important;
-  -webkit-transition: color 0.25s,background 0.25s,border 0.25s,box-shadow 0.25s;
-  transition: color 0.25s,background 0.25s,border 0.25s,box-shadow 0.25s;
-  background-color: #FFFFFF;
-  box-shadow: inset 0 0 0 1px #FFFFFF;
-  color: #98A4AE;
-  cursor: pointer;
-  font-size: 0.75em;
-  opacity: 1;
-  padding: 12px 25px 12px 20px;
-  pointer-events: auto;
-  text-transform: uppercase;
-}
+          .c0 {
+            border-width: 0;
+            display: inline-block;
+            font-family: CircularStd,Arial,Helvetica,sans-serif;
+            font-style: normal;
+            font-weight: 700;
+            -webkit-letter-spacing: 0.6px;
+            -moz-letter-spacing: 0.6px;
+            -ms-letter-spacing: 0.6px;
+            letter-spacing: 0.6px;
+            line-height: 1.5;
+            text-align: center;
+            -webkit-text-decoration: none !important;
+            text-decoration: none !important;
+            -webkit-transition: color 0.25s,background 0.25s,border 0.25s,box-shadow 0.25s;
+            transition: color 0.25s,background 0.25s,border 0.25s,box-shadow 0.25s;
+            background-color: #FFFFFF;
+            box-shadow: inset 0 0 0 1px #FFFFFF;
+            color: #98A4AE;
+            cursor: pointer;
+            font-size: 0.75em;
+            opacity: 1;
+            padding: 12px 25px 12px 20px;
+            pointer-events: auto;
+            text-transform: uppercase;
+          }
 
-.c0::after {
-  border-color: transparent transparent transparent transparent;
-  border-style: solid;
-  border-width: 3.5px 0 3.5px 5px;
-  content: "";
-  display: inline-block;
-  height: 0;
-  position: relative;
-  right: -8px;
-  top: -1px;
-  -webkit-transition: border 0.25s,color 0.25s;
-  transition: border 0.25s,color 0.25s;
-  width: 0;
-  -ms-transform: translate3d(0,0,0);
-  -webkit-transform: translate3d(0,0,0);
-  -webkit-transform: translate3d(0,0,0);
-  -ms-transform: translate3d(0,0,0);
-  transform: translate3d(0,0,0);
-  -webkit-transition: all 0.25s;
-  transition: all 0.25s;
-  border-color: transparent transparent transparent #98A4AE;
-}
+          .c0::after {
+            border-color: transparent transparent transparent transparent;
+            border-style: solid;
+            border-width: 3.5px 0 3.5px 5px;
+            content: "";
+            display: inline-block;
+            height: 0;
+            position: relative;
+            right: -8px;
+            top: -1px;
+            -webkit-transition: border 0.25s,color 0.25s;
+            transition: border 0.25s,color 0.25s;
+            width: 0;
+            -ms-transform: translate3d(0,0,0);
+            -webkit-transform: translate3d(0,0,0);
+            -webkit-transform: translate3d(0,0,0);
+            -ms-transform: translate3d(0,0,0);
+            transform: translate3d(0,0,0);
+            -webkit-transition: all 0.25s;
+            transition: all 0.25s;
+            border-color: transparent transparent transparent #98A4AE;
+          }
 
-.c0:hover,
-.c0:focus {
-  background-color: #00B398;
-  box-shadow: inset 0 0 0 1px #FFFFFF;
-  color: #FFFFFF;
-}
+          .c0:hover,
+          .c0:focus {
+            background-color: #00B398;
+            box-shadow: inset 0 0 0 1px #FFFFFF;
+            color: #FFFFFF;
+          }
 
-.c0:hover::after,
-.c0:focus::after {
-  -ms-transform: translate3d(4px,0,0);
-  -webkit-transform: translate3d(4px,0,0);
-  -webkit-transform: translate3d(4px,0,0);
-  -ms-transform: translate3d(4px,0,0);
-  transform: translate3d(4px,0,0);
-  -webkit-transition: all 0.25s;
-  transition: all 0.25s;
-  border-color: transparent transparent transparent #FFFFFF;
-}
+          .c0:hover::after,
+          .c0:focus::after {
+            -ms-transform: translate3d(4px,0,0);
+            -webkit-transform: translate3d(4px,0,0);
+            -webkit-transform: translate3d(4px,0,0);
+            -ms-transform: translate3d(4px,0,0);
+            transform: translate3d(4px,0,0);
+            -webkit-transition: all 0.25s;
+            transition: all 0.25s;
+            border-color: transparent transparent transparent #FFFFFF;
+          }
 
-<a
-  class="c0"
-  color="emerald"
-  href="https://www.brown.edu"
->
-  Button
-</a>
-`);
+          <a
+            class="c0"
+            color="emerald"
+            href="https://www.brown.edu"
+          >
+            Button
+          </a>
+        `);
       });
 
       it("should render outlined inverse red anchor element when outline and inverse variants are provided", () => {
@@ -1032,83 +1032,83 @@ describe("Button", () => {
         });
 
         expect(button).toMatchInlineSnapshot(`
-.c0 {
-  border-width: 0;
-  display: inline-block;
-  font-family: Circular-Book,Arial,Helvetica,sans-serif;
-  font-style: normal;
-  font-weight: 700;
-  -webkit-letter-spacing: 0.6px;
-  -moz-letter-spacing: 0.6px;
-  -ms-letter-spacing: 0.6px;
-  letter-spacing: 0.6px;
-  line-height: 1.5;
-  text-align: center;
-  -webkit-text-decoration: none !important;
-  text-decoration: none !important;
-  -webkit-transition: color 0.25s,background 0.25s,border 0.25s,box-shadow 0.25s;
-  transition: color 0.25s,background 0.25s,border 0.25s,box-shadow 0.25s;
-  background-color: #C00404;
-  box-shadow: inset 0 0 0 1px #FFFFFF;
-  color: #FFFFFF;
-  cursor: pointer;
-  font-size: 0.75em;
-  opacity: 1;
-  padding: 12px 25px 12px 20px;
-  pointer-events: auto;
-  text-transform: uppercase;
-}
+          .c0 {
+            border-width: 0;
+            display: inline-block;
+            font-family: CircularStd,Arial,Helvetica,sans-serif;
+            font-style: normal;
+            font-weight: 700;
+            -webkit-letter-spacing: 0.6px;
+            -moz-letter-spacing: 0.6px;
+            -ms-letter-spacing: 0.6px;
+            letter-spacing: 0.6px;
+            line-height: 1.5;
+            text-align: center;
+            -webkit-text-decoration: none !important;
+            text-decoration: none !important;
+            -webkit-transition: color 0.25s,background 0.25s,border 0.25s,box-shadow 0.25s;
+            transition: color 0.25s,background 0.25s,border 0.25s,box-shadow 0.25s;
+            background-color: #C00404;
+            box-shadow: inset 0 0 0 1px #FFFFFF;
+            color: #FFFFFF;
+            cursor: pointer;
+            font-size: 0.75em;
+            opacity: 1;
+            padding: 12px 25px 12px 20px;
+            pointer-events: auto;
+            text-transform: uppercase;
+          }
 
-.c0::after {
-  border-color: transparent transparent transparent transparent;
-  border-style: solid;
-  border-width: 3.5px 0 3.5px 5px;
-  content: "";
-  display: inline-block;
-  height: 0;
-  position: relative;
-  right: -8px;
-  top: -1px;
-  -webkit-transition: border 0.25s,color 0.25s;
-  transition: border 0.25s,color 0.25s;
-  width: 0;
-  -ms-transform: translate3d(0,0,0);
-  -webkit-transform: translate3d(0,0,0);
-  -webkit-transform: translate3d(0,0,0);
-  -ms-transform: translate3d(0,0,0);
-  transform: translate3d(0,0,0);
-  -webkit-transition: all 0.25s;
-  transition: all 0.25s;
-  border-color: transparent transparent transparent #FFFFFF;
-}
+          .c0::after {
+            border-color: transparent transparent transparent transparent;
+            border-style: solid;
+            border-width: 3.5px 0 3.5px 5px;
+            content: "";
+            display: inline-block;
+            height: 0;
+            position: relative;
+            right: -8px;
+            top: -1px;
+            -webkit-transition: border 0.25s,color 0.25s;
+            transition: border 0.25s,color 0.25s;
+            width: 0;
+            -ms-transform: translate3d(0,0,0);
+            -webkit-transform: translate3d(0,0,0);
+            -webkit-transform: translate3d(0,0,0);
+            -ms-transform: translate3d(0,0,0);
+            transform: translate3d(0,0,0);
+            -webkit-transition: all 0.25s;
+            transition: all 0.25s;
+            border-color: transparent transparent transparent #FFFFFF;
+          }
 
-.c0:hover,
-.c0:focus {
-  background-color: #FFFFFF;
-  box-shadow: inset 0 0 0 1px #FFFFFF;
-  color: #98A4AE;
-}
+          .c0:hover,
+          .c0:focus {
+            background-color: #FFFFFF;
+            box-shadow: inset 0 0 0 1px #FFFFFF;
+            color: #98A4AE;
+          }
 
-.c0:hover::after,
-.c0:focus::after {
-  -ms-transform: translate3d(4px,0,0);
-  -webkit-transform: translate3d(4px,0,0);
-  -webkit-transform: translate3d(4px,0,0);
-  -ms-transform: translate3d(4px,0,0);
-  transform: translate3d(4px,0,0);
-  -webkit-transition: all 0.25s;
-  transition: all 0.25s;
-  border-color: transparent transparent transparent #98A4AE;
-}
+          .c0:hover::after,
+          .c0:focus::after {
+            -ms-transform: translate3d(4px,0,0);
+            -webkit-transform: translate3d(4px,0,0);
+            -webkit-transform: translate3d(4px,0,0);
+            -ms-transform: translate3d(4px,0,0);
+            transform: translate3d(4px,0,0);
+            -webkit-transition: all 0.25s;
+            transition: all 0.25s;
+            border-color: transparent transparent transparent #98A4AE;
+          }
 
-<a
-  class="c0"
-  color="red"
-  href="https://www.brown.edu"
->
-  Button
-</a>
-`);
+          <a
+            class="c0"
+            color="red"
+            href="https://www.brown.edu"
+          >
+            Button
+          </a>
+        `);
       });
 
       it("should render outlined inverse anchor element of another color when color, outline and inverse variants are provided", () => {
@@ -1122,83 +1122,83 @@ describe("Button", () => {
         });
 
         expect(button).toMatchInlineSnapshot(`
-.c0 {
-  border-width: 0;
-  display: inline-block;
-  font-family: Circular-Book,Arial,Helvetica,sans-serif;
-  font-style: normal;
-  font-weight: 700;
-  -webkit-letter-spacing: 0.6px;
-  -moz-letter-spacing: 0.6px;
-  -ms-letter-spacing: 0.6px;
-  letter-spacing: 0.6px;
-  line-height: 1.5;
-  text-align: center;
-  -webkit-text-decoration: none !important;
-  text-decoration: none !important;
-  -webkit-transition: color 0.25s,background 0.25s,border 0.25s,box-shadow 0.25s;
-  transition: color 0.25s,background 0.25s,border 0.25s,box-shadow 0.25s;
-  background-color: #98A4AE;
-  box-shadow: inset 0 0 0 1px #FFFFFF;
-  color: #FFFFFF;
-  cursor: pointer;
-  font-size: 0.75em;
-  opacity: 1;
-  padding: 12px 25px 12px 20px;
-  pointer-events: auto;
-  text-transform: uppercase;
-}
+          .c0 {
+            border-width: 0;
+            display: inline-block;
+            font-family: CircularStd,Arial,Helvetica,sans-serif;
+            font-style: normal;
+            font-weight: 700;
+            -webkit-letter-spacing: 0.6px;
+            -moz-letter-spacing: 0.6px;
+            -ms-letter-spacing: 0.6px;
+            letter-spacing: 0.6px;
+            line-height: 1.5;
+            text-align: center;
+            -webkit-text-decoration: none !important;
+            text-decoration: none !important;
+            -webkit-transition: color 0.25s,background 0.25s,border 0.25s,box-shadow 0.25s;
+            transition: color 0.25s,background 0.25s,border 0.25s,box-shadow 0.25s;
+            background-color: #98A4AE;
+            box-shadow: inset 0 0 0 1px #FFFFFF;
+            color: #FFFFFF;
+            cursor: pointer;
+            font-size: 0.75em;
+            opacity: 1;
+            padding: 12px 25px 12px 20px;
+            pointer-events: auto;
+            text-transform: uppercase;
+          }
 
-.c0::after {
-  border-color: transparent transparent transparent transparent;
-  border-style: solid;
-  border-width: 3.5px 0 3.5px 5px;
-  content: "";
-  display: inline-block;
-  height: 0;
-  position: relative;
-  right: -8px;
-  top: -1px;
-  -webkit-transition: border 0.25s,color 0.25s;
-  transition: border 0.25s,color 0.25s;
-  width: 0;
-  -ms-transform: translate3d(0,0,0);
-  -webkit-transform: translate3d(0,0,0);
-  -webkit-transform: translate3d(0,0,0);
-  -ms-transform: translate3d(0,0,0);
-  transform: translate3d(0,0,0);
-  -webkit-transition: all 0.25s;
-  transition: all 0.25s;
-  border-color: transparent transparent transparent #FFFFFF;
-}
+          .c0::after {
+            border-color: transparent transparent transparent transparent;
+            border-style: solid;
+            border-width: 3.5px 0 3.5px 5px;
+            content: "";
+            display: inline-block;
+            height: 0;
+            position: relative;
+            right: -8px;
+            top: -1px;
+            -webkit-transition: border 0.25s,color 0.25s;
+            transition: border 0.25s,color 0.25s;
+            width: 0;
+            -ms-transform: translate3d(0,0,0);
+            -webkit-transform: translate3d(0,0,0);
+            -webkit-transform: translate3d(0,0,0);
+            -ms-transform: translate3d(0,0,0);
+            transform: translate3d(0,0,0);
+            -webkit-transition: all 0.25s;
+            transition: all 0.25s;
+            border-color: transparent transparent transparent #FFFFFF;
+          }
 
-.c0:hover,
-.c0:focus {
-  background-color: #FFFFFF;
-  box-shadow: inset 0 0 0 1px #FFFFFF;
-  color: #98A4AE;
-}
+          .c0:hover,
+          .c0:focus {
+            background-color: #FFFFFF;
+            box-shadow: inset 0 0 0 1px #FFFFFF;
+            color: #98A4AE;
+          }
 
-.c0:hover::after,
-.c0:focus::after {
-  -ms-transform: translate3d(4px,0,0);
-  -webkit-transform: translate3d(4px,0,0);
-  -webkit-transform: translate3d(4px,0,0);
-  -ms-transform: translate3d(4px,0,0);
-  transform: translate3d(4px,0,0);
-  -webkit-transition: all 0.25s;
-  transition: all 0.25s;
-  border-color: transparent transparent transparent #98A4AE;
-}
+          .c0:hover::after,
+          .c0:focus::after {
+            -ms-transform: translate3d(4px,0,0);
+            -webkit-transform: translate3d(4px,0,0);
+            -webkit-transform: translate3d(4px,0,0);
+            -ms-transform: translate3d(4px,0,0);
+            transform: translate3d(4px,0,0);
+            -webkit-transition: all 0.25s;
+            transition: all 0.25s;
+            border-color: transparent transparent transparent #98A4AE;
+          }
 
-<a
-  class="c0"
-  color="gray"
-  href="https://www.brown.edu"
->
-  Button
-</a>
-`);
+          <a
+            class="c0"
+            color="gray"
+            href="https://www.brown.edu"
+          >
+            Button
+          </a>
+        `);
       });
 
       it("should render disabled anchor element when variant is provided", () => {
