@@ -21,9 +21,9 @@ var Tag = styled.div.withConfig({
 */
 
 var BannerText = function BannerText(props) {
-  return React.createElement(BannerContext.Consumer, null, function (_ref) {
+  return /*#__PURE__*/React.createElement(BannerContext.Consumer, null, function (_ref) {
     var mobileBreakpoint = _ref.mobileBreakpoint;
-    return React.createElement(Tag, _extends({}, props, {
+    return /*#__PURE__*/React.createElement(Tag, _extends({}, props, {
       mobileBreakpoint: mobileBreakpoint
     }));
   });

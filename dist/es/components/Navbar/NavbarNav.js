@@ -36,7 +36,7 @@ var MobileCollapseWrapper = styled(function (_ref) {
   var color = _ref.color,
       restProps = _objectWithoutProperties(_ref, ["color"]);
 
-  return React.createElement("div", restProps);
+  return /*#__PURE__*/React.createElement("div", restProps);
 }).withConfig({
   displayName: "NavbarNav__MobileCollapseWrapper",
   componentId: "hl2s13-0"
@@ -67,40 +67,40 @@ var NavbarNav = function NavbarNav(_ref3) {
   var children = _ref3.children,
       restProps = _objectWithoutProperties(_ref3, ["children"]);
 
-  return React.createElement(WindowSize, {
+  return /*#__PURE__*/React.createElement(WindowSize, {
     render: function render(_ref4) {
       var width = _ref4.width;
       // TODO: update when `width` doesn't return 0 on initial render (see `react-fns` issue 84)
       var currentWidth = width === 0 ? window.innerWidth : width;
-      return React.createElement(NavbarContext.Consumer, null, function (_ref5) {
+      return /*#__PURE__*/React.createElement(NavbarContext.Consumer, null, function (_ref5) {
         var color = _ref5.color,
             mobileBreakpoint = _ref5.mobileBreakpoint;
         var childColor = getChildColor(color);
         var renderMobile = currentWidth < mobileBreakpoint;
 
         if (renderMobile) {
-          return React.createElement("div", restProps, React.createElement(VisibilityToggle, null, function (_ref6) {
+          return /*#__PURE__*/React.createElement("div", restProps, /*#__PURE__*/React.createElement(VisibilityToggle, null, function (_ref6) {
             var mobileNavIsOpen = _ref6.isOpen,
                 toggleMobileNav = _ref6.toggleIsOpen;
-            return React.createElement(React.Fragment, null, React.createElement(Hamburger, {
+            return /*#__PURE__*/React.createElement(React.Fragment, null, /*#__PURE__*/React.createElement(Hamburger, {
               "aria-controls": "navbar-nav-mobile-collapse",
               color: childColor,
               isOpen: mobileNavIsOpen,
               onOpen: toggleMobileNav,
               onClose: toggleMobileNav
-            }), React.createElement(MobileCollapseWrapper, {
+            }), /*#__PURE__*/React.createElement(MobileCollapseWrapper, {
               color: color
-            }, React.createElement(Collapse, {
+            }, /*#__PURE__*/React.createElement(Collapse, {
               id: "navbar-nav-mobile-collapse",
               isOpen: mobileNavIsOpen
-            }, React.createElement(MobileNavWrapper, null, React.createElement(Nav, {
+            }, /*#__PURE__*/React.createElement(MobileNavWrapper, null, /*#__PURE__*/React.createElement(Nav, {
               mobile: true,
               color: childColor
             }, children)))));
           }));
         }
 
-        return React.createElement(Nav, _extends({}, restProps, {
+        return /*#__PURE__*/React.createElement(Nav, _extends({}, restProps, {
           navbar: true,
           color: childColor
         }), children);

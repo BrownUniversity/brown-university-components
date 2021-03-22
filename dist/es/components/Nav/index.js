@@ -67,7 +67,7 @@ var Tag = styled(function (_ref5) {
       sub = _ref5.sub,
       restProps = _objectWithoutProperties(_ref5, ["color", "navbar", "mobile", "sub"]);
 
-  return React.createElement("ul", restProps);
+  return /*#__PURE__*/React.createElement("ul", restProps);
 }).withConfig({
   displayName: "Nav__Tag",
   componentId: "axj96a-0"
@@ -89,14 +89,14 @@ var Nav = function Nav(props) {
       mobile = props.mobile,
       sub = props.sub,
       color = props.color;
-  return React.createElement(NavContext.Provider, {
+  return /*#__PURE__*/React.createElement(NavContext.Provider, {
     value: {
       navbar: navbar,
       mobile: mobile,
       sub: sub,
       color: color
     }
-  }, React.createElement(Tag, props));
+  }, /*#__PURE__*/React.createElement(Tag, props));
 };
 
 Nav.propTypes = {

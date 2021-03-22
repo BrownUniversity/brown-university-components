@@ -63,7 +63,7 @@ var SiteNav = function SiteNav(_ref) {
       children = _ref.children,
       restProps = _objectWithoutProperties(_ref, ["banner", "mobileBreakpoint", "mobileToggleTitle", "children"]);
 
-  return React.createElement(WindowSize, {
+  return /*#__PURE__*/React.createElement(WindowSize, {
     render: function render(_ref2) {
       var width = _ref2.width;
       // TODO: update when `width` doesn't return 0 on initial render (see `react-fns` issue 84)
@@ -71,32 +71,32 @@ var SiteNav = function SiteNav(_ref) {
       var renderMobile = currentWidth < mobileBreakpoint;
 
       if (renderMobile) {
-        return React.createElement(MobileBannerPositioningWrapper, {
+        return /*#__PURE__*/React.createElement(MobileBannerPositioningWrapper, {
           banner: banner
-        }, React.createElement(MobileWrapper, restProps, React.createElement(VisibilityToggle, null, function (_ref3) {
+        }, /*#__PURE__*/React.createElement(MobileWrapper, restProps, /*#__PURE__*/React.createElement(VisibilityToggle, null, function (_ref3) {
           var mobileNavIsOpen = _ref3.isOpen,
               toggleMobileNav = _ref3.toggleIsOpen;
-          return React.createElement(React.Fragment, null, React.createElement(MobileToggleButton, {
+          return /*#__PURE__*/React.createElement(React.Fragment, null, /*#__PURE__*/React.createElement(MobileToggleButton, {
             type: "button",
             "aria-controls": "site-nav-mobile-collapse",
             "aria-expanded": mobileNavIsOpen,
             "aria-label": "Toggle site navigation",
             onClick: toggleMobileNav
-          }, React.createElement(MobileToggleButtonInner, null, React.createElement(MobileToggleTitle, null, mobileToggleTitle), React.createElement(Hamburger, {
+          }, /*#__PURE__*/React.createElement(MobileToggleButtonInner, null, /*#__PURE__*/React.createElement(MobileToggleTitle, null, mobileToggleTitle), /*#__PURE__*/React.createElement(Hamburger, {
             tag: "div",
             isOpen: mobileNavIsOpen
-          }))), React.createElement(Collapse, {
+          }))), /*#__PURE__*/React.createElement(Collapse, {
             id: "site-nav-mobile-collapse",
             isOpen: mobileNavIsOpen
-          }, React.createElement(MobileNavWrapper, null, React.createElement(Nav, {
+          }, /*#__PURE__*/React.createElement(MobileNavWrapper, null, /*#__PURE__*/React.createElement(Nav, {
             mobile: true
           }, children))));
         })));
       }
 
-      return React.createElement(BannerPositioningWrapper, {
+      return /*#__PURE__*/React.createElement(BannerPositioningWrapper, {
         banner: banner
-      }, React.createElement("nav", restProps, React.createElement(NavWrapper, null, React.createElement(Nav, null, children))));
+      }, /*#__PURE__*/React.createElement("nav", restProps, /*#__PURE__*/React.createElement(NavWrapper, null, /*#__PURE__*/React.createElement(Nav, null, children))));
     }
   });
 };

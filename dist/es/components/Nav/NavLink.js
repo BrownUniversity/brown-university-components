@@ -291,12 +291,12 @@ var NavLink = function NavLink(props) {
       restProps = _objectWithoutProperties(props, ["tag"]);
 
   var derivedTag = deriveTag(props);
-  return React.createElement(NavContext.Consumer, null, function (_ref16) {
+  return /*#__PURE__*/React.createElement(NavContext.Consumer, null, function (_ref16) {
     var navbar = _ref16.navbar,
         mobile = _ref16.mobile,
         sub = _ref16.sub,
         color = _ref16.color;
-    return React.createElement(Tag, _extends({
+    return /*#__PURE__*/React.createElement(Tag, _extends({
       as: derivedTag,
       type: derivedTag === "button" && props.onClick ? "button" : undefined
     }, restProps, {

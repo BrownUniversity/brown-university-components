@@ -39,7 +39,7 @@ var ToggleTitle = styled(function (_ref) {
   var color = _ref.color,
       restProps = _objectWithoutProperties(_ref, ["color"]);
 
-  return React.createElement("span", restProps);
+  return /*#__PURE__*/React.createElement("span", restProps);
 }).withConfig({
   displayName: "NavbarGlobalNav__ToggleTitle",
   componentId: "sc-1vdo48t-1"
@@ -52,7 +52,7 @@ var CollapseWrapper = styled(function (_ref3) {
   var color = _ref3.color,
       restProps = _objectWithoutProperties(_ref3, ["color"]);
 
-  return React.createElement("div", restProps);
+  return /*#__PURE__*/React.createElement("div", restProps);
 }).withConfig({
   displayName: "NavbarGlobalNav__CollapseWrapper",
   componentId: "sc-1vdo48t-2"
@@ -83,38 +83,38 @@ var NavbarGlobalNav = function NavbarGlobalNav(_ref5) {
   var children = _ref5.children,
       restProps = _objectWithoutProperties(_ref5, ["children"]);
 
-  return React.createElement(WindowSize, {
+  return /*#__PURE__*/React.createElement(WindowSize, {
     render: function render(_ref6) {
       var width = _ref6.width;
       // TODO: update when `width` doesn't return 0 on initial render (see `react-fns` issue 84)
       var currentWidth = width === 0 ? window.innerWidth : width;
-      return React.createElement(NavbarContext.Consumer, null, function (_ref7) {
+      return /*#__PURE__*/React.createElement(NavbarContext.Consumer, null, function (_ref7) {
         var color = _ref7.color,
             mobileBreakpoint = _ref7.mobileBreakpoint,
             toggleTitle = _ref7.toggleTitle;
         var childColor = getChildColor(color);
         var renderMobile = currentWidth < mobileBreakpoint;
-        return React.createElement("div", restProps, React.createElement(VisibilityToggle, null, function (_ref8) {
+        return /*#__PURE__*/React.createElement("div", restProps, /*#__PURE__*/React.createElement(VisibilityToggle, null, function (_ref8) {
           var navIsOpen = _ref8.isOpen,
               toggleNav = _ref8.toggleIsOpen;
-          return React.createElement(React.Fragment, null, React.createElement(ToggleButton, {
+          return /*#__PURE__*/React.createElement(React.Fragment, null, /*#__PURE__*/React.createElement(ToggleButton, {
             type: "button",
             "aria-controls": "navbar-global-nav-collapse",
             "aria-expanded": navIsOpen,
             "aria-label": "Toggle global navigation",
             onClick: toggleNav
-          }, React.createElement(Hamburger, {
+          }, /*#__PURE__*/React.createElement(Hamburger, {
             tag: "div",
             color: childColor,
             isOpen: navIsOpen
-          }), !renderMobile && React.createElement(ToggleTitle, {
+          }), !renderMobile && /*#__PURE__*/React.createElement(ToggleTitle, {
             color: childColor
-          }, toggleTitle)), React.createElement(CollapseWrapper, {
+          }, toggleTitle)), /*#__PURE__*/React.createElement(CollapseWrapper, {
             color: color
-          }, React.createElement(Collapse, {
+          }, /*#__PURE__*/React.createElement(Collapse, {
             id: "navbar-global-nav-collapse",
             isOpen: navIsOpen
-          }, React.createElement(NavWrapper, null, React.createElement(Nav, {
+          }, /*#__PURE__*/React.createElement(NavWrapper, null, /*#__PURE__*/React.createElement(Nav, {
             mobile: true,
             color: childColor
           }, children)))));

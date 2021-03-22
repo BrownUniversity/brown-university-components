@@ -1,3 +1,3 @@
 import React from "react";
-var NavbarContext = React.createContext();
+var NavbarContext = /*#__PURE__*/React.createContext();
 export default NavbarContext;
