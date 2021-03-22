@@ -41,10 +41,10 @@ var Tag = styled.li.withConfig({
 */
 
 var NavItem = function NavItem(props) {
-  return React.createElement(NavContext.Consumer, null, function (_ref3) {
+  return /*#__PURE__*/React.createElement(NavContext.Consumer, null, function (_ref3) {
     var mobile = _ref3.mobile,
         sub = _ref3.sub;
-    return React.createElement(Tag, _extends({}, props, {
+    return /*#__PURE__*/React.createElement(Tag, _extends({}, props, {
       mobile: mobile,
       sub: sub
     }));

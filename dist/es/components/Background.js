@@ -20,7 +20,7 @@ var Tag = styled(function (_ref) {
       marginTop = _ref.marginTop,
       restProps = _objectWithoutProperties(_ref, ["url", "color", "full", "marginTop"]);
 
-  return React.createElement("div", restProps);
+  return /*#__PURE__*/React.createElement("div", restProps);
 }).withConfig({
   displayName: "Background__Tag",
   componentId: "uwuoy1-0"
@@ -46,7 +46,7 @@ var Background = function Background(_ref5) {
       full = _ref5.full,
       restProps = _objectWithoutProperties(_ref5, ["url", "color", "full"]);
 
-  return React.createElement(Tag, _extends({}, restProps, {
+  return /*#__PURE__*/React.createElement(Tag, _extends({}, restProps, {
     url: url,
     color: color,
     full: full

@@ -10,7 +10,7 @@ var SubNav = function SubNav(_ref) {
   var children = _ref.children,
       restProps = _objectWithoutProperties(_ref, ["children"]);
 
-  return React.createElement("nav", restProps, React.createElement(Nav, {
+  return /*#__PURE__*/React.createElement("nav", restProps, /*#__PURE__*/React.createElement(Nav, {
     sub: true
   }, children));
 };

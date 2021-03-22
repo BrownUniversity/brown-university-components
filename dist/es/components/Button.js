@@ -229,7 +229,7 @@ var Button = function Button(props) {
       restProps = _objectWithoutProperties(props, ["tag"]);
 
   var derivedTag = deriveTag(props);
-  return React.createElement(Tag, _extends({
+  return /*#__PURE__*/React.createElement(Tag, _extends({
     as: derivedTag,
     type: derivedTag === "button" && props.onClick ? "button" : undefined
   }, restProps));

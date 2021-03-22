@@ -16,7 +16,7 @@ var Tag = styled.code.withConfig({
 */
 
 var Code = function Code(props) {
-  return React.createElement(Tag, props);
+  return /*#__PURE__*/React.createElement(Tag, props);
 };
 
 Code.propTypes = {

@@ -73,26 +73,26 @@ var Banner = function Banner(_ref3) {
       mobileBreakpoint = _ref3.mobileBreakpoint,
       restProps = _objectWithoutProperties(_ref3, ["color", "size", "src", "children", "mobileBreakpoint"]);
 
-  return React.createElement(BannerWrapper, _extends({}, restProps, {
+  return /*#__PURE__*/React.createElement(BannerWrapper, _extends({}, restProps, {
     role: "banner"
-  }), React.createElement(BannerImageColorWrapper, {
+  }), /*#__PURE__*/React.createElement(BannerImageColorWrapper, {
     size: size
-  }, src ? React.createElement(BannerImage, {
+  }, src ? /*#__PURE__*/React.createElement(BannerImage, {
     src: src,
     alt: "Banner"
-  }) : React.createElement("svg", {
+  }) : /*#__PURE__*/React.createElement("svg", {
     display: "block",
     viewBox: "0 0 2600 600"
-  }, React.createElement("rect", {
+  }, /*#__PURE__*/React.createElement("rect", {
     "aria-hidden": "true",
     focusable: "false",
     width: "100%",
     height: "100%",
     fill: colors[color]
-  }))), React.createElement(BannerChildrenWrapper, {
+  }))), /*#__PURE__*/React.createElement(BannerChildrenWrapper, {
     size: size,
     mobileBreakpoint: mobileBreakpoint
-  }, React.createElement(BannerContext.Provider, {
+  }, /*#__PURE__*/React.createElement(BannerContext.Provider, {
     value: {
       mobileBreakpoint: mobileBreakpoint
     }
