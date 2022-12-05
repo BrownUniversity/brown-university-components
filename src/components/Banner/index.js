@@ -74,10 +74,9 @@ const Banner = ({
       {src ? (
         <BannerImage src={src} alt="Banner" />
       ) : (
-        <svg display="block" viewBox="0 0 2600 600">
+        <svg display="block" viewBox="0 0 2600 600" focusable="false">
           <rect
             aria-hidden="true"
-            focusable="false"
             width="100%"
             height="100%"
             fill={colors[color]}
