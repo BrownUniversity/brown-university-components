@@ -82,10 +82,10 @@ var Banner = function Banner(_ref3) {
     alt: "Banner"
   }) : /*#__PURE__*/React.createElement("svg", {
     display: "block",
-    viewBox: "0 0 2600 600"
+    viewBox: "0 0 2600 600",
+    focusable: "false"
   }, /*#__PURE__*/React.createElement("rect", {
     "aria-hidden": "true",
-    focusable: "false",
     width: "100%",
     height: "100%",
     fill: colors[color]
