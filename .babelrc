@@ -17,10 +17,13 @@
             "svgo": {
               "plugins": [
                 {
-                  "cleanupIDs": false
-                },
-                {
-                  "removeUnknownsAndDefaults": false
+                  "name": "preset-default",
+                  "params": {
+                    "overrides": {
+                      "cleanupIDs": false,
+                      "removeUnknownsAndDefaults": false
+                    }
+                  }
                 }
               ]
             }

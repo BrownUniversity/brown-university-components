@@ -1,6 +1,6 @@
 const path = require("path");
 const webpack = require("webpack");
-const CleanWebpackPlugin = require("clean-webpack-plugin");
+const { CleanWebpackPlugin } = require("clean-webpack-plugin");
 const CopyWebpackPlugin = require("copy-webpack-plugin");
 const { BundleAnalyzerPlugin } = require("webpack-bundle-analyzer");
 const svgRule = require("./rules/svg");
@@ -9,7 +9,7 @@ const { version } = require("../package.json");
 const runAnalyzer = process.env.RUN_WEBPACK_BUNDLE_ANALYZER;
 
 module.exports = {
-  mode: "none",
+  mode: "production",
   entry: path.join(__dirname, "../src/index.js"),
   output: {
     filename: "index.commonjs.js",
@@ -41,11 +41,10 @@ module.exports = {
   },
   plugins: [
     new webpack.BannerPlugin(`brown-university-components v${version}`),
-    new CleanWebpackPlugin(["dist"], {
-      root: `${__dirname}/../`,
-      exclude: ["es"]
+    new CleanWebpackPlugin({
+      cleanOnceBeforeBuildPatterns: ["!es"]
     }),
-    new CopyWebpackPlugin(["src/assets/svg/background.svg"]),
+    new CopyWebpackPlugin({ patterns: ["src/assets/svg/background.svg"] }),
     runAnalyzer && new BundleAnalyzerPlugin()
   ].filter(Boolean)
 };

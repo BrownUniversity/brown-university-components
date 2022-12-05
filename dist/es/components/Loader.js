@@ -7,9 +7,7 @@ import React from "react";
 import styled, { keyframes } from "styled-components";
 
 var LoaderSVG = function LoaderSVG(props) {
-  return /*#__PURE__*/React.createElement("svg", props, /*#__PURE__*/React.createElement("title", {
-    id: "title"
-  }, "Loading..."), /*#__PURE__*/React.createElement("path", {
+  return /*#__PURE__*/React.createElement("svg", props, /*#__PURE__*/React.createElement("path", {
     className: "rays",
     id: "rays",
     fill: "#F0F3F5",
@@ -41,7 +39,7 @@ var LoaderSVG = function LoaderSVG(props) {
     id: "shield"
   }, /*#__PURE__*/React.createElement("path", {
     fill: "#F0F3F5",
-    d: "M32.5 76.4l74.2.1v41.7s2.8 30-36.8 36.2c0 0-36.3-2.9-37.2-35.4l-.2-42.6z"
+    d: "m32.5 76.4 74.2.1v41.7s2.8 30-36.8 36.2c0 0-36.3-2.9-37.2-35.4l-.2-42.6z"
   }), /*#__PURE__*/React.createElement("path", {
     fill: "none",
     d: "M46.4 82.8c-1.8.1-3.6.8-4.7.6v12.3s.7.5 2.5 0c2.4-.7 3.4.1 3.4.1V83.3c.1 0-.2-.5-1.2-.5zM93.1 82.8c-1 0-1.3.5-1.3.5v12.4s1.1-.7 3.5-.1c1.8.5 2.5 0 2.5 0V83.4c-1.1.2-2.9-.6-4.7-.6z"
@@ -56,7 +54,7 @@ var LoaderSVG = function LoaderSVG(props) {
     d: "M38.4 135.7v-12.8h1.8v-2.6c1.8.4 4.8-.6 6.2-.6 1.5 0 2.2.6 2.2.6s.8-.6 2.2-.6c1.3 0 4.3 1 6.2.6v2.6h1.8v14.3h-8.5v1.1h-3.5v-1.1h-7.5c1.2 1.8 2.6 3.5 4.3 5.1 4.7 4.4 12.1 7.4 19.7 9.6v-35.8H33.8l.1 1.1c.2 7.4 1.6 13.5 4.5 18.5z"
   }), /*#__PURE__*/React.createElement("path", {
     fill: "none",
-    d: "M64.9 152.4l4.9 1.3 4.9-1.3v-38h31v-8.7h-31V77.3h-9.8v28.4H33.8v8.7h31.1z"
+    d: "m64.9 152.4 4.9 1.3 4.9-1.3v-38h31v-8.7h-31V77.3h-9.8v28.4H33.8v8.7h31.1z"
   }), /*#__PURE__*/React.createElement("path", {
     fill: "none",
     d: "M88.7 82.8c-1.8.1-3.6.8-4.7.6v12.3s.7.5 2.5 0c2.4-.7 3.4.1 3.4.1V83.3c.1 0-.2-.5-1.2-.5zM76.2 116.1V152c7.4-2.2 14.8-5 19.8-9.6 1.8-1.6 3.2-3.3 4.5-5.1h-7.6v1.1h-3.5v-1.1h-8.5V123h1.8v-2.6c1.8.4 4.8-.6 6.2-.6 1.5 0 2.2.6 2.2.6s.8-.6 2.2-.6c1.3 0 4.3 1 6.2.6v2.6h1.8v12.9c2.7-4.7 4-10.5 4.4-18.5l-.1-1.2H76.2z"
@@ -70,50 +68,39 @@ var LoaderSVG = function LoaderSVG(props) {
     fill: "#6C757C",
     d: "M57 81.7c-1.8.4-4.8-.6-6.2-.6-1.5 0-2.2.6-2.2.6s-.8-.6-2.2-.6c-1.3 0-4.3 1-6.2.6v2.6h-1.8v14.3h8.5v1.1h3.5v-1.1h8.5V84.3H57v-2.6zm-9.3 14s-1.1-.7-3.4-.1c-1.8.5-2.5 0-2.5 0V83.4c1.1.2 2.9-.5 4.7-.6 1 0 1.3.5 1.3.5v12.4zm7.8 0s-.7.5-2.5 0c-2.4-.7-3.5.1-3.5.1V83.3s.3-.6 1.3-.5c1.8.1 3.6.8 4.7.6v12.3zM99.5 81.7c-1.8.4-4.8-.6-6.2-.6-1.5 0-2.2.6-2.2.6s-.8-.6-2.2-.6c-1.3 0-4.3 1-6.2.6v2.6h-1.8v14.3h8.5v1.1h3.5v-1.1h8.5V84.3h-1.8v-2.6zm-9.5 14s-1.1-.7-3.4-.1c-1.8.5-2.5 0-2.5 0V83.4c1.1.2 2.9-.5 4.7-.6 1 0 1.3.5 1.3.5v12.4zm7.8 0s-.7.5-2.5 0c-2.4-.7-3.5.1-3.5.1V83.3s.3-.6 1.3-.5c1.8.1 3.6.8 4.7.6v12.3z"
   })), /*#__PURE__*/React.createElement("g", {
-    id: "clouds_of_ignorance"
+    id: "clouds_of_ignorance",
+    stroke: "#6C757C",
+    strokeWidth: "1.4",
+    strokeMiterlimit: "10"
   }, /*#__PURE__*/React.createElement("path", {
     className: "st5",
     fill: "#F0F3F5",
-    stroke: "#6C757C",
-    strokeWidth: "1.4",
-    strokeMiterlimit: "10",
     d: "M41 40.3s.6-4.1 5.8-4.6c0 0 .4-8.5 10.9-4.5 0 0 2.2-9.3 12.4-3.8 0 0 8.3-5.3 13.7 4.3 0 0 6.9-2.8 7.9 3.5 0 0 7.6-2.7 9.4 3.8 0 0 5.7-.2 4.7 5.7 0 0-.5 5-9 1.9 0 0-7.7 3.9-11.1-4.8 0 0-6.4 1.9-8.4-4.6 0 0-6.1 4.1-10.8-.5 0 0-3 4.1-8.6 3.2 0 0-2.7 3.3-7.3 2.2 0 0 1.6 7.7-9.4 6.2 0 0-4.3 2.5-6.3-1.8-2-4.6 6.1-6.2 6.1-6.2z"
   }), /*#__PURE__*/React.createElement("path", {
     className: "st6",
     fill: "none",
-    stroke: "#6C757C",
-    strokeWidth: "1.4",
     strokeLinecap: "round",
-    strokeMiterlimit: "10",
     d: "M36.7 45.7s.3-3.5 4.8-3.1"
   }), /*#__PURE__*/React.createElement("path", {
     className: "st7",
     fill: "none",
+    strokeLinecap: "round",
+    strokeLinejoin: "round",
+    d: "M43.3 41s.5-2.8 3.7-2.7M48.9 36.9s1.3-5.6 6.6-3.7M60.2 31.4s3.9-5.2 8.2-1.5M70.7 30.8s6.4-5 10.4 2.1M84.1 34.3s4.5-2 5.3 2M92 38.2s5-2.3 6.7 2.4M100.1 41.8c.1 0 3.7-.8 3.1 3.1"
+  })), /*#__PURE__*/React.createElement("g", {
+    id: "decor",
     stroke: "#6C757C",
     strokeWidth: "1.4",
     strokeLinecap: "round",
     strokeLinejoin: "round",
-    strokeMiterlimit: "10",
-    d: "M43.3 41s.5-2.8 3.7-2.7M48.9 36.9s1.3-5.6 6.6-3.7M60.2 31.4s3.9-5.2 8.2-1.5M70.7 30.8s6.4-5 10.4 2.1M84.1 34.3s4.5-2 5.3 2M92 38.2s5-2.3 6.7 2.4M100.1 41.8c.1 0 3.7-.8 3.1 3.1"
-  })), /*#__PURE__*/React.createElement("g", {
-    id: "decor"
+    strokeMiterlimit: "10"
   }, /*#__PURE__*/React.createElement("path", {
     className: "st8",
     fill: "#F0F3F5",
-    stroke: "#6C757C",
-    strokeWidth: "1.4",
-    strokeLinecap: "round",
-    strokeLinejoin: "round",
-    strokeMiterlimit: "10",
     d: "M43.4 62.8s-5.9-3.7-9.7.4c0 0-1.6 1.8-.3 4.3 1.5 2.8 4.9 2.7 6.9.9 0 0 1.8 2.8 6.5.1 0 0 5.6 2.7 11.6-.1 0 0 2 2.4 6.3.4 0 0 2.7 2.4 6.3-.2 0 0 6.5 3 11.9-.3 0 0 2.3 2.6 6.1.4 0 0 2.6 2.6 6.4-.2 0 0 3.3 2 8.4.7 0 0 3.1-.8 2.3-3.2-1-2.9-3.8-6.3-13.6-3.1 0 0-6.7-2.9-12.4.5 0 0-4.7-3.7-12.1 0 0 0-3.1-3.6-12.4-.4-.2 0-4.5-3.7-12.2-.2z"
   }), /*#__PURE__*/React.createElement("path", {
     className: "st9",
     fill: "#FFF",
-    stroke: "#6C757C",
-    strokeWidth: "1.4",
-    strokeLinecap: "round",
-    strokeLinejoin: "round",
-    strokeMiterlimit: "10",
     d: "M37.1 65.4s1.1 0 1.6.8 1.6 2.1 1.6 2.1M43.2 62.6s1.2 1.4 1.7 2.8 1.7 3.1 2.8 3.5M55.7 63.2c.4.5 1 1.4 1.3 2.3.5 1.4 1.5 3.3 2.7 3.7M67.9 63.4c.4.5.8 1.3 1.1 2 .4 1.1 1.2 2.4 2.1 3M79.5 63.1c.4.5.8 1.3 1.1 2 .4 1.1 1.2 2.4 2.1 3M92.2 63c.4.5.8 1.3 1.1 2 .4 1.1 1 2.6 1.9 3.3M61.2 65.4s.9 0 1.7 1.1 1.8 2.4 2.5 2.7M85.8 65.6s1 .2 1.6 1.2c.6 1 1.9 2.3 2.8 2.7"
   })));
 };
