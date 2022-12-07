@@ -62,7 +62,7 @@
     "babel-plugin-transform-react-remove-prop-types": "^0.4.21",
     "brown-university-styles": "github:BrownUniversity/brown-university-styles",
     "clean-webpack-plugin": "^1.0.0",
-    "copy-webpack-plugin": "^4.6.0",
+    "copy-webpack-plugin": "^11.0.0",
     "eslint": "^5.16.0",
     "eslint-config-brown": "github:BrownUniversity/eslint-config-brown#semver:^0.16",
     "file-loader": "^2.0.0",
