@@ -28,12 +28,7 @@ module.exports = {
     },
     {
       exclude: path.resolve(__dirname, "../../src/assets/svg/inline/"),
-      use: {
-        loader: "file-loader",
-        options: {
-          name: "[name].[ext]"
-        }
-      }
+      type: "asset/resource"
     }
   ]
 };

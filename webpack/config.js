@@ -14,7 +14,8 @@ module.exports = {
   output: {
     filename: "index.commonjs.js",
     path: path.resolve(__dirname, "../dist"),
-    libraryTarget: "umd"
+    libraryTarget: "umd",
+    assetModuleFilename: "[name].[ext]",
   },
   module: {
     rules: [
