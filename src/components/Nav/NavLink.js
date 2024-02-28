@@ -194,43 +194,43 @@ const getAfterWidthWithHover = ({ disabled }) => {
 // TODO: filter active, navbar, mobile, sub and color props with `as` usage (see `styled-components` issue 439)
 const Tag = styled.div`
   ${navLinkCSS}
-  color: ${props => getColor(props)};
-  cursor: ${props => getCursor(props)};
-  font-size: ${props => getFontSize(props)};
-  font-weight: ${props => getFontWeight(props)};
-  line-height: ${props => getLineHeight(props)};
-  opacity: ${props => getOpacity(props)};
-  pointer-events: ${props => getPointerEvents(props)};
-  transition: ${props => getTransition(props)};
+  color: ${(props) => getColor(props)};
+  cursor: ${(props) => getCursor(props)};
+  font-size: ${(props) => getFontSize(props)};
+  font-weight: ${(props) => getFontWeight(props)};
+  line-height: ${(props) => getLineHeight(props)};
+  opacity: ${(props) => getOpacity(props)};
+  pointer-events: ${(props) => getPointerEvents(props)};
+  transition: ${(props) => getTransition(props)};
 
   ${media.xl`
     font-size: ${({ navbar, mobile, sub }) =>
       !(navbar || mobile || sub) && " 1.2em"};
   `};
 
-  ${props =>
+  ${(props) =>
     !(props.mobile || props.sub) &&
-    css`&::after {
-      ${navLinkAfterCSS}
-      ${props.href && "transition: width 0.3s;"}
+    css`
+      &::after {
+        ${navLinkAfterCSS}
+        ${props.href && "transition: width 0.3s;"}
       background: ${({ color }) =>
-        color === "white" ? colors.sand : colors.red};
-      margin-top: ${getAfterMarginTop(props)};
-      width: ${getAfterWidth(props)};
-    }
-  `}
+          color === "white" ? colors.sand : colors.red};
+        margin-top: ${getAfterMarginTop(props)};
+        width: ${getAfterWidth(props)};
+      }
+    `}
 
   &:hover {
-    color: ${props => getColorWithHover(props)};
+    color: ${(props) => getColorWithHover(props)};
 
-    ${props =>
+    ${(props) =>
       !(props.mobile || props.sub) &&
       css`
         &::after {
           width: ${getAfterWidthWithHover(props)};
         }
       `}
-
   }
 `;
 
@@ -245,7 +245,7 @@ const deriveTag = ({ tag, href }) => {
   return tag;
 };
 
-const NavLink = props => {
+const NavLink = (props) => {
   const { tag, ...restProps } = props;
   const derivedTag = deriveTag(props);
 
@@ -271,7 +271,7 @@ NavLink.propTypes = {
   active: PropTypes.bool,
   disabled: PropTypes.bool,
   onClick: PropTypes.func,
-  href: PropTypes.string
+  href: PropTypes.string,
 };
 
 NavLink.defaultProps = {
@@ -279,7 +279,7 @@ NavLink.defaultProps = {
   active: false,
   disabled: false,
   onClick: null,
-  href: null
+  href: null,
 };
 
 export default NavLink;

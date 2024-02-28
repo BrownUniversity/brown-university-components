@@ -29,10 +29,10 @@ const hamburgerTransitionCSS = css`
 const HamburgerTag = styled.div`
   background: transparent;
   border: none;
-  cursor:  ${props => (props.as === "button" ? "pointer" : "inherit")};
-  ${props => props.as === "div" && "display: inline-block;"}
-  ${props => props.as === "button" && "height: 24px;"}
-  padding: ${props =>
+  cursor: ${(props) => (props.as === "button" ? "pointer" : "inherit")};
+  ${(props) => props.as === "div" && "display: inline-block;"}
+  ${(props) => props.as === "button" && "height: 24px;"}
+  padding: ${(props) =>
     props.as === "button" ? "0 25px 3px 0" : "0 25px 7px 0"};
 `;
 
@@ -45,7 +45,7 @@ const HamburgerBars = styled(({ color, isOpen, ...restProps }) => (
   transition-duration: .22s;
   transition-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19);
 
-  ${props =>
+  ${(props) =>
     props.isOpen &&
     css`
       -webkit-transform: rotate(225deg);
@@ -64,16 +64,24 @@ const HamburgerBars = styled(({ color, isOpen, ...restProps }) => (
     ${hamburgerBarPseudoElementCSS}
     ${hamburgerTransitionCSS}
     transition-duration: .15s;
-    transition: top .1s .25s ease-in, opacity .1s ease-in;
-    opacity: ${props => props.isOpen && "0"};
-    top: ${props => (props.isOpen ? "0" : "-7px")};
+    transition:
+      top 0.1s 0.25s ease-in,
+      opacity 0.1s ease-in;
+    opacity: ${(props) => props.isOpen && "0"};
+    top: ${(props) => (props.isOpen ? "0" : "-7px")};
 
-    ${props =>
+    ${(props) =>
       props.isOpen &&
       css`
-        -webkit-transition: top 0.1s ease-out, opacity 0.1s 0.12s ease-out;
-        -o-transition: top 0.1s ease-out, opacity 0.1s 0.12s ease-out;
-        transition: top 0.1s ease-out, opacity 0.1s 0.12s ease-out;
+        -webkit-transition:
+          top 0.1s ease-out,
+          opacity 0.1s 0.12s ease-out;
+        -o-transition:
+          top 0.1s ease-out,
+          opacity 0.1s 0.12s ease-out;
+        transition:
+          top 0.1s ease-out,
+          opacity 0.1s 0.12s ease-out;
       `}
   }
 
@@ -82,16 +90,19 @@ const HamburgerBars = styled(({ color, isOpen, ...restProps }) => (
     ${hamburgerBarPseudoElementCSS}
     ${hamburgerTransitionCSS}
     transition-duration: .15s;
-    transition: bottom .1s .25s ease-in, transform .22s cubic-bezier(0.55, 0.055, 0.675, 0.19);
-    bottom: ${props => (props.isOpen ? "0" : "-7px")};
+    transition:
+      bottom 0.1s 0.25s ease-in,
+      transform 0.22s cubic-bezier(0.55, 0.055, 0.675, 0.19);
+    bottom: ${(props) => (props.isOpen ? "0" : "-7px")};
 
-    ${props =>
+    ${(props) =>
       props.isOpen &&
       css`
         -webkit-transform: rotate(-90deg);
         -ms-transform: rotate(-90deg);
         transform: rotate(-90deg);
-        transition: bottom 0.1s ease-out,
+        transition:
+          bottom 0.1s ease-out,
           -webkit-transform 0.22s 0.12s cubic-bezier(0.215, 0.61, 0.355, 1);
       `}
   }
@@ -101,9 +112,12 @@ const HamburgerBars = styled(({ color, isOpen, ...restProps }) => (
   outer Hamburger component
 */
 class Hamburger extends Component {
-  state = {
-    isOpen: this.props.isOpen
-  };
+  constructor(props) {
+    super(props);
+    this.state = {
+      isOpen: this.props.isOpen,
+    };
+  }
 
   componentDidUpdate(prevProps) {
     if (
@@ -123,7 +137,7 @@ class Hamburger extends Component {
         } else {
           this.props.onClose();
         }
-      }
+      },
     );
 
   render() {
@@ -152,7 +166,7 @@ Hamburger.propTypes = {
   ariaLabel: PropTypes.string,
   isOpen: PropTypes.bool,
   onOpen: PropTypes.func,
-  onClose: PropTypes.func
+  onClose: PropTypes.func,
 };
 
 Hamburger.defaultProps = {
@@ -161,7 +175,7 @@ Hamburger.defaultProps = {
   ariaLabel: "Toggle navigation",
   isOpen: false,
   onOpen: null,
-  onClose: null
+  onClose: null,
 };
 
 export default Hamburger;

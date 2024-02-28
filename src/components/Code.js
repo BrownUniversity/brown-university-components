@@ -22,10 +22,10 @@ const Tag = styled.code`
 /*
   outer Code component
 */
-const Code = props => <Tag {...props} />;
+const Code = (props) => <Tag {...props} />;
 
 Code.propTypes = {
-  children: PropTypes.node.isRequired
+  children: PropTypes.node.isRequired,
 };
 
 export default Code;

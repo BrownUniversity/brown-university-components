@@ -7,7 +7,7 @@ const renderLoader = ({ props = {} } = {}) => {
 
   return {
     loader: rtlUtils.container.firstChild,
-    ...rtlUtils
+    ...rtlUtils,
   };
 };
 

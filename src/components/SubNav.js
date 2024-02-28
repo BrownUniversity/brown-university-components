@@ -9,7 +9,7 @@ const SubNav = ({ children, ...restProps }) => (
 );
 
 SubNav.propTypes = {
-  children: PropTypes.node.isRequired
+  children: PropTypes.node.isRequired,
 };
 
 SubNav.Item = Nav.Item;

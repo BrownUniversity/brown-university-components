@@ -16,7 +16,7 @@ import media from "../../media";
 const NavbarWrapper = styled(
   ({ color, mobileBreakpoint, toggleTitle, ...restProps }) => (
     <nav {...restProps} />
-  )
+  ),
 )`
   align-items: center;
   box-shadow: 0 5px 10px 0 #00000026;
@@ -66,6 +66,7 @@ const Navbar = ({
       )}
     </NavbarLogoLink>
     <NavbarChildrenWrapper>
+      {/* eslint-disable-next-line react/jsx-no-constructed-context-values */}
       <NavbarContext.Provider value={{ color, mobileBreakpoint, toggleTitle }}>
         {children}
       </NavbarContext.Provider>
@@ -77,14 +78,14 @@ Navbar.propTypes = {
   color: PropTypes.oneOf(["brown", "white"]),
   mobileBreakpoint: PropTypes.number,
   toggleTitle: PropTypes.string,
-  children: PropTypes.node
+  children: PropTypes.node,
 };
 
 Navbar.defaultProps = {
   color: "brown",
   mobileBreakpoint: breakpoints.md,
   toggleTitle: "Global Navigation",
-  children: null
+  children: null,
 };
 
 Navbar.Nav = NavbarNav;

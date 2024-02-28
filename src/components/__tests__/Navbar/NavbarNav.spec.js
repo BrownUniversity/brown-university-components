@@ -20,19 +20,19 @@ const renderNavbarNav = ({
         <NavbarNav.Link disabled>Link</NavbarNav.Link>
       </NavbarNav.Item>
     </React.Fragment>
-  )
+  ),
 } = {}) => {
   const { color = "brown", mobileBreakpoint = breakpoints.md } = context;
   const rtlUtils = render(
     <NavbarContext.Provider value={{ color, mobileBreakpoint }}>
       <NavbarNav {...props}>{children}</NavbarNav>
-    </NavbarContext.Provider>
+    </NavbarContext.Provider>,
   );
   const navbarNav = rtlUtils.container.firstChild;
   return {
     navbarNav,
     navbarNavMobileNavWrapper: navbarNav.children[1],
-    ...rtlUtils
+    ...rtlUtils,
   };
 };
 
@@ -63,12 +63,12 @@ describe("NavbarNav", () => {
 
       it("should render white mobile navbar nav when color variant is provided", () => {
         const { navbarNavMobileNavWrapper } = renderNavbarNav({
-          context: { color: "white" }
+          context: { color: "white" },
         });
 
         expect(navbarNavMobileNavWrapper).toHaveStyleRule(
           "background-color",
-          "#FFFFFF"
+          "#FFFFFF",
         );
       });
     });

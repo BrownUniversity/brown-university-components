@@ -26,5 +26,5 @@ export default {
     @media (min-width: ${breakpoints.xxl}px) {
       ${css(...args)};
     }
-  `
+  `,
 };

@@ -58,7 +58,7 @@ const NavWrapper = styled.div`
 /*
   outer NavbarGlobalNav component
 */
-const getChildColor = color => {
+const getChildColor = (color) => {
   switch (color) {
     case "white":
       return "red";
@@ -129,7 +129,7 @@ const NavbarGlobalNav = ({ children, ...restProps }) => (
 );
 
 NavbarGlobalNav.propTypes = {
-  children: PropTypes.node.isRequired
+  children: PropTypes.node.isRequired,
 };
 
 NavbarGlobalNav.Item = Nav.Item;

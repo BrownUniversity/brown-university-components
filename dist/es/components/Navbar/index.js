@@ -1,21 +1,14 @@
-function _extends() { _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends.apply(this, arguments); }
-
+function _extends() { _extends = Object.assign ? Object.assign.bind() : function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends.apply(this, arguments); }
 function _templateObject() {
   var data = _taggedTemplateLiteral(["\n    padding: 0 33px;\n  "]);
-
   _templateObject = function _templateObject() {
     return data;
   };
-
   return data;
 }
-
 function _taggedTemplateLiteral(strings, raw) { if (!raw) { raw = strings.slice(0); } return Object.freeze(Object.defineProperties(strings, { raw: { value: Object.freeze(raw) } })); }
-
 function _objectWithoutProperties(source, excluded) { if (source == null) return {}; var target = _objectWithoutPropertiesLoose(source, excluded); var key, i; if (Object.getOwnPropertySymbols) { var sourceSymbolKeys = Object.getOwnPropertySymbols(source); for (i = 0; i < sourceSymbolKeys.length; i++) { key = sourceSymbolKeys[i]; if (excluded.indexOf(key) >= 0) continue; if (!Object.prototype.propertyIsEnumerable.call(source, key)) continue; target[key] = source[key]; } } return target; }
-
 function _objectWithoutPropertiesLoose(source, excluded) { if (source == null) return {}; var target = {}; var sourceKeys = Object.keys(source); var key, i; for (i = 0; i < sourceKeys.length; i++) { key = sourceKeys[i]; if (excluded.indexOf(key) >= 0) continue; target[key] = source[key]; } return target; }
-
 import PropTypes from "prop-types";
 import React from "react";
 import styled from "styled-components";
@@ -23,7 +16,6 @@ import { breakpoints, colors } from "brown-university-styles";
 import NavbarContext from "./NavbarContext";
 import NavbarNav from "./NavbarNav";
 import NavbarGlobalNav from "./NavbarGlobalNav";
-
 var LogoFullColorSVG = function LogoFullColorSVG(props) {
   return /*#__PURE__*/React.createElement("svg", props, /*#__PURE__*/React.createElement("title", {
     id: "title"
@@ -94,13 +86,11 @@ var LogoFullColorSVG = function LogoFullColorSVG(props) {
     d: "M156.166 78.175c4.666 0 7.323.778 9.462 2.269 2.203 1.555 3.37 3.889 3.37 7.127 0 5.703-5.379 8.49-8.489 9.268v.13c5.896.842 11.211 4.341 11.211 10.888 0 4.6-2.269 7.84-6.027 9.979-3.306 1.815-7.452 2.463-12.378 2.463H138.41v-1.491c5.444-.389 5.962-.842 5.962-7.906V87.571c-.064-7.064-.454-7.517-5.572-7.906v-1.491h17.366zm-6.351 18.34h4.083c6.221 0 9.331-2.917 9.331-8.231 0-3.888-1.619-8.229-9.268-8.229-2.138 0-3.045.193-3.563.389-.39.129-.584.389-.584 1.685v14.386zm0 1.88v14.126c0 4.343.843 5.834 5.572 5.769 5.444 0 10.046-2.722 10.046-9.592 0-7.064-5.185-10.303-11.858-10.303h-3.76zM191.099 110.902c0 7.064.52 7.517 5.834 7.906v1.491h-17.238v-1.491c5.442-.389 5.961-.842 5.961-7.906V87.571c0-7.064-.519-7.517-5.703-7.906v-1.491h16.462c4.146 0 7.841.583 10.238 2.204 2.593 1.62 4.277 4.537 4.277 8.295 0 5.379-3.305 9.203-8.553 11.341 1.166 1.944 3.822 6.416 5.767 9.268 2.333 3.435 3.694 5.184 5.443 7.128 1.36 1.621 2.527 2.658 4.86 3.24l-.13 1.231h-.907c-7.453-.194-9.721-2.462-12.184-6.026-2.008-2.917-4.73-7.711-6.545-10.759-1.038-1.685-2.074-2.333-4.082-2.333h-3.501v9.139zm0-11.018h3.759c2.658 0 4.732-.324 6.482-1.75 2.786-2.202 3.758-5.378 3.758-8.554 0-6.805-4.926-9.526-9.786-9.526-2.203 0-3.109.129-3.63.324-.388.129-.583.454-.583 1.75v17.756zM264.29 98.654c0 13.479-9.396 22.616-21.773 22.616-12.248 0-20.932-9.332-20.932-21.579 0-10.888 7.646-22.488 22.098-22.488 11.211 0 20.607 8.684 20.607 21.451zm-22.292-19.312c-7.646 0-14.128 6.286-14.128 18.469 0 12.508 6.546 21.32 16.008 21.32 7.776 0 14.126-6.026 14.126-18.08 0-13.997-6.738-21.709-16.006-21.709zM285.959 79.666l-2.009.259c-2.916.389-3.306.972-2.396 3.823l8.748 27.608h.13l10.369-32.534h1.555l11.729 32.469h.13c2.657-8.166 6.417-21.84 7.518-26.506.908-3.758.585-4.537-2.333-4.86l-1.879-.259v-1.491h13.738v1.491c-4.277.518-4.73.778-6.868 6.675-.585 1.62-5.315 16.525-10.76 34.347h-1.75l-11.663-31.69-.13.129-10.564 31.561h-1.814l-11.211-34.801c-1.75-5.379-2.723-5.832-6.415-6.221v-1.491h15.876v1.491zM375.115 120.753h-1.686L345.304 86.6h-.128v16.526c0 6.805.259 10.304.518 12.313.324 2.268 2.073 3.176 6.351 3.369v1.491H336.49v-1.491c3.564-.129 5.25-1.101 5.573-3.369.26-2.009.521-5.508.521-12.313V89.062c0-4.666-.066-5.703-1.233-7.192-1.23-1.556-2.98-2.01-5.702-2.204v-1.491h9.462l27.283 32.663h.129v-15.49c0-6.804-.26-10.303-.519-12.313-.323-2.268-2.074-3.175-6.352-3.37v-1.491h15.555v1.491c-3.563.129-5.25 1.102-5.573 3.37-.261 2.01-.519 5.509-.519 12.313v25.405z"
   })));
 };
-
 LogoFullColorSVG.defaultProps = {
   viewBox: "0 0 384 192",
   role: "img",
   "'aria-labelledby'": "title"
 };
-
 var LogoTwoColorSVG = function LogoTwoColorSVG(props) {
   return /*#__PURE__*/React.createElement("svg", props, /*#__PURE__*/React.createElement("title", {
     id: "title"
@@ -140,24 +130,22 @@ var LogoTwoColorSVG = function LogoTwoColorSVG(props) {
     d: "M156.2 78.2c4.7 0 7.3.8 9.5 2.3 2.2 1.6 3.4 3.9 3.4 7.1 0 5.7-5.4 8.5-8.5 9.3v.1c5.9.8 11.2 4.3 11.2 10.9 0 4.6-2.3 7.8-6 10-3.3 1.8-7.5 2.5-12.4 2.5h-14.9v-1.5c5.4-.4 6-.8 6-7.9V87.6c-.1-7.1-.5-7.5-5.6-7.9v-1.5h17.3zm-6.4 18.3h4.1c6.2 0 9.3-2.9 9.3-8.2 0-3.9-1.6-8.2-9.3-8.2-2.1 0-3 .2-3.6.4-.4.1-.6.4-.6 1.7l.1 14.3zm0 1.9v14.1c0 4.3.8 5.8 5.6 5.8 5.4 0 10-2.7 10-9.6 0-7.1-5.2-10.3-11.9-10.3h-3.7zM191.1 110.9c0 7.1.5 7.5 5.8 7.9v1.5h-17.2v-1.5c5.4-.4 6-.8 6-7.9V87.6c0-7.1-.5-7.5-5.7-7.9v-1.5h16.5c4.1 0 7.8.6 10.2 2.2 2.6 1.6 4.3 4.5 4.3 8.3 0 5.4-3.3 9.2-8.6 11.3 1.2 1.9 3.8 6.4 5.8 9.3 2.3 3.4 3.7 5.2 5.4 7.1 1.4 1.6 2.5 2.7 4.9 3.2l-.1 1.2h-.9c-7.5-.2-9.7-2.5-12.2-6-2-2.9-4.7-7.7-6.5-10.8-1-1.7-2.1-2.3-4.1-2.3h-3.5l-.1 9.2zm0-11h3.8c2.7 0 4.7-.3 6.5-1.8 2.8-2.2 3.8-5.4 3.8-8.6 0-6.8-4.9-9.5-9.8-9.5-2.2 0-3.1.1-3.6.3-.4.1-.6.5-.6 1.8v17.8zM264.3 98.7c0 13.5-9.4 22.6-21.8 22.6-12.2 0-20.9-9.3-20.9-21.6 0-10.9 7.6-22.5 22.1-22.5 11.2 0 20.6 8.7 20.6 21.5zM242 79.3c-7.6 0-14.1 6.3-14.1 18.5 0 12.5 6.5 21.3 16 21.3 7.8 0 14.1-6 14.1-18.1 0-13.9-6.7-21.7-16-21.7zM286 79.7l-2 .3c-2.9.4-3.3 1-2.4 3.8l8.7 27.6h.1l10.4-32.5h1.6l11.7 32.5h.1c2.7-8.2 6.4-21.8 7.5-26.5.9-3.8.6-4.5-2.3-4.9l-1.9-.3v-1.5h13.7v1.5c-4.3.5-4.7.8-6.9 6.7-.6 1.6-5.3 16.5-10.8 34.3h-1.8L300.2 89l-.1.1-10.6 31.6h-1.8l-11.2-34.8c-1.8-5.4-2.7-5.8-6.4-6.2v-1.5H286v1.5zM375.1 120.8h-1.7l-28.1-34.2h-.1v16.5c0 6.8.3 10.3.5 12.3.3 2.3 2.1 3.2 6.4 3.4v1.5h-15.6v-1.5c3.6-.1 5.2-1.1 5.6-3.4.3-2 .5-5.5.5-12.3v-14c0-4.7-.1-5.7-1.2-7.2-1.2-1.6-3-2-5.7-2.2v-1.5h9.5l27.3 32.7h.1V95.3c0-6.8-.3-10.3-.5-12.3-.3-2.3-2.1-3.2-6.4-3.4v-1.5h15.6v1.5c-3.6.1-5.2 1.1-5.6 3.4-.3 2-.5 5.5-.5 12.3l-.1 25.5z"
   }))));
 };
-
 LogoTwoColorSVG.defaultProps = {
   viewBox: "0 0 384 192",
   role: "img",
   "'aria-labelledby'": "title"
 };
 import media from "../../media";
+
 /*
   inner components
 */
 // filter props so they don't become dom attributes (see `styled-components` issue 439)
-
 var NavbarWrapper = styled(function (_ref) {
   var color = _ref.color,
-      mobileBreakpoint = _ref.mobileBreakpoint,
-      toggleTitle = _ref.toggleTitle,
-      restProps = _objectWithoutProperties(_ref, ["color", "mobileBreakpoint", "toggleTitle"]);
-
+    mobileBreakpoint = _ref.mobileBreakpoint,
+    toggleTitle = _ref.toggleTitle,
+    restProps = _objectWithoutProperties(_ref, ["color", "mobileBreakpoint", "toggleTitle"]);
   return /*#__PURE__*/React.createElement("nav", restProps);
 }).withConfig({
   displayName: "Navbar__NavbarWrapper",
@@ -174,23 +162,21 @@ var NavbarChildrenWrapper = styled.div.withConfig({
   displayName: "Navbar__NavbarChildrenWrapper",
   componentId: "sc-6w2m5m-2"
 })(["text-align:right;"]);
+
 /*
   outer Navbar component
 */
-
 var logoProps = {
   display: "block",
   height: 65,
   width: 131
 };
-
 var Navbar = function Navbar(_ref3) {
   var color = _ref3.color,
-      mobileBreakpoint = _ref3.mobileBreakpoint,
-      toggleTitle = _ref3.toggleTitle,
-      children = _ref3.children,
-      restProps = _objectWithoutProperties(_ref3, ["color", "mobileBreakpoint", "toggleTitle", "children"]);
-
+    mobileBreakpoint = _ref3.mobileBreakpoint,
+    toggleTitle = _ref3.toggleTitle,
+    children = _ref3.children,
+    restProps = _objectWithoutProperties(_ref3, ["color", "mobileBreakpoint", "toggleTitle", "children"]);
   return /*#__PURE__*/React.createElement(NavbarWrapper, _extends({}, restProps, {
     color: color
   }), /*#__PURE__*/React.createElement(NavbarLogoLink, {
@@ -205,7 +191,6 @@ var Navbar = function Navbar(_ref3) {
     }
   }, children)));
 };
-
 Navbar.propTypes = {
   color: PropTypes.oneOf(["brown", "white"]),
   mobileBreakpoint: PropTypes.number,

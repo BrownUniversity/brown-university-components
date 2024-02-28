@@ -12,7 +12,7 @@ const renderBanner = ({ props = {}, children = null } = {}) => {
     bannerImage: banner.firstChild.firstChild,
     bannerSVG: banner.firstChild.firstChild.firstChild,
     bannerChildrenWrapper: banner.children[1],
-    ...rtlUtils
+    ...rtlUtils,
   };
 };
 
@@ -101,7 +101,7 @@ describe("Banner", () => {
 
     it("should render small banner when size variant is provided", () => {
       const { bannerImageColorWrapper, bannerChildrenWrapper } = renderBanner({
-        props: { size: "small" }
+        props: { size: "small" },
       });
 
       expect(bannerImageColorWrapper).toHaveStyleRule("max-height", "150px");
@@ -110,7 +110,7 @@ describe("Banner", () => {
 
     it("should render medium banner when size variant is provided", () => {
       const { bannerImageColorWrapper, bannerChildrenWrapper } = renderBanner({
-        props: { size: "medium" }
+        props: { size: "medium" },
       });
 
       expect(bannerImageColorWrapper).toHaveStyleRule("max-height", "300px");
@@ -119,7 +119,7 @@ describe("Banner", () => {
 
     it("should render large banner when size variant is provided", () => {
       const { bannerImageColorWrapper, bannerChildrenWrapper } = renderBanner({
-        props: { size: "large" }
+        props: { size: "large" },
       });
 
       expect(bannerImageColorWrapper).toHaveStyleRule("max-height", "600px");
@@ -128,7 +128,7 @@ describe("Banner", () => {
 
     it("should render banner with image background when src is provided", () => {
       const { bannerImage } = renderBanner({
-        props: { src: "./path/to/img.jpg" }
+        props: { src: "./path/to/img.jpg" },
       });
 
       expect(bannerImage).toMatchInlineSnapshot(`

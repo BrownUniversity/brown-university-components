@@ -7,7 +7,7 @@ const renderFooter = ({ props = {} } = {}) => {
 
   return {
     footer: rtlUtils.container.firstChild,
-    ...rtlUtils
+    ...rtlUtils,
   };
 };
 

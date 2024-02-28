@@ -1,8 +1,14 @@
 import React from "react";
-import { storiesOf } from "@storybook/react";
 import { withKnobs, number } from "@storybook/addon-knobs";
 import { Loader } from "../src";
 
-storiesOf("Loader", module)
-  .addDecorator(withKnobs)
-  .add("default", () => <Loader height={number("height", 250)} />);
+export default {
+  title: "Loader",
+  decorators: [withKnobs],
+};
+
+export const Default = () => <Loader height={number("height", 250)} />;
+
+Default.story = {
+  name: "default",
+};

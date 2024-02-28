@@ -20,17 +20,17 @@ const renderNavbarGlobalNav = ({
         <NavbarGlobalNav.Link disabled>Link</NavbarGlobalNav.Link>
       </NavbarGlobalNav.Item>
     </React.Fragment>
-  )
+  ),
 } = {}) => {
   const {
     color = "brown",
     mobileBreakpoint = breakpoints.md,
-    toggleTitle = "Global Navigation"
+    toggleTitle = "Global Navigation",
   } = context;
   const rtlUtils = render(
     <NavbarContext.Provider value={{ color, mobileBreakpoint, toggleTitle }}>
       <NavbarGlobalNav {...props}>{children}</NavbarGlobalNav>
-    </NavbarContext.Provider>
+    </NavbarContext.Provider>,
   );
   const navbarGlobalNav = rtlUtils.container.firstChild;
 
@@ -38,7 +38,7 @@ const renderNavbarGlobalNav = ({
     navbarGlobalNav,
     navbarGlobalNavToggleTitle: navbarGlobalNav.firstChild.children[1],
     navbarGlobalNavCollapseWrapper: navbarGlobalNav.children[1],
-    ...rtlUtils
+    ...rtlUtils,
   };
 };
 
@@ -52,24 +52,22 @@ describe("NavbarGlobalNav", () => {
       });
 
       it("should render white navbar global nav when color variant is provided", () => {
-        const {
-          navbarGlobalNavToggleTitle,
-          navbarGlobalNavCollapseWrapper
-        } = renderNavbarGlobalNav({
-          context: { color: "white" }
-        });
+        const { navbarGlobalNavToggleTitle, navbarGlobalNavCollapseWrapper } =
+          renderNavbarGlobalNav({
+            context: { color: "white" },
+          });
 
         expect(navbarGlobalNavToggleTitle).toHaveStyleRule("color", "#C00404");
         expect(navbarGlobalNavCollapseWrapper).toHaveStyleRule(
           "background-color",
-          "#FFFFFF"
+          "#FFFFFF",
         );
       });
     });
 
     it("should render custom toggle title when provided", () => {
       const { getByText } = renderNavbarGlobalNav({
-        context: { toggleTitle: "Custom Navigation" }
+        context: { toggleTitle: "Custom Navigation" },
       });
 
       expect(getByText("Custom Navigation")).toBeInTheDocument();
@@ -78,7 +76,7 @@ describe("NavbarGlobalNav", () => {
     it("should toggle navbar global nav collapse", () => {
       const { getByLabelText, getByText } = renderNavbarGlobalNav();
       const toggleButtonByLabelText = getByLabelText(
-        "Toggle global navigation"
+        "Toggle global navigation",
       );
       const toggleButtonByText = getByText("Global Navigation");
 
@@ -108,12 +106,12 @@ describe("NavbarGlobalNav", () => {
 
       it("should render white mobile navbar global nav when color variant is provided", () => {
         const { navbarGlobalNavCollapseWrapper } = renderNavbarGlobalNav({
-          context: { color: "white" }
+          context: { color: "white" },
         });
 
         expect(navbarGlobalNavCollapseWrapper).toHaveStyleRule(
           "background-color",
-          "#FFFFFF"
+          "#FFFFFF",
         );
       });
     });
@@ -121,7 +119,7 @@ describe("NavbarGlobalNav", () => {
     it("should toggle navbar global nav collapse", () => {
       const { getByLabelText } = renderNavbarGlobalNav();
       const toggleButtonByLabelText = getByLabelText(
-        "Toggle global navigation"
+        "Toggle global navigation",
       );
 
       expect(toggleButtonByLabelText).toHaveAttribute("aria-expanded", "false");

@@ -7,12 +7,12 @@ const renderCollapse = ({ props = {}, children = <div /> } = {}) => {
   const rtlUtils = render(
     <Collapse {...restProps} isOpen={isOpen}>
       {children}
-    </Collapse>
+    </Collapse>,
   );
 
   return {
     collapse: rtlUtils.container.firstChild,
-    ...rtlUtils
+    ...rtlUtils,
   };
 };
 
@@ -106,7 +106,7 @@ describe("Collapse", () => {
     rerender(
       <Collapse isOpen>
         <div />
-      </Collapse>
+      </Collapse>,
     );
     fireEvent.transitionEnd(collapse);
 
@@ -118,7 +118,7 @@ describe("Collapse", () => {
   it("should transition from open to closed", async () => {
     process.NODE_ENV = "jest";
     const { collapse, rerender } = renderCollapse({
-      props: { isOpen: true }
+      props: { isOpen: true },
     });
 
     expect(collapse).toHaveStyleRule("display", "block");
@@ -126,7 +126,7 @@ describe("Collapse", () => {
     rerender(
       <Collapse isOpen={false}>
         <div />
-      </Collapse>
+      </Collapse>,
     );
     fireEvent.transitionEnd(collapse);
 

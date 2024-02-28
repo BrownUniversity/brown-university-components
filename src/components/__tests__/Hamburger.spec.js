@@ -9,7 +9,7 @@ const renderHamburger = ({ props = {} } = {}) => {
   return {
     hamburger,
     hamburgerBars: hamburger.firstChild,
-    ...rtlUtils
+    ...rtlUtils,
   };
 };
 
@@ -98,7 +98,7 @@ describe("Hamburger", () => {
 
       it("should render open red button element when variant is provided", () => {
         const { hamburger } = renderHamburger({
-          props: { isOpen: true }
+          props: { isOpen: true },
         });
 
         expect(hamburger).toMatchInlineSnapshot(`
@@ -206,29 +206,29 @@ describe("Hamburger", () => {
 
       it("should render closed white button element when variant is provided", () => {
         const { hamburgerBars } = renderHamburger({
-          props: { color: "white" }
+          props: { color: "white" },
         });
 
         expect(hamburgerBars).toHaveStyleRule("background-color", "#FFFFFF");
         expect(hamburgerBars).toHaveStyleRule("background-color", "#FFFFFF", {
-          modifier: "&&:before"
+          modifier: "&&:before",
         });
         expect(hamburgerBars).toHaveStyleRule("background-color", "#FFFFFF", {
-          modifier: "&&:after"
+          modifier: "&&:after",
         });
       });
 
       it("should render open white button element when variant is provided", () => {
         const { hamburgerBars } = renderHamburger({
-          props: { color: "white", isOpen: true }
+          props: { color: "white", isOpen: true },
         });
 
         expect(hamburgerBars).toHaveStyleRule("background-color", "#FFFFFF");
         expect(hamburgerBars).toHaveStyleRule("background-color", "#FFFFFF", {
-          modifier: "&&:before"
+          modifier: "&&:before",
         });
         expect(hamburgerBars).toHaveStyleRule("background-color", "#FFFFFF", {
-          modifier: "&&:after"
+          modifier: "&&:after",
         });
       });
     });
@@ -238,7 +238,7 @@ describe("Hamburger", () => {
         const onOpen = jest.fn();
         const onClose = jest.fn();
         const { hamburger } = renderHamburger({
-          props: { onOpen, onClose }
+          props: { onOpen, onClose },
         });
 
         fireEvent.click(hamburger);
@@ -250,7 +250,7 @@ describe("Hamburger", () => {
         const onOpen = jest.fn();
         const onClose = jest.fn();
         const { hamburger } = renderHamburger({
-          props: { isOpen: true, onOpen, onClose }
+          props: { isOpen: true, onOpen, onClose },
         });
 
         fireEvent.click(hamburger);
@@ -261,7 +261,7 @@ describe("Hamburger", () => {
 
     it("should render custom aria-label when provided", () => {
       const { hamburger } = renderHamburger({
-        props: { ariaLabel: "Custom label" }
+        props: { ariaLabel: "Custom label" },
       });
 
       expect(hamburger).toHaveAttribute("aria-label", "Custom label");
@@ -299,7 +299,7 @@ describe("Hamburger", () => {
 
       it("should render open with alternate styles", () => {
         const { hamburger } = renderHamburger({
-          props: { tag: "div", isOpen: true }
+          props: { tag: "div", isOpen: true },
         });
 
         expect(hamburger).toHaveStyleRule("cursor", "inherit");

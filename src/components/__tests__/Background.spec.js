@@ -7,12 +7,12 @@ const renderBackground = ({ props = {}, children = <div /> } = {}) => {
   const rtlUtils = render(
     <Background {...restProps} url={url}>
       {children}
-    </Background>
+    </Background>,
   );
 
   return {
     background: rtlUtils.container.firstChild,
-    ...rtlUtils
+    ...rtlUtils,
   };
 };
 
@@ -55,7 +55,7 @@ describe("Background", () => {
 
     it("should render lightGray background when color variant is provided", () => {
       const { background } = renderBackground({
-        props: { color: "lightGray" }
+        props: { color: "lightGray" },
       });
 
       expect(background).toHaveStyleRule("background-color", "#F0F3F5");
@@ -65,7 +65,7 @@ describe("Background", () => {
       const { background } = renderBackground({ props: { full: false } });
 
       expect(background).not.toHaveStyleRule("background-size", "100%", {
-        media: "(min-width: 1600px)"
+        media: "(min-width: 1600px)",
       });
     });
 

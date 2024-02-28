@@ -1,8 +1,11 @@
 import React from "react";
-import { storiesOf } from "@storybook/react";
 import { SubNav } from "../src";
 
-storiesOf("SubNav", module).add("default", () => (
+export default {
+  title: "SubNav",
+};
+
+export const Default = () => (
   <SubNav>
     <SubNav.Item>
       <SubNav.Link>Link</SubNav.Link>
@@ -14,4 +17,8 @@ storiesOf("SubNav", module).add("default", () => (
       <SubNav.Link disabled>Disabled Link</SubNav.Link>
     </SubNav.Item>
   </SubNav>
-));
+);
+
+Default.story = {
+  name: "default",
+};

@@ -14,7 +14,7 @@ const { sansBold } = typography;
   inner components
 */
 const MobileBannerPositioningWrapper = styled.div`
-  ${props =>
+  ${(props) =>
     props.banner &&
     css`
       margin: 0 auto;
@@ -69,7 +69,7 @@ const MobileNavWrapper = styled.div`
 `;
 
 const BannerPositioningWrapper = styled.div`
-  ${props =>
+  ${(props) =>
     props.banner &&
     css`
       background-color: ${colors.white};
@@ -111,7 +111,7 @@ const SiteNav = ({
               <VisibilityToggle>
                 {({
                   isOpen: mobileNavIsOpen,
-                  toggleIsOpen: toggleMobileNav
+                  toggleIsOpen: toggleMobileNav,
                 }) => (
                   <React.Fragment>
                     <MobileToggleButton
@@ -161,13 +161,13 @@ SiteNav.propTypes = {
   banner: PropTypes.bool,
   mobileBreakpoint: PropTypes.number,
   mobileToggleTitle: PropTypes.string,
-  children: PropTypes.node.isRequired
+  children: PropTypes.node.isRequired,
 };
 
 SiteNav.defaultProps = {
   banner: false,
   mobileBreakpoint: breakpoints.md,
-  mobileToggleTitle: "Site Navigation"
+  mobileToggleTitle: "Site Navigation",
 };
 
 SiteNav.Item = Nav.Item;

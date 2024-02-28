@@ -16,13 +16,13 @@ const renderSubNav = ({
         <SubNav.Link disabled>Link</SubNav.Link>
       </SubNav.Item>
     </React.Fragment>
-  )
+  ),
 } = {}) => {
   const rtlUtils = render(<SubNav {...props}>{children}</SubNav>);
 
   return {
     subNav: rtlUtils.container.firstChild,
-    ...rtlUtils
+    ...rtlUtils,
   };
 };
 
