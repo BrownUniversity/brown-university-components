@@ -1,255 +1,4 @@
-function _templateObject36() {
-  var data = _taggedTemplateLiteral(["\n    border-top: 0;\n    font-size: ", ";\n    margin: 0;\n    order: 1;\n    padding-top: 0;\n    position: relative;\n    top: 2px;\n  "]);
-  _templateObject36 = function _templateObject36() {
-    return data;
-  };
-  return data;
-}
-function _templateObject35() {
-  var data = _taggedTemplateLiteral(["\n    padding: 19px 15px;\n  "]);
-  _templateObject35 = function _templateObject35() {
-    return data;
-  };
-  return data;
-}
-function _templateObject34() {
-  var data = _taggedTemplateLiteral(["\n    width: auto;\n  "]);
-  _templateObject34 = function _templateObject34() {
-    return data;
-  };
-  return data;
-}
-function _templateObject33() {
-  var data = _taggedTemplateLiteral(["\n    margin-bottom: 0;\n    order: 2;\n  "]);
-  _templateObject33 = function _templateObject33() {
-    return data;
-  };
-  return data;
-}
-function _templateObject32() {
-  var data = _taggedTemplateLiteral(["\n    align-items: center;\n    display: flex;\n    flex-wrap: none;\n    justify-content: space-between;\n  "]);
-  _templateObject32 = function _templateObject32() {
-    return data;
-  };
-  return data;
-}
-function _templateObject31() {
-  var data = _taggedTemplateLiteral(["\n    padding: 0;\n  "]);
-  _templateObject31 = function _templateObject31() {
-    return data;
-  };
-  return data;
-}
-function _templateObject30() {
-  var data = _taggedTemplateLiteral(["\n    width: 100%;\n  "]);
-  _templateObject30 = function _templateObject30() {
-    return data;
-  };
-  return data;
-}
-function _templateObject29() {
-  var data = _taggedTemplateLiteral(["\n    align-items: center;\n    display: flex;\n    flex-wrap: wrap;\n    padding-left: 50px;\n    width: ", "px;\n  "]);
-  _templateObject29 = function _templateObject29() {
-    return data;
-  };
-  return data;
-}
-function _templateObject28() {
-  var data = _taggedTemplateLiteral(["\n    padding-right: 32px;\n    width: auto;\n  "]);
-  _templateObject28 = function _templateObject28() {
-    return data;
-  };
-  return data;
-}
-function _templateObject27() {
-  var data = _taggedTemplateLiteral(["\n    padding-right: 20px;\n    width: 50%;\n  "]);
-  _templateObject27 = function _templateObject27() {
-    return data;
-  };
-  return data;
-}
-function _templateObject26() {
-  var data = _taggedTemplateLiteral(["\n    padding: 30px 0 35px;\n  "]);
-  _templateObject26 = function _templateObject26() {
-    return data;
-  };
-  return data;
-}
-function _templateObject25() {
-  var data = _taggedTemplateLiteral(["\n    display: flex;\n    flex-wrap: wrap;\n  "]);
-  _templateObject25 = function _templateObject25() {
-    return data;
-  };
-  return data;
-}
-function _templateObject24() {
-  var data = _taggedTemplateLiteral(["\n      display: none;\n    "]);
-  _templateObject24 = function _templateObject24() {
-    return data;
-  };
-  return data;
-}
-function _templateObject23() {
-  var data = _taggedTemplateLiteral(["\n    display: inline-block;\n    vertical-align: top;\n  "]);
-  _templateObject23 = function _templateObject23() {
-    return data;
-  };
-  return data;
-}
-function _templateObject22() {
-  var data = _taggedTemplateLiteral(["\n    border-top: 1px solid rgba(183, 176, 156, 0.2);\n    margin-bottom: 0;\n  "]);
-  _templateObject22 = function _templateObject22() {
-    return data;
-  };
-  return data;
-}
-function _templateObject21() {
-  var data = _taggedTemplateLiteral(["\n    padding-right: 32px;\n    width: auto;\n  "]);
-  _templateObject21 = function _templateObject21() {
-    return data;
-  };
-  return data;
-}
-function _templateObject20() {
-  var data = _taggedTemplateLiteral(["\n    padding-right: 20px;\n    width: 50%;\n  "]);
-  _templateObject20 = function _templateObject20() {
-    return data;
-  };
-  return data;
-}
-function _templateObject19() {
-  var data = _taggedTemplateLiteral(["\n    display: flex;\n    flex-wrap: wrap;\n  "]);
-  _templateObject19 = function _templateObject19() {
-    return data;
-  };
-  return data;
-}
-function _templateObject18() {
-  var data = _taggedTemplateLiteral(["\n    margin-bottom: 30px;\n  "]);
-  _templateObject18 = function _templateObject18() {
-    return data;
-  };
-  return data;
-}
-function _templateObject17() {
-  var data = _taggedTemplateLiteral(["\n    font-size: ", ";\n    line-height: 1.33333;\n  "]);
-  _templateObject17 = function _templateObject17() {
-    return data;
-  };
-  return data;
-}
-function _templateObject16() {
-  var data = _taggedTemplateLiteral(["\n    font-size: ", ";\n    line-height: 1.25;\n  "]);
-  _templateObject16 = function _templateObject16() {
-    return data;
-  };
-  return data;
-}
-function _templateObject15() {
-  var data = _taggedTemplateLiteral(["\n    margin-right: 40px;\n    margin-bottom: 0;\n  "]);
-  _templateObject15 = function _templateObject15() {
-    return data;
-  };
-  return data;
-}
-function _templateObject14() {
-  var data = _taggedTemplateLiteral(["\n    margin-bottom: 28px;\n  "]);
-  _templateObject14 = function _templateObject14() {
-    return data;
-  };
-  return data;
-}
-function _templateObject13() {
-  var data = _taggedTemplateLiteral(["\n    font-size: ", ";\n    letter-spacing: ", ";\n  "]);
-  _templateObject13 = function _templateObject13() {
-    return data;
-  };
-  return data;
-}
-function _templateObject12() {
-  var data = _taggedTemplateLiteral(["\n    margin-bottom: 12px;\n  "]);
-  _templateObject12 = function _templateObject12() {
-    return data;
-  };
-  return data;
-}
-function _templateObject11() {
-  var data = _taggedTemplateLiteral(["\n    border-right: 1px solid rgba(183, 176, 156, 0.2);\n    padding-top: 15px;\n    padding-right: 50px;\n    width: calc(100% - ", "px);\n  "]);
-  _templateObject11 = function _templateObject11() {
-    return data;
-  };
-  return data;
-}
-function _templateObject10() {
-  var data = _taggedTemplateLiteral(["\n    flex-direction: row;\n  "]);
-  _templateObject10 = function _templateObject10() {
-    return data;
-  };
-  return data;
-}
-function _templateObject9() {
-  var data = _taggedTemplateLiteral(["\n    padding: 90px 0 45px;\n  "]);
-  _templateObject9 = function _templateObject9() {
-    return data;
-  };
-  return data;
-}
-function _templateObject8() {
-  var data = _taggedTemplateLiteral(["\n    padding: 60px 0 70px;\n  "]);
-  _templateObject8 = function _templateObject8() {
-    return data;
-  };
-  return data;
-}
-function _templateObject7() {
-  var data = _taggedTemplateLiteral(["\n    width: ", "px;\n  "]);
-  _templateObject7 = function _templateObject7() {
-    return data;
-  };
-  return data;
-}
-function _templateObject6() {
-  var data = _taggedTemplateLiteral(["\n    width: ", "px;\n  "]);
-  _templateObject6 = function _templateObject6() {
-    return data;
-  };
-  return data;
-}
-function _templateObject5() {
-  var data = _taggedTemplateLiteral(["\n    width: ", "px;\n  "]);
-  _templateObject5 = function _templateObject5() {
-    return data;
-  };
-  return data;
-}
-function _templateObject4() {
-  var data = _taggedTemplateLiteral(["\n    width: ", "px;\n  "]);
-  _templateObject4 = function _templateObject4() {
-    return data;
-  };
-  return data;
-}
-function _templateObject3() {
-  var data = _taggedTemplateLiteral(["\n    width: ", "px;\n  "]);
-  _templateObject3 = function _templateObject3() {
-    return data;
-  };
-  return data;
-}
-function _templateObject2() {
-  var data = _taggedTemplateLiteral(["\n    top: 2px;\n  "]);
-  _templateObject2 = function _templateObject2() {
-    return data;
-  };
-  return data;
-}
-function _templateObject() {
-  var data = _taggedTemplateLiteral(["\n    display: inline-block;\n    vertical-align: top;\n  "]);
-  _templateObject = function _templateObject() {
-    return data;
-  };
-  return data;
-}
+var _templateObject, _templateObject2, _templateObject3, _templateObject4, _templateObject5, _templateObject6, _templateObject7, _templateObject8, _templateObject9, _templateObject10, _templateObject11, _templateObject12, _templateObject13, _templateObject14, _templateObject15, _templateObject16, _templateObject17, _templateObject18, _templateObject19, _templateObject20, _templateObject21, _templateObject22, _templateObject23, _templateObject24, _templateObject25, _templateObject26, _templateObject27, _templateObject28, _templateObject29, _templateObject30, _templateObject31, _templateObject32, _templateObject33, _templateObject34, _templateObject35, _templateObject36;
 function _taggedTemplateLiteral(strings, raw) { if (!raw) { raw = strings.slice(0); } return Object.freeze(Object.defineProperties(strings, { raw: { value: Object.freeze(raw) } })); }
 import React from "react";
 import styled, { css } from "styled-components";
@@ -343,8 +92,8 @@ var ribbonAsideWidth = 325;
 /*
   css mixins
 */
-var addressItemCSS = css(["", " display:block;padding-left:25px;position:relative;", ";"], unstyledLinkCSS, media.lg(_templateObject()));
-var addressIconCSS = css(["fill:rgba(255,255,255,0.2);left:0;position:absolute;top:0;transform-origin:left top;", ";"], media.xl(_templateObject2()));
+var addressItemCSS = css(["", " display:block;padding-left:25px;position:relative;", ";"], unstyledLinkCSS, media.lg(_templateObject || (_templateObject = _taggedTemplateLiteral(["\n    display: inline-block;\n    vertical-align: top;\n  "]))));
+var addressIconCSS = css(["fill:rgba(255,255,255,0.2);left:0;position:absolute;top:0;transform-origin:left top;", ";"], media.xl(_templateObject2 || (_templateObject2 = _taggedTemplateLiteral(["\n    top: 2px;\n  "]))));
 var socialIconCSS = css(["fill:", ";&:hover,&:focus{fill:", ";}"], colors.white, colors.gold);
 
 /*
@@ -357,7 +106,7 @@ var PaddedFooterLink = styled(FooterLink).withConfig({
 var Margins = styled.div.withConfig({
   displayName: "Footer__Margins",
   componentId: "sc-1s3f2bx-1"
-})(["display:flex;flex-wrap:wrap;margin-left:auto;margin-right:auto;min-width:320px;width:calc(100% - 40px);", ";", ";", ";", ";", ";"], media.sm(_templateObject3(), breakpoints.sm - 20), media.md(_templateObject4(), breakpoints.md - 20), media.lg(_templateObject5(), breakpoints.lg - 20), media.xl(_templateObject6(), breakpoints.xl - 20), media.xxl(_templateObject7(), breakpoints.xxl - 20));
+})(["display:flex;flex-wrap:wrap;margin-left:auto;margin-right:auto;min-width:320px;width:calc(100% - 40px);", ";", ";", ";", ";", ";"], media.sm(_templateObject3 || (_templateObject3 = _taggedTemplateLiteral(["\n    width: ", "px;\n  "])), breakpoints.sm - 20), media.md(_templateObject4 || (_templateObject4 = _taggedTemplateLiteral(["\n    width: ", "px;\n  "])), breakpoints.md - 20), media.lg(_templateObject5 || (_templateObject5 = _taggedTemplateLiteral(["\n    width: ", "px;\n  "])), breakpoints.lg - 20), media.xl(_templateObject6 || (_templateObject6 = _taggedTemplateLiteral(["\n    width: ", "px;\n  "])), breakpoints.xl - 20), media.xxl(_templateObject7 || (_templateObject7 = _taggedTemplateLiteral(["\n    width: ", "px;\n  "])), breakpoints.xxl - 20));
 var Wrapper = styled.footer.withConfig({
   displayName: "Footer__Wrapper",
   componentId: "sc-1s3f2bx-2"
@@ -365,23 +114,23 @@ var Wrapper = styled.footer.withConfig({
 var RibbonOuter = styled.div.withConfig({
   displayName: "Footer__RibbonOuter",
   componentId: "sc-1s3f2bx-3"
-})(["padding:40px 0 50px;", ";", ";"], media.md(_templateObject8()), media.lg(_templateObject9()));
+})(["padding:40px 0 50px;", ";", ";"], media.md(_templateObject8 || (_templateObject8 = _taggedTemplateLiteral(["\n    padding: 60px 0 70px;\n  "]))), media.lg(_templateObject9 || (_templateObject9 = _taggedTemplateLiteral(["\n    padding: 90px 0 45px;\n  "]))));
 var RibbonInner = styled.div.withConfig({
   displayName: "Footer__RibbonInner",
   componentId: "sc-1s3f2bx-4"
-})(["display:flex;flex-direction:column;width:100%;", ";"], media.lg(_templateObject10()));
+})(["display:flex;flex-direction:column;width:100%;", ";"], media.lg(_templateObject10 || (_templateObject10 = _taggedTemplateLiteral(["\n    flex-direction: row;\n  "]))));
 var RibbonGroup = styled.div.withConfig({
   displayName: "Footer__RibbonGroup",
   componentId: "sc-1s3f2bx-5"
-})(["", ";"], media.lg(_templateObject11(), ribbonAsideWidth));
+})(["", ";"], media.lg(_templateObject11 || (_templateObject11 = _taggedTemplateLiteral(["\n    border-right: 1px solid rgba(183, 176, 156, 0.2);\n    padding-top: 15px;\n    padding-right: 50px;\n    width: calc(100% - ", "px);\n  "])), ribbonAsideWidth));
 var AddressWrapper = styled.div.withConfig({
   displayName: "Footer__AddressWrapper",
   componentId: "sc-1s3f2bx-6"
-})(["margin-bottom:16px;", ";"], media.xl(_templateObject12()));
+})(["margin-bottom:16px;", ";"], media.xl(_templateObject12 || (_templateObject12 = _taggedTemplateLiteral(["\n    margin-bottom: 12px;\n  "]))));
 var AddressName = styled.span.withConfig({
   displayName: "Footer__AddressName",
   componentId: "sc-1s3f2bx-7"
-})(["color:", ";display:block;font-family:", ";font-size:", ";font-weight:400;letter-spacing:", ";margin-bottom:26px;text-transform:uppercase;", ";", ";"], colors.taupe, typography.sans, getRems(11), getRems(1.25), media.md(_templateObject13(), getRems(13), getRems(1.5)), media.lg(_templateObject14()));
+})(["color:", ";display:block;font-family:", ";font-size:", ";font-weight:400;letter-spacing:", ";margin-bottom:26px;text-transform:uppercase;", ";", ";"], colors.taupe, typography.sans, getRems(11), getRems(1.25), media.md(_templateObject13 || (_templateObject13 = _taggedTemplateLiteral(["\n    font-size: ", ";\n    letter-spacing: ", ";\n  "])), getRems(13), getRems(1.5)), media.lg(_templateObject14 || (_templateObject14 = _taggedTemplateLiteral(["\n    margin-bottom: 28px;\n  "]))));
 var AddressItems = styled.div.withConfig({
   displayName: "Footer__AddressItems",
   componentId: "sc-1s3f2bx-8"
@@ -389,7 +138,7 @@ var AddressItems = styled.div.withConfig({
 var AddressBaseItem = styled.a.withConfig({
   displayName: "Footer__AddressBaseItem",
   componentId: "sc-1s3f2bx-9"
-})(["", " margin-bottom:14px;", ";"], addressItemCSS, media.lg(_templateObject15()));
+})(["", " margin-bottom:14px;", ";"], addressItemCSS, media.lg(_templateObject15 || (_templateObject15 = _taggedTemplateLiteral(["\n    margin-right: 40px;\n    margin-bottom: 0;\n  "]))));
 var AddressPhoneItem = styled.a.withConfig({
   displayName: "Footer__AddressPhoneItem",
   componentId: "sc-1s3f2bx-10"
@@ -405,7 +154,7 @@ var AddressPhoneIcon = styled(PhoneSVG).withConfig({
 var AddressInfo = styled.span.withConfig({
   displayName: "Footer__AddressInfo",
   componentId: "sc-1s3f2bx-13"
-})(["color:", ";font-family:", ";font-weight:400;line-height:1.3125;", ";", ";"], colors.white, typography.serif, media.md(_templateObject16(), getRems(20)), media.xl(_templateObject17(), getRems(24)));
+})(["color:", ";font-family:", ";font-weight:400;line-height:1.3125;", ";", ";"], colors.white, typography.serif, media.md(_templateObject16 || (_templateObject16 = _taggedTemplateLiteral(["\n    font-size: ", ";\n    line-height: 1.25;\n  "])), getRems(20)), media.xl(_templateObject17 || (_templateObject17 = _taggedTemplateLiteral(["\n    font-size: ", ";\n    line-height: 1.33333;\n  "])), getRems(24)));
 var NavigationHeader = styled.h2.withConfig({
   displayName: "Footer__NavigationHeader",
   componentId: "sc-1s3f2bx-14"
@@ -413,35 +162,35 @@ var NavigationHeader = styled.h2.withConfig({
 var QuickNavWrapper = styled.nav.withConfig({
   displayName: "Footer__QuickNavWrapper",
   componentId: "sc-1s3f2bx-15"
-})(["margin-bottom:20px;", ";"], media.xxl(_templateObject18()));
+})(["margin-bottom:20px;", ";"], media.xxl(_templateObject18 || (_templateObject18 = _taggedTemplateLiteral(["\n    margin-bottom: 30px;\n  "]))));
 var QuickNavList = styled.ul.withConfig({
   displayName: "Footer__QuickNavList",
   componentId: "sc-1s3f2bx-16"
-})(["list-style:none;margin:0;padding:0;", ";"], media.md(_templateObject19()));
+})(["list-style:none;margin:0;padding:0;", ";"], media.md(_templateObject19 || (_templateObject19 = _taggedTemplateLiteral(["\n    display: flex;\n    flex-wrap: wrap;\n  "]))));
 var QuickNavListItem = styled.li.withConfig({
   displayName: "Footer__QuickNavListItem",
   componentId: "sc-1s3f2bx-17"
-})(["", ";", ";"], media.md(_templateObject20()), media.xxl(_templateObject21()));
+})(["", ";", ";"], media.md(_templateObject20 || (_templateObject20 = _taggedTemplateLiteral(["\n    padding-right: 20px;\n    width: 50%;\n  "]))), media.xxl(_templateObject21 || (_templateObject21 = _taggedTemplateLiteral(["\n    padding-right: 32px;\n    width: auto;\n  "]))));
 var FooterNavWrapper = styled.nav.withConfig({
   displayName: "Footer__FooterNavWrapper",
   componentId: "sc-1s3f2bx-18"
-})(["margin-bottom:40px;", ";", ";&:before,&:after{background:rgba(183,176,156,0.4);content:\"\";display:block;height:1px;margin:0 -10px;width:calc(100% + 20px);", ";}"], media.lg(_templateObject22()), media.xxl(_templateObject23()), media.lg(_templateObject24()));
+})(["margin-bottom:40px;", ";", ";&:before,&:after{background:rgba(183,176,156,0.4);content:\"\";display:block;height:1px;margin:0 -10px;width:calc(100% + 20px);", ";}"], media.lg(_templateObject22 || (_templateObject22 = _taggedTemplateLiteral(["\n    border-top: 1px solid rgba(183, 176, 156, 0.2);\n    margin-bottom: 0;\n  "]))), media.xxl(_templateObject23 || (_templateObject23 = _taggedTemplateLiteral(["\n    display: inline-block;\n    vertical-align: top;\n  "]))), media.lg(_templateObject24 || (_templateObject24 = _taggedTemplateLiteral(["\n      display: none;\n    "]))));
 var FooterNavList = styled.ul.withConfig({
   displayName: "Footer__FooterNavList",
   componentId: "sc-1s3f2bx-19"
-})(["list-style:none;margin:0;padding:20px 0;", ";", ";"], media.md(_templateObject25()), media.xxl(_templateObject26()));
+})(["list-style:none;margin:0;padding:20px 0;", ";", ";"], media.md(_templateObject25 || (_templateObject25 = _taggedTemplateLiteral(["\n    display: flex;\n    flex-wrap: wrap;\n  "]))), media.xxl(_templateObject26 || (_templateObject26 = _taggedTemplateLiteral(["\n    padding: 30px 0 35px;\n  "]))));
 var FooterNavListItem = styled.li.withConfig({
   displayName: "Footer__FooterNavListItem",
   componentId: "sc-1s3f2bx-20"
-})(["", ";", ";"], media.md(_templateObject27()), media.xxl(_templateObject28()));
+})(["", ";", ";"], media.md(_templateObject27 || (_templateObject27 = _taggedTemplateLiteral(["\n    padding-right: 20px;\n    width: 50%;\n  "]))), media.xxl(_templateObject28 || (_templateObject28 = _taggedTemplateLiteral(["\n    padding-right: 32px;\n    width: auto;\n  "]))));
 var RibbonAside = styled.div.withConfig({
   displayName: "Footer__RibbonAside",
   componentId: "sc-1s3f2bx-21"
-})(["", ";"], media.lg(_templateObject29(), ribbonAsideWidth));
+})(["", ";"], media.lg(_templateObject29 || (_templateObject29 = _taggedTemplateLiteral(["\n    align-items: center;\n    display: flex;\n    flex-wrap: wrap;\n    padding-left: 50px;\n    width: ", "px;\n  "])), ribbonAsideWidth));
 var GiveWrapper = styled.div.withConfig({
   displayName: "Footer__GiveWrapper",
   componentId: "sc-1s3f2bx-22"
-})(["", ";"], media.lg(_templateObject30()));
+})(["", ";"], media.lg(_templateObject30 || (_templateObject30 = _taggedTemplateLiteral(["\n    width: 100%;\n  "]))));
 var GiveLogo = styled.img.withConfig({
   displayName: "Footer__GiveLogo",
   componentId: "sc-1s3f2bx-23"
@@ -453,15 +202,15 @@ var GiveCaption = styled.p.withConfig({
 var SoleOuter = styled.div.withConfig({
   displayName: "Footer__SoleOuter",
   componentId: "sc-1s3f2bx-25"
-})(["background:", ";padding:14px 0 26px;", ";"], colors.transparentBlack, media.md(_templateObject31()));
+})(["background:", ";padding:14px 0 26px;", ";"], colors.transparentBlack, media.md(_templateObject31 || (_templateObject31 = _taggedTemplateLiteral(["\n    padding: 0;\n  "]))));
 var SoleInner = styled.div.withConfig({
   displayName: "Footer__SoleInner",
   componentId: "sc-1s3f2bx-26"
-})(["width:100%;", ";"], media.md(_templateObject32()));
+})(["width:100%;", ";"], media.md(_templateObject32 || (_templateObject32 = _taggedTemplateLiteral(["\n    align-items: center;\n    display: flex;\n    flex-wrap: none;\n    justify-content: space-between;\n  "]))));
 var SocialNavWrapper = styled.nav.withConfig({
   displayName: "Footer__SocialNavWrapper",
   componentId: "sc-1s3f2bx-27"
-})(["margin-bottom:14px;", ";"], media.md(_templateObject33()));
+})(["margin-bottom:14px;", ";"], media.md(_templateObject33 || (_templateObject33 = _taggedTemplateLiteral(["\n    margin-bottom: 0;\n    order: 2;\n  "]))));
 var SocialNavList = styled.ul.withConfig({
   displayName: "Footer__SocialNavList",
   componentId: "sc-1s3f2bx-28"
@@ -469,14 +218,14 @@ var SocialNavList = styled.ul.withConfig({
 var SocialNavListItem = styled.li.withConfig({
   displayName: "Footer__SocialNavListItem",
   componentId: "sc-1s3f2bx-29"
-})(["display:inline-block;vertical-align:middle;", ";"], media.md(_templateObject34()));
+})(["display:inline-block;vertical-align:middle;", ";"], media.md(_templateObject34 || (_templateObject34 = _taggedTemplateLiteral(["\n    width: auto;\n  "]))));
 var SocialNavLink = styled.a.attrs({
   target: "_blank",
   rel: "noopener noreferrer"
 }).withConfig({
   displayName: "Footer__SocialNavLink",
   componentId: "sc-1s3f2bx-30"
-})(["", " box-shadow:inset 0 0 0 1px transparent;display:flex;justify-content:center;padding:17px 8px;position:relative;text-align:center;transition:color 0.25s;", ";"], unstyledLinkCSS, media.md(_templateObject35()));
+})(["", " box-shadow:inset 0 0 0 1px transparent;display:flex;justify-content:center;padding:17px 8px;position:relative;text-align:center;transition:color 0.25s;", ";"], unstyledLinkCSS, media.md(_templateObject35 || (_templateObject35 = _taggedTemplateLiteral(["\n    padding: 19px 15px;\n  "]))));
 var SocialFacebookIcon = styled(FacebookSVG).withConfig({
   displayName: "Footer__SocialFacebookIcon",
   componentId: "sc-1s3f2bx-31"
@@ -508,7 +257,7 @@ var SocialIconLabel = styled.span.withConfig({
 var Copyright = styled.p.withConfig({
   displayName: "Footer__Copyright",
   componentId: "sc-1s3f2bx-38"
-})(["border-top:1px solid rgba(183,176,156,0.2);color:", ";font-family:", ";font-size:", ";font-weight:400;margin:0 -10px;padding-top:20px;", ";"], colors.taupe, typography.serif, getRems(14), media.md(_templateObject36(), getRems(20)));
+})(["border-top:1px solid rgba(183,176,156,0.2);color:", ";font-family:", ";font-size:", ";font-weight:400;margin:0 -10px;padding-top:20px;", ";"], colors.taupe, typography.serif, getRems(14), media.md(_templateObject36 || (_templateObject36 = _taggedTemplateLiteral(["\n    border-top: 0;\n    font-size: ", ";\n    margin: 0;\n    order: 1;\n    padding-top: 0;\n    position: relative;\n    top: 2px;\n  "])), getRems(20)));
 
 /*
   outer Footer component

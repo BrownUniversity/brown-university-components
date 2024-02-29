@@ -72,6 +72,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(styled_components__WEBPACK_IMPORTED_MODULE_2__);
 /* harmony import */ var brown_university_styles__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(3);
 /* harmony import */ var brown_university_styles__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(brown_university_styles__WEBPACK_IMPORTED_MODULE_3__);
+var _excluded = ["url", "color", "full", "marginTop"],
+  _excluded2 = ["url", "color", "full"];
 function _extends() { _extends = Object.assign ? Object.assign.bind() : function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends.apply(this, arguments); }
 function _objectWithoutProperties(source, excluded) { if (source == null) return {}; var target = _objectWithoutPropertiesLoose(source, excluded); var key, i; if (Object.getOwnPropertySymbols) { var sourceSymbolKeys = Object.getOwnPropertySymbols(source); for (i = 0; i < sourceSymbolKeys.length; i++) { key = sourceSymbolKeys[i]; if (excluded.indexOf(key) >= 0) continue; if (!Object.prototype.propertyIsEnumerable.call(source, key)) continue; target[key] = source[key]; } } return target; }
 function _objectWithoutPropertiesLoose(source, excluded) { if (source == null) return {}; var target = {}; var sourceKeys = Object.keys(source); var key, i; for (i = 0; i < sourceKeys.length; i++) { key = sourceKeys[i]; if (excluded.indexOf(key) >= 0) continue; target[key] = source[key]; } return target; }
@@ -89,12 +91,12 @@ var Tag = styled_components__WEBPACK_IMPORTED_MODULE_2___default()(function (_re
     color = _ref.color,
     full = _ref.full,
     marginTop = _ref.marginTop,
-    restProps = _objectWithoutProperties(_ref, ["url", "color", "full", "marginTop"]);
+    restProps = _objectWithoutProperties(_ref, _excluded);
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default().createElement("div", restProps);
 }).withConfig({
   displayName: "Background__Tag",
   componentId: "uwuoy1-0"
-})(["background-image:url('", "');background-repeat:repeat;background-size:1600px;background-color:", ";background-position-y:", "px;", ""], function (_ref2) {
+})(["background-image:url(\"", "\");background-repeat:repeat;background-size:1600px;background-color:", ";background-position-y:", "px;", ""], function (_ref2) {
   var url = _ref2.url;
   return url;
 }, function (_ref3) {
@@ -114,7 +116,7 @@ var Background = function Background(_ref5) {
   var url = _ref5.url,
     color = _ref5.color,
     full = _ref5.full,
-    restProps = _objectWithoutProperties(_ref5, ["url", "color", "full"]);
+    restProps = _objectWithoutProperties(_ref5, _excluded2);
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default().createElement(Tag, _extends({}, restProps, {
     url: url,
     color: color,
@@ -165,6 +167,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var brown_university_styles__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(brown_university_styles__WEBPACK_IMPORTED_MODULE_3__);
 /* harmony import */ var _BannerContext__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(8);
 /* harmony import */ var _BannerText__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(9);
+var _excluded = ["color", "size", "src", "children", "mobileBreakpoint"];
 function _extends() { _extends = Object.assign ? Object.assign.bind() : function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends.apply(this, arguments); }
 function _objectWithoutProperties(source, excluded) { if (source == null) return {}; var target = _objectWithoutPropertiesLoose(source, excluded); var key, i; if (Object.getOwnPropertySymbols) { var sourceSymbolKeys = Object.getOwnPropertySymbols(source); for (i = 0; i < sourceSymbolKeys.length; i++) { key = sourceSymbolKeys[i]; if (excluded.indexOf(key) >= 0) continue; if (!Object.prototype.propertyIsEnumerable.call(source, key)) continue; target[key] = source[key]; } } return target; }
 function _objectWithoutPropertiesLoose(source, excluded) { if (source == null) return {}; var target = {}; var sourceKeys = Object.keys(source); var key, i; for (i = 0; i < sourceKeys.length; i++) { key = sourceKeys[i]; if (excluded.indexOf(key) >= 0) continue; target[key] = source[key]; } return target; }
@@ -230,7 +233,7 @@ var Banner = function Banner(_ref3) {
     src = _ref3.src,
     children = _ref3.children,
     mobileBreakpoint = _ref3.mobileBreakpoint,
-    restProps = _objectWithoutProperties(_ref3, ["color", "size", "src", "children", "mobileBreakpoint"]);
+    restProps = _objectWithoutProperties(_ref3, _excluded);
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default().createElement(BannerWrapper, _extends({}, restProps, {
     role: "banner"
   }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default().createElement(BannerImageColorWrapper, {
@@ -311,6 +314,7 @@ function _extends() { _extends = Object.assign ? Object.assign.bind() : function
 
 
 var serif = brown_university_styles__WEBPACK_IMPORTED_MODULE_3__.typography.serif;
+
 /*
   inner Tag component
 */
@@ -355,6 +359,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var polished__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(polished__WEBPACK_IMPORTED_MODULE_3__);
 /* harmony import */ var brown_university_styles__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(3);
 /* harmony import */ var brown_university_styles__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(brown_university_styles__WEBPACK_IMPORTED_MODULE_4__);
+var _excluded = ["tag"];
 function _extends() { _extends = Object.assign ? Object.assign.bind() : function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends.apply(this, arguments); }
 function _objectWithoutProperties(source, excluded) { if (source == null) return {}; var target = _objectWithoutPropertiesLoose(source, excluded); var key, i; if (Object.getOwnPropertySymbols) { var sourceSymbolKeys = Object.getOwnPropertySymbols(source); for (i = 0; i < sourceSymbolKeys.length; i++) { key = sourceSymbolKeys[i]; if (excluded.indexOf(key) >= 0) continue; if (!Object.prototype.propertyIsEnumerable.call(source, key)) continue; target[key] = source[key]; } } return target; }
 function _objectWithoutPropertiesLoose(source, excluded) { if (source == null) return {}; var target = {}; var sourceKeys = Object.keys(source); var key, i; for (i = 0; i < sourceKeys.length; i++) { key = sourceKeys[i]; if (excluded.indexOf(key) >= 0) continue; target[key] = source[key]; } return target; }
@@ -364,6 +369,7 @@ function _objectWithoutPropertiesLoose(source, excluded) { if (source == null) r
 
 
 var sans = brown_university_styles__WEBPACK_IMPORTED_MODULE_4__.typography.sans;
+
 /*
   css mixins
 */
@@ -544,7 +550,7 @@ var deriveTag = function deriveTag(_ref14) {
 };
 var Button = function Button(props) {
   var tag = props.tag,
-    restProps = _objectWithoutProperties(props, ["tag"]);
+    restProps = _objectWithoutProperties(props, _excluded);
   var derivedTag = deriveTag(props);
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default().createElement(Tag, _extends({
     as: derivedTag,
@@ -597,6 +603,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_1__);
 /* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(2);
 /* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(styled_components__WEBPACK_IMPORTED_MODULE_2__);
+var _excluded = ["isOpen", "children"];
 function _typeof(o) { "@babel/helpers - typeof"; return _typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (o) { return typeof o; } : function (o) { return o && "function" == typeof Symbol && o.constructor === Symbol && o !== Symbol.prototype ? "symbol" : typeof o; }, _typeof(o); }
 function _extends() { _extends = Object.assign ? Object.assign.bind() : function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends.apply(this, arguments); }
 function _objectWithoutProperties(source, excluded) { if (source == null) return {}; var target = _objectWithoutPropertiesLoose(source, excluded); var key, i; if (Object.getOwnPropertySymbols) { var sourceSymbolKeys = Object.getOwnPropertySymbols(source); for (i = 0; i < sourceSymbolKeys.length; i++) { key = sourceSymbolKeys[i]; if (excluded.indexOf(key) >= 0) continue; if (!Object.prototype.propertyIsEnumerable.call(source, key)) continue; target[key] = source[key]; } } return target; }
@@ -604,13 +611,13 @@ function _objectWithoutPropertiesLoose(source, excluded) { if (source == null) r
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, _toPropertyKey(descriptor.key), descriptor); } }
 function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); Object.defineProperty(Constructor, "prototype", { writable: false }); return Constructor; }
-function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); Object.defineProperty(subClass, "prototype", { writable: false }); if (superClass) _setPrototypeOf(subClass, superClass); }
-function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf ? Object.setPrototypeOf.bind() : function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
-function _createSuper(Derived) { var hasNativeReflectConstruct = _isNativeReflectConstruct(); return function _createSuperInternal() { var Super = _getPrototypeOf(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = _getPrototypeOf(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return _possibleConstructorReturn(this, result); }; }
+function _callSuper(t, o, e) { return o = _getPrototypeOf(o), _possibleConstructorReturn(t, _isNativeReflectConstruct() ? Reflect.construct(o, e || [], _getPrototypeOf(t).constructor) : o.apply(t, e)); }
 function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === "object" || typeof call === "function")) { return call; } else if (call !== void 0) { throw new TypeError("Derived constructors may only return object or undefined"); } return _assertThisInitialized(self); }
-function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
 function _isNativeReflectConstruct() { try { var t = !Boolean.prototype.valueOf.call(Reflect.construct(Boolean, [], function () {})); } catch (t) {} return (_isNativeReflectConstruct = function _isNativeReflectConstruct() { return !!t; })(); }
 function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf.bind() : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
+function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); Object.defineProperty(subClass, "prototype", { writable: false }); if (superClass) _setPrototypeOf(subClass, superClass); }
+function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf ? Object.setPrototypeOf.bind() : function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
 function _defineProperty(obj, key, value) { key = _toPropertyKey(key); if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
 function _toPropertyKey(t) { var i = _toPrimitive(t, "string"); return "symbol" == _typeof(i) ? i : String(i); }
 function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e = t[Symbol.toPrimitive]; if (void 0 !== e) { var i = e.call(t, r || "default"); if ("object" != _typeof(i)) return i; throw new TypeError("@@toPrimitive must return a primitive value."); } return ("string" === r ? String : Number)(t); }
@@ -645,19 +652,10 @@ var Tag = styled_components__WEBPACK_IMPORTED_MODULE_2___default().div.withConfi
 */
 var Collapse = /*#__PURE__*/function (_Component) {
   _inherits(Collapse, _Component);
-  var _super = _createSuper(Collapse);
-  function Collapse() {
+  function Collapse(props) {
     var _this;
     _classCallCheck(this, Collapse);
-    for (var _len = arguments.length, args = new Array(_len), _key = 0; _key < _len; _key++) {
-      args[_key] = arguments[_key];
-    }
-    _this = _super.call.apply(_super, [this].concat(args));
-    _defineProperty(_assertThisInitialized(_this), "state", {
-      display: "none",
-      height: "0",
-      overflow: "hidden"
-    });
+    _this = _callSuper(this, Collapse, [props]);
     _defineProperty(_assertThisInitialized(_this), "tagRef", null);
     _defineProperty(_assertThisInitialized(_this), "getHeight", function () {
       return _this.tagRef.scrollHeight;
@@ -684,6 +682,11 @@ var Collapse = /*#__PURE__*/function (_Component) {
         }
       }
     });
+    _this.state = {
+      display: "none",
+      height: "0",
+      overflow: "hidden"
+    };
     return _this;
   }
   _createClass(Collapse, [{
@@ -726,7 +729,7 @@ var Collapse = /*#__PURE__*/function (_Component) {
       var _this$props = this.props,
         isOpen = _this$props.isOpen,
         children = _this$props.children,
-        restProps = _objectWithoutProperties(_this$props, ["isOpen", "children"]);
+        restProps = _objectWithoutProperties(_this$props, _excluded);
       return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default().createElement(Tag, _extends({}, restProps, this.state, {
         ref: function ref(node) {
           return _this3.tagRef = node;
@@ -768,6 +771,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 var mono = brown_university_styles__WEBPACK_IMPORTED_MODULE_3__.typography.mono;
+
 /*
   inner Tag component
 */
@@ -813,258 +817,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _assets_svg_inline_icons_snapchat_svg__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(25);
 /* harmony import */ var _assets_svg_inline_icons_twitter_svg__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(26);
 /* harmony import */ var _assets_svg_inline_icons_youtube_svg__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(27);
-function _templateObject36() {
-  var data = _taggedTemplateLiteral(["\n    border-top: 0;\n    font-size: ", ";\n    margin: 0;\n    order: 1;\n    padding-top: 0;\n    position: relative;\n    top: 2px;\n  "]);
-  _templateObject36 = function _templateObject36() {
-    return data;
-  };
-  return data;
-}
-function _templateObject35() {
-  var data = _taggedTemplateLiteral(["\n    padding: 19px 15px;\n  "]);
-  _templateObject35 = function _templateObject35() {
-    return data;
-  };
-  return data;
-}
-function _templateObject34() {
-  var data = _taggedTemplateLiteral(["\n    width: auto;\n  "]);
-  _templateObject34 = function _templateObject34() {
-    return data;
-  };
-  return data;
-}
-function _templateObject33() {
-  var data = _taggedTemplateLiteral(["\n    margin-bottom: 0;\n    order: 2;\n  "]);
-  _templateObject33 = function _templateObject33() {
-    return data;
-  };
-  return data;
-}
-function _templateObject32() {
-  var data = _taggedTemplateLiteral(["\n    align-items: center;\n    display: flex;\n    flex-wrap: none;\n    justify-content: space-between;\n  "]);
-  _templateObject32 = function _templateObject32() {
-    return data;
-  };
-  return data;
-}
-function _templateObject31() {
-  var data = _taggedTemplateLiteral(["\n    padding: 0;\n  "]);
-  _templateObject31 = function _templateObject31() {
-    return data;
-  };
-  return data;
-}
-function _templateObject30() {
-  var data = _taggedTemplateLiteral(["\n    width: 100%;\n  "]);
-  _templateObject30 = function _templateObject30() {
-    return data;
-  };
-  return data;
-}
-function _templateObject29() {
-  var data = _taggedTemplateLiteral(["\n    align-items: center;\n    display: flex;\n    flex-wrap: wrap;\n    padding-left: 50px;\n    width: ", "px;\n  "]);
-  _templateObject29 = function _templateObject29() {
-    return data;
-  };
-  return data;
-}
-function _templateObject28() {
-  var data = _taggedTemplateLiteral(["\n    padding-right: 32px;\n    width: auto;\n  "]);
-  _templateObject28 = function _templateObject28() {
-    return data;
-  };
-  return data;
-}
-function _templateObject27() {
-  var data = _taggedTemplateLiteral(["\n    padding-right: 20px;\n    width: 50%;\n  "]);
-  _templateObject27 = function _templateObject27() {
-    return data;
-  };
-  return data;
-}
-function _templateObject26() {
-  var data = _taggedTemplateLiteral(["\n    padding: 30px 0 35px;\n  "]);
-  _templateObject26 = function _templateObject26() {
-    return data;
-  };
-  return data;
-}
-function _templateObject25() {
-  var data = _taggedTemplateLiteral(["\n    display: flex;\n    flex-wrap: wrap;\n  "]);
-  _templateObject25 = function _templateObject25() {
-    return data;
-  };
-  return data;
-}
-function _templateObject24() {
-  var data = _taggedTemplateLiteral(["\n      display: none;\n    "]);
-  _templateObject24 = function _templateObject24() {
-    return data;
-  };
-  return data;
-}
-function _templateObject23() {
-  var data = _taggedTemplateLiteral(["\n    display: inline-block;\n    vertical-align: top;\n  "]);
-  _templateObject23 = function _templateObject23() {
-    return data;
-  };
-  return data;
-}
-function _templateObject22() {
-  var data = _taggedTemplateLiteral(["\n    border-top: 1px solid rgba(183, 176, 156, 0.2);\n    margin-bottom: 0;\n  "]);
-  _templateObject22 = function _templateObject22() {
-    return data;
-  };
-  return data;
-}
-function _templateObject21() {
-  var data = _taggedTemplateLiteral(["\n    padding-right: 32px;\n    width: auto;\n  "]);
-  _templateObject21 = function _templateObject21() {
-    return data;
-  };
-  return data;
-}
-function _templateObject20() {
-  var data = _taggedTemplateLiteral(["\n    padding-right: 20px;\n    width: 50%;\n  "]);
-  _templateObject20 = function _templateObject20() {
-    return data;
-  };
-  return data;
-}
-function _templateObject19() {
-  var data = _taggedTemplateLiteral(["\n    display: flex;\n    flex-wrap: wrap;\n  "]);
-  _templateObject19 = function _templateObject19() {
-    return data;
-  };
-  return data;
-}
-function _templateObject18() {
-  var data = _taggedTemplateLiteral(["\n    margin-bottom: 30px;\n  "]);
-  _templateObject18 = function _templateObject18() {
-    return data;
-  };
-  return data;
-}
-function _templateObject17() {
-  var data = _taggedTemplateLiteral(["\n    font-size: ", ";\n    line-height: 1.33333;\n  "]);
-  _templateObject17 = function _templateObject17() {
-    return data;
-  };
-  return data;
-}
-function _templateObject16() {
-  var data = _taggedTemplateLiteral(["\n    font-size: ", ";\n    line-height: 1.25;\n  "]);
-  _templateObject16 = function _templateObject16() {
-    return data;
-  };
-  return data;
-}
-function _templateObject15() {
-  var data = _taggedTemplateLiteral(["\n    margin-right: 40px;\n    margin-bottom: 0;\n  "]);
-  _templateObject15 = function _templateObject15() {
-    return data;
-  };
-  return data;
-}
-function _templateObject14() {
-  var data = _taggedTemplateLiteral(["\n    margin-bottom: 28px;\n  "]);
-  _templateObject14 = function _templateObject14() {
-    return data;
-  };
-  return data;
-}
-function _templateObject13() {
-  var data = _taggedTemplateLiteral(["\n    font-size: ", ";\n    letter-spacing: ", ";\n  "]);
-  _templateObject13 = function _templateObject13() {
-    return data;
-  };
-  return data;
-}
-function _templateObject12() {
-  var data = _taggedTemplateLiteral(["\n    margin-bottom: 12px;\n  "]);
-  _templateObject12 = function _templateObject12() {
-    return data;
-  };
-  return data;
-}
-function _templateObject11() {
-  var data = _taggedTemplateLiteral(["\n    border-right: 1px solid rgba(183, 176, 156, 0.2);\n    padding-top: 15px;\n    padding-right: 50px;\n    width: calc(100% - ", "px);\n  "]);
-  _templateObject11 = function _templateObject11() {
-    return data;
-  };
-  return data;
-}
-function _templateObject10() {
-  var data = _taggedTemplateLiteral(["\n    flex-direction: row;\n  "]);
-  _templateObject10 = function _templateObject10() {
-    return data;
-  };
-  return data;
-}
-function _templateObject9() {
-  var data = _taggedTemplateLiteral(["\n    padding: 90px 0 45px;\n  "]);
-  _templateObject9 = function _templateObject9() {
-    return data;
-  };
-  return data;
-}
-function _templateObject8() {
-  var data = _taggedTemplateLiteral(["\n    padding: 60px 0 70px;\n  "]);
-  _templateObject8 = function _templateObject8() {
-    return data;
-  };
-  return data;
-}
-function _templateObject7() {
-  var data = _taggedTemplateLiteral(["\n    width: ", "px;\n  "]);
-  _templateObject7 = function _templateObject7() {
-    return data;
-  };
-  return data;
-}
-function _templateObject6() {
-  var data = _taggedTemplateLiteral(["\n    width: ", "px;\n  "]);
-  _templateObject6 = function _templateObject6() {
-    return data;
-  };
-  return data;
-}
-function _templateObject5() {
-  var data = _taggedTemplateLiteral(["\n    width: ", "px;\n  "]);
-  _templateObject5 = function _templateObject5() {
-    return data;
-  };
-  return data;
-}
-function _templateObject4() {
-  var data = _taggedTemplateLiteral(["\n    width: ", "px;\n  "]);
-  _templateObject4 = function _templateObject4() {
-    return data;
-  };
-  return data;
-}
-function _templateObject3() {
-  var data = _taggedTemplateLiteral(["\n    width: ", "px;\n  "]);
-  _templateObject3 = function _templateObject3() {
-    return data;
-  };
-  return data;
-}
-function _templateObject2() {
-  var data = _taggedTemplateLiteral(["\n    top: 2px;\n  "]);
-  _templateObject2 = function _templateObject2() {
-    return data;
-  };
-  return data;
-}
-function _templateObject() {
-  var data = _taggedTemplateLiteral(["\n    display: inline-block;\n    vertical-align: top;\n  "]);
-  _templateObject = function _templateObject() {
-    return data;
-  };
-  return data;
-}
+var _templateObject, _templateObject2, _templateObject3, _templateObject4, _templateObject5, _templateObject6, _templateObject7, _templateObject8, _templateObject9, _templateObject10, _templateObject11, _templateObject12, _templateObject13, _templateObject14, _templateObject15, _templateObject16, _templateObject17, _templateObject18, _templateObject19, _templateObject20, _templateObject21, _templateObject22, _templateObject23, _templateObject24, _templateObject25, _templateObject26, _templateObject27, _templateObject28, _templateObject29, _templateObject30, _templateObject31, _templateObject32, _templateObject33, _templateObject34, _templateObject35, _templateObject36;
 function _taggedTemplateLiteral(strings, raw) { if (!raw) { raw = strings.slice(0); } return Object.freeze(Object.defineProperties(strings, { raw: { value: Object.freeze(raw) } })); }
 
 
@@ -1086,8 +839,8 @@ var ribbonAsideWidth = 325;
 /*
   css mixins
 */
-var addressItemCSS = (0,styled_components__WEBPACK_IMPORTED_MODULE_1__.css)(["", " display:block;padding-left:25px;position:relative;", ";"], _mixins__WEBPACK_IMPORTED_MODULE_3__.unstyledLinkCSS, _media__WEBPACK_IMPORTED_MODULE_4__["default"].lg(_templateObject()));
-var addressIconCSS = (0,styled_components__WEBPACK_IMPORTED_MODULE_1__.css)(["fill:rgba(255,255,255,0.2);left:0;position:absolute;top:0;transform-origin:left top;", ";"], _media__WEBPACK_IMPORTED_MODULE_4__["default"].xl(_templateObject2()));
+var addressItemCSS = (0,styled_components__WEBPACK_IMPORTED_MODULE_1__.css)(["", " display:block;padding-left:25px;position:relative;", ";"], _mixins__WEBPACK_IMPORTED_MODULE_3__.unstyledLinkCSS, _media__WEBPACK_IMPORTED_MODULE_4__["default"].lg(_templateObject || (_templateObject = _taggedTemplateLiteral(["\n    display: inline-block;\n    vertical-align: top;\n  "]))));
+var addressIconCSS = (0,styled_components__WEBPACK_IMPORTED_MODULE_1__.css)(["fill:rgba(255,255,255,0.2);left:0;position:absolute;top:0;transform-origin:left top;", ";"], _media__WEBPACK_IMPORTED_MODULE_4__["default"].xl(_templateObject2 || (_templateObject2 = _taggedTemplateLiteral(["\n    top: 2px;\n  "]))));
 var socialIconCSS = (0,styled_components__WEBPACK_IMPORTED_MODULE_1__.css)(["fill:", ";&:hover,&:focus{fill:", ";}"], brown_university_styles__WEBPACK_IMPORTED_MODULE_2__.colors.white, brown_university_styles__WEBPACK_IMPORTED_MODULE_2__.colors.gold);
 
 /*
@@ -1100,7 +853,7 @@ var PaddedFooterLink = styled_components__WEBPACK_IMPORTED_MODULE_1___default()(
 var Margins = styled_components__WEBPACK_IMPORTED_MODULE_1___default().div.withConfig({
   displayName: "Footer__Margins",
   componentId: "sc-1s3f2bx-1"
-})(["display:flex;flex-wrap:wrap;margin-left:auto;margin-right:auto;min-width:320px;width:calc(100% - 40px);", ";", ";", ";", ";", ";"], _media__WEBPACK_IMPORTED_MODULE_4__["default"].sm(_templateObject3(), brown_university_styles__WEBPACK_IMPORTED_MODULE_2__.breakpoints.sm - 20), _media__WEBPACK_IMPORTED_MODULE_4__["default"].md(_templateObject4(), brown_university_styles__WEBPACK_IMPORTED_MODULE_2__.breakpoints.md - 20), _media__WEBPACK_IMPORTED_MODULE_4__["default"].lg(_templateObject5(), brown_university_styles__WEBPACK_IMPORTED_MODULE_2__.breakpoints.lg - 20), _media__WEBPACK_IMPORTED_MODULE_4__["default"].xl(_templateObject6(), brown_university_styles__WEBPACK_IMPORTED_MODULE_2__.breakpoints.xl - 20), _media__WEBPACK_IMPORTED_MODULE_4__["default"].xxl(_templateObject7(), brown_university_styles__WEBPACK_IMPORTED_MODULE_2__.breakpoints.xxl - 20));
+})(["display:flex;flex-wrap:wrap;margin-left:auto;margin-right:auto;min-width:320px;width:calc(100% - 40px);", ";", ";", ";", ";", ";"], _media__WEBPACK_IMPORTED_MODULE_4__["default"].sm(_templateObject3 || (_templateObject3 = _taggedTemplateLiteral(["\n    width: ", "px;\n  "])), brown_university_styles__WEBPACK_IMPORTED_MODULE_2__.breakpoints.sm - 20), _media__WEBPACK_IMPORTED_MODULE_4__["default"].md(_templateObject4 || (_templateObject4 = _taggedTemplateLiteral(["\n    width: ", "px;\n  "])), brown_university_styles__WEBPACK_IMPORTED_MODULE_2__.breakpoints.md - 20), _media__WEBPACK_IMPORTED_MODULE_4__["default"].lg(_templateObject5 || (_templateObject5 = _taggedTemplateLiteral(["\n    width: ", "px;\n  "])), brown_university_styles__WEBPACK_IMPORTED_MODULE_2__.breakpoints.lg - 20), _media__WEBPACK_IMPORTED_MODULE_4__["default"].xl(_templateObject6 || (_templateObject6 = _taggedTemplateLiteral(["\n    width: ", "px;\n  "])), brown_university_styles__WEBPACK_IMPORTED_MODULE_2__.breakpoints.xl - 20), _media__WEBPACK_IMPORTED_MODULE_4__["default"].xxl(_templateObject7 || (_templateObject7 = _taggedTemplateLiteral(["\n    width: ", "px;\n  "])), brown_university_styles__WEBPACK_IMPORTED_MODULE_2__.breakpoints.xxl - 20));
 var Wrapper = styled_components__WEBPACK_IMPORTED_MODULE_1___default().footer.withConfig({
   displayName: "Footer__Wrapper",
   componentId: "sc-1s3f2bx-2"
@@ -1108,23 +861,23 @@ var Wrapper = styled_components__WEBPACK_IMPORTED_MODULE_1___default().footer.wi
 var RibbonOuter = styled_components__WEBPACK_IMPORTED_MODULE_1___default().div.withConfig({
   displayName: "Footer__RibbonOuter",
   componentId: "sc-1s3f2bx-3"
-})(["padding:40px 0 50px;", ";", ";"], _media__WEBPACK_IMPORTED_MODULE_4__["default"].md(_templateObject8()), _media__WEBPACK_IMPORTED_MODULE_4__["default"].lg(_templateObject9()));
+})(["padding:40px 0 50px;", ";", ";"], _media__WEBPACK_IMPORTED_MODULE_4__["default"].md(_templateObject8 || (_templateObject8 = _taggedTemplateLiteral(["\n    padding: 60px 0 70px;\n  "]))), _media__WEBPACK_IMPORTED_MODULE_4__["default"].lg(_templateObject9 || (_templateObject9 = _taggedTemplateLiteral(["\n    padding: 90px 0 45px;\n  "]))));
 var RibbonInner = styled_components__WEBPACK_IMPORTED_MODULE_1___default().div.withConfig({
   displayName: "Footer__RibbonInner",
   componentId: "sc-1s3f2bx-4"
-})(["display:flex;flex-direction:column;width:100%;", ";"], _media__WEBPACK_IMPORTED_MODULE_4__["default"].lg(_templateObject10()));
+})(["display:flex;flex-direction:column;width:100%;", ";"], _media__WEBPACK_IMPORTED_MODULE_4__["default"].lg(_templateObject10 || (_templateObject10 = _taggedTemplateLiteral(["\n    flex-direction: row;\n  "]))));
 var RibbonGroup = styled_components__WEBPACK_IMPORTED_MODULE_1___default().div.withConfig({
   displayName: "Footer__RibbonGroup",
   componentId: "sc-1s3f2bx-5"
-})(["", ";"], _media__WEBPACK_IMPORTED_MODULE_4__["default"].lg(_templateObject11(), ribbonAsideWidth));
+})(["", ";"], _media__WEBPACK_IMPORTED_MODULE_4__["default"].lg(_templateObject11 || (_templateObject11 = _taggedTemplateLiteral(["\n    border-right: 1px solid rgba(183, 176, 156, 0.2);\n    padding-top: 15px;\n    padding-right: 50px;\n    width: calc(100% - ", "px);\n  "])), ribbonAsideWidth));
 var AddressWrapper = styled_components__WEBPACK_IMPORTED_MODULE_1___default().div.withConfig({
   displayName: "Footer__AddressWrapper",
   componentId: "sc-1s3f2bx-6"
-})(["margin-bottom:16px;", ";"], _media__WEBPACK_IMPORTED_MODULE_4__["default"].xl(_templateObject12()));
+})(["margin-bottom:16px;", ";"], _media__WEBPACK_IMPORTED_MODULE_4__["default"].xl(_templateObject12 || (_templateObject12 = _taggedTemplateLiteral(["\n    margin-bottom: 12px;\n  "]))));
 var AddressName = styled_components__WEBPACK_IMPORTED_MODULE_1___default().span.withConfig({
   displayName: "Footer__AddressName",
   componentId: "sc-1s3f2bx-7"
-})(["color:", ";display:block;font-family:", ";font-size:", ";font-weight:400;letter-spacing:", ";margin-bottom:26px;text-transform:uppercase;", ";", ";"], brown_university_styles__WEBPACK_IMPORTED_MODULE_2__.colors.taupe, brown_university_styles__WEBPACK_IMPORTED_MODULE_2__.typography.sans, (0,brown_university_styles__WEBPACK_IMPORTED_MODULE_2__.getRems)(11), (0,brown_university_styles__WEBPACK_IMPORTED_MODULE_2__.getRems)(1.25), _media__WEBPACK_IMPORTED_MODULE_4__["default"].md(_templateObject13(), (0,brown_university_styles__WEBPACK_IMPORTED_MODULE_2__.getRems)(13), (0,brown_university_styles__WEBPACK_IMPORTED_MODULE_2__.getRems)(1.5)), _media__WEBPACK_IMPORTED_MODULE_4__["default"].lg(_templateObject14()));
+})(["color:", ";display:block;font-family:", ";font-size:", ";font-weight:400;letter-spacing:", ";margin-bottom:26px;text-transform:uppercase;", ";", ";"], brown_university_styles__WEBPACK_IMPORTED_MODULE_2__.colors.taupe, brown_university_styles__WEBPACK_IMPORTED_MODULE_2__.typography.sans, (0,brown_university_styles__WEBPACK_IMPORTED_MODULE_2__.getRems)(11), (0,brown_university_styles__WEBPACK_IMPORTED_MODULE_2__.getRems)(1.25), _media__WEBPACK_IMPORTED_MODULE_4__["default"].md(_templateObject13 || (_templateObject13 = _taggedTemplateLiteral(["\n    font-size: ", ";\n    letter-spacing: ", ";\n  "])), (0,brown_university_styles__WEBPACK_IMPORTED_MODULE_2__.getRems)(13), (0,brown_university_styles__WEBPACK_IMPORTED_MODULE_2__.getRems)(1.5)), _media__WEBPACK_IMPORTED_MODULE_4__["default"].lg(_templateObject14 || (_templateObject14 = _taggedTemplateLiteral(["\n    margin-bottom: 28px;\n  "]))));
 var AddressItems = styled_components__WEBPACK_IMPORTED_MODULE_1___default().div.withConfig({
   displayName: "Footer__AddressItems",
   componentId: "sc-1s3f2bx-8"
@@ -1132,7 +885,7 @@ var AddressItems = styled_components__WEBPACK_IMPORTED_MODULE_1___default().div.
 var AddressBaseItem = styled_components__WEBPACK_IMPORTED_MODULE_1___default().a.withConfig({
   displayName: "Footer__AddressBaseItem",
   componentId: "sc-1s3f2bx-9"
-})(["", " margin-bottom:14px;", ";"], addressItemCSS, _media__WEBPACK_IMPORTED_MODULE_4__["default"].lg(_templateObject15()));
+})(["", " margin-bottom:14px;", ";"], addressItemCSS, _media__WEBPACK_IMPORTED_MODULE_4__["default"].lg(_templateObject15 || (_templateObject15 = _taggedTemplateLiteral(["\n    margin-right: 40px;\n    margin-bottom: 0;\n  "]))));
 var AddressPhoneItem = styled_components__WEBPACK_IMPORTED_MODULE_1___default().a.withConfig({
   displayName: "Footer__AddressPhoneItem",
   componentId: "sc-1s3f2bx-10"
@@ -1148,7 +901,7 @@ var AddressPhoneIcon = styled_components__WEBPACK_IMPORTED_MODULE_1___default()(
 var AddressInfo = styled_components__WEBPACK_IMPORTED_MODULE_1___default().span.withConfig({
   displayName: "Footer__AddressInfo",
   componentId: "sc-1s3f2bx-13"
-})(["color:", ";font-family:", ";font-weight:400;line-height:1.3125;", ";", ";"], brown_university_styles__WEBPACK_IMPORTED_MODULE_2__.colors.white, brown_university_styles__WEBPACK_IMPORTED_MODULE_2__.typography.serif, _media__WEBPACK_IMPORTED_MODULE_4__["default"].md(_templateObject16(), (0,brown_university_styles__WEBPACK_IMPORTED_MODULE_2__.getRems)(20)), _media__WEBPACK_IMPORTED_MODULE_4__["default"].xl(_templateObject17(), (0,brown_university_styles__WEBPACK_IMPORTED_MODULE_2__.getRems)(24)));
+})(["color:", ";font-family:", ";font-weight:400;line-height:1.3125;", ";", ";"], brown_university_styles__WEBPACK_IMPORTED_MODULE_2__.colors.white, brown_university_styles__WEBPACK_IMPORTED_MODULE_2__.typography.serif, _media__WEBPACK_IMPORTED_MODULE_4__["default"].md(_templateObject16 || (_templateObject16 = _taggedTemplateLiteral(["\n    font-size: ", ";\n    line-height: 1.25;\n  "])), (0,brown_university_styles__WEBPACK_IMPORTED_MODULE_2__.getRems)(20)), _media__WEBPACK_IMPORTED_MODULE_4__["default"].xl(_templateObject17 || (_templateObject17 = _taggedTemplateLiteral(["\n    font-size: ", ";\n    line-height: 1.33333;\n  "])), (0,brown_university_styles__WEBPACK_IMPORTED_MODULE_2__.getRems)(24)));
 var NavigationHeader = styled_components__WEBPACK_IMPORTED_MODULE_1___default().h2.withConfig({
   displayName: "Footer__NavigationHeader",
   componentId: "sc-1s3f2bx-14"
@@ -1156,35 +909,35 @@ var NavigationHeader = styled_components__WEBPACK_IMPORTED_MODULE_1___default().
 var QuickNavWrapper = styled_components__WEBPACK_IMPORTED_MODULE_1___default().nav.withConfig({
   displayName: "Footer__QuickNavWrapper",
   componentId: "sc-1s3f2bx-15"
-})(["margin-bottom:20px;", ";"], _media__WEBPACK_IMPORTED_MODULE_4__["default"].xxl(_templateObject18()));
+})(["margin-bottom:20px;", ";"], _media__WEBPACK_IMPORTED_MODULE_4__["default"].xxl(_templateObject18 || (_templateObject18 = _taggedTemplateLiteral(["\n    margin-bottom: 30px;\n  "]))));
 var QuickNavList = styled_components__WEBPACK_IMPORTED_MODULE_1___default().ul.withConfig({
   displayName: "Footer__QuickNavList",
   componentId: "sc-1s3f2bx-16"
-})(["list-style:none;margin:0;padding:0;", ";"], _media__WEBPACK_IMPORTED_MODULE_4__["default"].md(_templateObject19()));
+})(["list-style:none;margin:0;padding:0;", ";"], _media__WEBPACK_IMPORTED_MODULE_4__["default"].md(_templateObject19 || (_templateObject19 = _taggedTemplateLiteral(["\n    display: flex;\n    flex-wrap: wrap;\n  "]))));
 var QuickNavListItem = styled_components__WEBPACK_IMPORTED_MODULE_1___default().li.withConfig({
   displayName: "Footer__QuickNavListItem",
   componentId: "sc-1s3f2bx-17"
-})(["", ";", ";"], _media__WEBPACK_IMPORTED_MODULE_4__["default"].md(_templateObject20()), _media__WEBPACK_IMPORTED_MODULE_4__["default"].xxl(_templateObject21()));
+})(["", ";", ";"], _media__WEBPACK_IMPORTED_MODULE_4__["default"].md(_templateObject20 || (_templateObject20 = _taggedTemplateLiteral(["\n    padding-right: 20px;\n    width: 50%;\n  "]))), _media__WEBPACK_IMPORTED_MODULE_4__["default"].xxl(_templateObject21 || (_templateObject21 = _taggedTemplateLiteral(["\n    padding-right: 32px;\n    width: auto;\n  "]))));
 var FooterNavWrapper = styled_components__WEBPACK_IMPORTED_MODULE_1___default().nav.withConfig({
   displayName: "Footer__FooterNavWrapper",
   componentId: "sc-1s3f2bx-18"
-})(["margin-bottom:40px;", ";", ";&:before,&:after{background:rgba(183,176,156,0.4);content:\"\";display:block;height:1px;margin:0 -10px;width:calc(100% + 20px);", ";}"], _media__WEBPACK_IMPORTED_MODULE_4__["default"].lg(_templateObject22()), _media__WEBPACK_IMPORTED_MODULE_4__["default"].xxl(_templateObject23()), _media__WEBPACK_IMPORTED_MODULE_4__["default"].lg(_templateObject24()));
+})(["margin-bottom:40px;", ";", ";&:before,&:after{background:rgba(183,176,156,0.4);content:\"\";display:block;height:1px;margin:0 -10px;width:calc(100% + 20px);", ";}"], _media__WEBPACK_IMPORTED_MODULE_4__["default"].lg(_templateObject22 || (_templateObject22 = _taggedTemplateLiteral(["\n    border-top: 1px solid rgba(183, 176, 156, 0.2);\n    margin-bottom: 0;\n  "]))), _media__WEBPACK_IMPORTED_MODULE_4__["default"].xxl(_templateObject23 || (_templateObject23 = _taggedTemplateLiteral(["\n    display: inline-block;\n    vertical-align: top;\n  "]))), _media__WEBPACK_IMPORTED_MODULE_4__["default"].lg(_templateObject24 || (_templateObject24 = _taggedTemplateLiteral(["\n      display: none;\n    "]))));
 var FooterNavList = styled_components__WEBPACK_IMPORTED_MODULE_1___default().ul.withConfig({
   displayName: "Footer__FooterNavList",
   componentId: "sc-1s3f2bx-19"
-})(["list-style:none;margin:0;padding:20px 0;", ";", ";"], _media__WEBPACK_IMPORTED_MODULE_4__["default"].md(_templateObject25()), _media__WEBPACK_IMPORTED_MODULE_4__["default"].xxl(_templateObject26()));
+})(["list-style:none;margin:0;padding:20px 0;", ";", ";"], _media__WEBPACK_IMPORTED_MODULE_4__["default"].md(_templateObject25 || (_templateObject25 = _taggedTemplateLiteral(["\n    display: flex;\n    flex-wrap: wrap;\n  "]))), _media__WEBPACK_IMPORTED_MODULE_4__["default"].xxl(_templateObject26 || (_templateObject26 = _taggedTemplateLiteral(["\n    padding: 30px 0 35px;\n  "]))));
 var FooterNavListItem = styled_components__WEBPACK_IMPORTED_MODULE_1___default().li.withConfig({
   displayName: "Footer__FooterNavListItem",
   componentId: "sc-1s3f2bx-20"
-})(["", ";", ";"], _media__WEBPACK_IMPORTED_MODULE_4__["default"].md(_templateObject27()), _media__WEBPACK_IMPORTED_MODULE_4__["default"].xxl(_templateObject28()));
+})(["", ";", ";"], _media__WEBPACK_IMPORTED_MODULE_4__["default"].md(_templateObject27 || (_templateObject27 = _taggedTemplateLiteral(["\n    padding-right: 20px;\n    width: 50%;\n  "]))), _media__WEBPACK_IMPORTED_MODULE_4__["default"].xxl(_templateObject28 || (_templateObject28 = _taggedTemplateLiteral(["\n    padding-right: 32px;\n    width: auto;\n  "]))));
 var RibbonAside = styled_components__WEBPACK_IMPORTED_MODULE_1___default().div.withConfig({
   displayName: "Footer__RibbonAside",
   componentId: "sc-1s3f2bx-21"
-})(["", ";"], _media__WEBPACK_IMPORTED_MODULE_4__["default"].lg(_templateObject29(), ribbonAsideWidth));
+})(["", ";"], _media__WEBPACK_IMPORTED_MODULE_4__["default"].lg(_templateObject29 || (_templateObject29 = _taggedTemplateLiteral(["\n    align-items: center;\n    display: flex;\n    flex-wrap: wrap;\n    padding-left: 50px;\n    width: ", "px;\n  "])), ribbonAsideWidth));
 var GiveWrapper = styled_components__WEBPACK_IMPORTED_MODULE_1___default().div.withConfig({
   displayName: "Footer__GiveWrapper",
   componentId: "sc-1s3f2bx-22"
-})(["", ";"], _media__WEBPACK_IMPORTED_MODULE_4__["default"].lg(_templateObject30()));
+})(["", ";"], _media__WEBPACK_IMPORTED_MODULE_4__["default"].lg(_templateObject30 || (_templateObject30 = _taggedTemplateLiteral(["\n    width: 100%;\n  "]))));
 var GiveLogo = styled_components__WEBPACK_IMPORTED_MODULE_1___default().img.withConfig({
   displayName: "Footer__GiveLogo",
   componentId: "sc-1s3f2bx-23"
@@ -1196,15 +949,15 @@ var GiveCaption = styled_components__WEBPACK_IMPORTED_MODULE_1___default().p.wit
 var SoleOuter = styled_components__WEBPACK_IMPORTED_MODULE_1___default().div.withConfig({
   displayName: "Footer__SoleOuter",
   componentId: "sc-1s3f2bx-25"
-})(["background:", ";padding:14px 0 26px;", ";"], brown_university_styles__WEBPACK_IMPORTED_MODULE_2__.colors.transparentBlack, _media__WEBPACK_IMPORTED_MODULE_4__["default"].md(_templateObject31()));
+})(["background:", ";padding:14px 0 26px;", ";"], brown_university_styles__WEBPACK_IMPORTED_MODULE_2__.colors.transparentBlack, _media__WEBPACK_IMPORTED_MODULE_4__["default"].md(_templateObject31 || (_templateObject31 = _taggedTemplateLiteral(["\n    padding: 0;\n  "]))));
 var SoleInner = styled_components__WEBPACK_IMPORTED_MODULE_1___default().div.withConfig({
   displayName: "Footer__SoleInner",
   componentId: "sc-1s3f2bx-26"
-})(["width:100%;", ";"], _media__WEBPACK_IMPORTED_MODULE_4__["default"].md(_templateObject32()));
+})(["width:100%;", ";"], _media__WEBPACK_IMPORTED_MODULE_4__["default"].md(_templateObject32 || (_templateObject32 = _taggedTemplateLiteral(["\n    align-items: center;\n    display: flex;\n    flex-wrap: none;\n    justify-content: space-between;\n  "]))));
 var SocialNavWrapper = styled_components__WEBPACK_IMPORTED_MODULE_1___default().nav.withConfig({
   displayName: "Footer__SocialNavWrapper",
   componentId: "sc-1s3f2bx-27"
-})(["margin-bottom:14px;", ";"], _media__WEBPACK_IMPORTED_MODULE_4__["default"].md(_templateObject33()));
+})(["margin-bottom:14px;", ";"], _media__WEBPACK_IMPORTED_MODULE_4__["default"].md(_templateObject33 || (_templateObject33 = _taggedTemplateLiteral(["\n    margin-bottom: 0;\n    order: 2;\n  "]))));
 var SocialNavList = styled_components__WEBPACK_IMPORTED_MODULE_1___default().ul.withConfig({
   displayName: "Footer__SocialNavList",
   componentId: "sc-1s3f2bx-28"
@@ -1212,14 +965,14 @@ var SocialNavList = styled_components__WEBPACK_IMPORTED_MODULE_1___default().ul.
 var SocialNavListItem = styled_components__WEBPACK_IMPORTED_MODULE_1___default().li.withConfig({
   displayName: "Footer__SocialNavListItem",
   componentId: "sc-1s3f2bx-29"
-})(["display:inline-block;vertical-align:middle;", ";"], _media__WEBPACK_IMPORTED_MODULE_4__["default"].md(_templateObject34()));
+})(["display:inline-block;vertical-align:middle;", ";"], _media__WEBPACK_IMPORTED_MODULE_4__["default"].md(_templateObject34 || (_templateObject34 = _taggedTemplateLiteral(["\n    width: auto;\n  "]))));
 var SocialNavLink = styled_components__WEBPACK_IMPORTED_MODULE_1___default().a.attrs({
   target: "_blank",
   rel: "noopener noreferrer"
 }).withConfig({
   displayName: "Footer__SocialNavLink",
   componentId: "sc-1s3f2bx-30"
-})(["", " box-shadow:inset 0 0 0 1px transparent;display:flex;justify-content:center;padding:17px 8px;position:relative;text-align:center;transition:color 0.25s;", ";"], _mixins__WEBPACK_IMPORTED_MODULE_3__.unstyledLinkCSS, _media__WEBPACK_IMPORTED_MODULE_4__["default"].md(_templateObject35()));
+})(["", " box-shadow:inset 0 0 0 1px transparent;display:flex;justify-content:center;padding:17px 8px;position:relative;text-align:center;transition:color 0.25s;", ";"], _mixins__WEBPACK_IMPORTED_MODULE_3__.unstyledLinkCSS, _media__WEBPACK_IMPORTED_MODULE_4__["default"].md(_templateObject35 || (_templateObject35 = _taggedTemplateLiteral(["\n    padding: 19px 15px;\n  "]))));
 var SocialFacebookIcon = styled_components__WEBPACK_IMPORTED_MODULE_1___default()(_assets_svg_inline_icons_facebook_svg__WEBPACK_IMPORTED_MODULE_8__["default"]).withConfig({
   displayName: "Footer__SocialFacebookIcon",
   componentId: "sc-1s3f2bx-31"
@@ -1251,7 +1004,7 @@ var SocialIconLabel = styled_components__WEBPACK_IMPORTED_MODULE_1___default().s
 var Copyright = styled_components__WEBPACK_IMPORTED_MODULE_1___default().p.withConfig({
   displayName: "Footer__Copyright",
   componentId: "sc-1s3f2bx-38"
-})(["border-top:1px solid rgba(183,176,156,0.2);color:", ";font-family:", ";font-size:", ";font-weight:400;margin:0 -10px;padding-top:20px;", ";"], brown_university_styles__WEBPACK_IMPORTED_MODULE_2__.colors.taupe, brown_university_styles__WEBPACK_IMPORTED_MODULE_2__.typography.serif, (0,brown_university_styles__WEBPACK_IMPORTED_MODULE_2__.getRems)(14), _media__WEBPACK_IMPORTED_MODULE_4__["default"].md(_templateObject36(), (0,brown_university_styles__WEBPACK_IMPORTED_MODULE_2__.getRems)(20)));
+})(["border-top:1px solid rgba(183,176,156,0.2);color:", ";font-family:", ";font-size:", ";font-weight:400;margin:0 -10px;padding-top:20px;", ";"], brown_university_styles__WEBPACK_IMPORTED_MODULE_2__.colors.taupe, brown_university_styles__WEBPACK_IMPORTED_MODULE_2__.typography.serif, (0,brown_university_styles__WEBPACK_IMPORTED_MODULE_2__.getRems)(14), _media__WEBPACK_IMPORTED_MODULE_4__["default"].md(_templateObject36 || (_templateObject36 = _taggedTemplateLiteral(["\n    border-top: 0;\n    font-size: ", ";\n    margin: 0;\n    order: 1;\n    padding-top: 0;\n    position: relative;\n    top: 2px;\n  "])), (0,brown_university_styles__WEBPACK_IMPORTED_MODULE_2__.getRems)(20)));
 
 /*
   outer Footer component
@@ -1328,16 +1081,11 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _mixins__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(16);
 /* harmony import */ var _assets_svg_inline_icons_arrow_right_svg__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(17);
 /* harmony import */ var _assets_svg_inline_icons_link_svg__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(18);
+var _excluded = ["href", "children"];
+var _templateObject;
 function _extends() { _extends = Object.assign ? Object.assign.bind() : function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends.apply(this, arguments); }
 function _objectWithoutProperties(source, excluded) { if (source == null) return {}; var target = _objectWithoutPropertiesLoose(source, excluded); var key, i; if (Object.getOwnPropertySymbols) { var sourceSymbolKeys = Object.getOwnPropertySymbols(source); for (i = 0; i < sourceSymbolKeys.length; i++) { key = sourceSymbolKeys[i]; if (excluded.indexOf(key) >= 0) continue; if (!Object.prototype.propertyIsEnumerable.call(source, key)) continue; target[key] = source[key]; } } return target; }
 function _objectWithoutPropertiesLoose(source, excluded) { if (source == null) return {}; var target = {}; var sourceKeys = Object.keys(source); var key, i; for (i = 0; i < sourceKeys.length; i++) { key = sourceKeys[i]; if (excluded.indexOf(key) >= 0) continue; target[key] = source[key]; } return target; }
-function _templateObject() {
-  var data = _taggedTemplateLiteral(["\n  font-size: ", ";\n  "]);
-  _templateObject = function _templateObject() {
-    return data;
-  };
-  return data;
-}
 function _taggedTemplateLiteral(strings, raw) { if (!raw) { raw = strings.slice(0); } return Object.freeze(Object.defineProperties(strings, { raw: { value: Object.freeze(raw) } })); }
 
 
@@ -1360,7 +1108,7 @@ var iconCSS = (0,styled_components__WEBPACK_IMPORTED_MODULE_2__.css)(["left:0;po
 var Label = styled_components__WEBPACK_IMPORTED_MODULE_2___default().span.withConfig({
   displayName: "FooterLink__Label",
   componentId: "sc-1bisu3o-0"
-})(["display:inline;font-family:", ";font-size:", ";font-weight:400;letter-spacing:", ";margin-right:4px;text-transform:uppercase;", ";"], brown_university_styles__WEBPACK_IMPORTED_MODULE_3__.typography.sans, (0,brown_university_styles__WEBPACK_IMPORTED_MODULE_3__.getRems)(12), (0,brown_university_styles__WEBPACK_IMPORTED_MODULE_3__.getRems)(1.5), _media__WEBPACK_IMPORTED_MODULE_4__["default"].sm(_templateObject(), (0,brown_university_styles__WEBPACK_IMPORTED_MODULE_3__.getRems)(13)));
+})(["display:inline;font-family:", ";font-size:", ";font-weight:400;letter-spacing:", ";margin-right:4px;text-transform:uppercase;", ";"], brown_university_styles__WEBPACK_IMPORTED_MODULE_3__.typography.sans, (0,brown_university_styles__WEBPACK_IMPORTED_MODULE_3__.getRems)(12), (0,brown_university_styles__WEBPACK_IMPORTED_MODULE_3__.getRems)(1.5), _media__WEBPACK_IMPORTED_MODULE_4__["default"].sm(_templateObject || (_templateObject = _taggedTemplateLiteral(["\n  font-size: ", ";\n  "])), (0,brown_university_styles__WEBPACK_IMPORTED_MODULE_3__.getRems)(13)));
 var IconsWrapper = styled_components__WEBPACK_IMPORTED_MODULE_2___default().span.withConfig({
   displayName: "FooterLink__IconsWrapper",
   componentId: "sc-1bisu3o-1"
@@ -1392,7 +1140,7 @@ var Tag = styled_components__WEBPACK_IMPORTED_MODULE_2___default().a.withConfig(
 var FooterLink = function FooterLink(_ref) {
   var href = _ref.href,
     children = _ref.children,
-    restProps = _objectWithoutProperties(_ref, ["href", "children"]);
+    restProps = _objectWithoutProperties(_ref, _excluded);
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default().createElement(Tag, _extends({
     href: href
   }, restProps), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default().createElement(Label, null, children), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default().createElement(IconsWrapper, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default().createElement(DefaultIconWrapper, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default().createElement(DefaultIcon, null)), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default().createElement(ActionIconWrapper, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default().createElement(ActionIcon, null))));
@@ -1428,6 +1176,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(6);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+var _excluded = ["styles"];
 function _objectWithoutProperties(source, excluded) { if (source == null) return {}; var target = _objectWithoutPropertiesLoose(source, excluded); var key, i; if (Object.getOwnPropertySymbols) { var sourceSymbolKeys = Object.getOwnPropertySymbols(source); for (i = 0; i < sourceSymbolKeys.length; i++) { key = sourceSymbolKeys[i]; if (excluded.indexOf(key) >= 0) continue; if (!Object.prototype.propertyIsEnumerable.call(source, key)) continue; target[key] = source[key]; } } return target; }
 function _objectWithoutPropertiesLoose(source, excluded) { if (source == null) return {}; var target = {}; var sourceKeys = Object.keys(source); var key, i; for (i = 0; i < sourceKeys.length; i++) { key = sourceKeys[i]; if (excluded.indexOf(key) >= 0) continue; target[key] = source[key]; } return target; }
 function _extends() {
@@ -1448,7 +1197,7 @@ function _extends() {
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (function (_ref) {
   var _ref$styles = _ref.styles,
     styles = _ref$styles === void 0 ? {} : _ref$styles,
-    props = _objectWithoutProperties(_ref, ["styles"]);
+    props = _objectWithoutProperties(_ref, _excluded);
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("svg", _extends({
     xmlns: "http://www.w3.org/2000/svg",
     viewBox: "0 0 14 9"
@@ -1468,6 +1217,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(6);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+var _excluded = ["styles"];
 function _objectWithoutProperties(source, excluded) { if (source == null) return {}; var target = _objectWithoutPropertiesLoose(source, excluded); var key, i; if (Object.getOwnPropertySymbols) { var sourceSymbolKeys = Object.getOwnPropertySymbols(source); for (i = 0; i < sourceSymbolKeys.length; i++) { key = sourceSymbolKeys[i]; if (excluded.indexOf(key) >= 0) continue; if (!Object.prototype.propertyIsEnumerable.call(source, key)) continue; target[key] = source[key]; } } return target; }
 function _objectWithoutPropertiesLoose(source, excluded) { if (source == null) return {}; var target = {}; var sourceKeys = Object.keys(source); var key, i; for (i = 0; i < sourceKeys.length; i++) { key = sourceKeys[i]; if (excluded.indexOf(key) >= 0) continue; target[key] = source[key]; } return target; }
 function _extends() {
@@ -1488,7 +1238,7 @@ function _extends() {
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (function (_ref) {
   var _ref$styles = _ref.styles,
     styles = _ref$styles === void 0 ? {} : _ref$styles,
-    props = _objectWithoutProperties(_ref, ["styles"]);
+    props = _objectWithoutProperties(_ref, _excluded);
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("svg", _extends({
     xmlns: "http://www.w3.org/2000/svg",
     viewBox: "0 0 18 18"
@@ -1519,6 +1269,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(6);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+var _excluded = ["styles"];
 function _objectWithoutProperties(source, excluded) { if (source == null) return {}; var target = _objectWithoutPropertiesLoose(source, excluded); var key, i; if (Object.getOwnPropertySymbols) { var sourceSymbolKeys = Object.getOwnPropertySymbols(source); for (i = 0; i < sourceSymbolKeys.length; i++) { key = sourceSymbolKeys[i]; if (excluded.indexOf(key) >= 0) continue; if (!Object.prototype.propertyIsEnumerable.call(source, key)) continue; target[key] = source[key]; } } return target; }
 function _objectWithoutPropertiesLoose(source, excluded) { if (source == null) return {}; var target = {}; var sourceKeys = Object.keys(source); var key, i; for (i = 0; i < sourceKeys.length; i++) { key = sourceKeys[i]; if (excluded.indexOf(key) >= 0) continue; target[key] = source[key]; } return target; }
 function _extends() {
@@ -1539,7 +1290,7 @@ function _extends() {
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (function (_ref) {
   var _ref$styles = _ref.styles,
     styles = _ref$styles === void 0 ? {} : _ref$styles,
-    props = _objectWithoutProperties(_ref, ["styles"]);
+    props = _objectWithoutProperties(_ref, _excluded);
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("svg", _extends({
     xmlns: "http://www.w3.org/2000/svg",
     viewBox: "0 0 17 24"
@@ -1559,6 +1310,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(6);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+var _excluded = ["styles"];
 function _objectWithoutProperties(source, excluded) { if (source == null) return {}; var target = _objectWithoutPropertiesLoose(source, excluded); var key, i; if (Object.getOwnPropertySymbols) { var sourceSymbolKeys = Object.getOwnPropertySymbols(source); for (i = 0; i < sourceSymbolKeys.length; i++) { key = sourceSymbolKeys[i]; if (excluded.indexOf(key) >= 0) continue; if (!Object.prototype.propertyIsEnumerable.call(source, key)) continue; target[key] = source[key]; } } return target; }
 function _objectWithoutPropertiesLoose(source, excluded) { if (source == null) return {}; var target = {}; var sourceKeys = Object.keys(source); var key, i; for (i = 0; i < sourceKeys.length; i++) { key = sourceKeys[i]; if (excluded.indexOf(key) >= 0) continue; target[key] = source[key]; } return target; }
 function _extends() {
@@ -1579,7 +1331,7 @@ function _extends() {
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (function (_ref) {
   var _ref$styles = _ref.styles,
     styles = _ref$styles === void 0 ? {} : _ref$styles,
-    props = _objectWithoutProperties(_ref, ["styles"]);
+    props = _objectWithoutProperties(_ref, _excluded);
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("svg", _extends({
     xmlns: "http://www.w3.org/2000/svg",
     viewBox: "0 0 17 17"
@@ -1602,6 +1354,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(6);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+var _excluded = ["styles"];
 function _objectWithoutProperties(source, excluded) { if (source == null) return {}; var target = _objectWithoutPropertiesLoose(source, excluded); var key, i; if (Object.getOwnPropertySymbols) { var sourceSymbolKeys = Object.getOwnPropertySymbols(source); for (i = 0; i < sourceSymbolKeys.length; i++) { key = sourceSymbolKeys[i]; if (excluded.indexOf(key) >= 0) continue; if (!Object.prototype.propertyIsEnumerable.call(source, key)) continue; target[key] = source[key]; } } return target; }
 function _objectWithoutPropertiesLoose(source, excluded) { if (source == null) return {}; var target = {}; var sourceKeys = Object.keys(source); var key, i; for (i = 0; i < sourceKeys.length; i++) { key = sourceKeys[i]; if (excluded.indexOf(key) >= 0) continue; target[key] = source[key]; } return target; }
 function _extends() {
@@ -1622,7 +1375,7 @@ function _extends() {
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (function (_ref) {
   var _ref$styles = _ref.styles,
     styles = _ref$styles === void 0 ? {} : _ref$styles,
-    props = _objectWithoutProperties(_ref, ["styles"]);
+    props = _objectWithoutProperties(_ref, _excluded);
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("svg", _extends({
     xmlns: "http://www.w3.org/2000/svg",
     viewBox: "0 0 18 18"
@@ -1641,6 +1394,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(6);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+var _excluded = ["styles"];
 function _objectWithoutProperties(source, excluded) { if (source == null) return {}; var target = _objectWithoutPropertiesLoose(source, excluded); var key, i; if (Object.getOwnPropertySymbols) { var sourceSymbolKeys = Object.getOwnPropertySymbols(source); for (i = 0; i < sourceSymbolKeys.length; i++) { key = sourceSymbolKeys[i]; if (excluded.indexOf(key) >= 0) continue; if (!Object.prototype.propertyIsEnumerable.call(source, key)) continue; target[key] = source[key]; } } return target; }
 function _objectWithoutPropertiesLoose(source, excluded) { if (source == null) return {}; var target = {}; var sourceKeys = Object.keys(source); var key, i; for (i = 0; i < sourceKeys.length; i++) { key = sourceKeys[i]; if (excluded.indexOf(key) >= 0) continue; target[key] = source[key]; } return target; }
 function _extends() {
@@ -1661,7 +1415,7 @@ function _extends() {
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (function (_ref) {
   var _ref$styles = _ref.styles,
     styles = _ref$styles === void 0 ? {} : _ref$styles,
-    props = _objectWithoutProperties(_ref, ["styles"]);
+    props = _objectWithoutProperties(_ref, _excluded);
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("svg", _extends({
     xmlns: "http://www.w3.org/2000/svg",
     viewBox: "0 0 18 18"
@@ -1682,6 +1436,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(6);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+var _excluded = ["styles"];
 function _objectWithoutProperties(source, excluded) { if (source == null) return {}; var target = _objectWithoutPropertiesLoose(source, excluded); var key, i; if (Object.getOwnPropertySymbols) { var sourceSymbolKeys = Object.getOwnPropertySymbols(source); for (i = 0; i < sourceSymbolKeys.length; i++) { key = sourceSymbolKeys[i]; if (excluded.indexOf(key) >= 0) continue; if (!Object.prototype.propertyIsEnumerable.call(source, key)) continue; target[key] = source[key]; } } return target; }
 function _objectWithoutPropertiesLoose(source, excluded) { if (source == null) return {}; var target = {}; var sourceKeys = Object.keys(source); var key, i; for (i = 0; i < sourceKeys.length; i++) { key = sourceKeys[i]; if (excluded.indexOf(key) >= 0) continue; target[key] = source[key]; } return target; }
 function _extends() {
@@ -1702,7 +1457,7 @@ function _extends() {
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (function (_ref) {
   var _ref$styles = _ref.styles,
     styles = _ref$styles === void 0 ? {} : _ref$styles,
-    props = _objectWithoutProperties(_ref, ["styles"]);
+    props = _objectWithoutProperties(_ref, _excluded);
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("svg", _extends({
     xmlns: "http://www.w3.org/2000/svg",
     viewBox: "0 0 18 18"
@@ -1721,6 +1476,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(6);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+var _excluded = ["styles"];
 function _objectWithoutProperties(source, excluded) { if (source == null) return {}; var target = _objectWithoutPropertiesLoose(source, excluded); var key, i; if (Object.getOwnPropertySymbols) { var sourceSymbolKeys = Object.getOwnPropertySymbols(source); for (i = 0; i < sourceSymbolKeys.length; i++) { key = sourceSymbolKeys[i]; if (excluded.indexOf(key) >= 0) continue; if (!Object.prototype.propertyIsEnumerable.call(source, key)) continue; target[key] = source[key]; } } return target; }
 function _objectWithoutPropertiesLoose(source, excluded) { if (source == null) return {}; var target = {}; var sourceKeys = Object.keys(source); var key, i; for (i = 0; i < sourceKeys.length; i++) { key = sourceKeys[i]; if (excluded.indexOf(key) >= 0) continue; target[key] = source[key]; } return target; }
 function _extends() {
@@ -1741,7 +1497,7 @@ function _extends() {
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (function (_ref) {
   var _ref$styles = _ref.styles,
     styles = _ref$styles === void 0 ? {} : _ref$styles,
-    props = _objectWithoutProperties(_ref, ["styles"]);
+    props = _objectWithoutProperties(_ref, _excluded);
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("svg", _extends({
     xmlns: "http://www.w3.org/2000/svg",
     viewBox: "0 0 22 20"
@@ -1761,6 +1517,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(6);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+var _excluded = ["styles"];
 function _objectWithoutProperties(source, excluded) { if (source == null) return {}; var target = _objectWithoutPropertiesLoose(source, excluded); var key, i; if (Object.getOwnPropertySymbols) { var sourceSymbolKeys = Object.getOwnPropertySymbols(source); for (i = 0; i < sourceSymbolKeys.length; i++) { key = sourceSymbolKeys[i]; if (excluded.indexOf(key) >= 0) continue; if (!Object.prototype.propertyIsEnumerable.call(source, key)) continue; target[key] = source[key]; } } return target; }
 function _objectWithoutPropertiesLoose(source, excluded) { if (source == null) return {}; var target = {}; var sourceKeys = Object.keys(source); var key, i; for (i = 0; i < sourceKeys.length; i++) { key = sourceKeys[i]; if (excluded.indexOf(key) >= 0) continue; target[key] = source[key]; } return target; }
 function _extends() {
@@ -1781,7 +1538,7 @@ function _extends() {
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (function (_ref) {
   var _ref$styles = _ref.styles,
     styles = _ref$styles === void 0 ? {} : _ref$styles,
-    props = _objectWithoutProperties(_ref, ["styles"]);
+    props = _objectWithoutProperties(_ref, _excluded);
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("svg", _extends({
     xmlns: "http://www.w3.org/2000/svg",
     viewBox: "0 0 18 15"
@@ -1800,6 +1557,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(6);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+var _excluded = ["styles"];
 function _objectWithoutProperties(source, excluded) { if (source == null) return {}; var target = _objectWithoutPropertiesLoose(source, excluded); var key, i; if (Object.getOwnPropertySymbols) { var sourceSymbolKeys = Object.getOwnPropertySymbols(source); for (i = 0; i < sourceSymbolKeys.length; i++) { key = sourceSymbolKeys[i]; if (excluded.indexOf(key) >= 0) continue; if (!Object.prototype.propertyIsEnumerable.call(source, key)) continue; target[key] = source[key]; } } return target; }
 function _objectWithoutPropertiesLoose(source, excluded) { if (source == null) return {}; var target = {}; var sourceKeys = Object.keys(source); var key, i; for (i = 0; i < sourceKeys.length; i++) { key = sourceKeys[i]; if (excluded.indexOf(key) >= 0) continue; target[key] = source[key]; } return target; }
 function _extends() {
@@ -1820,7 +1578,7 @@ function _extends() {
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (function (_ref) {
   var _ref$styles = _ref.styles,
     styles = _ref$styles === void 0 ? {} : _ref$styles,
-    props = _objectWithoutProperties(_ref, ["styles"]);
+    props = _objectWithoutProperties(_ref, _excluded);
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("svg", _extends({
     xmlns: "http://www.w3.org/2000/svg",
     viewBox: "0 0 21 15"
@@ -1846,17 +1604,19 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var brown_university_styles__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(3);
 /* harmony import */ var brown_university_styles__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(brown_university_styles__WEBPACK_IMPORTED_MODULE_3__);
 function _typeof(o) { "@babel/helpers - typeof"; return _typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (o) { return typeof o; } : function (o) { return o && "function" == typeof Symbol && o.constructor === Symbol && o !== Symbol.prototype ? "symbol" : typeof o; }, _typeof(o); }
+var _excluded = ["color", "isOpen"],
+  _excluded2 = ["tag", "color", "ariaLabel", "onOpen", "onClose"];
 function _extends() { _extends = Object.assign ? Object.assign.bind() : function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends.apply(this, arguments); }
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, _toPropertyKey(descriptor.key), descriptor); } }
 function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); Object.defineProperty(Constructor, "prototype", { writable: false }); return Constructor; }
-function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); Object.defineProperty(subClass, "prototype", { writable: false }); if (superClass) _setPrototypeOf(subClass, superClass); }
-function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf ? Object.setPrototypeOf.bind() : function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
-function _createSuper(Derived) { var hasNativeReflectConstruct = _isNativeReflectConstruct(); return function _createSuperInternal() { var Super = _getPrototypeOf(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = _getPrototypeOf(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return _possibleConstructorReturn(this, result); }; }
+function _callSuper(t, o, e) { return o = _getPrototypeOf(o), _possibleConstructorReturn(t, _isNativeReflectConstruct() ? Reflect.construct(o, e || [], _getPrototypeOf(t).constructor) : o.apply(t, e)); }
 function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === "object" || typeof call === "function")) { return call; } else if (call !== void 0) { throw new TypeError("Derived constructors may only return object or undefined"); } return _assertThisInitialized(self); }
-function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
 function _isNativeReflectConstruct() { try { var t = !Boolean.prototype.valueOf.call(Reflect.construct(Boolean, [], function () {})); } catch (t) {} return (_isNativeReflectConstruct = function _isNativeReflectConstruct() { return !!t; })(); }
 function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf.bind() : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
+function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); Object.defineProperty(subClass, "prototype", { writable: false }); if (superClass) _setPrototypeOf(subClass, superClass); }
+function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf ? Object.setPrototypeOf.bind() : function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
 function _defineProperty(obj, key, value) { key = _toPropertyKey(key); if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
 function _toPropertyKey(t) { var i = _toPrimitive(t, "string"); return "symbol" == _typeof(i) ? i : String(i); }
 function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e = t[Symbol.toPrimitive]; if (void 0 !== e) { var i = e.call(t, r || "default"); if ("object" != _typeof(i)) return i; throw new TypeError("@@toPrimitive must return a primitive value."); } return ("string" === r ? String : Number)(t); }
@@ -1897,12 +1657,12 @@ var HamburgerTag = styled_components__WEBPACK_IMPORTED_MODULE_2___default().div.
 var HamburgerBars = styled_components__WEBPACK_IMPORTED_MODULE_2___default()(function (_ref2) {
   var color = _ref2.color,
     isOpen = _ref2.isOpen,
-    restProps = _objectWithoutProperties(_ref2, ["color", "isOpen"]);
+    restProps = _objectWithoutProperties(_ref2, _excluded);
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default().createElement("span", restProps);
 }).withConfig({
   displayName: "Hamburger__HamburgerBars",
   componentId: "sc-1jbmnew-1"
-})(["", " ", " transition-duration:.22s;transition-timing-function:cubic-bezier(0.55,0.055,0.675,0.19);", " &&:before{", " ", " ", " transition-duration:.15s;transition:top .1s .25s ease-in,opacity .1s ease-in;opacity:", ";top:", ";", "}&&:after{", " ", " ", " transition-duration:.15s;transition:bottom .1s .25s ease-in,transform .22s cubic-bezier(0.55,0.055,0.675,0.19);bottom:", ";", "}"], hamburgerBarCSS, hamburgerTransitionCSS, function (props) {
+})(["", " ", " transition-duration:.22s;transition-timing-function:cubic-bezier(0.55,0.055,0.675,0.19);", " &&:before{", " ", " ", " transition-duration:.15s;transition:top 0.1s 0.25s ease-in,opacity 0.1s ease-in;opacity:", ";top:", ";", "}&&:after{", " ", " ", " transition-duration:.15s;transition:bottom 0.1s 0.25s ease-in,transform 0.22s cubic-bezier(0.55,0.055,0.675,0.19);bottom:", ";", "}"], hamburgerBarCSS, hamburgerTransitionCSS, function (props) {
   return props.isOpen && (0,styled_components__WEBPACK_IMPORTED_MODULE_2__.css)(["-webkit-transform:rotate(225deg);-ms-transform:rotate(225deg);transform:rotate(225deg);-webkit-transition-delay:0.12s;-o-transition-delay:0.12s;transition-delay:0.12s;-webkit-transition-timing-function:cubic-bezier(0.215,0.61,0.355,1);-o-transition-timing-function:cubic-bezier(0.215,0.61,0.355,1);transition-timing-function:cubic-bezier(0.215,0.61,0.355,1);"]);
 }, hamburgerBarCSS, hamburgerBarPseudoElementCSS, hamburgerTransitionCSS, function (props) {
   return props.isOpen && "0";
@@ -1921,17 +1681,10 @@ var HamburgerBars = styled_components__WEBPACK_IMPORTED_MODULE_2___default()(fun
 */
 var Hamburger = /*#__PURE__*/function (_Component) {
   _inherits(Hamburger, _Component);
-  var _super = _createSuper(Hamburger);
-  function Hamburger() {
+  function Hamburger(props) {
     var _this;
     _classCallCheck(this, Hamburger);
-    for (var _len = arguments.length, args = new Array(_len), _key = 0; _key < _len; _key++) {
-      args[_key] = arguments[_key];
-    }
-    _this = _super.call.apply(_super, [this].concat(args));
-    _defineProperty(_assertThisInitialized(_this), "state", {
-      isOpen: _this.props.isOpen
-    });
+    _this = _callSuper(this, Hamburger, [props]);
     _defineProperty(_assertThisInitialized(_this), "handleClick", function () {
       return _this.setState(function (_ref3) {
         var isOpen = _ref3.isOpen;
@@ -1946,6 +1699,9 @@ var Hamburger = /*#__PURE__*/function (_Component) {
         }
       });
     });
+    _this.state = {
+      isOpen: _this.props.isOpen
+    };
     return _this;
   }
   _createClass(Hamburger, [{
@@ -1969,7 +1725,7 @@ var Hamburger = /*#__PURE__*/function (_Component) {
         ariaLabel = _this$props.ariaLabel,
         onOpen = _this$props.onOpen,
         onClose = _this$props.onClose,
-        restProps = _objectWithoutProperties(_this$props, ["tag", "color", "ariaLabel", "onOpen", "onClose"]);
+        restProps = _objectWithoutProperties(_this$props, _excluded2);
       var isOpen = this.state.isOpen;
       var isButton = tag === "button";
       return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default().createElement(HamburgerTag, _extends({}, restProps, {
@@ -2019,6 +1775,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(2);
 /* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(styled_components__WEBPACK_IMPORTED_MODULE_2__);
 /* harmony import */ var _assets_svg_inline_loader_svg__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(30);
+var _excluded = ["height"];
 function _objectWithoutProperties(source, excluded) { if (source == null) return {}; var target = _objectWithoutPropertiesLoose(source, excluded); var key, i; if (Object.getOwnPropertySymbols) { var sourceSymbolKeys = Object.getOwnPropertySymbols(source); for (i = 0; i < sourceSymbolKeys.length; i++) { key = sourceSymbolKeys[i]; if (excluded.indexOf(key) >= 0) continue; if (!Object.prototype.propertyIsEnumerable.call(source, key)) continue; target[key] = source[key]; } } return target; }
 function _objectWithoutPropertiesLoose(source, excluded) { if (source == null) return {}; var target = {}; var sourceKeys = Object.keys(source); var key, i; for (i = 0; i < sourceKeys.length; i++) { key = sourceKeys[i]; if (excluded.indexOf(key) >= 0) continue; target[key] = source[key]; } return target; }
 
@@ -2040,7 +1797,7 @@ var LoaderWrapper = styled_components__WEBPACK_IMPORTED_MODULE_2___default().div
 */
 var Loader = function Loader(_ref) {
   var height = _ref.height,
-    restProps = _objectWithoutProperties(_ref, ["height"]);
+    restProps = _objectWithoutProperties(_ref, _excluded);
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default().createElement(LoaderWrapper, restProps, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default().createElement(_assets_svg_inline_loader_svg__WEBPACK_IMPORTED_MODULE_3__["default"], {
     width: Math.floor(height * 0.77),
     height: height
@@ -2064,6 +1821,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(6);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+var _excluded = ["styles"];
 function _objectWithoutProperties(source, excluded) { if (source == null) return {}; var target = _objectWithoutPropertiesLoose(source, excluded); var key, i; if (Object.getOwnPropertySymbols) { var sourceSymbolKeys = Object.getOwnPropertySymbols(source); for (i = 0; i < sourceSymbolKeys.length; i++) { key = sourceSymbolKeys[i]; if (excluded.indexOf(key) >= 0) continue; if (!Object.prototype.propertyIsEnumerable.call(source, key)) continue; target[key] = source[key]; } } return target; }
 function _objectWithoutPropertiesLoose(source, excluded) { if (source == null) return {}; var target = {}; var sourceKeys = Object.keys(source); var key, i; for (i = 0; i < sourceKeys.length; i++) { key = sourceKeys[i]; if (excluded.indexOf(key) >= 0) continue; target[key] = source[key]; } return target; }
 function _extends() {
@@ -2084,7 +1842,7 @@ function _extends() {
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (function (_ref) {
   var _ref$styles = _ref.styles,
     styles = _ref$styles === void 0 ? {} : _ref$styles,
-    props = _objectWithoutProperties(_ref, ["styles"]);
+    props = _objectWithoutProperties(_ref, _excluded);
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("svg", _extends({
     viewBox: "0 0 140 180",
     role: "img",
@@ -2217,6 +1975,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _NavContext__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(32);
 /* harmony import */ var _NavItem__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(33);
 /* harmony import */ var _NavLink__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(34);
+var _excluded = ["color", "navbar", "mobile", "sub"];
 function _objectWithoutProperties(source, excluded) { if (source == null) return {}; var target = _objectWithoutPropertiesLoose(source, excluded); var key, i; if (Object.getOwnPropertySymbols) { var sourceSymbolKeys = Object.getOwnPropertySymbols(source); for (i = 0; i < sourceSymbolKeys.length; i++) { key = sourceSymbolKeys[i]; if (excluded.indexOf(key) >= 0) continue; if (!Object.prototype.propertyIsEnumerable.call(source, key)) continue; target[key] = source[key]; } } return target; }
 function _objectWithoutPropertiesLoose(source, excluded) { if (source == null) return {}; var target = {}; var sourceKeys = Object.keys(source); var key, i; for (i = 0; i < sourceKeys.length; i++) { key = sourceKeys[i]; if (excluded.indexOf(key) >= 0) continue; target[key] = source[key]; } return target; }
 
@@ -2270,7 +2029,7 @@ var Tag = styled_components__WEBPACK_IMPORTED_MODULE_2___default()(function (_re
     navbar = _ref5.navbar,
     mobile = _ref5.mobile,
     sub = _ref5.sub,
-    restProps = _objectWithoutProperties(_ref5, ["color", "navbar", "mobile", "sub"]);
+    restProps = _objectWithoutProperties(_ref5, _excluded);
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default().createElement("ul", restProps);
 }).withConfig({
   displayName: "Nav__Tag",
@@ -2293,14 +2052,18 @@ var Nav = function Nav(props) {
     mobile = props.mobile,
     sub = props.sub,
     color = props.color;
-  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default().createElement(_NavContext__WEBPACK_IMPORTED_MODULE_4__["default"].Provider, {
-    value: {
-      navbar: navbar,
-      mobile: mobile,
-      sub: sub,
-      color: color
-    }
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default().createElement(Tag, props));
+  return (
+    /*#__PURE__*/
+    // eslint-disable-next-line react/jsx-no-constructed-context-values
+    react__WEBPACK_IMPORTED_MODULE_1___default().createElement(_NavContext__WEBPACK_IMPORTED_MODULE_4__["default"].Provider, {
+      value: {
+        navbar: navbar,
+        mobile: mobile,
+        sub: sub,
+        color: color
+      }
+    }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default().createElement(Tag, props))
+  );
 };
 Nav.propTypes = process.env.NODE_ENV !== "production" ? {
   navbar: (prop_types__WEBPACK_IMPORTED_MODULE_0___default().bool),
@@ -2418,16 +2181,11 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var brown_university_styles__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(brown_university_styles__WEBPACK_IMPORTED_MODULE_3__);
 /* harmony import */ var _NavContext__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(32);
 /* harmony import */ var _media__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(1);
+var _excluded = ["tag"];
+var _templateObject;
 function _extends() { _extends = Object.assign ? Object.assign.bind() : function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends.apply(this, arguments); }
 function _objectWithoutProperties(source, excluded) { if (source == null) return {}; var target = _objectWithoutPropertiesLoose(source, excluded); var key, i; if (Object.getOwnPropertySymbols) { var sourceSymbolKeys = Object.getOwnPropertySymbols(source); for (i = 0; i < sourceSymbolKeys.length; i++) { key = sourceSymbolKeys[i]; if (excluded.indexOf(key) >= 0) continue; if (!Object.prototype.propertyIsEnumerable.call(source, key)) continue; target[key] = source[key]; } } return target; }
 function _objectWithoutPropertiesLoose(source, excluded) { if (source == null) return {}; var target = {}; var sourceKeys = Object.keys(source); var key, i; for (i = 0; i < sourceKeys.length; i++) { key = sourceKeys[i]; if (excluded.indexOf(key) >= 0) continue; target[key] = source[key]; } return target; }
-function _templateObject() {
-  var data = _taggedTemplateLiteral(["\n    font-size: ", ";\n  "]);
-  _templateObject = function _templateObject() {
-    return data;
-  };
-  return data;
-}
 function _taggedTemplateLiteral(strings, raw) { if (!raw) { raw = strings.slice(0); } return Object.freeze(Object.defineProperties(strings, { raw: { value: Object.freeze(raw) } })); }
 
 
@@ -2436,6 +2194,7 @@ function _taggedTemplateLiteral(strings, raw) { if (!raw) { raw = strings.slice(
 
 
 var sans = brown_university_styles__WEBPACK_IMPORTED_MODULE_3__.typography.sans;
+
 /*
   css mixins
 */
@@ -2629,7 +2388,7 @@ var Tag = styled_components__WEBPACK_IMPORTED_MODULE_2___default().div.withConfi
   return getPointerEvents(props);
 }, function (props) {
   return getTransition(props);
-}, _media__WEBPACK_IMPORTED_MODULE_4__["default"].xl(_templateObject(), function (_ref13) {
+}, _media__WEBPACK_IMPORTED_MODULE_4__["default"].xl(_templateObject || (_templateObject = _taggedTemplateLiteral(["\n    font-size: ", ";\n  "])), function (_ref13) {
   var navbar = _ref13.navbar,
     mobile = _ref13.mobile,
     sub = _ref13.sub;
@@ -2658,7 +2417,7 @@ var deriveTag = function deriveTag(_ref15) {
 };
 var NavLink = function NavLink(props) {
   var tag = props.tag,
-    restProps = _objectWithoutProperties(props, ["tag"]);
+    restProps = _objectWithoutProperties(props, _excluded);
   var derivedTag = deriveTag(props);
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default().createElement(_NavContext__WEBPACK_IMPORTED_MODULE_5__["default"].Consumer, null, function (_ref16) {
     var navbar = _ref16.navbar,
@@ -2714,14 +2473,10 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _assets_svg_inline_logo_full_color_svg__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(41);
 /* harmony import */ var _assets_svg_inline_logo_two_color_svg__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(42);
 /* harmony import */ var _media__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(1);
+var _templateObject;
+var _excluded = ["color", "mobileBreakpoint", "toggleTitle"],
+  _excluded2 = ["color", "mobileBreakpoint", "toggleTitle", "children"];
 function _extends() { _extends = Object.assign ? Object.assign.bind() : function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends.apply(this, arguments); }
-function _templateObject() {
-  var data = _taggedTemplateLiteral(["\n    padding: 0 33px;\n  "]);
-  _templateObject = function _templateObject() {
-    return data;
-  };
-  return data;
-}
 function _taggedTemplateLiteral(strings, raw) { if (!raw) { raw = strings.slice(0); } return Object.freeze(Object.defineProperties(strings, { raw: { value: Object.freeze(raw) } })); }
 function _objectWithoutProperties(source, excluded) { if (source == null) return {}; var target = _objectWithoutPropertiesLoose(source, excluded); var key, i; if (Object.getOwnPropertySymbols) { var sourceSymbolKeys = Object.getOwnPropertySymbols(source); for (i = 0; i < sourceSymbolKeys.length; i++) { key = sourceSymbolKeys[i]; if (excluded.indexOf(key) >= 0) continue; if (!Object.prototype.propertyIsEnumerable.call(source, key)) continue; target[key] = source[key]; } } return target; }
 function _objectWithoutPropertiesLoose(source, excluded) { if (source == null) return {}; var target = {}; var sourceKeys = Object.keys(source); var key, i; for (i = 0; i < sourceKeys.length; i++) { key = sourceKeys[i]; if (excluded.indexOf(key) >= 0) continue; target[key] = source[key]; } return target; }
@@ -2744,7 +2499,7 @@ var NavbarWrapper = styled_components__WEBPACK_IMPORTED_MODULE_2___default()(fun
   var color = _ref.color,
     mobileBreakpoint = _ref.mobileBreakpoint,
     toggleTitle = _ref.toggleTitle,
-    restProps = _objectWithoutProperties(_ref, ["color", "mobileBreakpoint", "toggleTitle"]);
+    restProps = _objectWithoutProperties(_ref, _excluded);
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default().createElement("nav", restProps);
 }).withConfig({
   displayName: "Navbar__NavbarWrapper",
@@ -2752,7 +2507,7 @@ var NavbarWrapper = styled_components__WEBPACK_IMPORTED_MODULE_2___default()(fun
 })(["align-items:center;box-shadow:0 5px 10px 0 #00000026;display:flex;height:75px;justify-content:space-between;padding:0 7vw;position:relative;z-index:20;background-color:", ";", ";"], function (_ref2) {
   var color = _ref2.color;
   return brown_university_styles__WEBPACK_IMPORTED_MODULE_3__.colors[color];
-}, _media__WEBPACK_IMPORTED_MODULE_4__["default"].md(_templateObject()));
+}, _media__WEBPACK_IMPORTED_MODULE_4__["default"].md(_templateObject || (_templateObject = _taggedTemplateLiteral(["\n    padding: 0 33px;\n  "]))));
 var NavbarLogoLink = styled_components__WEBPACK_IMPORTED_MODULE_2___default().a.withConfig({
   displayName: "Navbar__NavbarLogoLink",
   componentId: "sc-6w2m5m-1"
@@ -2775,7 +2530,7 @@ var Navbar = function Navbar(_ref3) {
     mobileBreakpoint = _ref3.mobileBreakpoint,
     toggleTitle = _ref3.toggleTitle,
     children = _ref3.children,
-    restProps = _objectWithoutProperties(_ref3, ["color", "mobileBreakpoint", "toggleTitle", "children"]);
+    restProps = _objectWithoutProperties(_ref3, _excluded2);
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default().createElement(NavbarWrapper, _extends({}, restProps, {
     color: color
   }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default().createElement(NavbarLogoLink, {
@@ -2844,14 +2599,10 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _utils_Collapse__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(12);
 /* harmony import */ var _utils_VisibilityToggle__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(39);
 /* harmony import */ var _media__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(1);
+var _templateObject;
+var _excluded = ["color"],
+  _excluded2 = ["children"];
 function _extends() { _extends = Object.assign ? Object.assign.bind() : function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends.apply(this, arguments); }
-function _templateObject() {
-  var data = _taggedTemplateLiteral(["\n    padding: 0 33px;\n  "]);
-  _templateObject = function _templateObject() {
-    return data;
-  };
-  return data;
-}
 function _taggedTemplateLiteral(strings, raw) { if (!raw) { raw = strings.slice(0); } return Object.freeze(Object.defineProperties(strings, { raw: { value: Object.freeze(raw) } })); }
 function _objectWithoutProperties(source, excluded) { if (source == null) return {}; var target = _objectWithoutPropertiesLoose(source, excluded); var key, i; if (Object.getOwnPropertySymbols) { var sourceSymbolKeys = Object.getOwnPropertySymbols(source); for (i = 0; i < sourceSymbolKeys.length; i++) { key = sourceSymbolKeys[i]; if (excluded.indexOf(key) >= 0) continue; if (!Object.prototype.propertyIsEnumerable.call(source, key)) continue; target[key] = source[key]; } } return target; }
 function _objectWithoutPropertiesLoose(source, excluded) { if (source == null) return {}; var target = {}; var sourceKeys = Object.keys(source); var key, i; for (i = 0; i < sourceKeys.length; i++) { key = sourceKeys[i]; if (excluded.indexOf(key) >= 0) continue; target[key] = source[key]; } return target; }
@@ -2873,7 +2624,7 @@ function _objectWithoutPropertiesLoose(source, excluded) { if (source == null) r
 // filter props so they don't become dom attributes (see `styled-components` issue 439)
 var MobileCollapseWrapper = styled_components__WEBPACK_IMPORTED_MODULE_2___default()(function (_ref) {
   var color = _ref.color,
-    restProps = _objectWithoutProperties(_ref, ["color"]);
+    restProps = _objectWithoutProperties(_ref, _excluded);
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default().createElement("div", restProps);
 }).withConfig({
   displayName: "NavbarNav__MobileCollapseWrapper",
@@ -2885,7 +2636,7 @@ var MobileCollapseWrapper = styled_components__WEBPACK_IMPORTED_MODULE_2___defau
 var MobileNavWrapper = styled_components__WEBPACK_IMPORTED_MODULE_2___default().div.withConfig({
   displayName: "NavbarNav__MobileNavWrapper",
   componentId: "hl2s13-1"
-})(["padding:0 7vw 1rem;", ";"], _media__WEBPACK_IMPORTED_MODULE_5__["default"].md(_templateObject()));
+})(["padding:0 7vw 1rem;", ";"], _media__WEBPACK_IMPORTED_MODULE_5__["default"].md(_templateObject || (_templateObject = _taggedTemplateLiteral(["\n    padding: 0 33px;\n  "]))));
 
 /*
   outer NavbarNav component
@@ -2902,7 +2653,7 @@ var getChildColor = function getChildColor(color) {
 };
 var NavbarNav = function NavbarNav(_ref3) {
   var children = _ref3.children,
-    restProps = _objectWithoutProperties(_ref3, ["children"]);
+    restProps = _objectWithoutProperties(_ref3, _excluded2);
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default().createElement(react_fns__WEBPACK_IMPORTED_MODULE_3__.WindowSize, {
     render: function render(_ref4) {
       var width = _ref4.width;
@@ -2967,6 +2718,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(prop_types__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(6);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_1__);
+var _excluded = ["children"];
 function _typeof(o) { "@babel/helpers - typeof"; return _typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (o) { return typeof o; } : function (o) { return o && "function" == typeof Symbol && o.constructor === Symbol && o !== Symbol.prototype ? "symbol" : typeof o; }, _typeof(o); }
 function ownKeys(e, r) { var t = Object.keys(e); if (Object.getOwnPropertySymbols) { var o = Object.getOwnPropertySymbols(e); r && (o = o.filter(function (r) { return Object.getOwnPropertyDescriptor(e, r).enumerable; })), t.push.apply(t, o); } return t; }
 function _objectSpread(e) { for (var r = 1; r < arguments.length; r++) { var t = null != arguments[r] ? arguments[r] : {}; r % 2 ? ownKeys(Object(t), !0).forEach(function (r) { _defineProperty(e, r, t[r]); }) : Object.getOwnPropertyDescriptors ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t)) : ownKeys(Object(t)).forEach(function (r) { Object.defineProperty(e, r, Object.getOwnPropertyDescriptor(t, r)); }); } return e; }
@@ -2975,13 +2727,13 @@ function _objectWithoutPropertiesLoose(source, excluded) { if (source == null) r
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, _toPropertyKey(descriptor.key), descriptor); } }
 function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); Object.defineProperty(Constructor, "prototype", { writable: false }); return Constructor; }
-function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); Object.defineProperty(subClass, "prototype", { writable: false }); if (superClass) _setPrototypeOf(subClass, superClass); }
-function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf ? Object.setPrototypeOf.bind() : function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
-function _createSuper(Derived) { var hasNativeReflectConstruct = _isNativeReflectConstruct(); return function _createSuperInternal() { var Super = _getPrototypeOf(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = _getPrototypeOf(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return _possibleConstructorReturn(this, result); }; }
+function _callSuper(t, o, e) { return o = _getPrototypeOf(o), _possibleConstructorReturn(t, _isNativeReflectConstruct() ? Reflect.construct(o, e || [], _getPrototypeOf(t).constructor) : o.apply(t, e)); }
 function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === "object" || typeof call === "function")) { return call; } else if (call !== void 0) { throw new TypeError("Derived constructors may only return object or undefined"); } return _assertThisInitialized(self); }
-function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
 function _isNativeReflectConstruct() { try { var t = !Boolean.prototype.valueOf.call(Reflect.construct(Boolean, [], function () {})); } catch (t) {} return (_isNativeReflectConstruct = function _isNativeReflectConstruct() { return !!t; })(); }
 function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf.bind() : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
+function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); Object.defineProperty(subClass, "prototype", { writable: false }); if (superClass) _setPrototypeOf(subClass, superClass); }
+function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf ? Object.setPrototypeOf.bind() : function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
 function _defineProperty(obj, key, value) { key = _toPropertyKey(key); if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
 function _toPropertyKey(t) { var i = _toPrimitive(t, "string"); return "symbol" == _typeof(i) ? i : String(i); }
 function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e = t[Symbol.toPrimitive]; if (void 0 !== e) { var i = e.call(t, r || "default"); if ("object" != _typeof(i)) return i; throw new TypeError("@@toPrimitive must return a primitive value."); } return ("string" === r ? String : Number)(t); }
@@ -2989,17 +2741,10 @@ function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e 
 
 var VisibilityToggle = /*#__PURE__*/function (_Component) {
   _inherits(VisibilityToggle, _Component);
-  var _super = _createSuper(VisibilityToggle);
-  function VisibilityToggle() {
+  function VisibilityToggle(props) {
     var _this;
     _classCallCheck(this, VisibilityToggle);
-    for (var _len = arguments.length, args = new Array(_len), _key = 0; _key < _len; _key++) {
-      args[_key] = arguments[_key];
-    }
-    _this = _super.call.apply(_super, [this].concat(args));
-    _defineProperty(_assertThisInitialized(_this), "state", {
-      isOpen: false
-    });
+    _this = _callSuper(this, VisibilityToggle, [props]);
     _defineProperty(_assertThisInitialized(_this), "toggleIsOpen", function () {
       return _this.setState(function (_ref) {
         var isOpen = _ref.isOpen;
@@ -3008,6 +2753,9 @@ var VisibilityToggle = /*#__PURE__*/function (_Component) {
         };
       });
     });
+    _this.state = {
+      isOpen: false
+    };
     return _this;
   }
   _createClass(VisibilityToggle, [{
@@ -3015,7 +2763,7 @@ var VisibilityToggle = /*#__PURE__*/function (_Component) {
     value: function render() {
       var _this$props = this.props,
         children = _this$props.children,
-        restProps = _objectWithoutProperties(_this$props, ["children"]);
+        restProps = _objectWithoutProperties(_this$props, _excluded);
       return children(_objectSpread(_objectSpread(_objectSpread({}, restProps), this.state), {}, {
         toggleIsOpen: this.toggleIsOpen
       }));
@@ -3052,13 +2800,10 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _utils_Collapse__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(12);
 /* harmony import */ var _utils_VisibilityToggle__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(39);
 /* harmony import */ var _media__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(1);
-function _templateObject() {
-  var data = _taggedTemplateLiteral(["\n    padding: 0 33px 1rem 33px;\n  "]);
-  _templateObject = function _templateObject() {
-    return data;
-  };
-  return data;
-}
+var _templateObject;
+var _excluded = ["color"],
+  _excluded2 = ["color"],
+  _excluded3 = ["children"];
 function _taggedTemplateLiteral(strings, raw) { if (!raw) { raw = strings.slice(0); } return Object.freeze(Object.defineProperties(strings, { raw: { value: Object.freeze(raw) } })); }
 function _objectWithoutProperties(source, excluded) { if (source == null) return {}; var target = _objectWithoutPropertiesLoose(source, excluded); var key, i; if (Object.getOwnPropertySymbols) { var sourceSymbolKeys = Object.getOwnPropertySymbols(source); for (i = 0; i < sourceSymbolKeys.length; i++) { key = sourceSymbolKeys[i]; if (excluded.indexOf(key) >= 0) continue; if (!Object.prototype.propertyIsEnumerable.call(source, key)) continue; target[key] = source[key]; } } return target; }
 function _objectWithoutPropertiesLoose(source, excluded) { if (source == null) return {}; var target = {}; var sourceKeys = Object.keys(source); var key, i; for (i = 0; i < sourceKeys.length; i++) { key = sourceKeys[i]; if (excluded.indexOf(key) >= 0) continue; target[key] = source[key]; } return target; }
@@ -3074,6 +2819,7 @@ function _objectWithoutPropertiesLoose(source, excluded) { if (source == null) r
 
 
 var sansBold = brown_university_styles__WEBPACK_IMPORTED_MODULE_4__.typography.sansBold;
+
 /*
   inner components
 */
@@ -3085,7 +2831,7 @@ var ToggleButton = styled_components__WEBPACK_IMPORTED_MODULE_2___default().butt
 // filter props so they don't become dom attributes (see `styled-components` issue 439)
 var ToggleTitle = styled_components__WEBPACK_IMPORTED_MODULE_2___default()(function (_ref) {
   var color = _ref.color,
-    restProps = _objectWithoutProperties(_ref, ["color"]);
+    restProps = _objectWithoutProperties(_ref, _excluded);
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default().createElement("span", restProps);
 }).withConfig({
   displayName: "NavbarGlobalNav__ToggleTitle",
@@ -3098,7 +2844,7 @@ var ToggleTitle = styled_components__WEBPACK_IMPORTED_MODULE_2___default()(funct
 // filter props so they don't become dom attributes (see `styled-components` issue 439)
 var CollapseWrapper = styled_components__WEBPACK_IMPORTED_MODULE_2___default()(function (_ref3) {
   var color = _ref3.color,
-    restProps = _objectWithoutProperties(_ref3, ["color"]);
+    restProps = _objectWithoutProperties(_ref3, _excluded2);
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default().createElement("div", restProps);
 }).withConfig({
   displayName: "NavbarGlobalNav__CollapseWrapper",
@@ -3110,7 +2856,7 @@ var CollapseWrapper = styled_components__WEBPACK_IMPORTED_MODULE_2___default()(f
 var NavWrapper = styled_components__WEBPACK_IMPORTED_MODULE_2___default().div.withConfig({
   displayName: "NavbarGlobalNav__NavWrapper",
   componentId: "sc-1vdo48t-3"
-})(["padding:0 7vw 1rem;", ";"], _media__WEBPACK_IMPORTED_MODULE_5__["default"].md(_templateObject()));
+})(["padding:0 7vw 1rem;", ";"], _media__WEBPACK_IMPORTED_MODULE_5__["default"].md(_templateObject || (_templateObject = _taggedTemplateLiteral(["\n    padding: 0 33px 1rem 33px;\n  "]))));
 
 /*
   outer NavbarGlobalNav component
@@ -3127,7 +2873,7 @@ var getChildColor = function getChildColor(color) {
 };
 var NavbarGlobalNav = function NavbarGlobalNav(_ref5) {
   var children = _ref5.children,
-    restProps = _objectWithoutProperties(_ref5, ["children"]);
+    restProps = _objectWithoutProperties(_ref5, _excluded3);
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default().createElement(react_fns__WEBPACK_IMPORTED_MODULE_3__.WindowSize, {
     render: function render(_ref6) {
       var width = _ref6.width;
@@ -3185,6 +2931,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(6);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+var _excluded = ["styles"];
 function _objectWithoutProperties(source, excluded) { if (source == null) return {}; var target = _objectWithoutPropertiesLoose(source, excluded); var key, i; if (Object.getOwnPropertySymbols) { var sourceSymbolKeys = Object.getOwnPropertySymbols(source); for (i = 0; i < sourceSymbolKeys.length; i++) { key = sourceSymbolKeys[i]; if (excluded.indexOf(key) >= 0) continue; if (!Object.prototype.propertyIsEnumerable.call(source, key)) continue; target[key] = source[key]; } } return target; }
 function _objectWithoutPropertiesLoose(source, excluded) { if (source == null) return {}; var target = {}; var sourceKeys = Object.keys(source); var key, i; for (i = 0; i < sourceKeys.length; i++) { key = sourceKeys[i]; if (excluded.indexOf(key) >= 0) continue; target[key] = source[key]; } return target; }
 function _extends() {
@@ -3205,7 +2952,7 @@ function _extends() {
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (function (_ref) {
   var _ref$styles = _ref.styles,
     styles = _ref$styles === void 0 ? {} : _ref$styles,
-    props = _objectWithoutProperties(_ref, ["styles"]);
+    props = _objectWithoutProperties(_ref, _excluded);
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("svg", _extends({
     viewBox: "0 0 384 192",
     role: "img",
@@ -3288,6 +3035,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(6);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+var _excluded = ["styles"];
 function _objectWithoutProperties(source, excluded) { if (source == null) return {}; var target = _objectWithoutPropertiesLoose(source, excluded); var key, i; if (Object.getOwnPropertySymbols) { var sourceSymbolKeys = Object.getOwnPropertySymbols(source); for (i = 0; i < sourceSymbolKeys.length; i++) { key = sourceSymbolKeys[i]; if (excluded.indexOf(key) >= 0) continue; if (!Object.prototype.propertyIsEnumerable.call(source, key)) continue; target[key] = source[key]; } } return target; }
 function _objectWithoutPropertiesLoose(source, excluded) { if (source == null) return {}; var target = {}; var sourceKeys = Object.keys(source); var key, i; for (i = 0; i < sourceKeys.length; i++) { key = sourceKeys[i]; if (excluded.indexOf(key) >= 0) continue; target[key] = source[key]; } return target; }
 function _extends() {
@@ -3308,7 +3056,7 @@ function _extends() {
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (function (_ref) {
   var _ref$styles = _ref.styles,
     styles = _ref$styles === void 0 ? {} : _ref$styles,
-    props = _objectWithoutProperties(_ref, ["styles"]);
+    props = _objectWithoutProperties(_ref, _excluded);
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("svg", _extends({
     viewBox: "0 0 384 192",
     role: "img",
@@ -3372,6 +3120,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _Nav__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(31);
 /* harmony import */ var _utils_Collapse__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(12);
 /* harmony import */ var _utils_VisibilityToggle__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(39);
+var _excluded = ["banner", "mobileBreakpoint", "mobileToggleTitle", "children"];
 function _objectWithoutProperties(source, excluded) { if (source == null) return {}; var target = _objectWithoutPropertiesLoose(source, excluded); var key, i; if (Object.getOwnPropertySymbols) { var sourceSymbolKeys = Object.getOwnPropertySymbols(source); for (i = 0; i < sourceSymbolKeys.length; i++) { key = sourceSymbolKeys[i]; if (excluded.indexOf(key) >= 0) continue; if (!Object.prototype.propertyIsEnumerable.call(source, key)) continue; target[key] = source[key]; } } return target; }
 function _objectWithoutPropertiesLoose(source, excluded) { if (source == null) return {}; var target = {}; var sourceKeys = Object.keys(source); var key, i; for (i = 0; i < sourceKeys.length; i++) { key = sourceKeys[i]; if (excluded.indexOf(key) >= 0) continue; target[key] = source[key]; } return target; }
 
@@ -3384,6 +3133,7 @@ function _objectWithoutPropertiesLoose(source, excluded) { if (source == null) r
 
 
 var sansBold = brown_university_styles__WEBPACK_IMPORTED_MODULE_4__.typography.sansBold;
+
 /*
   inner components
 */
@@ -3432,7 +3182,7 @@ var SiteNav = function SiteNav(_ref) {
     mobileBreakpoint = _ref.mobileBreakpoint,
     mobileToggleTitle = _ref.mobileToggleTitle,
     children = _ref.children,
-    restProps = _objectWithoutProperties(_ref, ["banner", "mobileBreakpoint", "mobileToggleTitle", "children"]);
+    restProps = _objectWithoutProperties(_ref, _excluded);
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default().createElement(react_fns__WEBPACK_IMPORTED_MODULE_3__.WindowSize, {
     render: function render(_ref2) {
       var width = _ref2.width;
@@ -3496,6 +3246,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(6);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_1__);
 /* harmony import */ var _Nav__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(31);
+var _excluded = ["children"];
 function _objectWithoutProperties(source, excluded) { if (source == null) return {}; var target = _objectWithoutPropertiesLoose(source, excluded); var key, i; if (Object.getOwnPropertySymbols) { var sourceSymbolKeys = Object.getOwnPropertySymbols(source); for (i = 0; i < sourceSymbolKeys.length; i++) { key = sourceSymbolKeys[i]; if (excluded.indexOf(key) >= 0) continue; if (!Object.prototype.propertyIsEnumerable.call(source, key)) continue; target[key] = source[key]; } } return target; }
 function _objectWithoutPropertiesLoose(source, excluded) { if (source == null) return {}; var target = {}; var sourceKeys = Object.keys(source); var key, i; for (i = 0; i < sourceKeys.length; i++) { key = sourceKeys[i]; if (excluded.indexOf(key) >= 0) continue; target[key] = source[key]; } return target; }
 
@@ -3503,7 +3254,7 @@ function _objectWithoutPropertiesLoose(source, excluded) { if (source == null) r
 
 var SubNav = function SubNav(_ref) {
   var children = _ref.children,
-    restProps = _objectWithoutProperties(_ref, ["children"]);
+    restProps = _objectWithoutProperties(_ref, _excluded);
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default().createElement("nav", restProps, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default().createElement(_Nav__WEBPACK_IMPORTED_MODULE_2__["default"], {
     sub: true
   }, children));
@@ -3525,6 +3276,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(6);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+var _excluded = ["styles"];
 function _objectWithoutProperties(source, excluded) { if (source == null) return {}; var target = _objectWithoutPropertiesLoose(source, excluded); var key, i; if (Object.getOwnPropertySymbols) { var sourceSymbolKeys = Object.getOwnPropertySymbols(source); for (i = 0; i < sourceSymbolKeys.length; i++) { key = sourceSymbolKeys[i]; if (excluded.indexOf(key) >= 0) continue; if (!Object.prototype.propertyIsEnumerable.call(source, key)) continue; target[key] = source[key]; } } return target; }
 function _objectWithoutPropertiesLoose(source, excluded) { if (source == null) return {}; var target = {}; var sourceKeys = Object.keys(source); var key, i; for (i = 0; i < sourceKeys.length; i++) { key = sourceKeys[i]; if (excluded.indexOf(key) >= 0) continue; target[key] = source[key]; } return target; }
 function _extends() {
@@ -3545,7 +3297,7 @@ function _extends() {
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (function (_ref) {
   var _ref$styles = _ref.styles,
     styles = _ref$styles === void 0 ? {} : _ref$styles,
-    props = _objectWithoutProperties(_ref, ["styles"]);
+    props = _objectWithoutProperties(_ref, _excluded);
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("svg", _extends({
     xmlns: "http://www.w3.org/2000/svg",
     viewBox: "0 0 20 23"
@@ -3565,6 +3317,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(6);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+var _excluded = ["styles"];
 function _objectWithoutProperties(source, excluded) { if (source == null) return {}; var target = _objectWithoutPropertiesLoose(source, excluded); var key, i; if (Object.getOwnPropertySymbols) { var sourceSymbolKeys = Object.getOwnPropertySymbols(source); for (i = 0; i < sourceSymbolKeys.length; i++) { key = sourceSymbolKeys[i]; if (excluded.indexOf(key) >= 0) continue; if (!Object.prototype.propertyIsEnumerable.call(source, key)) continue; target[key] = source[key]; } } return target; }
 function _objectWithoutPropertiesLoose(source, excluded) { if (source == null) return {}; var target = {}; var sourceKeys = Object.keys(source); var key, i; for (i = 0; i < sourceKeys.length; i++) { key = sourceKeys[i]; if (excluded.indexOf(key) >= 0) continue; target[key] = source[key]; } return target; }
 function _extends() {
@@ -3585,7 +3338,7 @@ function _extends() {
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (function (_ref) {
   var _ref$styles = _ref.styles,
     styles = _ref$styles === void 0 ? {} : _ref$styles,
-    props = _objectWithoutProperties(_ref, ["styles"]);
+    props = _objectWithoutProperties(_ref, _excluded);
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("svg", _extends({
     xmlns: "http://www.w3.org/2000/svg",
     viewBox: "0 0 14 9"
@@ -3605,6 +3358,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(6);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+var _excluded = ["styles"];
 function _objectWithoutProperties(source, excluded) { if (source == null) return {}; var target = _objectWithoutPropertiesLoose(source, excluded); var key, i; if (Object.getOwnPropertySymbols) { var sourceSymbolKeys = Object.getOwnPropertySymbols(source); for (i = 0; i < sourceSymbolKeys.length; i++) { key = sourceSymbolKeys[i]; if (excluded.indexOf(key) >= 0) continue; if (!Object.prototype.propertyIsEnumerable.call(source, key)) continue; target[key] = source[key]; } } return target; }
 function _objectWithoutPropertiesLoose(source, excluded) { if (source == null) return {}; var target = {}; var sourceKeys = Object.keys(source); var key, i; for (i = 0; i < sourceKeys.length; i++) { key = sourceKeys[i]; if (excluded.indexOf(key) >= 0) continue; target[key] = source[key]; } return target; }
 function _extends() {
@@ -3625,7 +3379,7 @@ function _extends() {
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (function (_ref) {
   var _ref$styles = _ref.styles,
     styles = _ref$styles === void 0 ? {} : _ref$styles,
-    props = _objectWithoutProperties(_ref, ["styles"]);
+    props = _objectWithoutProperties(_ref, _excluded);
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("svg", _extends({
     xmlns: "http://www.w3.org/2000/svg",
     viewBox: "0 0 14 11"
@@ -3645,6 +3399,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(6);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+var _excluded = ["styles"];
 function _objectWithoutProperties(source, excluded) { if (source == null) return {}; var target = _objectWithoutPropertiesLoose(source, excluded); var key, i; if (Object.getOwnPropertySymbols) { var sourceSymbolKeys = Object.getOwnPropertySymbols(source); for (i = 0; i < sourceSymbolKeys.length; i++) { key = sourceSymbolKeys[i]; if (excluded.indexOf(key) >= 0) continue; if (!Object.prototype.propertyIsEnumerable.call(source, key)) continue; target[key] = source[key]; } } return target; }
 function _objectWithoutPropertiesLoose(source, excluded) { if (source == null) return {}; var target = {}; var sourceKeys = Object.keys(source); var key, i; for (i = 0; i < sourceKeys.length; i++) { key = sourceKeys[i]; if (excluded.indexOf(key) >= 0) continue; target[key] = source[key]; } return target; }
 function _extends() {
@@ -3665,7 +3420,7 @@ function _extends() {
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (function (_ref) {
   var _ref$styles = _ref.styles,
     styles = _ref$styles === void 0 ? {} : _ref$styles,
-    props = _objectWithoutProperties(_ref, ["styles"]);
+    props = _objectWithoutProperties(_ref, _excluded);
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("svg", _extends({
     xmlns: "http://www.w3.org/2000/svg",
     viewBox: "0 0 13 13"
@@ -3685,6 +3440,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(6);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+var _excluded = ["styles"];
 function _objectWithoutProperties(source, excluded) { if (source == null) return {}; var target = _objectWithoutPropertiesLoose(source, excluded); var key, i; if (Object.getOwnPropertySymbols) { var sourceSymbolKeys = Object.getOwnPropertySymbols(source); for (i = 0; i < sourceSymbolKeys.length; i++) { key = sourceSymbolKeys[i]; if (excluded.indexOf(key) >= 0) continue; if (!Object.prototype.propertyIsEnumerable.call(source, key)) continue; target[key] = source[key]; } } return target; }
 function _objectWithoutPropertiesLoose(source, excluded) { if (source == null) return {}; var target = {}; var sourceKeys = Object.keys(source); var key, i; for (i = 0; i < sourceKeys.length; i++) { key = sourceKeys[i]; if (excluded.indexOf(key) >= 0) continue; target[key] = source[key]; } return target; }
 function _extends() {
@@ -3705,7 +3461,7 @@ function _extends() {
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (function (_ref) {
   var _ref$styles = _ref.styles,
     styles = _ref$styles === void 0 ? {} : _ref$styles,
-    props = _objectWithoutProperties(_ref, ["styles"]);
+    props = _objectWithoutProperties(_ref, _excluded);
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("svg", _extends({
     xmlns: "http://www.w3.org/2000/svg",
     viewBox: "0 0 9 15"
@@ -3725,6 +3481,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(6);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+var _excluded = ["styles"];
 function _objectWithoutProperties(source, excluded) { if (source == null) return {}; var target = _objectWithoutPropertiesLoose(source, excluded); var key, i; if (Object.getOwnPropertySymbols) { var sourceSymbolKeys = Object.getOwnPropertySymbols(source); for (i = 0; i < sourceSymbolKeys.length; i++) { key = sourceSymbolKeys[i]; if (excluded.indexOf(key) >= 0) continue; if (!Object.prototype.propertyIsEnumerable.call(source, key)) continue; target[key] = source[key]; } } return target; }
 function _objectWithoutPropertiesLoose(source, excluded) { if (source == null) return {}; var target = {}; var sourceKeys = Object.keys(source); var key, i; for (i = 0; i < sourceKeys.length; i++) { key = sourceKeys[i]; if (excluded.indexOf(key) >= 0) continue; target[key] = source[key]; } return target; }
 function _extends() {
@@ -3745,7 +3502,7 @@ function _extends() {
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (function (_ref) {
   var _ref$styles = _ref.styles,
     styles = _ref$styles === void 0 ? {} : _ref$styles,
-    props = _objectWithoutProperties(_ref, ["styles"]);
+    props = _objectWithoutProperties(_ref, _excluded);
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("svg", _extends({
     xmlns: "http://www.w3.org/2000/svg",
     viewBox: "0 0 12 8"
@@ -3766,6 +3523,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(6);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+var _excluded = ["styles"];
 function _objectWithoutProperties(source, excluded) { if (source == null) return {}; var target = _objectWithoutPropertiesLoose(source, excluded); var key, i; if (Object.getOwnPropertySymbols) { var sourceSymbolKeys = Object.getOwnPropertySymbols(source); for (i = 0; i < sourceSymbolKeys.length; i++) { key = sourceSymbolKeys[i]; if (excluded.indexOf(key) >= 0) continue; if (!Object.prototype.propertyIsEnumerable.call(source, key)) continue; target[key] = source[key]; } } return target; }
 function _objectWithoutPropertiesLoose(source, excluded) { if (source == null) return {}; var target = {}; var sourceKeys = Object.keys(source); var key, i; for (i = 0; i < sourceKeys.length; i++) { key = sourceKeys[i]; if (excluded.indexOf(key) >= 0) continue; target[key] = source[key]; } return target; }
 function _extends() {
@@ -3786,7 +3544,7 @@ function _extends() {
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (function (_ref) {
   var _ref$styles = _ref.styles,
     styles = _ref$styles === void 0 ? {} : _ref$styles,
-    props = _objectWithoutProperties(_ref, ["styles"]);
+    props = _objectWithoutProperties(_ref, _excluded);
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("svg", _extends({
     xmlns: "http://www.w3.org/2000/svg",
     viewBox: "0 0 14 9"
@@ -3805,6 +3563,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(6);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+var _excluded = ["styles"];
 function _objectWithoutProperties(source, excluded) { if (source == null) return {}; var target = _objectWithoutPropertiesLoose(source, excluded); var key, i; if (Object.getOwnPropertySymbols) { var sourceSymbolKeys = Object.getOwnPropertySymbols(source); for (i = 0; i < sourceSymbolKeys.length; i++) { key = sourceSymbolKeys[i]; if (excluded.indexOf(key) >= 0) continue; if (!Object.prototype.propertyIsEnumerable.call(source, key)) continue; target[key] = source[key]; } } return target; }
 function _objectWithoutPropertiesLoose(source, excluded) { if (source == null) return {}; var target = {}; var sourceKeys = Object.keys(source); var key, i; for (i = 0; i < sourceKeys.length; i++) { key = sourceKeys[i]; if (excluded.indexOf(key) >= 0) continue; target[key] = source[key]; } return target; }
 function _extends() {
@@ -3825,7 +3584,7 @@ function _extends() {
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (function (_ref) {
   var _ref$styles = _ref.styles,
     styles = _ref$styles === void 0 ? {} : _ref$styles,
-    props = _objectWithoutProperties(_ref, ["styles"]);
+    props = _objectWithoutProperties(_ref, _excluded);
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("svg", _extends({
     xmlns: "http://www.w3.org/2000/svg",
     viewBox: "0 0 18 28"
@@ -3844,6 +3603,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(6);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+var _excluded = ["styles"];
 function _objectWithoutProperties(source, excluded) { if (source == null) return {}; var target = _objectWithoutPropertiesLoose(source, excluded); var key, i; if (Object.getOwnPropertySymbols) { var sourceSymbolKeys = Object.getOwnPropertySymbols(source); for (i = 0; i < sourceSymbolKeys.length; i++) { key = sourceSymbolKeys[i]; if (excluded.indexOf(key) >= 0) continue; if (!Object.prototype.propertyIsEnumerable.call(source, key)) continue; target[key] = source[key]; } } return target; }
 function _objectWithoutPropertiesLoose(source, excluded) { if (source == null) return {}; var target = {}; var sourceKeys = Object.keys(source); var key, i; for (i = 0; i < sourceKeys.length; i++) { key = sourceKeys[i]; if (excluded.indexOf(key) >= 0) continue; target[key] = source[key]; } return target; }
 function _extends() {
@@ -3864,7 +3624,7 @@ function _extends() {
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (function (_ref) {
   var _ref$styles = _ref.styles,
     styles = _ref$styles === void 0 ? {} : _ref$styles,
-    props = _objectWithoutProperties(_ref, ["styles"]);
+    props = _objectWithoutProperties(_ref, _excluded);
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("svg", _extends({
     xmlns: "http://www.w3.org/2000/svg",
     viewBox: "0 0 12 18"
@@ -3884,6 +3644,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(6);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+var _excluded = ["styles"];
 function _objectWithoutProperties(source, excluded) { if (source == null) return {}; var target = _objectWithoutPropertiesLoose(source, excluded); var key, i; if (Object.getOwnPropertySymbols) { var sourceSymbolKeys = Object.getOwnPropertySymbols(source); for (i = 0; i < sourceSymbolKeys.length; i++) { key = sourceSymbolKeys[i]; if (excluded.indexOf(key) >= 0) continue; if (!Object.prototype.propertyIsEnumerable.call(source, key)) continue; target[key] = source[key]; } } return target; }
 function _objectWithoutPropertiesLoose(source, excluded) { if (source == null) return {}; var target = {}; var sourceKeys = Object.keys(source); var key, i; for (i = 0; i < sourceKeys.length; i++) { key = sourceKeys[i]; if (excluded.indexOf(key) >= 0) continue; target[key] = source[key]; } return target; }
 function _extends() {
@@ -3904,7 +3665,7 @@ function _extends() {
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (function (_ref) {
   var _ref$styles = _ref.styles,
     styles = _ref$styles === void 0 ? {} : _ref$styles,
-    props = _objectWithoutProperties(_ref, ["styles"]);
+    props = _objectWithoutProperties(_ref, _excluded);
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("svg", _extends({
     xmlns: "http://www.w3.org/2000/svg",
     viewBox: "0 0 12 18"
@@ -3924,6 +3685,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(6);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+var _excluded = ["styles"];
 function _objectWithoutProperties(source, excluded) { if (source == null) return {}; var target = _objectWithoutPropertiesLoose(source, excluded); var key, i; if (Object.getOwnPropertySymbols) { var sourceSymbolKeys = Object.getOwnPropertySymbols(source); for (i = 0; i < sourceSymbolKeys.length; i++) { key = sourceSymbolKeys[i]; if (excluded.indexOf(key) >= 0) continue; if (!Object.prototype.propertyIsEnumerable.call(source, key)) continue; target[key] = source[key]; } } return target; }
 function _objectWithoutPropertiesLoose(source, excluded) { if (source == null) return {}; var target = {}; var sourceKeys = Object.keys(source); var key, i; for (i = 0; i < sourceKeys.length; i++) { key = sourceKeys[i]; if (excluded.indexOf(key) >= 0) continue; target[key] = source[key]; } return target; }
 function _extends() {
@@ -3944,7 +3706,7 @@ function _extends() {
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (function (_ref) {
   var _ref$styles = _ref.styles,
     styles = _ref$styles === void 0 ? {} : _ref$styles,
-    props = _objectWithoutProperties(_ref, ["styles"]);
+    props = _objectWithoutProperties(_ref, _excluded);
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("svg", _extends({
     xmlns: "http://www.w3.org/2000/svg",
     viewBox: "0 0 16 16"
@@ -3964,6 +3726,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(6);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+var _excluded = ["styles"];
 function _objectWithoutProperties(source, excluded) { if (source == null) return {}; var target = _objectWithoutPropertiesLoose(source, excluded); var key, i; if (Object.getOwnPropertySymbols) { var sourceSymbolKeys = Object.getOwnPropertySymbols(source); for (i = 0; i < sourceSymbolKeys.length; i++) { key = sourceSymbolKeys[i]; if (excluded.indexOf(key) >= 0) continue; if (!Object.prototype.propertyIsEnumerable.call(source, key)) continue; target[key] = source[key]; } } return target; }
 function _objectWithoutPropertiesLoose(source, excluded) { if (source == null) return {}; var target = {}; var sourceKeys = Object.keys(source); var key, i; for (i = 0; i < sourceKeys.length; i++) { key = sourceKeys[i]; if (excluded.indexOf(key) >= 0) continue; target[key] = source[key]; } return target; }
 function _extends() {
@@ -3984,7 +3747,7 @@ function _extends() {
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (function (_ref) {
   var _ref$styles = _ref.styles,
     styles = _ref$styles === void 0 ? {} : _ref$styles,
-    props = _objectWithoutProperties(_ref, ["styles"]);
+    props = _objectWithoutProperties(_ref, _excluded);
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("svg", _extends({
     xmlns: "http://www.w3.org/2000/svg",
     viewBox: "0 0 14 14"
@@ -4018,6 +3781,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(6);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+var _excluded = ["styles"];
 function _objectWithoutProperties(source, excluded) { if (source == null) return {}; var target = _objectWithoutPropertiesLoose(source, excluded); var key, i; if (Object.getOwnPropertySymbols) { var sourceSymbolKeys = Object.getOwnPropertySymbols(source); for (i = 0; i < sourceSymbolKeys.length; i++) { key = sourceSymbolKeys[i]; if (excluded.indexOf(key) >= 0) continue; if (!Object.prototype.propertyIsEnumerable.call(source, key)) continue; target[key] = source[key]; } } return target; }
 function _objectWithoutPropertiesLoose(source, excluded) { if (source == null) return {}; var target = {}; var sourceKeys = Object.keys(source); var key, i; for (i = 0; i < sourceKeys.length; i++) { key = sourceKeys[i]; if (excluded.indexOf(key) >= 0) continue; target[key] = source[key]; } return target; }
 function _extends() {
@@ -4038,7 +3802,7 @@ function _extends() {
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (function (_ref) {
   var _ref$styles = _ref.styles,
     styles = _ref$styles === void 0 ? {} : _ref$styles,
-    props = _objectWithoutProperties(_ref, ["styles"]);
+    props = _objectWithoutProperties(_ref, _excluded);
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("svg", _extends({
     xmlns: "http://www.w3.org/2000/svg",
     viewBox: "0 0 8 8"
@@ -4058,6 +3822,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(6);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+var _excluded = ["styles"];
 function _objectWithoutProperties(source, excluded) { if (source == null) return {}; var target = _objectWithoutPropertiesLoose(source, excluded); var key, i; if (Object.getOwnPropertySymbols) { var sourceSymbolKeys = Object.getOwnPropertySymbols(source); for (i = 0; i < sourceSymbolKeys.length; i++) { key = sourceSymbolKeys[i]; if (excluded.indexOf(key) >= 0) continue; if (!Object.prototype.propertyIsEnumerable.call(source, key)) continue; target[key] = source[key]; } } return target; }
 function _objectWithoutPropertiesLoose(source, excluded) { if (source == null) return {}; var target = {}; var sourceKeys = Object.keys(source); var key, i; for (i = 0; i < sourceKeys.length; i++) { key = sourceKeys[i]; if (excluded.indexOf(key) >= 0) continue; target[key] = source[key]; } return target; }
 function _extends() {
@@ -4078,7 +3843,7 @@ function _extends() {
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (function (_ref) {
   var _ref$styles = _ref.styles,
     styles = _ref$styles === void 0 ? {} : _ref$styles,
-    props = _objectWithoutProperties(_ref, ["styles"]);
+    props = _objectWithoutProperties(_ref, _excluded);
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("svg", _extends({
     xmlns: "http://www.w3.org/2000/svg",
     viewBox: "0 0 12 16"
@@ -4098,6 +3863,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(6);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+var _excluded = ["styles"];
 function _objectWithoutProperties(source, excluded) { if (source == null) return {}; var target = _objectWithoutPropertiesLoose(source, excluded); var key, i; if (Object.getOwnPropertySymbols) { var sourceSymbolKeys = Object.getOwnPropertySymbols(source); for (i = 0; i < sourceSymbolKeys.length; i++) { key = sourceSymbolKeys[i]; if (excluded.indexOf(key) >= 0) continue; if (!Object.prototype.propertyIsEnumerable.call(source, key)) continue; target[key] = source[key]; } } return target; }
 function _objectWithoutPropertiesLoose(source, excluded) { if (source == null) return {}; var target = {}; var sourceKeys = Object.keys(source); var key, i; for (i = 0; i < sourceKeys.length; i++) { key = sourceKeys[i]; if (excluded.indexOf(key) >= 0) continue; target[key] = source[key]; } return target; }
 function _extends() {
@@ -4118,7 +3884,7 @@ function _extends() {
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (function (_ref) {
   var _ref$styles = _ref.styles,
     styles = _ref$styles === void 0 ? {} : _ref$styles,
-    props = _objectWithoutProperties(_ref, ["styles"]);
+    props = _objectWithoutProperties(_ref, _excluded);
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("svg", _extends({
     xmlns: "http://www.w3.org/2000/svg",
     viewBox: "0 0 16 4"
@@ -4149,6 +3915,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(6);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+var _excluded = ["styles"];
 function _objectWithoutProperties(source, excluded) { if (source == null) return {}; var target = _objectWithoutPropertiesLoose(source, excluded); var key, i; if (Object.getOwnPropertySymbols) { var sourceSymbolKeys = Object.getOwnPropertySymbols(source); for (i = 0; i < sourceSymbolKeys.length; i++) { key = sourceSymbolKeys[i]; if (excluded.indexOf(key) >= 0) continue; if (!Object.prototype.propertyIsEnumerable.call(source, key)) continue; target[key] = source[key]; } } return target; }
 function _objectWithoutPropertiesLoose(source, excluded) { if (source == null) return {}; var target = {}; var sourceKeys = Object.keys(source); var key, i; for (i = 0; i < sourceKeys.length; i++) { key = sourceKeys[i]; if (excluded.indexOf(key) >= 0) continue; target[key] = source[key]; } return target; }
 function _extends() {
@@ -4169,7 +3936,7 @@ function _extends() {
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (function (_ref) {
   var _ref$styles = _ref.styles,
     styles = _ref$styles === void 0 ? {} : _ref$styles,
-    props = _objectWithoutProperties(_ref, ["styles"]);
+    props = _objectWithoutProperties(_ref, _excluded);
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("svg", _extends({
     xmlns: "http://www.w3.org/2000/svg",
     viewBox: "0 0 12 13"
@@ -4189,6 +3956,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(6);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+var _excluded = ["styles"];
 function _objectWithoutProperties(source, excluded) { if (source == null) return {}; var target = _objectWithoutPropertiesLoose(source, excluded); var key, i; if (Object.getOwnPropertySymbols) { var sourceSymbolKeys = Object.getOwnPropertySymbols(source); for (i = 0; i < sourceSymbolKeys.length; i++) { key = sourceSymbolKeys[i]; if (excluded.indexOf(key) >= 0) continue; if (!Object.prototype.propertyIsEnumerable.call(source, key)) continue; target[key] = source[key]; } } return target; }
 function _objectWithoutPropertiesLoose(source, excluded) { if (source == null) return {}; var target = {}; var sourceKeys = Object.keys(source); var key, i; for (i = 0; i < sourceKeys.length; i++) { key = sourceKeys[i]; if (excluded.indexOf(key) >= 0) continue; target[key] = source[key]; } return target; }
 function _extends() {
@@ -4209,7 +3977,7 @@ function _extends() {
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (function (_ref) {
   var _ref$styles = _ref.styles,
     styles = _ref$styles === void 0 ? {} : _ref$styles,
-    props = _objectWithoutProperties(_ref, ["styles"]);
+    props = _objectWithoutProperties(_ref, _excluded);
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("svg", _extends({
     xmlns: "http://www.w3.org/2000/svg",
     viewBox: "0 0 22 18"
@@ -4229,6 +3997,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(6);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+var _excluded = ["styles"];
 function _objectWithoutProperties(source, excluded) { if (source == null) return {}; var target = _objectWithoutPropertiesLoose(source, excluded); var key, i; if (Object.getOwnPropertySymbols) { var sourceSymbolKeys = Object.getOwnPropertySymbols(source); for (i = 0; i < sourceSymbolKeys.length; i++) { key = sourceSymbolKeys[i]; if (excluded.indexOf(key) >= 0) continue; if (!Object.prototype.propertyIsEnumerable.call(source, key)) continue; target[key] = source[key]; } } return target; }
 function _objectWithoutPropertiesLoose(source, excluded) { if (source == null) return {}; var target = {}; var sourceKeys = Object.keys(source); var key, i; for (i = 0; i < sourceKeys.length; i++) { key = sourceKeys[i]; if (excluded.indexOf(key) >= 0) continue; target[key] = source[key]; } return target; }
 function _extends() {
@@ -4249,7 +4018,7 @@ function _extends() {
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (function (_ref) {
   var _ref$styles = _ref.styles,
     styles = _ref$styles === void 0 ? {} : _ref$styles,
-    props = _objectWithoutProperties(_ref, ["styles"]);
+    props = _objectWithoutProperties(_ref, _excluded);
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("svg", _extends({
     xmlns: "http://www.w3.org/2000/svg",
     viewBox: "0 0 22 10"
@@ -4268,6 +4037,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(6);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+var _excluded = ["styles"];
 function _objectWithoutProperties(source, excluded) { if (source == null) return {}; var target = _objectWithoutPropertiesLoose(source, excluded); var key, i; if (Object.getOwnPropertySymbols) { var sourceSymbolKeys = Object.getOwnPropertySymbols(source); for (i = 0; i < sourceSymbolKeys.length; i++) { key = sourceSymbolKeys[i]; if (excluded.indexOf(key) >= 0) continue; if (!Object.prototype.propertyIsEnumerable.call(source, key)) continue; target[key] = source[key]; } } return target; }
 function _objectWithoutPropertiesLoose(source, excluded) { if (source == null) return {}; var target = {}; var sourceKeys = Object.keys(source); var key, i; for (i = 0; i < sourceKeys.length; i++) { key = sourceKeys[i]; if (excluded.indexOf(key) >= 0) continue; target[key] = source[key]; } return target; }
 function _extends() {
@@ -4288,7 +4058,7 @@ function _extends() {
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (function (_ref) {
   var _ref$styles = _ref.styles,
     styles = _ref$styles === void 0 ? {} : _ref$styles,
-    props = _objectWithoutProperties(_ref, ["styles"]);
+    props = _objectWithoutProperties(_ref, _excluded);
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("svg", _extends({
     xmlns: "http://www.w3.org/2000/svg",
     viewBox: "0 0 14 18"
@@ -4308,6 +4078,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(6);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+var _excluded = ["styles"];
 function _objectWithoutProperties(source, excluded) { if (source == null) return {}; var target = _objectWithoutPropertiesLoose(source, excluded); var key, i; if (Object.getOwnPropertySymbols) { var sourceSymbolKeys = Object.getOwnPropertySymbols(source); for (i = 0; i < sourceSymbolKeys.length; i++) { key = sourceSymbolKeys[i]; if (excluded.indexOf(key) >= 0) continue; if (!Object.prototype.propertyIsEnumerable.call(source, key)) continue; target[key] = source[key]; } } return target; }
 function _objectWithoutPropertiesLoose(source, excluded) { if (source == null) return {}; var target = {}; var sourceKeys = Object.keys(source); var key, i; for (i = 0; i < sourceKeys.length; i++) { key = sourceKeys[i]; if (excluded.indexOf(key) >= 0) continue; target[key] = source[key]; } return target; }
 function _extends() {
@@ -4328,7 +4099,7 @@ function _extends() {
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (function (_ref) {
   var _ref$styles = _ref.styles,
     styles = _ref$styles === void 0 ? {} : _ref$styles,
-    props = _objectWithoutProperties(_ref, ["styles"]);
+    props = _objectWithoutProperties(_ref, _excluded);
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("svg", _extends({
     xmlns: "http://www.w3.org/2000/svg",
     viewBox: "0 0 14 12"
@@ -4348,6 +4119,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(6);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+var _excluded = ["styles"];
 function _objectWithoutProperties(source, excluded) { if (source == null) return {}; var target = _objectWithoutPropertiesLoose(source, excluded); var key, i; if (Object.getOwnPropertySymbols) { var sourceSymbolKeys = Object.getOwnPropertySymbols(source); for (i = 0; i < sourceSymbolKeys.length; i++) { key = sourceSymbolKeys[i]; if (excluded.indexOf(key) >= 0) continue; if (!Object.prototype.propertyIsEnumerable.call(source, key)) continue; target[key] = source[key]; } } return target; }
 function _objectWithoutPropertiesLoose(source, excluded) { if (source == null) return {}; var target = {}; var sourceKeys = Object.keys(source); var key, i; for (i = 0; i < sourceKeys.length; i++) { key = sourceKeys[i]; if (excluded.indexOf(key) >= 0) continue; target[key] = source[key]; } return target; }
 function _extends() {
@@ -4368,7 +4140,7 @@ function _extends() {
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (function (_ref) {
   var _ref$styles = _ref.styles,
     styles = _ref$styles === void 0 ? {} : _ref$styles,
-    props = _objectWithoutProperties(_ref, ["styles"]);
+    props = _objectWithoutProperties(_ref, _excluded);
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("svg", _extends({
     xmlns: "http://www.w3.org/2000/svg",
     viewBox: "0 0 14 12"
@@ -4392,6 +4164,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(6);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+var _excluded = ["styles"];
 function _objectWithoutProperties(source, excluded) { if (source == null) return {}; var target = _objectWithoutPropertiesLoose(source, excluded); var key, i; if (Object.getOwnPropertySymbols) { var sourceSymbolKeys = Object.getOwnPropertySymbols(source); for (i = 0; i < sourceSymbolKeys.length; i++) { key = sourceSymbolKeys[i]; if (excluded.indexOf(key) >= 0) continue; if (!Object.prototype.propertyIsEnumerable.call(source, key)) continue; target[key] = source[key]; } } return target; }
 function _objectWithoutPropertiesLoose(source, excluded) { if (source == null) return {}; var target = {}; var sourceKeys = Object.keys(source); var key, i; for (i = 0; i < sourceKeys.length; i++) { key = sourceKeys[i]; if (excluded.indexOf(key) >= 0) continue; target[key] = source[key]; } return target; }
 function _extends() {
@@ -4412,7 +4185,7 @@ function _extends() {
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (function (_ref) {
   var _ref$styles = _ref.styles,
     styles = _ref$styles === void 0 ? {} : _ref$styles,
-    props = _objectWithoutProperties(_ref, ["styles"]);
+    props = _objectWithoutProperties(_ref, _excluded);
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("svg", _extends({
     xmlns: "http://www.w3.org/2000/svg",
     viewBox: "0 0 11 11"
@@ -4432,6 +4205,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(6);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+var _excluded = ["styles"];
 function _objectWithoutProperties(source, excluded) { if (source == null) return {}; var target = _objectWithoutPropertiesLoose(source, excluded); var key, i; if (Object.getOwnPropertySymbols) { var sourceSymbolKeys = Object.getOwnPropertySymbols(source); for (i = 0; i < sourceSymbolKeys.length; i++) { key = sourceSymbolKeys[i]; if (excluded.indexOf(key) >= 0) continue; if (!Object.prototype.propertyIsEnumerable.call(source, key)) continue; target[key] = source[key]; } } return target; }
 function _objectWithoutPropertiesLoose(source, excluded) { if (source == null) return {}; var target = {}; var sourceKeys = Object.keys(source); var key, i; for (i = 0; i < sourceKeys.length; i++) { key = sourceKeys[i]; if (excluded.indexOf(key) >= 0) continue; target[key] = source[key]; } return target; }
 function _extends() {
@@ -4452,7 +4226,7 @@ function _extends() {
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (function (_ref) {
   var _ref$styles = _ref.styles,
     styles = _ref$styles === void 0 ? {} : _ref$styles,
-    props = _objectWithoutProperties(_ref, ["styles"]);
+    props = _objectWithoutProperties(_ref, _excluded);
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("svg", _extends({
     xmlns: "http://www.w3.org/2000/svg",
     viewBox: "0 0 14 14"
@@ -4472,6 +4246,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(6);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+var _excluded = ["styles"];
 function _objectWithoutProperties(source, excluded) { if (source == null) return {}; var target = _objectWithoutPropertiesLoose(source, excluded); var key, i; if (Object.getOwnPropertySymbols) { var sourceSymbolKeys = Object.getOwnPropertySymbols(source); for (i = 0; i < sourceSymbolKeys.length; i++) { key = sourceSymbolKeys[i]; if (excluded.indexOf(key) >= 0) continue; if (!Object.prototype.propertyIsEnumerable.call(source, key)) continue; target[key] = source[key]; } } return target; }
 function _objectWithoutPropertiesLoose(source, excluded) { if (source == null) return {}; var target = {}; var sourceKeys = Object.keys(source); var key, i; for (i = 0; i < sourceKeys.length; i++) { key = sourceKeys[i]; if (excluded.indexOf(key) >= 0) continue; target[key] = source[key]; } return target; }
 function _extends() {
@@ -4492,7 +4267,7 @@ function _extends() {
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (function (_ref) {
   var _ref$styles = _ref.styles,
     styles = _ref$styles === void 0 ? {} : _ref$styles,
-    props = _objectWithoutProperties(_ref, ["styles"]);
+    props = _objectWithoutProperties(_ref, _excluded);
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("svg", _extends({
     xmlns: "http://www.w3.org/2000/svg",
     viewBox: "0 0 20 20"
@@ -4512,6 +4287,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(6);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+var _excluded = ["styles"];
 function _objectWithoutProperties(source, excluded) { if (source == null) return {}; var target = _objectWithoutPropertiesLoose(source, excluded); var key, i; if (Object.getOwnPropertySymbols) { var sourceSymbolKeys = Object.getOwnPropertySymbols(source); for (i = 0; i < sourceSymbolKeys.length; i++) { key = sourceSymbolKeys[i]; if (excluded.indexOf(key) >= 0) continue; if (!Object.prototype.propertyIsEnumerable.call(source, key)) continue; target[key] = source[key]; } } return target; }
 function _objectWithoutPropertiesLoose(source, excluded) { if (source == null) return {}; var target = {}; var sourceKeys = Object.keys(source); var key, i; for (i = 0; i < sourceKeys.length; i++) { key = sourceKeys[i]; if (excluded.indexOf(key) >= 0) continue; target[key] = source[key]; } return target; }
 function _extends() {
@@ -4532,7 +4308,7 @@ function _extends() {
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (function (_ref) {
   var _ref$styles = _ref.styles,
     styles = _ref$styles === void 0 ? {} : _ref$styles,
-    props = _objectWithoutProperties(_ref, ["styles"]);
+    props = _objectWithoutProperties(_ref, _excluded);
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("svg", _extends({
     xmlns: "http://www.w3.org/2000/svg",
     viewBox: "0 0 13 13"
@@ -4552,6 +4328,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(6);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+var _excluded = ["styles"];
 function _objectWithoutProperties(source, excluded) { if (source == null) return {}; var target = _objectWithoutPropertiesLoose(source, excluded); var key, i; if (Object.getOwnPropertySymbols) { var sourceSymbolKeys = Object.getOwnPropertySymbols(source); for (i = 0; i < sourceSymbolKeys.length; i++) { key = sourceSymbolKeys[i]; if (excluded.indexOf(key) >= 0) continue; if (!Object.prototype.propertyIsEnumerable.call(source, key)) continue; target[key] = source[key]; } } return target; }
 function _objectWithoutPropertiesLoose(source, excluded) { if (source == null) return {}; var target = {}; var sourceKeys = Object.keys(source); var key, i; for (i = 0; i < sourceKeys.length; i++) { key = sourceKeys[i]; if (excluded.indexOf(key) >= 0) continue; target[key] = source[key]; } return target; }
 function _extends() {
@@ -4572,7 +4349,7 @@ function _extends() {
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (function (_ref) {
   var _ref$styles = _ref.styles,
     styles = _ref$styles === void 0 ? {} : _ref$styles,
-    props = _objectWithoutProperties(_ref, ["styles"]);
+    props = _objectWithoutProperties(_ref, _excluded);
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("svg", _extends({
     xmlns: "http://www.w3.org/2000/svg",
     viewBox: "0 0 15 15"
@@ -4592,6 +4369,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(6);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+var _excluded = ["styles"];
 function _objectWithoutProperties(source, excluded) { if (source == null) return {}; var target = _objectWithoutPropertiesLoose(source, excluded); var key, i; if (Object.getOwnPropertySymbols) { var sourceSymbolKeys = Object.getOwnPropertySymbols(source); for (i = 0; i < sourceSymbolKeys.length; i++) { key = sourceSymbolKeys[i]; if (excluded.indexOf(key) >= 0) continue; if (!Object.prototype.propertyIsEnumerable.call(source, key)) continue; target[key] = source[key]; } } return target; }
 function _objectWithoutPropertiesLoose(source, excluded) { if (source == null) return {}; var target = {}; var sourceKeys = Object.keys(source); var key, i; for (i = 0; i < sourceKeys.length; i++) { key = sourceKeys[i]; if (excluded.indexOf(key) >= 0) continue; target[key] = source[key]; } return target; }
 function _extends() {
@@ -4612,7 +4390,7 @@ function _extends() {
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (function (_ref) {
   var _ref$styles = _ref.styles,
     styles = _ref$styles === void 0 ? {} : _ref$styles,
-    props = _objectWithoutProperties(_ref, ["styles"]);
+    props = _objectWithoutProperties(_ref, _excluded);
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("svg", _extends({
     xmlns: "http://www.w3.org/2000/svg",
     viewBox: "0 0 18 18"
@@ -4632,6 +4410,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(6);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+var _excluded = ["styles"];
 function _objectWithoutProperties(source, excluded) { if (source == null) return {}; var target = _objectWithoutPropertiesLoose(source, excluded); var key, i; if (Object.getOwnPropertySymbols) { var sourceSymbolKeys = Object.getOwnPropertySymbols(source); for (i = 0; i < sourceSymbolKeys.length; i++) { key = sourceSymbolKeys[i]; if (excluded.indexOf(key) >= 0) continue; if (!Object.prototype.propertyIsEnumerable.call(source, key)) continue; target[key] = source[key]; } } return target; }
 function _objectWithoutPropertiesLoose(source, excluded) { if (source == null) return {}; var target = {}; var sourceKeys = Object.keys(source); var key, i; for (i = 0; i < sourceKeys.length; i++) { key = sourceKeys[i]; if (excluded.indexOf(key) >= 0) continue; target[key] = source[key]; } return target; }
 function _extends() {
@@ -4652,7 +4431,7 @@ function _extends() {
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (function (_ref) {
   var _ref$styles = _ref.styles,
     styles = _ref$styles === void 0 ? {} : _ref$styles,
-    props = _objectWithoutProperties(_ref, ["styles"]);
+    props = _objectWithoutProperties(_ref, _excluded);
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("svg", _extends({
     xmlns: "http://www.w3.org/2000/svg",
     viewBox: "0 0 15 15"
@@ -4672,6 +4451,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(6);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+var _excluded = ["styles"];
 function _objectWithoutProperties(source, excluded) { if (source == null) return {}; var target = _objectWithoutPropertiesLoose(source, excluded); var key, i; if (Object.getOwnPropertySymbols) { var sourceSymbolKeys = Object.getOwnPropertySymbols(source); for (i = 0; i < sourceSymbolKeys.length; i++) { key = sourceSymbolKeys[i]; if (excluded.indexOf(key) >= 0) continue; if (!Object.prototype.propertyIsEnumerable.call(source, key)) continue; target[key] = source[key]; } } return target; }
 function _objectWithoutPropertiesLoose(source, excluded) { if (source == null) return {}; var target = {}; var sourceKeys = Object.keys(source); var key, i; for (i = 0; i < sourceKeys.length; i++) { key = sourceKeys[i]; if (excluded.indexOf(key) >= 0) continue; target[key] = source[key]; } return target; }
 function _extends() {
@@ -4692,7 +4472,7 @@ function _extends() {
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (function (_ref) {
   var _ref$styles = _ref.styles,
     styles = _ref$styles === void 0 ? {} : _ref$styles,
-    props = _objectWithoutProperties(_ref, ["styles"]);
+    props = _objectWithoutProperties(_ref, _excluded);
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("svg", _extends({
     xmlns: "http://www.w3.org/2000/svg",
     viewBox: "0 0 19 18"
@@ -4711,6 +4491,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(6);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+var _excluded = ["styles"];
 function _objectWithoutProperties(source, excluded) { if (source == null) return {}; var target = _objectWithoutPropertiesLoose(source, excluded); var key, i; if (Object.getOwnPropertySymbols) { var sourceSymbolKeys = Object.getOwnPropertySymbols(source); for (i = 0; i < sourceSymbolKeys.length; i++) { key = sourceSymbolKeys[i]; if (excluded.indexOf(key) >= 0) continue; if (!Object.prototype.propertyIsEnumerable.call(source, key)) continue; target[key] = source[key]; } } return target; }
 function _objectWithoutPropertiesLoose(source, excluded) { if (source == null) return {}; var target = {}; var sourceKeys = Object.keys(source); var key, i; for (i = 0; i < sourceKeys.length; i++) { key = sourceKeys[i]; if (excluded.indexOf(key) >= 0) continue; target[key] = source[key]; } return target; }
 function _extends() {
@@ -4731,7 +4512,7 @@ function _extends() {
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (function (_ref) {
   var _ref$styles = _ref.styles,
     styles = _ref$styles === void 0 ? {} : _ref$styles,
-    props = _objectWithoutProperties(_ref, ["styles"]);
+    props = _objectWithoutProperties(_ref, _excluded);
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("svg", _extends({
     xmlns: "http://www.w3.org/2000/svg",
     viewBox: "0 0 15 14"
@@ -4751,6 +4532,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(6);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+var _excluded = ["styles"];
 function _objectWithoutProperties(source, excluded) { if (source == null) return {}; var target = _objectWithoutPropertiesLoose(source, excluded); var key, i; if (Object.getOwnPropertySymbols) { var sourceSymbolKeys = Object.getOwnPropertySymbols(source); for (i = 0; i < sourceSymbolKeys.length; i++) { key = sourceSymbolKeys[i]; if (excluded.indexOf(key) >= 0) continue; if (!Object.prototype.propertyIsEnumerable.call(source, key)) continue; target[key] = source[key]; } } return target; }
 function _objectWithoutPropertiesLoose(source, excluded) { if (source == null) return {}; var target = {}; var sourceKeys = Object.keys(source); var key, i; for (i = 0; i < sourceKeys.length; i++) { key = sourceKeys[i]; if (excluded.indexOf(key) >= 0) continue; target[key] = source[key]; } return target; }
 function _extends() {
@@ -4771,7 +4553,7 @@ function _extends() {
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (function (_ref) {
   var _ref$styles = _ref.styles,
     styles = _ref$styles === void 0 ? {} : _ref$styles,
-    props = _objectWithoutProperties(_ref, ["styles"]);
+    props = _objectWithoutProperties(_ref, _excluded);
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("svg", _extends({
     xmlns: "http://www.w3.org/2000/svg",
     viewBox: "0 0 22 22"
@@ -4803,6 +4585,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(6);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+var _excluded = ["styles"];
 function _objectWithoutProperties(source, excluded) { if (source == null) return {}; var target = _objectWithoutPropertiesLoose(source, excluded); var key, i; if (Object.getOwnPropertySymbols) { var sourceSymbolKeys = Object.getOwnPropertySymbols(source); for (i = 0; i < sourceSymbolKeys.length; i++) { key = sourceSymbolKeys[i]; if (excluded.indexOf(key) >= 0) continue; if (!Object.prototype.propertyIsEnumerable.call(source, key)) continue; target[key] = source[key]; } } return target; }
 function _objectWithoutPropertiesLoose(source, excluded) { if (source == null) return {}; var target = {}; var sourceKeys = Object.keys(source); var key, i; for (i = 0; i < sourceKeys.length; i++) { key = sourceKeys[i]; if (excluded.indexOf(key) >= 0) continue; target[key] = source[key]; } return target; }
 function _extends() {
@@ -4823,7 +4606,7 @@ function _extends() {
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (function (_ref) {
   var _ref$styles = _ref.styles,
     styles = _ref$styles === void 0 ? {} : _ref$styles,
-    props = _objectWithoutProperties(_ref, ["styles"]);
+    props = _objectWithoutProperties(_ref, _excluded);
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("svg", _extends({
     xmlns: "http://www.w3.org/2000/svg",
     viewBox: "0 0 13 11"
@@ -4844,6 +4627,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(6);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+var _excluded = ["styles"];
 function _objectWithoutProperties(source, excluded) { if (source == null) return {}; var target = _objectWithoutPropertiesLoose(source, excluded); var key, i; if (Object.getOwnPropertySymbols) { var sourceSymbolKeys = Object.getOwnPropertySymbols(source); for (i = 0; i < sourceSymbolKeys.length; i++) { key = sourceSymbolKeys[i]; if (excluded.indexOf(key) >= 0) continue; if (!Object.prototype.propertyIsEnumerable.call(source, key)) continue; target[key] = source[key]; } } return target; }
 function _objectWithoutPropertiesLoose(source, excluded) { if (source == null) return {}; var target = {}; var sourceKeys = Object.keys(source); var key, i; for (i = 0; i < sourceKeys.length; i++) { key = sourceKeys[i]; if (excluded.indexOf(key) >= 0) continue; target[key] = source[key]; } return target; }
 function _extends() {
@@ -4864,7 +4648,7 @@ function _extends() {
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (function (_ref) {
   var _ref$styles = _ref.styles,
     styles = _ref$styles === void 0 ? {} : _ref$styles,
-    props = _objectWithoutProperties(_ref, ["styles"]);
+    props = _objectWithoutProperties(_ref, _excluded);
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("svg", _extends({
     xmlns: "http://www.w3.org/2000/svg",
     viewBox: "0 0 20 20"
@@ -4886,6 +4670,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(6);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+var _excluded = ["styles"];
 function _objectWithoutProperties(source, excluded) { if (source == null) return {}; var target = _objectWithoutPropertiesLoose(source, excluded); var key, i; if (Object.getOwnPropertySymbols) { var sourceSymbolKeys = Object.getOwnPropertySymbols(source); for (i = 0; i < sourceSymbolKeys.length; i++) { key = sourceSymbolKeys[i]; if (excluded.indexOf(key) >= 0) continue; if (!Object.prototype.propertyIsEnumerable.call(source, key)) continue; target[key] = source[key]; } } return target; }
 function _objectWithoutPropertiesLoose(source, excluded) { if (source == null) return {}; var target = {}; var sourceKeys = Object.keys(source); var key, i; for (i = 0; i < sourceKeys.length; i++) { key = sourceKeys[i]; if (excluded.indexOf(key) >= 0) continue; target[key] = source[key]; } return target; }
 function _extends() {
@@ -4906,7 +4691,7 @@ function _extends() {
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (function (_ref) {
   var _ref$styles = _ref.styles,
     styles = _ref$styles === void 0 ? {} : _ref$styles,
-    props = _objectWithoutProperties(_ref, ["styles"]);
+    props = _objectWithoutProperties(_ref, _excluded);
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("svg", _extends({
     xmlns: "http://www.w3.org/2000/svg",
     viewBox: "0 0 35 26"
@@ -4932,6 +4717,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(6);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+var _excluded = ["styles"];
 function _objectWithoutProperties(source, excluded) { if (source == null) return {}; var target = _objectWithoutPropertiesLoose(source, excluded); var key, i; if (Object.getOwnPropertySymbols) { var sourceSymbolKeys = Object.getOwnPropertySymbols(source); for (i = 0; i < sourceSymbolKeys.length; i++) { key = sourceSymbolKeys[i]; if (excluded.indexOf(key) >= 0) continue; if (!Object.prototype.propertyIsEnumerable.call(source, key)) continue; target[key] = source[key]; } } return target; }
 function _objectWithoutPropertiesLoose(source, excluded) { if (source == null) return {}; var target = {}; var sourceKeys = Object.keys(source); var key, i; for (i = 0; i < sourceKeys.length; i++) { key = sourceKeys[i]; if (excluded.indexOf(key) >= 0) continue; target[key] = source[key]; } return target; }
 function _extends() {
@@ -4952,7 +4738,7 @@ function _extends() {
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (function (_ref) {
   var _ref$styles = _ref.styles,
     styles = _ref$styles === void 0 ? {} : _ref$styles,
-    props = _objectWithoutProperties(_ref, ["styles"]);
+    props = _objectWithoutProperties(_ref, _excluded);
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("svg", _extends({
     xmlns: "http://www.w3.org/2000/svg",
     viewBox: "0 0 20 14"
@@ -4989,6 +4775,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(6);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+var _excluded = ["styles"];
 function _objectWithoutProperties(source, excluded) { if (source == null) return {}; var target = _objectWithoutPropertiesLoose(source, excluded); var key, i; if (Object.getOwnPropertySymbols) { var sourceSymbolKeys = Object.getOwnPropertySymbols(source); for (i = 0; i < sourceSymbolKeys.length; i++) { key = sourceSymbolKeys[i]; if (excluded.indexOf(key) >= 0) continue; if (!Object.prototype.propertyIsEnumerable.call(source, key)) continue; target[key] = source[key]; } } return target; }
 function _objectWithoutPropertiesLoose(source, excluded) { if (source == null) return {}; var target = {}; var sourceKeys = Object.keys(source); var key, i; for (i = 0; i < sourceKeys.length; i++) { key = sourceKeys[i]; if (excluded.indexOf(key) >= 0) continue; target[key] = source[key]; } return target; }
 function _extends() {
@@ -5009,7 +4796,7 @@ function _extends() {
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (function (_ref) {
   var _ref$styles = _ref.styles,
     styles = _ref$styles === void 0 ? {} : _ref$styles,
-    props = _objectWithoutProperties(_ref, ["styles"]);
+    props = _objectWithoutProperties(_ref, _excluded);
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("svg", _extends({
     xmlns: "http://www.w3.org/2000/svg",
     viewBox: "0 0 32 23"

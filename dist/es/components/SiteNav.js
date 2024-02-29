@@ -1,3 +1,4 @@
+var _excluded = ["banner", "mobileBreakpoint", "mobileToggleTitle", "children"];
 function _objectWithoutProperties(source, excluded) { if (source == null) return {}; var target = _objectWithoutPropertiesLoose(source, excluded); var key, i; if (Object.getOwnPropertySymbols) { var sourceSymbolKeys = Object.getOwnPropertySymbols(source); for (i = 0; i < sourceSymbolKeys.length; i++) { key = sourceSymbolKeys[i]; if (excluded.indexOf(key) >= 0) continue; if (!Object.prototype.propertyIsEnumerable.call(source, key)) continue; target[key] = source[key]; } } return target; }
 function _objectWithoutPropertiesLoose(source, excluded) { if (source == null) return {}; var target = {}; var sourceKeys = Object.keys(source); var key, i; for (i = 0; i < sourceKeys.length; i++) { key = sourceKeys[i]; if (excluded.indexOf(key) >= 0) continue; target[key] = source[key]; } return target; }
 import PropTypes from "prop-types";
@@ -10,6 +11,7 @@ import Nav from "./Nav";
 import Collapse from "./utils/Collapse";
 import VisibilityToggle from "./utils/VisibilityToggle";
 var sansBold = typography.sansBold;
+
 /*
   inner components
 */
@@ -58,7 +60,7 @@ var SiteNav = function SiteNav(_ref) {
     mobileBreakpoint = _ref.mobileBreakpoint,
     mobileToggleTitle = _ref.mobileToggleTitle,
     children = _ref.children,
-    restProps = _objectWithoutProperties(_ref, ["banner", "mobileBreakpoint", "mobileToggleTitle", "children"]);
+    restProps = _objectWithoutProperties(_ref, _excluded);
   return /*#__PURE__*/React.createElement(WindowSize, {
     render: function render(_ref2) {
       var width = _ref2.width;

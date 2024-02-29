@@ -1,11 +1,7 @@
+var _templateObject;
+var _excluded = ["color"],
+  _excluded2 = ["children"];
 function _extends() { _extends = Object.assign ? Object.assign.bind() : function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends.apply(this, arguments); }
-function _templateObject() {
-  var data = _taggedTemplateLiteral(["\n    padding: 0 33px;\n  "]);
-  _templateObject = function _templateObject() {
-    return data;
-  };
-  return data;
-}
 function _taggedTemplateLiteral(strings, raw) { if (!raw) { raw = strings.slice(0); } return Object.freeze(Object.defineProperties(strings, { raw: { value: Object.freeze(raw) } })); }
 function _objectWithoutProperties(source, excluded) { if (source == null) return {}; var target = _objectWithoutPropertiesLoose(source, excluded); var key, i; if (Object.getOwnPropertySymbols) { var sourceSymbolKeys = Object.getOwnPropertySymbols(source); for (i = 0; i < sourceSymbolKeys.length; i++) { key = sourceSymbolKeys[i]; if (excluded.indexOf(key) >= 0) continue; if (!Object.prototype.propertyIsEnumerable.call(source, key)) continue; target[key] = source[key]; } } return target; }
 function _objectWithoutPropertiesLoose(source, excluded) { if (source == null) return {}; var target = {}; var sourceKeys = Object.keys(source); var key, i; for (i = 0; i < sourceKeys.length; i++) { key = sourceKeys[i]; if (excluded.indexOf(key) >= 0) continue; target[key] = source[key]; } return target; }
@@ -27,7 +23,7 @@ import media from "../../media";
 // filter props so they don't become dom attributes (see `styled-components` issue 439)
 var MobileCollapseWrapper = styled(function (_ref) {
   var color = _ref.color,
-    restProps = _objectWithoutProperties(_ref, ["color"]);
+    restProps = _objectWithoutProperties(_ref, _excluded);
   return /*#__PURE__*/React.createElement("div", restProps);
 }).withConfig({
   displayName: "NavbarNav__MobileCollapseWrapper",
@@ -39,7 +35,7 @@ var MobileCollapseWrapper = styled(function (_ref) {
 var MobileNavWrapper = styled.div.withConfig({
   displayName: "NavbarNav__MobileNavWrapper",
   componentId: "hl2s13-1"
-})(["padding:0 7vw 1rem;", ";"], media.md(_templateObject()));
+})(["padding:0 7vw 1rem;", ";"], media.md(_templateObject || (_templateObject = _taggedTemplateLiteral(["\n    padding: 0 33px;\n  "]))));
 
 /*
   outer NavbarNav component
@@ -56,7 +52,7 @@ var getChildColor = function getChildColor(color) {
 };
 var NavbarNav = function NavbarNav(_ref3) {
   var children = _ref3.children,
-    restProps = _objectWithoutProperties(_ref3, ["children"]);
+    restProps = _objectWithoutProperties(_ref3, _excluded2);
   return /*#__PURE__*/React.createElement(WindowSize, {
     render: function render(_ref4) {
       var width = _ref4.width;

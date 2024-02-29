@@ -1,10 +1,7 @@
-function _templateObject() {
-  var data = _taggedTemplateLiteral(["\n    padding: 0 33px 1rem 33px;\n  "]);
-  _templateObject = function _templateObject() {
-    return data;
-  };
-  return data;
-}
+var _templateObject;
+var _excluded = ["color"],
+  _excluded2 = ["color"],
+  _excluded3 = ["children"];
 function _taggedTemplateLiteral(strings, raw) { if (!raw) { raw = strings.slice(0); } return Object.freeze(Object.defineProperties(strings, { raw: { value: Object.freeze(raw) } })); }
 function _objectWithoutProperties(source, excluded) { if (source == null) return {}; var target = _objectWithoutPropertiesLoose(source, excluded); var key, i; if (Object.getOwnPropertySymbols) { var sourceSymbolKeys = Object.getOwnPropertySymbols(source); for (i = 0; i < sourceSymbolKeys.length; i++) { key = sourceSymbolKeys[i]; if (excluded.indexOf(key) >= 0) continue; if (!Object.prototype.propertyIsEnumerable.call(source, key)) continue; target[key] = source[key]; } } return target; }
 function _objectWithoutPropertiesLoose(source, excluded) { if (source == null) return {}; var target = {}; var sourceKeys = Object.keys(source); var key, i; for (i = 0; i < sourceKeys.length; i++) { key = sourceKeys[i]; if (excluded.indexOf(key) >= 0) continue; target[key] = source[key]; } return target; }
@@ -20,6 +17,7 @@ import Collapse from "../utils/Collapse";
 import VisibilityToggle from "../utils/VisibilityToggle";
 import media from "../../media";
 var sansBold = typography.sansBold;
+
 /*
   inner components
 */
@@ -31,7 +29,7 @@ var ToggleButton = styled.button.withConfig({
 // filter props so they don't become dom attributes (see `styled-components` issue 439)
 var ToggleTitle = styled(function (_ref) {
   var color = _ref.color,
-    restProps = _objectWithoutProperties(_ref, ["color"]);
+    restProps = _objectWithoutProperties(_ref, _excluded);
   return /*#__PURE__*/React.createElement("span", restProps);
 }).withConfig({
   displayName: "NavbarGlobalNav__ToggleTitle",
@@ -44,7 +42,7 @@ var ToggleTitle = styled(function (_ref) {
 // filter props so they don't become dom attributes (see `styled-components` issue 439)
 var CollapseWrapper = styled(function (_ref3) {
   var color = _ref3.color,
-    restProps = _objectWithoutProperties(_ref3, ["color"]);
+    restProps = _objectWithoutProperties(_ref3, _excluded2);
   return /*#__PURE__*/React.createElement("div", restProps);
 }).withConfig({
   displayName: "NavbarGlobalNav__CollapseWrapper",
@@ -56,7 +54,7 @@ var CollapseWrapper = styled(function (_ref3) {
 var NavWrapper = styled.div.withConfig({
   displayName: "NavbarGlobalNav__NavWrapper",
   componentId: "sc-1vdo48t-3"
-})(["padding:0 7vw 1rem;", ";"], media.md(_templateObject()));
+})(["padding:0 7vw 1rem;", ";"], media.md(_templateObject || (_templateObject = _taggedTemplateLiteral(["\n    padding: 0 33px 1rem 33px;\n  "]))));
 
 /*
   outer NavbarGlobalNav component
@@ -73,7 +71,7 @@ var getChildColor = function getChildColor(color) {
 };
 var NavbarGlobalNav = function NavbarGlobalNav(_ref5) {
   var children = _ref5.children,
-    restProps = _objectWithoutProperties(_ref5, ["children"]);
+    restProps = _objectWithoutProperties(_ref5, _excluded3);
   return /*#__PURE__*/React.createElement(WindowSize, {
     render: function render(_ref6) {
       var width = _ref6.width;

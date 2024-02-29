@@ -5,6 +5,7 @@ import styled from "styled-components";
 import { colors, typography } from "brown-university-styles";
 import BannerContext from "./BannerContext";
 var serif = typography.serif;
+
 /*
   inner Tag component
 */

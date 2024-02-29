@@ -1,11 +1,7 @@
+var _templateObject;
+var _excluded = ["color", "mobileBreakpoint", "toggleTitle"],
+  _excluded2 = ["color", "mobileBreakpoint", "toggleTitle", "children"];
 function _extends() { _extends = Object.assign ? Object.assign.bind() : function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends.apply(this, arguments); }
-function _templateObject() {
-  var data = _taggedTemplateLiteral(["\n    padding: 0 33px;\n  "]);
-  _templateObject = function _templateObject() {
-    return data;
-  };
-  return data;
-}
 function _taggedTemplateLiteral(strings, raw) { if (!raw) { raw = strings.slice(0); } return Object.freeze(Object.defineProperties(strings, { raw: { value: Object.freeze(raw) } })); }
 function _objectWithoutProperties(source, excluded) { if (source == null) return {}; var target = _objectWithoutPropertiesLoose(source, excluded); var key, i; if (Object.getOwnPropertySymbols) { var sourceSymbolKeys = Object.getOwnPropertySymbols(source); for (i = 0; i < sourceSymbolKeys.length; i++) { key = sourceSymbolKeys[i]; if (excluded.indexOf(key) >= 0) continue; if (!Object.prototype.propertyIsEnumerable.call(source, key)) continue; target[key] = source[key]; } } return target; }
 function _objectWithoutPropertiesLoose(source, excluded) { if (source == null) return {}; var target = {}; var sourceKeys = Object.keys(source); var key, i; for (i = 0; i < sourceKeys.length; i++) { key = sourceKeys[i]; if (excluded.indexOf(key) >= 0) continue; target[key] = source[key]; } return target; }
@@ -145,7 +141,7 @@ var NavbarWrapper = styled(function (_ref) {
   var color = _ref.color,
     mobileBreakpoint = _ref.mobileBreakpoint,
     toggleTitle = _ref.toggleTitle,
-    restProps = _objectWithoutProperties(_ref, ["color", "mobileBreakpoint", "toggleTitle"]);
+    restProps = _objectWithoutProperties(_ref, _excluded);
   return /*#__PURE__*/React.createElement("nav", restProps);
 }).withConfig({
   displayName: "Navbar__NavbarWrapper",
@@ -153,7 +149,7 @@ var NavbarWrapper = styled(function (_ref) {
 })(["align-items:center;box-shadow:0 5px 10px 0 #00000026;display:flex;height:75px;justify-content:space-between;padding:0 7vw;position:relative;z-index:20;background-color:", ";", ";"], function (_ref2) {
   var color = _ref2.color;
   return colors[color];
-}, media.md(_templateObject()));
+}, media.md(_templateObject || (_templateObject = _taggedTemplateLiteral(["\n    padding: 0 33px;\n  "]))));
 var NavbarLogoLink = styled.a.withConfig({
   displayName: "Navbar__NavbarLogoLink",
   componentId: "sc-6w2m5m-1"
@@ -176,7 +172,7 @@ var Navbar = function Navbar(_ref3) {
     mobileBreakpoint = _ref3.mobileBreakpoint,
     toggleTitle = _ref3.toggleTitle,
     children = _ref3.children,
-    restProps = _objectWithoutProperties(_ref3, ["color", "mobileBreakpoint", "toggleTitle", "children"]);
+    restProps = _objectWithoutProperties(_ref3, _excluded2);
   return /*#__PURE__*/React.createElement(NavbarWrapper, _extends({}, restProps, {
     color: color
   }), /*#__PURE__*/React.createElement(NavbarLogoLink, {

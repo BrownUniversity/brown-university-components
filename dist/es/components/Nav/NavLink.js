@@ -1,13 +1,8 @@
+var _excluded = ["tag"];
+var _templateObject;
 function _extends() { _extends = Object.assign ? Object.assign.bind() : function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends.apply(this, arguments); }
 function _objectWithoutProperties(source, excluded) { if (source == null) return {}; var target = _objectWithoutPropertiesLoose(source, excluded); var key, i; if (Object.getOwnPropertySymbols) { var sourceSymbolKeys = Object.getOwnPropertySymbols(source); for (i = 0; i < sourceSymbolKeys.length; i++) { key = sourceSymbolKeys[i]; if (excluded.indexOf(key) >= 0) continue; if (!Object.prototype.propertyIsEnumerable.call(source, key)) continue; target[key] = source[key]; } } return target; }
 function _objectWithoutPropertiesLoose(source, excluded) { if (source == null) return {}; var target = {}; var sourceKeys = Object.keys(source); var key, i; for (i = 0; i < sourceKeys.length; i++) { key = sourceKeys[i]; if (excluded.indexOf(key) >= 0) continue; target[key] = source[key]; } return target; }
-function _templateObject() {
-  var data = _taggedTemplateLiteral(["\n    font-size: ", ";\n  "]);
-  _templateObject = function _templateObject() {
-    return data;
-  };
-  return data;
-}
 function _taggedTemplateLiteral(strings, raw) { if (!raw) { raw = strings.slice(0); } return Object.freeze(Object.defineProperties(strings, { raw: { value: Object.freeze(raw) } })); }
 import PropTypes from "prop-types";
 import React from "react";
@@ -16,6 +11,7 @@ import { colors, typography } from "brown-university-styles";
 import NavContext from "./NavContext";
 import media from "../../media";
 var sans = typography.sans;
+
 /*
   css mixins
 */
@@ -209,7 +205,7 @@ var Tag = styled.div.withConfig({
   return getPointerEvents(props);
 }, function (props) {
   return getTransition(props);
-}, media.xl(_templateObject(), function (_ref13) {
+}, media.xl(_templateObject || (_templateObject = _taggedTemplateLiteral(["\n    font-size: ", ";\n  "])), function (_ref13) {
   var navbar = _ref13.navbar,
     mobile = _ref13.mobile,
     sub = _ref13.sub;
@@ -238,7 +234,7 @@ var deriveTag = function deriveTag(_ref15) {
 };
 var NavLink = function NavLink(props) {
   var tag = props.tag,
-    restProps = _objectWithoutProperties(props, ["tag"]);
+    restProps = _objectWithoutProperties(props, _excluded);
   var derivedTag = deriveTag(props);
   return /*#__PURE__*/React.createElement(NavContext.Consumer, null, function (_ref16) {
     var navbar = _ref16.navbar,

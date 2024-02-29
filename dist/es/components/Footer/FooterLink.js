@@ -1,13 +1,8 @@
+var _excluded = ["href", "children"];
+var _templateObject;
 function _extends() { _extends = Object.assign ? Object.assign.bind() : function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends.apply(this, arguments); }
 function _objectWithoutProperties(source, excluded) { if (source == null) return {}; var target = _objectWithoutPropertiesLoose(source, excluded); var key, i; if (Object.getOwnPropertySymbols) { var sourceSymbolKeys = Object.getOwnPropertySymbols(source); for (i = 0; i < sourceSymbolKeys.length; i++) { key = sourceSymbolKeys[i]; if (excluded.indexOf(key) >= 0) continue; if (!Object.prototype.propertyIsEnumerable.call(source, key)) continue; target[key] = source[key]; } } return target; }
 function _objectWithoutPropertiesLoose(source, excluded) { if (source == null) return {}; var target = {}; var sourceKeys = Object.keys(source); var key, i; for (i = 0; i < sourceKeys.length; i++) { key = sourceKeys[i]; if (excluded.indexOf(key) >= 0) continue; target[key] = source[key]; } return target; }
-function _templateObject() {
-  var data = _taggedTemplateLiteral(["\n  font-size: ", ";\n  "]);
-  _templateObject = function _templateObject() {
-    return data;
-  };
-  return data;
-}
 function _taggedTemplateLiteral(strings, raw) { if (!raw) { raw = strings.slice(0); } return Object.freeze(Object.defineProperties(strings, { raw: { value: Object.freeze(raw) } })); }
 import PropTypes from "prop-types";
 import React from "react";
@@ -47,7 +42,7 @@ var iconCSS = css(["left:0;position:absolute;top:50%;transform:translate(0,-50%)
 var Label = styled.span.withConfig({
   displayName: "FooterLink__Label",
   componentId: "sc-1bisu3o-0"
-})(["display:inline;font-family:", ";font-size:", ";font-weight:400;letter-spacing:", ";margin-right:4px;text-transform:uppercase;", ";"], typography.sans, getRems(12), getRems(1.5), media.sm(_templateObject(), getRems(13)));
+})(["display:inline;font-family:", ";font-size:", ";font-weight:400;letter-spacing:", ";margin-right:4px;text-transform:uppercase;", ";"], typography.sans, getRems(12), getRems(1.5), media.sm(_templateObject || (_templateObject = _taggedTemplateLiteral(["\n  font-size: ", ";\n  "])), getRems(13)));
 var IconsWrapper = styled.span.withConfig({
   displayName: "FooterLink__IconsWrapper",
   componentId: "sc-1bisu3o-1"
@@ -79,7 +74,7 @@ var Tag = styled.a.withConfig({
 var FooterLink = function FooterLink(_ref) {
   var href = _ref.href,
     children = _ref.children,
-    restProps = _objectWithoutProperties(_ref, ["href", "children"]);
+    restProps = _objectWithoutProperties(_ref, _excluded);
   return /*#__PURE__*/React.createElement(Tag, _extends({
     href: href
   }, restProps), /*#__PURE__*/React.createElement(Label, null, children), /*#__PURE__*/React.createElement(IconsWrapper, null, /*#__PURE__*/React.createElement(DefaultIconWrapper, null, /*#__PURE__*/React.createElement(DefaultIcon, null)), /*#__PURE__*/React.createElement(ActionIconWrapper, null, /*#__PURE__*/React.createElement(ActionIcon, null))));
