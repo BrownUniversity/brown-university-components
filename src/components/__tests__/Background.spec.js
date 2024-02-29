@@ -32,7 +32,7 @@ describe("Background", () => {
 
       expect(background).toMatchInlineSnapshot(`
 .c0 {
-  background-image: url('background.svg');
+  background-image: url("background.svg");
   background-repeat: repeat;
   background-size: 1600px;
   background-color: #FFFFFF;

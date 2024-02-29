@@ -1,5 +1,5 @@
 import React from "react";
-import { render, fireEvent, wait } from "@testing-library/react";
+import { render, fireEvent, waitFor } from "@testing-library/react";
 import Collapse from "../../utils/Collapse";
 
 const renderCollapse = ({ props = {}, children = <div /> } = {}) => {
@@ -110,7 +110,7 @@ describe("Collapse", () => {
     );
     fireEvent.transitionEnd(collapse);
 
-    await wait(() => expect(collapse).toHaveStyleRule("height", "auto"));
+    await waitFor(() => expect(collapse).toHaveStyleRule("height", "auto"));
     expect(collapse).toHaveStyleRule("overflow", "visible");
     expect(collapse).toHaveStyleRule("display", "block");
   });
@@ -130,7 +130,7 @@ describe("Collapse", () => {
     );
     fireEvent.transitionEnd(collapse);
 
-    await wait(() => expect(collapse).toHaveStyleRule("display", "none"));
+    await waitFor(() => expect(collapse).toHaveStyleRule("display", "none"));
     expect(collapse).toHaveStyleRule("height", "0");
     expect(collapse).toHaveStyleRule("overflow", "hidden");
   });
