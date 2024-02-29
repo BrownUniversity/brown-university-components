@@ -238,7 +238,6 @@ exports[`NavbarGlobalNav when window width is above mobileBreakpoint styles shou
           >
             <button
               class="c9"
-              color="white"
             >
               Link
             </button>
@@ -248,7 +247,6 @@ exports[`NavbarGlobalNav when window width is above mobileBreakpoint styles shou
           >
             <button
               class="c10"
-              color="white"
             >
               Active Link
             </button>
@@ -258,7 +256,6 @@ exports[`NavbarGlobalNav when window width is above mobileBreakpoint styles shou
           >
             <button
               class="c11"
-              color="white"
               disabled=""
             >
               Link
@@ -492,7 +489,6 @@ exports[`NavbarGlobalNav when window width is below mobileBreakpoint styles shou
           >
             <button
               class="c8"
-              color="white"
             >
               Link
             </button>
@@ -502,7 +498,6 @@ exports[`NavbarGlobalNav when window width is below mobileBreakpoint styles shou
           >
             <button
               class="c9"
-              color="white"
             >
               Active Link
             </button>
@@ -512,7 +507,6 @@ exports[`NavbarGlobalNav when window width is below mobileBreakpoint styles shou
           >
             <button
               class="c10"
-              color="white"
               disabled=""
             >
               Link

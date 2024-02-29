@@ -13,7 +13,9 @@ const { sansBold } = typography;
 /*
   inner components
 */
-const MobileBannerPositioningWrapper = styled.div`
+const MobileBannerPositioningWrapper = styled(({ banner, ...restProps }) => (
+  <div {...restProps} />
+))`
   ${(props) =>
     props.banner &&
     css`
@@ -68,7 +70,9 @@ const MobileNavWrapper = styled.div`
   z-index: 10;
 `;
 
-const BannerPositioningWrapper = styled.div`
+const BannerPositioningWrapper = styled(({ banner, ...restProps }) => (
+  <div {...restProps} />
+))`
   ${(props) =>
     props.banner &&
     css`

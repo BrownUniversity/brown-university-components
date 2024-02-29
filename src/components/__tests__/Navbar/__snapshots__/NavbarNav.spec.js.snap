@@ -128,7 +128,6 @@ exports[`NavbarNav when window width is above mobileBreakpoint should render def
   >
     <button
       class="c2"
-      color="white"
     >
       Link
     </button>
@@ -138,7 +137,6 @@ exports[`NavbarNav when window width is above mobileBreakpoint should render def
   >
     <button
       class="c3"
-      color="white"
     >
       Active Link
     </button>
@@ -148,7 +146,6 @@ exports[`NavbarNav when window width is above mobileBreakpoint should render def
   >
     <button
       class="c4"
-      color="white"
       disabled=""
     >
       Link
@@ -366,7 +363,6 @@ exports[`NavbarNav when window width is below mobileBreakpoint styles should ren
           >
             <button
               class="c7"
-              color="white"
             >
               Link
             </button>
@@ -376,7 +372,6 @@ exports[`NavbarNav when window width is below mobileBreakpoint styles should ren
           >
             <button
               class="c8"
-              color="white"
             >
               Active Link
             </button>
@@ -386,7 +381,6 @@ exports[`NavbarNav when window width is below mobileBreakpoint styles should ren
           >
             <button
               class="c9"
-              color="white"
               disabled=""
             >
               Link

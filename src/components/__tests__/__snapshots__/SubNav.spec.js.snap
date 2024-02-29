@@ -93,7 +93,6 @@ exports[`SubNav should render default 1`] = `
     >
       <button
         class="c2"
-        color="red"
       >
         Link
       </button>
@@ -103,7 +102,6 @@ exports[`SubNav should render default 1`] = `
     >
       <button
         class="c3"
-        color="red"
       >
         Active Link
       </button>
@@ -113,7 +111,6 @@ exports[`SubNav should render default 1`] = `
     >
       <button
         class="c4"
-        color="red"
         disabled=""
       >
         Link

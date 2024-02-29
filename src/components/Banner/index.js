@@ -46,7 +46,9 @@ const BannerImage = styled.img`
   display: block;
 `;
 
-const BannerChildrenWrapper = styled.div`
+const BannerChildrenWrapper = styled(
+  ({ mobileBreakpoint, size, ...restProps }) => <div {...restProps} />,
+)`
   position: absolute;
   text-align: center;
   width: 100%;
