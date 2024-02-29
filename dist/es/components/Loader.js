@@ -5,9 +5,7 @@ import PropTypes from "prop-types";
 import React from "react";
 import styled, { keyframes } from "styled-components";
 var LoaderSVG = function LoaderSVG(props) {
-  return /*#__PURE__*/React.createElement("svg", props, /*#__PURE__*/React.createElement("title", {
-    id: "title"
-  }, "Loading..."), /*#__PURE__*/React.createElement("path", {
+  return /*#__PURE__*/React.createElement("svg", props, /*#__PURE__*/React.createElement("title", null, "Loading..."), /*#__PURE__*/React.createElement("path", {
     className: "rays",
     id: "rays",
     fill: "#F0F3F5",
@@ -117,8 +115,7 @@ var LoaderSVG = function LoaderSVG(props) {
 };
 LoaderSVG.defaultProps = {
   viewBox: "0 0 140 180",
-  role: "img",
-  "'aria-labelledby'": "title"
+  role: "img"
 };
 /*
   inner components
