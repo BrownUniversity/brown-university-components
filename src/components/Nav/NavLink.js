@@ -245,6 +245,13 @@ const deriveTag = ({ tag, href }) => {
   return tag;
 };
 
+function FilteredAs(props) {
+  // eslint-disable-next-line react/prop-types
+  const { tag, active, navbar, mobile, sub, color, ...restProps } = props;
+  const DerivedTag = deriveTag(props);
+  return <DerivedTag {...restProps} />;
+}
+
 const NavLink = (props) => {
   const { tag, ...restProps } = props;
   const derivedTag = deriveTag(props);
@@ -253,9 +260,10 @@ const NavLink = (props) => {
     <NavContext.Consumer>
       {({ navbar, mobile, sub, color }) => (
         <Tag
-          as={derivedTag}
+          as={FilteredAs}
           type={derivedTag === "button" && props.onClick ? "button" : undefined}
           {...restProps}
+          tag={tag}
           navbar={navbar}
           mobile={mobile}
           sub={sub}

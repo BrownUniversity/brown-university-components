@@ -162,7 +162,11 @@ const getColorWithHover = ({ color, outline, inverse, disabled }) => {
   inner Tag component
 */
 // TODO: filter color prop with `as` usage (see `styled-components` issue 439)
-const Tag = styled.div`
+const Tag = styled(
+  ({ color, size, uppercase, rounded, outline, inverse, ...restProps }) => (
+    <div {...restProps} />
+  ),
+)`
   ${buttonCSS}
   background-color: ${(props) => getBackgroundColor(props)};
   border-radius: ${({ rounded }) => (rounded ? "5px" : null)};
@@ -216,15 +220,48 @@ const deriveTag = ({ tag, href }) => {
   return tag;
 };
 
+function FilteredAs(props) {
+  /* eslint-disable react/prop-types */
+  const {
+    tag,
+    color,
+    size,
+    uppercase,
+    rounded,
+    outline,
+    inverse,
+    ...restProps
+  } = props;
+  /* eslint-enable react/prop-types */
+  const DerivedTag = deriveTag(props);
+  return <DerivedTag {...restProps} />;
+}
+
 const Button = (props) => {
-  const { tag, ...restProps } = props;
-  const derivedTag = deriveTag(props);
+  const {
+    tag,
+    color,
+    size,
+    uppercase,
+    rounded,
+    outline,
+    inverse,
+    ...restProps
+  } = props;
+  const DerivedTag = deriveTag(props);
 
   return (
     <Tag
-      as={derivedTag}
-      type={derivedTag === "button" && props.onClick ? "button" : undefined}
+      as={FilteredAs}
+      type={DerivedTag === "button" && props.onClick ? "button" : undefined}
       {...restProps}
+      tag={tag}
+      color={color}
+      size={size}
+      uppercase={uppercase}
+      rounded={rounded}
+      outline={outline}
+      inverse={inverse}
     />
   );
 };

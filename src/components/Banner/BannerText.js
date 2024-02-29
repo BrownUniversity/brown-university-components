@@ -9,7 +9,9 @@ const { serif } = typography;
 /*
   inner Tag component
 */
-const Tag = styled.div`
+const Tag = styled(({ mobileBreakpoint, ...restProps }) => (
+  <div {...restProps} />
+))`
   color: ${colors.white};
   font-family: ${serif};
   font-size: 1.9em;

@@ -40,7 +40,6 @@ describe("Collapse", () => {
   display: none;
   height: 0;
   overflow: hidden;
-  -webkit-transition: height 250ms cubic-bezier(0.4,0,0.2,1);
   transition: height 250ms cubic-bezier(0.4,0,0.2,1);
 }
 
@@ -49,6 +48,7 @@ describe("Collapse", () => {
   display="none"
   height="0"
   overflow="hidden"
+  transition="height 250ms cubic-bezier(0.4,0,0.2,1)"
 >
   <div />
 </div>
@@ -64,7 +64,6 @@ describe("Collapse", () => {
   display: block;
   height: auto;
   overflow: visible;
-  -webkit-transition: height 250ms cubic-bezier(0.4,0,0.2,1);
   transition: height 250ms cubic-bezier(0.4,0,0.2,1);
 }
 
@@ -73,6 +72,7 @@ describe("Collapse", () => {
   display="block"
   height="auto"
   overflow="visible"
+  transition="height 250ms cubic-bezier(0.4,0,0.2,1)"
 >
   <div />
 </div>

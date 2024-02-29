@@ -21,7 +21,7 @@ const getPadding = ({ mobile, sub }) => {
 /*
   inner Tag component
 */
-const Tag = styled.li`
+const Tag = styled(({ mobile, sub, ...restProps }) => <li {...restProps} />)`
   display: list-item;
   border-top: ${({ mobile }) => mobile && "0.5px solid #C8C8C880"};
   padding: ${(props) => getPadding(props)};

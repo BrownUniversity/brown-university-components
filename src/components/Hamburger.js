@@ -141,7 +141,15 @@ class Hamburger extends Component {
     );
 
   render() {
-    const { tag, color, ariaLabel, onOpen, onClose, ...restProps } = this.props;
+    const {
+      tag,
+      color,
+      ariaLabel,
+      onOpen,
+      onClose,
+      isOpen: isOpenProp,
+      ...restProps
+    } = this.props;
     const { isOpen } = this.state;
     const isButton = tag === "button";
 
