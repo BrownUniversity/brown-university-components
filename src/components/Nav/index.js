@@ -50,19 +50,20 @@ const Tag = styled(({ color, navbar, mobile, sub, ...restProps }) => (
 ))`
   list-style: none;
   margin: 0;
-  background-color: ${props => getBackgroundColor(props)};
-  display: ${props => getDisplay(props)};
-  padding: ${props => getPadding(props)};
-  width: ${props => getWidth(props)};
+  background-color: ${(props) => getBackgroundColor(props)};
+  display: ${(props) => getDisplay(props)};
+  padding: ${(props) => getPadding(props)};
+  width: ${(props) => getWidth(props)};
 `;
 
 /*
   outer Nav component
 */
-const Nav = props => {
+const Nav = (props) => {
   const { navbar, mobile, sub, color } = props;
 
   return (
+    // eslint-disable-next-line react/jsx-no-constructed-context-values
     <NavContext.Provider value={{ navbar, mobile, sub, color }}>
       <Tag {...props} />
     </NavContext.Provider>
@@ -74,14 +75,14 @@ Nav.propTypes = {
   mobile: PropTypes.bool,
   sub: PropTypes.bool,
   color: PropTypes.oneOf(["red", "white"]),
-  children: PropTypes.node.isRequired
+  children: PropTypes.node.isRequired,
 };
 
 Nav.defaultProps = {
   navbar: false,
   mobile: false,
   sub: false,
-  color: "red"
+  color: "red",
 };
 
 Nav.Item = NavItem;

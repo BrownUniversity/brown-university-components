@@ -1,11 +1,9 @@
+var _excluded = ["height"];
 function _objectWithoutProperties(source, excluded) { if (source == null) return {}; var target = _objectWithoutPropertiesLoose(source, excluded); var key, i; if (Object.getOwnPropertySymbols) { var sourceSymbolKeys = Object.getOwnPropertySymbols(source); for (i = 0; i < sourceSymbolKeys.length; i++) { key = sourceSymbolKeys[i]; if (excluded.indexOf(key) >= 0) continue; if (!Object.prototype.propertyIsEnumerable.call(source, key)) continue; target[key] = source[key]; } } return target; }
-
 function _objectWithoutPropertiesLoose(source, excluded) { if (source == null) return {}; var target = {}; var sourceKeys = Object.keys(source); var key, i; for (i = 0; i < sourceKeys.length; i++) { key = sourceKeys[i]; if (excluded.indexOf(key) >= 0) continue; target[key] = source[key]; } return target; }
-
 import PropTypes from "prop-types";
 import React from "react";
 import styled, { keyframes } from "styled-components";
-
 var LoaderSVG = function LoaderSVG(props) {
   return /*#__PURE__*/React.createElement("svg", props, /*#__PURE__*/React.createElement("title", {
     id: "title"
@@ -117,7 +115,6 @@ var LoaderSVG = function LoaderSVG(props) {
     d: "M37.1 65.4s1.1 0 1.6.8 1.6 2.1 1.6 2.1M43.2 62.6s1.2 1.4 1.7 2.8 1.7 3.1 2.8 3.5M55.7 63.2c.4.5 1 1.4 1.3 2.3.5 1.4 1.5 3.3 2.7 3.7M67.9 63.4c.4.5.8 1.3 1.1 2 .4 1.1 1.2 2.4 2.1 3M79.5 63.1c.4.5.8 1.3 1.1 2 .4 1.1 1.2 2.4 2.1 3M92.2 63c.4.5.8 1.3 1.1 2 .4 1.1 1 2.6 1.9 3.3M61.2 65.4s.9 0 1.7 1.1 1.8 2.4 2.5 2.7M85.8 65.6s1 .2 1.6 1.2c.6 1 1.9 2.3 2.8 2.7"
   })));
 };
-
 LoaderSVG.defaultProps = {
   viewBox: "0 0 140 180",
   role: "img",
@@ -126,26 +123,23 @@ LoaderSVG.defaultProps = {
 /*
   inner components
 */
-
 var spin = keyframes([" 100%{transform:rotate(360deg);}"]);
 var LoaderWrapper = styled.div.withConfig({
   displayName: "Loader__LoaderWrapper",
   componentId: "sc-1t53ar0-0"
 })(["svg{#rays{transform-origin:center;transform-box:fill-box;animation:", " 7s linear infinite;}}"], spin);
+
 /*
   outer Loader component
 */
-
 var Loader = function Loader(_ref) {
   var height = _ref.height,
-      restProps = _objectWithoutProperties(_ref, ["height"]);
-
+    restProps = _objectWithoutProperties(_ref, _excluded);
   return /*#__PURE__*/React.createElement(LoaderWrapper, restProps, /*#__PURE__*/React.createElement(LoaderSVG, {
     width: Math.floor(height * 0.77),
     height: height
   }));
 };
-
 Loader.propTypes = {
   height: PropTypes.number
 };

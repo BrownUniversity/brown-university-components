@@ -2,9 +2,12 @@ import PropTypes from "prop-types";
 import { Component } from "react";
 
 class VisibilityToggle extends Component {
-  state = {
-    isOpen: false
-  };
+  constructor(props) {
+    super(props);
+    this.state = {
+      isOpen: false,
+    };
+  }
 
   toggleIsOpen = () => this.setState(({ isOpen }) => ({ isOpen: !isOpen }));
 
@@ -14,13 +17,13 @@ class VisibilityToggle extends Component {
     return children({
       ...restProps,
       ...this.state,
-      toggleIsOpen: this.toggleIsOpen
+      toggleIsOpen: this.toggleIsOpen,
     });
   }
 }
 
 VisibilityToggle.propTypes = {
-  children: PropTypes.func.isRequired
+  children: PropTypes.func.isRequired,
 };
 
 export default VisibilityToggle;

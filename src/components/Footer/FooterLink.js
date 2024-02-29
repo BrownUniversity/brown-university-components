@@ -72,7 +72,9 @@ const ActionIcon = styled(LinkSVG)`
 const Tag = styled.a`
   ${unstyledLinkCSS}
   color: ${colors.gold};
-  transition: background 0.25s, color 0.25s;
+  transition:
+    background 0.25s,
+    color 0.25s;
 
   ${ActionIcon} {
     opacity: 0;
@@ -113,7 +115,7 @@ const FooterLink = ({ href, children, ...restProps }) => {
 
 FooterLink.propTypes = {
   href: PropTypes.string.isRequired,
-  children: PropTypes.string.isRequired
+  children: PropTypes.string.isRequired,
 };
 
 export default FooterLink;

@@ -36,7 +36,7 @@ const MobileNavWrapper = styled.div`
 /*
   outer NavbarNav component
 */
-const getChildColor = color => {
+const getChildColor = (color) => {
   switch (color) {
     case "white":
       return "red";
@@ -65,7 +65,7 @@ const NavbarNav = ({ children, ...restProps }) => (
                   <VisibilityToggle>
                     {({
                       isOpen: mobileNavIsOpen,
-                      toggleIsOpen: toggleMobileNav
+                      toggleIsOpen: toggleMobileNav,
                     }) => (
                       <React.Fragment>
                         <Hamburger
@@ -107,7 +107,7 @@ const NavbarNav = ({ children, ...restProps }) => (
 );
 
 NavbarNav.propTypes = {
-  children: PropTypes.node.isRequired
+  children: PropTypes.node.isRequired,
 };
 
 NavbarNav.Item = Nav.Item;

@@ -19,11 +19,14 @@ const Tag = styled.div`
   outer Collapse component
 */
 class Collapse extends Component {
-  state = {
-    display: "none",
-    height: "0",
-    overflow: "hidden"
-  };
+  constructor(props) {
+    super(props);
+    this.state = {
+      display: "none",
+      height: "0",
+      overflow: "hidden",
+    };
+  }
 
   tagRef = null;
 
@@ -37,12 +40,12 @@ class Collapse extends Component {
     if (!prevProps.isOpen && this.props.isOpen) {
       this.setState(
         {
-          display: "block"
+          display: "block",
         },
         () =>
           this.setState({
-            height: `${this.getHeight()}px`
-          })
+            height: `${this.getHeight()}px`,
+          }),
       );
     }
 
@@ -51,9 +54,9 @@ class Collapse extends Component {
         setTimeout(() =>
           this.setState({
             height: "0",
-            overflow: "hidden"
-          })
-        )
+            overflow: "hidden",
+          }),
+        ),
       );
     }
   }
@@ -64,7 +67,7 @@ class Collapse extends Component {
     this.setState({
       display: "block",
       height: "auto",
-      overflow: "visible"
+      overflow: "visible",
     });
   };
 
@@ -72,7 +75,7 @@ class Collapse extends Component {
     this.setState({ display: "none" });
   };
 
-  handleTransitionEnd = e => {
+  handleTransitionEnd = (e) => {
     const ePropertyName =
       process.NODE_ENV === "jest" ? "height" : e.propertyName;
     if (e.target === this.tagRef && ePropertyName === "height") {
@@ -91,7 +94,7 @@ class Collapse extends Component {
       <Tag
         {...restProps}
         {...this.state}
-        ref={node => (this.tagRef = node)}
+        ref={(node) => (this.tagRef = node)}
         onTransitionEnd={this.handleTransitionEnd}
       >
         {children}
@@ -103,11 +106,11 @@ class Collapse extends Component {
 Collapse.propTypes = {
   isOpen: PropTypes.bool.isRequired,
   transition: PropTypes.string,
-  children: PropTypes.node.isRequired
+  children: PropTypes.node.isRequired,
 };
 
 Collapse.defaultProps = {
-  transition: "height 250ms cubic-bezier(0.4,0,0.2,1)"
+  transition: "height 250ms cubic-bezier(0.4,0,0.2,1)",
 };
 
 export default Collapse;

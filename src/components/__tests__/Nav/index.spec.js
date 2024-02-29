@@ -7,7 +7,7 @@ const renderNav = ({ props = {}, children = <li /> } = {}) => {
 
   return {
     nav: rtlUtils.container.firstChild,
-    ...rtlUtils
+    ...rtlUtils,
   };
 };
 
@@ -54,7 +54,7 @@ describe("Nav", () => {
 
     it("should render nav with mobile styles when variant is provided", () => {
       const { nav } = renderNav({
-        props: { mobile: true }
+        props: { mobile: true },
       });
 
       expect(nav).toHaveStyleRule("background-color", "transparent");

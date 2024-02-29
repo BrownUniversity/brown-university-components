@@ -7,7 +7,7 @@ const renderNavbar = ({ props = {}, children = jest.fn() } = {}) => {
 
   return {
     navbar: rtlUtils.container.firstChild,
-    ...rtlUtils
+    ...rtlUtils,
   };
 };
 

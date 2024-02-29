@@ -24,20 +24,20 @@ const getPadding = ({ mobile, sub }) => {
 const Tag = styled.li`
   display: list-item;
   border-top: ${({ mobile }) => mobile && "0.5px solid #C8C8C880"};
-  padding: ${props => getPadding(props)};
+  padding: ${(props) => getPadding(props)};
 `;
 
 /*
   outer NavItem component
 */
-const NavItem = props => (
+const NavItem = (props) => (
   <NavContext.Consumer>
     {({ mobile, sub }) => <Tag {...props} mobile={mobile} sub={sub} />}
   </NavContext.Consumer>
 );
 
 NavItem.propTypes = {
-  children: PropTypes.node.isRequired
+  children: PropTypes.node.isRequired,
 };
 
 export default NavItem;

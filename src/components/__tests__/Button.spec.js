@@ -7,7 +7,7 @@ const renderButton = ({ props = {}, children = "Button" } = {}) => {
 
   return {
     button: rtlUtils.container.firstChild,
-    ...rtlUtils
+    ...rtlUtils,
   };
 };
 
@@ -29,7 +29,7 @@ describe("Button", () => {
 
     it("should render anchor element when href is provided", () => {
       const { container } = renderButton({
-        props: { href: "https://www.brown.edu/" }
+        props: { href: "https://www.brown.edu/" },
       });
 
       expect(container.getElementsByTagName("a")).toHaveLength(1);
@@ -44,7 +44,7 @@ describe("Button", () => {
       );
 
       const { getByTestId } = renderButton({
-        props: { tag: Link }
+        props: { tag: Link },
       });
 
       expect(getByTestId("custom-element")).toBeInTheDocument();
@@ -60,7 +60,7 @@ describe("Button", () => {
 
     it("should render type as button when tag is button and onClick is provided", () => {
       const { button } = renderButton({
-        props: { onClick: jest.fn() }
+        props: { onClick: jest.fn() },
       });
 
       expect(button).toHaveAttribute("type", "button");
@@ -68,7 +68,7 @@ describe("Button", () => {
 
     it("should render custom type when provided", () => {
       const { button } = renderButton({
-        props: { type: "submit" }
+        props: { type: "submit" },
       });
 
       expect(button).toHaveAttribute("type", "submit");
@@ -76,7 +76,7 @@ describe("Button", () => {
 
     it("should render type as undefined when the type is not provided and the tag is not button", () => {
       const { button } = renderButton({
-        props: { tag: "a" }
+        props: { tag: "a" },
       });
 
       expect(button).not.toHaveAttribute("type");
@@ -84,7 +84,7 @@ describe("Button", () => {
 
     it("should render type as undefined when the type is not provided and href is provided", () => {
       const { button } = renderButton({
-        props: { href: "https://www.brown.edu/" }
+        props: { href: "https://www.brown.edu/" },
       });
 
       expect(button).not.toHaveAttribute("type");
@@ -143,7 +143,7 @@ describe("Button", () => {
 
       it("should render solid button element of another color when color variant is provided", () => {
         const { button } = renderButton({
-          props: { color: "yellow", onClick: jest.fn() }
+          props: { color: "yellow", onClick: jest.fn() },
         });
 
         expect(button).toMatchInlineSnapshot(`
@@ -193,7 +193,7 @@ describe("Button", () => {
 
       it("should render outlined red button element when outline variant is provided", () => {
         const { button } = renderButton({
-          props: { outline: true, onClick: jest.fn() }
+          props: { outline: true, onClick: jest.fn() },
         });
 
         expect(button).toMatchInlineSnapshot(`
@@ -243,7 +243,7 @@ describe("Button", () => {
 
       it("should render outlined button element of another color when color and outline variants are provided", () => {
         const { button } = renderButton({
-          props: { color: "brown", outline: true, onClick: jest.fn() }
+          props: { color: "brown", outline: true, onClick: jest.fn() },
         });
 
         expect(button).toMatchInlineSnapshot(`
@@ -293,7 +293,7 @@ describe("Button", () => {
 
       it("should render solid inverse red button element when inverse variant is provided", () => {
         const { button } = renderButton({
-          props: { inverse: true, onClick: jest.fn() }
+          props: { inverse: true, onClick: jest.fn() },
         });
 
         expect(button).toMatchInlineSnapshot(`
@@ -343,7 +343,7 @@ describe("Button", () => {
 
       it("should render solid inverse button element of another color when color and inverse variants are provided", () => {
         const { button } = renderButton({
-          props: { color: "gray", inverse: true, onClick: jest.fn() }
+          props: { color: "gray", inverse: true, onClick: jest.fn() },
         });
 
         expect(button).toMatchInlineSnapshot(`
@@ -393,7 +393,7 @@ describe("Button", () => {
 
       it("should render outlined inverse red button element when outline and inverse variants are provided", () => {
         const { button } = renderButton({
-          props: { outline: true, inverse: true, onClick: jest.fn() }
+          props: { outline: true, inverse: true, onClick: jest.fn() },
         });
 
         expect(button).toMatchInlineSnapshot(`
@@ -447,8 +447,8 @@ describe("Button", () => {
             color: "emerald",
             outline: true,
             inverse: true,
-            onClick: jest.fn()
-          }
+            onClick: jest.fn(),
+          },
         });
 
         expect(button).toMatchInlineSnapshot(`
@@ -498,7 +498,7 @@ describe("Button", () => {
 
       it("should render disabled button element when variant is provided", () => {
         const { button } = renderButton({
-          props: { disabled: true, onClick: jest.fn() }
+          props: { disabled: true, onClick: jest.fn() },
         });
 
         expect(button).toHaveStyleRule("cursor", "not-allowed");
@@ -510,7 +510,7 @@ describe("Button", () => {
     describe("with href", () => {
       it("should render solid red anchor element by default", () => {
         const { button } = renderButton({
-          props: { href: "https://www.brown.edu" }
+          props: { href: "https://www.brown.edu" },
         });
 
         expect(button).toMatchInlineSnapshot(`
@@ -595,7 +595,7 @@ describe("Button", () => {
 
       it("should render solid anchor element of another color when color variant is provided", () => {
         const { button } = renderButton({
-          props: { color: "navy", href: "https://www.brown.edu" }
+          props: { color: "navy", href: "https://www.brown.edu" },
         });
 
         expect(button).toMatchInlineSnapshot(`
@@ -680,7 +680,7 @@ describe("Button", () => {
 
       it("should render outlined red anchor element when outline variant is provided", () => {
         const { button } = renderButton({
-          props: { outline: true, href: "https://www.brown.edu" }
+          props: { outline: true, href: "https://www.brown.edu" },
         });
 
         expect(button).toMatchInlineSnapshot(`
@@ -768,8 +768,8 @@ describe("Button", () => {
           props: {
             color: "skyBlue",
             outline: true,
-            href: "https://www.brown.edu"
-          }
+            href: "https://www.brown.edu",
+          },
         });
 
         expect(button).toMatchInlineSnapshot(`
@@ -854,7 +854,7 @@ describe("Button", () => {
 
       it("should render solid inverse red anchor element when inverse variant is provided", () => {
         const { button } = renderButton({
-          props: { inverse: true, href: "https://www.brown.edu" }
+          props: { inverse: true, href: "https://www.brown.edu" },
         });
 
         expect(button).toMatchInlineSnapshot(`
@@ -942,8 +942,8 @@ describe("Button", () => {
           props: {
             color: "emerald",
             inverse: true,
-            href: "https://www.brown.edu"
-          }
+            href: "https://www.brown.edu",
+          },
         });
 
         expect(button).toMatchInlineSnapshot(`
@@ -1028,7 +1028,11 @@ describe("Button", () => {
 
       it("should render outlined inverse red anchor element when outline and inverse variants are provided", () => {
         const { button } = renderButton({
-          props: { outline: true, inverse: true, href: "https://www.brown.edu" }
+          props: {
+            outline: true,
+            inverse: true,
+            href: "https://www.brown.edu",
+          },
         });
 
         expect(button).toMatchInlineSnapshot(`
@@ -1117,8 +1121,8 @@ describe("Button", () => {
             color: "gray",
             outline: true,
             inverse: true,
-            href: "https://www.brown.edu"
-          }
+            href: "https://www.brown.edu",
+          },
         });
 
         expect(button).toMatchInlineSnapshot(`
@@ -1203,7 +1207,7 @@ describe("Button", () => {
 
       it("should render disabled anchor element when variant is provided", () => {
         const { button } = renderButton({
-          props: { disabled: true, href: "http://www.brown.edu" }
+          props: { disabled: true, href: "http://www.brown.edu" },
         });
 
         expect(button).toHaveStyleRule("cursor", "pointer");
@@ -1242,7 +1246,7 @@ describe("Button", () => {
       const onClick = jest.fn();
       const { getByText } = renderButton({
         props: { onClick },
-        children: "Click Me"
+        children: "Click Me",
       });
 
       fireEvent.click(getByText("Click Me"));
@@ -1253,7 +1257,7 @@ describe("Button", () => {
       const onClick = jest.fn();
       const { getByText } = renderButton({
         props: { disabled: true, onClick },
-        children: "Click Me"
+        children: "Click Me",
       });
 
       fireEvent.click(getByText("Click Me"));

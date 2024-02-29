@@ -35,7 +35,7 @@ const BannerWrapper = styled.div`
 const BannerImageColorWrapper = styled.div`
   width: 100%;
   overflow: hidden;
-  max-height: ${props => getMaxHeight(props)};
+  max-height: ${(props) => getMaxHeight(props)};
 `;
 
 const BannerImage = styled.img`
@@ -51,9 +51,9 @@ const BannerChildrenWrapper = styled.div`
   text-align: center;
   width: 100%;
   z-index: 15;
-  top: ${props => (props.size === "small" ? "5%" : "35%")};
+  top: ${(props) => (props.size === "small" ? "5%" : "35%")};
 
-  @media (min-width: ${props => props.mobileBreakpoint}px) {
+  @media (min-width: ${(props) => props.mobileBreakpoint}px) {
     top: ${({ size }) => (size === "small" ? "20%" : "35%")};
   }
 `;
@@ -85,6 +85,7 @@ const Banner = ({
       )}
     </BannerImageColorWrapper>
     <BannerChildrenWrapper size={size} mobileBreakpoint={mobileBreakpoint}>
+      {/* eslint-disable-next-line react/jsx-no-constructed-context-values */}
       <BannerContext.Provider value={{ mobileBreakpoint }}>
         {children}
       </BannerContext.Provider>
@@ -104,12 +105,12 @@ Banner.propTypes = {
     "lightBrown",
     "mediumBrown",
     "navy",
-    "skyBlue"
+    "skyBlue",
   ]),
   size: PropTypes.oneOf(["default", "small", "medium", "large"]),
   src: PropTypes.string,
   children: PropTypes.node,
-  mobileBreakpoint: PropTypes.number
+  mobileBreakpoint: PropTypes.number,
 };
 
 Banner.defaultProps = {
@@ -117,7 +118,7 @@ Banner.defaultProps = {
   size: "default",
   src: null,
   children: null,
-  mobileBreakpoint: breakpoints.md
+  mobileBreakpoint: breakpoints.md,
 };
 
 Banner.Text = BannerText;

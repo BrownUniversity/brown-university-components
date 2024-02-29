@@ -1,41 +1,34 @@
-function _extends() { _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends.apply(this, arguments); }
-
+var _excluded = ["color", "size", "src", "children", "mobileBreakpoint"];
+function _extends() { _extends = Object.assign ? Object.assign.bind() : function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends.apply(this, arguments); }
 function _objectWithoutProperties(source, excluded) { if (source == null) return {}; var target = _objectWithoutPropertiesLoose(source, excluded); var key, i; if (Object.getOwnPropertySymbols) { var sourceSymbolKeys = Object.getOwnPropertySymbols(source); for (i = 0; i < sourceSymbolKeys.length; i++) { key = sourceSymbolKeys[i]; if (excluded.indexOf(key) >= 0) continue; if (!Object.prototype.propertyIsEnumerable.call(source, key)) continue; target[key] = source[key]; } } return target; }
-
 function _objectWithoutPropertiesLoose(source, excluded) { if (source == null) return {}; var target = {}; var sourceKeys = Object.keys(source); var key, i; for (i = 0; i < sourceKeys.length; i++) { key = sourceKeys[i]; if (excluded.indexOf(key) >= 0) continue; target[key] = source[key]; } return target; }
-
 import PropTypes from "prop-types";
 import React from "react";
 import styled from "styled-components";
 import { breakpoints, colors } from "brown-university-styles";
 import BannerContext from "./BannerContext";
 import BannerText from "./BannerText";
+
 /*
   css prop getters
 */
-
 var getMaxHeight = function getMaxHeight(_ref) {
   var size = _ref.size;
-
   switch (size) {
     case "small":
       return "150px";
-
     case "medium":
       return "300px";
-
     case "large":
       return "600px";
-
     default:
       return "200px";
   }
 };
+
 /*
   inner components
 */
-
-
 var BannerWrapper = styled.div.withConfig({
   displayName: "Banner__BannerWrapper",
   componentId: "sc-11l4cxl-0"
@@ -61,18 +54,17 @@ var BannerChildrenWrapper = styled.div.withConfig({
   var size = _ref2.size;
   return size === "small" ? "20%" : "35%";
 });
+
 /*
   outer Banner component
 */
-
 var Banner = function Banner(_ref3) {
   var color = _ref3.color,
-      size = _ref3.size,
-      src = _ref3.src,
-      children = _ref3.children,
-      mobileBreakpoint = _ref3.mobileBreakpoint,
-      restProps = _objectWithoutProperties(_ref3, ["color", "size", "src", "children", "mobileBreakpoint"]);
-
+    size = _ref3.size,
+    src = _ref3.src,
+    children = _ref3.children,
+    mobileBreakpoint = _ref3.mobileBreakpoint,
+    restProps = _objectWithoutProperties(_ref3, _excluded);
   return /*#__PURE__*/React.createElement(BannerWrapper, _extends({}, restProps, {
     role: "banner"
   }), /*#__PURE__*/React.createElement(BannerImageColorWrapper, {
@@ -98,7 +90,6 @@ var Banner = function Banner(_ref3) {
     }
   }, children)));
 };
-
 Banner.propTypes = {
   color: PropTypes.oneOf(["emerald", "darkEmerald", "red", "brown", "yellow", "gray", "sand", "lightBrown", "mediumBrown", "navy", "skyBlue"]),
   size: PropTypes.oneOf(["default", "small", "medium", "large"]),

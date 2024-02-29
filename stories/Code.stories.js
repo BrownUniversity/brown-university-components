@@ -1,5 +1,12 @@
 import React from "react";
-import { storiesOf } from "@storybook/react";
 import { Code } from "../src";
 
-storiesOf("Code", module).add("default", () => <Code>code</Code>);
+export default {
+  title: "Code",
+};
+
+export const Default = () => <Code>code</Code>;
+
+Default.story = {
+  name: "default",
+};

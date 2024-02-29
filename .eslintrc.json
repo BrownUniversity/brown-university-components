@@ -1,0 +1,21 @@
+{
+  "extends": ["brown", "brown/jest", "brown/prettier"],
+  "env": {
+    "browser": true
+  },
+  "rules": {
+    "import/no-extraneous-dependencies": "off",
+    "react/no-did-update-set-state": "off",
+    "react/jsx-props-no-spreading": "off",
+    "react/jsx-fragments": "off",
+    "react/function-component-definition": "off"
+  },
+  "overrides": [
+    {
+      "files": ["stories/**/*.js"],
+      "rules": {
+        "import/extensions": ["error", { "js": "never" }]
+      }
+    }
+  ]
+}

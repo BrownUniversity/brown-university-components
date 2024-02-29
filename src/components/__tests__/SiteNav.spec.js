@@ -18,13 +18,13 @@ const renderSiteNav = ({
         <SiteNav.Link disabled>Link</SiteNav.Link>
       </SiteNav.Item>
     </React.Fragment>
-  )
+  ),
 } = {}) => {
   const rtlUtils = render(<SiteNav {...props}>{children}</SiteNav>);
 
   return {
     siteNav: rtlUtils.container.firstChild,
-    ...rtlUtils
+    ...rtlUtils,
   };
 };
 
@@ -78,7 +78,7 @@ describe("SiteNav", () => {
 
     it("should render custom mobile toggle title when provided", () => {
       const { getByText } = renderSiteNav({
-        props: { mobileToggleTitle: "Custom Navigation" }
+        props: { mobileToggleTitle: "Custom Navigation" },
       });
 
       expect(getByText("Custom Navigation")).toBeInTheDocument();
@@ -87,23 +87,23 @@ describe("SiteNav", () => {
     it("should toggle site nav mobile collapse", () => {
       const { getByLabelText, getByText } = renderSiteNav();
       const mobileToggleButtonByLabelText = getByLabelText(
-        "Toggle site navigation"
+        "Toggle site navigation",
       );
       const mobileToggleButtonByText = getByText("Site Navigation");
 
       expect(mobileToggleButtonByLabelText).toHaveAttribute(
         "aria-expanded",
-        "false"
+        "false",
       );
       fireEvent.click(mobileToggleButtonByLabelText);
       expect(mobileToggleButtonByLabelText).toHaveAttribute(
         "aria-expanded",
-        "true"
+        "true",
       );
       fireEvent.click(mobileToggleButtonByText);
       expect(mobileToggleButtonByLabelText).toHaveAttribute(
         "aria-expanded",
-        "false"
+        "false",
       );
     });
   });

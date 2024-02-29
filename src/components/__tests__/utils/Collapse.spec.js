@@ -1,5 +1,5 @@
 import React from "react";
-import { render, fireEvent, wait } from "@testing-library/react";
+import { render, fireEvent, waitFor } from "@testing-library/react";
 import Collapse from "../../utils/Collapse";
 
 const renderCollapse = ({ props = {}, children = <div /> } = {}) => {
@@ -7,12 +7,12 @@ const renderCollapse = ({ props = {}, children = <div /> } = {}) => {
   const rtlUtils = render(
     <Collapse {...restProps} isOpen={isOpen}>
       {children}
-    </Collapse>
+    </Collapse>,
   );
 
   return {
     collapse: rtlUtils.container.firstChild,
-    ...rtlUtils
+    ...rtlUtils,
   };
 };
 
@@ -106,11 +106,11 @@ describe("Collapse", () => {
     rerender(
       <Collapse isOpen>
         <div />
-      </Collapse>
+      </Collapse>,
     );
     fireEvent.transitionEnd(collapse);
 
-    await wait(() => expect(collapse).toHaveStyleRule("height", "auto"));
+    await waitFor(() => expect(collapse).toHaveStyleRule("height", "auto"));
     expect(collapse).toHaveStyleRule("overflow", "visible");
     expect(collapse).toHaveStyleRule("display", "block");
   });
@@ -118,7 +118,7 @@ describe("Collapse", () => {
   it("should transition from open to closed", async () => {
     process.NODE_ENV = "jest";
     const { collapse, rerender } = renderCollapse({
-      props: { isOpen: true }
+      props: { isOpen: true },
     });
 
     expect(collapse).toHaveStyleRule("display", "block");
@@ -126,11 +126,11 @@ describe("Collapse", () => {
     rerender(
       <Collapse isOpen={false}>
         <div />
-      </Collapse>
+      </Collapse>,
     );
     fireEvent.transitionEnd(collapse);
 
-    await wait(() => expect(collapse).toHaveStyleRule("display", "none"));
+    await waitFor(() => expect(collapse).toHaveStyleRule("display", "none"));
     expect(collapse).toHaveStyleRule("height", "0");
     expect(collapse).toHaveStyleRule("overflow", "hidden");
   });

@@ -1,7 +1,6 @@
+var _excluded = ["banner", "mobileBreakpoint", "mobileToggleTitle", "children"];
 function _objectWithoutProperties(source, excluded) { if (source == null) return {}; var target = _objectWithoutPropertiesLoose(source, excluded); var key, i; if (Object.getOwnPropertySymbols) { var sourceSymbolKeys = Object.getOwnPropertySymbols(source); for (i = 0; i < sourceSymbolKeys.length; i++) { key = sourceSymbolKeys[i]; if (excluded.indexOf(key) >= 0) continue; if (!Object.prototype.propertyIsEnumerable.call(source, key)) continue; target[key] = source[key]; } } return target; }
-
 function _objectWithoutPropertiesLoose(source, excluded) { if (source == null) return {}; var target = {}; var sourceKeys = Object.keys(source); var key, i; for (i = 0; i < sourceKeys.length; i++) { key = sourceKeys[i]; if (excluded.indexOf(key) >= 0) continue; target[key] = source[key]; } return target; }
-
 import PropTypes from "prop-types";
 import React from "react";
 import styled, { css } from "styled-components";
@@ -12,10 +11,10 @@ import Nav from "./Nav";
 import Collapse from "./utils/Collapse";
 import VisibilityToggle from "./utils/VisibilityToggle";
 var sansBold = typography.sansBold;
+
 /*
   inner components
 */
-
 var MobileBannerPositioningWrapper = styled.div.withConfig({
   displayName: "SiteNav__MobileBannerPositioningWrapper",
   componentId: "iasm8j-0"
@@ -52,30 +51,28 @@ var NavWrapper = styled.div.withConfig({
   displayName: "SiteNav__NavWrapper",
   componentId: "iasm8j-7"
 })(["display:flex;justify-content:center;padding:20px 0 30px;"]);
+
 /*
   outer SiteNav component
 */
-
 var SiteNav = function SiteNav(_ref) {
   var banner = _ref.banner,
-      mobileBreakpoint = _ref.mobileBreakpoint,
-      mobileToggleTitle = _ref.mobileToggleTitle,
-      children = _ref.children,
-      restProps = _objectWithoutProperties(_ref, ["banner", "mobileBreakpoint", "mobileToggleTitle", "children"]);
-
+    mobileBreakpoint = _ref.mobileBreakpoint,
+    mobileToggleTitle = _ref.mobileToggleTitle,
+    children = _ref.children,
+    restProps = _objectWithoutProperties(_ref, _excluded);
   return /*#__PURE__*/React.createElement(WindowSize, {
     render: function render(_ref2) {
       var width = _ref2.width;
       // TODO: update when `width` doesn't return 0 on initial render (see `react-fns` issue 84)
       var currentWidth = width === 0 ? window.innerWidth : width;
       var renderMobile = currentWidth < mobileBreakpoint;
-
       if (renderMobile) {
         return /*#__PURE__*/React.createElement(MobileBannerPositioningWrapper, {
           banner: banner
         }, /*#__PURE__*/React.createElement(MobileWrapper, restProps, /*#__PURE__*/React.createElement(VisibilityToggle, null, function (_ref3) {
           var mobileNavIsOpen = _ref3.isOpen,
-              toggleMobileNav = _ref3.toggleIsOpen;
+            toggleMobileNav = _ref3.toggleIsOpen;
           return /*#__PURE__*/React.createElement(React.Fragment, null, /*#__PURE__*/React.createElement(MobileToggleButton, {
             type: "button",
             "aria-controls": "site-nav-mobile-collapse",
@@ -93,14 +90,12 @@ var SiteNav = function SiteNav(_ref) {
           }, children))));
         })));
       }
-
       return /*#__PURE__*/React.createElement(BannerPositioningWrapper, {
         banner: banner
       }, /*#__PURE__*/React.createElement("nav", restProps, /*#__PURE__*/React.createElement(NavWrapper, null, /*#__PURE__*/React.createElement(Nav, null, children))));
     }
   });
 };
-
 SiteNav.propTypes = {
   banner: PropTypes.bool,
   mobileBreakpoint: PropTypes.number,

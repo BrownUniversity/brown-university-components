@@ -6,7 +6,7 @@ import NavItem from "../../Nav/NavItem";
 const renderNavItem = ({
   context = {},
   props = {},
-  children = <span />
+  children = <span />,
 } = {}) => {
   const { mobile = false, sub = false } = context;
   const rtlUtils = render(
@@ -14,12 +14,12 @@ const renderNavItem = ({
       <ul>
         <NavItem {...props}>{children}</NavItem>
       </ul>
-    </NavContext.Provider>
+    </NavContext.Provider>,
   );
 
   return {
     navItem: rtlUtils.container.firstChild.firstChild,
-    ...rtlUtils
+    ...rtlUtils,
   };
 };
 

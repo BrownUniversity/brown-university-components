@@ -15,7 +15,7 @@ const Tag = styled.div`
   font-size: 1.9em;
   text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.4);
 
-  @media (min-width: ${props => props.mobileBreakpoint}px) {
+  @media (min-width: ${(props) => props.mobileBreakpoint}px) {
     font-size: 2.5em;
   }
 `;
@@ -23,7 +23,7 @@ const Tag = styled.div`
 /*
   outer BannerText component
 */
-const BannerText = props => (
+const BannerText = (props) => (
   <BannerContext.Consumer>
     {({ mobileBreakpoint }) => (
       <Tag {...props} mobileBreakpoint={mobileBreakpoint} />
@@ -32,7 +32,7 @@ const BannerText = props => (
 );
 
 BannerText.propTypes = {
-  children: PropTypes.string.isRequired
+  children: PropTypes.string.isRequired,
 };
 
 export default BannerText;

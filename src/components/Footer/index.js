@@ -4,7 +4,7 @@ import {
   breakpoints,
   colors,
   typography,
-  getRems
+  getRems,
 } from "brown-university-styles";
 import FooterLink from "./FooterLink";
 import giveLogoSrc from "./logo-together";
@@ -378,7 +378,7 @@ const SocialNavListItem = styled.li`
 
 const SocialNavLink = styled.a.attrs({
   target: "_blank",
-  rel: "noopener noreferrer"
+  rel: "noopener noreferrer",
 })`
   ${unstyledLinkCSS}
   box-shadow: inset 0 0 0 1px transparent;

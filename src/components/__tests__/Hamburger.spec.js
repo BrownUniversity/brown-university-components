@@ -9,7 +9,7 @@ const renderHamburger = ({ props = {} } = {}) => {
   return {
     hamburger,
     hamburgerBars: hamburger.firstChild,
-    ...rtlUtils
+    ...rtlUtils,
   };
 };
 
@@ -58,8 +58,8 @@ describe("Hamburger", () => {
   transition-timing-function: ease;
   -webkit-transition-duration: .15s;
   transition-duration: .15s;
-  -webkit-transition: top .1s .25s ease-in,opacity .1s ease-in;
-  transition: top .1s .25s ease-in,opacity .1s ease-in;
+  -webkit-transition: top 0.1s 0.25s ease-in,opacity 0.1s ease-in;
+  transition: top 0.1s 0.25s ease-in,opacity 0.1s ease-in;
   top: -7px;
 }
 
@@ -77,9 +77,9 @@ describe("Hamburger", () => {
   transition-timing-function: ease;
   -webkit-transition-duration: .15s;
   transition-duration: .15s;
-  -webkit-transition: bottom .1s .25s ease-in,-webkit-transform .22s cubic-bezier(0.55,0.055,0.675,0.19);
-  -webkit-transition: bottom .1s .25s ease-in,transform .22s cubic-bezier(0.55,0.055,0.675,0.19);
-  transition: bottom .1s .25s ease-in,transform .22s cubic-bezier(0.55,0.055,0.675,0.19);
+  -webkit-transition: bottom 0.1s 0.25s ease-in,-webkit-transform 0.22s cubic-bezier(0.55,0.055,0.675,0.19);
+  -webkit-transition: bottom 0.1s 0.25s ease-in,transform 0.22s cubic-bezier(0.55,0.055,0.675,0.19);
+  transition: bottom 0.1s 0.25s ease-in,transform 0.22s cubic-bezier(0.55,0.055,0.675,0.19);
   bottom: -7px;
 }
 
@@ -98,7 +98,7 @@ describe("Hamburger", () => {
 
       it("should render open red button element when variant is provided", () => {
         const { hamburger } = renderHamburger({
-          props: { isOpen: true }
+          props: { isOpen: true },
         });
 
         expect(hamburger).toMatchInlineSnapshot(`
@@ -153,8 +153,8 @@ describe("Hamburger", () => {
   transition-timing-function: ease;
   -webkit-transition-duration: .15s;
   transition-duration: .15s;
-  -webkit-transition: top .1s .25s ease-in,opacity .1s ease-in;
-  transition: top .1s .25s ease-in,opacity .1s ease-in;
+  -webkit-transition: top 0.1s 0.25s ease-in,opacity 0.1s ease-in;
+  transition: top 0.1s 0.25s ease-in,opacity 0.1s ease-in;
   opacity: 0;
   top: 0;
   -webkit-transition: top 0.1s ease-out,opacity 0.1s 0.12s ease-out;
@@ -177,9 +177,9 @@ describe("Hamburger", () => {
   transition-timing-function: ease;
   -webkit-transition-duration: .15s;
   transition-duration: .15s;
-  -webkit-transition: bottom .1s .25s ease-in,-webkit-transform .22s cubic-bezier(0.55,0.055,0.675,0.19);
-  -webkit-transition: bottom .1s .25s ease-in,transform .22s cubic-bezier(0.55,0.055,0.675,0.19);
-  transition: bottom .1s .25s ease-in,transform .22s cubic-bezier(0.55,0.055,0.675,0.19);
+  -webkit-transition: bottom 0.1s 0.25s ease-in,-webkit-transform 0.22s cubic-bezier(0.55,0.055,0.675,0.19);
+  -webkit-transition: bottom 0.1s 0.25s ease-in,transform 0.22s cubic-bezier(0.55,0.055,0.675,0.19);
+  transition: bottom 0.1s 0.25s ease-in,transform 0.22s cubic-bezier(0.55,0.055,0.675,0.19);
   bottom: 0;
   -webkit-transform: rotate(-90deg);
   -ms-transform: rotate(-90deg);
@@ -206,29 +206,29 @@ describe("Hamburger", () => {
 
       it("should render closed white button element when variant is provided", () => {
         const { hamburgerBars } = renderHamburger({
-          props: { color: "white" }
+          props: { color: "white" },
         });
 
         expect(hamburgerBars).toHaveStyleRule("background-color", "#FFFFFF");
         expect(hamburgerBars).toHaveStyleRule("background-color", "#FFFFFF", {
-          modifier: "&&:before"
+          modifier: "&&:before",
         });
         expect(hamburgerBars).toHaveStyleRule("background-color", "#FFFFFF", {
-          modifier: "&&:after"
+          modifier: "&&:after",
         });
       });
 
       it("should render open white button element when variant is provided", () => {
         const { hamburgerBars } = renderHamburger({
-          props: { color: "white", isOpen: true }
+          props: { color: "white", isOpen: true },
         });
 
         expect(hamburgerBars).toHaveStyleRule("background-color", "#FFFFFF");
         expect(hamburgerBars).toHaveStyleRule("background-color", "#FFFFFF", {
-          modifier: "&&:before"
+          modifier: "&&:before",
         });
         expect(hamburgerBars).toHaveStyleRule("background-color", "#FFFFFF", {
-          modifier: "&&:after"
+          modifier: "&&:after",
         });
       });
     });
@@ -238,7 +238,7 @@ describe("Hamburger", () => {
         const onOpen = jest.fn();
         const onClose = jest.fn();
         const { hamburger } = renderHamburger({
-          props: { onOpen, onClose }
+          props: { onOpen, onClose },
         });
 
         fireEvent.click(hamburger);
@@ -250,7 +250,7 @@ describe("Hamburger", () => {
         const onOpen = jest.fn();
         const onClose = jest.fn();
         const { hamburger } = renderHamburger({
-          props: { isOpen: true, onOpen, onClose }
+          props: { isOpen: true, onOpen, onClose },
         });
 
         fireEvent.click(hamburger);
@@ -261,7 +261,7 @@ describe("Hamburger", () => {
 
     it("should render custom aria-label when provided", () => {
       const { hamburger } = renderHamburger({
-        props: { ariaLabel: "Custom label" }
+        props: { ariaLabel: "Custom label" },
       });
 
       expect(hamburger).toHaveAttribute("aria-label", "Custom label");
@@ -299,7 +299,7 @@ describe("Hamburger", () => {
 
       it("should render open with alternate styles", () => {
         const { hamburger } = renderHamburger({
-          props: { tag: "div", isOpen: true }
+          props: { tag: "div", isOpen: true },
         });
 
         expect(hamburger).toHaveStyleRule("cursor", "inherit");

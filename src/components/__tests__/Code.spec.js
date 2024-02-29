@@ -7,7 +7,7 @@ const renderCode = ({ props = {}, children = "code" } = {}) => {
 
   return {
     code: rtlUtils.container.firstChild,
-    ...rtlUtils
+    ...rtlUtils,
   };
 };
 
