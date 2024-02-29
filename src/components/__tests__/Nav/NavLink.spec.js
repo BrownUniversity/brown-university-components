@@ -119,8 +119,7 @@ describe("NavLink", () => {
   display: block;
   font-family: CircularStd,Arial,Helvetica,sans-serif;
   padding: 0;
-  -webkit-text-decoration: none !important;
-  text-decoration: none !important;
+  text-decoration: none!important;
   color: #000000;
   cursor: pointer;
   font-size: 1.1em;
@@ -174,8 +173,7 @@ describe("NavLink", () => {
   display: block;
   font-family: CircularStd,Arial,Helvetica,sans-serif;
   padding: 0;
-  -webkit-text-decoration: none !important;
-  text-decoration: none !important;
+  text-decoration: none!important;
   color: #C00404;
   cursor: pointer;
   font-size: 1.1em;
@@ -229,8 +227,7 @@ describe("NavLink", () => {
   display: block;
   font-family: CircularStd,Arial,Helvetica,sans-serif;
   padding: 0;
-  -webkit-text-decoration: none !important;
-  text-decoration: none !important;
+  text-decoration: none!important;
   color: #000000;
   cursor: not-allowed;
   font-size: 1.1em;
@@ -289,8 +286,7 @@ describe("NavLink", () => {
   display: block;
   font-family: CircularStd,Arial,Helvetica,sans-serif;
   padding: 0;
-  -webkit-text-decoration: none !important;
-  text-decoration: none !important;
+  text-decoration: none!important;
   color: #000000;
   cursor: pointer;
   font-size: 1em;
@@ -339,8 +335,7 @@ describe("NavLink", () => {
   display: block;
   font-family: CircularStd,Arial,Helvetica,sans-serif;
   padding: 0;
-  -webkit-text-decoration: none !important;
-  text-decoration: none !important;
+  text-decoration: none!important;
   color: #C00404;
   cursor: pointer;
   font-size: 1em;
@@ -389,8 +384,7 @@ describe("NavLink", () => {
   display: block;
   font-family: CircularStd,Arial,Helvetica,sans-serif;
   padding: 0;
-  -webkit-text-decoration: none !important;
-  text-decoration: none !important;
+  text-decoration: none!important;
   color: #000000;
   cursor: not-allowed;
   font-size: 1em;
@@ -442,8 +436,7 @@ describe("NavLink", () => {
   display: block;
   font-family: CircularStd,Arial,Helvetica,sans-serif;
   padding: 0;
-  -webkit-text-decoration: none !important;
-  text-decoration: none !important;
+  text-decoration: none!important;
   color: #FFFFFF;
   cursor: pointer;
   font-size: 1em;
@@ -492,8 +485,7 @@ describe("NavLink", () => {
   display: block;
   font-family: CircularStd,Arial,Helvetica,sans-serif;
   padding: 0;
-  -webkit-text-decoration: none !important;
-  text-decoration: none !important;
+  text-decoration: none!important;
   color: #CCC6B8;
   cursor: pointer;
   font-size: 1em;
@@ -542,8 +534,7 @@ describe("NavLink", () => {
   display: block;
   font-family: CircularStd,Arial,Helvetica,sans-serif;
   padding: 0;
-  -webkit-text-decoration: none !important;
-  text-decoration: none !important;
+  text-decoration: none!important;
   color: #FFFFFF;
   cursor: not-allowed;
   font-size: 1em;
@@ -597,8 +588,7 @@ describe("NavLink", () => {
   display: block;
   font-family: CircularStd,Arial,Helvetica,sans-serif;
   padding: 0;
-  -webkit-text-decoration: none !important;
-  text-decoration: none !important;
+  text-decoration: none!important;
   color: #C00404;
   cursor: pointer;
   font-size: 1em;
@@ -606,7 +596,6 @@ describe("NavLink", () => {
   line-height: 1.5;
   opacity: 1;
   pointer-events: auto;
-  -webkit-transition: all .2s ease-in-out;
   transition: all .2s ease-in-out;
 }
 
@@ -636,8 +625,7 @@ describe("NavLink", () => {
   display: block;
   font-family: CircularStd,Arial,Helvetica,sans-serif;
   padding: 0;
-  -webkit-text-decoration: none !important;
-  text-decoration: none !important;
+  text-decoration: none!important;
   color: #000000;
   cursor: pointer;
   font-size: 1em;
@@ -645,7 +633,6 @@ describe("NavLink", () => {
   line-height: 1.5;
   opacity: 1;
   pointer-events: auto;
-  -webkit-transition: all .2s ease-in-out;
   transition: all .2s ease-in-out;
 }
 
@@ -675,8 +662,7 @@ describe("NavLink", () => {
   display: block;
   font-family: CircularStd,Arial,Helvetica,sans-serif;
   padding: 0;
-  -webkit-text-decoration: none !important;
-  text-decoration: none !important;
+  text-decoration: none!important;
   color: #C00404;
   cursor: not-allowed;
   font-size: 1em;
@@ -684,7 +670,6 @@ describe("NavLink", () => {
   line-height: 1.5;
   opacity: 0.65;
   pointer-events: auto;
-  -webkit-transition: all .2s ease-in-out;
   transition: all .2s ease-in-out;
 }
 
@@ -717,8 +702,7 @@ describe("NavLink", () => {
   display: block;
   font-family: CircularStd,Arial,Helvetica,sans-serif;
   padding: 0;
-  -webkit-text-decoration: none !important;
-  text-decoration: none !important;
+  text-decoration: none!important;
   color: #FFFFFF;
   cursor: pointer;
   font-size: 1em;
@@ -726,7 +710,6 @@ describe("NavLink", () => {
   line-height: 1.5;
   opacity: 1;
   pointer-events: auto;
-  -webkit-transition: all .2s ease-in-out;
   transition: all .2s ease-in-out;
 }
 
@@ -756,8 +739,7 @@ describe("NavLink", () => {
   display: block;
   font-family: CircularStd,Arial,Helvetica,sans-serif;
   padding: 0;
-  -webkit-text-decoration: none !important;
-  text-decoration: none !important;
+  text-decoration: none!important;
   color: #CCC6B8;
   cursor: pointer;
   font-size: 1em;
@@ -765,7 +747,6 @@ describe("NavLink", () => {
   line-height: 1.5;
   opacity: 1;
   pointer-events: auto;
-  -webkit-transition: all .2s ease-in-out;
   transition: all .2s ease-in-out;
 }
 
@@ -795,8 +776,7 @@ describe("NavLink", () => {
   display: block;
   font-family: CircularStd,Arial,Helvetica,sans-serif;
   padding: 0;
-  -webkit-text-decoration: none !important;
-  text-decoration: none !important;
+  text-decoration: none!important;
   color: #FFFFFF;
   cursor: not-allowed;
   font-size: 1em;
@@ -804,7 +784,6 @@ describe("NavLink", () => {
   line-height: 1.5;
   opacity: 1;
   pointer-events: auto;
-  -webkit-transition: all .2s ease-in-out;
   transition: all .2s ease-in-out;
 }
 
@@ -838,8 +817,7 @@ describe("NavLink", () => {
   display: block;
   font-family: CircularStd,Arial,Helvetica,sans-serif;
   padding: 0;
-  -webkit-text-decoration: none !important;
-  text-decoration: none !important;
+  text-decoration: none!important;
   color: #C00404;
   cursor: pointer;
   font-size: 1.1em;
@@ -847,7 +825,6 @@ describe("NavLink", () => {
   line-height: 1.5;
   opacity: 1;
   pointer-events: auto;
-  -webkit-transition: all .2s ease-in-out;
   transition: all .2s ease-in-out;
 }
 
@@ -877,8 +854,7 @@ describe("NavLink", () => {
   display: block;
   font-family: CircularStd,Arial,Helvetica,sans-serif;
   padding: 0;
-  -webkit-text-decoration: none !important;
-  text-decoration: none !important;
+  text-decoration: none!important;
   color: #000000;
   cursor: pointer;
   font-size: 1.1em;
@@ -886,7 +862,6 @@ describe("NavLink", () => {
   line-height: 1.5;
   opacity: 1;
   pointer-events: auto;
-  -webkit-transition: all .2s ease-in-out;
   transition: all .2s ease-in-out;
 }
 
@@ -916,8 +891,7 @@ describe("NavLink", () => {
   display: block;
   font-family: CircularStd,Arial,Helvetica,sans-serif;
   padding: 0;
-  -webkit-text-decoration: none !important;
-  text-decoration: none !important;
+  text-decoration: none!important;
   color: #C00404;
   cursor: not-allowed;
   font-size: 1.1em;
@@ -925,7 +899,6 @@ describe("NavLink", () => {
   line-height: 1.5;
   opacity: 0.65;
   pointer-events: auto;
-  -webkit-transition: all .2s ease-in-out;
   transition: all .2s ease-in-out;
 }
 
@@ -959,8 +932,7 @@ describe("NavLink", () => {
   display: block;
   font-family: CircularStd,Arial,Helvetica,sans-serif;
   padding: 0;
-  -webkit-text-decoration: none !important;
-  text-decoration: none !important;
+  text-decoration: none!important;
   color: #000000;
   cursor: pointer;
   font-size: 1.1em;
@@ -968,7 +940,6 @@ describe("NavLink", () => {
   line-height: 1;
   opacity: 1;
   pointer-events: auto;
-  -webkit-transition: background-color .55s linear,border-color .25s linear,box-shadow .25s linear,color .25s linear;
   transition: background-color .55s linear,border-color .25s linear,box-shadow .25s linear,color .25s linear;
 }
 
@@ -976,7 +947,6 @@ describe("NavLink", () => {
   content: "";
   display: block;
   height: 3px;
-  -webkit-transition: width 0.3s;
   transition: width 0.3s;
   background: #C00404;
   margin-top: 1em;
@@ -1018,8 +988,7 @@ describe("NavLink", () => {
   display: block;
   font-family: CircularStd,Arial,Helvetica,sans-serif;
   padding: 0;
-  -webkit-text-decoration: none !important;
-  text-decoration: none !important;
+  text-decoration: none!important;
   color: #C00404;
   cursor: pointer;
   font-size: 1.1em;
@@ -1027,7 +996,6 @@ describe("NavLink", () => {
   line-height: 1;
   opacity: 1;
   pointer-events: auto;
-  -webkit-transition: background-color .55s linear,border-color .25s linear,box-shadow .25s linear,color .25s linear;
   transition: background-color .55s linear,border-color .25s linear,box-shadow .25s linear,color .25s linear;
 }
 
@@ -1035,7 +1003,6 @@ describe("NavLink", () => {
   content: "";
   display: block;
   height: 3px;
-  -webkit-transition: width 0.3s;
   transition: width 0.3s;
   background: #C00404;
   margin-top: 1em;
@@ -1077,8 +1044,7 @@ describe("NavLink", () => {
   display: block;
   font-family: CircularStd,Arial,Helvetica,sans-serif;
   padding: 0;
-  -webkit-text-decoration: none !important;
-  text-decoration: none !important;
+  text-decoration: none!important;
   color: #000000;
   cursor: pointer;
   font-size: 1.1em;
@@ -1086,7 +1052,6 @@ describe("NavLink", () => {
   line-height: 1;
   opacity: 0.65;
   pointer-events: none;
-  -webkit-transition: background-color .55s linear,border-color .25s linear,box-shadow .25s linear,color .25s linear;
   transition: background-color .55s linear,border-color .25s linear,box-shadow .25s linear,color .25s linear;
 }
 
@@ -1094,7 +1059,6 @@ describe("NavLink", () => {
   content: "";
   display: block;
   height: 3px;
-  -webkit-transition: width 0.3s;
   transition: width 0.3s;
   background: #C00404;
   margin-top: 1em;
@@ -1141,8 +1105,7 @@ describe("NavLink", () => {
   display: block;
   font-family: CircularStd,Arial,Helvetica,sans-serif;
   padding: 0;
-  -webkit-text-decoration: none !important;
-  text-decoration: none !important;
+  text-decoration: none!important;
   color: #000000;
   cursor: pointer;
   font-size: 1em;
@@ -1150,7 +1113,6 @@ describe("NavLink", () => {
   line-height: 1.5;
   opacity: 1;
   pointer-events: auto;
-  -webkit-transition: background-color .55s linear,border-color .25s linear,box-shadow .25s linear,color .25s linear;
   transition: background-color .55s linear,border-color .25s linear,box-shadow .25s linear,color .25s linear;
 }
 
@@ -1158,7 +1120,6 @@ describe("NavLink", () => {
   content: "";
   display: block;
   height: 3px;
-  -webkit-transition: width 0.3s;
   transition: width 0.3s;
   background: #C00404;
   margin-top: 0.25em;
@@ -1195,8 +1156,7 @@ describe("NavLink", () => {
   display: block;
   font-family: CircularStd,Arial,Helvetica,sans-serif;
   padding: 0;
-  -webkit-text-decoration: none !important;
-  text-decoration: none !important;
+  text-decoration: none!important;
   color: #C00404;
   cursor: pointer;
   font-size: 1em;
@@ -1204,7 +1164,6 @@ describe("NavLink", () => {
   line-height: 1.5;
   opacity: 1;
   pointer-events: auto;
-  -webkit-transition: background-color .55s linear,border-color .25s linear,box-shadow .25s linear,color .25s linear;
   transition: background-color .55s linear,border-color .25s linear,box-shadow .25s linear,color .25s linear;
 }
 
@@ -1212,7 +1171,6 @@ describe("NavLink", () => {
   content: "";
   display: block;
   height: 3px;
-  -webkit-transition: width 0.3s;
   transition: width 0.3s;
   background: #C00404;
   margin-top: 0.25em;
@@ -1249,8 +1207,7 @@ describe("NavLink", () => {
   display: block;
   font-family: CircularStd,Arial,Helvetica,sans-serif;
   padding: 0;
-  -webkit-text-decoration: none !important;
-  text-decoration: none !important;
+  text-decoration: none!important;
   color: #000000;
   cursor: pointer;
   font-size: 1em;
@@ -1258,7 +1215,6 @@ describe("NavLink", () => {
   line-height: 1.5;
   opacity: 0.65;
   pointer-events: none;
-  -webkit-transition: background-color .55s linear,border-color .25s linear,box-shadow .25s linear,color .25s linear;
   transition: background-color .55s linear,border-color .25s linear,box-shadow .25s linear,color .25s linear;
 }
 
@@ -1266,7 +1222,6 @@ describe("NavLink", () => {
   content: "";
   display: block;
   height: 3px;
-  -webkit-transition: width 0.3s;
   transition: width 0.3s;
   background: #C00404;
   margin-top: 0.25em;
@@ -1306,8 +1261,7 @@ describe("NavLink", () => {
   display: block;
   font-family: CircularStd,Arial,Helvetica,sans-serif;
   padding: 0;
-  -webkit-text-decoration: none !important;
-  text-decoration: none !important;
+  text-decoration: none!important;
   color: #FFFFFF;
   cursor: pointer;
   font-size: 1em;
@@ -1315,7 +1269,6 @@ describe("NavLink", () => {
   line-height: 1.5;
   opacity: 1;
   pointer-events: auto;
-  -webkit-transition: background-color .55s linear,border-color .25s linear,box-shadow .25s linear,color .25s linear;
   transition: background-color .55s linear,border-color .25s linear,box-shadow .25s linear,color .25s linear;
 }
 
@@ -1323,7 +1276,6 @@ describe("NavLink", () => {
   content: "";
   display: block;
   height: 3px;
-  -webkit-transition: width 0.3s;
   transition: width 0.3s;
   background: #CCC6B8;
   margin-top: 0.25em;
@@ -1360,8 +1312,7 @@ describe("NavLink", () => {
   display: block;
   font-family: CircularStd,Arial,Helvetica,sans-serif;
   padding: 0;
-  -webkit-text-decoration: none !important;
-  text-decoration: none !important;
+  text-decoration: none!important;
   color: #CCC6B8;
   cursor: pointer;
   font-size: 1em;
@@ -1369,7 +1320,6 @@ describe("NavLink", () => {
   line-height: 1.5;
   opacity: 1;
   pointer-events: auto;
-  -webkit-transition: background-color .55s linear,border-color .25s linear,box-shadow .25s linear,color .25s linear;
   transition: background-color .55s linear,border-color .25s linear,box-shadow .25s linear,color .25s linear;
 }
 
@@ -1377,7 +1327,6 @@ describe("NavLink", () => {
   content: "";
   display: block;
   height: 3px;
-  -webkit-transition: width 0.3s;
   transition: width 0.3s;
   background: #CCC6B8;
   margin-top: 0.25em;
@@ -1414,8 +1363,7 @@ describe("NavLink", () => {
   display: block;
   font-family: CircularStd,Arial,Helvetica,sans-serif;
   padding: 0;
-  -webkit-text-decoration: none !important;
-  text-decoration: none !important;
+  text-decoration: none!important;
   color: #FFFFFF;
   cursor: pointer;
   font-size: 1em;
@@ -1423,7 +1371,6 @@ describe("NavLink", () => {
   line-height: 1.5;
   opacity: 1;
   pointer-events: none;
-  -webkit-transition: background-color .55s linear,border-color .25s linear,box-shadow .25s linear,color .25s linear;
   transition: background-color .55s linear,border-color .25s linear,box-shadow .25s linear,color .25s linear;
 }
 
@@ -1431,7 +1378,6 @@ describe("NavLink", () => {
   content: "";
   display: block;
   height: 3px;
-  -webkit-transition: width 0.3s;
   transition: width 0.3s;
   background: #CCC6B8;
   margin-top: 0.25em;
@@ -1473,8 +1419,7 @@ describe("NavLink", () => {
   display: block;
   font-family: CircularStd,Arial,Helvetica,sans-serif;
   padding: 0;
-  -webkit-text-decoration: none !important;
-  text-decoration: none !important;
+  text-decoration: none!important;
   color: #C00404;
   cursor: pointer;
   font-size: 1em;
@@ -1482,7 +1427,6 @@ describe("NavLink", () => {
   line-height: 1.5;
   opacity: 1;
   pointer-events: auto;
-  -webkit-transition: all .2s ease-in-out;
   transition: all .2s ease-in-out;
 }
 
@@ -1512,8 +1456,7 @@ describe("NavLink", () => {
   display: block;
   font-family: CircularStd,Arial,Helvetica,sans-serif;
   padding: 0;
-  -webkit-text-decoration: none !important;
-  text-decoration: none !important;
+  text-decoration: none!important;
   color: #000000;
   cursor: pointer;
   font-size: 1em;
@@ -1521,7 +1464,6 @@ describe("NavLink", () => {
   line-height: 1.5;
   opacity: 1;
   pointer-events: auto;
-  -webkit-transition: all .2s ease-in-out;
   transition: all .2s ease-in-out;
 }
 
@@ -1551,8 +1493,7 @@ describe("NavLink", () => {
   display: block;
   font-family: CircularStd,Arial,Helvetica,sans-serif;
   padding: 0;
-  -webkit-text-decoration: none !important;
-  text-decoration: none !important;
+  text-decoration: none!important;
   color: #C00404;
   cursor: pointer;
   font-size: 1em;
@@ -1560,7 +1501,6 @@ describe("NavLink", () => {
   line-height: 1.5;
   opacity: 0.65;
   pointer-events: none;
-  -webkit-transition: all .2s ease-in-out;
   transition: all .2s ease-in-out;
 }
 
@@ -1593,8 +1533,7 @@ describe("NavLink", () => {
   display: block;
   font-family: CircularStd,Arial,Helvetica,sans-serif;
   padding: 0;
-  -webkit-text-decoration: none !important;
-  text-decoration: none !important;
+  text-decoration: none!important;
   color: #FFFFFF;
   cursor: pointer;
   font-size: 1em;
@@ -1602,7 +1541,6 @@ describe("NavLink", () => {
   line-height: 1.5;
   opacity: 1;
   pointer-events: auto;
-  -webkit-transition: all .2s ease-in-out;
   transition: all .2s ease-in-out;
 }
 
@@ -1632,8 +1570,7 @@ describe("NavLink", () => {
   display: block;
   font-family: CircularStd,Arial,Helvetica,sans-serif;
   padding: 0;
-  -webkit-text-decoration: none !important;
-  text-decoration: none !important;
+  text-decoration: none!important;
   color: #CCC6B8;
   cursor: pointer;
   font-size: 1em;
@@ -1641,7 +1578,6 @@ describe("NavLink", () => {
   line-height: 1.5;
   opacity: 1;
   pointer-events: auto;
-  -webkit-transition: all .2s ease-in-out;
   transition: all .2s ease-in-out;
 }
 
@@ -1671,8 +1607,7 @@ describe("NavLink", () => {
   display: block;
   font-family: CircularStd,Arial,Helvetica,sans-serif;
   padding: 0;
-  -webkit-text-decoration: none !important;
-  text-decoration: none !important;
+  text-decoration: none!important;
   color: #FFFFFF;
   cursor: pointer;
   font-size: 1em;
@@ -1680,7 +1615,6 @@ describe("NavLink", () => {
   line-height: 1.5;
   opacity: 1;
   pointer-events: none;
-  -webkit-transition: all .2s ease-in-out;
   transition: all .2s ease-in-out;
 }
 
@@ -1714,8 +1648,7 @@ describe("NavLink", () => {
   display: block;
   font-family: CircularStd,Arial,Helvetica,sans-serif;
   padding: 0;
-  -webkit-text-decoration: none !important;
-  text-decoration: none !important;
+  text-decoration: none!important;
   color: #C00404;
   cursor: pointer;
   font-size: 1.1em;
@@ -1723,7 +1656,6 @@ describe("NavLink", () => {
   line-height: 1.5;
   opacity: 1;
   pointer-events: auto;
-  -webkit-transition: all .2s ease-in-out;
   transition: all .2s ease-in-out;
 }
 
@@ -1753,8 +1685,7 @@ describe("NavLink", () => {
   display: block;
   font-family: CircularStd,Arial,Helvetica,sans-serif;
   padding: 0;
-  -webkit-text-decoration: none !important;
-  text-decoration: none !important;
+  text-decoration: none!important;
   color: #000000;
   cursor: pointer;
   font-size: 1.1em;
@@ -1762,7 +1693,6 @@ describe("NavLink", () => {
   line-height: 1.5;
   opacity: 1;
   pointer-events: auto;
-  -webkit-transition: all .2s ease-in-out;
   transition: all .2s ease-in-out;
 }
 
@@ -1792,8 +1722,7 @@ describe("NavLink", () => {
   display: block;
   font-family: CircularStd,Arial,Helvetica,sans-serif;
   padding: 0;
-  -webkit-text-decoration: none !important;
-  text-decoration: none !important;
+  text-decoration: none!important;
   color: #C00404;
   cursor: pointer;
   font-size: 1.1em;
@@ -1801,7 +1730,6 @@ describe("NavLink", () => {
   line-height: 1.5;
   opacity: 0.65;
   pointer-events: none;
-  -webkit-transition: all .2s ease-in-out;
   transition: all .2s ease-in-out;
 }
 

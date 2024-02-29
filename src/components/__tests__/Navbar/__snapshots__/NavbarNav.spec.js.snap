@@ -12,8 +12,7 @@ exports[`NavbarNav when window width is above mobileBreakpoint should render def
   display: block;
   font-family: CircularStd,Arial,Helvetica,sans-serif;
   padding: 0;
-  -webkit-text-decoration: none !important;
-  text-decoration: none !important;
+  text-decoration: none!important;
   color: #FFFFFF;
   cursor: pointer;
   font-size: 1em;
@@ -46,8 +45,7 @@ exports[`NavbarNav when window width is above mobileBreakpoint should render def
   display: block;
   font-family: CircularStd,Arial,Helvetica,sans-serif;
   padding: 0;
-  -webkit-text-decoration: none !important;
-  text-decoration: none !important;
+  text-decoration: none!important;
   color: #CCC6B8;
   cursor: pointer;
   font-size: 1em;
@@ -80,8 +78,7 @@ exports[`NavbarNav when window width is above mobileBreakpoint should render def
   display: block;
   font-family: CircularStd,Arial,Helvetica,sans-serif;
   padding: 0;
-  -webkit-text-decoration: none !important;
-  text-decoration: none !important;
+  text-decoration: none!important;
   color: #FFFFFF;
   cursor: not-allowed;
   font-size: 1em;
@@ -112,9 +109,6 @@ exports[`NavbarNav when window width is above mobileBreakpoint should render def
   list-style: none;
   margin: 0;
   background-color: transparent;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
   display: flex;
   padding: 0;
   width: auto;
@@ -155,73 +149,52 @@ exports[`NavbarNav when window width is above mobileBreakpoint should render def
 `;
 
 exports[`NavbarNav when window width is below mobileBreakpoint styles should render brown mobile navbar nav by default 1`] = `
-.c0 {
-  background: transparent;
-  border: none;
-  cursor: pointer;
-  height: 24px;
-  padding: 0 25px 3px 0;
-}
-
-.c1 {
-  height: 3px;
-  position: absolute;
-  width: 25px;
-  background-color: #FFFFFF;
-  -webkit-transition-property: -webkit-transform;
-  -webkit-transition-property: transform;
-  transition-property: transform;
-  -webkit-transition-timing-function: ease;
-  transition-timing-function: ease;
-  -webkit-transition-duration: .22s;
-  transition-duration: .22s;
-  -webkit-transition-timing-function: cubic-bezier(0.55,0.055,0.675,0.19);
-  transition-timing-function: cubic-bezier(0.55,0.055,0.675,0.19);
-}
-
-.c1.c1:before {
-  height: 3px;
-  position: absolute;
-  width: 25px;
-  background-color: #FFFFFF;
-  content: "";
-  display: block;
-  -webkit-transition-property: -webkit-transform;
-  -webkit-transition-property: transform;
-  transition-property: transform;
-  -webkit-transition-timing-function: ease;
-  transition-timing-function: ease;
-  -webkit-transition-duration: .15s;
-  transition-duration: .15s;
-  -webkit-transition: top 0.1s 0.25s ease-in,opacity 0.1s ease-in;
-  transition: top 0.1s 0.25s ease-in,opacity 0.1s ease-in;
-  top: -7px;
-}
-
-.c1.c1:after {
-  height: 3px;
-  position: absolute;
-  width: 25px;
-  background-color: #FFFFFF;
-  content: "";
-  display: block;
-  -webkit-transition-property: -webkit-transform;
-  -webkit-transition-property: transform;
-  transition-property: transform;
-  -webkit-transition-timing-function: ease;
-  transition-timing-function: ease;
-  -webkit-transition-duration: .15s;
-  transition-duration: .15s;
-  -webkit-transition: bottom 0.1s 0.25s ease-in,-webkit-transform 0.22s cubic-bezier(0.55,0.055,0.675,0.19);
-  -webkit-transition: bottom 0.1s 0.25s ease-in,transform 0.22s cubic-bezier(0.55,0.055,0.675,0.19);
-  transition: bottom 0.1s 0.25s ease-in,transform 0.22s cubic-bezier(0.55,0.055,0.675,0.19);
-  bottom: -7px;
-}
-
-.c6 {
+.c4 {
   display: list-item;
   border-top: 0.5px solid #C8C8C880;
   padding: 1rem 0;
+}
+
+.c5 {
+  background: transparent;
+  border: none;
+  display: block;
+  font-family: CircularStd,Arial,Helvetica,sans-serif;
+  padding: 0;
+  text-decoration: none!important;
+  color: #FFFFFF;
+  cursor: pointer;
+  font-size: 1em;
+  font-weight: 700;
+  line-height: 1.5;
+  opacity: 1;
+  pointer-events: auto;
+  transition: all .2s ease-in-out;
+}
+
+.c5:hover {
+  color: #CCC6B8;
+}
+
+.c6 {
+  background: transparent;
+  border: none;
+  display: block;
+  font-family: CircularStd,Arial,Helvetica,sans-serif;
+  padding: 0;
+  text-decoration: none!important;
+  color: #CCC6B8;
+  cursor: pointer;
+  font-size: 1em;
+  font-weight: 700;
+  line-height: 1.5;
+  opacity: 1;
+  pointer-events: auto;
+  transition: all .2s ease-in-out;
+}
+
+.c6:hover {
+  color: #CCC6B8;
 }
 
 .c7 {
@@ -230,54 +203,7 @@ exports[`NavbarNav when window width is below mobileBreakpoint styles should ren
   display: block;
   font-family: CircularStd,Arial,Helvetica,sans-serif;
   padding: 0;
-  -webkit-text-decoration: none !important;
-  text-decoration: none !important;
-  color: #FFFFFF;
-  cursor: pointer;
-  font-size: 1em;
-  font-weight: 700;
-  line-height: 1.5;
-  opacity: 1;
-  pointer-events: auto;
-  -webkit-transition: all .2s ease-in-out;
-  transition: all .2s ease-in-out;
-}
-
-.c7:hover {
-  color: #CCC6B8;
-}
-
-.c8 {
-  background: transparent;
-  border: none;
-  display: block;
-  font-family: CircularStd,Arial,Helvetica,sans-serif;
-  padding: 0;
-  -webkit-text-decoration: none !important;
-  text-decoration: none !important;
-  color: #CCC6B8;
-  cursor: pointer;
-  font-size: 1em;
-  font-weight: 700;
-  line-height: 1.5;
-  opacity: 1;
-  pointer-events: auto;
-  -webkit-transition: all .2s ease-in-out;
-  transition: all .2s ease-in-out;
-}
-
-.c8:hover {
-  color: #CCC6B8;
-}
-
-.c9 {
-  background: transparent;
-  border: none;
-  display: block;
-  font-family: CircularStd,Arial,Helvetica,sans-serif;
-  padding: 0;
-  -webkit-text-decoration: none !important;
-  text-decoration: none !important;
+  text-decoration: none!important;
   color: #FFFFFF;
   cursor: not-allowed;
   font-size: 1em;
@@ -285,15 +211,14 @@ exports[`NavbarNav when window width is below mobileBreakpoint styles should ren
   line-height: 1.5;
   opacity: 1;
   pointer-events: auto;
-  -webkit-transition: all .2s ease-in-out;
   transition: all .2s ease-in-out;
 }
 
-.c9:hover {
+.c7:hover {
   color: #FFFFFF;
 }
 
-.c5 {
+.c3 {
   list-style: none;
   margin: 0;
   background-color: transparent;
@@ -302,16 +227,15 @@ exports[`NavbarNav when window width is below mobileBreakpoint styles should ren
   width: 100%;
 }
 
-.c3 {
+.c1 {
   will-change: height;
   display: none;
   height: 0;
   overflow: hidden;
-  -webkit-transition: height 250ms cubic-bezier(0.4,0,0.2,1);
   transition: height 250ms cubic-bezier(0.4,0,0.2,1);
 }
 
-.c2 {
+.c0 {
   box-shadow: 0 5px 10px 0 #00000026;
   left: 0;
   position: absolute;
@@ -320,74 +244,219 @@ exports[`NavbarNav when window width is below mobileBreakpoint styles should ren
   background-color: #4E3629;
 }
 
-.c4 {
+.c2 {
   padding: 0 7vw 1rem;
 }
 
 @media (min-width:740px) {
-  .c4 {
+  .c2 {
     padding: 0 33px;
   }
 }
 
-<div>
-  <button
-    aria-controls="navbar-nav-mobile-collapse"
-    aria-expanded="false"
-    aria-label="Toggle navigation"
-    class="c0"
-    type="button"
-  >
-    <span
-      class="c1"
-    />
-  </button>
+<div
+  class="c0"
+>
   <div
-    class="c2"
+    class="c1"
+    display="none"
+    height="0"
+    id="navbar-nav-mobile-collapse"
+    overflow="hidden"
+    transition="height 250ms cubic-bezier(0.4,0,0.2,1)"
   >
     <div
-      class="c3"
-      display="none"
-      height="0"
-      id="navbar-nav-mobile-collapse"
-      overflow="hidden"
+      class="c2"
     >
-      <div
-        class="c4"
+      <ul
+        class="c3"
       >
-        <ul
-          class="c5"
+        <li
+          class="c4"
         >
-          <li
+          <button
+            class="c5"
+          >
+            Link
+          </button>
+        </li>
+        <li
+          class="c4"
+        >
+          <button
             class="c6"
           >
-            <button
-              class="c7"
-            >
-              Link
-            </button>
-          </li>
-          <li
+            Active Link
+          </button>
+        </li>
+        <li
+          class="c4"
+        >
+          <button
+            class="c7"
+            disabled=""
+          >
+            Link
+          </button>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`NavbarNav when window width is below mobileBreakpoint styles should render white mobile navbar nav when color variant is provided 1`] = `
+.c4 {
+  display: list-item;
+  border-top: 0.5px solid #C8C8C880;
+  padding: 1rem 0;
+}
+
+.c5 {
+  background: transparent;
+  border: none;
+  display: block;
+  font-family: CircularStd,Arial,Helvetica,sans-serif;
+  padding: 0;
+  text-decoration: none!important;
+  color: #C00404;
+  cursor: pointer;
+  font-size: 1em;
+  font-weight: 700;
+  line-height: 1.5;
+  opacity: 1;
+  pointer-events: auto;
+  transition: all .2s ease-in-out;
+}
+
+.c5:hover {
+  color: #000000;
+}
+
+.c6 {
+  background: transparent;
+  border: none;
+  display: block;
+  font-family: CircularStd,Arial,Helvetica,sans-serif;
+  padding: 0;
+  text-decoration: none!important;
+  color: #000000;
+  cursor: pointer;
+  font-size: 1em;
+  font-weight: 700;
+  line-height: 1.5;
+  opacity: 1;
+  pointer-events: auto;
+  transition: all .2s ease-in-out;
+}
+
+.c6:hover {
+  color: #000000;
+}
+
+.c7 {
+  background: transparent;
+  border: none;
+  display: block;
+  font-family: CircularStd,Arial,Helvetica,sans-serif;
+  padding: 0;
+  text-decoration: none!important;
+  color: #C00404;
+  cursor: not-allowed;
+  font-size: 1em;
+  font-weight: 700;
+  line-height: 1.5;
+  opacity: 0.65;
+  pointer-events: auto;
+  transition: all .2s ease-in-out;
+}
+
+.c7:hover {
+  color: #C00404;
+}
+
+.c3 {
+  list-style: none;
+  margin: 0;
+  background-color: transparent;
+  display: block;
+  padding: 0;
+  width: 100%;
+}
+
+.c1 {
+  will-change: height;
+  display: none;
+  height: 0;
+  overflow: hidden;
+  transition: height 250ms cubic-bezier(0.4,0,0.2,1);
+}
+
+.c0 {
+  box-shadow: 0 5px 10px 0 #00000026;
+  left: 0;
+  position: absolute;
+  top: 75px;
+  width: 100%;
+  background-color: #FFFFFF;
+}
+
+.c2 {
+  padding: 0 7vw 1rem;
+}
+
+@media (min-width:740px) {
+  .c2 {
+    padding: 0 33px;
+  }
+}
+
+<div
+  class="c0"
+>
+  <div
+    class="c1"
+    display="none"
+    height="0"
+    id="navbar-nav-mobile-collapse"
+    overflow="hidden"
+    transition="height 250ms cubic-bezier(0.4,0,0.2,1)"
+  >
+    <div
+      class="c2"
+    >
+      <ul
+        class="c3"
+      >
+        <li
+          class="c4"
+        >
+          <button
+            class="c5"
+          >
+            Link
+          </button>
+        </li>
+        <li
+          class="c4"
+        >
+          <button
             class="c6"
           >
-            <button
-              class="c8"
-            >
-              Active Link
-            </button>
-          </li>
-          <li
-            class="c6"
+            Active Link
+          </button>
+        </li>
+        <li
+          class="c4"
+        >
+          <button
+            class="c7"
+            disabled=""
           >
-            <button
-              class="c9"
-              disabled=""
-            >
-              Link
-            </button>
-          </li>
-        </ul>
-      </div>
+            Link
+          </button>
+        </li>
+      </ul>
     </div>
   </div>
 </div>

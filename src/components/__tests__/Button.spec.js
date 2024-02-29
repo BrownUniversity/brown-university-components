@@ -103,15 +103,10 @@ describe("Button", () => {
   font-family: CircularStd,Arial,Helvetica,sans-serif;
   font-style: normal;
   font-weight: 700;
-  -webkit-letter-spacing: 0.6px;
-  -moz-letter-spacing: 0.6px;
-  -ms-letter-spacing: 0.6px;
   letter-spacing: 0.6px;
   line-height: 1.5;
   text-align: center;
-  -webkit-text-decoration: none !important;
-  text-decoration: none !important;
-  -webkit-transition: color 0.25s,background 0.25s,border 0.25s,box-shadow 0.25s;
+  text-decoration: none!important;
   transition: color 0.25s,background 0.25s,border 0.25s,box-shadow 0.25s;
   background-color: #C00404;
   box-shadow: inset 0 0 0 1px #C00404;
@@ -152,15 +147,10 @@ describe("Button", () => {
   font-family: CircularStd,Arial,Helvetica,sans-serif;
   font-style: normal;
   font-weight: 700;
-  -webkit-letter-spacing: 0.6px;
-  -moz-letter-spacing: 0.6px;
-  -ms-letter-spacing: 0.6px;
   letter-spacing: 0.6px;
   line-height: 1.5;
   text-align: center;
-  -webkit-text-decoration: none !important;
-  text-decoration: none !important;
-  -webkit-transition: color 0.25s,background 0.25s,border 0.25s,box-shadow 0.25s;
+  text-decoration: none!important;
   transition: color 0.25s,background 0.25s,border 0.25s,box-shadow 0.25s;
   background-color: #FFC72C;
   box-shadow: inset 0 0 0 1px #FFC72C;
@@ -201,15 +191,10 @@ describe("Button", () => {
   font-family: CircularStd,Arial,Helvetica,sans-serif;
   font-style: normal;
   font-weight: 700;
-  -webkit-letter-spacing: 0.6px;
-  -moz-letter-spacing: 0.6px;
-  -ms-letter-spacing: 0.6px;
   letter-spacing: 0.6px;
   line-height: 1.5;
   text-align: center;
-  -webkit-text-decoration: none !important;
-  text-decoration: none !important;
-  -webkit-transition: color 0.25s,background 0.25s,border 0.25s,box-shadow 0.25s;
+  text-decoration: none!important;
   transition: color 0.25s,background 0.25s,border 0.25s,box-shadow 0.25s;
   background-color: transparent;
   box-shadow: inset 0 0 0 1px #C00404;
@@ -250,15 +235,10 @@ describe("Button", () => {
   font-family: CircularStd,Arial,Helvetica,sans-serif;
   font-style: normal;
   font-weight: 700;
-  -webkit-letter-spacing: 0.6px;
-  -moz-letter-spacing: 0.6px;
-  -ms-letter-spacing: 0.6px;
   letter-spacing: 0.6px;
   line-height: 1.5;
   text-align: center;
-  -webkit-text-decoration: none !important;
-  text-decoration: none !important;
-  -webkit-transition: color 0.25s,background 0.25s,border 0.25s,box-shadow 0.25s;
+  text-decoration: none!important;
   transition: color 0.25s,background 0.25s,border 0.25s,box-shadow 0.25s;
   background-color: transparent;
   box-shadow: inset 0 0 0 1px #4E3629;
@@ -299,15 +279,10 @@ describe("Button", () => {
   font-family: CircularStd,Arial,Helvetica,sans-serif;
   font-style: normal;
   font-weight: 700;
-  -webkit-letter-spacing: 0.6px;
-  -moz-letter-spacing: 0.6px;
-  -ms-letter-spacing: 0.6px;
   letter-spacing: 0.6px;
   line-height: 1.5;
   text-align: center;
-  -webkit-text-decoration: none !important;
-  text-decoration: none !important;
-  -webkit-transition: color 0.25s,background 0.25s,border 0.25s,box-shadow 0.25s;
+  text-decoration: none!important;
   transition: color 0.25s,background 0.25s,border 0.25s,box-shadow 0.25s;
   background-color: #FFFFFF;
   box-shadow: inset 0 0 0 1px #FFFFFF;
@@ -348,15 +323,10 @@ describe("Button", () => {
   font-family: CircularStd,Arial,Helvetica,sans-serif;
   font-style: normal;
   font-weight: 700;
-  -webkit-letter-spacing: 0.6px;
-  -moz-letter-spacing: 0.6px;
-  -ms-letter-spacing: 0.6px;
   letter-spacing: 0.6px;
   line-height: 1.5;
   text-align: center;
-  -webkit-text-decoration: none !important;
-  text-decoration: none !important;
-  -webkit-transition: color 0.25s,background 0.25s,border 0.25s,box-shadow 0.25s;
+  text-decoration: none!important;
   transition: color 0.25s,background 0.25s,border 0.25s,box-shadow 0.25s;
   background-color: #FFFFFF;
   box-shadow: inset 0 0 0 1px #FFFFFF;
@@ -397,15 +367,10 @@ describe("Button", () => {
   font-family: CircularStd,Arial,Helvetica,sans-serif;
   font-style: normal;
   font-weight: 700;
-  -webkit-letter-spacing: 0.6px;
-  -moz-letter-spacing: 0.6px;
-  -ms-letter-spacing: 0.6px;
   letter-spacing: 0.6px;
   line-height: 1.5;
   text-align: center;
-  -webkit-text-decoration: none !important;
-  text-decoration: none !important;
-  -webkit-transition: color 0.25s,background 0.25s,border 0.25s,box-shadow 0.25s;
+  text-decoration: none!important;
   transition: color 0.25s,background 0.25s,border 0.25s,box-shadow 0.25s;
   background-color: #C00404;
   box-shadow: inset 0 0 0 1px #FFFFFF;
@@ -451,15 +416,10 @@ describe("Button", () => {
   font-family: CircularStd,Arial,Helvetica,sans-serif;
   font-style: normal;
   font-weight: 700;
-  -webkit-letter-spacing: 0.6px;
-  -moz-letter-spacing: 0.6px;
-  -ms-letter-spacing: 0.6px;
   letter-spacing: 0.6px;
   line-height: 1.5;
   text-align: center;
-  -webkit-text-decoration: none !important;
-  text-decoration: none !important;
-  -webkit-transition: color 0.25s,background 0.25s,border 0.25s,box-shadow 0.25s;
+  text-decoration: none!important;
   transition: color 0.25s,background 0.25s,border 0.25s,box-shadow 0.25s;
   background-color: #00B398;
   box-shadow: inset 0 0 0 1px #FFFFFF;
@@ -512,15 +472,10 @@ describe("Button", () => {
   font-family: CircularStd,Arial,Helvetica,sans-serif;
   font-style: normal;
   font-weight: 700;
-  -webkit-letter-spacing: 0.6px;
-  -moz-letter-spacing: 0.6px;
-  -ms-letter-spacing: 0.6px;
   letter-spacing: 0.6px;
   line-height: 1.5;
   text-align: center;
-  -webkit-text-decoration: none !important;
-  text-decoration: none !important;
-  -webkit-transition: color 0.25s,background 0.25s,border 0.25s,box-shadow 0.25s;
+  text-decoration: none!important;
   transition: color 0.25s,background 0.25s,border 0.25s,box-shadow 0.25s;
   background-color: #C00404;
   box-shadow: inset 0 0 0 1px #C00404;
@@ -543,15 +498,11 @@ describe("Button", () => {
   position: relative;
   right: -8px;
   top: -1px;
-  -webkit-transition: border 0.25s,color 0.25s;
   transition: border 0.25s,color 0.25s;
   width: 0;
   -ms-transform: translate3d(0,0,0);
   -webkit-transform: translate3d(0,0,0);
-  -webkit-transform: translate3d(0,0,0);
-  -ms-transform: translate3d(0,0,0);
   transform: translate3d(0,0,0);
-  -webkit-transition: all 0.25s;
   transition: all 0.25s;
   border-color: transparent transparent transparent #FFFFFF;
 }
@@ -567,10 +518,7 @@ describe("Button", () => {
 .c0:focus::after {
   -ms-transform: translate3d(4px,0,0);
   -webkit-transform: translate3d(4px,0,0);
-  -webkit-transform: translate3d(4px,0,0);
-  -ms-transform: translate3d(4px,0,0);
   transform: translate3d(4px,0,0);
-  -webkit-transition: all 0.25s;
   transition: all 0.25s;
   border-color: transparent transparent transparent #FFFFFF;
 }
@@ -596,15 +544,10 @@ describe("Button", () => {
   font-family: CircularStd,Arial,Helvetica,sans-serif;
   font-style: normal;
   font-weight: 700;
-  -webkit-letter-spacing: 0.6px;
-  -moz-letter-spacing: 0.6px;
-  -ms-letter-spacing: 0.6px;
   letter-spacing: 0.6px;
   line-height: 1.5;
   text-align: center;
-  -webkit-text-decoration: none !important;
-  text-decoration: none !important;
-  -webkit-transition: color 0.25s,background 0.25s,border 0.25s,box-shadow 0.25s;
+  text-decoration: none!important;
   transition: color 0.25s,background 0.25s,border 0.25s,box-shadow 0.25s;
   background-color: #003C71;
   box-shadow: inset 0 0 0 1px #003C71;
@@ -627,15 +570,11 @@ describe("Button", () => {
   position: relative;
   right: -8px;
   top: -1px;
-  -webkit-transition: border 0.25s,color 0.25s;
   transition: border 0.25s,color 0.25s;
   width: 0;
   -ms-transform: translate3d(0,0,0);
   -webkit-transform: translate3d(0,0,0);
-  -webkit-transform: translate3d(0,0,0);
-  -ms-transform: translate3d(0,0,0);
   transform: translate3d(0,0,0);
-  -webkit-transition: all 0.25s;
   transition: all 0.25s;
   border-color: transparent transparent transparent #FFFFFF;
 }
@@ -651,10 +590,7 @@ describe("Button", () => {
 .c0:focus::after {
   -ms-transform: translate3d(4px,0,0);
   -webkit-transform: translate3d(4px,0,0);
-  -webkit-transform: translate3d(4px,0,0);
-  -ms-transform: translate3d(4px,0,0);
   transform: translate3d(4px,0,0);
-  -webkit-transition: all 0.25s;
   transition: all 0.25s;
   border-color: transparent transparent transparent #FFFFFF;
 }
@@ -680,15 +616,10 @@ describe("Button", () => {
   font-family: CircularStd,Arial,Helvetica,sans-serif;
   font-style: normal;
   font-weight: 700;
-  -webkit-letter-spacing: 0.6px;
-  -moz-letter-spacing: 0.6px;
-  -ms-letter-spacing: 0.6px;
   letter-spacing: 0.6px;
   line-height: 1.5;
   text-align: center;
-  -webkit-text-decoration: none !important;
-  text-decoration: none !important;
-  -webkit-transition: color 0.25s,background 0.25s,border 0.25s,box-shadow 0.25s;
+  text-decoration: none!important;
   transition: color 0.25s,background 0.25s,border 0.25s,box-shadow 0.25s;
   background-color: transparent;
   box-shadow: inset 0 0 0 1px #C00404;
@@ -711,15 +642,11 @@ describe("Button", () => {
   position: relative;
   right: -8px;
   top: -1px;
-  -webkit-transition: border 0.25s,color 0.25s;
   transition: border 0.25s,color 0.25s;
   width: 0;
   -ms-transform: translate3d(0,0,0);
   -webkit-transform: translate3d(0,0,0);
-  -webkit-transform: translate3d(0,0,0);
-  -ms-transform: translate3d(0,0,0);
   transform: translate3d(0,0,0);
-  -webkit-transition: all 0.25s;
   transition: all 0.25s;
   border-color: transparent transparent transparent #C00404;
 }
@@ -735,10 +662,7 @@ describe("Button", () => {
 .c0:focus::after {
   -ms-transform: translate3d(4px,0,0);
   -webkit-transform: translate3d(4px,0,0);
-  -webkit-transform: translate3d(4px,0,0);
-  -ms-transform: translate3d(4px,0,0);
   transform: translate3d(4px,0,0);
-  -webkit-transition: all 0.25s;
   transition: all 0.25s;
   border-color: transparent transparent transparent #FFFFFF;
 }
@@ -768,15 +692,10 @@ describe("Button", () => {
   font-family: CircularStd,Arial,Helvetica,sans-serif;
   font-style: normal;
   font-weight: 700;
-  -webkit-letter-spacing: 0.6px;
-  -moz-letter-spacing: 0.6px;
-  -ms-letter-spacing: 0.6px;
   letter-spacing: 0.6px;
   line-height: 1.5;
   text-align: center;
-  -webkit-text-decoration: none !important;
-  text-decoration: none !important;
-  -webkit-transition: color 0.25s,background 0.25s,border 0.25s,box-shadow 0.25s;
+  text-decoration: none!important;
   transition: color 0.25s,background 0.25s,border 0.25s,box-shadow 0.25s;
   background-color: transparent;
   box-shadow: inset 0 0 0 1px #59CBE8;
@@ -799,15 +718,11 @@ describe("Button", () => {
   position: relative;
   right: -8px;
   top: -1px;
-  -webkit-transition: border 0.25s,color 0.25s;
   transition: border 0.25s,color 0.25s;
   width: 0;
   -ms-transform: translate3d(0,0,0);
   -webkit-transform: translate3d(0,0,0);
-  -webkit-transform: translate3d(0,0,0);
-  -ms-transform: translate3d(0,0,0);
   transform: translate3d(0,0,0);
-  -webkit-transition: all 0.25s;
   transition: all 0.25s;
   border-color: transparent transparent transparent #59CBE8;
 }
@@ -823,10 +738,7 @@ describe("Button", () => {
 .c0:focus::after {
   -ms-transform: translate3d(4px,0,0);
   -webkit-transform: translate3d(4px,0,0);
-  -webkit-transform: translate3d(4px,0,0);
-  -ms-transform: translate3d(4px,0,0);
   transform: translate3d(4px,0,0);
-  -webkit-transition: all 0.25s;
   transition: all 0.25s;
   border-color: transparent transparent transparent #FFFFFF;
 }
@@ -852,15 +764,10 @@ describe("Button", () => {
   font-family: CircularStd,Arial,Helvetica,sans-serif;
   font-style: normal;
   font-weight: 700;
-  -webkit-letter-spacing: 0.6px;
-  -moz-letter-spacing: 0.6px;
-  -ms-letter-spacing: 0.6px;
   letter-spacing: 0.6px;
   line-height: 1.5;
   text-align: center;
-  -webkit-text-decoration: none !important;
-  text-decoration: none !important;
-  -webkit-transition: color 0.25s,background 0.25s,border 0.25s,box-shadow 0.25s;
+  text-decoration: none!important;
   transition: color 0.25s,background 0.25s,border 0.25s,box-shadow 0.25s;
   background-color: #FFFFFF;
   box-shadow: inset 0 0 0 1px #FFFFFF;
@@ -883,15 +790,11 @@ describe("Button", () => {
   position: relative;
   right: -8px;
   top: -1px;
-  -webkit-transition: border 0.25s,color 0.25s;
   transition: border 0.25s,color 0.25s;
   width: 0;
   -ms-transform: translate3d(0,0,0);
   -webkit-transform: translate3d(0,0,0);
-  -webkit-transform: translate3d(0,0,0);
-  -ms-transform: translate3d(0,0,0);
   transform: translate3d(0,0,0);
-  -webkit-transition: all 0.25s;
   transition: all 0.25s;
   border-color: transparent transparent transparent #98A4AE;
 }
@@ -907,10 +810,7 @@ describe("Button", () => {
 .c0:focus::after {
   -ms-transform: translate3d(4px,0,0);
   -webkit-transform: translate3d(4px,0,0);
-  -webkit-transform: translate3d(4px,0,0);
-  -ms-transform: translate3d(4px,0,0);
   transform: translate3d(4px,0,0);
-  -webkit-transition: all 0.25s;
   transition: all 0.25s;
   border-color: transparent transparent transparent #FFFFFF;
 }
@@ -940,15 +840,10 @@ describe("Button", () => {
   font-family: CircularStd,Arial,Helvetica,sans-serif;
   font-style: normal;
   font-weight: 700;
-  -webkit-letter-spacing: 0.6px;
-  -moz-letter-spacing: 0.6px;
-  -ms-letter-spacing: 0.6px;
   letter-spacing: 0.6px;
   line-height: 1.5;
   text-align: center;
-  -webkit-text-decoration: none !important;
-  text-decoration: none !important;
-  -webkit-transition: color 0.25s,background 0.25s,border 0.25s,box-shadow 0.25s;
+  text-decoration: none!important;
   transition: color 0.25s,background 0.25s,border 0.25s,box-shadow 0.25s;
   background-color: #FFFFFF;
   box-shadow: inset 0 0 0 1px #FFFFFF;
@@ -971,15 +866,11 @@ describe("Button", () => {
   position: relative;
   right: -8px;
   top: -1px;
-  -webkit-transition: border 0.25s,color 0.25s;
   transition: border 0.25s,color 0.25s;
   width: 0;
   -ms-transform: translate3d(0,0,0);
   -webkit-transform: translate3d(0,0,0);
-  -webkit-transform: translate3d(0,0,0);
-  -ms-transform: translate3d(0,0,0);
   transform: translate3d(0,0,0);
-  -webkit-transition: all 0.25s;
   transition: all 0.25s;
   border-color: transparent transparent transparent #98A4AE;
 }
@@ -995,10 +886,7 @@ describe("Button", () => {
 .c0:focus::after {
   -ms-transform: translate3d(4px,0,0);
   -webkit-transform: translate3d(4px,0,0);
-  -webkit-transform: translate3d(4px,0,0);
-  -ms-transform: translate3d(4px,0,0);
   transform: translate3d(4px,0,0);
-  -webkit-transition: all 0.25s;
   transition: all 0.25s;
   border-color: transparent transparent transparent #FFFFFF;
 }
@@ -1028,15 +916,10 @@ describe("Button", () => {
   font-family: CircularStd,Arial,Helvetica,sans-serif;
   font-style: normal;
   font-weight: 700;
-  -webkit-letter-spacing: 0.6px;
-  -moz-letter-spacing: 0.6px;
-  -ms-letter-spacing: 0.6px;
   letter-spacing: 0.6px;
   line-height: 1.5;
   text-align: center;
-  -webkit-text-decoration: none !important;
-  text-decoration: none !important;
-  -webkit-transition: color 0.25s,background 0.25s,border 0.25s,box-shadow 0.25s;
+  text-decoration: none!important;
   transition: color 0.25s,background 0.25s,border 0.25s,box-shadow 0.25s;
   background-color: #C00404;
   box-shadow: inset 0 0 0 1px #FFFFFF;
@@ -1059,15 +942,11 @@ describe("Button", () => {
   position: relative;
   right: -8px;
   top: -1px;
-  -webkit-transition: border 0.25s,color 0.25s;
   transition: border 0.25s,color 0.25s;
   width: 0;
   -ms-transform: translate3d(0,0,0);
   -webkit-transform: translate3d(0,0,0);
-  -webkit-transform: translate3d(0,0,0);
-  -ms-transform: translate3d(0,0,0);
   transform: translate3d(0,0,0);
-  -webkit-transition: all 0.25s;
   transition: all 0.25s;
   border-color: transparent transparent transparent #FFFFFF;
 }
@@ -1083,10 +962,7 @@ describe("Button", () => {
 .c0:focus::after {
   -ms-transform: translate3d(4px,0,0);
   -webkit-transform: translate3d(4px,0,0);
-  -webkit-transform: translate3d(4px,0,0);
-  -ms-transform: translate3d(4px,0,0);
   transform: translate3d(4px,0,0);
-  -webkit-transition: all 0.25s;
   transition: all 0.25s;
   border-color: transparent transparent transparent #98A4AE;
 }
@@ -1117,15 +993,10 @@ describe("Button", () => {
   font-family: CircularStd,Arial,Helvetica,sans-serif;
   font-style: normal;
   font-weight: 700;
-  -webkit-letter-spacing: 0.6px;
-  -moz-letter-spacing: 0.6px;
-  -ms-letter-spacing: 0.6px;
   letter-spacing: 0.6px;
   line-height: 1.5;
   text-align: center;
-  -webkit-text-decoration: none !important;
-  text-decoration: none !important;
-  -webkit-transition: color 0.25s,background 0.25s,border 0.25s,box-shadow 0.25s;
+  text-decoration: none!important;
   transition: color 0.25s,background 0.25s,border 0.25s,box-shadow 0.25s;
   background-color: #98A4AE;
   box-shadow: inset 0 0 0 1px #FFFFFF;
@@ -1148,15 +1019,11 @@ describe("Button", () => {
   position: relative;
   right: -8px;
   top: -1px;
-  -webkit-transition: border 0.25s,color 0.25s;
   transition: border 0.25s,color 0.25s;
   width: 0;
   -ms-transform: translate3d(0,0,0);
   -webkit-transform: translate3d(0,0,0);
-  -webkit-transform: translate3d(0,0,0);
-  -ms-transform: translate3d(0,0,0);
   transform: translate3d(0,0,0);
-  -webkit-transition: all 0.25s;
   transition: all 0.25s;
   border-color: transparent transparent transparent #FFFFFF;
 }
@@ -1172,10 +1039,7 @@ describe("Button", () => {
 .c0:focus::after {
   -ms-transform: translate3d(4px,0,0);
   -webkit-transform: translate3d(4px,0,0);
-  -webkit-transform: translate3d(4px,0,0);
-  -ms-transform: translate3d(4px,0,0);
   transform: translate3d(4px,0,0);
-  -webkit-transition: all 0.25s;
   transition: all 0.25s;
   border-color: transparent transparent transparent #98A4AE;
 }

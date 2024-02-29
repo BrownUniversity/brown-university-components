@@ -36,9 +36,6 @@ describe("Nav", () => {
   list-style: none;
   margin: 0;
   background-color: transparent;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
   display: flex;
   padding: 0;
   width: auto;
@@ -57,19 +54,43 @@ describe("Nav", () => {
         props: { mobile: true },
       });
 
-      expect(nav).toHaveStyleRule("background-color", "transparent");
-      expect(nav).toHaveStyleRule("display", "block");
-      expect(nav).toHaveStyleRule("padding", "0");
-      expect(nav).toHaveStyleRule("width", "100%");
+      expect(nav).toMatchInlineSnapshot(`
+.c0 {
+  list-style: none;
+  margin: 0;
+  background-color: transparent;
+  display: block;
+  padding: 0;
+  width: 100%;
+}
+
+<ul
+  class="c0"
+>
+  <li />
+</ul>
+`);
     });
 
     it("should render nav with sub styles when variant is provided", () => {
       const { nav } = renderNav({ props: { sub: true } });
 
-      expect(nav).toHaveStyleRule("background-color", "#f7f7f7");
-      expect(nav).toHaveStyleRule("display", "block");
-      expect(nav).toHaveStyleRule("padding", "15px");
-      expect(nav).toHaveStyleRule("width", "100%");
+      expect(nav).toMatchInlineSnapshot(`
+.c0 {
+  list-style: none;
+  margin: 0;
+  background-color: #f7f7f7;
+  display: block;
+  padding: 15px;
+  width: 100%;
+}
+
+<ul
+  class="c0"
+>
+  <li />
+</ul>
+`);
     });
   });
 });

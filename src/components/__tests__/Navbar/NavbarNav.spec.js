@@ -56,9 +56,9 @@ describe("NavbarNav", () => {
 
     describe("styles", () => {
       it("should render brown mobile navbar nav by default", () => {
-        const { navbarNav } = renderNavbarNav();
+        const { navbarNavMobileNavWrapper } = renderNavbarNav();
 
-        expect(navbarNav).toMatchSnapshot();
+        expect(navbarNavMobileNavWrapper).toMatchSnapshot();
       });
 
       it("should render white mobile navbar nav when color variant is provided", () => {
@@ -66,10 +66,7 @@ describe("NavbarNav", () => {
           context: { color: "white" },
         });
 
-        expect(navbarNavMobileNavWrapper).toHaveStyleRule(
-          "background-color",
-          "#FFFFFF",
-        );
+        expect(navbarNavMobileNavWrapper).toMatchSnapshot();
       });
     });
 

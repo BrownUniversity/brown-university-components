@@ -68,29 +68,33 @@ describe("Banner", () => {
       const { bannerImageColorWrapper } = renderBanner();
 
       expect(bannerImageColorWrapper).toMatchInlineSnapshot(`
-        .c0 {
-          width: 100%;
-          overflow: hidden;
-          max-height: 200px;
-        }
+.c0 {
+  width: 100%;
+  overflow: hidden;
+  max-height: 200px;
+}
 
-        <div
-          class="c0"
-        >
-          <svg
-            display="block"
-            focusable="false"
-            viewBox="0 0 2600 600"
-          >
-            <rect
-              aria-hidden="true"
-              fill="#00B398"
-              height="100%"
-              width="100%"
-            />
-          </svg>
-        </div>
-      `);
+@media (min-width:740px) {
+
+}
+
+<div
+  class="c0"
+>
+  <svg
+    display="block"
+    focusable="false"
+    viewBox="0 0 2600 600"
+  >
+    <rect
+      aria-hidden="true"
+      fill="#00B398"
+      height="100%"
+      width="100%"
+    />
+  </svg>
+</div>
+`);
     });
 
     it("should render banner with background of another color when color variant is provided", () => {
@@ -132,20 +136,24 @@ describe("Banner", () => {
       });
 
       expect(bannerImage).toMatchInlineSnapshot(`
-        .c0 {
-          height: auto;
-          min-width: 320px;
-          max-width: 100%;
-          width: 100%;
-          display: block;
-        }
+.c0 {
+  height: auto;
+  min-width: 320px;
+  max-width: 100%;
+  width: 100%;
+  display: block;
+}
 
-        <img
-          alt="Banner"
-          class="c0"
-          src="./path/to/img.jpg"
-        />
-      `);
+@media (min-width:740px) {
+
+}
+
+<img
+  alt="Banner"
+  class="c0"
+  src="./path/to/img.jpg"
+/>
+`);
     });
   });
 

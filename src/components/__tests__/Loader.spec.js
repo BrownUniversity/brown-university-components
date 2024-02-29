@@ -18,14 +18,9 @@ describe("Loader", () => {
     // TODO: update when animation name can be deterministic (see `jest-styled-components` issue 123)
     expect(loader).toMatchInlineSnapshot(`
 .c0 svg #rays {
-  -webkit-transform-origin: center;
-  -ms-transform-origin: center;
   transform-origin: center;
-  -webkit-transform-box: fill-box;
-  -ms-transform-box: fill-box;
   transform-box: fill-box;
-  -webkit-animation: cZxgpV 7s linear infinite;
-  animation: cZxgpV 7s linear infinite;
+  animation: jyxFDD 7s linear infinite;
 }
 
 <div
