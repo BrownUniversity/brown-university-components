@@ -139,7 +139,7 @@ exports[`SiteNav when window width is above mobileBreakpoint styles when banner 
 }
 
 <div
-  class="SiteNav__BannerPositioningWrapper-iasm8j-6"
+  class=""
 >
   <nav>
     <div
