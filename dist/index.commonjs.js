@@ -1,4 +1,4 @@
-/*! brown-university-components v1.7.1 */
+/*! brown-university-components v2.0.0 */
 (function webpackUniversalModuleDefinition(root, factory) {
 	if(typeof exports === 'object' && typeof module === 'object')
 		module.exports = factory(require("styled-components"), require("brown-university-styles"), require("prop-types"), require("react"), require("polished"), require("react-fns"));
@@ -95,7 +95,7 @@ var Tag = styled_components__WEBPACK_IMPORTED_MODULE_2___default()(function (_re
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default().createElement("div", restProps);
 }).withConfig({
   displayName: "Background__Tag",
-  componentId: "uwuoy1-0"
+  componentId: "sc-uwuoy1-0"
 })(["background-image:url(\"", "\");background-repeat:repeat;background-size:1600px;background-color:", ";background-position-y:", "px;", ""], function (_ref2) {
   var url = _ref2.url;
   return url;
@@ -167,7 +167,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var brown_university_styles__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(brown_university_styles__WEBPACK_IMPORTED_MODULE_3__);
 /* harmony import */ var _BannerContext__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(8);
 /* harmony import */ var _BannerText__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(9);
-var _excluded = ["color", "size", "src", "children", "mobileBreakpoint"];
+var _excluded = ["mobileBreakpoint", "size"],
+  _excluded2 = ["color", "size", "src", "children", "mobileBreakpoint"];
 function _extends() { _extends = Object.assign ? Object.assign.bind() : function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends.apply(this, arguments); }
 function _objectWithoutProperties(source, excluded) { if (source == null) return {}; var target = _objectWithoutPropertiesLoose(source, excluded); var key, i; if (Object.getOwnPropertySymbols) { var sourceSymbolKeys = Object.getOwnPropertySymbols(source); for (i = 0; i < sourceSymbolKeys.length; i++) { key = sourceSymbolKeys[i]; if (excluded.indexOf(key) >= 0) continue; if (!Object.prototype.propertyIsEnumerable.call(source, key)) continue; target[key] = source[key]; } } return target; }
 function _objectWithoutPropertiesLoose(source, excluded) { if (source == null) return {}; var target = {}; var sourceKeys = Object.keys(source); var key, i; for (i = 0; i < sourceKeys.length; i++) { key = sourceKeys[i]; if (excluded.indexOf(key) >= 0) continue; target[key] = source[key]; } return target; }
@@ -212,28 +213,33 @@ var BannerImage = styled_components__WEBPACK_IMPORTED_MODULE_2___default().img.w
   displayName: "Banner__BannerImage",
   componentId: "sc-11l4cxl-2"
 })(["height:auto;min-width:320px;max-width:100%;width:100%;display:block;"]);
-var BannerChildrenWrapper = styled_components__WEBPACK_IMPORTED_MODULE_2___default().div.withConfig({
+var BannerChildrenWrapper = styled_components__WEBPACK_IMPORTED_MODULE_2___default()(function (_ref2) {
+  var mobileBreakpoint = _ref2.mobileBreakpoint,
+    size = _ref2.size,
+    restProps = _objectWithoutProperties(_ref2, _excluded);
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default().createElement("div", restProps);
+}).withConfig({
   displayName: "Banner__BannerChildrenWrapper",
   componentId: "sc-11l4cxl-3"
 })(["position:absolute;text-align:center;width:100%;z-index:15;top:", ";@media (min-width:", "px){top:", ";}"], function (props) {
   return props.size === "small" ? "5%" : "35%";
 }, function (props) {
   return props.mobileBreakpoint;
-}, function (_ref2) {
-  var size = _ref2.size;
+}, function (_ref3) {
+  var size = _ref3.size;
   return size === "small" ? "20%" : "35%";
 });
 
 /*
   outer Banner component
 */
-var Banner = function Banner(_ref3) {
-  var color = _ref3.color,
-    size = _ref3.size,
-    src = _ref3.src,
-    children = _ref3.children,
-    mobileBreakpoint = _ref3.mobileBreakpoint,
-    restProps = _objectWithoutProperties(_ref3, _excluded);
+var Banner = function Banner(_ref4) {
+  var color = _ref4.color,
+    size = _ref4.size,
+    src = _ref4.src,
+    children = _ref4.children,
+    mobileBreakpoint = _ref4.mobileBreakpoint,
+    restProps = _objectWithoutProperties(_ref4, _excluded2);
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default().createElement(BannerWrapper, _extends({}, restProps, {
     role: "banner"
   }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default().createElement(BannerImageColorWrapper, {
@@ -307,7 +313,10 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var brown_university_styles__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(3);
 /* harmony import */ var brown_university_styles__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(brown_university_styles__WEBPACK_IMPORTED_MODULE_3__);
 /* harmony import */ var _BannerContext__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(8);
+var _excluded = ["mobileBreakpoint"];
 function _extends() { _extends = Object.assign ? Object.assign.bind() : function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends.apply(this, arguments); }
+function _objectWithoutProperties(source, excluded) { if (source == null) return {}; var target = _objectWithoutPropertiesLoose(source, excluded); var key, i; if (Object.getOwnPropertySymbols) { var sourceSymbolKeys = Object.getOwnPropertySymbols(source); for (i = 0; i < sourceSymbolKeys.length; i++) { key = sourceSymbolKeys[i]; if (excluded.indexOf(key) >= 0) continue; if (!Object.prototype.propertyIsEnumerable.call(source, key)) continue; target[key] = source[key]; } } return target; }
+function _objectWithoutPropertiesLoose(source, excluded) { if (source == null) return {}; var target = {}; var sourceKeys = Object.keys(source); var key, i; for (i = 0; i < sourceKeys.length; i++) { key = sourceKeys[i]; if (excluded.indexOf(key) >= 0) continue; target[key] = source[key]; } return target; }
 
 
 
@@ -318,9 +327,13 @@ var serif = brown_university_styles__WEBPACK_IMPORTED_MODULE_3__.typography.seri
 /*
   inner Tag component
 */
-var Tag = styled_components__WEBPACK_IMPORTED_MODULE_2___default().div.withConfig({
+var Tag = styled_components__WEBPACK_IMPORTED_MODULE_2___default()(function (_ref) {
+  var mobileBreakpoint = _ref.mobileBreakpoint,
+    restProps = _objectWithoutProperties(_ref, _excluded);
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default().createElement("div", restProps);
+}).withConfig({
   displayName: "BannerText__Tag",
-  componentId: "lrk5yo-0"
+  componentId: "sc-lrk5yo-0"
 })(["color:", ";font-family:", ";font-size:1.9em;text-shadow:1px 1px 2px rgba(0,0,0,0.4);@media (min-width:", "px){font-size:2.5em;}"], brown_university_styles__WEBPACK_IMPORTED_MODULE_3__.colors.white, serif, function (props) {
   return props.mobileBreakpoint;
 });
@@ -329,8 +342,8 @@ var Tag = styled_components__WEBPACK_IMPORTED_MODULE_2___default().div.withConfi
   outer BannerText component
 */
 var BannerText = function BannerText(props) {
-  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default().createElement(_BannerContext__WEBPACK_IMPORTED_MODULE_4__["default"].Consumer, null, function (_ref) {
-    var mobileBreakpoint = _ref.mobileBreakpoint;
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default().createElement(_BannerContext__WEBPACK_IMPORTED_MODULE_4__["default"].Consumer, null, function (_ref2) {
+    var mobileBreakpoint = _ref2.mobileBreakpoint;
     return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default().createElement(Tag, _extends({}, props, {
       mobileBreakpoint: mobileBreakpoint
     }));
@@ -359,7 +372,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var polished__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(polished__WEBPACK_IMPORTED_MODULE_3__);
 /* harmony import */ var brown_university_styles__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(3);
 /* harmony import */ var brown_university_styles__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(brown_university_styles__WEBPACK_IMPORTED_MODULE_4__);
-var _excluded = ["tag"];
+var _excluded = ["color", "size", "uppercase", "rounded", "outline", "inverse"],
+  _excluded2 = ["tag", "color", "size", "uppercase", "rounded", "outline", "inverse"],
+  _excluded3 = ["tag", "color", "size", "uppercase", "rounded", "outline", "inverse"];
 function _extends() { _extends = Object.assign ? Object.assign.bind() : function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends.apply(this, arguments); }
 function _objectWithoutProperties(source, excluded) { if (source == null) return {}; var target = _objectWithoutPropertiesLoose(source, excluded); var key, i; if (Object.getOwnPropertySymbols) { var sourceSymbolKeys = Object.getOwnPropertySymbols(source); for (i = 0; i < sourceSymbolKeys.length; i++) { key = sourceSymbolKeys[i]; if (excluded.indexOf(key) >= 0) continue; if (!Object.prototype.propertyIsEnumerable.call(source, key)) continue; target[key] = source[key]; } } return target; }
 function _objectWithoutPropertiesLoose(source, excluded) { if (source == null) return {}; var target = {}; var sourceKeys = Object.keys(source); var key, i; for (i = 0; i < sourceKeys.length; i++) { key = sourceKeys[i]; if (excluded.indexOf(key) >= 0) continue; target[key] = source[key]; } return target; }
@@ -494,36 +509,45 @@ var getColorWithHover = function getColorWithHover(_ref7) {
   inner Tag component
 */
 // TODO: filter color prop with `as` usage (see `styled-components` issue 439)
-var Tag = styled_components__WEBPACK_IMPORTED_MODULE_2___default().div.withConfig({
+var Tag = styled_components__WEBPACK_IMPORTED_MODULE_2___default()(function (_ref8) {
+  var color = _ref8.color,
+    size = _ref8.size,
+    uppercase = _ref8.uppercase,
+    rounded = _ref8.rounded,
+    outline = _ref8.outline,
+    inverse = _ref8.inverse,
+    restProps = _objectWithoutProperties(_ref8, _excluded);
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default().createElement("div", restProps);
+}).withConfig({
   displayName: "Button__Tag",
   componentId: "sc-4pqrql-0"
 })(["", " background-color:", ";border-radius:", ";box-shadow:inset 0 0 0 1px ", ";color:", ";cursor:", ";font-size:", ";opacity:", ";padding:", ";pointer-events:", ";text-transform:", ";", " &:hover,&:focus{background-color:", ";box-shadow:inset 0 0 0 1px ", ";color:", ";", "}"], buttonCSS, function (props) {
   return getBackgroundColor(props);
-}, function (_ref8) {
-  var rounded = _ref8.rounded;
+}, function (_ref9) {
+  var rounded = _ref9.rounded;
   return rounded ? "5px" : null;
 }, function (props) {
   return getBoxShadow(props);
 }, function (props) {
   return getColor(props);
-}, function (_ref9) {
-  var disabled = _ref9.disabled,
-    href = _ref9.href;
+}, function (_ref10) {
+  var disabled = _ref10.disabled,
+    href = _ref10.href;
   return disabled && !href ? "not-allowed" : "pointer";
 }, function (props) {
   return getFontSize(props);
-}, function (_ref10) {
-  var disabled = _ref10.disabled;
-  return disabled ? "0.45" : "1";
 }, function (_ref11) {
-  var href = _ref11.href;
-  return href ? "12px 25px 12px 20px" : "12px 25px";
+  var disabled = _ref11.disabled;
+  return disabled ? "0.45" : "1";
 }, function (_ref12) {
-  var disabled = _ref12.disabled,
-    href = _ref12.href;
-  return disabled && href ? "none" : "auto";
+  var href = _ref12.href;
+  return href ? "12px 25px 12px 20px" : "12px 25px";
 }, function (_ref13) {
-  var uppercase = _ref13.uppercase;
+  var disabled = _ref13.disabled,
+    href = _ref13.href;
+  return disabled && href ? "none" : "auto";
+}, function (_ref14) {
+  var uppercase = _ref14.uppercase;
   return uppercase ? "uppercase" : null;
 }, function (props) {
   return props.href && (0,styled_components__WEBPACK_IMPORTED_MODULE_2__.css)(["&::after{", " ", " border-color:transparent transparent transparent ", ";}"], buttonAfterCSS, buttonAfterShiftCSS, getColor(props));
@@ -540,22 +564,50 @@ var Tag = styled_components__WEBPACK_IMPORTED_MODULE_2___default().div.withConfi
 /*
   outer Button component
 */
-var deriveTag = function deriveTag(_ref14) {
-  var tag = _ref14.tag,
-    href = _ref14.href;
+var deriveTag = function deriveTag(_ref15) {
+  var tag = _ref15.tag,
+    href = _ref15.href;
   if (tag === "button" && href) {
     return "a";
   }
   return tag;
 };
+function FilteredAs(props) {
+  /* eslint-disable react/prop-types */
+  var tag = props.tag,
+    color = props.color,
+    size = props.size,
+    uppercase = props.uppercase,
+    rounded = props.rounded,
+    outline = props.outline,
+    inverse = props.inverse,
+    restProps = _objectWithoutProperties(props, _excluded2);
+  /* eslint-enable react/prop-types */
+  var DerivedTag = deriveTag(props);
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default().createElement(DerivedTag, restProps);
+}
 var Button = function Button(props) {
   var tag = props.tag,
-    restProps = _objectWithoutProperties(props, _excluded);
-  var derivedTag = deriveTag(props);
+    color = props.color,
+    size = props.size,
+    uppercase = props.uppercase,
+    rounded = props.rounded,
+    outline = props.outline,
+    inverse = props.inverse,
+    restProps = _objectWithoutProperties(props, _excluded3);
+  var DerivedTag = deriveTag(props);
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default().createElement(Tag, _extends({
-    as: derivedTag,
-    type: derivedTag === "button" && props.onClick ? "button" : undefined
-  }, restProps));
+    as: FilteredAs,
+    type: DerivedTag === "button" && props.onClick ? "button" : undefined
+  }, restProps, {
+    tag: tag,
+    color: color,
+    size: size,
+    uppercase: uppercase,
+    rounded: rounded,
+    outline: outline,
+    inverse: inverse
+  }));
 };
 Button.propTypes = process.env.NODE_ENV !== "production" ? {
   tag: prop_types__WEBPACK_IMPORTED_MODULE_0___default().oneOfType([(prop_types__WEBPACK_IMPORTED_MODULE_0___default().func), (prop_types__WEBPACK_IMPORTED_MODULE_0___default().string)]),
@@ -1605,7 +1657,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var brown_university_styles__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(brown_university_styles__WEBPACK_IMPORTED_MODULE_3__);
 function _typeof(o) { "@babel/helpers - typeof"; return _typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (o) { return typeof o; } : function (o) { return o && "function" == typeof Symbol && o.constructor === Symbol && o !== Symbol.prototype ? "symbol" : typeof o; }, _typeof(o); }
 var _excluded = ["color", "isOpen"],
-  _excluded2 = ["tag", "color", "ariaLabel", "onOpen", "onClose"];
+  _excluded2 = ["tag", "color", "ariaLabel", "onOpen", "onClose", "isOpen"];
 function _extends() { _extends = Object.assign ? Object.assign.bind() : function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends.apply(this, arguments); }
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, _toPropertyKey(descriptor.key), descriptor); } }
@@ -1725,6 +1777,7 @@ var Hamburger = /*#__PURE__*/function (_Component) {
         ariaLabel = _this$props.ariaLabel,
         onOpen = _this$props.onOpen,
         onClose = _this$props.onClose,
+        isOpenProp = _this$props.isOpen,
         restProps = _objectWithoutProperties(_this$props, _excluded2);
       var isOpen = this.state.isOpen;
       var isButton = tag === "button";
@@ -2032,7 +2085,7 @@ var Tag = styled_components__WEBPACK_IMPORTED_MODULE_2___default()(function (_re
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default().createElement("ul", restProps);
 }).withConfig({
   displayName: "Nav__Tag",
-  componentId: "axj96a-0"
+  componentId: "sc-axj96a-0"
 })(["list-style:none;margin:0;background-color:", ";display:", ";padding:", ";width:", ";"], function (props) {
   return getBackgroundColor(props);
 }, function (props) {
@@ -2110,7 +2163,10 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(2);
 /* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(styled_components__WEBPACK_IMPORTED_MODULE_2__);
 /* harmony import */ var _NavContext__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(32);
+var _excluded = ["mobile", "sub"];
 function _extends() { _extends = Object.assign ? Object.assign.bind() : function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends.apply(this, arguments); }
+function _objectWithoutProperties(source, excluded) { if (source == null) return {}; var target = _objectWithoutPropertiesLoose(source, excluded); var key, i; if (Object.getOwnPropertySymbols) { var sourceSymbolKeys = Object.getOwnPropertySymbols(source); for (i = 0; i < sourceSymbolKeys.length; i++) { key = sourceSymbolKeys[i]; if (excluded.indexOf(key) >= 0) continue; if (!Object.prototype.propertyIsEnumerable.call(source, key)) continue; target[key] = source[key]; } } return target; }
+function _objectWithoutPropertiesLoose(source, excluded) { if (source == null) return {}; var target = {}; var sourceKeys = Object.keys(source); var key, i; for (i = 0; i < sourceKeys.length; i++) { key = sourceKeys[i]; if (excluded.indexOf(key) >= 0) continue; target[key] = source[key]; } return target; }
 
 
 
@@ -2134,11 +2190,16 @@ var getPadding = function getPadding(_ref) {
 /*
   inner Tag component
 */
-var Tag = styled_components__WEBPACK_IMPORTED_MODULE_2___default().li.withConfig({
+var Tag = styled_components__WEBPACK_IMPORTED_MODULE_2___default()(function (_ref2) {
+  var mobile = _ref2.mobile,
+    sub = _ref2.sub,
+    restProps = _objectWithoutProperties(_ref2, _excluded);
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default().createElement("li", restProps);
+}).withConfig({
   displayName: "NavItem__Tag",
   componentId: "sc-1xpcbp5-0"
-})(["display:list-item;border-top:", ";padding:", ";"], function (_ref2) {
-  var mobile = _ref2.mobile;
+})(["display:list-item;border-top:", ";padding:", ";"], function (_ref3) {
+  var mobile = _ref3.mobile;
   return mobile && "0.5px solid #C8C8C880";
 }, function (props) {
   return getPadding(props);
@@ -2148,9 +2209,9 @@ var Tag = styled_components__WEBPACK_IMPORTED_MODULE_2___default().li.withConfig
   outer NavItem component
 */
 var NavItem = function NavItem(props) {
-  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default().createElement(_NavContext__WEBPACK_IMPORTED_MODULE_3__["default"].Consumer, null, function (_ref3) {
-    var mobile = _ref3.mobile,
-      sub = _ref3.sub;
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default().createElement(_NavContext__WEBPACK_IMPORTED_MODULE_3__["default"].Consumer, null, function (_ref4) {
+    var mobile = _ref4.mobile,
+      sub = _ref4.sub;
     return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default().createElement(Tag, _extends({}, props, {
       mobile: mobile,
       sub: sub
@@ -2180,7 +2241,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var brown_university_styles__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(brown_university_styles__WEBPACK_IMPORTED_MODULE_3__);
 /* harmony import */ var _NavContext__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(32);
 /* harmony import */ var _media__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(1);
-var _excluded = ["tag"];
+var _excluded = ["tag", "active", "navbar", "mobile", "sub", "color"],
+  _excluded2 = ["tag"];
 var _templateObject;
 function _extends() { _extends = Object.assign ? Object.assign.bind() : function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends.apply(this, arguments); }
 function _objectWithoutProperties(source, excluded) { if (source == null) return {}; var target = _objectWithoutPropertiesLoose(source, excluded); var key, i; if (Object.getOwnPropertySymbols) { var sourceSymbolKeys = Object.getOwnPropertySymbols(source); for (i = 0; i < sourceSymbolKeys.length; i++) { key = sourceSymbolKeys[i]; if (excluded.indexOf(key) >= 0) continue; if (!Object.prototype.propertyIsEnumerable.call(source, key)) continue; target[key] = source[key]; } } return target; }
@@ -2414,9 +2476,21 @@ var deriveTag = function deriveTag(_ref15) {
   }
   return tag;
 };
+function FilteredAs(props) {
+  // eslint-disable-next-line react/prop-types
+  var tag = props.tag,
+    active = props.active,
+    navbar = props.navbar,
+    mobile = props.mobile,
+    sub = props.sub,
+    color = props.color,
+    restProps = _objectWithoutProperties(props, _excluded);
+  var DerivedTag = deriveTag(props);
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default().createElement(DerivedTag, restProps);
+}
 var NavLink = function NavLink(props) {
   var tag = props.tag,
-    restProps = _objectWithoutProperties(props, _excluded);
+    restProps = _objectWithoutProperties(props, _excluded2);
   var derivedTag = deriveTag(props);
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default().createElement(_NavContext__WEBPACK_IMPORTED_MODULE_5__["default"].Consumer, null, function (_ref16) {
     var navbar = _ref16.navbar,
@@ -2424,9 +2498,10 @@ var NavLink = function NavLink(props) {
       sub = _ref16.sub,
       color = _ref16.color;
     return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default().createElement(Tag, _extends({
-      as: derivedTag,
+      as: FilteredAs,
       type: derivedTag === "button" && props.onClick ? "button" : undefined
     }, restProps, {
+      tag: tag,
       navbar: navbar,
       mobile: mobile,
       sub: sub,
@@ -2627,14 +2702,14 @@ var MobileCollapseWrapper = styled_components__WEBPACK_IMPORTED_MODULE_2___defau
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default().createElement("div", restProps);
 }).withConfig({
   displayName: "NavbarNav__MobileCollapseWrapper",
-  componentId: "hl2s13-0"
+  componentId: "sc-hl2s13-0"
 })(["box-shadow:0 5px 10px 0 #00000026;left:0;position:absolute;top:75px;width:100%;background-color:", ";"], function (_ref2) {
   var color = _ref2.color;
   return brown_university_styles__WEBPACK_IMPORTED_MODULE_4__.colors[color];
 });
 var MobileNavWrapper = styled_components__WEBPACK_IMPORTED_MODULE_2___default().div.withConfig({
   displayName: "NavbarNav__MobileNavWrapper",
-  componentId: "hl2s13-1"
+  componentId: "sc-hl2s13-1"
 })(["padding:0 7vw 1rem;", ";"], _media__WEBPACK_IMPORTED_MODULE_5__["default"].md(_templateObject || (_templateObject = _taggedTemplateLiteral(["\n    padding: 0 33px;\n  "]))));
 
 /*
@@ -3117,7 +3192,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _Nav__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(31);
 /* harmony import */ var _utils_Collapse__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(12);
 /* harmony import */ var _utils_VisibilityToggle__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(39);
-var _excluded = ["banner", "mobileBreakpoint", "mobileToggleTitle", "children"];
+var _excluded = ["banner"],
+  _excluded2 = ["banner"],
+  _excluded3 = ["banner", "mobileBreakpoint", "mobileToggleTitle", "children"];
 function _objectWithoutProperties(source, excluded) { if (source == null) return {}; var target = _objectWithoutPropertiesLoose(source, excluded); var key, i; if (Object.getOwnPropertySymbols) { var sourceSymbolKeys = Object.getOwnPropertySymbols(source); for (i = 0; i < sourceSymbolKeys.length; i++) { key = sourceSymbolKeys[i]; if (excluded.indexOf(key) >= 0) continue; if (!Object.prototype.propertyIsEnumerable.call(source, key)) continue; target[key] = source[key]; } } return target; }
 function _objectWithoutPropertiesLoose(source, excluded) { if (source == null) return {}; var target = {}; var sourceKeys = Object.keys(source); var key, i; for (i = 0; i < sourceKeys.length; i++) { key = sourceKeys[i]; if (excluded.indexOf(key) >= 0) continue; target[key] = source[key]; } return target; }
 
@@ -3134,64 +3211,72 @@ var sansBold = brown_university_styles__WEBPACK_IMPORTED_MODULE_4__.typography.s
 /*
   inner components
 */
-var MobileBannerPositioningWrapper = styled_components__WEBPACK_IMPORTED_MODULE_2___default().div.withConfig({
+var MobileBannerPositioningWrapper = styled_components__WEBPACK_IMPORTED_MODULE_2___default()(function (_ref) {
+  var banner = _ref.banner,
+    restProps = _objectWithoutProperties(_ref, _excluded);
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default().createElement("div", restProps);
+}).withConfig({
   displayName: "SiteNav__MobileBannerPositioningWrapper",
-  componentId: "iasm8j-0"
+  componentId: "sc-iasm8j-0"
 })(["", ";"], function (props) {
   return props.banner && (0,styled_components__WEBPACK_IMPORTED_MODULE_2__.css)(["margin:0 auto;margin-top:2rem;position:relative;width:95%;z-index:10;"]);
 });
 var MobileWrapper = styled_components__WEBPACK_IMPORTED_MODULE_2___default().nav.withConfig({
   displayName: "SiteNav__MobileWrapper",
-  componentId: "iasm8j-1"
+  componentId: "sc-iasm8j-1"
 })(["background-color:", ";border:1px solid #ddd;"], brown_university_styles__WEBPACK_IMPORTED_MODULE_4__.colors.white);
 var MobileToggleButton = styled_components__WEBPACK_IMPORTED_MODULE_2___default().button.withConfig({
   displayName: "SiteNav__MobileToggleButton",
-  componentId: "iasm8j-2"
+  componentId: "sc-iasm8j-2"
 })(["background-color:transparent;border:none;cursor:pointer;font-size:1em;padding:1rem 0 1rem;width:100%;"]);
 var MobileToggleButtonInner = styled_components__WEBPACK_IMPORTED_MODULE_2___default().div.withConfig({
   displayName: "SiteNav__MobileToggleButtonInner",
-  componentId: "iasm8j-3"
+  componentId: "sc-iasm8j-3"
 })(["align-items:center;display:flex;flex-direction:row;flex-wrap:wrap;justify-content:space-between;margin:0 auto;width:92%;"]);
 var MobileToggleTitle = styled_components__WEBPACK_IMPORTED_MODULE_2___default().span.withConfig({
   displayName: "SiteNav__MobileToggleTitle",
-  componentId: "iasm8j-4"
+  componentId: "sc-iasm8j-4"
 })(["color:", ";font-family:", ";font-weight:bold;letter-spacing:0.5px;padding:11px 5px;text-transform:uppercase;"], brown_university_styles__WEBPACK_IMPORTED_MODULE_4__.colors.red, sansBold);
 var MobileNavWrapper = styled_components__WEBPACK_IMPORTED_MODULE_2___default().div.withConfig({
   displayName: "SiteNav__MobileNavWrapper",
-  componentId: "iasm8j-5"
+  componentId: "sc-iasm8j-5"
 })(["align-items:center;display:flex;justify-content:center;margin:0 auto;padding:16px 0;width:92%;z-index:10;"]);
-var BannerPositioningWrapper = styled_components__WEBPACK_IMPORTED_MODULE_2___default().div.withConfig({
+var BannerPositioningWrapper = styled_components__WEBPACK_IMPORTED_MODULE_2___default()(function (_ref2) {
+  var banner = _ref2.banner,
+    restProps = _objectWithoutProperties(_ref2, _excluded2);
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default().createElement("div", restProps);
+}).withConfig({
   displayName: "SiteNav__BannerPositioningWrapper",
-  componentId: "iasm8j-6"
+  componentId: "sc-iasm8j-6"
 })(["", ""], function (props) {
   return props.banner && (0,styled_components__WEBPACK_IMPORTED_MODULE_2__.css)(["background-color:", ";margin:0 auto;margin-top:-50px;max-width:1300px;position:relative;width:96%;z-index:10;"], brown_university_styles__WEBPACK_IMPORTED_MODULE_4__.colors.white);
 });
 var NavWrapper = styled_components__WEBPACK_IMPORTED_MODULE_2___default().div.withConfig({
   displayName: "SiteNav__NavWrapper",
-  componentId: "iasm8j-7"
+  componentId: "sc-iasm8j-7"
 })(["display:flex;justify-content:center;padding:20px 0 30px;"]);
 
 /*
   outer SiteNav component
 */
-var SiteNav = function SiteNav(_ref) {
-  var banner = _ref.banner,
-    mobileBreakpoint = _ref.mobileBreakpoint,
-    mobileToggleTitle = _ref.mobileToggleTitle,
-    children = _ref.children,
-    restProps = _objectWithoutProperties(_ref, _excluded);
+var SiteNav = function SiteNav(_ref3) {
+  var banner = _ref3.banner,
+    mobileBreakpoint = _ref3.mobileBreakpoint,
+    mobileToggleTitle = _ref3.mobileToggleTitle,
+    children = _ref3.children,
+    restProps = _objectWithoutProperties(_ref3, _excluded3);
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default().createElement(react_fns__WEBPACK_IMPORTED_MODULE_3__.WindowSize, {
-    render: function render(_ref2) {
-      var width = _ref2.width;
+    render: function render(_ref4) {
+      var width = _ref4.width;
       // TODO: update when `width` doesn't return 0 on initial render (see `react-fns` issue 84)
       var currentWidth = width === 0 ? window.innerWidth : width;
       var renderMobile = currentWidth < mobileBreakpoint;
       if (renderMobile) {
         return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default().createElement(MobileBannerPositioningWrapper, {
           banner: banner
-        }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default().createElement(MobileWrapper, restProps, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default().createElement(_utils_VisibilityToggle__WEBPACK_IMPORTED_MODULE_5__["default"], null, function (_ref3) {
-          var mobileNavIsOpen = _ref3.isOpen,
-            toggleMobileNav = _ref3.toggleIsOpen;
+        }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default().createElement(MobileWrapper, restProps, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default().createElement(_utils_VisibilityToggle__WEBPACK_IMPORTED_MODULE_5__["default"], null, function (_ref5) {
+          var mobileNavIsOpen = _ref5.isOpen,
+            toggleMobileNav = _ref5.toggleIsOpen;
           return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default().createElement((react__WEBPACK_IMPORTED_MODULE_1___default().Fragment), null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default().createElement(MobileToggleButton, {
             type: "button",
             "aria-controls": "site-nav-mobile-collapse",

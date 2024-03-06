@@ -1,6 +1,6 @@
 function _typeof(o) { "@babel/helpers - typeof"; return _typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (o) { return typeof o; } : function (o) { return o && "function" == typeof Symbol && o.constructor === Symbol && o !== Symbol.prototype ? "symbol" : typeof o; }, _typeof(o); }
 var _excluded = ["color", "isOpen"],
-  _excluded2 = ["tag", "color", "ariaLabel", "onOpen", "onClose"];
+  _excluded2 = ["tag", "color", "ariaLabel", "onOpen", "onClose", "isOpen"];
 function _extends() { _extends = Object.assign ? Object.assign.bind() : function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends.apply(this, arguments); }
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, _toPropertyKey(descriptor.key), descriptor); } }
@@ -120,6 +120,7 @@ var Hamburger = /*#__PURE__*/function (_Component) {
         ariaLabel = _this$props.ariaLabel,
         onOpen = _this$props.onOpen,
         onClose = _this$props.onClose,
+        isOpenProp = _this$props.isOpen,
         restProps = _objectWithoutProperties(_this$props, _excluded2);
       var isOpen = this.state.isOpen;
       var isButton = tag === "button";

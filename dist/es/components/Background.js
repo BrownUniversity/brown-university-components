@@ -21,7 +21,7 @@ var Tag = styled(function (_ref) {
   return /*#__PURE__*/React.createElement("div", restProps);
 }).withConfig({
   displayName: "Background__Tag",
-  componentId: "uwuoy1-0"
+  componentId: "sc-uwuoy1-0"
 })(["background-image:url(\"", "\");background-repeat:repeat;background-size:1600px;background-color:", ";background-position-y:", "px;", ""], function (_ref2) {
   var url = _ref2.url;
   return url;

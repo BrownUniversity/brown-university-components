@@ -1,4 +1,6 @@
-var _excluded = ["tag"];
+var _excluded = ["color", "size", "uppercase", "rounded", "outline", "inverse"],
+  _excluded2 = ["tag", "color", "size", "uppercase", "rounded", "outline", "inverse"],
+  _excluded3 = ["tag", "color", "size", "uppercase", "rounded", "outline", "inverse"];
 function _extends() { _extends = Object.assign ? Object.assign.bind() : function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends.apply(this, arguments); }
 function _objectWithoutProperties(source, excluded) { if (source == null) return {}; var target = _objectWithoutPropertiesLoose(source, excluded); var key, i; if (Object.getOwnPropertySymbols) { var sourceSymbolKeys = Object.getOwnPropertySymbols(source); for (i = 0; i < sourceSymbolKeys.length; i++) { key = sourceSymbolKeys[i]; if (excluded.indexOf(key) >= 0) continue; if (!Object.prototype.propertyIsEnumerable.call(source, key)) continue; target[key] = source[key]; } } return target; }
 function _objectWithoutPropertiesLoose(source, excluded) { if (source == null) return {}; var target = {}; var sourceKeys = Object.keys(source); var key, i; for (i = 0; i < sourceKeys.length; i++) { key = sourceKeys[i]; if (excluded.indexOf(key) >= 0) continue; target[key] = source[key]; } return target; }
@@ -133,36 +135,45 @@ var getColorWithHover = function getColorWithHover(_ref7) {
   inner Tag component
 */
 // TODO: filter color prop with `as` usage (see `styled-components` issue 439)
-var Tag = styled.div.withConfig({
+var Tag = styled(function (_ref8) {
+  var color = _ref8.color,
+    size = _ref8.size,
+    uppercase = _ref8.uppercase,
+    rounded = _ref8.rounded,
+    outline = _ref8.outline,
+    inverse = _ref8.inverse,
+    restProps = _objectWithoutProperties(_ref8, _excluded);
+  return /*#__PURE__*/React.createElement("div", restProps);
+}).withConfig({
   displayName: "Button__Tag",
   componentId: "sc-4pqrql-0"
 })(["", " background-color:", ";border-radius:", ";box-shadow:inset 0 0 0 1px ", ";color:", ";cursor:", ";font-size:", ";opacity:", ";padding:", ";pointer-events:", ";text-transform:", ";", " &:hover,&:focus{background-color:", ";box-shadow:inset 0 0 0 1px ", ";color:", ";", "}"], buttonCSS, function (props) {
   return getBackgroundColor(props);
-}, function (_ref8) {
-  var rounded = _ref8.rounded;
+}, function (_ref9) {
+  var rounded = _ref9.rounded;
   return rounded ? "5px" : null;
 }, function (props) {
   return getBoxShadow(props);
 }, function (props) {
   return getColor(props);
-}, function (_ref9) {
-  var disabled = _ref9.disabled,
-    href = _ref9.href;
+}, function (_ref10) {
+  var disabled = _ref10.disabled,
+    href = _ref10.href;
   return disabled && !href ? "not-allowed" : "pointer";
 }, function (props) {
   return getFontSize(props);
-}, function (_ref10) {
-  var disabled = _ref10.disabled;
-  return disabled ? "0.45" : "1";
 }, function (_ref11) {
-  var href = _ref11.href;
-  return href ? "12px 25px 12px 20px" : "12px 25px";
+  var disabled = _ref11.disabled;
+  return disabled ? "0.45" : "1";
 }, function (_ref12) {
-  var disabled = _ref12.disabled,
-    href = _ref12.href;
-  return disabled && href ? "none" : "auto";
+  var href = _ref12.href;
+  return href ? "12px 25px 12px 20px" : "12px 25px";
 }, function (_ref13) {
-  var uppercase = _ref13.uppercase;
+  var disabled = _ref13.disabled,
+    href = _ref13.href;
+  return disabled && href ? "none" : "auto";
+}, function (_ref14) {
+  var uppercase = _ref14.uppercase;
   return uppercase ? "uppercase" : null;
 }, function (props) {
   return props.href && css(["&::after{", " ", " border-color:transparent transparent transparent ", ";}"], buttonAfterCSS, buttonAfterShiftCSS, getColor(props));
@@ -179,22 +190,50 @@ var Tag = styled.div.withConfig({
 /*
   outer Button component
 */
-var deriveTag = function deriveTag(_ref14) {
-  var tag = _ref14.tag,
-    href = _ref14.href;
+var deriveTag = function deriveTag(_ref15) {
+  var tag = _ref15.tag,
+    href = _ref15.href;
   if (tag === "button" && href) {
     return "a";
   }
   return tag;
 };
+function FilteredAs(props) {
+  /* eslint-disable react/prop-types */
+  var tag = props.tag,
+    color = props.color,
+    size = props.size,
+    uppercase = props.uppercase,
+    rounded = props.rounded,
+    outline = props.outline,
+    inverse = props.inverse,
+    restProps = _objectWithoutProperties(props, _excluded2);
+  /* eslint-enable react/prop-types */
+  var DerivedTag = deriveTag(props);
+  return /*#__PURE__*/React.createElement(DerivedTag, restProps);
+}
 var Button = function Button(props) {
   var tag = props.tag,
-    restProps = _objectWithoutProperties(props, _excluded);
-  var derivedTag = deriveTag(props);
+    color = props.color,
+    size = props.size,
+    uppercase = props.uppercase,
+    rounded = props.rounded,
+    outline = props.outline,
+    inverse = props.inverse,
+    restProps = _objectWithoutProperties(props, _excluded3);
+  var DerivedTag = deriveTag(props);
   return /*#__PURE__*/React.createElement(Tag, _extends({
-    as: derivedTag,
-    type: derivedTag === "button" && props.onClick ? "button" : undefined
-  }, restProps));
+    as: FilteredAs,
+    type: DerivedTag === "button" && props.onClick ? "button" : undefined
+  }, restProps, {
+    tag: tag,
+    color: color,
+    size: size,
+    uppercase: uppercase,
+    rounded: rounded,
+    outline: outline,
+    inverse: inverse
+  }));
 };
 Button.propTypes = {
   tag: PropTypes.oneOfType([PropTypes.func, PropTypes.string]),

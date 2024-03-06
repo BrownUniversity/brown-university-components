@@ -27,14 +27,14 @@ var MobileCollapseWrapper = styled(function (_ref) {
   return /*#__PURE__*/React.createElement("div", restProps);
 }).withConfig({
   displayName: "NavbarNav__MobileCollapseWrapper",
-  componentId: "hl2s13-0"
+  componentId: "sc-hl2s13-0"
 })(["box-shadow:0 5px 10px 0 #00000026;left:0;position:absolute;top:75px;width:100%;background-color:", ";"], function (_ref2) {
   var color = _ref2.color;
   return colors[color];
 });
 var MobileNavWrapper = styled.div.withConfig({
   displayName: "NavbarNav__MobileNavWrapper",
-  componentId: "hl2s13-1"
+  componentId: "sc-hl2s13-1"
 })(["padding:0 7vw 1rem;", ";"], media.md(_templateObject || (_templateObject = _taggedTemplateLiteral(["\n    padding: 0 33px;\n  "]))));
 
 /*

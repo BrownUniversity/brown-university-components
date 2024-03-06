@@ -1,4 +1,5 @@
-var _excluded = ["tag"];
+var _excluded = ["tag", "active", "navbar", "mobile", "sub", "color"],
+  _excluded2 = ["tag"];
 var _templateObject;
 function _extends() { _extends = Object.assign ? Object.assign.bind() : function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends.apply(this, arguments); }
 function _objectWithoutProperties(source, excluded) { if (source == null) return {}; var target = _objectWithoutPropertiesLoose(source, excluded); var key, i; if (Object.getOwnPropertySymbols) { var sourceSymbolKeys = Object.getOwnPropertySymbols(source); for (i = 0; i < sourceSymbolKeys.length; i++) { key = sourceSymbolKeys[i]; if (excluded.indexOf(key) >= 0) continue; if (!Object.prototype.propertyIsEnumerable.call(source, key)) continue; target[key] = source[key]; } } return target; }
@@ -232,9 +233,21 @@ var deriveTag = function deriveTag(_ref15) {
   }
   return tag;
 };
+function FilteredAs(props) {
+  // eslint-disable-next-line react/prop-types
+  var tag = props.tag,
+    active = props.active,
+    navbar = props.navbar,
+    mobile = props.mobile,
+    sub = props.sub,
+    color = props.color,
+    restProps = _objectWithoutProperties(props, _excluded);
+  var DerivedTag = deriveTag(props);
+  return /*#__PURE__*/React.createElement(DerivedTag, restProps);
+}
 var NavLink = function NavLink(props) {
   var tag = props.tag,
-    restProps = _objectWithoutProperties(props, _excluded);
+    restProps = _objectWithoutProperties(props, _excluded2);
   var derivedTag = deriveTag(props);
   return /*#__PURE__*/React.createElement(NavContext.Consumer, null, function (_ref16) {
     var navbar = _ref16.navbar,
@@ -242,9 +255,10 @@ var NavLink = function NavLink(props) {
       sub = _ref16.sub,
       color = _ref16.color;
     return /*#__PURE__*/React.createElement(Tag, _extends({
-      as: derivedTag,
+      as: FilteredAs,
       type: derivedTag === "button" && props.onClick ? "button" : undefined
     }, restProps, {
+      tag: tag,
       navbar: navbar,
       mobile: mobile,
       sub: sub,

@@ -56,7 +56,7 @@ var Tag = styled(function (_ref5) {
   return /*#__PURE__*/React.createElement("ul", restProps);
 }).withConfig({
   displayName: "Nav__Tag",
-  componentId: "axj96a-0"
+  componentId: "sc-axj96a-0"
 })(["list-style:none;margin:0;background-color:", ";display:", ";padding:", ";width:", ";"], function (props) {
   return getBackgroundColor(props);
 }, function (props) {

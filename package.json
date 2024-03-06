@@ -2,7 +2,7 @@
   "name": "brown-university-components",
   "description": "Components for building React-based applications at Brown University",
   "author": "Colin Cummings <colin_cummings@brown.edu>",
-  "version": "1.7.1",
+  "version": "2.0.0",
   "private": true,
   "homepage": "https://github.com/BrownUniversity/brown-university-components",
   "main": "dist/index.commonjs.js",
@@ -78,5 +78,8 @@
     "webpack": "^5.90.3",
     "webpack-bundle-analyzer": "^4.10.1",
     "webpack-cli": "^5.1.4"
+  },
+  "engine": {
+    "node": ">=16.0.0"
   }
 }

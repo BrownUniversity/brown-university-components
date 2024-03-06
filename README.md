@@ -12,10 +12,10 @@ Components for building React-based applications at Brown University.
 
 ```sh
 // npm
-npm i BrownUniversity/brown-university-components
+npm i BrownUniversity/brown-university-components#semver:^2.0.0
 
 // yarn
-yarn add git+https://github.com/BrownUniversity/brown-university-components.git#^1.7
+yarn add git+https://github.com/BrownUniversity/brown-university-components.git#^2.0.0
 ```
 
 #### Required Peer Dependencies
