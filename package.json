@@ -73,7 +73,7 @@
     "react-dom": "^16.13.1",
     "react-svg-loader": "^3.0.3",
     "rimraf": "^2.7.1",
-    "storybook": "^7.6.17",
+    "storybook": "^7.6.21",
     "styled-components": "^6.1.8",
     "webpack": "^5.94.0",
     "webpack-bundle-analyzer": "^4.10.1",
