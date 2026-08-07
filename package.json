@@ -60,7 +60,7 @@
     "babel-plugin-styled-components": "^2.1.4",
     "babel-plugin-transform-react-remove-prop-types": "^0.4.21",
     "brown-university-styles": "BrownUniversity/brown-university-styles#semver:^0.14.0",
-    "copy-webpack-plugin": "^11.0.0",
+    "copy-webpack-plugin": "^14.0.0",
     "eslint": "^8.57.0",
     "eslint-config-brown": "github:BrownUniversity/eslint-config-brown#semver:^0.19.0",
     "jest": "^29.7.0",
